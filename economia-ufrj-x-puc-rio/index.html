@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Economia: UFRJ x PUC-Rio — o que você vai estudar</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Montserrat',sans-serif;background:#FDFAF8;color:#282828;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px 60px}
+header{background:#3E658E;color:#fff;padding:36px 20px 30px;text-align:center}
+header .logo{font-family:'Caveat',cursive;font-size:1.6rem;opacity:.9;margin-bottom:6px}
+header h1{font-size:2rem;font-weight:800;line-height:1.2}
+header p{margin-top:10px;font-weight:300;opacity:.92;max-width:640px;margin-left:auto;margin-right:auto}
+h2{font-size:1.45rem;font-weight:700;color:#3E658E;margin:44px 0 6px;border-bottom:3px solid #FDDED5;padding-bottom:8px}
+h2 .n{font-family:'Caveat',cursive;color:#FD745D;font-size:1.6rem;margin-right:8px}
+.sub{color:#666;font-size:.92rem;margin-bottom:18px}
+h3{font-size:1.05rem;font-weight:700;margin:26px 0 10px;color:#3B503F}
+
+/* cartões de topo */
+.unis{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+.uni{background:#fff;border-radius:14px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,.06);border-top:6px solid}
+.uni.ufrj{border-color:#3E658E}
+.uni.puc{border-color:#6B2F3C}
+.uni h3{margin:0 0 4px;font-size:1.25rem;font-weight:800}
+.uni.ufrj h3{color:#3E658E}
+.uni.puc h3{color:#6B2F3C}
+.uni .tag{font-size:.8rem;text-transform:uppercase;letter-spacing:.5px;color:#888;font-weight:600}
+.uni ul{list-style:none;margin-top:12px}
+.uni li{padding:5px 0 5px 20px;position:relative;font-size:.93rem}
+.uni li:before{content:"•";position:absolute;left:4px;color:#FD745D;font-weight:700}
+
+/* tabela lado a lado */
+.per{background:#fff;border-radius:12px;margin-bottom:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.per > .cab{background:#FDDED5;padding:8px 16px;font-weight:700;color:#6B2F3C;font-size:.95rem}
+.per .cols{display:grid;grid-template-columns:1fr 1fr}
+.per .col{padding:14px 16px}
+.per .col:first-child{border-right:1px solid #f0e8e4}
+.per .col .quem{font-size:.75rem;text-transform:uppercase;letter-spacing:.6px;font-weight:700;margin-bottom:8px}
+.col.a .quem{color:#3E658E}
+.col.b .quem{color:#6B2F3C}
+.per .col ul{list-style:none}
+.per .col li{font-size:.88rem;padding:3px 0 3px 14px;position:relative}
+.per .col li:before{content:"–";position:absolute;left:0;color:#bbb}
+.per .col li.op{color:#8a8a8a;font-style:italic}
+
+/* glossário */
+.fam{background:#fff;border-radius:12px;padding:18px 20px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,.05);border-left:5px solid #91B096}
+.fam h3{margin:0 0 4px;color:#3B503F}
+.fam .oq{font-size:.88rem;color:#777;margin-bottom:12px}
+.mat{padding:10px 0;border-top:1px solid #f4efec}
+.mat:first-of-type{border-top:none}
+.mat .nome{font-weight:700;font-size:.95rem}
+.mat .onde{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 7px;border-radius:20px;margin-left:6px;vertical-align:2px}
+.onde.both{background:#91B096;color:#fff}
+.onde.u{background:#3E658E;color:#fff}
+.onde.p{background:#6B2F3C;color:#fff}
+.mat p{font-size:.92rem;color:#444;margin-top:2px}
+
+/* diferenças */
+.dif{background:#fff;border-radius:12px;padding:18px 20px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.05);border-left:5px solid #FDBB71}
+.dif h3{margin:0 0 8px;color:#282828}
+.dif .lado{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+.dif .lado div{font-size:.9rem;background:#FDFAF8;padding:10px 12px;border-radius:8px}
+.dif .lado b{display:block;margin-bottom:3px;font-size:.78rem;text-transform:uppercase;letter-spacing:.5px}
+.dif .lado .lu b{color:#3E658E}
+.dif .lado .lp b{color:#6B2F3C}
+
+/* perguntas */
+.perg{background:#FDDED5;border-radius:14px;padding:22px 24px;margin-top:8px}
+.perg ol{margin-left:20px}
+.perg li{margin:9px 0;font-size:.95rem}
+.aviso{background:#fff;border:2px dashed #FDBB71;border-radius:12px;padding:16px 18px;margin-top:26px;font-size:.9rem;color:#555}
+footer{background:#3E658E;color:#fff;text-align:center;padding:24px;margin-top:50px;font-size:.85rem}
+footer .logo{font-family:'Caveat',cursive;font-size:1.4rem}
+@media(max-width:760px){
+ .unis,.per .cols,.dif .lado{grid-template-columns:1fr}
+ .per .col:first-child{border-right:none;border-bottom:1px solid #f0e8e4}
+ header h1{font-size:1.5rem}
+}
+@media print{
+ body{background:#fff}
+ header,footer{background:#3E658E!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .per,.fam,.dif{break-inside:avoid;box-shadow:none;border:1px solid #eee}
+ h2{break-after:avoid}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Instituto Rumo</div>
+  <h1>Economia: UFRJ x PUC-Rio</h1>
+  <p>O mesmo curso, dois jeitos de ensinar. Aqui está o que você vai estudar em cada um — traduzido para o português de gente.</p>
+</header>
+
+<div class="wrap">
+
+<div class="unis">
+  <div class="uni ufrj">
+    <span class="tag">Pública · gratuita</span>
+    <h3>UFRJ — Instituto de Economia</h3>
+    <ul>
+      <li>3.000 horas, 8 períodos (4 anos) no diurno — ou 10 períodos (5 anos) no noturno</li>
+      <li>37 matérias obrigatórias + optativas no fim</li>
+      <li>Monografia (TCC) obrigatória nos dois últimos períodos</li>
+      <li>300h de extensão: projeto com gente de fora da faculdade</li>
+      <li>Proposta declarada: formação <b>crítica e plural</b> — você estuda várias escolas de pensamento, não só uma</li>
+    </ul>
+  </div>
+  <div class="uni puc">
+    <span class="tag">Particular · paga</span>
+    <h3>PUC-Rio — Departamento de Economia</h3>
+    <ul>
+      <li>3.000 horas / 200 créditos, 8 períodos (4 anos), até 7 anos no máximo</li>
+      <li>Menos obrigatórias e mais espaço de escolha: 28 créditos de eletivas</li>
+      <li>Monografia (TCC) obrigatória nos dois últimos períodos</li>
+      <li>300h de extensão também</li>
+      <li>Tem <b>ênfases</b>: você escolhe puxar para Macroeconomia, Economia Aplicada, Métodos Quantitativos ou Finanças</li>
+      <li>Por ser universidade católica, tem matérias de religião e ética no currículo</li>
+    </ul>
+  </div>
+</div>
+
+<h2><span class="n">1</span>Período a período, lado a lado</h2>
+<p class="sub">A grade da UFRJ é a do turno diurno (currículo 2022-2). A da PUC é o currículo 2023. Em itálico e cinza: as vagas que você preenche escolhendo a matéria.</p>
+
+<div class="per">
+  <div class="cab">1º período</div>
+  <div class="cols">
+    <div class="col a"><div class="quem">UFRJ</div><ul>
+      <li>Introdução à Economia (90h)</li><li>Matemática I (90h)</li><li>Álgebra Linear</li><li>História Econômica Geral I</li><li>Contabilidade e Análise de Balanços</li><li>Atividade Complementar</li><li>Atividade Curricular de Extensão (300h)</li>
+    </ul></div>
+    <div class="col b"><div class="quem">PUC-Rio</div><ul>
+      <li>Introdução à Microeconomia</li><li>Introdução à Macroeconomia</li><li>Introdução à Economia Aplicada</li><li>Introdução à Análise de Dados para Economia</li><li>Cálculo I para Economia</li>
+    </ul></div>
+  </div>
+</div>
+
+<div class="per">
+  <div class="cab">2º período</div>
+  <div class="cols">
+    <div class="col a"><div class="quem">UFRJ</div><ul>
+      <li>Teoria Microeconômica I</li><li>Teoria Macroeconômica I</li><li>Matemática II (90h)</li><li>História Econômica Geral II</li><li>Introdução às Ciências Sociais</li>
+    </ul></div>
+    <div class="col b"><div class="quem">PUC-Rio</div><ul>
+      <li>Teoria Macroeconômica I</li><li>Indicadores Econômicos e Sociais</li><li>Finanças I</li><li>História Econômica Geral</li><li>Cálculo II para Economia</li><li>O Humano e o Fenômeno Religioso</li>
+    </ul></div>
+  </div>
+</div>
+
+<div class="per">
+  <div class="cab">3º período</div>
+  <div class="cols">
+    <div class="col a"><div class="quem">UFRJ</div><ul>
+      <li>Teoria Microeconômica II</li><li>Teoria Macroeconômica II</li><li>Introdução à Estatística Econômica</li><li>Economia Monetária I</li><li>Economia Política I</li><li>Ciência Política</li>
+    </ul></div>
+    <div class="col b"><div class="quem">PUC-Rio</div><ul>
+      <li>Teoria Microeconômica I</li><li>Teoria Macroeconômica II</li><li>Probabilidade e Estatística</li><li>Contabilidade e Análise de Balanços</li><li>Álgebra Linear para Economia</li><li>O Cristianismo</li>
+    </ul></div>
+  </div>
+</div>
+
+<div class="per">
+  <div class="cab">4º período</div>
+  <div class="cols">
+    <div class="col a"><div class="quem">UFRJ</div><ul>
+      <li>Teoria Microeconômica III</li><li>Economia Monetária II</li><li>Economia Política II</li><li>Estatística Econômica e Introdução à Econometria</li><li>Contabilidade Social</li>
+    </ul></div>
+    <div class="col b"><div class="quem">PUC-Rio</div><ul>
+      <li>Teoria Microeconômica II</li><li>Economia Monetária</li><li>Econometria I</li><li>Economia Brasileira I</li><li>Finanças II</li><li>Ética Cristã</li>
+    </ul></div>
+  </div>
+</div>
+
+<div class="per">
+  <div class="cab">5º período</div>
+  <div class="cols">
+    <div class="col a"><div class="quem">UFRJ</div><ul>
+      <li>Econometria I</li><li>Economia Industrial</li><li>Economia Internacional</li><li>Formação Econômica do Brasil</li><li>História do Pensamento Econômico</li><li>Teorias da Dinâmica Capitalista</li>
+    </ul></div>
+    <div class="col b"><div class="quem">PUC-Rio</div><ul>
+      <li>Teoria Microeconômica III</li><li>Econometria II</li><li>Economia Brasileira II</li><li>Ética Socioambiental e Direitos Humanos</li>
+    </ul></div>
+  </div>
+</div>
+
+<div class="per">
+  <div class="cab">6º período</div>
+  <div class="cols">
+    <div class="col a"><div class="quem">UFRJ</div><ul>
+      <li>Economia Brasileira Contemporânea I</li><li>Economia do Setor Público</li><li>Comércio e Investimentos Internacionais</li><li>Teorias do Crescimento Econômico</li><li>Metodologia da Análise Econômica</li>
+    </ul></div>
+    <div class="col b"><div class="quem">PUC-Rio</div><ul>
+      <li>Economia do Setor Público</li><li>Economia Internacional</li><li>História do Pensamento Econômico</li><li class="op">Optativa de Ciências Sociais</li>
+    </ul></div>
+  </div>
+</div>
+
+<div class="per">
+  <div class="cab">7º período</div>
+  <div class="cols">
+    <div class="col a"><div class="quem">UFRJ</div><ul>
+      <li>Economia Brasileira Contemporânea II</li><li>Teorias do Desenvolvimento</li><li>Instituições de Direito</li><li>Monografia I</li><li class="op">Disciplina optativa</li>
+    </ul></div>
+    <div class="col b"><div class="quem">PUC-Rio</div><ul>
+      <li>Monografia I</li><li class="op">Optativa de Filosofia</li>
+    </ul></div>
+  </div>
+</div>
+
+<div class="per">
+  <div class="cab">8º período</div>
+  <div class="cols">
+    <div class="col a"><div class="quem">UFRJ</div><ul>
+      <li>Monografia II (210h)</li><li>Experiências em Desenvolvimento Comparadas</li><li class="op">Disciplina optativa</li><li class="op">Duas disciplinas de livre escolha</li>
+    </ul></div>
+    <div class="col b"><div class="quem">PUC-Rio</div><ul>
+      <li>Monografia II</li>
+    </ul></div>
+  </div>
+</div>
+
+<div class="per">
+  <div class="cab">Ao longo do curso (PUC-Rio) — 28 créditos que você escolhe</div>
+  <div class="cols">
+    <div class="col a"><div class="quem">UFRJ</div><ul>
+      <li class="op">Optativas e livre escolha concentradas no 7º e 8º períodos</li>
+    </ul></div>
+    <div class="col b"><div class="quem">PUC-Rio</div><ul>
+      <li class="op">Optativa de ênfase em Macroeconomia</li><li class="op">Optativa de ênfase em Economia Aplicada</li><li class="op">Optativa de Métodos Quantitativos</li><li class="op">Optativa de ênfase em Finanças</li><li class="op">Eletivas do Departamento (8 créditos)</li><li class="op">Eletivas livres (16 créditos)</li><li class="op">Atividades complementares</li>
+    </ul></div>
+  </div>
+</div>
+
+<h2><span class="n">2</span>O que é cada matéria, em português</h2>
+<p class="sub">Agrupei por família. A etiqueta diz onde a matéria aparece.</p>
+
+<div class="fam">
+  <h3>Os alicerces: micro e macro</h3>
+  <div class="oq">Toda economia se apoia nesses dois blocos. Eles voltam ano após ano, cada vez mais fundo.</div>
+  <div class="mat"><span class="nome">Microeconomia</span><span class="onde both">nas duas</span>
+    <p>Estuda as decisões de uma pessoa, uma família, uma empresa. Por que o ingresso do cinema custa menos na terça? Por que o iFood cobra taxa dinâmica? Por que existe fila no SUS e não no shopping? É a economia do pequeno, e ela é bem mais matemática do que parece.</p></div>
+  <div class="mat"><span class="nome">Macroeconomia</span><span class="onde both">nas duas</span>
+    <p>Zoom out: o país inteiro. Inflação, desemprego, juros, dólar, dívida pública. É a matéria que explica o que o Copom decide de mês em mês e por que isso mexe no preço do seu lanche.</p></div>
+  <div class="mat"><span class="nome">Economia Monetária</span><span class="onde both">nas duas</span>
+    <p>O dinheiro em si: como ele é criado, o que o Banco Central faz, por que juro alto derruba inflação, o que são bancos e o que aconteceu em 2008. Na UFRJ são dois semestres; na PUC, um.</p></div>
+</div>
+
+<div class="fam">
+  <h3>Matemática e dados — a parte que assusta e é inevitável</h3>
+  <div class="oq">Economia é um curso de humanas com peso pesado de exatas. Nas duas faculdades. Não tem escapatória, e é bom saber disso antes.</div>
+  <div class="mat"><span class="nome">Matemática I e II (UFRJ) / Cálculo I e II (PUC)</span><span class="onde both">nas duas</span>
+    <p>Cálculo: derivada, integral, otimização. Serve para responder "qual é o preço que dá o maior lucro possível?". São as matérias que mais reprovam no início do curso, nas duas.</p></div>
+  <div class="mat"><span class="nome">Álgebra Linear</span><span class="onde both">nas duas</span>
+    <p>Matrizes e sistemas de equações. Parece abstrato, mas é o motor por trás de qualquer modelo com muitas variáveis ao mesmo tempo — e de boa parte do que hoje chamam de inteligência artificial.</p></div>
+  <div class="mat"><span class="nome">Estatística / Probabilidade</span><span class="onde both">nas duas</span>
+    <p>Como ler dados sem ser enganado por eles. Média, amostra, margem de erro, correlação. É o que diferencia "os dados mostram" de "eu acho".</p></div>
+  <div class="mat"><span class="nome">Econometria</span><span class="onde both">nas duas</span>
+    <p>O coração técnico do curso: usar estatística para descobrir causa e efeito na vida real. "Aumentar o salário mínimo gera desemprego?" — econometria é a ferramenta que tenta responder isso com número, e é ela que abre a porta de estágio em banco, consultoria e pesquisa.</p></div>
+  <div class="mat"><span class="nome">Introdução à Análise de Dados para Economia</span><span class="onde p">só PUC</span>
+    <p>Já no 1º período: mexer com dados de verdade no computador, programando. A PUC coloca você para botar a mão em dados logo de cara.</p></div>
+  <div class="mat"><span class="nome">Indicadores Econômicos e Sociais</span><span class="onde p">só PUC</span>
+    <p>De onde vêm PIB, IPCA, Gini, taxa de desemprego — quem mede, como mede e o que cada número esconde.</p></div>
+  <div class="mat"><span class="nome">Contabilidade Social</span><span class="onde u">só UFRJ</span>
+    <p>O primo da matéria acima: como um país faz a própria contabilidade e calcula o PIB.</p></div>
+  <div class="mat"><span class="nome">Metodologia da Análise Econômica</span><span class="onde u">só UFRJ</span>
+    <p>Como se faz pesquisa em economia: o que vale como prova, o que é modelo, o que é achismo. Prepara o terreno para a monografia.</p></div>
+</div>
+
+<div class="fam">
+  <h3>História, política e as ideias por trás dos números</h3>
+  <div class="oq">Aqui está a diferença mais visível entre as duas grades. A UFRJ tem bem mais matérias desse tipo, e obrigatórias.</div>
+  <div class="mat"><span class="nome">História Econômica Geral</span><span class="onde both">nas duas</span>
+    <p>Como o mundo chegou aqui: revolução industrial, crises, guerras, globalização. Na UFRJ são dois semestres obrigatórios; na PUC, um.</p></div>
+  <div class="mat"><span class="nome">História do Pensamento Econômico</span><span class="onde both">nas duas</span>
+    <p>Adam Smith, Marx, Keynes e companhia: quem pensou o quê e por que discordavam. É a matéria que mostra que economia não tem uma resposta só.</p></div>
+  <div class="mat"><span class="nome">Economia Política I e II</span><span class="onde u">só UFRJ</span>
+    <p>Economia olhada junto com poder, classes sociais e Estado — com peso grande de Marx e da tradição crítica. Duas obrigatórias que a PUC não tem.</p></div>
+  <div class="mat"><span class="nome">Teorias da Dinâmica Capitalista</span><span class="onde u">só UFRJ</span>
+    <p>Por que o capitalismo vive em ciclos de boom e crise, segundo diferentes correntes de pensamento.</p></div>
+  <div class="mat"><span class="nome">Ciência Política / Introdução às Ciências Sociais</span><span class="onde u">só UFRJ</span>
+    <p>Estado, democracia, sociologia. Contexto para entender que decisão econômica é sempre decisão política também.</p></div>
+  <div class="mat"><span class="nome">Instituições de Direito</span><span class="onde u">só UFRJ</span>
+    <p>Noções de direito: contrato, empresa, regulação. O básico jurídico de quem vai trabalhar com dinheiro dos outros.</p></div>
+  <div class="mat"><span class="nome">Fenômeno Religioso · Cristianismo · Ética Cristã · Ética Socioambiental</span><span class="onde p">só PUC</span>
+    <p>Quatro matérias obrigatórias de formação humanística, por ser universidade católica. Não são aula de catequese: discutem religião, ética e direitos humanos como objeto de estudo. Mas ocupam créditos que na UFRJ seriam de economia.</p></div>
+  <div class="mat"><span class="nome">Optativa de Filosofia e de Ciências Sociais</span><span class="onde p">só PUC</span>
+    <p>Você escolhe uma de cada — dá para puxar para o que te interessa.</p></div>
+</div>
+
+<div class="fam">
+  <h3>Brasil e mundo</h3>
+  <div class="oq">Aplicar a teoria no lugar onde você mora e no jogo internacional.</div>
+  <div class="mat"><span class="nome">Economia Brasileira I e II</span><span class="onde both">nas duas</span>
+    <p>Do café à Selic: inflação dos anos 80, Plano Real, boom das commodities, crises recentes. Na UFRJ vem com uma matéria a mais antes, a Formação Econômica do Brasil, que volta até o período colonial.</p></div>
+  <div class="mat"><span class="nome">Economia Internacional</span><span class="onde both">nas duas</span>
+    <p>Comércio entre países, câmbio, tarifas, guerra comercial. A UFRJ ainda tem uma segunda matéria só de comércio e investimentos internacionais.</p></div>
+  <div class="mat"><span class="nome">Economia do Setor Público</span><span class="onde both">nas duas</span>
+    <p>Como o governo arrecada e gasta: imposto, orçamento, previdência, saúde, educação. Matéria-chave para quem pensa em concurso público ou política pública.</p></div>
+  <div class="mat"><span class="nome">Teorias do Crescimento e do Desenvolvimento · Experiências Comparadas</span><span class="onde u">só UFRJ</span>
+    <p>Três matérias sobre a pergunta "por que alguns países ficaram ricos e outros não?" — comparando Coreia do Sul, China, América Latina. É uma marca forte do IE/UFRJ.</p></div>
+  <div class="mat"><span class="nome">Economia Industrial</span><span class="onde u">só UFRJ</span>
+    <p>Como as empresas competem de verdade: monopólio, concentração de mercado, inovação, regulação. Pensa em Big Tech.</p></div>
+</div>
+
+<div class="fam">
+  <h3>Dinheiro, empresa e mercado financeiro</h3>
+  <div class="oq">Onde a PUC coloca mais fichas desde o começo.</div>
+  <div class="mat"><span class="nome">Finanças I e II</span><span class="onde p">só PUC</span>
+    <p>Investimento, risco, retorno, valor do dinheiro no tempo, como se avalia uma empresa. Duas obrigatórias já no 2º e 4º período. Na UFRJ isso só aparece como optativa.</p></div>
+  <div class="mat"><span class="nome">Contabilidade e Análise de Balanços</span><span class="onde both">nas duas</span>
+    <p>Ler o balanço de uma empresa e entender se ela vai bem ou está com problema. Nas duas grades, com peso parecido.</p></div>
+  <div class="mat"><span class="nome">Introdução à Economia Aplicada</span><span class="onde p">só PUC</span>
+    <p>Economia usada para resolver problema concreto de empresa e de governo, logo no 1º período.</p></div>
+</div>
+
+<div class="fam">
+  <h3>O fim do curso</h3>
+  <div class="mat"><span class="nome">Monografia I e II</span><span class="onde both">nas duas</span>
+    <p>O TCC. Você escolhe uma pergunta, pesquisa por dois semestres e escreve seu próprio trabalho, com um professor te orientando. Na UFRJ a Monografia II sozinha vale 210h — é praticamente um semestre inteiro dedicado a isso.</p></div>
+  <div class="mat"><span class="nome">Atividade Curricular de Extensão (300h)</span><span class="onde both">nas duas</span>
+    <p>Obrigatório por lei nas duas: horas trabalhando em projeto que atende gente fora da universidade. É o momento em que a faculdade te tira da sala de aula.</p></div>
+</div>
+
+<h2><span class="n">3</span>Quatro diferenças que dá para sentir na pele</h2>
+<p class="sub">Mesma quantidade de horas, mesmo diploma, caminhos diferentes até lá.</p>
+
+<div class="dif">
+  <h3>1. Quando você começa a mexer com dado e dinheiro</h3>
+  <div class="lado">
+    <div class="lu"><b>UFRJ</b>A base vem primeiro: matemática, história e teoria. Estatística chega no 3º período, econometria no 5º. Finanças não é obrigatória.</div>
+    <div class="lp"><b>PUC-Rio</b>Análise de dados no 1º período, Finanças I no 2º, econometria no 4º. Você põe a mão na massa técnica mais cedo.</div>
+  </div>
+</div>
+
+<div class="dif">
+  <h3>2. Uma economia ou várias economias</h3>
+  <div class="lado">
+    <div class="lu"><b>UFRJ</b>O projeto do curso é explicitamente <b>plural</b>: você estuda correntes que discordam entre si (inclusive as críticas ao mercado) como matéria obrigatória — Economia Política I e II, Dinâmica Capitalista, Desenvolvimento.</div>
+    <div class="lp"><b>PUC-Rio</b>Grade mais enxuta e concentrada na teoria econômica dominante, com forte peso quantitativo. A pluralidade aparece mais nas eletivas que você escolher.</div>
+  </div>
+</div>
+
+<div class="dif">
+  <h3>3. Quanto o curso já vem escolhido para você</h3>
+  <div class="lado">
+    <div class="lu"><b>UFRJ</b>37 obrigatórias. Quase tudo definido; a liberdade concentra-se no 7º e 8º períodos. Você sai com uma base larga, montada pela faculdade.</div>
+    <div class="lp"><b>PUC-Rio</b>28 créditos livres e quatro ênfases (Macro, Aplicada, Métodos Quantitativos, Finanças). Você monta parte do seu caminho — e precisa saber escolher.</div>
+  </div>
+</div>
+
+<div class="dif">
+  <h3>4. O que mais aparece no dia a dia da faculdade</h3>
+  <div class="lado">
+    <div class="lu"><b>UFRJ</b>Mais texto, mais história, mais debate sobre Brasil e desigualdade. Tem turno noturno (10 períodos), o que muda a vida de quem trabalha. É gratuita, com entrada por vestibular concorrido.</div>
+    <div class="lp"><b>PUC-Rio</b>Mais modelo, mais planilha, mais código. Quatro matérias de formação religiosa/ética no meio do caminho. É paga (com bolsas e financiamento) e só tem turno integral.</div>
+  </div>
+</div>
+
+<h2><span class="n">4</span>Perguntas para você levar na cabeça</h2>
+<div class="perg">
+  <ol>
+    <li>Olhando as duas listas, qual matéria te deu vontade de abrir o YouTube e pesquisar agora? E qual te deu preguiça só de ler o nome?</li>
+    <li>Matemática pesada nos dois primeiros anos: isso é um obstáculo que você topa encarar ou um sinal de alerta?</li>
+    <li>Você prefere um curso que já vem montado ou um que te obriga a escolher o caminho no meio dele?</li>
+    <li>Te atrai mais entender <b>por que o país é assim</b> ou <b>como fazer o dinheiro render</b>? (Dá para fazer os dois nas duas — mas o clima de cada grade é diferente.)</li>
+    <li>Fora da grade: dinheiro, deslocamento, turno, tipo de gente que estuda ali. Isso pesa quanto na sua conta?</li>
+    <li>Se você pudesse conversar 15 minutos com um aluno de cada uma, o que você perguntaria?</li>
+  </ol>
+</div>
+
+<div class="aviso">
+  <b>Antes de decidir qualquer coisa:</b> este material mostra o que cada faculdade ensina, não qual é a melhor. As duas formam economistas com o mesmo diploma e ninguém aqui vai escolher por você. Leve suas impressões — inclusive as ruins — para a próxima sessão. Confira também as grades nos sites oficiais, porque currículo muda: <span style="white-space:nowrap">ie.ufrj.br</span> e <span style="white-space:nowrap">puc-rio.br</span>.
+</div>
+
+</div>
+
+<footer>
+  <div class="logo">Instituto Rumo</div>
+  <div>Material de pesquisa · grades oficiais UFRJ (currículo diurno 2022-2) e PUC-Rio (currículo 2023)</div>
+</footer>
+
+</body>
+</html>
