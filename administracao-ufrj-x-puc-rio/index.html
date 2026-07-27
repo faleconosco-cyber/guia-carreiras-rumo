@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O que se estuda em Administração — UFRJ x PUC-Rio | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* UFRJ — Verde Profundo */
+      --ufrj:     #3B503F;
+      --ufrj-lt:  #EAEFEB;
+      --ufrj-mid: #C2CFC4;
+
+      /* PUC-Rio — Bordô Rosado */
+      --puc:     #6B2F3C;
+      --puc-lt:  #F6EAED;
+      --puc-mid: #DCC0C8;
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── Header ─── */
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.75; margin-top: 12px; max-width: 640px; line-height: 1.6; }
+
+    /* ─── Nav ─── */
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.ufrj.active { color: var(--ufrj); border-bottom-color: var(--ufrj); }
+    .tab-btn.puc.active  { color: var(--puc);  border-bottom-color: var(--puc); }
+    .tab-btn.cmp.active  { color: var(--cmp);  border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    /* ─── Panels ─── */
+    .panel { display: none; max-width: 900px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    /* ─── Section cards ─── */
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .ufrj .sc-head { background: var(--ufrj-lt); border-color: var(--ufrj-mid); }
+    .ufrj .sc-head h2 { color: var(--ufrj); }
+    .puc .sc-head { background: var(--puc-lt); border-color: var(--puc-mid); }
+    .puc .sc-head h2 { color: var(--puc); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    /* ─── Lista de disciplinas ─── */
+    .disc { list-style: none; padding: 0; margin-top: 4px; }
+    .disc li { padding: 11px 0 11px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; line-height: 1.55; }
+    .disc li:last-child { border-bottom: none; }
+    .disc .dn { font-weight: 800; display: block; margin-bottom: 3px; }
+    .ufrj .disc .dn { color: var(--ufrj); }
+    .puc  .disc .dn { color: var(--puc); }
+    .disc .dd { color: var(--text); }
+    .badge { display: inline-block; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; padding: 2px 8px; border-radius: 20px; margin-left: 6px; vertical-align: middle; }
+    .ufrj .badge { background: var(--ufrj-lt); color: var(--ufrj); border: 1px solid var(--ufrj-mid); }
+    .puc  .badge { background: var(--puc-lt);  color: var(--puc);  border: 1px solid var(--puc-mid); }
+
+    /* ─── Boxes ─── */
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 13.5px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .ufrj .hbox { background: var(--ufrj-lt); border-color: var(--ufrj); }
+    .puc  .hbox { background: var(--puc-lt);  border-color: var(--puc); }
+    .cmp  .hbox { background: var(--cmp-lt);  border-color: var(--cmp); }
+    .note { font-size: 12.5px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .ufrj .accent { color: var(--ufrj); }
+    .puc  .accent { color: var(--puc); }
+
+    /* ─── Números ─── */
+    .num-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 14px; }
+    .num-card { border-radius: 12px; padding: 16px 12px; text-align: center; border: 1px solid; }
+    .ufrj .num-card { background: var(--ufrj-lt); border-color: var(--ufrj-mid); }
+    .puc  .num-card { background: var(--puc-lt);  border-color: var(--puc-mid); }
+    .num-big { font-size: 22px; font-weight: 900; line-height: 1.1; }
+    .ufrj .num-big { color: var(--ufrj); }
+    .puc  .num-big { color: var(--puc); }
+    .num-lb { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); margin-top: 7px; }
+
+    /* ─── Tabela de comparação ─── */
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-ufrj { background: var(--ufrj); }
+    .comp-table th.h-puc  { background: var(--puc); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ─── Iguais / diferentes ─── */
+    .two-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+    .tg-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .tg-head { padding: 12px 15px; font-size: 12.5px; font-weight: 800; color: white; }
+    .tg-head.ufrj-bg { background: var(--ufrj); }
+    .tg-head.puc-bg  { background: var(--puc); }
+    .tg-body { padding: 14px 16px; }
+    .tg-body ul { list-style: none; padding: 0; }
+    .tg-body li { font-size: 13px; line-height: 1.5; padding: 8px 0 8px 18px; position: relative; border-bottom: 1px solid var(--border); }
+    .tg-body li:last-child { border-bottom: none; }
+    .tg-body li::before { content: "→"; position: absolute; left: 0; font-weight: 800; }
+    .tg-body.ufrj-tx li::before { color: var(--ufrj); }
+    .tg-body.puc-tx  li::before { color: var(--puc); }
+
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 13.5px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; color: var(--cmp); }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .ufrj .tag { background: var(--ufrj-lt); color: var(--ufrj); border-color: var(--ufrj-mid); }
+    .puc  .tag { background: var(--puc-lt);  color: var(--puc);  border-color: var(--puc-mid); }
+
+    /* ─── Footer ─── */
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .num-grid { grid-template-columns: 1fr 1fr; }
+      .two-grid { grid-template-columns: 1fr; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Grade curricular</div>
+  <h1>Administração: o que você estuda na UFRJ e na PUC-Rio
+    <span class="hd-accent">matéria por matéria, em português claro</span>
+  </h1>
+  <p class="hd-sub">O mesmo curso, duas faculdades, dois jeitos de organizar os quatro anos. Aqui estão as disciplinas de cada uma, período por período, com uma explicação curta do que se vê em cada aula. Sem nome bonito e sem enrolação: o que aparece na tela do computador, no caderno e na prova.</p>
+</header>
+
+<nav>
+  <button class="tab-btn ufrj active" data-c="ufrj" onclick="show('ufrj')">🏛️ UFRJ</button>
+  <button class="tab-btn puc" data-c="puc" onclick="show('puc')">🎓 PUC-Rio</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">⚖️ Lado a lado</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ UFRJ ═══════════════════════════════ -->
+<div class="panel ufrj active" id="p-ufrj">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🏛️</span><h2>Administração na UFRJ — como o curso é montado</h2></div>
+    <div class="sc-body">
+      <p>Curso da <strong>FACC — Faculdade de Administração e Ciências Contábeis</strong>, no campus da Praia Vermelha, em Botafogo. É universidade pública e gratuita, com entrada pelo Enem/SiSU. O currículo em vigor é o de 2022.</p>
+      <div class="num-grid">
+        <div class="num-card"><div class="num-big">8</div><div class="num-lb">períodos (4 anos)</div></div>
+        <div class="num-card"><div class="num-big">3.000h</div><div class="num-lb">carga total</div></div>
+        <div class="num-card"><div class="num-big">300h</div><div class="num-lb">de extensão</div></div>
+        <div class="num-card"><div class="num-big">80+</div><div class="num-lb">optativas para escolher</div></div>
+      </div>
+      <div class="hbox">🧭 <strong>O desenho do curso:</strong> os cinco primeiros períodos são quase todos de matérias obrigatórias, na mesma sequência para todo mundo. A partir do 6º o curso vai abrindo, e o 8º período é <em>só</em> optativa e livre escolha — ou seja, o último semestre é praticamente montado por você.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">1️⃣</span><h2>1º período — a base de tudo</h2></div>
+    <div class="sc-body">
+      <ul class="disc">
+        <li><span class="dn">Fundamentos da Administração</span><span class="dd">A porta de entrada: o que é administrar, como uma empresa se organiza por dentro e de onde vieram as ideias de gestão que todo mundo usa até hoje.</span></li>
+        <li><span class="dn">Direito Aplicado à Gestão</span><span class="dd">As regras do jogo: tipos de empresa, contratos, direitos do trabalhador, o que a empresa pode e não pode fazer.</span></li>
+        <li><span class="dn">Introdução à Contabilidade</span><span class="dd">A "linguagem" com que a empresa anota tudo que entra e sai. É onde você aprende a ler um balanço e entender se a empresa está no lucro ou no prejuízo.</span></li>
+        <li><span class="dn">Microeconomia</span><span class="dd">Por que as coisas custam o que custam: oferta e procura, como o consumidor decide, como a empresa forma preço.</span></li>
+        <li><span class="dn">Matemática para Administração</span><span class="dd">Matemática do ensino médio puxada para o mundo dos negócios: funções, gráficos e um pouco de cálculo. É a matéria que costuma assustar quem foge de número.</span></li>
+        <li><span class="dn">Atividades Complementares<span class="badge">ao longo do curso</span></span><span class="dd">Horas que você junta em palestras, cursos, monitoria, empresa júnior, congressos. Não tem aula fixa: você corre atrás.</span></li>
+        <li><span class="dn">Atividade Curricular de Extensão<span class="badge">300 horas</span></span><span class="dd">Projetos que a faculdade leva para fora dos muros: atender uma comunidade, uma ONG, um pequeno negócio. É obrigatório e vai sendo cumprido ao longo do curso.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">2️⃣</span><h2>2º período — organização, números e o país</h2></div>
+    <div class="sc-body">
+      <ul class="disc">
+        <li><span class="dn">Teoria das Organizações</span><span class="dd">Por que as empresas são do jeito que são: hierarquia, cultura, poder, tipos de estrutura. Bem mais reflexiva que "fazer planilha".</span></li>
+        <li><span class="dn">Introdução à Administração Pública</span><span class="dd">Como se administra o que é do governo: prefeitura, hospital público, estatal, universidade. Uma matéria que a maioria dos cursos particulares não dá como obrigatória.</span></li>
+        <li><span class="dn">Métodos Quantitativos em Administração</span><span class="dd">Matemática usada para resolver problema de gestão: qual a melhor combinação, o menor custo, a rota mais curta.</span></li>
+        <li><span class="dn">Matemática Financeira</span><span class="dd">Juros, parcelas, financiamento, investimento. A matéria que ensina por que R$ 1.000 hoje não vale R$ 1.000 daqui a um ano.</span></li>
+        <li><span class="dn">Macroeconomia</span><span class="dd">A economia do país inteiro: inflação, desemprego, dólar, taxa de juros, e como isso mexe com a empresa lá na ponta.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">3️⃣</span><h2>3º período — dinheiro, gente e ética</h2></div>
+    <div class="sc-body">
+      <ul class="disc">
+        <li><span class="dn">Ética e Aspectos Filosóficos na Administração</span><span class="dd">Discussão sobre o que é certo e errado na hora de decidir: demitir, cortar custo, lucrar de qualquer jeito. Aula de pensar, não de calcular.</span></li>
+        <li><span class="dn">Liderança e Comportamento no Trabalho</span><span class="dd">A parte mais "psicológica" do curso: o que motiva as pessoas, como grupos funcionam, o que faz alguém ser seguido pelo time.</span></li>
+        <li><span class="dn">Análise de Investimentos</span><span class="dd">Vale a pena colocar dinheiro nesse projeto? Aqui você aprende as contas que respondem isso.</span></li>
+        <li><span class="dn">Contabilidade Gerencial</span><span class="dd">Usar os números da contabilidade para decidir: quanto custa fazer, qual preço cobrar, qual produto dá mais retorno.</span></li>
+        <li><span class="dn">Estatística para Administração</span><span class="dd">Coletar dados, montar gráfico, entender pesquisa e não cair em conclusão furada.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">4️⃣</span><h2>4º período — as grandes áreas aparecem</h2></div>
+    <div class="sc-body">
+      <ul class="disc">
+        <li><span class="dn">Sistemas de Informações Gerenciais</span><span class="dd">Os sistemas que a empresa usa para controlar estoque, venda, cliente e produção — e como escolher e implantar um deles.</span></li>
+        <li><span class="dn">Modelos de Regressão e Previsão</span><span class="dd">Usar dados do passado para prever o futuro: quanto vamos vender no Natal, quanta gente vai contratar. Estatística aplicada de verdade.</span></li>
+        <li><span class="dn">Fundamentos de Marketing</span><span class="dd">Entender o cliente e montar a oferta: produto, preço, canal de venda, comunicação.</span></li>
+        <li><span class="dn">Políticas e Estratégias em Gestão de Pessoas</span><span class="dd">A área de RH pelo lado estratégico: como contratar, treinar, avaliar e remunerar o time.</span></li>
+        <li><span class="dn">Administração Internacional<span class="badge">30h</span></span><span class="dd">Como funciona negócio com outros países: exportar, importar, empresa multinacional, diferenças culturais.</span></li>
+        <li><span class="dn">Administração Estratégica<span class="badge">30h</span></span><span class="dd">Para onde a empresa vai nos próximos anos e como ela se defende da concorrência.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">5️⃣</span><h2>5º período — colocando em prática</h2></div>
+    <div class="sc-body">
+      <ul class="disc">
+        <li><span class="dn">Metodologia da Pesquisa</span><span class="dd">Como pesquisar direito, achar fonte confiável e escrever trabalho acadêmico. É a matéria que prepara o TCC.</span></li>
+        <li><span class="dn">Fundamentos de Logística</span><span class="dd">Como o produto sai da fábrica e chega na casa do cliente: estoque, transporte, armazém, prazo.</span></li>
+        <li><span class="dn">Gerência Financeira</span><span class="dd">Cuidar do dinheiro no dia a dia: fluxo de caixa, capital de giro, pagar fornecedor sem quebrar.</span></li>
+        <li><span class="dn">Gestão de Marketing</span><span class="dd">Marketing na prática: campanha, marca, canal de venda, decisão de onde investir.</span></li>
+        <li><span class="dn">Práticas em Gestão de Pessoas</span><span class="dd">A parte mão na massa do RH: seleção, treinamento, avaliação, conversa difícil.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">6️⃣</span><h2>6º período — estágio e o curso começa a abrir</h2></div>
+    <div class="sc-body">
+      <ul class="disc">
+        <li><span class="dn">Processo Decisório</span><span class="dd">Como pessoas e empresas decidem de verdade — inclusive os erros que a gente comete sem perceber.</span></li>
+        <li><span class="dn">Gestão Estratégica de Operações</span><span class="dd">Como a produção ou o serviço acontece e como deixar isso mais rápido, mais barato e com menos falha.</span></li>
+        <li><span class="dn">Seminário de Pesquisa<span class="badge">30h</span></span><span class="dd">Aqui você escolhe o tema e começa a montar o projeto do TCC.</span></li>
+        <li><span class="dn">Estágio Supervisionado<span class="badge">180h</span></span><span class="dd">Estágio obrigatório, com acompanhamento de professor. Muita gente já está estagiando antes disso e aproveita as horas.</span></li>
+        <li><span class="dn">Optativas e livre escolha<span class="badge">12 créditos</span></span><span class="dd">Começa a parte que você monta: dá para puxar para marketing, finanças, logística, setor público, inovação.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">7️⃣</span><h2>7º e 8º períodos — TCC e curso sob medida</h2></div>
+    <div class="sc-body">
+      <ul class="disc">
+        <li><span class="dn">Abordagens Críticas em Administração<span class="badge">7º</span></span><span class="dd">Um olhar mais crítico sobre empresa, trabalho e poder: nem tudo que a gestão prega funciona bem para todo mundo. É bem a cara de universidade pública.</span></li>
+        <li><span class="dn">Trabalho de Conclusão de Curso<span class="badge">7º · 180h</span></span><span class="dd">A monografia: uma pesquisa sua, do começo ao fim, com orientador.</span></li>
+        <li><span class="dn">8º período: só optativas e livre escolha<span class="badge">16 créditos</span></span><span class="dd">Nenhuma matéria obrigatória. O último semestre é você quem desenha, e normalmente é o semestre do estágio pesado ou do primeiro emprego.</span></li>
+      </ul>
+      <p style="margin-top:16px;font-size:13.5px;"><strong>Alguns exemplos de optativas que existem na FACC:</strong></p>
+      <div class="tags">
+        <span class="tag">Criação de Negócios</span>
+        <span class="tag">Gestão da Inovação</span>
+        <span class="tag">Negociação</span>
+        <span class="tag">Gestão de Finanças Pessoais</span>
+        <span class="tag">Marketing Estratégico</span>
+        <span class="tag">Gestão de Estoques</span>
+        <span class="tag">Gerenciamento de Projetos</span>
+        <span class="tag">Jogos Empresariais</span>
+        <span class="tag">Gestão Ambiental</span>
+        <span class="tag">Inovação no Setor Público</span>
+        <span class="tag">Criatividade nas Organizações</span>
+        <span class="tag">Administração e Arte</span>
+        <span class="tag">Cinema e Fenômeno Organizacional</span>
+        <span class="tag">Improvisação e Jogos Teatrais</span>
+        <span class="tag">Métodos Ágeis de Gerenciamento de Projeto</span>
+        <span class="tag">Remuneração e Carreira</span>
+      </div>
+      <p class="note">A lista completa passa de 80 opções e muda a cada semestre, conforme os professores disponíveis.</p>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ PUC-RIO ═══════════════════════════════ -->
+<div class="panel puc" id="p-puc">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Administração na PUC-Rio — como o curso é montado</h2></div>
+    <div class="sc-body">
+      <p>Curso do <strong>IAG — a escola de negócios da PUC-Rio</strong>, no campus da Gávea. É universidade privada e católica, com entrada por vestibular próprio ou Enem. As matérias abaixo são do <strong>currículo 2025, versão diurna</strong> (existe também noturno, em 4 anos e meio, e currículos mais antigos para quem já entrou).</p>
+      <div class="num-grid">
+        <div class="num-card"><div class="num-big">8</div><div class="num-lb">períodos (4 anos)</div></div>
+        <div class="num-card"><div class="num-big">3.240h</div><div class="num-lb">carga total</div></div>
+        <div class="num-card"><div class="num-big">360h</div><div class="num-lb">de extensão</div></div>
+        <div class="num-card"><div class="num-big">4</div><div class="num-lb">disciplinas-projeto</div></div>
+      </div>
+      <div class="hbox">🧭 <strong>O desenho do curso:</strong> a PUC espalha quatro disciplinas de projeto ao longo do curso (duas de "Projeto de Gestão Integrado" e duas de "Projeto de Novos Negócios"). São matérias em que a turma pega um problema real de empresa ou cria um negócio do zero — e é por elas que o estágio obrigatório acontece dentro da grade. Os dois últimos períodos são leves em matéria obrigatória e pesados em eletiva, ênfase e TCC.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">1️⃣</span><h2>1º período — entender o mundo dos negócios (e se organizar)</h2></div>
+    <div class="sc-body">
+      <ul class="disc">
+        <li><span class="dn">Como Funciona um Negócio</span><span class="dd">Um passeio pela empresa inteira antes de entrar nos detalhes: de onde vem o dinheiro, quem faz o quê, como as áreas se conversam.</span></li>
+        <li><span class="dn">Introdução à Economia</span><span class="dd">A base de economia num pacote só: preço, mercado, inflação, juros. Na UFRJ isso vem separado em duas matérias.</span></li>
+        <li><span class="dn">Texto Empresarial Oral e Escrito</span><span class="dd">Aula de comunicação profissional: escrever e-mail e relatório que se entende, apresentar sem gaguejar. Parece básico, é a habilidade mais cobrada no estágio.</span></li>
+        <li><span class="dn">Oficina de Gestão da Aprendizagem<span class="badge">2 créditos</span></span><span class="dd">Como estudar e se organizar na faculdade. Existe justamente porque o pulo do ensino médio para a graduação derruba muita gente.</span></li>
+        <li><span class="dn">Fundamentos Quantitativos para Negócios I</span><span class="dd">Matemática aplicada a negócios, primeira parte.</span></li>
+        <li><span class="dn">Raciocínio Lógico<span class="badge">2 créditos</span></span><span class="dd">Treino de pensar em passos, achar o furo do argumento e resolver problema. Cai muito em prova de estágio e trainee.</span></li>
+        <li><span class="dn">O Indivíduo e o Mundo do Trabalho</span><span class="dd">O que é trabalho hoje, o que muda numa carreira ao longo da vida, o que o mercado espera das pessoas.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">2️⃣</span><h2>2º período — dados, contas e comportamento</h2></div>
+    <div class="sc-body">
+      <ul class="disc">
+        <li><span class="dn">Fundamentos Quantitativos para Negócios II</span><span class="dd">Continuação da matemática aplicada.</span></li>
+        <li><span class="dn">Analytics para Negócios I</span><span class="dd">Trabalhar com dados de verdade: organizar planilha, cruzar informação, tirar conclusão. É a matéria mais "atual" do começo do curso.</span></li>
+        <li><span class="dn">Contabilidade Empresarial</span><span class="dd">Aprender a ler os números da empresa: o que ela tem, o que deve e quanto lucrou.</span></li>
+        <li><span class="dn">Gestão de Marketing I</span><span class="dd">Marketing chega logo no 2º período aqui: cliente, produto, preço, comunicação.</span></li>
+        <li><span class="dn">Comportamento Organizacional</span><span class="dd">Como as pessoas se comportam dentro da empresa: motivação, conflito, grupo, liderança.</span></li>
+        <li><span class="dn">Cultura Digital e Sociedade</span><span class="dd">Como o digital mudou consumo, trabalho e relações — e o que isso significa para quem vai gerir negócio.</span></li>
+        <li><span class="dn">O Humano e o Fenômeno Religioso<span class="badge">formação PUC</span></span><span class="dd">A PUC é universidade católica e todo curso tem algumas matérias de formação humanística e ética. Não é catequese: é discussão sobre valores, sentido e convivência.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">3️⃣</span><h2>3º período — o primeiro projeto</h2></div>
+    <div class="sc-body">
+      <ul class="disc">
+        <li><span class="dn">Projeto de Gestão Integrado I<span class="badge">60h de extensão</span></span><span class="dd">Primeira matéria de projeto: a turma pega uma situação real e aplica junto o que aprendeu de marketing, finanças e gestão. Trabalho em grupo pesado.</span></li>
+        <li><span class="dn">Análise Descritiva para Negócios</span><span class="dd">Estatística que descreve o que já aconteceu: média, distribuição, gráfico, painel de indicadores.</span></li>
+        <li><span class="dn">Análise Financeira de Negócios</span><span class="dd">Olhar os números de uma empresa e dizer se ela está saudável, endividada ou crescendo bem.</span></li>
+        <li><span class="dn">Gestão de Marketing II</span><span class="dd">Aprofunda: estratégia de marca, segmentação, decisão de investimento em campanha.</span></li>
+        <li><span class="dn">Desenvolvimento de Modelos de Negócios Inovadores</span><span class="dd">Criar e testar uma ideia de negócio: quem é o cliente, como se ganha dinheiro, o que pode dar errado.</span></li>
+        <li><span class="dn">Teoria das Organizações I</span><span class="dd">Por que as empresas são organizadas do jeito que são, e as principais escolas de pensamento sobre isso.</span></li>
+        <li><span class="dn">Competências de Gestão<span class="badge">2 créditos</span></span><span class="dd">Treino das habilidades de quem gerencia: comunicação, feedback, trabalho em equipe, apresentação.</span></li>
+        <li><span class="dn">Optativa de Cristianismo<span class="badge">formação PUC</span></span><span class="dd">Mais uma da formação humanística obrigatória da universidade, com temas à escolha.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">4️⃣</span><h2>4º período — o estágio entra na grade</h2></div>
+    <div class="sc-body">
+      <ul class="disc">
+        <li><span class="dn">Oficina de Tomada de Decisão<span class="badge">estágio supervisionado</span></span><span class="dd">Treino de decidir com informação incompleta, no formato de casos e simulações. Já conta como parte do estágio supervisionado.</span></li>
+        <li><span class="dn">Projeto de Novos Negócios I<span class="badge">6 créditos · 60h extensão</span></span><span class="dd">A matéria mais "empreendedora" do curso: tirar um negócio do papel, com pesquisa, contas e apresentação para banca.</span></li>
+        <li><span class="dn">Análise Inferencial para Negócios</span><span class="dd">Estatística que tira conclusão a partir de amostra: pesquisa de mercado, teste A/B, margem de erro.</span></li>
+        <li><span class="dn">Gestão Financeira</span><span class="dd">O dinheiro no dia a dia da empresa: caixa, prazo, custo, decisão de investir.</span></li>
+        <li><span class="dn">Comportamento do Consumidor</span><span class="dd">Por que a gente compra o que compra. Psicologia aplicada ao marketing — costuma ser uma das preferidas da turma.</span></li>
+        <li><span class="dn">Gestão de Pessoas</span><span class="dd">Contratar, treinar, avaliar e remunerar o time. A área de RH pelo lado da gestão.</span></li>
+        <li><span class="dn">Estratégia de Empresas</span><span class="dd">Como a empresa escolhe onde competir e como se diferencia da concorrência.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">5️⃣</span><h2>5º período — poucas matérias, projeto pesado</h2></div>
+    <div class="sc-body">
+      <ul class="disc">
+        <li><span class="dn">Projeto de Gestão Integrado II<span class="badge">6 créditos · estágio</span></span><span class="dd">Segunda rodada do projeto integrado, agora mais exigente e valendo como estágio supervisionado.</span></li>
+        <li><span class="dn">Finanças Corporativas</span><span class="dd">A parte mais pesada de finanças: valor de empresa, risco, retorno, de onde vem o dinheiro para crescer.</span></li>
+        <li><span class="dn">Marketing de Serviços</span><span class="dd">Vender o que não se pega: banco, escola, saúde, aplicativo. Experiência do cliente e qualidade do atendimento.</span></li>
+        <li><span class="dn">Estrutura, Processos e Tecnologia</span><span class="dd">Como organizar o trabalho e usar tecnologia para os processos rodarem melhor.</span></li>
+      </ul>
+      <p class="note">A partir daqui a grade obrigatória afina de propósito: sobra espaço para eletivas, ênfase, intercâmbio e estágio de verdade.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">6️⃣</span><h2>6º período — operações e sustentabilidade</h2></div>
+    <div class="sc-body">
+      <ul class="disc">
+        <li><span class="dn">Projeto de Novos Negócios II<span class="badge">6 créditos · estágio</span></span><span class="dd">Continuação do projeto de negócio, agora com execução e resultados.</span></li>
+        <li><span class="dn">Negócios Sustentáveis e Gestão Socioambiental Estratégica</span><span class="dd">Como conciliar lucro com impacto ambiental e social — hoje é exigência de investidor e de cliente, não discurso bonito.</span></li>
+        <li><span class="dn">Teoria das Organizações II<span class="badge">2 créditos</span></span><span class="dd">Aprofundamento da discussão sobre poder, cultura e mudança nas empresas.</span></li>
+        <li><span class="dn">Gestão de Operações</span><span class="dd">Como se produz e se entrega: processo, qualidade, capacidade, gargalo.</span></li>
+        <li><span class="dn">Ética Cristã<span class="badge">formação PUC</span></span><span class="dd">Discussão sobre decisões difíceis e valores na vida profissional.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">7️⃣</span><h2>7º e 8º períodos — TCC, ênfase e eletivas</h2></div>
+    <div class="sc-body">
+      <ul class="disc">
+        <li><span class="dn">Projeto de TCC<span class="badge">7º</span></span><span class="dd">Escolher o tema e montar o projeto do trabalho final.</span></li>
+        <li><span class="dn">Optativa de Direito para Administração<span class="badge">7º</span></span><span class="dd">O direito aplicado à empresa aparece aqui, no fim do curso, e como matéria escolhida — na UFRJ ele é obrigatório logo no 1º período.</span></li>
+        <li><span class="dn">Ética Socioambiental e Direitos Humanos<span class="badge">7º · formação PUC</span></span><span class="dd">Fecha o bloco de formação humanística do curso.</span></li>
+        <li><span class="dn">Trabalho de Conclusão de Curso<span class="badge">8º</span></span><span class="dd">O trabalho final, com orientador e apresentação.</span></li>
+        <li><span class="dn">Optativa de Filosofia<span class="badge">8º</span></span><span class="dd">Uma matéria de filosofia à escolha, dentro do núcleo de formação da universidade.</span></li>
+      </ul>
+      <div class="hbox" style="margin-top:18px;">📦 <strong>Os créditos "soltos"</strong> — não ficam num período fixo, você encaixa quando quiser: 12 créditos de <strong>ênfase</strong> (um pacote de matérias numa área só), 10 de eletivas fora do departamento, 8 de eletivas livres, 8 de optativas de extensão e 10 de atividades complementares.</div>
+      <p style="margin-top:16px;font-size:13.5px;"><strong>Ênfases oferecidas:</strong></p>
+      <div class="tags">
+        <span class="tag">Gestão internacional</span>
+        <span class="tag">Lazer e turismo</span>
+        <span class="tag">Administração escolar</span>
+        <span class="tag">Administração hospitalar</span>
+        <span class="tag">Gestão ambiental</span>
+        <span class="tag">Logística</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAR ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧩</span><h2>O que é igual nas duas</h2></div>
+    <div class="sc-body">
+      <p>Bem mais do que parece. Administração é um curso com diretrizes nacionais, então o miolo é o mesmo nas duas faculdades — muda a ordem, o nome e o tempero.</p>
+      <ul class="sl" style="margin-top:12px;">
+        <li><strong>Duração:</strong> 4 anos, 8 períodos, bacharelado reconhecido pelo MEC.</li>
+        <li><strong>O núcleo:</strong> economia, contabilidade, matemática financeira, estatística, marketing, gestão de pessoas, finanças, operações, estratégia e teoria das organizações aparecem nas duas.</li>
+        <li><strong>Estágio obrigatório e TCC</strong> nas duas.</li>
+        <li><strong>Carga de extensão obrigatória</strong> (projeto com a comunidade) nas duas, por exigência do MEC.</li>
+        <li><strong>Boa parte do curso é escolhida por você</strong> nos últimos períodos, nas duas.</li>
+        <li><strong>Matemática existe e não dá para fugir</strong> nas duas — não é Engenharia, mas número aparece do 1º ao 8º período.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Os números lado a lado</h2></div>
+    <div class="sc-body">
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <tr>
+            <th></th>
+            <th class="h-ufrj">🏛️ UFRJ (FACC)</th>
+            <th class="h-puc">🎓 PUC-Rio (IAG)</th>
+          </tr>
+          <tr>
+            <td>Tipo</td>
+            <td>Pública e gratuita · Enem/SiSU</td>
+            <td>Privada e católica · vestibular próprio ou Enem</td>
+          </tr>
+          <tr>
+            <td>Campus</td>
+            <td>Praia Vermelha, Botafogo</td>
+            <td>Gávea</td>
+          </tr>
+          <tr>
+            <td>Duração</td>
+            <td>4 anos (máx. 6)</td>
+            <td>4 anos no diurno · 4 anos e meio no noturno (máx. 7)</td>
+          </tr>
+          <tr>
+            <td>Carga horária</td>
+            <td>3.000 horas</td>
+            <td>3.240 horas · 210 créditos</td>
+          </tr>
+          <tr>
+            <td>Extensão</td>
+            <td>300h numa atividade própria</td>
+            <td>360h distribuídas dentro de várias matérias</td>
+          </tr>
+          <tr>
+            <td>Estágio</td>
+            <td>Uma disciplina no 6º período (180h)</td>
+            <td>Diluído em 3 disciplinas-projeto (4º, 5º e 6º)</td>
+          </tr>
+          <tr>
+            <td>TCC</td>
+            <td>Monografia no 7º (180h), preparada por Metodologia e Seminário de Pesquisa</td>
+            <td>Projeto no 7º + TCC no 8º</td>
+          </tr>
+          <tr>
+            <td>Escolha do aluno</td>
+            <td>Optativas e livre escolha a partir do 6º; o 8º é 100% escolhido</td>
+            <td>Ênfase (12 cr.) + eletivas (18 cr.) + extensão (8 cr.), encaixadas quando quiser</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔍</span><h2>As mesmas áreas, com nomes diferentes</h2></div>
+    <div class="sc-body">
+      <p>Antes de achar que um curso "tem" e o outro "não tem", vale conferir: quase sempre o assunto está lá, só com outro nome e em outro período.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <tr>
+            <th>Assunto</th>
+            <th class="h-ufrj">Na UFRJ</th>
+            <th class="h-puc">Na PUC-Rio</th>
+          </tr>
+          <tr>
+            <td>Economia</td>
+            <td>Microeconomia (1º) e Macroeconomia (2º) — duas matérias</td>
+            <td>Introdução à Economia (1º) — uma matéria só</td>
+          </tr>
+          <tr>
+            <td>Matemática</td>
+            <td>Matemática para Adm, Métodos Quantitativos, Matemática Financeira</td>
+            <td>Fundamentos Quantitativos I e II, Raciocínio Lógico</td>
+          </tr>
+          <tr>
+            <td>Estatística e dados</td>
+            <td>Estatística (3º) e Modelos de Regressão e Previsão (4º)</td>
+            <td>Analytics para Negócios (2º), Análise Descritiva (3º), Análise Inferencial (4º)</td>
+          </tr>
+          <tr>
+            <td>Contabilidade e finanças</td>
+            <td>Introdução à Contabilidade, Contabilidade Gerencial, Análise de Investimentos, Gerência Financeira</td>
+            <td>Contabilidade Empresarial, Análise Financeira, Gestão Financeira, Finanças Corporativas</td>
+          </tr>
+          <tr>
+            <td>Marketing</td>
+            <td>Fundamentos de Marketing (4º) e Gestão de Marketing (5º)</td>
+            <td>Gestão de Marketing I (2º) e II (3º), Comportamento do Consumidor, Marketing de Serviços</td>
+          </tr>
+          <tr>
+            <td>Pessoas</td>
+            <td>Liderança e Comportamento no Trabalho, Políticas e Práticas em Gestão de Pessoas</td>
+            <td>O Indivíduo e o Mundo do Trabalho, Comportamento Organizacional, Gestão de Pessoas</td>
+          </tr>
+          <tr>
+            <td>Operações e logística</td>
+            <td>Fundamentos de Logística e Gestão Estratégica de Operações — obrigatórias</td>
+            <td>Gestão de Operações obrigatória; logística aparece como ênfase</td>
+          </tr>
+          <tr>
+            <td>Direito</td>
+            <td>Direito Aplicado à Gestão — obrigatório no 1º período</td>
+            <td>Optativa de Direito para Adm — no 7º período</td>
+          </tr>
+          <tr>
+            <td>Ética</td>
+            <td>Ética e Aspectos Filosóficos na Adm (3º)</td>
+            <td>Três matérias do núcleo de formação da PUC + Ética Cristã</td>
+          </tr>
+          <tr>
+            <td>Tecnologia</td>
+            <td>Sistemas de Informações Gerenciais (4º)</td>
+            <td>Cultura Digital e Sociedade (2º), Estrutura, Processos e Tecnologia (5º)</td>
+          </tr>
+          <tr>
+            <td>Empreender</td>
+            <td>Optativas como Criação de Negócios e Gestão da Inovação</td>
+            <td>Obrigatório: Modelos de Negócios Inovadores + Projeto de Novos Negócios I e II</td>
+          </tr>
+          <tr>
+            <td>Setor público</td>
+            <td>Introdução à Administração Pública — obrigatória (2º)</td>
+            <td>Não é obrigatória</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚖️</span><h2>O que muda de verdade</h2></div>
+    <div class="sc-body">
+      <div class="two-grid">
+        <div class="tg-col">
+          <div class="tg-head ufrj-bg">🏛️ Jeito UFRJ</div>
+          <div class="tg-body ufrj-tx">
+            <ul>
+              <li><strong>Começa pelo alicerce.</strong> Os dois primeiros anos são economia, matemática, contabilidade e estatística. O marketing só chega no 4º período.</li>
+              <li><strong>Sequência fixa e travada.</strong> Quase toda matéria tem pré-requisito, então a turma anda junta e há pouca margem para escolher no começo.</li>
+              <li><strong>Olhar crítico e acadêmico.</strong> Ética e Filosofia, Abordagens Críticas, Teoria das Organizações. Discute-se o papel da empresa na sociedade, não só como lucrar.</li>
+              <li><strong>Setor público na grade.</strong> Administração pública é obrigatória e há várias optativas na área — dá liga com quem pensa em concurso.</li>
+              <li><strong>Logística forte</strong> como matéria obrigatória e um monte de optativa em torno dela.</li>
+              <li><strong>O fim do curso é seu.</strong> O 8º período não tem nenhuma obrigatória: você monta.</li>
+              <li><strong>Prática:</strong> vem do estágio, da empresa júnior e dos projetos de extensão — não de disciplinas-projeto na grade.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tg-col">
+          <div class="tg-head puc-bg">🎓 Jeito PUC-Rio</div>
+          <div class="tg-body puc-tx">
+            <ul>
+              <li><strong>Começa pela empresa.</strong> "Como Funciona um Negócio" e marketing já no 1º e 2º períodos: você vê o todo antes de mergulhar na teoria.</li>
+              <li><strong>Aprender fazendo.</strong> Quatro disciplinas-projeto ao longo do curso, com trabalho em grupo, empresa real e apresentação para banca.</li>
+              <li><strong>Trilha de dados clara.</strong> Analytics, análise descritiva e análise inferencial em sequência — bem alinhado com o que o mercado pede hoje.</li>
+              <li><strong>Empreendedorismo é obrigatório</strong>, não optativo: dois semestres criando um negócio.</li>
+              <li><strong>Comunicação e organização pessoal na grade:</strong> Texto Empresarial, Oficina de Aprendizagem, Competências de Gestão.</li>
+              <li><strong>Formação humanística da PUC:</strong> quatro matérias de filosofia, ética e cristianismo ao longo do curso. Faz parte do pacote da universidade.</li>
+              <li><strong>Ênfases:</strong> dá para carimbar uma área (internacional, turismo, hospitalar, ambiental...) com um pacote de matérias.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="note">Nenhum dos dois desenhos é "melhor". Um aposta em fundamento antes de aplicação; o outro em aplicação puxando o fundamento. São escolas de pensamento diferentes sobre como se aprende gestão.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💬</span><h2>Perguntas para você levar</h2></div>
+    <div class="sc-body">
+      <p>Leia as duas grades pensando nestas perguntas. As respostas não estão aqui — elas são suas, e valem mais que qualquer ranking de faculdade.</p>
+      <ul class="sl" style="margin-top:12px;">
+        <li>Quais matérias você leu e pensou "isso eu queria ver"? Marque três de cada aba.</li>
+        <li>E quais te deram preguiça só de ler? Elas são poucas ou são metade do curso?</li>
+        <li>Você aprende melhor entendendo a teoria primeiro ou caindo no problema real e correndo atrás?</li>
+        <li>Trabalho em grupo com apresentação para banca: energia ou tortura?</li>
+        <li>Ter matéria de filosofia e ética obrigatória te interessa ou te incomoda?</li>
+        <li>Você se imagina mais numa empresa, num negócio próprio ou no setor público? Qual grade conversa mais com isso?</li>
+        <li>O que te chamou atenção nas duas ao mesmo tempo? Isso pode ser uma pista boa sobre o que você procura.</li>
+      </ul>
+      <div class="hbox" style="margin-top:18px;">📌 <strong>Vale lembrar:</strong> grade curricular é só uma parte da decisão. Forma de entrada, custo, localização, estágio, intercâmbio e o clima do campus pesam tanto quanto as disciplinas. Leve suas conclusões para a próxima sessão.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde conferir na fonte</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>UFRJ:</strong> grade completa no SIGA — <a href="https://siga.ufrj.br/sira/repositorio-curriculo/distribuicoes/A65A15FE-92A4-F79C-3ACF-54A4BCD73349.html">siga.ufrj.br</a></li>
+        <li><strong>PUC-Rio:</strong> currículos 2015, 2020, 2023 e 2025, diurno e noturno — <a href="https://www.puc-rio.br/ensinopesq/ccg/administracao.html">puc-rio.br/ensinopesq/ccg/administracao.html</a></li>
+      </ul>
+      <p class="note">Currículos mudam. Antes de decidir, confira a versão do ano em que você vai entrar.</p>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com.br</p>
+</footer>
+
+<script>
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
