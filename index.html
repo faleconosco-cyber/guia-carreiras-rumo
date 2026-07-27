@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guias de Carreira | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rumo-blue: #3E658E; --rumo-orange: #FD745D; --rumo-cream: #FDDED5;
+      --rumo-yellow: #FDBB71; --bg: #FDFAF8; --surface: #FFFFFF;
+      --border: #EDE8E3; --text: #282828; --muted: #7A8B99;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+
+    header { background: var(--rumo-blue); color: white; padding: 40px 44px 44px; }
+    .hd-logo svg { height: 56px; width: auto; display: block; margin-bottom: 20px; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 32px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header p { font-size: 13px; opacity: 0.75; margin-top: 14px; max-width: 560px; }
+
+    main { max-width: 760px; margin: 40px auto; padding: 0 22px 80px; }
+    .sec-label { font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+
+    .gcard { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px 26px; display: flex; align-items: center; gap: 20px; text-decoration: none; color: var(--text); margin-bottom: 16px; transition: border-color 0.2s, transform 0.2s; }
+    .gcard:hover { border-color: var(--rumo-blue); transform: translateY(-2px); }
+    .gcard .g-emoji { font-size: 34px; flex-shrink: 0; }
+    .gcard .g-body { flex: 1; }
+    .gcard .g-title { font-size: 17px; font-weight: 800; color: var(--rumo-blue); margin-bottom: 4px; }
+    .gcard .g-sub { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .gcard .g-arr { font-size: 24px; color: var(--rumo-orange); margin-left: 8px; }
+
+    .empty { font-size: 13px; color: var(--muted); font-style: italic; }
+
+    footer { text-align: center; padding: 30px; color: var(--muted); font-size: 12px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 20px; color: var(--rumo-blue); display: block; margin-bottom: 4px; }
+
+    @media (max-width: 600px) {
+      header { padding: 28px 22px; }
+      header h1 { font-size: 25px; }
+      .gcard { padding: 18px 18px; gap: 14px; }
+      .gcard .g-emoji { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo</div>
+  <h1>Guias de Carreira
+    <span class="hd-accent">informação real pra escolher melhor</span>
+  </h1>
+  <p>Materiais feitos para apoiar a escolha profissional com dados de verdade: o que cada curso é, o que o profissional faz, o mercado, os salários e as vagas reais hoje.</p>
+</header>
+
+<main>
+  <div class="sec-label">Guias disponíveis</div>
+
+  <a class="gcard" href="concursos-juridicos/">
+    <span class="g-emoji">🏛️</span>
+    <span class="g-body">
+      <span class="g-title">Concursos públicos na área do Direito</span>
+      <span class="g-sub">Delegado, juiz, defensor público, promotor, procurador e outras portas jurídicas. O que cada um faz, requisitos e salário real de hoje.</span>
+    </span>
+    <span class="g-arr">→</span>
+  </a>
+
+  <a class="gcard" href="direito-administracao-engenharia-producao/">
+    <span class="g-emoji">⚖️</span>
+    <span class="g-body">
+      <span class="g-title">Direito, Administração e Engenharia de Produção</span>
+      <span class="g-sub">Três caminhos para quem quer liderar, decidir e causar impacto. Com checklist, comparação, vagas reais e seus critérios.</span>
+    </span>
+    <span class="g-arr">→</span>
+  </a>
+
+  <a class="gcard" href="adm-publicidade-cinema/">
+    <span class="g-emoji">🎬</span>
+    <span class="g-body">
+      <span class="g-title">Administração, Publicidade e Cinema</span>
+      <span class="g-sub">Três caminhos para quem quer criar, comunicar e gerir. Com checklist, comparação e seus critérios.</span>
+    </span>
+    <span class="g-arr">→</span>
+  </a>
+
+  <a class="gcard" href="publicidade-relacoes-publicas-direito/">
+    <span class="g-emoji">⚖️</span>
+    <span class="g-body">
+      <span class="g-title">Publicidade, Relações Públicas e Direito</span>
+      <span class="g-sub">Três caminhos para quem quer comunicar, influenciar e defender direitos. Com checklist, comparação, vagas reais e seus critérios.</span>
+    </span>
+    <span class="g-arr">→</span>
+  </a>
+
+  <a class="gcard" href="engenharia-producao-estatistica-arquitetura/">
+    <span class="g-emoji">🧭</span>
+    <span class="g-body">
+      <span class="g-title">Engenharia de Produção, Estatística e Arquitetura</span>
+      <span class="g-sub">Três caminhos para quem gosta de organizar, analisar informações e lidar com pessoas. Com checklist, comparação, vagas reais e seus critérios.</span>
+    </span>
+    <span class="g-arr">→</span>
+  </a>
+
+  <a class="gcard" href="relacoes-internacionais-direito-relacoes-publicas-moda/">
+    <span class="g-emoji">🌍</span>
+    <span class="g-body">
+      <span class="g-title">Relações Internacionais, Direito, Relações Públicas e Moda</span>
+      <span class="g-sub">Quatro caminhos para quem se interessa por política, diplomacia, justiça e o mundo lá fora. Com checklist, comparação, vagas reais e seus critérios.</span>
+    </span>
+    <span class="g-arr">→</span>
+  </a>
+
+  <a class="gcard" href="economia-engenharia-producao-administracao/">
+    <span class="g-emoji">🧭</span>
+    <span class="g-body">
+      <span class="g-title">Economia, Engenharia de Produção e Administração</span>
+      <span class="g-sub">Três caminhos que falam a língua dos números e da organização. Com checklist, comparação, vagas reais e seus critérios.</span>
+    </span>
+    <span class="g-arr">→</span>
+  </a>
+
+  <a class="gcard" href="administracao-economia-nutricao/">
+    <span class="g-emoji">🥗</span>
+    <span class="g-body">
+      <span class="g-title">Administração, Economia e Nutrição</span>
+      <span class="g-sub">Dois caminhos do mundo dos negócios e um da área da saúde. Com checklist, comparação, vagas reais e seus critérios.</span>
+    </span>
+    <span class="g-arr">→</span>
+  </a>
+
+  <a class="gcard" href="relacoes-internacionais-geologia-economia/">
+    <span class="g-emoji">🌎</span>
+    <span class="g-body">
+      <span class="g-title">Relações Internacionais, Geologia e Economia</span>
+      <span class="g-sub">Três caminhos para quem quer entender o mundo, negociar e analisar informação. Com checklist, comparação, vagas reais e seus critérios.</span>
+    </span>
+    <span class="g-arr">→</span>
+  </a>
+
+</main>
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  Instituto Rumo · institutorumo.com.br
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia de Concursos Jurídicos — Instituto Rumo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rumo-blue:   #3E658E;
+    --rumo-orange: #FD745D;
+    --rumo-cream:  #FDDED5;
+    --rumo-yellow: #FDBB71;
+    --rumo-water:  #91B096;
+    --rumo-bordo:  #6B2F3C;
+    --rumo-green:  #3B503F;
+
+    --bg:      #FDFAF8;
+    --surface: #FFFFFF;
+    --border:  #EDE8E3;
+    --text:    #282828;
+    --muted:   #7A8B99;
+
+    /* Delegado de Polícia — Laranja */
+    --del:     #D9563F;
+    --del-lt:  #FFF0ED;
+    --del-mid: #FBC9BE;
+
+    /* Juiz de Direito — Bordô */
+    --juz:     #6B2F3C;
+    --juz-lt:  #F6EAED;
+    --juz-mid: #DCC0C8;
+
+    /* Defensor Público — Verde Água */
+    --def:     #4C7A62;
+    --def-lt:  #EAF1EC;
+    --def-mid: #C3D9CB;
+
+    /* Promotor de Justiça — Amarelo/Dourado */
+    --pro:     #A8781E;
+    --pro-lt:  #FBF1E1;
+    --pro-mid: #EAD3A0;
+
+    /* Procurador do Estado — Verde Profundo */
+    --prc:     #3B503F;
+    --prc-lt:  #EAEFEB;
+    --prc-mid: #C2CFC4;
+
+    /* Comparar — Azul Rumo */
+    --cmp:     #3E658E;
+    --cmp-lt:  #EEF4FA;
+    --cmp-mid: #C0D4E8;
+
+    /* Outras portas — Cinza-azulado */
+    --op:      #55707E;
+    --op-lt:   #EDF2F3;
+    --op-mid:  #C6D3D7;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+  header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+  .hd-logo { margin-bottom: 18px; }
+  .hd-logo svg { height: 54px; width: auto; display: block; }
+  .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+  header h1 { font-size: 28px; font-weight: 900; line-height: 1.2; }
+  .hd-accent { font-family: 'Caveat', cursive; font-size: 28px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+  header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 660px; line-height: 1.6; }
+
+  nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+  .tab-btn { display: inline-block; padding: 15px 16px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+  .tab-btn.del.active { color: var(--del); border-bottom-color: var(--del); }
+  .tab-btn.juz.active { color: var(--juz); border-bottom-color: var(--juz); }
+  .tab-btn.def.active { color: var(--def); border-bottom-color: var(--def); }
+  .tab-btn.pro.active { color: var(--pro); border-bottom-color: var(--pro); }
+  .tab-btn.prc.active { color: var(--prc); border-bottom-color: var(--prc); }
+  .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+  .tab-btn.vg.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+  .tab-btn.op.active { color: var(--op); border-bottom-color: var(--op); }
+  .tab-btn:hover { opacity: 0.85; }
+
+  .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+  .panel.active { display: block; }
+
+  .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+  .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+  .sc-head h2 { font-size: 15px; font-weight: 800; }
+  .sc-icon { font-size: 20px; }
+  .del .sc-head { background: var(--del-lt); border-color: var(--del-mid); }
+  .del .sc-head h2 { color: var(--del); }
+  .juz .sc-head { background: var(--juz-lt); border-color: var(--juz-mid); }
+  .juz .sc-head h2 { color: var(--juz); }
+  .def .sc-head { background: var(--def-lt); border-color: var(--def-mid); }
+  .def .sc-head h2 { color: var(--def); }
+  .pro .sc-head { background: var(--pro-lt); border-color: var(--pro-mid); }
+  .pro .sc-head h2 { color: var(--pro); }
+  .prc .sc-head { background: var(--prc-lt); border-color: var(--prc-mid); }
+  .prc .sc-head h2 { color: var(--prc); }
+  .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+  .cmp .sc-head h2 { color: var(--cmp); }
+  .vg .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+  .vg .sc-head h2 { color: var(--cmp); }
+  .op .sc-head { background: var(--op-lt); border-color: var(--op-mid); }
+  .op .sc-head h2 { color: var(--op); }
+  .sc-body { padding: 24px; }
+  .sc-body p { font-size: 14px; line-height: 1.7; }
+
+  ul.sl { list-style: none; padding: 0; }
+  ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+  ul.sl li:last-child { border-bottom: none; }
+  ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+  .del ul.sl li::before { color: var(--del); }
+  .juz ul.sl li::before { color: var(--juz); }
+  .def ul.sl li::before { color: var(--def); }
+  .pro ul.sl li::before { color: var(--pro); }
+  .prc ul.sl li::before { color: var(--prc); }
+  .cmp ul.sl li::before { color: var(--cmp); }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+  .del .tag { background: var(--del-lt); color: var(--del); border-color: var(--del-mid); }
+  .juz .tag { background: var(--juz-lt); color: var(--juz); border-color: var(--juz-mid); }
+  .def .tag { background: var(--def-lt); color: var(--def); border-color: var(--def-mid); }
+  .pro .tag { background: var(--pro-lt); color: var(--pro); border-color: var(--pro-mid); }
+  .prc .tag { background: var(--prc-lt); color: var(--prc); border-color: var(--prc-mid); }
+  .vg .tag { background: var(--cmp-lt); color: var(--cmp); border-color: var(--cmp-mid); }
+  .op .tag { background: var(--op-lt); color: var(--op); border-color: var(--op-mid); }
+
+  .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+  .del .hbox { background: var(--del-lt); border-color: var(--del); }
+  .juz .hbox { background: var(--juz-lt); border-color: var(--juz); }
+  .def .hbox { background: var(--def-lt); border-color: var(--def); }
+  .pro .hbox { background: var(--pro-lt); border-color: var(--pro); }
+  .prc .hbox { background: var(--prc-lt); border-color: var(--prc); }
+  .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+  .vg .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+  .op .hbox { background: var(--op-lt); border-color: var(--op); }
+  .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+  .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+  .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+  .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+  .del .accent { color: var(--del); }
+  .juz .accent { color: var(--juz); }
+  .def .accent { color: var(--def); }
+  .pro .accent { color: var(--pro); }
+  .prc .accent { color: var(--prc); }
+
+  .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+  .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+  .del .sal-card { background: var(--del-lt); border-color: var(--del-mid); }
+  .juz .sal-card { background: var(--juz-lt); border-color: var(--juz-mid); }
+  .def .sal-card { background: var(--def-lt); border-color: var(--def-mid); }
+  .pro .sal-card { background: var(--pro-lt); border-color: var(--pro-mid); }
+  .prc .sal-card { background: var(--prc-lt); border-color: var(--prc-mid); }
+  .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+  .sal-range { font-size: 19px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+  .del .sal-range { color: var(--del); }
+  .juz .sal-range { color: var(--juz); }
+  .def .sal-range { color: var(--def); }
+  .pro .sal-range { color: var(--pro); }
+  .prc .sal-range { color: var(--prc); }
+  .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+  .comp-wrap { overflow-x: auto; margin-top: 14px; }
+  .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+  .comp-table th.h-del { background: var(--del); }
+  .comp-table th.h-juz { background: var(--juz); }
+  .comp-table th.h-def { background: var(--def); }
+  .comp-table th.h-pro { background: var(--pro); }
+  .comp-table th.h-prc { background: var(--prc); }
+  .comp-table th.h-vg { background: var(--cmp); }
+  .comp-table th:first-child { background: var(--text); }
+  .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+  .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+  .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+  .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+  .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+  .del .lcard:hover { border-color: var(--del); }
+  .juz .lcard:hover { border-color: var(--juz); }
+  .def .lcard:hover { border-color: var(--def); }
+  .pro .lcard:hover { border-color: var(--pro); }
+  .prc .lcard:hover { border-color: var(--prc); }
+  .cmp .lcard:hover { border-color: var(--cmp); }
+  .vg .lcard:hover { border-color: var(--cmp); }
+  .op .lcard:hover { border-color: var(--op); }
+  .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+  .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+  .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+  .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+  .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+  .del .cl-item:hover, .del .cl-item.checked { background: var(--del-lt); border-color: var(--del); }
+  .juz .cl-item:hover, .juz .cl-item.checked { background: var(--juz-lt); border-color: var(--juz); }
+  .def .cl-item:hover, .def .cl-item.checked { background: var(--def-lt); border-color: var(--def); }
+  .pro .cl-item:hover, .pro .cl-item.checked { background: var(--pro-lt); border-color: var(--pro); }
+  .prc .cl-item:hover, .prc .cl-item.checked { background: var(--prc-lt); border-color: var(--prc); }
+  .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+  .del .cl-item.checked .cl-box { background: var(--del); border-color: var(--del); }
+  .juz .cl-item.checked .cl-box { background: var(--juz); border-color: var(--juz); }
+  .def .cl-item.checked .cl-box { background: var(--def); border-color: var(--def); }
+  .pro .cl-item.checked .cl-box { background: var(--pro); border-color: var(--pro); }
+  .prc .cl-item.checked .cl-box { background: var(--prc); border-color: var(--prc); }
+  .cl-text { font-size: 13px; line-height: 1.55; }
+  .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+  .del .cl-score span { color: var(--del); font-weight: 800; }
+  .juz .cl-score span { color: var(--juz); font-weight: 800; }
+  .def .cl-score span { color: var(--def); font-weight: 800; }
+  .pro .cl-score span { color: var(--pro); font-weight: 800; }
+  .prc .cl-score span { color: var(--prc); font-weight: 800; }
+
+  .path-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 14px; }
+  .path-card { border-radius: 12px; padding: 14px 12px; border: 1px solid var(--cmp-mid); background: var(--cmp-lt); text-align: center; }
+  .path-card .pc-num { font-size: 11px; font-weight: 800; color: var(--cmp); margin-bottom: 6px; }
+  .path-card p { font-size: 12px; line-height: 1.5; }
+
+  footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+  footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+  footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+  footer p { font-size: 12px; opacity: 0.7; }
+  footer .ft-contact { margin-top: 18px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  footer .ft-contact a { color: white; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.35); border-radius: 20px; padding: 9px 18px; font-size: 13px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; transition: background 0.2s; }
+  footer .ft-contact a:hover { background: rgba(255,255,255,0.22); }
+  footer .ft-note { font-size: 12px; opacity: 0.85; margin-top: 14px; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+  @media (max-width: 680px) {
+    header { padding: 24px 20px; }
+    header h1 { font-size: 22px; }
+    .hd-accent { font-size: 22px; }
+    nav { padding: 0 12px; }
+    .panel { padding: 0 12px 60px; }
+    .sal-grid { grid-template-columns: 1fr; }
+    .path-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media print {
+    nav { display: none; }
+    .panel { display: block !important; }
+    .sc { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Pesquisa</div>
+  <h1>Concursos jurídicos: os caminhos de quem estuda Direito
+    <span class="hd-accent">um mapa antes da faculdade</span>
+  </h1>
+  <p class="hd-sub">Direito não é uma carreira só, é uma faculdade que abre várias portas diferentes. Delegado, juiz, defensor, promotor e procurador fazem coisas bem distintas no dia a dia, embora todos tenham passado pela mesma graduação, e ainda existem outras portas de entrada no mundo jurídico via concurso. Este guia mostra o que cada um faz, o que é preciso pra tentar cada concurso e quanto ganha hoje, com dados de 2026.</p>
+</header>
+
+<nav>
+  <button class="tab-btn vg active" data-c="vg" onclick="show('vg')">🧭 Visão geral</button>
+  <button class="tab-btn del" data-c="del" onclick="show('del')">🔍 Delegado de Polícia</button>
+  <button class="tab-btn juz" data-c="juz" onclick="show('juz')">⚖️ Juiz de Direito</button>
+  <button class="tab-btn def" data-c="def" onclick="show('def')">🤝 Defensor Público</button>
+  <button class="tab-btn pro" data-c="pro" onclick="show('pro')">📜 Promotor de Justiça</button>
+  <button class="tab-btn prc" data-c="prc" onclick="show('prc')">🏛️ Procurador do Estado</button>
+  <button class="tab-btn op" data-c="op" onclick="show('op')">🗺️ Outras portas</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">🔎 Comparar os caminhos</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ VISÃO GERAL ═══════════════════════════════ -->
+<div class="panel vg active" id="p-vg">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Como apresentar isso pra ela</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        "O Direito não leva só à advocacia. Quem faz Direito pode seguir carreiras públicas muito diferentes: julgar conflitos, defender pessoas vulneráveis, investigar crimes, representar o Estado, fiscalizar o cumprimento da lei ou trabalhar nos bastidores dos tribunais."
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧩</span><h2>Diferenças de perfil entre as carreiras</h2></div>
+    <div class="sc-body">
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th class="h-vg">Perfil que pode se interessar</th>
+              <th class="h-vg">Carreiras que combinam mais</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Gosta de decidir, analisar conflitos e assumir responsabilidade</td><td>Magistratura</td></tr>
+            <tr><td>Tem senso de justiça social e quer atuar por pessoas sem acesso a advogado</td><td>Defensoria Pública</td></tr>
+            <tr><td>Gosta de investigação, área criminal e operações</td><td>Delegado(a) de Polícia</td></tr>
+            <tr><td>Gosta de defender interesses coletivos, infância, meio ambiente, sociedade</td><td>Ministério Público</td></tr>
+            <tr><td>Gosta de escrever pareceres, estudar normas e orientar políticas públicas</td><td>Advocacia Pública / Procuradorias</td></tr>
+            <tr><td>Quer estabilidade e rotina jurídica sem necessariamente ser autoridade</td><td>Analista Judiciário, Analista Processual</td></tr>
+            <tr><td>Quer entrar mais cedo no serviço público e depois crescer</td><td>Técnico Judiciário / Técnico Administrativo</td></tr>
+            <tr><td>Gosta de documentos, registros, formalização e fé pública</td><td>Cartórios (Tabelião / Registrador)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💡</span><h2>Antes de pensar em concurso</h2></div>
+    <div class="sc-body">
+      <p>Pra uma adolescente, isso não deveria ser apresentado como "escolha de concurso", e sim como um <strong>mapa de possibilidades</strong>. O primeiro passo ainda é entender se ela se interessa por:</p>
+      <div class="tags">
+        <span class="tag">Leitura intensa</span>
+        <span class="tag">Argumentação</span>
+        <span class="tag">Escrita</span>
+        <span class="tag">Conflitos humanos</span>
+        <span class="tag">Regras sociais</span>
+        <span class="tag">Justiça</span>
+        <span class="tag">Negociação</span>
+        <span class="tag">Responsabilidade</span>
+        <span class="tag">Estudo prolongado</span>
+      </div>
+      <p class="note">A área é ampla, mas a maior parte das carreiras mais altas exige uma combinação de graduação em Direito + experiência jurídica + anos de preparação para concurso. Os valores de remuneração citados neste guia são brutos, aproximados e iniciais: variam por edital, estado, benefícios, indenizações, honorários e descontos. Sempre confirmar no edital oficial vigente.</p>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ DELEGADO ═══════════════════════════════ -->
+<div class="panel del" id="p-del">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o concurso de Delegado de Polícia?</h2></div>
+    <div class="sc-body">
+      <p>Delegado é o cargo de topo da carreira policial civil (existe também a versão federal, na Polícia Federal). O delegado é a autoridade que <strong>preside o inquérito policial</strong>, ou seja, conduz oficialmente a investigação de um crime desde a notícia do fato até o relatório final que vai para o Ministério Público e o juiz. É concurso público estadual (Polícia Civil) ou federal (Polícia Federal), organizado por bancas como Cebraspe, Vunesp ou FGV, e exige diploma de Direito.</p>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Onde atua:</strong> Polícia Civil (estadual, dentro de uma delegacia) ou Polícia Federal (crimes de repercussão nacional, tráfico internacional, corrupção, crimes contra a União). São carreiras, concursos e salários diferentes entre si.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional faz no dia a dia?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Preside inquéritos policiais:</strong> decide o que investigar, pede perícias, quebras de sigilo, buscas e prisões.</li>
+        <li><strong>Toma decisões urgentes:</strong> avalia flagrantes, decide se mantém a prisão ou concede liberdade provisória, sempre reportando ao juiz.</li>
+        <li><strong>Ouve vítimas, testemunhas e suspeitos:</strong> conduz interrogatórios e depoimentos.</li>
+        <li><strong>Gerencia a delegacia:</strong> coordena escrivães, investigadores e peritos, decide prioridades da unidade.</li>
+        <li><strong>Representa por medidas cautelares:</strong> pede ao juiz prisão preventiva, busca e apreensão ou monitoramento.</li>
+        <li><strong>Lida com plantão e emergência:</strong> é acionado a qualquer hora para ocorrências graves (homicídios, sequestros, flagrantes).</li>
+      </ul>
+      <p class="note">É a "porta de entrada" do sistema de justiça criminal: o primeiro a lidar oficialmente com o crime, antes de chegar ao Ministério Público e ao juiz.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Requisitos para se candidatar</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Diploma de bacharel em Direito</strong>, reconhecido pelo MEC.</li>
+        <li><strong>Atividade jurídica ou policial comprovada:</strong> em vários estados, 2 a 3 anos após a formatura (varia por edital; alguns exigem, outros não).</li>
+        <li><strong>Idade mínima de 18 anos</strong> na posse; a maioria das Polícias Civis não tem idade máxima, só a aposentadoria compulsória (75 anos).</li>
+        <li><strong>CNH categoria B ou superior.</strong></li>
+        <li><strong>Exame de aptidão física (TAF), avaliação psicológica e investigação social</strong>, além dos exames médicos.</li>
+        <li>Boa conduta e ausência de antecedentes incompatíveis com o cargo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📝</span><h2>Como funciona o concurso</h2></div>
+    <div class="sc-body">
+      <p>Costuma ter várias fases: prova objetiva, prova discursiva (peça e dissertação), avaliação de títulos, exame psicotécnico, TAF, investigação social e, no fim, curso de formação policial (que pode durar meses, às vezes remunerado, morando na academia). É considerado um dos concursos jurídicos mais concorridos e um dos mais completos em número de etapas.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha hoje (2026)</h2></div>
+    <div class="sc-body">
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Polícia Civil (estadual)</div><div class="sal-range">R$ 15k–30k</div><div class="sal-note">Inicial médio em torno de R$ 23,7 mil; varia muito entre estados.</div></div>
+        <div class="sal-card"><div class="sal-stage">Polícia Federal</div><div class="sal-range">R$ 27,8k–41,3k</div><div class="sal-note">Inicial na 3ª classe até o topo da carreira (classe especial).</div></div>
+        <div class="sal-card"><div class="sal-stage">Adicionais</div><div class="sal-range">variam</div><div class="sal-note">Podem existir gratificações por risco de vida, plantão e função.</div></div>
+      </div>
+      <p class="note">Fonte: pesquisas de salário e editais compilados por Estratégia Concursos, Ceisc e Magistrar Cursos, 2026.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://cj.estrategia.com/portal/concursos-delegado/" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Estratégia Concursos — Delegado</strong><span>Panorama de editais e salários por estado</span></div><span class="lc-arr">→</span></a>
+        <a href="https://ceisc.com.br/blog/post/carreiras-policiais-qual-o-salario-de-delegado-da-policia-civil-em-cada-estado" class="lcard" target="_blank"><span class="lc-icon">💰</span><div class="lc-body"><strong>Ceisc — Salário por estado</strong><span>Comparação de remuneração de delegado em cada UF</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.gov.br/pf/pt-br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>Polícia Federal — site oficial</strong><span>Estrutura, carreiras e concursos da PF</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/caracteristicas-dos-cargos/carreira-policial/requisitos-e-atribuicoes-dos-cargos-da-carreira-policial-federal" class="lcard" target="_blank"><span class="lc-icon">📄</span><div class="lc-body"><strong>PF — Requisitos e Atribuições dos Cargos</strong><span>Fonte oficial sobre exigências da carreira policial federal</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Delegado(a) de Polícia é um caminho para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade:</p>
+      <div class="checklist-wrap" id="cl-del">
+        <div class="cl-item" onclick="toggle(this,'cl-del')"><div class="cl-box"></div><div class="cl-text">Tenho interesse real por investigação, provas e entender "o que realmente aconteceu".</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-del')"><div class="cl-box"></div><div class="cl-text">Não me abalo diante de situações tensas, urgentes ou de sofrimento humano.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-del')"><div class="cl-box"></div><div class="cl-text">Gosto de tomar decisões rápidas e assumir a responsabilidade por elas.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-del')"><div class="cl-box"></div><div class="cl-text">Aceito a ideia de trabalhar em plantões, à noite ou em finais de semana quando necessário.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-del')"><div class="cl-box"></div><div class="cl-text">Tenho interesse em liderar uma equipe e gerir uma unidade (a delegacia).</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-del')"><div class="cl-box"></div><div class="cl-text">Não me incomoda lidar com o lado mais duro da sociedade: crime, violência, vulnerabilidade.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-del">0 de 6</span></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ JUIZ ═══════════════════════════════ -->
+<div class="panel juz" id="p-juz">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o concurso de Juiz de Direito?</h2></div>
+    <div class="sc-body">
+      <p>Juiz de Direito é quem julga: decide processos, profere sentenças e conduz audiências dentro do Poder Judiciário. O concurso é chamado de <strong>Magistratura</strong> (nesse caso, estadual, para o cargo de Juiz Substituto do Tribunal de Justiça de cada estado; existe também a magistratura federal, trabalhista e militar, com concursos e tribunais próprios). É considerado um dos concursos jurídicos mais concorridos e valorizados do país.</p>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Posição no processo:</strong> diferente do delegado ou do promotor, o juiz não investiga nem acusa. Ele é imparcial: ouve as duas partes de um conflito que já chegou à Justiça e decide, com base na lei e nas provas apresentadas.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional faz no dia a dia?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Julga processos</strong> na vara em que atua: cível, criminal, família, infância, empresarial, entre outras.</li>
+        <li><strong>Profere sentenças e decisões</strong>, sempre fundamentadas na lei e nas provas dos autos.</li>
+        <li><strong>Conduz audiências</strong>, ouve partes e testemunhas, tenta conciliação entre as partes quando possível.</li>
+        <li><strong>Decide liminares e medidas urgentes</strong>, como autorizar uma prisão preventiva pedida pelo delegado ou pelo Ministério Público.</li>
+        <li><strong>Analisa grande volume de processos escritos:</strong> boa parte do trabalho é leitura, análise e redação de decisões, não só audiência.</li>
+        <li><strong>Começa como Juiz Substituto</strong>, atuando onde o tribunal designar, e vai progredindo na carreira por antiguidade e merecimento até desembargador.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Requisitos para se candidatar</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Diploma de bacharel em Direito</strong>, reconhecido pelo MEC.</li>
+        <li><strong>3 anos de atividade jurídica comprovada</strong> após a colação de grau (estágio de faculdade não conta para esse tempo).</li>
+        <li><strong>Idade mínima de 18 anos.</strong></li>
+        <li>Reputação ilibada e ausência de antecedentes incompatíveis com a magistratura.</li>
+        <li>Aprovação em concurso público de provas e títulos: é exigência constitucional (art. 93 da Constituição Federal) que os concursos de magistratura sejam sempre por provas e títulos.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📝</span><h2>Como funciona o concurso</h2></div>
+    <div class="sc-body">
+      <p>É um dos concursos mais longos e difíceis do país: prova objetiva, provas escritas dissertativas e de sentença, exame psicotécnico, sindicância da vida pregressa, prova oral e curso de formação na Escola da Magistratura. Muitos candidatos levam de 3 a 6 anos de estudo intenso até a aprovação.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha hoje (2026)</h2></div>
+    <div class="sc-body">
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Juiz Substituto (início)</div><div class="sal-range">R$ 30k–36k</div><div class="sal-note">Varia por estado: de ~R$ 30,5 mil (RS) a ~R$ 35,9 mil (MG e RJ).</div></div>
+        <div class="sal-card"><div class="sal-stage">Progressão</div><div class="sal-range">até R$ 46,3k</div><div class="sal-note">Teto constitucional atual, equivalente ao subsídio de ministro do STF.</div></div>
+        <div class="sal-card"><div class="sal-stage">Magistratura federal</div><div class="sal-range">R$ 37,8k</div><div class="sal-note">Ex.: juiz federal substituto no TRF2, subsídio de R$ 37.765,55. Concurso e tribunal separados da magistratura estadual.</div></div>
+      </div>
+      <p class="note">Fonte: CNJ — Remuneração dos Magistrados; tribunais estaduais (TJRS, TJBA, TJMG, TJRJ), 2025–2026.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.cnj.jus.br/transparencia-cnj/remuneracao-dos-magistrados/" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CNJ — Remuneração dos Magistrados</strong><span>Dados oficiais de salário por tribunal</span></div><span class="lc-arr">→</span></a>
+        <a href="https://blog.mege.com.br/panorama-concursos-magistratura-juiz-substituto/" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Blog do Mege — Panorama Magistratura</strong><span>Editais previstos, bancas e exigências</span></div><span class="lc-arr">→</span></a>
+        <a href="https://ceisc.com.br/blog/post/juiz-estadual" class="lcard" target="_blank"><span class="lc-icon">📖</span><div class="lc-body"><strong>Ceisc — Juiz Estadual</strong><span>Carreira, concurso e preparação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.cnj.jus.br/poder-judiciario/concursos-de-tribunais/" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CNJ — Concursos de Tribunais</strong><span>Painel oficial de concursos da magistratura</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Magistratura é um caminho para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade:</p>
+      <div class="checklist-wrap" id="cl-juz">
+        <div class="cl-item" onclick="toggle(this,'cl-juz')"><div class="cl-box"></div><div class="cl-text">Consigo ouvir os dois lados de um conflito sem me deixar levar pela emoção do momento.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-juz')"><div class="cl-box"></div><div class="cl-text">Gosto de ler, estudar e escrever com profundidade; não me incomoda passar horas com textos técnicos.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-juz')"><div class="cl-box"></div><div class="cl-text">Tenho paciência para um caminho longo de preparação, de vários anos, antes de qualquer resultado.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-juz')"><div class="cl-box"></div><div class="cl-text">Prefiro decidir com base em regras e critérios claros a decidir "no feeling".</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-juz')"><div class="cl-box"></div><div class="cl-text">Consigo lidar com a solidão da função: quem julga, decide sozinho, sem dividir a responsabilidade.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-juz')"><div class="cl-box"></div><div class="cl-text">Não preciso estar na linha de frente da ação; prefiro analisar o caso já formado do que investigá-lo.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-juz">0 de 6</span></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ DEFENSOR PÚBLICO ═══════════════════════════════ -->
+<div class="panel def" id="p-def">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o concurso de Defensor Público?</h2></div>
+    <div class="sc-body">
+      <p>O defensor público é o advogado de quem não tem condição de pagar um advogado particular. É concurso público estadual (Defensoria Pública do Estado) ou federal/da União (Defensoria Pública da União, DPU), com exigência de diploma de Direito e experiência jurídica mínima.</p>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Direito constitucional:</strong> a Defensoria Pública existe porque a Constituição garante acesso à Justiça a todos, independente de renda. É a instituição responsável por tornar esse direito real.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional faz no dia a dia?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Defende réus em processos criminais</strong> que não têm advogado particular.</li>
+        <li><strong>Atua em causas de família</strong>: pensão, guarda, divórcio, para quem não pode pagar advogado.</li>
+        <li><strong>Move ações cíveis</strong> em nome de pessoas de baixa renda: cobrança de direitos, indenizações, questões de moradia e consumo.</li>
+        <li><strong>Atende diretamente o público</strong> em plantões e núcleos de atendimento, muitas vezes em situações de grande vulnerabilidade social.</li>
+        <li><strong>Faz mediação e orientação jurídica</strong> antes mesmo de entrar com uma ação, buscando resolver o conflito sem judicializar.</li>
+        <li><strong>Atua também de forma coletiva</strong>: ações que defendem grupos vulneráveis (moradores de uma comunidade, população carcerária, por exemplo).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Requisitos para se candidatar</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Diploma de bacharel em Direito</strong>, reconhecido pelo MEC.</li>
+        <li><strong>2 a 3 anos de prática jurídica</strong> (varia conforme o edital de cada Defensoria).</li>
+        <li>A prática jurídica pode ser: advocacia (mínimo de atos privativos por ano), cargo que exija conhecimento jurídico, ou estágio de Direito reconhecido por lei por 2 anos.</li>
+        <li><strong>Aprovação na OAB</strong> costuma ser exigida (o defensor advoga em nome do assistido).</li>
+        <li>Idade mínima de 18 anos e reputação ilibada.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📝</span><h2>Como funciona o concurso</h2></div>
+    <div class="sc-body">
+      <p>Prova objetiva, provas discursivas com peças processuais, prova oral e avaliação de títulos. Costuma ser um pouco menos concorrido que magistratura e Ministério Público em alguns estados, mas ainda assim exige preparação sólida e específica em direitos humanos e prática processual.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha hoje (2026)</h2></div>
+    <div class="sc-body">
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Defensor (início)</div><div class="sal-range">R$ 20k–35,9k</div><div class="sal-note">Ex.: DPE-RJ ~R$ 34,3 mil; DPE-AL ~R$ 35,9 mil; DPE-AM ~R$ 34 mil.</div></div>
+        <div class="sal-card"><div class="sal-stage">Faixa geral</div><div class="sal-range">R$ 20k–30k</div><div class="sal-note">Em estados com concursos mais recentes ou orçamento menor.</div></div>
+        <div class="sal-card"><div class="sal-stage">DPU (federal)</div><div class="sal-range">valores próprios</div><div class="sal-note">Tabela e concurso separados, com atuação em todo o país.</div></div>
+      </div>
+      <p class="note">Fonte: editais DPE-RJ, DPE-AL, DPE-AM e cobertura Magistrar Cursos / Estratégia Concursos, 2026.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://magistrarcursos.com.br/blog/concursos-defensoria/" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Magistrar Cursos — Concursos Defensoria</strong><span>Editais e vagas previstas por estado</span></div><span class="lc-arr">→</span></a>
+        <a href="https://ceisc.com.br/blog/post/defensor-publico-estadual" class="lcard" target="_blank"><span class="lc-icon">📖</span><div class="lc-body"><strong>Ceisc — Defensor Público Estadual</strong><span>Carreira, requisitos e como se preparar</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.anadep.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>ANADEP</strong><span>Associação Nacional dos Defensores Públicos</span></div><span class="lc-arr">→</span></a>
+        <a href="https://transparencia.rj.def.br/gestao-pessoas/pagina/estrutura-remuneratoria-dos-cargos-efetivos" class="lcard" target="_blank"><span class="lc-icon">📄</span><div class="lc-body"><strong>DPE-RJ — Estrutura Remuneratória</strong><span>Fonte oficial de vencimentos por cargo e classe</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Defensoria Pública é um caminho para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade:</p>
+      <div class="checklist-wrap" id="cl-def">
+        <div class="cl-item" onclick="toggle(this,'cl-def')"><div class="cl-box"></div><div class="cl-text">Me mobiliza a ideia de defender quem não teria condição de pagar um advogado.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-def')"><div class="cl-box"></div><div class="cl-text">Tenho sensibilidade para lidar com situações de vulnerabilidade social sem me esgotar emocionalmente.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-def')"><div class="cl-box"></div><div class="cl-text">Gosto de advogar: defender um lado, construir argumento e representar alguém.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-def')"><div class="cl-box"></div><div class="cl-text">Tenho interesse por direitos humanos e questões sociais, não só pela técnica jurídica.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-def')"><div class="cl-box"></div><div class="cl-text">Prefiro o contato direto e constante com as pessoas que atendo a um trabalho mais de gabinete.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-def')"><div class="cl-box"></div><div class="cl-text">Aceito lidar com alto volume de atendimento e casos, muitas vezes urgentes.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-def">0 de 6</span></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ PROMOTOR ═══════════════════════════════ -->
+<div class="panel pro" id="p-pro">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o concurso de Promotor de Justiça?</h2></div>
+    <div class="sc-body">
+      <p>Promotor de Justiça é o cargo de quem integra o <strong>Ministério Público</strong> (MP) na primeira instância. O MP é a instituição que fiscaliza o cumprimento da lei e defende a sociedade e os direitos coletivos, não uma pessoa específica. É concurso público estadual (Ministério Público do Estado) — existe também o Ministério Público Federal, com atuação e concurso próprios.</p>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Independência funcional:</strong> o promotor não é subordinado a governo nem a partido; sua função é fiscalizar a aplicação da lei, o que inclui, se necessário, processar o próprio poder público.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional faz no dia a dia?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Oferece denúncia criminal:</strong> é quem inicia formalmente a ação penal contra um acusado, com base no inquérito do delegado.</li>
+        <li><strong>Acompanha investigações</strong>, podendo requisitar diligências à polícia e, em alguns casos, investigar diretamente.</li>
+        <li><strong>Atua como fiscal da lei</strong> em processos cíveis, de família e de infância, opinando de forma independente.</li>
+        <li><strong>Defende direitos difusos e coletivos:</strong> meio ambiente, consumidor, patrimônio público, direitos da criança e do idoso.</li>
+        <li><strong>Move ações civis públicas</strong> contra empresas ou o próprio poder público em casos de dano coletivo.</li>
+        <li><strong>Atua em audiências</strong>, mas de um lugar diferente do defensor: representa o interesse público, não uma parte específica do processo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Requisitos para se candidatar</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Diploma de bacharel em Direito</strong>, reconhecido pelo MEC.</li>
+        <li><strong>3 anos, no mínimo, de atividade jurídica</strong> comprovada após a formatura.</li>
+        <li>Boa conduta social e ausência de antecedentes incompatíveis com a função.</li>
+        <li>Não é exigido registro ativo na OAB para o cargo (membros do MP não podem advogar).</li>
+        <li>Idade mínima de 18 anos.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📝</span><h2>Como funciona o concurso</h2></div>
+    <div class="sc-body">
+      <p>Prova objetiva, provas discursivas e de peça prática, exame psicotécnico, investigação da vida pregressa, prova oral e curso de formação. É, junto com magistratura, um dos concursos jurídicos mais disputados e valorizados, com salários entre os maiores do serviço público.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha hoje (2026)</h2></div>
+    <div class="sc-body">
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Promotor (início)</div><div class="sal-range">R$ 34k–37,8k</div><div class="sal-note">Ex.: MP-SP ~R$ 34,1 mil; MPMS ~R$ 34 mil; MP-RJ ~R$ 37,8 mil.</div></div>
+        <div class="sal-card"><div class="sal-stage">Progressão</div><div class="sal-range">até o teto</div><div class="sal-note">Sobe conforme a entrância e pode chegar a Procurador de Justiça (2ª instância do MP).</div></div>
+        <div class="sal-card"><div class="sal-stage">MP Federal</div><div class="sal-range">valores próprios</div><div class="sal-note">Concurso, atuação e tabela salarial separados do MP estadual.</div></div>
+      </div>
+      <p class="note">Fonte: editais MP-SP, MPMS e MP-RJ, cobertura Gran Cursos e Aprova Concursos, 2026.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://blog.grancursosonline.com.br/concursos-promotor/" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Gran Cursos — Concursos Promotor</strong><span>Lista atualizada de editais previstos</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.cnmp.mp.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CNMP — Conselho Nacional do Ministério Público</strong><span>Estrutura e função institucional do MP</span></div><span class="lc-arr">→</span></a>
+        <a href="https://magistrarcursos.com.br/blog/concursos-promotor-justica/" class="lcard" target="_blank"><span class="lc-icon">📖</span><div class="lc-body"><strong>Magistrar Cursos — Promotor de Justiça</strong><span>Panorama de concursos e requisitos</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Ministério Público é um caminho para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade:</p>
+      <div class="checklist-wrap" id="cl-pro">
+        <div class="cl-item" onclick="toggle(this,'cl-pro')"><div class="cl-box"></div><div class="cl-text">Me interessa mais defender a sociedade como um todo do que uma pessoa específica.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pro')"><div class="cl-box"></div><div class="cl-text">Gosto da ideia de fiscalizar e cobrar o cumprimento da lei, inclusive do próprio governo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pro')"><div class="cl-box"></div><div class="cl-text">Tenho interesse por temas como meio ambiente, direitos do consumidor ou proteção à infância.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pro')"><div class="cl-box"></div><div class="cl-text">Sinto-me confortável em ocupar um papel de acusação, quando os fatos e as provas indicam isso.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pro')"><div class="cl-box"></div><div class="cl-text">Tenho paciência para um caminho de preparação longo e concorrido, de vários anos.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pro')"><div class="cl-box"></div><div class="cl-text">Prefiro atuar com independência, sem estar subordinado a um chefe direto no dia a dia do trabalho.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-pro">0 de 6</span></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ PROCURADOR ═══════════════════════════════ -->
+<div class="panel prc" id="p-prc">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o concurso de Procurador do Estado?</h2></div>
+    <div class="sc-body">
+      <p>Procurador do Estado (ou do Município, ou Federal/AGU) é o advogado do próprio poder público. Faz parte da <strong>Advocacia Pública</strong>: representa o Estado em juízo, defende as ações do governo e dá pareceres jurídicos para políticas públicas. É concurso estadual (Procuradoria-Geral do Estado, PGE), municipal, ou federal (Advocacia-Geral da União, AGU, com cargos como Procurador Federal e Advogado da União).</p>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Diferença chave:</strong> enquanto o promotor fiscaliza o poder público em nome da sociedade, o procurador defende o poder público em juízo. São papéis opostos dentro do mesmo sistema.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional faz no dia a dia?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Representa o Estado ou a União em processos judiciais</strong>, como advogado de defesa quando o governo é processado.</li>
+        <li><strong>Elabora pareceres jurídicos</strong> sobre projetos de lei, contratos públicos e políticas do governo antes de serem executados.</li>
+        <li><strong>Atua na cobrança da dívida ativa</strong>: valores que pessoas físicas ou empresas devem ao Estado (impostos, multas).</li>
+        <li><strong>Assessora secretarias e órgãos do governo</strong> em questões jurídicas do dia a dia da administração pública.</li>
+        <li><strong>Defende atos administrativos</strong> quando questionados na Justiça, como decisões de concursos, licitações ou políticas públicas.</li>
+        <li><strong>Trabalho mais de gabinete</strong> que o de delegado ou defensor: menos atendimento direto ao público, mais análise técnica e redação jurídica.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Requisitos para se candidatar</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Diploma de bacharel em Direito</strong>, reconhecido pelo MEC.</li>
+        <li><strong>Aprovação no Exame da OAB</strong> (é obrigatório, já que o procurador advoga em nome do ente público).</li>
+        <li><strong>3 anos de efetiva atividade jurídica</strong> após a obtenção do diploma.</li>
+        <li>Não ter sido aposentado compulsoriamente por penalidade disciplinar.</li>
+        <li>Idade mínima de 18 anos.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📝</span><h2>Como funciona o concurso</h2></div>
+    <div class="sc-body">
+      <p>Prova objetiva, provas discursivas (peças e pareceres), prova oral e avaliação de títulos. É um concurso muito concorrido, com poucas vagas por edital (costuma variar de 5 a 15 vagas imediatas), mas costuma exigir um pouco menos tempo de preparação que magistratura ou MP.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha hoje (2026)</h2></div>
+    <div class="sc-body">
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Procurador do Estado</div><div class="sal-range">R$ 23k–35,9k</div><div class="sal-note">Ex.: PGE-AL ~R$ 35,9 mil; PGE-MA ~R$ 23,4 mil; PGE-SC ~R$ 27,4 mil.</div></div>
+        <div class="sal-card"><div class="sal-stage">Progressão</div><div class="sal-range">acima de R$ 26k</div><div class="sal-note">Cresce conforme a classe na carreira, dependendo do estado.</div></div>
+        <div class="sal-card"><div class="sal-stage">AGU (federal)</div><div class="sal-range">até R$ 37,7k</div><div class="sal-note">Procurador Federal / Advogado da União têm concurso e tabela próprios.</div></div>
+      </div>
+      <p class="note">Fonte: editais PGE-AL, PGE-MA, PGE-SC e cobertura Gran Cursos, Info Concursos, 2026.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://blog.grancursosonline.com.br/concursos-procurador/" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Gran Cursos — Concursos Procurador</strong><span>Editais previstos por estado e órgão</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.gov.br/agu/pt-br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>AGU — Advocacia-Geral da União</strong><span>Carreiras federais da advocacia pública</span></div><span class="lc-arr">→</span></a>
+        <a href="https://cj.estrategia.com/portal/concursos-procuradorias/" class="lcard" target="_blank"><span class="lc-icon">📖</span><div class="lc-body"><strong>Estratégia Concursos — Procuradorias</strong><span>Panorama de vagas e requisitos por estado</span></div><span class="lc-arr">→</span></a>
+        <a href="https://pge.rj.gov.br/concurso/19o-concurso-para-ingresso-na-carreira-de-procurador-do-estado" class="lcard" target="_blank"><span class="lc-icon">📄</span><div class="lc-body"><strong>PGE-RJ — Concurso de Procurador</strong><span>Exemplo de edital oficial de procuradoria estadual</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Advocacia Pública é um caminho para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade:</p>
+      <div class="checklist-wrap" id="cl-prc">
+        <div class="cl-item" onclick="toggle(this,'cl-prc')"><div class="cl-box"></div><div class="cl-text">Prefiro um trabalho mais técnico e de gabinete a um trabalho de atendimento direto e constante ao público.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-prc')"><div class="cl-box"></div><div class="cl-text">Tenho interesse em como funciona a máquina pública: leis, contratos e políticas de governo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-prc')"><div class="cl-box"></div><div class="cl-text">Gosto de escrever pareceres e argumentos bem construídos, com tempo para analisar antes de decidir.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-prc')"><div class="cl-box"></div><div class="cl-text">Não me incomoda representar o Estado, mesmo quando a opinião pessoal diverge de uma política específica.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-prc')"><div class="cl-box"></div><div class="cl-text">Tenho interesse em advogar (defender uma parte em juízo), mas prefiro que essa parte seja o poder público.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-prc')"><div class="cl-box"></div><div class="cl-text">Prefiro um concurso com menos vagas e mais estabilidade de rotina a um cargo de urgência constante.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-prc">0 de 6</span></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ OUTRAS PORTAS ═══════════════════════════════ -->
+<div class="panel op" id="p-op">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🗺️</span><h2>Outras portas do Direito</h2></div>
+    <div class="sc-body">
+      <p>Além dos cinco cargos de autoridade jurídica, existem outros caminhos ligados ao Direito com concurso público: alguns como carreira federal separada de advocacia pública, outros como porta de entrada mais rápida no serviço público, sem exigir os anos de atividade jurídica das carreiras anteriores.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🏛️</span><h2>Advocacia Pública Federal</h2></div>
+    <div class="sc-body">
+      <p><strong>Cargos:</strong> Advogado(a) da União, Procurador(a) Federal, Procurador(a) da Fazenda Nacional, Procurador(a) do Banco Central.</p>
+      <p style="margin-top:8px;"><strong>O que faz:</strong> defende juridicamente a União, autarquias e órgãos públicos federais; elabora pareceres, orienta políticas públicas e representa o governo federal em processos.</p>
+      <p style="margin-top:8px;"><strong>Requisitos:</strong> graduação em Direito, aprovação na OAB e prática forense (2 a 3 anos, conforme o edital).</p>
+      <p style="margin-top:8px;"><strong>Remuneração inicial aproximada:</strong> em torno de R$ 21 mil no edital de Advogado da União mais recente; valores podem variar por reajuste e por carreira específica (PGFN e Procurador do BC costumam ter tabelas próprias).</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📋</span><h2>Analista Judiciário — Área Judiciária</h2></div>
+    <div class="sc-body">
+      <p><strong>O que faz:</strong> trabalha nos bastidores dos processos, nos tribunais: analisa peças, elabora minutas de decisão, acompanha prazos e dá apoio direto a juízes e desembargadores.</p>
+      <p style="margin-top:8px;"><strong>Requisitos:</strong> graduação em Direito, na área judiciária do concurso do tribunal.</p>
+      <p style="margin-top:8px;"><strong>Remuneração inicial aproximada:</strong> R$ 14.852,66, podendo chegar a R$ 22.301,14 na carreira (tabela TRF2).</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📬</span><h2>Oficial de Justiça Avaliador</h2></div>
+    <div class="sc-body">
+      <p><strong>O que faz:</strong> cumpre mandados judiciais, cita e intima pessoas, faz penhoras, avaliações de bens e diligências externas determinadas pelo juiz. É o cargo do Judiciário com mais rotina de rua, fora do prédio do tribunal.</p>
+      <p style="margin-top:8px;"><strong>Requisitos:</strong> geralmente graduação em Direito, conforme o edital do tribunal.</p>
+      <p style="margin-top:8px;"><strong>Remuneração inicial aproximada:</strong> a partir de R$ 14.852,66, podendo haver gratificações específicas por essa função (tabela TRF2).</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🗂️</span><h2>Analista Processual / Analista Jurídico</h2></div>
+    <div class="sc-body">
+      <p><strong>O que faz:</strong> apoia defensores públicos, promotores, procuradores ou magistrados: pesquisa jurídica, análise processual, elaboração de minutas, atendimento e organização de processos.</p>
+      <p style="margin-top:8px;"><strong>Requisitos:</strong> em geral graduação em Direito, mas depende do órgão (Defensoria, MP, tribunais e procuradorias têm editais próprios).</p>
+      <p style="margin-top:8px;"><strong>Remuneração inicial aproximada:</strong> R$ 7.423,35, podendo chegar a R$ 17.395,42 na carreira (tabela DPE-RJ).</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Técnico Judiciário</h2></div>
+    <div class="sc-body">
+      <p><strong>O que faz:</strong> atua no apoio administrativo e processual dos tribunais (inclusive eleitorais). Em vários editais não exige formação em Direito, mas aproxima quem gosta da área da rotina jurídica desde cedo.</p>
+      <p style="margin-top:8px;"><strong>Requisitos:</strong> ensino médio ou superior, conforme o edital de cada tribunal.</p>
+      <p style="margin-top:8px;"><strong>Remuneração inicial aproximada:</strong> R$ 9.052,51, podendo chegar a R$ 13.592,33 na carreira (tabela TRF2).</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📜</span><h2>Cartórios — Tabelião / Registrador</h2></div>
+    <div class="sc-body">
+      <p><strong>O que faz:</strong> atua em cartórios de notas, registro civil, imóveis, protestos, entre outros. Dá fé pública a documentos e atos jurídicos.</p>
+      <p style="margin-top:8px;"><strong>Requisitos:</strong> concurso público de provas e títulos, exigido pela própria Constituição para o ingresso na atividade notarial e de registro (art. 236, §3º).</p>
+      <div class="hbox" style="margin-top:14px;">
+        <strong>Diferença importante:</strong> não é salário fixo de servidor. A renda vem da delegação da serventia e varia muito conforme o cartório e o movimento local; é melhor apresentar como uma <strong>renda variável ligada a uma delegação pública</strong>, não como um cargo com vencimento mensal fixo.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://static.trf2.jus.br/nas-internet/documento/transparencia/gestao-de-pessoas/estrutura-remuneratoria/trf2/2026/estrutura-remuneratoria-trf2-2026-01-v3.pdf" class="lcard" target="_blank"><span class="lc-icon">📄</span><div class="lc-body"><strong>TRF2 — Estrutura Remuneratória 2026</strong><span>Tabela oficial de Analista, Oficial de Justiça e Técnico Judiciário</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.tse.jus.br/institucional/sobre-o-tse/concurso-publico" class="lcard" target="_blank"><span class="lc-icon">🗳️</span><div class="lc-body"><strong>TSE — Concurso Público</strong><span>Editais de Analista e Técnico Judiciário da Justiça Eleitoral</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.cnj.jus.br/poder-judiciario/concursos-de-tribunais/" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CNJ — Concursos de Tribunais</strong><span>Inclui regras de ingresso na atividade notarial e de registro</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAR ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔎</span><h2>Quadro comparativo</h2></div>
+    <div class="sc-body">
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="h-del">Delegado</th>
+              <th class="h-juz">Juiz</th>
+              <th class="h-def">Defensor</th>
+              <th class="h-pro">Promotor</th>
+              <th class="h-prc">Procurador</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Papel</td>
+              <td>Investiga o crime</td>
+              <td>Julga o processo</td>
+              <td>Defende quem não pode pagar</td>
+              <td>Fiscaliza a lei e acusa</td>
+              <td>Defende o Estado</td>
+            </tr>
+            <tr>
+              <td>Onde atua</td>
+              <td>Delegacia (Polícia Civil ou Federal)</td>
+              <td>Vara do Tribunal de Justiça</td>
+              <td>Núcleo da Defensoria Pública</td>
+              <td>Promotoria do Ministério Público</td>
+              <td>Procuradoria-Geral do Estado / AGU</td>
+            </tr>
+            <tr>
+              <td>Atividade jurídica</td>
+              <td>2–3 anos (varia por estado)</td>
+              <td>3 anos</td>
+              <td>2–3 anos</td>
+              <td>3 anos</td>
+              <td>3 anos</td>
+            </tr>
+            <tr>
+              <td>Exige OAB ativa</td>
+              <td>Não</td>
+              <td>Não (impedido de advogar)</td>
+              <td>Sim</td>
+              <td>Não (impedido de advogar)</td>
+              <td>Sim</td>
+            </tr>
+            <tr>
+              <td>Salário inicial 2026</td>
+              <td>R$ 15k – 41,3k</td>
+              <td>R$ 30k – 36k</td>
+              <td>R$ 20k – 35,9k</td>
+              <td>R$ 34k – 37,8k</td>
+              <td>R$ 23k – 35,9k</td>
+            </tr>
+            <tr>
+              <td>Concorrência</td>
+              <td>Muito alta</td>
+              <td>Altíssima</td>
+              <td>Alta</td>
+              <td>Altíssima</td>
+              <td>Alta (poucas vagas)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Valores e exigências variam por estado e por edital; use as faixas como referência de mercado, não como valor fixo.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Para te ajudar a entender os caminhos</h2></div>
+    <div class="sc-body">
+      <p>Todos esses cargos exigem a mesma faculdade de Direito, mas colocam a pessoa em lugares bem diferentes dentro do sistema de justiça. O delegado investiga o crime e decide o que apurar. O juiz recebe o processo já formado e julga, de forma imparcial, sem acusar nem defender. O defensor advoga por quem não teria condição de pagar um advogado. O promotor representa a sociedade e fiscaliza a aplicação da lei, podendo processar até o próprio poder público. O procurador faz o caminho inverso do promotor: defende o Estado quando ele é questionado na Justiça.</p>
+      <p style="margin-top:12px;">Nenhum caminho é "mais jurídico" que o outro; são naturezas de trabalho diferentes, com rotinas, pressões e tipos de contato com as pessoas bem distintos entre si.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🛤️</span><h2>Como é o caminho até lá</h2></div>
+    <div class="sc-body">
+      <div class="path-grid">
+        <div class="path-card"><div class="pc-num">1</div><p>Faculdade de Direito (5 anos, bacharelado)</p></div>
+        <div class="path-card"><div class="pc-num">2</div><p>Exame da OAB (obrigatório para advogar; alguns cargos exigem, outros não)</p></div>
+        <div class="path-card"><div class="pc-num">3</div><p>Atividade jurídica comprovada (2 a 3 anos após o diploma; estágio não conta)</p></div>
+        <div class="path-card"><div class="pc-num">4</div><p>Preparação intensiva para o concurso (em geral 2 a 5 anos de estudo)</p></div>
+        <div class="path-card"><div class="pc-num">5</div><p>Aprovação, curso de formação e posse no cargo</p></div>
+      </div>
+      <div class="hbox" style="margin-top:16px;">
+        <strong>Ponto importante sobre "atividade jurídica":</strong> em quase todos esses concursos, o tempo de estágio na faculdade não conta para os 2 ou 3 anos exigidos. O relógio só começa a contar depois da colação de grau, com advocacia, cargo jurídico ou estágio de Direito reconhecido por lei.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde acompanhar editais previstos para 2026</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://cj.estrategia.com/portal/concursos-juridicos-2026/" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Estratégia Concursos — Concursos Jurídicos 2026</strong><span>Panorama geral de todas as carreiras jurídicas</span></div><span class="lc-arr">→</span></a>
+        <a href="https://blog.grancursosonline.com.br/" class="lcard" target="_blank"><span class="lc-icon">📖</span><div class="lc-body"><strong>Gran Cursos Online — Blog</strong><span>Notícias de editais por carreira e estado</span></div><span class="lc-arr">→</span></a>
+        <a href="https://magistrarcursos.com.br/blog/" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>Magistrar Cursos — Blog</strong><span>Foco específico em magistratura e MP</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">seu jeito, seu ritmo, seu rumo</span>
+  <strong>Instituto Rumo — Orientação Profissional</strong>
+  <p>Guia de pesquisa produzido para apoiar a exploração de carreira. Valores e requisitos variam por edital e por estado; sempre confirme no edital oficial vigente antes de qualquer decisão.</p>
+  <div class="ft-contact">
+    <a href="https://www.instagram.com/claudiabotelhopsi" target="_blank">📸 @claudiabotelhopsi</a>
+    <a href="https://wa.me/5521990625330" target="_blank">💬 (21) 99062-5330</a>
+  </div>
+  <p class="ft-note">Pode compartilhar esse guia com amigas que também estão pensando no futuro. Dúvidas ou quer conversar sobre orientação profissional? É só chamar.</p>
+</footer>
+
+<script>
+  function show(id) {
+    document.querySelectorAll('.panel').forEach(function (p) { p.classList.remove('active'); });
+    document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
+    document.getElementById('p-' + id).classList.add('active');
+    document.querySelector('.tab-btn.' + id).classList.add('active');
+  }
+
+  function toggle(el, groupId) {
+    el.classList.toggle('checked');
+    var group = document.getElementById(groupId);
+    var checked = group.querySelectorAll('.cl-item.checked').length;
+    var total = group.querySelectorAll('.cl-item').length;
+    var scoreEl = document.getElementById('sc-' + groupId.replace('cl-', ''));
+    if (scoreEl) scoreEl.textContent = checked + ' de ' + total;
+  }
+</script>
+
+</body>
+</html>

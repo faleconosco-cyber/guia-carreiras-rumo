@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Carreiras — Engenharia de Produção, Arquitetura e Estatística | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Engenharia de Produção — Azul Rumo */
+      --eng:     #3E658E;
+      --eng-lt:  #EEF4FA;
+      --eng-mid: #C0D4E8;
+
+      /* Arquitetura — Bordô Rosado */
+      --arq:     #6B2F3C;
+      --arq-lt:  #F6EAED;
+      --arq-mid: #DCC0C8;
+
+      /* Estatística — Verde Profundo */
+      --est:     #3B503F;
+      --est-lt:  #EAEFEB;
+      --est-mid: #C2CFC4;
+
+      /* Comparação / Critérios — Laranja Rumo */
+      --cmp:     #D9563F;
+      --cmp-lt:  #FFF0ED;
+      --cmp-mid: #FBC9BE;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── Header ─── */
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    /* ─── Nav ─── */
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.eng.active { color: var(--eng); border-bottom-color: var(--eng); }
+    .tab-btn.arq.active { color: var(--arq); border-bottom-color: var(--arq); }
+    .tab-btn.est.active { color: var(--est); border-bottom-color: var(--est); }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    /* ─── Panels ─── */
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    /* ─── Section cards ─── */
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .eng .sc-head { background: var(--eng-lt); border-color: var(--eng-mid); }
+    .eng .sc-head h2 { color: var(--eng); }
+    .arq .sc-head { background: var(--arq-lt); border-color: var(--arq-mid); }
+    .arq .sc-head h2 { color: var(--arq); }
+    .est .sc-head { background: var(--est-lt); border-color: var(--est-mid); }
+    .est .sc-head h2 { color: var(--est); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    /* ─── Lists ─── */
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .eng ul.sl li::before { color: var(--eng); }
+    .arq ul.sl li::before { color: var(--arq); }
+    .est ul.sl li::before { color: var(--est); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    /* ─── Tags ─── */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .eng .tag { background: var(--eng-lt); color: var(--eng); border-color: var(--eng-mid); }
+    .arq .tag { background: var(--arq-lt); color: var(--arq); border-color: var(--arq-mid); }
+    .est .tag { background: var(--est-lt); color: var(--est); border-color: var(--est-mid); }
+
+    /* ─── Boxes ─── */
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .eng .hbox { background: var(--eng-lt); border-color: var(--eng); }
+    .arq .hbox { background: var(--arq-lt); border-color: var(--arq); }
+    .est .hbox { background: var(--est-lt); border-color: var(--est); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .eng .accent { color: var(--eng); }
+    .arq .accent { color: var(--arq); }
+    .est .accent { color: var(--est); }
+
+    /* ─── Tech grid ─── */
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .eng .tech-card { background: var(--eng-lt); border-color: var(--eng-mid); }
+    .arq .tech-card { background: var(--arq-lt); border-color: var(--arq-mid); }
+    .est .tech-card { background: var(--est-lt); border-color: var(--est-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .eng .tech-card strong { color: var(--eng); }
+    .arq .tech-card strong { color: var(--arq); }
+    .est .tech-card strong { color: var(--est); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    /* ─── Salary grid ─── */
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .eng .sal-card { background: var(--eng-lt); border-color: var(--eng-mid); }
+    .arq .sal-card { background: var(--arq-lt); border-color: var(--arq-mid); }
+    .est .sal-card { background: var(--est-lt); border-color: var(--est-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .eng .sal-range { color: var(--eng); }
+    .arq .sal-range { color: var(--arq); }
+    .est .sal-range { color: var(--est); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── Comparison table ─── */
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-eng { background: var(--eng); }
+    .comp-table th.h-arq { background: var(--arq); }
+    .comp-table th.h-est { background: var(--est); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    /* ─── Link cards ─── */
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .eng .lcard:hover { border-color: var(--eng); }
+    .arq .lcard:hover { border-color: var(--arq); }
+    .est .lcard:hover { border-color: var(--est); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    /* ─── Checklist ─── */
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .eng .cl-item:hover, .eng .cl-item.checked { background: var(--eng-lt); border-color: var(--eng); }
+    .arq .cl-item:hover, .arq .cl-item.checked { background: var(--arq-lt); border-color: var(--arq); }
+    .est .cl-item:hover, .est .cl-item.checked { background: var(--est-lt); border-color: var(--est); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .eng .cl-item.checked .cl-box { background: var(--eng); border-color: var(--eng); }
+    .arq .cl-item.checked .cl-box { background: var(--arq); border-color: var(--arq); }
+    .est .cl-item.checked .cl-box { background: var(--est); border-color: var(--est); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .eng .cl-score span { color: var(--eng); font-weight: 800; }
+    .arq .cl-score span { color: var(--arq); font-weight: 800; }
+    .est .cl-score span { color: var(--est); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .eng .cl-result { background: var(--eng-lt); border-color: var(--eng-mid); }
+    .arq .cl-result { background: var(--arq-lt); border-color: var(--arq-mid); }
+    .est .cl-result { background: var(--est-lt); border-color: var(--est-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .verdict { font-size: 18px; font-weight: 800; }
+    .eng .cl-result .verdict { color: var(--eng); }
+    .arq .cl-result .verdict { color: var(--arq); }
+    .est .cl-result .verdict { color: var(--est); }
+    .cl-result .sub { font-size: 13px; color: var(--text); margin-top: 8px; line-height: 1.6; }
+
+    /* ─── Bolinhas de presença (aba critérios) ─── */
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    /* ─── Ranking dos critérios ─── */
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+    .rank-fill.eng { background: var(--eng); }
+    .rank-fill.arq { background: var(--arq); }
+    .rank-fill.est { background: var(--est); }
+
+    /* ─── Vagas reais ─── */
+    .vagas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-col-head.eng { background: var(--eng); }
+    .vaga-col-head.arq { background: var(--arq); }
+    .vaga-col-head.est { background: var(--est); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .eng .vaga-role strong, .vaga-col.eng .vaga-role strong { color: var(--eng); }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+    .vaga-btn.eng { background: var(--eng); }
+    .vaga-btn.arq { background: var(--arq); }
+    .vaga-btn.est { background: var(--est); }
+
+    /* ─── Footer ─── */
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>Engenharia de Produção · Arquitetura · Estatística
+    <span class="hd-accent">organizar, criar e entender o mundo</span>
+  </h1>
+  <p class="hd-sub">Três caminhos que combinam de jeitos diferentes com quem gosta de organizar tarefas e espaços, lidar com pessoas e analisar informações. Um é mais de processos e gestão, outro de espaço e desenho, outro de dados e padrões. Aqui você vê cada um por inteiro, sem romantizar, pra escolher com informação de verdade.</p>
+</header>
+
+<nav>
+  <button class="tab-btn eng active" data-c="eng" onclick="show('eng')">🏭 Engenharia de Produção</button>
+  <button class="tab-btn arq" data-c="arq" onclick="show('arq')">📐 Arquitetura</button>
+  <button class="tab-btn est" data-c="est" onclick="show('est')">📊 Estatística</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">⚖️ Comparar os três</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ ENGENHARIA DE PRODUÇÃO ═══════════════════════════════ -->
+<div class="panel eng active" id="p-eng">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Engenharia de Produção?</h2></div>
+    <div class="sc-body">
+      <p>Engenharia de Produção é o curso de quem quer fazer as coisas funcionarem melhor: organizar processos, reduzir desperdício, planejar produção, melhorar a qualidade e tomar decisões com base em números. É a engenharia que fica no meio do caminho entre a fábrica e a gestão. É um <strong>bacharelado de 5 anos</strong>, reconhecido pelo MEC. Diferente das outras engenharias, ela mexe menos com cálculo pesado de física e mais com organização, pessoas e otimização.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> A base dura de toda engenharia: cálculo, física, química, álgebra e desenho técnico. É a parte mais puxada de matemática do curso.</li>
+        <li><strong>3º ano:</strong> Começa a "cara" do curso: gestão da produção, pesquisa operacional, estatística, custos, qualidade e logística.</li>
+        <li><strong>4º–5º ano:</strong> Gestão de projetos, cadeia de suprimentos, ergonomia, engenharia econômica, estágio obrigatório e TCC. Muita gente já está estagiando antes disso.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> engenharia é regulamentada pelo sistema CONFEA/CREA. Pra assinar projetos e atuar como engenheiro, é preciso ter registro no CREA do seu estado. É uma profissão de conselho forte, diferente das áreas criativas.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Gestão da produção:</strong> planejar e controlar como uma fábrica ou empresa produz, pra entregar mais com menos desperdício.</li>
+        <li><strong>Qualidade:</strong> garantir que produtos e serviços saiam do jeito certo, criando padrões e corrigindo falhas.</li>
+        <li><strong>Logística e cadeia de suprimentos:</strong> fazer produtos chegarem na hora certa, no lugar certo, ao menor custo. Área super requisitada.</li>
+        <li><strong>Gestão de projetos:</strong> organizar prazos, equipes, orçamentos e entregas. Função presente em quase todo setor.</li>
+        <li><strong>Melhoria de processos:</strong> olhar pra um processo bagunçado e deixá-lo mais simples, rápido e barato (Lean, Seis Sigma).</li>
+        <li><strong>Análise de dados e processos:</strong> usar números pra apoiar decisões de operação, custo e desempenho.</li>
+        <li><strong>Planejamento e controle:</strong> definir metas, acompanhar indicadores e ajustar o caminho da área.</li>
+        <li><strong>Consultoria:</strong> ajudar empresas a se organizar e crescer, de fora pra dentro.</li>
+        <li><strong>Operações em empresas de tecnologia e startups:</strong> áreas de operações e growth, ambientes jovens e dinâmicos.</li>
+        <li><strong>Carreira pública:</strong> concursos de áreas técnicas e de gestão em órgãos e empresas estatais.</li>
+        <li><strong>Empreendedorismo:</strong> abrir e tocar o próprio negócio com base sólida de gestão e processos.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Engenharia de Produção combina cabeça organizada, gosto por números e facilidade de lidar com gente e processos ao mesmo tempo.</p>
+      <div class="tags">
+        <span class="tag">Organização</span>
+        <span class="tag">Facilidade com números</span>
+        <span class="tag">Visão do todo</span>
+        <span class="tag">Lógica</span>
+        <span class="tag">Planejamento</span>
+        <span class="tag">Liderança</span>
+        <span class="tag">Análise de dados</span>
+        <span class="tag">Resolver problemas</span>
+        <span class="tag">Trabalho em equipe</span>
+        <span class="tag">Pragmatismo</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando algo está desorganizado, uma rotina, um trabalho em grupo, um espaço, você sente vontade de mexer até ficar mais eficiente? Se enxergar bagunça e pensar "dá pra melhorar isso" te dá prazer, a Engenharia de Produção fala muito com você.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>Os dois primeiros anos são pesados de matemática.</strong> Antes de chegar na parte de gestão, você passa por cálculo, física e química como em qualquer engenharia. Quem foge totalmente de exatas costuma sofrer no começo.</div>
+      <div class="cbox"><strong>É um curso "largo".</strong> A Produção sabe um pouco de tudo (produção, gestão, finanças, pessoas), mas de nada com muita profundidade. Quem não escolhe uma área pra se aprofundar pode ficar genérico.</div>
+      <div class="cbox"><strong>Começa de baixo.</strong> Ninguém sai da faculdade gerenciando. Os primeiros anos são em funções operacionais, aprendendo a empresa por dentro, com salário inicial de júnior.</div>
+      <div class="cbox"><strong>Pressão por resultado.</strong> Boa parte das funções é cobrada por metas, custos e indicadores. Pra algumas pessoas isso motiva, pra outras estressa.</div>
+      <div class="cbox"><strong>Muita gente disputando.</strong> É uma das engenharias mais procuradas do Brasil. Estágio bom, idiomas e especialização fazem diferença pra se destacar.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Decisão por dados</strong><p>Planilha virou painel inteligente. Saber ler e analisar dados deixou de ser diferencial e virou requisito básico de quem gere processos.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>Automação e IA</strong><p>Tarefas repetitivas estão sendo automatizadas. O engenheiro foca mais em desenhar o processo e menos em executar o operacional.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏭</div><strong>Indústria 4.0</strong><p>Fábricas conectadas, sensores e máquinas que conversam entre si. Entender essa fábrica digital virou parte do trabalho.</p></div>
+        <div class="tech-card"><div class="tc-icon">📦</div><strong>Logística inteligente</strong><p>Algoritmos planejam rotas, estoques e entregas. A cadeia de suprimentos ficou mais técnica e mais valorizada.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔧</div><strong>Simulação</strong><p>Dá pra testar uma mudança no computador antes de aplicar no mundo real, prevendo gargalos e custos.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌱</div><strong>Sustentabilidade</strong><p>Produzir gerando menos desperdício e impacto virou meta das empresas. Isso abre vagas novas em operações verdes.</p></div>
+      </div>
+      <p class="note">⚡ O engenheiro de produção do futuro não compete com a tecnologia: usa a tecnologia pra enxergar o processo inteiro e decidir melhor, focando no que é humano — organizar pessoas e definir prioridades.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>É uma das engenharias mais versáteis:</strong> o engenheiro de produção trabalha em fábrica, em banco, em varejo, em tech, em consultoria. Pouca engenharia abre tantas portas diferentes.</li>
+        <li><strong>Muita vaga, muita concorrência:</strong> o volume de oportunidades é alto, mas o número de formados também. Diferenciação faz diferença.</li>
+        <li><strong>Programas de trainee são a porta de ouro:</strong> grandes empresas (Ambev, Vale, Gerdau, bancos, varejo, tech) disputam engenheiros de produção em programas concorridos e bem pagos.</li>
+        <li><strong>Vai muito além da indústria:</strong> hoje boa parte trabalha em serviços, logística, consultoria e empresas de tecnologia, não só em fábrica.</li>
+        <li><strong>Setor público é caminho de estabilidade:</strong> concursos técnicos e de gestão pagam bem, mas exigem preparação longa.</li>
+        <li><strong>É uma das engenharias com melhor empregabilidade no país.</strong> <em>(fonte: pesquisas Cia de Talentos e Catho, 2024–2025)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Escolher uma área pra se aprofundar é o que tira o engenheiro de produção da faixa "genérico".</p>
+      <div class="tags">
+        <span class="tag">⭐ Gestão de Projetos</span>
+        <span class="tag">⭐ Supply Chain / Logística</span>
+        <span class="tag">⭐ Análise de Dados / BI</span>
+        <span class="tag">⭐ Lean / Seis Sigma</span>
+        <span class="tag">Gestão da Qualidade</span>
+        <span class="tag">Operações</span>
+        <span class="tag">Finanças e Custos</span>
+        <span class="tag">Engenharia Econômica</span>
+        <span class="tag">Gestão da Produção</span>
+        <span class="tag">Ergonomia e Segurança</span>
+        <span class="tag">Empreendedorismo e Inovação</span>
+        <span class="tag">MBA em Gestão</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhores salários no Brasil em 2024–2025. Projetos, dados e supply chain concentram as faixas mais altas para quem se especializa cedo.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um engenheiro de produção?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no mercado brasileiro. Tech, bancos e grandes indústrias pagam acima disso para cargos sênior.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 4k–6k</div><div class="sal-note">Engenheiro júnior ou trainee. Fase de aprender a empresa por dentro. Trainees pagam mais.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 7k–12k</div><div class="sal-note">Já lidera processos e projetos com alguns anos de experiência e área definida.</div></div>
+        <div class="sal-card"><div class="sal-stage">Liderança / Topo</div><div class="sal-range">R$ 15k–40k+</div><div class="sal-note">Coordenação, gerência e diretoria de operações. C-level chega às faixas mais altas.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em Engenharia de Produção, o salário sobe muito por causa do setor e da área escolhida. Um especialista em supply chain ou dados numa empresa grande pode ganhar bem mais que um gestor genérico com o mesmo tempo de casa.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.abepro.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>ABEPRO — Associação Brasileira de Engenharia de Produção</strong><span>O que faz o engenheiro de produção, áreas de atuação e a profissão no Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais reportados por profissionais. Pesquise por cargo e empresa</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.ciadetalentos.com.br" class="lcard" target="_blank"><span class="lc-icon">🚀</span><div class="lc-body"><strong>Cia de Talentos</strong><span>Programas de trainee e estágio das maiores empresas do país</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/learning/" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>LinkedIn Learning</strong><span>Cursos de gestão de projetos, dados, Lean e operações com certificado</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Engenharia de Produção é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-eng">
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Gosto de organizar coisas: tarefas, grupos, processos, espaços. Bagunça me incomoda mais do que organizar cansa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Não tenho pavor de matemática. Posso não amar, mas encaro cálculo e números quando precisa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Gosto de analisar informações e usar isso pra resolver um problema de forma prática.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Costumo assumir um papel de liderança ou de "quem organiza" nos trabalhos em grupo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade sobre como empresas e processos funcionam por dentro.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Prefiro coisas práticas e aplicadas a teorias abstratas. Quero ver onde aquilo serve no mundo real.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Me dou bem trabalhando e coordenando pessoas diferentes de mim.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Trabalhar com metas e indicadores me estimula mais do que me paralisa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Gosto da ideia de poder trabalhar em quase qualquer setor, da indústria ao mundo digital.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-eng">0 de 9</span></div>
+      <div class="cl-result" id="res-eng"><div class="verdict" id="vd-eng"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ ARQUITETURA ═══════════════════════════════ -->
+<div class="panel arq" id="p-arq">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Arquitetura e Urbanismo?</h2></div>
+    <div class="sc-body">
+      <p>Arquitetura e Urbanismo é o curso de quem quer pensar e desenhar os espaços onde as pessoas vivem: casas, prédios, interiores, praças, bairros, cidades. É um misto de arte, técnica e cuidado com as pessoas. É um <strong>bacharelado de 5 anos</strong>, reconhecido pelo MEC. Combina criatividade e desenho com matemática, estrutura e muita prática de projeto.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Desenho, maquete, história da arquitetura, geometria, representação gráfica e os primeiros projetos. Aqui você descobre se ama desenhar e criar espaços.</li>
+        <li><strong>3º ano:</strong> Estruturas, conforto (luz, som, temperatura), instalações, paisagismo e projetos mais complexos.</li>
+        <li><strong>4º–5º ano:</strong> Urbanismo, projeto de edifícios maiores, legislação, estágio obrigatório e TFG (o trabalho final, um projeto completo).</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a arquitetura tem conselho próprio, o CAU (Conselho de Arquitetura e Urbanismo). Pra assinar projetos como arquiteto, é obrigatório o registro no CAU. É uma profissão de conselho forte, parecida com a engenharia nesse ponto.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Projeto de edificações:</strong> desenhar casas, prédios e construções, do conceito à planta executável.</li>
+        <li><strong>Arquitetura de interiores:</strong> projetar e decorar ambientes internos, unindo estética, função e conforto. O ponto que mais encosta no gosto por decorar espaços.</li>
+        <li><strong>Urbanismo:</strong> planejar bairros, praças, ruas e o crescimento das cidades.</li>
+        <li><strong>Paisagismo:</strong> projetar jardins, parques e áreas verdes.</li>
+        <li><strong>Acompanhamento de obra:</strong> garantir que o projeto saia do papel do jeito certo, na prática.</li>
+        <li><strong>Restauro e patrimônio:</strong> recuperar prédios históricos preservando sua memória.</li>
+        <li><strong>Maquete eletrônica e 3D:</strong> criar imagens e modelos realistas dos projetos.</li>
+        <li><strong>Arquitetura efêmera e cenografia:</strong> stands, eventos, vitrines, cenários.</li>
+        <li><strong>Consultoria e aprovação de projetos:</strong> ajudar com legislação, prefeitura e viabilidade.</li>
+        <li><strong>Carreira pública:</strong> concursos em prefeituras, órgãos de planejamento urbano e patrimônio.</li>
+        <li><strong>Escritório próprio:</strong> muitos arquitetos abrem o próprio escritório e atendem clientes direto.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Arquitetura pede criatividade com técnica: imaginar o espaço e saber construí-lo de verdade.</p>
+      <div class="tags">
+        <span class="tag">Criatividade</span>
+        <span class="tag">Gosto por desenho</span>
+        <span class="tag">Visão espacial</span>
+        <span class="tag">Senso estético</span>
+        <span class="tag">Atenção ao detalhe</span>
+        <span class="tag">Sensibilidade para ambientes</span>
+        <span class="tag">Lidar com números e medidas</span>
+        <span class="tag">Organização</span>
+        <span class="tag">Escuta do cliente</span>
+        <span class="tag">Persistência</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você entra num espaço, repara em como ele é organizado, na luz, nas cores, no que mudaria pra ficar mais bonito ou mais funcional? Se você "lê" ambientes assim e adora desenhar e decorar, a Arquitetura conversa muito com você.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O começo paga pouco e tem muita gente formada.</strong> Arquitetura é um curso muito procurado. O salário inicial costuma ser modesto e a concorrência é grande. Portfólio bom faz diferença.</div>
+      <div class="cbox"><strong>Tem mais matemática e técnica do que muita gente imagina.</strong> Não é só desenhar bonito: tem estrutura, cálculo, instalações e legislação. Quem entra achando que é só arte se assusta.</div>
+      <div class="cbox"><strong>O mercado oscila com a construção civil.</strong> Quando a economia desacelera e se constrói menos, sobra menos trabalho. É uma área sensível aos altos e baixos do país.</div>
+      <div class="cbox"><strong>O curso é puxado e caro de materiais.</strong> Maquetes, impressões, software e equipamentos custam. E a carga de projetos é alta, com muitas noites viradas perto das entregas.</div>
+      <div class="cbox"><strong>Seu projeto vai ser mudado.</strong> Cliente, orçamento e obra mexem na sua ideia o tempo todo. Quem leva pro lado pessoal sofre. Lidar com o "não" faz parte.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🏗️</div><strong>BIM</strong><p>O projeto virou um modelo 3D inteligente que junta desenho, estrutura e custo. Dominar BIM virou requisito no mercado.</p></div>
+        <div class="tech-card"><div class="tc-icon">🖼️</div><strong>Render e IA</strong><p>Imagens realistas e geração de ideias por IA aceleram a criação. O arquiteto vira mais diretor da ideia do que desenhista braçal.</p></div>
+        <div class="tech-card"><div class="tc-icon">🥽</div><strong>Realidade virtual</strong><p>Dá pra "andar dentro" do projeto antes de construir. O cliente entende melhor e aprova mais rápido.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌱</div><strong>Arquitetura sustentável</strong><p>Projetar gastando menos energia e água virou exigência. Conforto e eficiência são parte central do projeto.</p></div>
+        <div class="tech-card"><div class="tc-icon">🖥️</div><strong>Projeto colaborativo</strong><p>Arquiteto, engenheiro e cliente trabalham no mesmo modelo digital, ao mesmo tempo, mesmo à distância.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏠</div><strong>Construção industrializada</strong><p>Partes da obra são feitas em fábrica e montadas no local. Isso muda a forma de projetar.</p></div>
+      </div>
+      <p class="note">⚡ A tecnologia faz o desenho e o render ficarem rápidos. O que ela não faz é entender a pessoa que vai morar ali e criar a ideia certa pra ela: é aí que o arquiteto continua insubstituível.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado grande, mas sensível à economia:</strong> quando a construção aquece, sobra trabalho; quando esfria, aperta. É uma área que sobe e desce com o país.</li>
+        <li><strong>Interiores está em alta:</strong> a procura por arquitetura de interiores e reformas cresceu muito, puxada por quem quer melhorar a própria casa.</li>
+        <li><strong>Escritório próprio é caminho comum:</strong> muitos arquitetos trabalham por conta, atendendo clientes direto, sozinhos ou em pequenos escritórios.</li>
+        <li><strong>Construtoras e incorporadoras contratam:</strong> empresas de construção e empreendimentos oferecem vagas mais estáveis que o escritório próprio.</li>
+        <li><strong>Setor público dá estabilidade:</strong> concursos em prefeituras e órgãos de planejamento pagam bem e têm segurança, mas exigem preparação.</li>
+        <li><strong>O portfólio é o seu maior documento.</strong> Em arquitetura, o que você já criou conta mais que o diploma na hora de conseguir clientes e vagas. <em>(fonte: CAU/BR e Glassdoor, 2024–2025)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em arquitetura, escolher uma força acelera muito a carreira e ajuda a se destacar.</p>
+      <div class="tags">
+        <span class="tag">⭐ Arquitetura de Interiores</span>
+        <span class="tag">⭐ BIM e Tecnologia</span>
+        <span class="tag">⭐ Urbanismo e Planejamento</span>
+        <span class="tag">⭐ Paisagismo</span>
+        <span class="tag">Projeto Residencial</span>
+        <span class="tag">Projeto Comercial</span>
+        <span class="tag">Restauro e Patrimônio</span>
+        <span class="tag">Iluminação (Lighting Design)</span>
+        <span class="tag">Cenografia e Efêmera</span>
+        <span class="tag">Sustentabilidade</span>
+        <span class="tag">Maquete Eletrônica / 3D</span>
+        <span class="tag">Gestão de Obras</span>
+      </div>
+      <p class="note">⭐ Áreas com mais procura e melhor remuneração no Brasil em 2024–2025. Interiores, BIM e urbanismo concentram boas oportunidades pra quem se especializa.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um arquiteto?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. Escritório próprio bem posicionado e especialistas em interiores e BIM podem ganhar acima da média.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,5k–4k</div><div class="sal-note">Estágio ou arquiteto júnior em escritório. Fase de aprender na prática e montar portfólio.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 4,5k–8k</div><div class="sal-note">Já assume projetos próprios. Interiores e BIM puxam pra cima dessa faixa.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Escritório próprio</div><div class="sal-range">R$ 9k–25k+</div><div class="sal-note">Arquiteto experiente, sócio ou dono de escritório bem posicionado. Renda varia com a carteira de clientes.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em arquitetura, o salário fixo nem sempre conta a história toda. Muita gente boa ganha mais com escritório próprio, projetos de interiores e clientes diretos do que em carteira assinada, mas isso vem com a instabilidade de quem trabalha por conta.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.caubr.gov.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CAU/BR — Conselho de Arquitetura e Urbanismo</strong><span>O conselho oficial: o que faz o arquiteto, registro e atuação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.archdaily.com.br" class="lcard" target="_blank"><span class="lc-icon">🏠</span><div class="lc-body"><strong>ArchDaily Brasil</strong><span>O maior portal de arquitetura do mundo. Ótimo pra ver o que é bom projeto</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais de cargos de arquitetura reportados por profissionais</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/learning/" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>LinkedIn Learning</strong><span>Cursos de AutoCAD, SketchUp, BIM e projeto com certificado</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Arquitetura é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-arq">
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Adoro desenhar, criar e imaginar coisas visualmente. Isso me dá energia, não preguiça.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Reparo em ambientes: como são organizados, a luz, as cores, o que mudaria pra ficar melhor.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Tenho prazer em decorar e organizar espaços, deixar um lugar bonito e funcional.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Tenho boa visão espacial: consigo imaginar como as coisas ficam no espaço de cabeça.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Não tenho pavor de matemática e medidas. Sei que arquitetura também tem cálculo e estrutura.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Tenho atenção ao detalhe e capricho com o que faço.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Consigo lidar com meu projeto sendo mudado por cliente e orçamento, sem levar pro lado pessoal.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Gosto de ouvir o que a pessoa precisa e traduzir isso num espaço pensado pra ela.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Aceito que o começo paga pouco e que meu portfólio importa muito pra crescer.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-arq">0 de 9</span></div>
+      <div class="cl-result" id="res-arq"><div class="verdict" id="vd-arq"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ ESTATÍSTICA ═══════════════════════════════ -->
+<div class="panel est" id="p-est">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Estatística?</h2></div>
+    <div class="sc-body">
+      <p>Estatística é o curso de quem quer entender o mundo através de dados: coletar números, analisar, achar padrões e ajudar empresas, governos e pesquisas a tomar decisões com base em evidência, não em achismo. É um <strong>bacharelado de 4 anos</strong>, reconhecido pelo MEC. É um curso de exatas, com bastante matemática, programação e raciocínio lógico, hoje muito conectado à área de dados e inteligência artificial.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> A base dura: cálculo, álgebra linear, probabilidade e fundamentos da estatística. A parte mais matemática do curso.</li>
+        <li><strong>2º–3º ano:</strong> Inferência, modelos estatísticos, amostragem, análise de dados e programação (R, Python, SQL).</li>
+        <li><strong>4º ano:</strong> Estatística aplicada (saúde, economia, mercado), machine learning, estágio e TCC. Muita gente já está estagiando antes.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a estatística tem conselho próprio (CONRE / CONFE). Pra atuar e assinar como estatístico, é preciso registro no conselho regional. Mas em muitas vagas de dados, o que pesa mais é a habilidade técnica do que o registro.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Cientista de dados:</strong> usar estatística e programação pra extrair conhecimento de grandes volumes de dados. Uma das profissões mais valorizadas hoje.</li>
+        <li><strong>Analista de dados / BI:</strong> transformar dados em relatórios e painéis que ajudam a empresa a decidir.</li>
+        <li><strong>Estatístico de pesquisa:</strong> planejar e analisar pesquisas de opinião, mercado e ciência.</li>
+        <li><strong>Bioestatística:</strong> analisar dados de saúde, testes de remédios e estudos clínicos.</li>
+        <li><strong>Estatística econômica e financeira:</strong> análise de risco, crédito, mercado e investimentos em bancos e fintechs.</li>
+        <li><strong>Machine learning:</strong> construir modelos que aprendem com dados e fazem previsões.</li>
+        <li><strong>Pesquisa e academia:</strong> mestrado, doutorado e pesquisa em universidades e institutos.</li>
+        <li><strong>Setor público:</strong> IBGE, institutos de pesquisa, órgãos de planejamento e estatísticas oficiais.</li>
+        <li><strong>Análise de mercado e marketing:</strong> entender comportamento de consumo a partir de dados.</li>
+        <li><strong>Consultoria em dados:</strong> ajudar empresas a usar seus dados melhor.</li>
+        <li><strong>Atuária e seguros:</strong> calcular riscos e probabilidades para seguradoras e previdência.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Estatística pede cabeça lógica, gosto por matemática e curiosidade pra achar respostas nos números.</p>
+      <div class="tags">
+        <span class="tag">Raciocínio lógico</span>
+        <span class="tag">Gosto por matemática</span>
+        <span class="tag">Análise de informações</span>
+        <span class="tag">Atenção ao detalhe</span>
+        <span class="tag">Curiosidade</span>
+        <span class="tag">Programação</span>
+        <span class="tag">Paciência</span>
+        <span class="tag">Pensamento crítico</span>
+        <span class="tag">Comunicação de resultados</span>
+        <span class="tag">Concentração</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você vê um monte de informação solta, sente vontade de organizar, comparar e descobrir o que aquilo está dizendo? Se "ler nos números" uma história que ninguém mais viu te empolga, a Estatística tem muito a ver com você.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>É um curso pesado de matemática, do começo ao fim.</strong> Não é só "mexer com números", é cálculo, probabilidade e teoria de verdade. Quem não gosta de exatas vai sofrer bastante.</div>
+      <div class="cbox"><strong>Tem programação no caminho.</strong> Hoje o estatístico programa (R, Python, SQL). Se você nunca pensou em codar, vai precisar aprender e gostar disso.</div>
+      <div class="cbox"><strong>O curso é menos conhecido.</strong> Tem poucas faculdades com Estatística e pouca gente sabe o que o profissional faz. Você vai explicar sua profissão muitas vezes, embora o mercado de dados esteja em alta.</div>
+      <div class="cbox"><strong>Parte do trabalho é solitária e detalhista.</strong> Muita análise é feita concentrada, sozinha, com atenção fina aos detalhes. Quem precisa de movimento o tempo todo pode achar parado.</div>
+      <div class="cbox"><strong>Comunicar o resultado é metade do trabalho.</strong> Não basta achar a resposta nos dados: você precisa explicar pra quem não é técnico. Quem não desenvolve essa parte fica limitado.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🧠</div><strong>IA e machine learning</strong><p>A estatística é a base da inteligência artificial. Quem entende os modelos por dentro está no centro dessa revolução.</p></div>
+        <div class="tech-card"><div class="tc-icon">💾</div><strong>Big data</strong><p>Empresas guardam dados de tudo. Saber organizar e analisar esse volume virou uma das habilidades mais procuradas.</p></div>
+        <div class="tech-card"><div class="tc-icon">🐍</div><strong>Programação</strong><p>R, Python e SQL são as ferramentas do dia a dia. Programar virou parte essencial de ser estatístico hoje.</p></div>
+        <div class="tech-card"><div class="tc-icon">📈</div><strong>Decisão por dados</strong><p>Quase toda empresa quer decidir com base em evidência. Isso colocou o estatístico em alta no mercado.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>Automação da análise</strong><p>Tarefas repetitivas são automatizadas. Sobra mais tempo pra pensar nas perguntas certas e interpretar.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Visualização de dados</strong><p>Transformar números em gráficos claros virou competência valiosa pra comunicar resultados.</p></div>
+      </div>
+      <p class="note">⚡ A IA automatiza a conta. O que ela não faz sozinha é escolher a pergunta certa, checar se o dado é confiável e interpretar com bom senso: é aí que o estatístico continua insubstituível.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>É uma das áreas mais aquecidas do momento:</strong> a explosão de dados e IA fez a demanda por quem entende estatística disparar nos últimos anos.</li>
+        <li><strong>Poucos formados, muita procura:</strong> tem poucas faculdades de Estatística no país, então quem se forma costuma encontrar boas oportunidades.</li>
+        <li><strong>Tech, bancos e fintechs puxam os melhores salários:</strong> empresas de tecnologia e o mercado financeiro disputam profissionais de dados.</li>
+        <li><strong>Dá pra trabalhar em quase tudo:</strong> saúde, governo, esporte, marketing, indústria, pesquisa. Onde tem dado, tem espaço pra estatístico.</li>
+        <li><strong>Trabalho remoto é comum:</strong> muitas vagas de dados permitem trabalhar de qualquer lugar, inclusive pra empresas de fora.</li>
+        <li><strong>Carreira de dados é uma das mais valorizadas da década.</strong> <em>(fonte: pesquisas de mercado de dados e Glassdoor, 2024–2025)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em estatística, escolher uma área de aplicação é o que define o tipo de carreira e o salário.</p>
+      <div class="tags">
+        <span class="tag">⭐ Ciência de Dados</span>
+        <span class="tag">⭐ Machine Learning / IA</span>
+        <span class="tag">⭐ Análise de Dados / BI</span>
+        <span class="tag">⭐ Estatística Financeira</span>
+        <span class="tag">Bioestatística</span>
+        <span class="tag">Atuária</span>
+        <span class="tag">Pesquisa de Mercado</span>
+        <span class="tag">Estatística Pública (IBGE)</span>
+        <span class="tag">Pesquisa e Academia</span>
+        <span class="tag">Análise de Risco</span>
+        <span class="tag">Engenharia de Dados</span>
+        <span class="tag">Visualização de Dados</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhores salários no Brasil em 2024–2025. Ciência de dados, machine learning e estatística financeira concentram as faixas mais altas.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um estatístico?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. Tech, bancos e quem migra pra ciência de dados ganham acima dessa média.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 3,5k–6k</div><div class="sal-note">Analista júnior de dados ou estatística. Já começa bem por causa da alta demanda.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 7k–13k</div><div class="sal-note">Cientista de dados ou estatístico pleno com alguns anos e área definida.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Topo</div><div class="sal-range">R$ 15k–35k+</div><div class="sal-note">Cientista de dados sênior, especialista em ML e liderança de dados. Empresas de fora pagam ainda mais.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> a estatística é uma das graduações com melhor relação entre demanda e oferta hoje. Quem domina programação e migra pra ciência de dados costuma alcançar faixas altas relativamente cedo, inclusive trabalhando remoto pra empresas internacionais.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.redeabe.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>ABE — Associação Brasileira de Estatística</strong><span>A entidade da área: o que faz o estatístico e onde estudar</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.ibge.gov.br" class="lcard" target="_blank"><span class="lc-icon">📊</span><div class="lc-body"><strong>IBGE</strong><span>O maior empregador de estatísticos do país. Mostra estatística aplicada na prática</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais de cargos de dados e estatística reportados por profissionais</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.kaggle.com" class="lcard" target="_blank"><span class="lc-icon">🐍</span><div class="lc-body"><strong>Kaggle</strong><span>Comunidade mundial de dados, com desafios e bases reais pra praticar</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Estatística é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-est">
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Gosto de matemática de verdade, não só "tolero". Exatas me interessam.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Adoro analisar informações: comparar, organizar e descobrir o que os dados estão dizendo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Tenho raciocínio lógico e gosto de resolver problemas que exigem pensar com calma.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Topo aprender a programar (R, Python). Pra mim isso parece interessante, não assustador.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Tenho atenção ao detalhe e paciência pra conferir as coisas com cuidado.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Não me incomodo de passar um tempo concentrada, num trabalho mais quieto e analítico.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Sou curiosa: gosto de fazer perguntas e ir atrás de respostas com base em evidência.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Consigo (ou quero aprender a) explicar coisas complicadas de um jeito simples pros outros.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Me animo com a ideia de trabalhar com dados e tecnologia, uma das áreas mais procuradas hoje.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-est">0 de 9</span></div>
+      <div class="cl-result" id="res-est"><div class="verdict" id="vd-est"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAR ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚖️</span><h2>Os três lado a lado</h2></div>
+    <div class="sc-body">
+      <p>Os três cursos têm pontos em comum: todos pedem organização, gostam de quem analisa informações e têm matemática no caminho. Mas a experiência do dia a dia é bem diferente em cada um. Esta tabela ajuda a enxergar essas diferenças de uma vez.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th class="h-eng">🏭 Eng. de Produção</th>
+              <th class="h-arq">📐 Arquitetura</th>
+              <th class="h-est">📊 Estatística</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Foco principal</td><td>Organizar processos e fazer empresas funcionarem melhor</td><td>Pensar e desenhar os espaços onde as pessoas vivem</td><td>Entender o mundo através de dados e padrões</td></tr>
+            <tr><td>Tipo de perfil</td><td>Organizado e estratégico</td><td>Criativo e visual</td><td>Lógico e analítico</td></tr>
+            <tr><td>Relação com desenho</td><td>Baixa (mais processos e números)</td><td>Total (desenho é o coração do curso)</td><td>Baixa (mais cálculo e dados)</td></tr>
+            <tr><td>Relação com pessoas</td><td>Alta (lidera e coordena equipes)</td><td>Média (ouve clientes, coordena obra)</td><td>Média (comunica resultados, mais análise)</td></tr>
+            <tr><td>Onde trabalha</td><td>Empresas de qualquer setor, indústria, tech</td><td>Escritórios, construtoras, conta própria</td><td>Tech, bancos, governo, pesquisa, remoto</td></tr>
+            <tr><td>Estabilidade</td><td>Alta (muita vaga e versátil)</td><td>Média (oscila com a construção)</td><td>Alta (área em forte demanda)</td></tr>
+            <tr><td>Salário inicial</td><td>R$ 4k–6k</td><td>R$ 2,5k–4k</td><td>R$ 3,5k–6k</td></tr>
+            <tr><td>Duração</td><td>5 anos</td><td>5 anos</td><td>4 anos</td></tr>
+            <tr><td>Conselho / regulação</td><td>Tem conselho (CREA)</td><td>Tem conselho (CAU)</td><td>Tem conselho (CONRE)</td></tr>
+            <tr><td>Peso da matemática</td><td>Alto no início, depois mais gestão</td><td>Médio (estrutura e medidas)</td><td>Altíssimo, do começo ao fim</td></tr>
+            <tr><td>Diferencial único</td><td>Versatilidade total de mercado</td><td>Criar espaços reais que as pessoas usam</td><td>Estar no centro da era dos dados e da IA</td></tr>
+            <tr><td>Pergunta central</td><td>"Como faço isso funcionar melhor?"</td><td>"Como esse espaço deveria ser?"</td><td>"O que os dados estão dizendo?"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Para te ajudar a pensar</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        🏭 <strong>Engenharia de Produção</strong> fala mais alto pra quem gosta de organizar tarefas e processos, coordenar pessoas e usar números pra deixar tudo mais eficiente. É o caminho mais "largo" e versátil dos três, com muita vaga, mas começa pesado em matemática.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        📐 <strong>Arquitetura</strong> fala mais alto pra quem ama desenhar, decorar e pensar espaços, e quer ver a própria ideia virar um lugar real. É o mais criativo e visual, mas o mercado oscila e o começo paga menos.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        📊 <strong>Estatística</strong> fala mais alto pra quem gosta de matemática de verdade e adora analisar informações pra achar padrões. É a área mais aquecida hoje, ligada a dados e IA, mas é a mais puxada em exatas e a mais "quieta".
+      </div>
+      <p class="note" style="margin-top:16px;">Repare que os três conversam com partes do seu perfil: organizar, analisar informações e lidar com pessoas aparecem em todos, de jeitos diferentes. Use os checklists de cada aba, veja onde sua pontuação foi mais alta e leve esse resultado pra conversar com sua orientadora. O que ficou de fora costuma dizer tanto quanto o que você marcou.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais que existem pra cada formação, explicados de um jeito simples. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no Brasil.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col">
+          <div class="vaga-col-head eng">🏭 Engenharia de Produção</div>
+          <div class="vaga-role"><strong>Analista de PCP</strong><span>Organiza o que a fábrica vai produzir, quando e em qual quantidade, pra não faltar nem sobrar produto.</span></div>
+          <div class="vaga-role"><strong>Analista de Logística / Supply Chain</strong><span>Cuida pra que os produtos cheguem na hora certa, do depósito até o cliente, gastando o mínimo possível.</span></div>
+          <div class="vaga-role"><strong>Analista de Melhoria de Processos</strong><span>Olha como o trabalho é feito hoje e encontra jeitos de deixá-lo mais rápido, barato e com menos erro.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn eng" href="https://www.linkedin.com/jobs/search/?keywords=Engenharia%20de%20Produ%C3%A7%C3%A3o&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head arq">📐 Arquitetura</div>
+          <div class="vaga-role"><strong>Arquiteto(a) de Interiores</strong><span>Projeta e decora ambientes por dentro, escolhendo móveis, cores e iluminação pra ficar bonito e funcional.</span></div>
+          <div class="vaga-role"><strong>Arquiteto(a) Projetista</strong><span>Desenha as plantas e os projetos de casas e prédios no computador, tirando a ideia do papel.</span></div>
+          <div class="vaga-role"><strong>Arquiteto(a) de Obra</strong><span>Acompanha a construção pra garantir que tudo seja feito do jeito que foi desenhado no projeto.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn arq" href="https://www.linkedin.com/jobs/search/?keywords=Arquiteto&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head est">📊 Estatística</div>
+          <div class="vaga-role"><strong>Analista de Dados</strong><span>Pega um monte de números da empresa e transforma em gráficos e relatórios que ajudam a decidir.</span></div>
+          <div class="vaga-role"><strong>Cientista de Dados</strong><span>Usa estatística e programação pra achar padrões nos dados e prever o que pode acontecer.</span></div>
+          <div class="vaga-role"><strong>Analista de BI</strong><span>Monta painéis que mostram, quase em tempo real, como a empresa está indo.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn est" href="https://www.linkedin.com/jobs/search/?keywords=Analista%20de%20Dados&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SEUS CRITÉRIOS ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os três cursos</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estes são os critérios que você elencou e organizou como os mais importantes durante o processo, na ordem de prioridade que você definiu. A tabela descreve, de forma objetiva, como cada critério se apresenta em cada curso. Ela não aponta resposta certa nem indica um caminho: é material para você pensar e conversar com sua orientadora.</p>
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Muito presente</span>
+        <span><span class="dot y"></span>Presente em parte</span>
+        <span><span class="dot r"></span>Pouco presente</span>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table crit-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th class="h-eng">🏭 Eng. de Produção</th>
+              <th class="h-arq">📐 Arquitetura</th>
+              <th class="h-est">📊 Estatística</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Organizar tarefas ou espaços</td>
+              <td data-label="🏭 Eng. de Produção"><span class="dot g"></span>Eixo central do curso: organizar tarefas, fluxos e processos é o coração da profissão.</td>
+              <td data-label="📐 Arquitetura"><span class="dot g"></span>Presente na organização de espaços físicos, ambientes e do canteiro de obras.</td>
+              <td data-label="📊 Estatística"><span class="dot y"></span>Presente na organização de dados e informações; menos ligada a tarefas ou espaços físicos.</td>
+            </tr>
+            <tr>
+              <td>2. Trocar experiências / conhecer pessoas</td>
+              <td data-label="🏭 Eng. de Produção"><span class="dot g"></span>Constante: o engenheiro coordena equipes e lida com pessoas de várias áreas o tempo todo.</td>
+              <td data-label="📐 Arquitetura"><span class="dot y"></span>Presente no contato com clientes, equipe de obra e fornecedores, embora muito tempo seja de projeto.</td>
+              <td data-label="📊 Estatística"><span class="dot r"></span>Mais pontual: boa parte do trabalho é analítica e concentrada, com troca ao comunicar resultados.</td>
+            </tr>
+            <tr>
+              <td>3. Analisar informações</td>
+              <td data-label="🏭 Eng. de Produção"><span class="dot y"></span>Presente na análise de processos, custos e indicadores para apoiar decisões.</td>
+              <td data-label="📐 Arquitetura"><span class="dot y"></span>Presente na análise do terreno, das necessidades do cliente e das condições do espaço.</td>
+              <td data-label="📊 Estatística"><span class="dot g"></span>É o próprio objeto da profissão: analisar dados é o que o estatístico faz o tempo todo.</td>
+            </tr>
+            <tr>
+              <td>4. Decorar ambientes</td>
+              <td data-label="🏭 Eng. de Produção"><span class="dot r"></span>Não faz parte do curso nem da profissão.</td>
+              <td data-label="📐 Arquitetura"><span class="dot g"></span>Presente de forma direta, sobretudo em arquitetura de interiores, que une estética e função.</td>
+              <td data-label="📊 Estatística"><span class="dot r"></span>Não faz parte do curso nem da profissão.</td>
+            </tr>
+            <tr>
+              <td>5. Desenho e ilustração</td>
+              <td data-label="🏭 Eng. de Produção"><span class="dot r"></span>Presente de forma técnica (desenho técnico, fluxogramas), sem componente artístico.</td>
+              <td data-label="📐 Arquitetura"><span class="dot g"></span>Central: desenho à mão e digital é parte essencial da formação e da rotina.</td>
+              <td data-label="📊 Estatística"><span class="dot r"></span>Aparece como visualização de dados (gráficos), sem desenho artístico.</td>
+            </tr>
+            <tr>
+              <td>6. Analisar ambientes</td>
+              <td data-label="🏭 Eng. de Produção"><span class="dot y"></span>Presente na análise de ambientes de produção e de trabalho (layout de fábrica, ergonomia).</td>
+              <td data-label="📐 Arquitetura"><span class="dot g"></span>Central: ler e analisar o espaço, a luz, o entorno e o uso é base do projeto.</td>
+              <td data-label="📊 Estatística"><span class="dot r"></span>Não faz parte; a análise é de dados, não de ambientes físicos.</td>
+            </tr>
+            <tr>
+              <td>7. Coordenar ou liderar equipes / projetos</td>
+              <td data-label="🏭 Eng. de Produção"><span class="dot g"></span>Função central da profissão; gestão de projetos e liderança são o núcleo do curso.</td>
+              <td data-label="📐 Arquitetura"><span class="dot g"></span>Presente na coordenação da equipe de projeto e no acompanhamento da obra.</td>
+              <td data-label="📊 Estatística"><span class="dot y"></span>Aparece em níveis sênior (liderança de times de dados); o início é mais individual.</td>
+            </tr>
+            <tr>
+              <td>8. Dados e estatística</td>
+              <td data-label="🏭 Eng. de Produção"><span class="dot y"></span>Presente como ferramenta: usa estatística e dados para apoiar decisões de produção.</td>
+              <td data-label="📐 Arquitetura"><span class="dot r"></span>Aparece pouco, em estudos de viabilidade e dados do projeto.</td>
+              <td data-label="📊 Estatística"><span class="dot g"></span>É o próprio objeto do curso; está presente o tempo todo.</td>
+            </tr>
+            <tr>
+              <td>9. Planejar atividades ou projetos</td>
+              <td data-label="🏭 Eng. de Produção"><span class="dot g"></span>Central: planejar produção, projetos e operações é parte essencial da profissão.</td>
+              <td data-label="📐 Arquitetura"><span class="dot g"></span>Central: todo projeto é um planejamento detalhado, do conceito à execução.</td>
+              <td data-label="📊 Estatística"><span class="dot y"></span>Presente no planejamento de pesquisas, amostras e análises.</td>
+            </tr>
+            <tr>
+              <td>10. Arquitetura (interesse pela área)</td>
+              <td data-label="🏭 Eng. de Produção"><span class="dot r"></span>Sem relação direta; a engenharia de produção não trabalha com projeto arquitetônico.</td>
+              <td data-label="📐 Arquitetura"><span class="dot g"></span>É o próprio curso, que realiza esse interesse de forma plena.</td>
+              <td data-label="📊 Estatística"><span class="dot r"></span>Sem relação direta com o campo da arquitetura.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="margin-top:16px;">Leia coluna por coluna pensando no peso que cada critério tem para você. Os critérios estão na ordem que você definiu como prioridade, então os primeiros têm mais peso na sua decisão. Use esta leitura como ponto de partida da conversa com sua orientadora.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Ranking dos critérios (soma dos pontos)</h2></div>
+    <div class="sc-body">
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Verde = 2 pontos</span>
+        <span><span class="dot y"></span>Amarelo = 1 ponto</span>
+        <span><span class="dot r"></span>Vermelho = 0 ponto</span>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 📐 Arquitetura</span><span class="rank-score">16 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill arq" style="width:80%;">16</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥈 🏭 Engenharia de Produção</span><span class="rank-score">11 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill eng" style="width:55%;">11</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥉 📊 Estatística</span><span class="rank-score">7 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill est" style="width:35%;">7</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com.br</p>
+</footer>
+
+
+<script>
+  const verdicts = [
+    { min: 8, text: "Perfil muito alinhado! ✨", sub: "Você tem as características essenciais para esse caminho. Aprofunde a pesquisa com confiança e converse com profissionais da área." },
+    { min: 6, text: "Boa afinidade! 👍", sub: "Você tem bastante a ver com essa profissão. Vale explorar mais, uma visita a uma faculdade ou conversa com um profissional pode ajudar muito." },
+    { min: 4, text: "Alguns pontos merecem atenção 🤔", sub: "Você tem afinidade com partes da área, mas alguns inegociáveis podem ser desafiadores. Converse com sua orientadora." },
+    { min: 0, text: "Talvez haja opções mais alinhadas com você 🔍", sub: "Isso não é descarte, é autoconhecimento. O que ficou de fora pode te ajudar a entender o que você realmente busca." }
+  ];
+
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    const v = verdicts.find(x => checked >= x.min);
+    document.getElementById('vd-' + id).textContent = v.text;
+    resEl.querySelector('.sub').textContent = v.sub;
+    resEl.classList.add('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Carreiras — Administração, Economia e Nutrição | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Montserrat = fonte oficial Rumo. Caveat = substituta cursiva da Balneario (não disponível em web font). -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* ── Paleta oficial Instituto Rumo ── */
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Administração — Verde Profundo */
+      --adm:     #3B503F;
+      --adm-lt:  #EAEFEB;
+      --adm-mid: #C2CFC4;
+
+      /* Economia — Bordô */
+      --eco:     #6B2F3C;
+      --eco-lt:  #F6EAED;
+      --eco-mid: #DCC0C8;
+
+      /* Nutrição — Laranja Rumo */
+      --nut:     #D9563F;
+      --nut-lt:  #FFF0ED;
+      --nut-mid: #FBC9BE;
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── Header ─── */
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    /* ─── Nav ─── */
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.adm.active { color: var(--adm); border-bottom-color: var(--adm); }
+    .tab-btn.eco.active { color: var(--eco); border-bottom-color: var(--eco); }
+    .tab-btn.nut.active { color: var(--nut); border-bottom-color: var(--nut); }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    /* ─── Panels ─── */
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    /* ─── Section cards ─── */
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .adm .sc-head { background: var(--adm-lt); border-color: var(--adm-mid); }
+    .adm .sc-head h2 { color: var(--adm); }
+    .eco .sc-head { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .eco .sc-head h2 { color: var(--eco); }
+    .nut .sc-head { background: var(--nut-lt); border-color: var(--nut-mid); }
+    .nut .sc-head h2 { color: var(--nut); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    /* ─── Lists ─── */
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .adm ul.sl li::before { color: var(--adm); }
+    .eco ul.sl li::before { color: var(--eco); }
+    .nut ul.sl li::before { color: var(--nut); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    /* ─── Tags ─── */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .adm .tag { background: var(--adm-lt); color: var(--adm); border-color: var(--adm-mid); }
+    .eco .tag { background: var(--eco-lt); color: var(--eco); border-color: var(--eco-mid); }
+    .nut .tag { background: var(--nut-lt); color: var(--nut); border-color: var(--nut-mid); }
+
+    /* ─── Boxes ─── */
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .adm .hbox { background: var(--adm-lt); border-color: var(--adm); }
+    .eco .hbox { background: var(--eco-lt); border-color: var(--eco); }
+    .nut .hbox { background: var(--nut-lt); border-color: var(--nut); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .adm .accent { color: var(--adm); }
+    .eco .accent { color: var(--eco); }
+    .nut .accent { color: var(--nut); }
+
+    /* ─── Tech grid ─── */
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .adm .tech-card { background: var(--adm-lt); border-color: var(--adm-mid); }
+    .eco .tech-card { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .nut .tech-card { background: var(--nut-lt); border-color: var(--nut-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .adm .tech-card strong { color: var(--adm); }
+    .eco .tech-card strong { color: var(--eco); }
+    .nut .tech-card strong { color: var(--nut); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    /* ─── Salary grid ─── */
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .adm .sal-card { background: var(--adm-lt); border-color: var(--adm-mid); }
+    .eco .sal-card { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .nut .sal-card { background: var(--nut-lt); border-color: var(--nut-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .adm .sal-range { color: var(--adm); }
+    .eco .sal-range { color: var(--eco); }
+    .nut .sal-range { color: var(--nut); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── Comparison table ─── */
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-adm { background: var(--adm); }
+    .comp-table th.h-eco { background: var(--eco); }
+    .comp-table th.h-nut { background: var(--nut); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    /* ─── Link cards ─── */
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .adm .lcard:hover { border-color: var(--adm); }
+    .eco .lcard:hover { border-color: var(--eco); }
+    .nut .lcard:hover { border-color: var(--nut); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    /* ─── Checklist ─── */
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .adm .cl-item:hover, .adm .cl-item.checked { background: var(--adm-lt); border-color: var(--adm); }
+    .eco .cl-item:hover, .eco .cl-item.checked { background: var(--eco-lt); border-color: var(--eco); }
+    .nut .cl-item:hover, .nut .cl-item.checked { background: var(--nut-lt); border-color: var(--nut); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .adm .cl-item.checked .cl-box { background: var(--adm); border-color: var(--adm); }
+    .eco .cl-item.checked .cl-box { background: var(--eco); border-color: var(--eco); }
+    .nut .cl-item.checked .cl-box { background: var(--nut); border-color: var(--nut); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .adm .cl-score span { color: var(--adm); font-weight: 800; }
+    .eco .cl-score span { color: var(--eco); font-weight: 800; }
+    .nut .cl-score span { color: var(--nut); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .adm .cl-result { background: var(--adm-lt); border-color: var(--adm-mid); }
+    .eco .cl-result { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .nut .cl-result { background: var(--nut-lt); border-color: var(--nut-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .verdict { font-size: 18px; font-weight: 800; }
+    .adm .cl-result .verdict { color: var(--adm); }
+    .eco .cl-result .verdict { color: var(--eco); }
+    .nut .cl-result .verdict { color: var(--nut); }
+    .cl-result .sub { font-size: 13px; color: var(--text); margin-top: 8px; line-height: 1.6; }
+
+    /* ─── Bolinhas de presença (aba critérios) ─── */
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    /* ─── Ranking dos critérios ─── */
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+    .rank-fill.adm { background: var(--adm); }
+    .rank-fill.eco { background: var(--eco); }
+    .rank-fill.nut { background: var(--nut); }
+
+    /* ─── Vagas reais ─── */
+    .vagas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-col-head.adm { background: var(--adm); }
+    .vaga-col-head.eco { background: var(--eco); }
+    .vaga-col-head.nut { background: var(--nut); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+    .vaga-btn.adm { background: var(--adm); }
+    .vaga-btn.eco { background: var(--eco); }
+    .vaga-btn.nut { background: var(--nut); }
+
+    /* ─── Footer ─── */
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+
+      /* Tabela de critérios vira cartões empilhados no celular */
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table tr:nth-child(even) td:first-child { background: var(--cmp); }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>Administração · Economia · Nutrição
+    <span class="hd-accent">pesquisar antes de escolher</span>
+  </h1>
+  <p class="hd-sub">Três caminhos bem diferentes entre si: dois que vivem do mundo dos números, das empresas e das decisões, e um que vive do mundo da saúde, do alimento e das pessoas. Este material é pra você pesquisar na sua semana de pausa, com informação de verdade sobre cada um. Ele não escolhe por você — ele te dá matéria-prima pra escolher com sua orientadora.</p>
+</header>
+
+<nav>
+  <button class="tab-btn adm active" data-c="adm" onclick="show('adm')">🏢 Administração</button>
+  <button class="tab-btn eco" data-c="eco" onclick="show('eco')">📈 Economia</button>
+  <button class="tab-btn nut" data-c="nut" onclick="show('nut')">🥗 Nutrição</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">⚖️ Comparar os três</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ ADMINISTRAÇÃO ═══════════════════════════════ -->
+<div class="panel adm active" id="p-adm">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Administração?</h2></div>
+    <div class="sc-body">
+      <p>Administração é o curso que ensina a fazer uma organização funcionar: pessoas, dinheiro, processos, produtos e decisões. É um <strong>bacharelado de 4 anos</strong>, reconhecido pelo MEC, e existe também na versão tecnóloga (Processos Gerenciais, Gestão Comercial, Gestão de RH) com 2 a 2,5 anos. É um curso prático, colado no mundo dos negócios desde cedo.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Fundamentos de administração, matemática financeira, contabilidade, <strong>economia</strong>, estatística e comportamento organizacional. A base mais "dura" do curso.</li>
+        <li><strong>2º–3º ano:</strong> Marketing, gestão de pessoas, finanças, operações, logística, sistemas de informação e empreendedorismo. Aqui o curso fica bem aplicado.</li>
+        <li><strong>4º ano:</strong> Estratégia, gestão de projetos, jogos de empresa, estágio obrigatório e TCC. Muita gente já está estagiando bem antes disso.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a Administração tem conselho próprio (CFA e os CRAs regionais). Para assinar como "Administrador" e atuar em algumas funções específicas, é preciso registro no CRA. Na maioria das vagas de empresa, porém, o que pesa é a entrega, não o registro.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Finanças corporativas:</strong> cuidar do dinheiro da empresa, orçamento, custos, investimentos e análise de resultado.</li>
+        <li><strong>Gestão de projetos:</strong> organizar prazos, equipes, orçamento e entregas. Função que existe em praticamente todo setor.</li>
+        <li><strong>Operações e logística:</strong> fazer produto e serviço chegarem na hora certa, do jeito certo, ao menor custo. É a porta de entrada da ADM na indústria.</li>
+        <li><strong>Comercial e vendas:</strong> negociar contratos, gerir carteira de clientes e metas, abrir mercados novos.</li>
+        <li><strong>Compras e suprimentos:</strong> negociar com fornecedores e garantir que a empresa compre bem. Negociação pura, todo dia.</li>
+        <li><strong>Recursos Humanos / Gente e Gestão:</strong> seleção, desenvolvimento de pessoas, cultura e clima da empresa.</li>
+        <li><strong>Marketing e produto:</strong> planejar campanhas, lançar produtos, cuidar da relação com o cliente.</li>
+        <li><strong>Análise de dados de negócio (BI):</strong> transformar números em decisão. Área em alta e bem paga.</li>
+        <li><strong>Consultoria empresarial:</strong> entrar em empresas de fora pra resolver problemas e destravar crescimento.</li>
+        <li><strong>Carreira pública:</strong> concursos para tribunais, prefeituras, bancos públicos, universidades e órgãos federais.</li>
+        <li><strong>Empreendedorismo:</strong> abrir e tocar o próprio negócio com base sólida de gestão.</li>
+        <li><strong>Gestão em construção e incorporação:</strong> administrar obras, empreendimentos e imobiliárias. É onde a ADM encosta no mundo da arquitetura.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Administração combina cabeça organizada com facilidade pra lidar com gente e com números.</p>
+      <div class="tags">
+        <span class="tag">Organização</span>
+        <span class="tag">Facilidade com números</span>
+        <span class="tag">Visão do todo</span>
+        <span class="tag">Liderança</span>
+        <span class="tag">Comunicação</span>
+        <span class="tag">Negociação</span>
+        <span class="tag">Tomada de decisão</span>
+        <span class="tag">Curiosidade sobre empresas</span>
+        <span class="tag">Trabalho em equipe</span>
+        <span class="tag">Pragmatismo</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando um trabalho em grupo está bagunçado, você é a pessoa que naturalmente organiza quem faz o quê e até quando? Se isso te dá prazer em vez de irritação, vale investigar a Administração de perto.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>É um curso muito procurado, então tem muita gente formada.</strong> Administração é uma das graduações com mais formandos no Brasil. Pra se destacar, não basta o diploma: estágio bom, inglês e uma especialização fazem diferença real.</div>
+      <div class="cbox"><strong>O começo é de base, não de comando.</strong> Ninguém sai da faculdade gerenciando. Os primeiros anos são operacionais, aprendendo por dentro, com salário inicial modesto.</div>
+      <div class="cbox"><strong>Tem matemática e finanças no caminho.</strong> Se você foge totalmente de número, vai sofrer nos primeiros semestres. Não precisa amar, mas precisa encarar.</div>
+      <div class="cbox"><strong>É um curso "largo".</strong> A ADM dá uma base de tudo e nada com muita profundidade. Quem não escolhe uma área pra se aprofundar corre o risco de ficar genérico e travar no meio da carreira.</div>
+      <div class="cbox"><strong>Pressão por resultado.</strong> Em quase toda função de gestão você é cobrado por meta e número. Pra algumas pessoas isso motiva; pra outras, adoece.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Decisão por dados</strong><p>Planilha virou painel inteligente. Saber ler dado deixou de ser diferencial e virou requisito básico de gestão.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA no operacional</strong><p>Relatórios, conciliações e triagens estão sendo automatizados. Sobra mais tempo pra estratégia e pra pessoas.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏭</div><strong>Indústria 4.0</strong><p>Fábricas conectadas e sensores em tudo. Gerir produção hoje é gerir também um fluxo enorme de dados em tempo real.</p></div>
+        <div class="tech-card"><div class="tc-icon">💳</div><strong>Fintechs e pagamentos</strong><p>Dinheiro circula diferente. Entender pagamento, crédito e finanças digitais virou parte da rotina de quem gere negócio.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏠</div><strong>Trabalho híbrido</strong><p>Gerir equipe que não está na mesma sala exige liderança, confiança e comunicação muito mais claras.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌱</div><strong>ESG e propósito</strong><p>Empresas passaram a ser cobradas por gestão sustentável. Isso abriu vagas novas e mudou o que se espera de um gestor.</p></div>
+      </div>
+      <p class="note">⚡ O administrador não compete com a tecnologia: usa a tecnologia pra decidir melhor e mais rápido, e foca no que continua sendo só humano — liderar pessoas e definir rumos.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>É o curso mais versátil que existe:</strong> administrador trabalha em empresa de qualquer tamanho, setor e cidade. Pouca profissão abre tantas portas diferentes.</li>
+        <li><strong>Muita vaga, muita concorrência:</strong> o volume de oportunidades é alto, mas o número de formados também. Diferenciação é tudo.</li>
+        <li><strong>Indústria emprega bastante:</strong> áreas de produção, planejamento, logística, compras e qualidade têm vaga constante em fábricas de todo o país.</li>
+        <li><strong>Tech, bancos e varejo puxam os melhores salários:</strong> os programas de trainee das grandes empresas são muito disputados e pagam acima da média.</li>
+        <li><strong>Setor público é caminho de estabilidade:</strong> concursos pagam bem e dão segurança, mas exigem preparação longa e disciplinada.</li>
+        <li><strong>Empreender é uma saída real:</strong> boa parte de quem faz ADM acaba abrindo o próprio negócio, sozinho ou com sócios.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Escolher uma área pra se aprofundar é o que tira o administrador da faixa "genérico".</p>
+      <div class="tags">
+        <span class="tag">⭐ Finanças e Investimentos</span>
+        <span class="tag">⭐ Análise de Dados / BI</span>
+        <span class="tag">⭐ Gestão de Projetos (PMP)</span>
+        <span class="tag">⭐ Supply Chain e Logística</span>
+        <span class="tag">Gestão Industrial e da Produção</span>
+        <span class="tag">Compras e Negociação</span>
+        <span class="tag">Marketing e Growth</span>
+        <span class="tag">Gestão de Pessoas / RH</span>
+        <span class="tag">Comércio Exterior</span>
+        <span class="tag">Gestão Pública</span>
+        <span class="tag">Controladoria</span>
+        <span class="tag">Gestão de Empreendimentos e Obras</span>
+        <span class="tag">Consultoria Estratégica</span>
+        <span class="tag">MBA em Gestão</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhores salários no Brasil em 2024–2025. Finanças, dados e supply chain concentram as faixas mais altas para quem se especializa cedo.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um administrador?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no mercado corporativo brasileiro. Tech, bancos e consultorias pagam acima disso em cargos sênior.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,5k–3,5k</div><div class="sal-note">Estágio, assistente ou trainee. Fase de aprender por dentro. Programas de trainee pagam bem mais.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 5k–9k</div><div class="sal-note">Analista pleno ou sênior, com área definida e alguns anos de experiência.</div></div>
+        <div class="sal-card"><div class="sal-stage">Liderança / Topo</div><div class="sal-range">R$ 12k–40k+</div><div class="sal-note">Coordenação, gerência e diretoria. Diretor e C-level chegam às faixas mais altas.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em Administração o salário sobe muito mais por causa da área escolhida e do setor do que pelo tempo de carreira. Um especialista em finanças ou dados numa boa empresa pode ganhar mais com 5 anos do que um gestor genérico com 15.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://cfa.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CFA — Conselho Federal de Administração</strong><span>O conselho oficial da profissão: o que faz um administrador, registro e áreas de atuação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais reportados por profissionais. Pesquise por cargo e empresa específica</span></div><span class="lc-arr">→</span></a>
+        <a href="https://exame.com/carreira/" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Exame — Carreira</strong><span>Notícias de negócios, gestão e mercado de trabalho no Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.ciadetalentos.com.br" class="lcard" target="_blank"><span class="lc-icon">🚀</span><div class="lc-body"><strong>Cia de Talentos</strong><span>Programas de trainee e estágio das maiores empresas do país</span></div><span class="lc-arr">→</span></a>
+        <a href="https://emec.mec.gov.br" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>e-MEC</strong><span>Consulte se a faculdade e o curso que te interessam são reconhecidos pelo MEC</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Administração combina com você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-adm">
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Gosto de organizar coisas: tarefas, grupos, eventos. Bagunça me incomoda mais do que organizar cansa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Não tenho pavor de números. Posso não amar matemática, mas consigo lidar com ela quando precisa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade sobre como as empresas funcionam por dentro e como elas tomam decisão.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Costumo assumir a liderança ou o papel de "quem puxa" nos trabalhos em grupo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Me dou bem conversando e negociando com pessoas diferentes de mim.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Prefiro coisa prática e aplicada a teoria abstrata. Quero ver como aquilo serve no mundo real.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Me imagino trabalhando num escritório, num ambiente corporativo, e isso não me assusta.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Aceito começar de baixo e construir a carreira aos poucos, sem atalho.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Trabalhar com meta e ser cobrado por resultado me estimula mais do que me paralisa.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-adm">0 de 9</span></div>
+      <div class="cl-result" id="res-adm"><div class="verdict" id="vd-adm"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ ECONOMIA ═══════════════════════════════ -->
+<div class="panel eco" id="p-eco">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Economia?</h2></div>
+    <div class="sc-body">
+      <p>Ciências Econômicas é o curso de quem quer entender <strong>por que as coisas custam o que custam</strong>: como o dinheiro circula, como os preços se formam, por que um país cresce ou entra em crise, e o que acontece com as pessoas no meio disso. É um <strong>bacharelado de 4 anos</strong>, reconhecido pelo MEC. É mais analítico e mais matemático que Administração: onde a ADM pergunta "como faço essa empresa funcionar?", a Economia pergunta "por que esse mercado se comporta assim?".</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Cálculo, estatística, contabilidade, introdução à micro e macroeconomia, história econômica e sociologia. A base é pesada em matemática.</li>
+        <li><strong>2º–3º ano:</strong> Microeconomia avançada, macroeconomia, econometria (estatística aplicada à economia), economia brasileira, finanças e economia internacional.</li>
+        <li><strong>4º ano:</strong> Economia do setor público, desenvolvimento econômico, mercado financeiro, eletivas (economia industrial, ambiental, urbana) e monografia obrigatória.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> Economia é profissão regulamentada, com registro obrigatório no <strong>Corecon</strong> (regional) e fiscalização do Cofecon para atuar como economista, assinar laudo e parecer econômico. Isso dá à profissão uma proteção que Administração não tem no mesmo grau.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado financeiro:</strong> analisar empresas, setores e investimentos em bancos, corretoras e gestoras. É a área que mais atrai economista e a que mais paga.</li>
+        <li><strong>Análise econômica (research):</strong> estudar inflação, juros, câmbio e PIB pra prever cenários e orientar decisão de investimento.</li>
+        <li><strong>Planejamento financeiro em empresas:</strong> montar orçamento, projeção de receita e análise de viabilidade de projeto. Aqui a Economia encosta direto na Administração.</li>
+        <li><strong>Banco Central, IBGE, Ipea, BNDES:</strong> carreiras públicas de altíssimo nível técnico, entrada por concurso, salário alto e muita estabilidade.</li>
+        <li><strong>Consultoria econômica:</strong> assessorar empresas e governos em estudos de mercado, precificação, regulação e impacto econômico.</li>
+        <li><strong>Economia industrial e regulação:</strong> estudar setores produtivos, cadeia industrial, concorrência e agências reguladoras (Aneel, ANP, Anatel).</li>
+        <li><strong>Comércio exterior:</strong> analisar câmbio, tarifas, exportação e importação em empresas e órgãos públicos.</li>
+        <li><strong>Ciência de dados e economia aplicada:</strong> a formação em econometria abre porta direta pra dados. Muito economista vira analista/cientista de dados.</li>
+        <li><strong>Perícia e cálculo judicial:</strong> atuar como perito econômico em processos, avaliando valores, contratos e indenizações.</li>
+        <li><strong>Economia urbana e imobiliária:</strong> estudar preço de terreno, viabilidade de empreendimento e desenvolvimento das cidades. É onde a Economia toca no mundo da arquitetura e da construção.</li>
+        <li><strong>Docência e pesquisa:</strong> mestrado e doutorado para dar aula e produzir pesquisa em universidade e centros de estudo.</li>
+        <li><strong>Terceiro setor e políticas públicas:</strong> avaliar programas sociais e medir se uma política realmente funcionou.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Economia pede gosto por raciocínio lógico e paciência pra entender causa e consequência antes de opinar.</p>
+      <div class="tags">
+        <span class="tag">Raciocínio lógico</span>
+        <span class="tag">Facilidade com matemática</span>
+        <span class="tag">Leitura de dados</span>
+        <span class="tag">Curiosidade sobre política e mundo</span>
+        <span class="tag">Pensamento crítico</span>
+        <span class="tag">Escrita clara</span>
+        <span class="tag">Paciência para estudar</span>
+        <span class="tag">Visão de longo prazo</span>
+        <span class="tag">Argumentação</span>
+        <span class="tag">Atenção a detalhes</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando o dólar sobe ou a notícia fala em juros, você sente vontade de entender o mecanismo por trás daquilo, ou passa direto? Curiosidade genuína pelo "por quê" dos números é o combustível de quem faz Economia.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>A matemática é de verdade.</strong> Cálculo, estatística e econometria são obrigatórios e reprovam gente todo semestre. Quem entra achando que é "curso de notícia de economia" toma um susto no primeiro ano.</div>
+      <div class="cbox"><strong>O curso é teórico antes de ser aplicado.</strong> Boa parte da graduação é modelo, gráfico e demonstração. A parte prática vem no estágio e nas eletivas do fim do curso.</div>
+      <div class="cbox"><strong>As melhores vagas estão concentradas em poucas cidades.</strong> São Paulo, Rio e Brasília concentram mercado financeiro, consultorias e órgãos públicos. Fora desses polos, o mercado é bem menor.</div>
+      <div class="cbox"><strong>Mercado financeiro é seletivo e exigente.</strong> A porta de entrada costuma ser processo trainee muito concorrido, com prova e várias etapas. Ritmo de trabalho pesado, principalmente nos primeiros anos.</div>
+      <div class="cbox"><strong>Concurso público exige anos de preparação.</strong> As carreiras de elite (Banco Central, Ipea, BNDES) pagam muito bem justamente porque são disputadíssimas e caem raramente.</div>
+      <div class="cbox"><strong>Você vai errar previsão em público.</strong> Prever cenário econômico é parte do trabalho, e o cenário muda. Quem não tolera ser questionado tem dificuldade nessa área.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🐍</div><strong>Programação virou básico</strong><p>Python, R e SQL entraram no currículo. Economista que não programa perde vaga pra quem programa.</p></div>
+        <div class="tech-card"><div class="tc-icon">📈</div><strong>Big data e previsão</strong><p>Modelos que antes usavam dezenas de números hoje usam milhões. A análise ficou mais fina e mais rápida.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA na análise</strong><p>A IA lê relatório e monta gráfico em segundos. O valor do economista virou interpretar e decidir o que aquilo significa.</p></div>
+        <div class="tech-card"><div class="tc-icon">💱</div><strong>Fintechs e cripto</strong><p>Novos meios de pagamento, moeda digital e Pix mudaram a economia real e abriram campos de estudo inteiros.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌱</div><strong>Economia climática</strong><p>Crédito de carbono, transição energética e risco climático viraram área econômica com demanda crescente.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏛️</div><strong>Dados públicos abertos</strong><p>IBGE, Banco Central e ministérios abriram bases enormes. Dá pra fazer pesquisa séria de casa, com o dado na mão.</p></div>
+      </div>
+      <p class="note">⚡ A tecnologia não substituiu o economista: aumentou o volume de dado disponível e, com isso, o valor de quem sabe fazer a pergunta certa em cima dele.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado menor que o de ADM, mas menos concorrido:</strong> forma-se muito menos economista que administrador, e o registro no Corecon protege parte das funções.</li>
+        <li><strong>Mercado financeiro é o grande empregador:</strong> bancos, corretoras, gestoras e fintechs contratam economista todo ano, com salário acima da média já na entrada.</li>
+        <li><strong>Setor público paga muito bem:</strong> concursos para Banco Central, Ipea, BNDES, IBGE, Receita e tribunais estão entre os melhores salários do país para quem tem essa formação.</li>
+        <li><strong>Consultoria e agronegócio crescem:</strong> consultorias econômicas e o setor agro contratam para análise de mercado, preço de commodity e viabilidade de projeto.</li>
+        <li><strong>Área de dados absorve muito economista:</strong> a formação em estatística e econometria é passaporte natural pra vagas de dados, que estão em alta em todo setor.</li>
+        <li><strong>Concentração geográfica:</strong> as melhores oportunidades estão em SP, RJ e Brasília. Vale considerar isso desde já se você pretende ficar em outra cidade.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em Economia, a pós-graduação pesa mais do que na média dos cursos: muitas portas só abrem com mestrado ou certificação.</p>
+      <div class="tags">
+        <span class="tag">⭐ Finanças e Mercado de Capitais</span>
+        <span class="tag">⭐ Certificações CFA / CGA / CNPI</span>
+        <span class="tag">⭐ Ciência de Dados e Econometria</span>
+        <span class="tag">⭐ Mestrado em Economia</span>
+        <span class="tag">Economia do Setor Público</span>
+        <span class="tag">Economia Industrial e Regulação</span>
+        <span class="tag">Comércio Exterior</span>
+        <span class="tag">Economia Ambiental e Climática</span>
+        <span class="tag">Agronegócio</span>
+        <span class="tag">Economia Urbana e Imobiliária</span>
+        <span class="tag">Perícia Econômica</span>
+        <span class="tag">Controladoria e Finanças Corporativas</span>
+        <span class="tag">Políticas Públicas</span>
+        <span class="tag">Docência e Pesquisa</span>
+      </div>
+      <p class="note">⭐ Caminhos com maior demanda e melhores salários no Brasil em 2024–2025. Mercado financeiro e dados concentram as faixas mais altas para quem se especializa cedo.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um economista?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. A variação é grande: mercado financeiro e carreiras públicas de elite ficam bem acima do topo dessa tabela.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 3k–5k</div><div class="sal-note">Analista júnior ou trainee em banco, consultoria ou empresa. Estágio em instituição financeira já paga bem.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 6k–12k</div><div class="sal-note">Analista pleno ou sênior em research, planejamento financeiro ou consultoria.</div></div>
+        <div class="sal-card"><div class="sal-stage">Liderança / Topo</div><div class="sal-range">R$ 15k–45k+</div><div class="sal-note">Gestor de fundo, economista-chefe, sócio de consultoria ou carreira pública de elite (Bacen, BNDES, Ipea).</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em Economia o salário depende quase mais do <em>onde</em> do que do <em>quanto tempo</em>. O mesmo economista, com a mesma formação, pode ganhar R$ 5 mil numa empresa média e R$ 20 mil numa gestora de investimentos. A escolha de setor pesa muito.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.cofecon.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>Cofecon — Conselho Federal de Economia</strong><span>O conselho oficial da profissão: o que faz um economista, registro e campos de atuação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.bcb.gov.br/cidadaniafinanceira" class="lcard" target="_blank"><span class="lc-icon">🏦</span><div class="lc-body"><strong>Banco Central — Cidadania Financeira</strong><span>Material do Bacen sobre como funciona juros, inflação e o sistema financeiro</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.ipea.gov.br" class="lcard" target="_blank"><span class="lc-icon">📊</span><div class="lc-body"><strong>Ipea</strong><span>Pesquisa econômica aplicada do governo brasileiro. Dá pra ver o que um economista de fato produz</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.infomoney.com.br" class="lcard" target="_blank"><span class="lc-icon">📈</span><div class="lc-body"><strong>InfoMoney</strong><span>Notícia diária de mercado financeiro e economia, em linguagem acessível</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais reportados por profissionais. Pesquise por cargo e empresa específica</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Economia combina com você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-eco">
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Gosto de matemática e não me assusto com cálculo e estatística pesados.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade sobre dinheiro, juros, inflação e por que o país vai bem ou mal.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Gosto de entender o "por quê" das coisas antes de dar uma resposta.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Consigo ficar horas estudando teoria sem precisar de resultado prático imediato.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Acompanho notícia de política e economia por interesse próprio, não só por obrigação escolar.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Me imagino trabalhando em escritório, banco ou órgão público, analisando informação.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Escrevo bem e consigo defender um argumento com dado na mão.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Estabilidade e carreira de longo prazo me atraem mais do que novidade constante.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Topo a ideia de fazer pós-graduação ou concurso depois da faculdade pra chegar onde quero.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-eco">0 de 9</span></div>
+      <div class="cl-result" id="res-eco"><div class="verdict" id="vd-eco"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ NUTRIÇÃO ═══════════════════════════════ -->
+<div class="panel nut" id="p-nut">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Nutrição?</h2></div>
+    <div class="sc-body">
+      <p>Nutrição é um curso da <strong>área da saúde</strong>: estuda o alimento, o corpo humano e a relação entre os dois. Bacharelado de <strong>4 anos</strong>, reconhecido pelo MEC, com estágio supervisionado obrigatório em três frentes (clínica, saúde coletiva e alimentação coletiva) antes da formatura. Tem bastante biologia, química e fisiologia — bem diferente da lógica de Administração e Economia.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Anatomia, fisiologia, bioquímica, química de alimentos, microbiologia e bromatologia (a composição do que a gente come).</li>
+        <li><strong>2º–3º ano:</strong> Nutrição clínica, dietética, nutrição materno-infantil e do idoso, saúde pública, técnica dietética e <strong>administração de unidades de alimentação</strong>.</li>
+        <li><strong>4º ano:</strong> Estágios obrigatórios supervisionados em hospital, em unidade de alimentação e em saúde coletiva, além do TCC.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> Nutrição é profissão regulamentada da saúde, com registro obrigatório no <strong>CRN</strong> (regional) e fiscalização do CFN. Sem registro, não pode atender paciente nem assinar como responsável técnica. É uma proteção forte de mercado.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Alimentação coletiva (UAN):</strong> comandar a cozinha industrial de uma empresa, hospital, escola ou refeitório de fábrica. É a maior empregadora da área e envolve gerir equipe, estoque, custo e fornecedor.</li>
+        <li><strong>Indústria de alimentos:</strong> desenvolver produto novo, cuidar de rotulagem, controle de qualidade e pesquisa (P&D). Ambiente de fábrica e laboratório.</li>
+        <li><strong>Nutrição clínica hospitalar:</strong> cuidar da alimentação de pacientes internados, junto com médicos e enfermeiros.</li>
+        <li><strong>Consultório e atendimento particular:</strong> atender pacientes um a um, montar plano alimentar e acompanhar resultado. É onde está a maior autonomia de horário.</li>
+        <li><strong>Nutrição esportiva:</strong> trabalhar com atletas, academias e clubes, ligando alimentação a desempenho.</li>
+        <li><strong>Saúde pública:</strong> atuar em posto de saúde, prefeitura, merenda escolar e programas de segurança alimentar.</li>
+        <li><strong>Gestão de food service:</strong> administrar restaurantes, redes e serviços de alimentação, cuidando de cardápio, custo e operação.</li>
+        <li><strong>Consultoria para restaurantes e empresas:</strong> ajustar cardápio, custo, vigilância sanitária e treinamento de equipe.</li>
+        <li><strong>Marketing e produto em empresas de alimentos:</strong> unir conhecimento técnico e visão de negócio para lançar e posicionar produtos.</li>
+        <li><strong>Docência e pesquisa:</strong> dar aula em faculdade e pesquisar alimentação, com mestrado e doutorado.</li>
+        <li><strong>Criação de conteúdo e produto digital:</strong> muita nutricionista hoje constrói público próprio e vende programas e mentorias.</li>
+        <li><strong>Perícia e assessoria técnica:</strong> atuar como responsável técnica em empresas de alimentação, respondendo pela parte sanitária e legal.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Nutrição pede gosto por ciências biológicas somado a paciência real com gente — porque mudança de hábito é lenta.</p>
+      <div class="tags">
+        <span class="tag">Interesse por biologia e química</span>
+        <span class="tag">Empatia</span>
+        <span class="tag">Escuta</span>
+        <span class="tag">Comunicação</span>
+        <span class="tag">Organização</span>
+        <span class="tag">Liderança de equipe</span>
+        <span class="tag">Atenção a detalhes</span>
+        <span class="tag">Ética</span>
+        <span class="tag">Paciência</span>
+        <span class="tag">Disposição para estudar sempre</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> você se interessa mais pelo <em>alimento</em> (como ele é feito, o que tem dentro, como vira produto) ou pela <em>pessoa</em> que come (o hábito dela, a saúde, a mudança de rotina)? As duas respostas cabem na Nutrição, mas levam a carreiras bem diferentes.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O salário inicial é o mais baixo dos três cursos deste guia.</strong> Nutricionista recém-formada em CLT costuma começar na faixa de R$ 2,2 mil a R$ 3,2 mil, e o crescimento é mais lento que em áreas de negócio.</div>
+      <div class="cbox"><strong>Não existe piso salarial nacional unificado.</strong> A remuneração depende de convenção coletiva, do estado e do setor. Isso torna o salário bem desigual pelo país.</div>
+      <div class="cbox"><strong>O consultório demora a encher.</strong> Viver só de atendimento particular exige construir reputação e público, o que leva anos. No começo, quase todo mundo concilia consultório com emprego fixo.</div>
+      <div class="cbox"><strong>Alimentação coletiva é rotina puxada.</strong> Trabalhar em UAN significa cozinha, calor, escala, começar cedo e gerir uma equipe grande e rotativa. É a área que mais emprega justamente porque muita gente não aguenta o ritmo.</div>
+      <div class="cbox"><strong>Você compete com desinformação o tempo todo.</strong> Dieta da moda, influenciador sem formação e promessa milagrosa fazem parte do cenário. Parte do trabalho é desconstruir isso com paciência.</div>
+      <div class="cbox"><strong>Muita gente formada, mercado clínico saturado nas capitais.</strong> O número de cursos de Nutrição cresceu muito. Diferenciação (especialização, nicho, gestão) virou obrigatória.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">💻</div><strong>Atendimento online</strong><p>Consulta por vídeo é permitida e virou padrão. Dá pra atender paciente de outro estado sem sair de casa.</p></div>
+        <div class="tech-card"><div class="tc-icon">🧬</div><strong>Nutrigenética</strong><p>Exames de genética e microbiota estão entrando na conduta clínica e criando um campo novo de especialização.</p></div>
+        <div class="tech-card"><div class="tc-icon">📱</div><strong>Apps e monitoramento</strong><p>Aplicativos de registro alimentar e sensores de glicose dão ao nutricionista dados que antes não existiam.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏭</div><strong>Indústria e novos alimentos</strong><p>Proteína vegetal, fermentação e alimento funcional criaram vagas de pesquisa e desenvolvimento na indústria.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Gestão digital de UAN</strong><p>Software de cardápio, custo e estoque tornou a gestão de alimentação coletiva mais técnica e mais analítica.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA na conduta</strong><p>A IA monta cardápio-base em segundos. O valor da nutricionista foi pra escuta, ajuste e adesão do paciente.</p></div>
+      </div>
+      <p class="note">⚡ A IA sabe calcular caloria. O que ela não faz é convencer uma pessoa de verdade a mudar o que ela come todo dia: é aí que a nutricionista continua insubstituível.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Alimentação coletiva emprega mais que clínica:</strong> ao contrário do que parece pelas redes sociais, a maior parte das vagas com carteira assinada está em UAN, refeitório industrial, hospital e escola.</li>
+        <li><strong>Indústria de alimentos é um mercado forte e menos disputado:</strong> qualidade, rotulagem e P&D pagam melhor que a média e ficam em polos industriais.</li>
+        <li><strong>Consultório é o caminho da autonomia, não o da segurança inicial:</strong> dá liberdade de horário e teto de renda alto, mas leva anos pra se consolidar.</li>
+        <li><strong>Concursos públicos existem e são bem disputados:</strong> prefeituras, hospitais públicos, universidades e Forças Armadas contratam nutricionista por concurso.</li>
+        <li><strong>Vagas espalhadas pelo Brasil inteiro:</strong> diferente de Economia, tem trabalho de nutrição em cidade de qualquer porte, porque hospital, escola e empresa existem em todo lugar.</li>
+        <li><strong>Especialização mudou de opcional para necessária:</strong> quem tem só a graduação disputa as vagas mais básicas e mais mal pagas.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em Nutrição, a especialização é o que separa o salário inicial baixo da carreira que compensa.</p>
+      <div class="tags">
+        <span class="tag">⭐ Gestão de UAN e Food Service</span>
+        <span class="tag">⭐ Nutrição Clínica e Hospitalar</span>
+        <span class="tag">⭐ Indústria: Qualidade e P&D</span>
+        <span class="tag">⭐ Nutrição Esportiva</span>
+        <span class="tag">Nutrição Materno-Infantil</span>
+        <span class="tag">Nutrição Oncológica</span>
+        <span class="tag">Terapia Nutricional Enteral e Parenteral</span>
+        <span class="tag">Nutrição Comportamental</span>
+        <span class="tag">Saúde Coletiva</span>
+        <span class="tag">Vigilância Sanitária</span>
+        <span class="tag">Nutrigenética</span>
+        <span class="tag">Gastronomia e Técnica Dietética</span>
+        <span class="tag">MBA em Gestão de Negócios de Alimentação</span>
+        <span class="tag">Docência e Pesquisa</span>
+      </div>
+      <p class="note">⭐ Caminhos com maior demanda e melhor remuneração no Brasil em 2024–2025. Gestão de food service e indústria costumam pagar acima da clínica em início de carreira.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um nutricionista?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. É a carreira com o começo mais baixo dos três cursos deste guia, e a que mais depende de especialização e de negócio próprio para crescer.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,2k–3,2k</div><div class="sal-note">Recém-formada em UAN, hospital ou escola, em regime CLT. Varia bastante por estado e convenção.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 3,5k–7k</div><div class="sal-note">Com especialização, responsabilidade técnica, coordenação de unidade ou vaga em indústria.</div></div>
+        <div class="sal-card"><div class="sal-stage">Liderança / Autônoma</div><div class="sal-range">R$ 8k–25k+</div><div class="sal-note">Gerência de contrato de food service, cargo em indústria, ou consultório consolidado com agenda cheia.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em Nutrição, o teto alto quase nunca vem de salário: vem de consultório próprio, consultoria ou gestão. Quem só depende de CLT clínica tende a ficar na faixa do meio. Isso não é defeito da profissão, é como ela funciona — e é bom saber disso antes, não depois.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.cfn.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CFN — Conselho Federal de Nutricionistas</strong><span>O conselho oficial: áreas de atuação, o que a nutricionista pode e não pode fazer, registro</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/alimentacao-e-nutricao" class="lcard" target="_blank"><span class="lc-icon">🏥</span><div class="lc-body"><strong>Ministério da Saúde — Alimentação e Nutrição</strong><span>Política nacional, guia alimentar e como a nutrição funciona no SUS</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.sban.org.br" class="lcard" target="_blank"><span class="lc-icon">🔬</span><div class="lc-body"><strong>SBAN — Sociedade Brasileira de Alimentação e Nutrição</strong><span>Ciência da nutrição, eventos e o que se pesquisa na área hoje</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais reportados por profissionais. Pesquise "nutricionista" por cidade e empresa</span></div><span class="lc-arr">→</span></a>
+        <a href="https://emec.mec.gov.br" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>e-MEC</strong><span>Confira a nota e o reconhecimento do curso de Nutrição da faculdade que te interessa</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Nutrição combina com você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-nut">
+        <div class="cl-item" onclick="toggle(this,'cl-nut')"><div class="cl-box"></div><div class="cl-text">Gosto de biologia e química, e não me incomodo de estudar corpo humano em detalhe.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-nut')"><div class="cl-box"></div><div class="cl-text">Tenho paciência com gente: escuto sem julgar e não me irrito quando a pessoa demora a mudar.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-nut')"><div class="cl-box"></div><div class="cl-text">Me interesso por alimento de verdade: como é feito, o que tem dentro, como vira produto.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-nut')"><div class="cl-box"></div><div class="cl-text">Não me imagino o dia inteiro sentado numa mesa; prefiro circular, ver produção, estar com gente.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-nut')"><div class="cl-box"></div><div class="cl-text">Topo coordenar uma equipe grande numa cozinha ou numa unidade de produção.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-nut')"><div class="cl-box"></div><div class="cl-text">Aceito que o salário do começo é baixo e que o crescimento vem de especialização.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-nut')"><div class="cl-box"></div><div class="cl-text">Ter autonomia de horário e poder montar minha própria agenda me atrai bastante.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-nut')"><div class="cl-box"></div><div class="cl-text">Me sinto confortável em ambiente de fábrica, cozinha industrial ou hospital.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-nut')"><div class="cl-box"></div><div class="cl-text">Gosto da ideia de estudar pra sempre, porque a ciência da nutrição muda o tempo todo.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-nut">0 de 9</span></div>
+      <div class="cl-result" id="res-nut"><div class="verdict" id="vd-nut"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAÇÃO ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚖️</span><h2>Os três lado a lado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Administração e Economia são primas: dividem a base de números, o ambiente de escritório e o mundo das empresas. Nutrição joga em outro campo, o da saúde. Esta tabela mostra as diferenças concretas, sem apontar resposta certa.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão</th>
+              <th class="h-adm">🏢 Administração</th>
+              <th class="h-eco">📈 Economia</th>
+              <th class="h-nut">🥗 Nutrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Área do conhecimento</td><td>Ciências sociais aplicadas</td><td>Ciências sociais aplicadas</td><td>Ciências da saúde</td></tr>
+            <tr><td>Foco principal</td><td>Fazer organizações funcionarem</td><td>Entender como mercados e países funcionam</td><td>Cuidar da alimentação de pessoas e coletividades</td></tr>
+            <tr><td>Pergunta central</td><td>"Como faço isso funcionar e crescer?"</td><td>"Por que isso está acontecendo?"</td><td>"O que essa pessoa (ou esse grupo) precisa comer?"</td></tr>
+            <tr><td>Peso da matemática</td><td>Médio (financeira e estatística)</td><td>Alto (cálculo e econometria)</td><td>Baixo (mais biologia e química)</td></tr>
+            <tr><td>Ambiente típico</td><td>Escritório de empresa, indústria, banco</td><td>Escritório, banco, órgão público, consultoria</td><td>Cozinha industrial, hospital, indústria, consultório</td></tr>
+            <tr><td>Onde trabalha</td><td>Empresa de qualquer setor e porte</td><td>Bancos, gestoras, consultorias, governo</td><td>UAN, hospital, escola, indústria, consultório</td></tr>
+            <tr><td>Estabilidade</td><td>Alta (volume grande de vagas)</td><td>Alta (mercado menor, mas protegido e com concursos)</td><td>Média (emprego formal existe; renda cresce devagar)</td></tr>
+            <tr><td>Salário inicial</td><td>R$ 2,5k–3,5k</td><td>R$ 3k–5k</td><td>R$ 2,2k–3,2k</td></tr>
+            <tr><td>Conselho / regulação</td><td>CFA/CRA (registro para algumas funções)</td><td>Cofecon/Corecon (registro obrigatório)</td><td>CFN/CRN (registro obrigatório)</td></tr>
+            <tr><td>Liderar equipe</td><td>Núcleo da profissão</td><td>Aparece em coordenação de análise e projeto</td><td>Forte em UAN, onde se comanda a cozinha inteira</td></tr>
+            <tr><td>Negociar</td><td>Muito (vendas, compras, contratos)</td><td>Médio (contratos, consultoria, mercado)</td><td>Médio (fornecedores e adesão do paciente)</td></tr>
+            <tr><td>Flexibilidade de horário</td><td>Média (híbrido ajudou, mas há horário fixo)</td><td>Média (pregão e horário de órgão público)</td><td>Alta se autônoma; baixa em UAN e hospital</td></tr>
+            <tr><td>Distribuição pelo país</td><td>Vaga em qualquer cidade</td><td>Concentrada em SP, RJ e Brasília</td><td>Vaga em qualquer cidade</td></tr>
+            <tr><td>Diferencial único</td><td>Versatilidade total de mercado</td><td>Ler cenário e prever movimento</td><td>Impacto direto na saúde de quem você atende</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔍</span><h2>Onde os três se cruzam (e onde não se cruzam)</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        <strong>Administração e Economia dividem quase todo o território.</strong> Mesma base de números, mesmo ambiente de escritório, mesmos setores empregadores. A diferença real está no verbo: a Administração <em>executa e decide</em> dentro de uma organização; a Economia <em>analisa e explica</em> o cenário em volta dela. Muita gente descobre em qual dos dois se encaixa só depois de conversar com profissionais dos dois lados.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        <strong>Nutrição não é um curso de negócios — mas tem um lado de gestão maior do que parece.</strong> A área que mais emprega nutricionista é a alimentação coletiva, onde a profissional gere equipe, estoque, custo e fornecedor de um refeitório ou hospital. É uma ponte real entre saúde e administração, e ela quase nunca aparece nas redes sociais, onde só se vê o consultório.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        <strong>Existem cursos e caminhos que ficam no meio.</strong> Engenharia de Alimentos, Gastronomia com foco em gestão, Administração aplicada a food service e Economia com foco em agronegócio são pontes entre esses mundos. Vale saber que existem antes de fechar a lista.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Perguntas pra levar na pesquisa desta semana</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Não são perguntas de resposta rápida. São as que valem levar pra conversa com profissionais, pra visita à faculdade e pra sessão com sua orientadora.</p>
+      <ul class="sl">
+        <li>Qual desses ambientes você consegue se imaginar frequentando <strong>todo dia por muitos anos</strong>: um escritório, uma fábrica, um hospital ou uma cozinha industrial?</li>
+        <li>Quando você pensa em "trabalho estável", está pensando em carteira assinada e horário definido, ou em ter sempre trabalho disponível mesmo mudando de lugar? Os dois existem, mas em cursos diferentes.</li>
+        <li>Você gosta mais de <strong>fazer acontecer</strong> ou de <strong>entender por que acontece</strong>? Essa pergunta separa Administração de Economia melhor do que qualquer grade curricular.</li>
+        <li>Quanta matemática você topa encarar nos dois primeiros anos, sabendo que ela é obrigatória e reprova gente?</li>
+        <li>Horário flexível é importante pra você agora, ou é algo que você aceita construir depois de alguns anos de carreira?</li>
+        <li>Seu interesse por arquitetura é curiosidade estética, vontade de projetar, ou interesse por construção e empreendimento? Cada resposta aponta pra um lugar diferente.</li>
+        <li>Converse com pelo menos um profissional de cada área. Pergunte como foi o primeiro ano de trabalho, não o auge da carreira.</li>
+      </ul>
+      <p class="note" style="margin-top:16px;">Use os checklists de cada aba e a aba "Seus critérios" como material de conversa, não como resultado. O que ficou de fora costuma dizer tanto quanto o que você marcou.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais que existem pra cada formação, explicados de um jeito simples. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no Brasil.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col">
+          <div class="vaga-col-head adm">🏢 Administração</div>
+          <div class="vaga-role"><strong>Analista Financeiro</strong><span>Cuida das contas da empresa: o que entra, o que sai e como gastar de forma mais inteligente.</span></div>
+          <div class="vaga-role"><strong>Analista de Planejamento (PCP)</strong><span>Organiza o que a fábrica vai produzir, em que ordem e com quais materiais, pra nada faltar nem sobrar.</span></div>
+          <div class="vaga-role"><strong>Analista de Compras</strong><span>Escolhe e negocia com fornecedores pra empresa comprar melhor e mais barato.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn adm" href="https://www.linkedin.com/jobs/search/?keywords=Administra%C3%A7%C3%A3o&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head eco">📈 Economia</div>
+          <div class="vaga-role"><strong>Analista de Investimentos</strong><span>Estuda empresas e mercados pra decidir onde vale a pena colocar dinheiro.</span></div>
+          <div class="vaga-role"><strong>Analista Econômico / Research</strong><span>Acompanha inflação, juros e câmbio e escreve relatórios explicando pra onde a economia está indo.</span></div>
+          <div class="vaga-role"><strong>Analista de Planejamento Financeiro (FP&A)</strong><span>Monta o orçamento da empresa e projeta quanto ela vai faturar e gastar nos próximos meses.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn eco" href="https://www.linkedin.com/jobs/search/?keywords=Economista&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head nut">🥗 Nutrição</div>
+          <div class="vaga-role"><strong>Nutricionista de Produção (UAN)</strong><span>Comanda a cozinha de uma empresa, hospital ou escola: cardápio, equipe, estoque e custo.</span></div>
+          <div class="vaga-role"><strong>Nutricionista Clínico</strong><span>Cuida da alimentação de pacientes em hospital ou clínica, junto com a equipe de saúde.</span></div>
+          <div class="vaga-role"><strong>Analista de Qualidade / P&D de Alimentos</strong><span>Trabalha na indústria testando, desenvolvendo e garantindo a segurança dos produtos.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn nut" href="https://www.linkedin.com/jobs/search/?keywords=Nutricionista&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SEUS CRITÉRIOS ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os três cursos</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estes são os critérios que você elencou como mais importantes durante o processo, na ordem de prioridade que você mesmo definiu. A tabela descreve, de forma objetiva, como cada critério se apresenta em cada curso. Ela não aponta resposta certa nem indica um caminho: é material para você pensar e conversar com sua orientadora.</p>
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Muito presente</span>
+        <span><span class="dot y"></span>Presente em parte</span>
+        <span><span class="dot r"></span>Pouco presente</span>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table crit-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th class="h-adm">🏢 Administração</th>
+              <th class="h-eco">📈 Economia</th>
+              <th class="h-nut">🥗 Nutrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Administração como assunto</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>É o próprio objeto do curso, presente do primeiro ao último semestre e em toda função depois.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>Aparece em finanças corporativas, planejamento e gestão de projetos, mas o núcleo do curso é análise, não gestão.</td>
+              <td data-label="🥗 Nutrição"><span class="dot y"></span>Aparece com força na alimentação coletiva: a nutricionista de UAN administra equipe, estoque, custo e fornecedor.</td>
+            </tr>
+            <tr>
+              <td>2. Economia como assunto</td>
+              <td data-label="🏢 Administração"><span class="dot y"></span>Economia é disciplina de base nos primeiros anos e volta em finanças e análise de mercado.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>É o próprio objeto do curso, com micro, macro, econometria e economia brasileira ao longo dos quatro anos.</td>
+              <td data-label="🥗 Nutrição"><span class="dot r"></span>Praticamente ausente da grade; aparece só como noção de custo na gestão de unidades de alimentação.</td>
+            </tr>
+            <tr>
+              <td>3. Ter um trabalho estável</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Volume alto de vagas formais em todo setor e cidade, além de concursos públicos com essa formação.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Profissão regulamentada, mercado formal em bancos e órgãos públicos, e carreiras de concurso muito estáveis.</td>
+              <td data-label="🥗 Nutrição"><span class="dot y"></span>Existe emprego formal em hospital, UAN e escola, mas boa parte da carreira caminha para o autônomo, com renda variável.</td>
+            </tr>
+            <tr>
+              <td>4. Trabalhar em escritórios</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Ambiente padrão da profissão, em empresa de qualquer porte, incluindo o escritório dentro da indústria.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Ambiente padrão: banco, gestora, consultoria, órgão público e centro de pesquisa.</td>
+              <td data-label="🥗 Nutrição"><span class="dot r"></span>Ambiente típico é cozinha, hospital, consultório e academia; escritório aparece só em funções de indústria e gestão.</td>
+            </tr>
+            <tr>
+              <td>5. Trabalhar em fábricas e indústrias</td>
+              <td data-label="🏢 Administração"><span class="dot y"></span>Atuação frequente em indústria (produção, logística, compras, qualidade), quase sempre pelo escritório da fábrica.</td>
+              <td data-label="📈 Economia"><span class="dot r"></span>Estuda o setor industrial de fora, em análise setorial e regulação; a presença física na fábrica é rara.</td>
+              <td data-label="🥗 Nutrição"><span class="dot g"></span>Campo forte: indústria de alimentos (qualidade, rotulagem, P&D) e cozinha industrial dentro de fábricas e refeitórios.</td>
+            </tr>
+            <tr>
+              <td>6. Dinheiro e finanças como assunto</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Área central do curso e uma das que mais empregam: orçamento, custo, investimento e controladoria.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Eixo do curso e do mercado principal da profissão: mercado financeiro, investimento e política monetária.</td>
+              <td data-label="🥗 Nutrição"><span class="dot r"></span>Fora da formação; entra apenas como controle de custo em UAN ou gestão do próprio consultório.</td>
+            </tr>
+            <tr>
+              <td>7. Coordenar e liderar equipes ou projetos</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Função central da profissão; gestão de pessoas e de projetos é o núcleo do curso e da carreira.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>Presente na coordenação de times de análise e de projetos de consultoria, mas depois de alguns anos como analista.</td>
+              <td data-label="🥗 Nutrição"><span class="dot g"></span>Forte na alimentação coletiva: a nutricionista responsável comanda a equipe inteira da cozinha, às vezes dezenas de pessoas.</td>
+            </tr>
+            <tr>
+              <td>8. Arquitetura como assunto</td>
+              <td data-label="🏢 Administração"><span class="dot r"></span>Aparece só de forma indireta, na gestão de obras, incorporadoras e empresas de construção.</td>
+              <td data-label="📈 Economia"><span class="dot r"></span>Aparece só de forma indireta, em economia urbana e análise do mercado imobiliário.</td>
+              <td data-label="🥗 Nutrição"><span class="dot r"></span>Aparece de forma pontual no planejamento físico-funcional de cozinhas e unidades de alimentação.</td>
+            </tr>
+            <tr>
+              <td>9. Negociar</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Presente todo dia em compras, vendas, contratos e gestão de fornecedores.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>Presente em consultoria, contratos e mercado, mas o núcleo do trabalho é analisar e recomendar.</td>
+              <td data-label="🥗 Nutrição"><span class="dot y"></span>Presente na negociação com fornecedores da UAN e na construção de acordo com o paciente sobre o que ele consegue mudar.</td>
+            </tr>
+            <tr>
+              <td>10. Ter horário flexível</td>
+              <td data-label="🏢 Administração"><span class="dot y"></span>Modelo híbrido ampliou a flexibilidade, mas a maior parte das funções corporativas segue horário definido.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>Consultoria e pesquisa dão alguma flexibilidade; mercado financeiro segue o pregão e órgão público tem horário fixo.</td>
+              <td data-label="🥗 Nutrição"><span class="dot g"></span>Consultório próprio e atendimento online permitem montar a própria agenda; em UAN e hospital, porém, o horário é de escala.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="margin-top:16px;">Leia coluna por coluna pensando no peso que cada critério tem para você. Os critérios estão na ordem que você definiu como prioridade, então os primeiros pesam mais na sua decisão do que os últimos. Use esta leitura como ponto de partida da conversa com sua orientadora.</p>
+      <div class="hbox" style="margin-top:16px;">
+        <strong>Uma observação factual sobre o critério 8:</strong> arquitetura aparece pouco nos três cursos. Isso não significa nada sozinho — pode ser um interesse que se realiza fora do trabalho, ou uma pista que ainda não foi explorada. Vale levar essa observação para a sessão.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Ranking dos critérios (soma dos pontos)</h2></div>
+    <div class="sc-body">
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Verde = 2 pontos</span>
+        <span><span class="dot y"></span>Amarelo = 1 ponto</span>
+        <span><span class="dot r"></span>Vermelho = 0 ponto</span>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 🏢 Administração</span><span class="rank-score">15 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill adm" style="width:75%;">15</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥈 📈 Economia</span><span class="rank-score">12 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill eco" style="width:60%;">12</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥉 🥗 Nutrição</span><span class="rank-score">9 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill nut" style="width:45%;">9</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com.br</p>
+</footer>
+
+
+<script>
+  const verdicts = [
+    { min: 8, text: "Perfil muito alinhado! ✨", sub: "Você tem as características essenciais para esse caminho. Aprofunde a pesquisa com confiança e converse com profissionais da área." },
+    { min: 6, text: "Boa afinidade! 👍", sub: "Você tem bastante a ver com essa profissão. Vale explorar mais: uma visita a uma faculdade ou uma conversa com um profissional pode ajudar muito." },
+    { min: 4, text: "Alguns pontos merecem atenção 🤔", sub: "Você tem afinidade com partes da área, mas alguns inegociáveis podem ser desafiadores. Converse com sua orientadora." },
+    { min: 0, text: "Talvez haja opções mais alinhadas com você 🔍", sub: "Isso não é descarte, é autoconhecimento. O que ficou de fora pode te ajudar a entender o que você realmente busca." }
+  ];
+
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    const v = verdicts.find(x => checked >= x.min);
+    document.getElementById('vd-' + id).textContent = v.text;
+    resEl.querySelector('.sub').textContent = v.sub;
+    resEl.classList.add('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>

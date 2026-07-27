@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Carreiras — Relações Internacionais, Direito, Relações Públicas e Moda | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Relações Internacionais — Azul Diplomacia */
+      --ri:      #2A5C8E;
+      --ri-lt:   #EAF1F7;
+      --ri-mid:  #C3D8E8;
+
+      /* Direito — Roxo */
+      --dir:     #5B4A8A;
+      --dir-lt:  #F2EFFA;
+      --dir-mid: #D0C5EF;
+
+      /* Relações Públicas — Dourado */
+      --rp:      #C08A2E;
+      --rp-lt:   #FAF3E8;
+      --rp-mid:  #EDD9B8;
+
+      /* Moda — Rosa Magenta */
+      --mod:     #A83E6B;
+      --mod-lt:  #FAEEF3;
+      --mod-mid: #F0C8DC;
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── Header ─── */
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 26px; font-weight: 900; line-height: 1.25; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 27px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 640px; line-height: 1.6; }
+
+    /* ─── Nav ─── */
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 16px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.ri.active  { color: var(--ri);  border-bottom-color: var(--ri); }
+    .tab-btn.dir.active { color: var(--dir); border-bottom-color: var(--dir); }
+    .tab-btn.rp.active  { color: var(--rp);  border-bottom-color: var(--rp); }
+    .tab-btn.mod.active { color: var(--mod); border-bottom-color: var(--mod); }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    /* ─── Panels ─── */
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    /* ─── Section cards ─── */
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .ri  .sc-head { background: var(--ri-lt);  border-color: var(--ri-mid); }
+    .ri  .sc-head h2 { color: var(--ri); }
+    .dir .sc-head { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .dir .sc-head h2 { color: var(--dir); }
+    .rp  .sc-head { background: var(--rp-lt);  border-color: var(--rp-mid); }
+    .rp  .sc-head h2 { color: var(--rp); }
+    .mod .sc-head { background: var(--mod-lt); border-color: var(--mod-mid); }
+    .mod .sc-head h2 { color: var(--mod); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    /* ─── Lists ─── */
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .ri  ul.sl li::before { color: var(--ri); }
+    .dir ul.sl li::before { color: var(--dir); }
+    .rp  ul.sl li::before { color: var(--rp); }
+    .mod ul.sl li::before { color: var(--mod); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    /* ─── Tags ─── */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .ri  .tag { background: var(--ri-lt);  color: var(--ri);  border-color: var(--ri-mid); }
+    .dir .tag { background: var(--dir-lt); color: var(--dir); border-color: var(--dir-mid); }
+    .rp  .tag { background: var(--rp-lt);  color: var(--rp);  border-color: var(--rp-mid); }
+    .mod .tag { background: var(--mod-lt); color: var(--mod); border-color: var(--mod-mid); }
+
+    /* ─── Boxes ─── */
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .ri  .hbox { background: var(--ri-lt);  border-color: var(--ri); }
+    .dir .hbox { background: var(--dir-lt); border-color: var(--dir); }
+    .rp  .hbox { background: var(--rp-lt);  border-color: var(--rp); }
+    .mod .hbox { background: var(--mod-lt); border-color: var(--mod); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .ri  .accent { color: var(--ri); }
+    .dir .accent { color: var(--dir); }
+    .rp  .accent { color: var(--rp); }
+    .mod .accent { color: var(--mod); }
+
+    /* ─── Tech grid ─── */
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .ri  .tech-card { background: var(--ri-lt);  border-color: var(--ri-mid); }
+    .dir .tech-card { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .rp  .tech-card { background: var(--rp-lt);  border-color: var(--rp-mid); }
+    .mod .tech-card { background: var(--mod-lt); border-color: var(--mod-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .ri  .tech-card strong { color: var(--ri); }
+    .dir .tech-card strong { color: var(--dir); }
+    .rp  .tech-card strong { color: var(--rp); }
+    .mod .tech-card strong { color: var(--mod); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    /* ─── Salary grid ─── */
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .ri  .sal-card { background: var(--ri-lt);  border-color: var(--ri-mid); }
+    .dir .sal-card { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .rp  .sal-card { background: var(--rp-lt);  border-color: var(--rp-mid); }
+    .mod .sal-card { background: var(--mod-lt); border-color: var(--mod-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 19px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .ri  .sal-range { color: var(--ri); }
+    .dir .sal-range { color: var(--dir); }
+    .rp  .sal-range { color: var(--rp); }
+    .mod .sal-range { color: var(--mod); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── Comparison table ─── */
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-ri  { background: var(--ri); }
+    .comp-table th.h-dir { background: var(--dir); }
+    .comp-table th.h-rp  { background: var(--rp); }
+    .comp-table th.h-mod { background: var(--mod); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    /* ─── Link cards ─── */
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .ri  .lcard:hover { border-color: var(--ri); }
+    .dir .lcard:hover { border-color: var(--dir); }
+    .rp  .lcard:hover { border-color: var(--rp); }
+    .mod .lcard:hover { border-color: var(--mod); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    /* ─── Checklist ─── */
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .ri  .cl-item:hover, .ri  .cl-item.checked { background: var(--ri-lt);  border-color: var(--ri); }
+    .dir .cl-item:hover, .dir .cl-item.checked { background: var(--dir-lt); border-color: var(--dir); }
+    .rp  .cl-item:hover, .rp  .cl-item.checked { background: var(--rp-lt);  border-color: var(--rp); }
+    .mod .cl-item:hover, .mod .cl-item.checked { background: var(--mod-lt); border-color: var(--mod); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .ri  .cl-item.checked .cl-box { background: var(--ri);  border-color: var(--ri); }
+    .dir .cl-item.checked .cl-box { background: var(--dir); border-color: var(--dir); }
+    .rp  .cl-item.checked .cl-box { background: var(--rp);  border-color: var(--rp); }
+    .mod .cl-item.checked .cl-box { background: var(--mod); border-color: var(--mod); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .ri  .cl-score span { color: var(--ri);  font-weight: 800; }
+    .dir .cl-score span { color: var(--dir); font-weight: 800; }
+    .rp  .cl-score span { color: var(--rp);  font-weight: 800; }
+    .mod .cl-score span { color: var(--mod); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .ri  .cl-result { background: var(--ri-lt);  border-color: var(--ri-mid); }
+    .dir .cl-result { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .rp  .cl-result { background: var(--rp-lt);  border-color: var(--rp-mid); }
+    .mod .cl-result { background: var(--mod-lt); border-color: var(--mod-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .verdict { font-size: 18px; font-weight: 800; }
+    .ri  .cl-result .verdict { color: var(--ri); }
+    .dir .cl-result .verdict { color: var(--dir); }
+    .rp  .cl-result .verdict { color: var(--rp); }
+    .mod .cl-result .verdict { color: var(--mod); }
+    .cl-result .sub { font-size: 13px; color: var(--text); margin-top: 8px; line-height: 1.6; }
+
+    /* ─── Bolinhas de presença ─── */
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    /* ─── Ranking ─── */
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+    .rank-fill.ri  { background: var(--ri); }
+    .rank-fill.dir { background: var(--dir); }
+    .rank-fill.rp  { background: var(--rp); }
+    .rank-fill.mod { background: var(--mod); }
+
+    /* ─── Vagas reais ─── */
+    .vagas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-col-head.ri  { background: var(--ri); }
+    .vaga-col-head.dir { background: var(--dir); }
+    .vaga-col-head.rp  { background: var(--rp); }
+    .vaga-col-head.mod { background: var(--mod); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+    .vaga-btn.ri  { background: var(--ri); }
+    .vaga-btn.dir { background: var(--dir); }
+    .vaga-btn.rp  { background: var(--rp); }
+    .vaga-btn.mod { background: var(--mod); }
+
+    /* ─── Footer ─── */
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 21px; }
+      .hd-accent { font-size: 21px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>Relações Internacionais · Direito · Relações Públicas · Moda
+    <span class="hd-accent">negociar, defender, comunicar, criar</span>
+  </h1>
+  <p class="hd-sub">Quatro caminhos bem diferentes para quem se interessa por política, diplomacia, justiça e o mundo lá fora: da mesa de negociação internacional ao tribunal, dos bastidores da comunicação às coleções de moda.</p>
+</header>
+
+<nav>
+  <button class="tab-btn ri active" data-c="ri"  onclick="show('ri')">🌍 Rel. Internacionais</button>
+  <button class="tab-btn dir" data-c="dir" onclick="show('dir')">⚖️ Direito</button>
+  <button class="tab-btn rp"  data-c="rp"  onclick="show('rp')">🤝 Relações Públicas</button>
+  <button class="tab-btn mod" data-c="mod" onclick="show('mod')">👗 Moda</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">🔍 Comparar os quatro</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ RELAÇÕES INTERNACIONAIS ═══════════════════════════════ -->
+<div class="panel ri active" id="p-ri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Relações Internacionais?</h2></div>
+    <div class="sc-body">
+      <p>Relações Internacionais é o curso de quem se interessa por como os países se relacionam entre si: comércio, política externa, guerra, cooperação, cultura. É um <strong>bacharelado de 4 anos</strong>, reconhecido pelo MEC, considerado multidisciplinar porque mistura política, economia, direito, história e idiomas. Não existe uma única profissão de "internacionalista": o curso abre várias portas diferentes, e cada aluno constrói seu próprio caminho.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Teoria das Relações Internacionais, geografia política, economia internacional, Direito Internacional Público, idiomas (inglês, espanhol e uma terceira língua costuma ser diferencial).</li>
+        <li><strong>2º–3º ano:</strong> Política externa brasileira, comércio exterior, organizações internacionais, segurança internacional, diplomacia e integração regional.</li>
+        <li><strong>4º ano:</strong> Negociação internacional, estágio, TCC e escolha de uma área de aprofundamento (comércio, segurança, cooperação, diplomacia).</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> não existe conselho fiscalizador obrigatório para quem se forma em RI, é mercado livre. Mas quem quer ser diplomata de carreira precisa passar no concurso do Instituto Rio Branco (CACD) — aberto a qualquer graduação, um dos mais concorridos do país, com cerca de 60 vagas disputadas por milhares de candidatos.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Diplomacia:</strong> representar o Brasil em embaixadas e organismos internacionais, negociar acordos entre países. Via concurso do Itamaraty.</li>
+        <li><strong>Comércio exterior:</strong> cuidar de exportação, importação e negociações comerciais em empresas, bancos e trading companies. É a área que mais emprega fora da diplomacia.</li>
+        <li><strong>Organizações internacionais:</strong> atuar em projetos da ONU, OMC, Banco Mundial ou outros organismos multilaterais, geralmente após especialização e experiência internacional.</li>
+        <li><strong>Cooperação internacional e ONGs:</strong> trabalhar com refugiados, meio ambiente e direitos humanos em organizações que atuam entre países.</li>
+        <li><strong>Relações institucionais:</strong> representar empresas ou setores junto a governos e organismos estrangeiros.</li>
+        <li><strong>Consultoria em risco político e geopolítico:</strong> analisar cenários internacionais para empresas que precisam decidir onde investir ou operar.</li>
+        <li><strong>Multinacionais:</strong> áreas de expansão internacional, assuntos regulatórios e relações governamentais em grandes empresas.</li>
+        <li><strong>Pesquisa e academia:</strong> estudar e ensinar política externa, geopolítica e economia internacional.</li>
+        <li><strong>Jornalismo e análise internacional:</strong> cobrir e explicar política externa e conflitos internacionais para veículos de imprensa.</li>
+        <li><strong>Defesa e segurança internacional:</strong> atuar em análises estratégicas ligadas a Forças Armadas, inteligência e segurança de fronteiras.</li>
+        <li><strong>Carreiras públicas correlatas:</strong> comércio exterior e assuntos internacionais em governos estaduais e federais, fora do Itamaraty.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>RI pede uma cabeça que gosta de entender o mundo em escala grande: por que os países fazem o que fazem, e como negociar quando ninguém fala exatamente a mesma língua, literal ou culturalmente.</p>
+      <div class="tags">
+        <span class="tag">Interesse por geopolítica</span>
+        <span class="tag">Idiomas</span>
+        <span class="tag">Argumentação e negociação</span>
+        <span class="tag">Escrita analítica</span>
+        <span class="tag">Adaptabilidade cultural</span>
+        <span class="tag">Pensamento estratégico</span>
+        <span class="tag">Interesse por economia</span>
+        <span class="tag">Curiosidade por outros países</span>
+        <span class="tag">Resiliência (concursos e rejeição)</span>
+        <span class="tag">Organização</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você lê uma notícia internacional, sua cabeça vai direto pro "por que isso está acontecendo" e "o que isso muda pro mundo"? Se você já se imaginou representando o Brasil em outro país ou sentado numa mesa negociando um acordo entre nações, isso é um sinal forte.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>A diplomacia é extremamente concorrida.</strong> O concurso do Itamaraty tem cerca de 60 vagas para milhares de candidatos, e a preparação costuma levar anos, muitas vezes com cursinho especializado.</div>
+      <div class="cbox"><strong>Fora da diplomacia, o caminho não é óbvio.</strong> O curso é multidisciplinar, mas não tem uma profissão única de saída. Quem não vira diplomata precisa construir seu próprio caminho, muitas vezes complementando com outra formação ou especialização.</div>
+      <div class="cbox"><strong>Diplomata muda de país a cada poucos anos.</strong> Ótimo pra quem gosta de viajar e conhecer culturas, mas difícil pra manter relacionamentos, raízes e uma rotina fixa por muito tempo.</div>
+      <div class="cbox"><strong>Início de carreira fora da diplomacia pode ser modesto.</strong> Analista júnior de comércio exterior ou assuntos internacionais não começa com o salário alto que a diplomacia oferece.</div>
+      <div class="cbox"><strong>O curso exige domínio de várias áreas ao mesmo tempo.</strong> Política, economia, direito e história precisam caminhar juntos, e isso pode pesar pra quem tem uma força só e não as quatro.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">📡</div><strong>Diplomacia digital</strong><p>Países hoje se comunicam e disputam narrativas também nas redes sociais, não só em reuniões fechadas.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA em análise geopolítica</strong><p>Ferramentas de monitoramento e previsão de risco ajudam governos e empresas a antecipar crises internacionais.</p></div>
+        <div class="tech-card"><div class="tc-icon">📦</div><strong>Comércio digital</strong><p>Plataformas online e logística global mudaram a forma como o comércio exterior tradicional funciona.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔒</div><strong>Cibersegurança internacional</strong><p>Conflitos e cooperação entre países também acontecem no espaço digital: uma nova fronteira da segurança internacional.</p></div>
+        <div class="tech-card"><div class="tc-icon">🗣️</div><strong>Tradução automática</strong><p>Facilita a comunicação básica, mas não substitui a leitura fina de contexto cultural e político que a diplomacia exige.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌐</div><strong>Trabalho remoto internacional</strong><p>Consultoria e cooperação à distância crescem, abrindo espaço pra atuar globalmente sem estar fisicamente no exterior.</p></div>
+      </div>
+      <p class="note">⚡ A IA acelera a análise de dados e cenários, mas não negocia, não lê nuances culturais e não decide o que o Brasil deve defender numa mesa internacional: isso continua sendo trabalho humano.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Diplomacia é pequena e concorridíssima:</strong> cerca de 60 vagas no concurso de admissão à carreira diplomática, uma das seleções mais disputadas do país.</li>
+        <li><strong>Comércio exterior é a maior porta de saída fora da diplomacia:</strong> multinacionais, bancos e consultorias contratam internacionalistas para análise e negociação de mercados globais.</li>
+        <li><strong>Organizações internacionais empregam poucos brasileiros:</strong> ONU, OMC e Banco Mundial são possíveis via estágios e concursos internacionais, mas exigem muito preparo e, em geral, pós-graduação.</li>
+        <li><strong>Governos estaduais também contratam:</strong> assuntos internacionais e comércio exterior fora do Itamaraty são frentes de atuação em secretarias e agências estaduais.</li>
+        <li><strong>Mercado em expansão:</strong> o crescimento do comércio exterior brasileiro tem ampliado oportunidades em consultorias e câmaras de comércio. <em>(fonte: Guia da Carreira, PUC Minas, 2025–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Como o curso é multidisciplinar, escolher uma especialização é o que dá direção concreta à carreira.</p>
+      <div class="tags">
+        <span class="tag">⭐ Diplomacia (CACD)</span>
+        <span class="tag">⭐ Comércio Exterior</span>
+        <span class="tag">⭐ Direito Internacional</span>
+        <span class="tag">⭐ Organizações Internacionais</span>
+        <span class="tag">Segurança Internacional</span>
+        <span class="tag">Economia Internacional</span>
+        <span class="tag">Cooperação e Desenvolvimento</span>
+        <span class="tag">Geopolítica e Defesa</span>
+        <span class="tag">Direitos Humanos Internacionais</span>
+        <span class="tag">Meio Ambiente e Sustentabilidade Global</span>
+        <span class="tag">Estudos de Área (Ásia, Oriente Médio, América Latina)</span>
+        <span class="tag">Negociação Internacional</span>
+      </div>
+      <p class="note">⭐ Para quem quer viajar, viver fora e lidar diretamente com diplomacia, o caminho da carreira diplomática e das organizações internacionais são os mais alinhados.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um profissional de Relações Internacionais?</h2></div>
+    <div class="sc-body">
+      <p>A remuneração em RI tem dois caminhos bem diferentes: a diplomacia paga alto desde o início, o mercado privado começa mais modesto e cresce com especialização.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início (mercado privado)</div><div class="sal-range">R$ 2,5k–4,5k</div><div class="sal-note">Analista júnior de comércio exterior ou assistente de relações internacionais em empresa.</div></div>
+        <div class="sal-card"><div class="sal-stage">Diplomata (3º Secretário)</div><div class="sal-range">R$ 22,5k</div><div class="sal-note">Salário inicial já na entrada, assim que aprovado no concurso do Itamaraty.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Topo</div><div class="sal-range">R$ 15k–33k+</div><div class="sal-note">Diplomata no topo da carreira ou executivo internacional sênior em multinacional.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> a diplomacia paga muito bem desde a entrada, mas tem pouquíssimas vagas. Fora dela, o salário cresce de forma mais gradual, junto com especialização e experiência internacional.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.gov.br/mre/pt-br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>Itamaraty — Ministério das Relações Exteriores</strong><span>Site oficial: carreira diplomática, concurso CACD e política externa brasileira</span></div><span class="lc-arr">→</span></a>
+        <a href="https://blog.grancursosonline.com.br/concurso-diplomata/" class="lcard" target="_blank"><span class="lc-icon">🎯</span><div class="lc-body"><strong>Concurso Diplomata (CACD)</strong><span>Informações sobre vagas, salário inicial e etapas do concurso do Instituto Rio Branco</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.guiadacarreira.com.br/blog/relacoes-internacionais" class="lcard" target="_blank"><span class="lc-icon">🌍</span><div class="lc-body"><strong>Guia da Carreira — RI</strong><span>Áreas de atuação, mercado e caminhos possíveis fora da diplomacia</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais de analistas de comércio exterior e relações internacionais</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.gov.br/mdic/pt-br" class="lcard" target="_blank"><span class="lc-icon">📦</span><div class="lc-body"><strong>Ministério do Desenvolvimento, Indústria e Comércio</strong><span>Como funciona o comércio exterior brasileiro na prática</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Relações Internacionais é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-ri">
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Tenho interesse real por política internacional, geopolítica e como os países se relacionam.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Gosto de estudar idiomas e me interesso genuinamente por culturas diferentes da minha.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Estou disposto(a) a estudar por anos e enfrentar um concurso concorridíssimo se quiser seguir diplomacia.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Aceito que, fora da diplomacia, vou precisar construir meu próprio caminho, talvez com outra especialização.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Tenho facilidade pra negociar e argumentar, buscando pontos em comum entre posições diferentes.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Estou disposto(a) a viver fora do Brasil ou mudar de cidade/país periodicamente.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Me interesso por como as leis e acordos entre países funcionam.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Consigo lidar com incerteza: nem sempre está claro qual será meu emprego exato ao me formar.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Prefiro um trabalho que envolva viagem e contato com outras culturas a uma rotina fixa num único lugar.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-ri">0 de 9</span></div>
+      <div class="cl-result" id="res-ri"><div class="verdict" id="vd-ri"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ DIREITO ═══════════════════════════════ -->
+<div class="panel dir" id="p-dir">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Direito?</h2></div>
+    <div class="sc-body">
+      <p>Direito é o curso que forma profissionais para entender, aplicar e defender as leis que organizam a sociedade. É um <strong>bacharelado de 5 anos</strong>, reconhecido pelo MEC, um dos mais tradicionais e valorizados do Brasil. É um curso de muita leitura, argumentação e escrita, e exige uma etapa extra após a formatura: o <strong>Exame da OAB</strong>, obrigatório pra quem quer advogar.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Introdução ao Direito, Filosofia Jurídica, Direito Constitucional, Civil, Penal e Processual. A base teórica e os fundamentos do sistema legal brasileiro.</li>
+        <li><strong>2º–4º ano:</strong> Direito do Trabalho, Administrativo, Tributário, Empresarial, Internacional, Ambiental, Direitos Humanos e aprofundamento nas áreas anteriores. A prática jurídica começa aqui.</li>
+        <li><strong>5º ano:</strong> Estágio obrigatório, TCC e preparação para a OAB.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a OAB (Ordem dos Advogados do Brasil) é o conselho da profissão. Sem aprovação no Exame da OAB, o bacharel não pode advogar, mas pode atuar em carreiras públicas e funções jurídicas corporativas. A OAB aprova em torno de 20–25% dos candidatos por exame.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Advocacia criminal:</strong> defender pessoas acusadas ou auxiliar o Ministério Público. Área ligada à criminologia e ao Direito Penal.</li>
+        <li><strong>Defensoria Pública:</strong> defender gratuitamente quem não tem condições de pagar advogado, uma das carreiras mais ligadas a direitos humanos e justiça social.</li>
+        <li><strong>Ministério Público:</strong> fiscalizar o cumprimento das leis e defender interesses da sociedade. Carreira pública por concurso.</li>
+        <li><strong>Magistratura (juiz/juíza):</strong> julgar processos e aplicar a lei. Carreira pública por concurso, com progressão clara e alta remuneração.</li>
+        <li><strong>Advocacia de direitos humanos:</strong> atuar em casos de violação de direitos, trabalhando com organismos nacionais e internacionais.</li>
+        <li><strong>Direito Constitucional e político:</strong> assessorar parlamentares, partidos e governos em questões legais e constitucionais.</li>
+        <li><strong>Direito Internacional:</strong> lidar com tratados, organizações internacionais e conflitos entre países ou empresas de diferentes nações.</li>
+        <li><strong>Mediação e arbitragem:</strong> resolver conflitos fora dos tribunais, como árbitro ou mediador reconhecido.</li>
+        <li><strong>Advocacia empresarial:</strong> prestar assessoria jurídica para empresas, contratos e operações.</li>
+        <li><strong>Carreira pública:</strong> concursos para tribunais, prefeituras, AGU, PGE, Receita Federal e inúmeros órgãos com bons salários e estabilidade.</li>
+        <li><strong>Perito criminal / forense:</strong> com especialização complementar, atuar na interface entre Direito Penal e ciências forenses.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Direito exige muito de leitura, escrita e argumentação, e um tipo específico de raciocínio: preciso, crítico e capaz de encontrar a lógica dentro de um sistema complexo de normas.</p>
+      <div class="tags">
+        <span class="tag">Leitura consistente</span>
+        <span class="tag">Escrita clara e precisa</span>
+        <span class="tag">Argumentação</span>
+        <span class="tag">Raciocínio lógico</span>
+        <span class="tag">Interesse por justiça</span>
+        <span class="tag">Paciência com processos</span>
+        <span class="tag">Capacidade de debate</span>
+        <span class="tag">Ética como valor central</span>
+        <span class="tag">Organização</span>
+        <span class="tag">Resistência à pressão</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você vê uma injustiça, em notícia, em filme, na vida real, você fica pensando em como deveria ter sido decidido, quem estava errado e o que a lei dizia sobre aquilo? Se esse raciocínio vem naturalmente pra você, o Direito te chama de verdade.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>São 5 anos de faculdade mais o desafio da OAB.</strong> O Exame da OAB é difícil e tem taxa de aprovação baixa. Muita gente precisará de mais de uma tentativa. Isso exige planejamento e estudo continuado.</div>
+      <div class="cbox"><strong>A faculdade é densa em leitura.</strong> Direito é um curso de textos longos, doutrinas, jurisprudências e muito estudo. Quem não gosta de ler vai sofrer nos primeiros anos.</div>
+      <div class="cbox"><strong>O início da carreira pode ser difícil.</strong> Advogados iniciantes costumam ganhar pouco até construírem carteira de clientes ou passarem em concurso. A escalada leva tempo.</div>
+      <div class="cbox"><strong>Estresse emocional nas áreas mais humanas.</strong> Trabalhar com casos criminais, de família ou de violação de direitos pode pesar muito emocionalmente. Cuidar da saúde mental é parte da carreira.</div>
+      <div class="cbox"><strong>Mercado saturado em algumas áreas.</strong> Brasil tem muitos advogados. Se diferenciar exige especialização, bom networking e, muitas vezes, aprovação em concurso público.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA jurídica</strong><p>Ferramentas de IA já pesquisam jurisprudência, redigem peças e analisam contratos em segundos. O advogado vira mais estrategista.</p></div>
+        <div class="tech-card"><div class="tc-icon">📄</div><strong>Peticionamento eletrônico</strong><p>Todo o processo judicial no Brasil já é digital. Saber usar os sistemas do Judiciário é habilidade básica do bacharel.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔬</div><strong>Forense digital</strong><p>Crimes digitais, provas em ambiente virtual e rastreamento de dados são uma nova fronteira do Direito Penal, campo em expansão.</p></div>
+        <div class="tech-card"><div class="tc-icon">⚖️</div><strong>Legaltech</strong><p>Startups de tecnologia jurídica criam ferramentas de mediação online, gestão de contratos e acesso à justiça.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌍</div><strong>Direito Internacional e IA</strong><p>Regulação de inteligência artificial, proteção de dados e crimes cibernéticos são áreas jurídicas em formação acelerada no mundo todo.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Dados no processo</strong><p>Análise de padrões de decisões judiciais com dados ajuda advogados a prever resultados e construir estratégias mais precisas.</p></div>
+      </div>
+      <p class="note">⚡ A IA vai automatizar o trabalho repetitivo do Direito: pesquisa, redação de peças simples, revisão de contratos. O que ela não faz é defender a pessoa que está na sua frente, ter sensibilidade para o caso e criar estratégia num contexto humano complexo.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Brasil tem o maior número de advogados do mundo em proporção:</strong> a concorrência é grande, mas quem se especializa e vai bem na OAB tem espaço garantido.</li>
+        <li><strong>Concurso público é a rota de estabilidade e alta remuneração:</strong> magistratura, Ministério Público, Defensoria e cargos federais pagam muito bem e têm progressão clara.</li>
+        <li><strong>Áreas em alta:</strong> Direito Digital, Compliance, Direitos Humanos, Criminal e Trabalhista lideram a demanda em 2024–2026.</li>
+        <li><strong>Grandes escritórios pagam muito, mas exigem muito:</strong> bancas de advocacia empresarial em SP e RJ têm salários altos para quem entra, mas a rotina é de alta pressão.</li>
+        <li><strong>Advocacia solo e pequenos escritórios:</strong> a maioria dos advogados no Brasil trabalha por conta própria ou em escritórios pequenos. A renda é variável e depende de carteira de clientes.</li>
+        <li><strong>Organizações internacionais e ONGs:</strong> ACNUR, institutos de Direitos Humanos e organizações de defesa de causas contratam advogados com perfil social. <em>(fonte: OAB e FGV Direito, 2024–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>No Direito, a especialização é o que separa quem tem muita concorrência de quem tem demanda.</p>
+      <div class="tags">
+        <span class="tag">⭐ Direito Penal e Criminologia</span>
+        <span class="tag">⭐ Direitos Humanos</span>
+        <span class="tag">⭐ Direito Constitucional</span>
+        <span class="tag">⭐ Magistratura (concurso)</span>
+        <span class="tag">⭐ Ministério Público (concurso)</span>
+        <span class="tag">⭐ Defensoria Pública (concurso)</span>
+        <span class="tag">Mediação e Arbitragem</span>
+        <span class="tag">Direito Internacional</span>
+        <span class="tag">Direito Digital</span>
+        <span class="tag">Compliance e Governança</span>
+        <span class="tag">Direito Trabalhista</span>
+        <span class="tag">Direito Ambiental</span>
+        <span class="tag">Direito Tributário</span>
+      </div>
+      <p class="note">⭐ Para quem tem interesse em política, direitos humanos, mediação de conflitos e assuntos internacionais, Direito Constitucional, Direitos Humanos e Direito Internacional são os caminhos mais alinhados.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um profissional de Direito?</h2></div>
+    <div class="sc-body">
+      <p>A variação é muito grande dependendo da área, do setor e da trajetória. Carreiras públicas têm progressão muito mais previsível que a advocacia privada.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2k–4k</div><div class="sal-note">Estágio jurídico, advogado associado ou servidor em cargo de apoio. A fase de construção da base.</div></div>
+        <div class="sal-card"><div class="sal-stage">Advogado / Concursado</div><div class="sal-range">R$ 5k–14k</div><div class="sal-note">Advogado com carteira de clientes, cargo em carreira pública inicial ou escritório médio.</div></div>
+        <div class="sal-card"><div class="sal-stage">Carreira pública / Sênior</div><div class="sal-range">R$ 15k–35k+</div><div class="sal-note">Juiz, Promotor, Defensor Público, advogado sênior de grande banca ou sócio de escritório.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Perspectiva importante:</strong> juízes e membros do MP têm os salários mais altos da carreira jurídica, mas chegam até essa posição após anos de estudo e vários concursos. Quem planeja bem a trajetória tem clareza do caminho desde o início da faculdade.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.oab.org.br" class="lcard" target="_blank"><span class="lc-icon">⚖️</span><div class="lc-body"><strong>OAB — Ordem dos Advogados do Brasil</strong><span>O conselho da profissão: o que faz um advogado, exame da OAB e áreas de atuação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.conjur.com.br" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Consultor Jurídico (Conjur)</strong><span>O maior portal de notícias jurídicas do Brasil. Ótimo pra entender o que movimenta o Direito</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.estrategiaconcursos.com.br" class="lcard" target="_blank"><span class="lc-icon">🎯</span><div class="lc-body"><strong>Estratégia Concursos</strong><span>Referência para quem quer seguir carreira pública jurídica: magistratura, MP, Defensoria</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.acnur.org/br" class="lcard" target="_blank"><span class="lc-icon">🌍</span><div class="lc-body"><strong>ACNUR Brasil — Agência da ONU para Refugiados</strong><span>Exemplo de organização internacional que trabalha com Direitos Humanos e contrata juristas</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais de advogados, juízes e cargos jurídicos reportados por profissionais</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Direito é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-dir">
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Tenho interesse real em leis, justiça e como o sistema jurídico organiza a sociedade, não só de curiosidade passageira.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Gosto de ler, argumentar e escrever. O curso exige muito das três habilidades e eu me identifico com isso.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Me identifico com a ideia de defender pessoas, causas ou direitos dentro do sistema de justiça.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Aceito que o curso dura 5 anos e que ainda precisarei passar na OAB para advogar.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Tenho interesse em pelo menos uma área: Direito Penal, Direitos Humanos, Constitucional, Internacional ou outra.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Consigo lidar com muito texto e com a pressão de prazos, audiências e responsabilidades jurídicas.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Me interessa a carreira pública: Magistratura, Ministério Público, Defensoria Pública ou concursos jurídicos.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Acredito que entender e aplicar as leis é uma forma concreta de transformar a realidade e fazer justiça.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Quando vejo uma injustiça, minha cabeça vai naturalmente para "o que a lei diz sobre isso" e "como isso deveria ser resolvido".</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-dir">0 de 9</span></div>
+      <div class="cl-result" id="res-dir"><div class="verdict" id="vd-dir"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ RELAÇÕES PÚBLICAS ═══════════════════════════════ -->
+<div class="panel rp" id="p-rp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Relações Públicas?</h2></div>
+    <div class="sc-body">
+      <p>Relações Públicas é o curso de quem quer cuidar da imagem e da reputação de organizações: empresas, governos, ONGs, partidos ou líderes. É um <strong>bacharelado de 4 anos</strong>, dentro de Comunicação Social, com menos visibilidade que a publicidade, mas com um espaço próprio e bem definido. O foco é construir relacionamentos e gerenciar como uma organização se apresenta para o mundo.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Teorias da comunicação, comunicação institucional, relações com a imprensa, planejamento estratégico, ética e legislação da comunicação.</li>
+        <li><strong>2º–3º ano:</strong> Gestão de imagem, comunicação de governo, gestão de crises, relações com stakeholders, comunicação interna e eventos.</li>
+        <li><strong>4º ano:</strong> Comunicação digital, assessoria de imprensa, projetos de gestão de marca, estágio e trabalho de conclusão.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> Relações Públicas tem conselho próprio (Conferp — Conselho Federal de Profissionais de Relações Públicas). Para assinar como RP e trabalhar em algumas funções específicas, o registro é necessário. É uma das poucas profissões de comunicação com regulamentação legal.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Comunicação de governo:</strong> cuidar da imagem de órgãos públicos, prefeituras, governos estaduais e federais, uma das maiores empregadoras de RPs no Brasil.</li>
+        <li><strong>Assessoria de imprensa:</strong> ser o elo entre a organização e os jornalistas, controlando o que vai para as notícias e como vai.</li>
+        <li><strong>Gestão de crises:</strong> quando algo dá errado (escândalos, acidentes, polêmicas), o RP organiza a resposta e protege a reputação.</li>
+        <li><strong>Comunicação corporativa:</strong> cuidar da imagem de grandes empresas junto a clientes, funcionários, governo e sociedade.</li>
+        <li><strong>Relações com comunidades:</strong> gerenciar o impacto social de organizações em regiões onde atuam.</li>
+        <li><strong>Comunicação de causas e ONGs:</strong> ajudar organizações sociais a se fazerem visíveis e a construírem alianças.</li>
+        <li><strong>Relações institucionais (lobbying):</strong> representar interesses de organizações junto ao governo e a tomadores de decisão.</li>
+        <li><strong>Comunicação interna:</strong> cuidar de como a informação circula dentro de uma organização e como os funcionários se sentem parte dela.</li>
+        <li><strong>Gestão de eventos e cerimônias:</strong> planejar e executar eventos institucionais, cúpulas, lançamentos e encontros estratégicos.</li>
+        <li><strong>Comunicação política:</strong> assessorar líderes políticos na gestão da imagem pública e das relações com a mídia e a sociedade.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Relações Públicas pede diplomacia, organização e uma capacidade fora do comum de se comunicar com pessoas muito diferentes entre si.</p>
+      <div class="tags">
+        <span class="tag">Comunicação clara</span>
+        <span class="tag">Diplomacia</span>
+        <span class="tag">Organização</span>
+        <span class="tag">Raciocínio estratégico</span>
+        <span class="tag">Escrita objetiva</span>
+        <span class="tag">Construção de relacionamentos</span>
+        <span class="tag">Jogo de cintura em crises</span>
+        <span class="tag">Discrição</span>
+        <span class="tag">Interesse em política e poder</span>
+        <span class="tag">Empatia</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando um conflito acontece num grupo, você é a pessoa que tenta entender os dois lados e encontrar uma saída que preserve a relação? Relações Públicas trabalha exatamente com isso, mas na escala de organizações, governos e sociedade.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>A profissão é pouco conhecida.</strong> Muita gente confunde RP com publicidade ou jornalismo. Explicar o que você faz faz parte do trabalho. A identidade da profissão ainda se consolida no Brasil.</div>
+      <div class="cbox"><strong>Mercado menor que publicidade.</strong> O número de vagas formais de RP é menor do que o de publicidade ou marketing digital. Diferenciação e especialização são decisivas.</div>
+      <div class="cbox"><strong>Crises não têm hora.</strong> Quando algo explode na imprensa ou nas redes, o RP precisa responder rápido, inclusive de madrugada. A rotina pode ser imprevisível.</div>
+      <div class="cbox"><strong>Nem sempre a decisão final é sua.</strong> O RP aconselha e planeja, mas quem decide o que falar é o cliente ou o chefe. Saber trabalhar nesse papel de bastidor é essencial.</div>
+      <div class="cbox"><strong>Ética é um campo minado.</strong> A linha entre gerenciar a imagem e distorcer a realidade pode ser tênue. Profissionais sérios precisam definir seus próprios limites com clareza.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">📡</div><strong>Monitoramento em tempo real</strong><p>Ferramentas de escuta social monitoram o que está sendo dito sobre uma organização em todo lugar ao mesmo tempo, na hora que acontece.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA na gestão de crises</strong><p>Algoritmos já identificam potenciais crises antes de estourarem. O RP usa esses dados pra agir preventivamente.</p></div>
+        <div class="tech-card"><div class="tc-icon">📱</div><strong>Influenciadores como mídia</strong><p>Influenciadores digitais viraram canal de comunicação institucional. Gerir essas parcerias é parte do trabalho de RP hoje.</p></div>
+        <div class="tech-card"><div class="tc-icon">🗞️</div><strong>Jornalismo em crise</strong><p>Com menos jornalistas e veículos, o RP precisa produzir cada vez mais o próprio conteúdo para distribuir diretamente.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔒</div><strong>Privacidade e dados</strong><p>LGPD e proteção de dados mudaram como as organizações se comunicam. O RP precisa entender essas regras.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌐</div><strong>Transparência como exigência</strong><p>A sociedade exige mais clareza das organizações. Comunicar com honestidade virou estratégia, não só boa vontade.</p></div>
+      </div>
+      <p class="note">⚡ A tecnologia multiplicou as frentes de imagem que uma organização precisa cuidar. O RP que dominar dados e plataformas junto à habilidade humana de construir relacionamentos tem mercado amplo.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Governo é o maior empregador:</strong> prefeituras, governos estaduais, ministérios e órgãos públicos têm assessorias de comunicação e contratam RPs com frequência, inclusive por concurso.</li>
+        <li><strong>Grandes empresas têm áreas de comunicação corporativa:</strong> bancos, mineradoras, empresas de energia e multinacionais mantêm equipes de RP e relações institucionais.</li>
+        <li><strong>ONGs e terceiro setor:</strong> organizações sociais precisam comunicar sua missão e captar recursos, o RP tem papel importante aqui.</li>
+        <li><strong>Agências especializadas:</strong> existem agências de comunicação corporativa, assessoria de imprensa e gestão de crise que empregam RPs.</li>
+        <li><strong>Mercado menor, mas mais estável:</strong> o RP não compete com a mesma multidão que a publicidade. Quem entra bem posicionado tem carreira mais previsível.</li>
+        <li><strong>Salário cresce com senioridade:</strong> o pico de carreira em grandes empresas e governo é bem remunerado. <em>(fonte: Glassdoor e Conferp, 2025–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Escolher uma vertente estratégica é o que tira o RP da posição genérica e o coloca em posição de referência.</p>
+      <div class="tags">
+        <span class="tag">⭐ Comunicação Governamental</span>
+        <span class="tag">⭐ Gestão de Crises</span>
+        <span class="tag">⭐ Relações Institucionais</span>
+        <span class="tag">⭐ Assessoria de Imprensa</span>
+        <span class="tag">Comunicação Política</span>
+        <span class="tag">Comunicação de Causas</span>
+        <span class="tag">Responsabilidade Social</span>
+        <span class="tag">Comunicação Interna</span>
+        <span class="tag">Gestão de Stakeholders</span>
+        <span class="tag">Comunicação Internacional</span>
+      </div>
+      <p class="note">⭐ Para quem tem interesse em política, causas sociais e atuação junto ao poder público, comunicação governamental e relações institucionais são as frentes mais relevantes.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um profissional de Relações Públicas?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. Governo, grandes empresas e consultorias estratégicas pagam acima da média de agência.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2k–3,5k</div><div class="sal-note">Assistente de comunicação, assessoria júnior. Experiência em estágio pesa bastante.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 4k–8k</div><div class="sal-note">Assessor sênior, coordenador de comunicação ou RP em grande empresa.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Liderança</div><div class="sal-range">R$ 9k–20k+</div><div class="sal-note">Diretoria de comunicação em empresa ou governo. Consultores sênior chegam ao topo.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em Relações Públicas, o setor onde você trabalha importa muito. O mesmo cargo em governo federal, em mineradora e em ONG tem remunerações completamente diferentes.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.conferp.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>Conferp — Conselho Federal de RP</strong><span>O conselho da profissão: o que faz um RP, registro e regulamentação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.portaldarp.com.br" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Portal DARP</strong><span>Notícias e conteúdo sobre assessoria, comunicação corporativa e RP no Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais de assessores e diretores de comunicação reportados por profissionais</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/learning/" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>LinkedIn Learning</strong><span>Cursos de comunicação corporativa, gestão de crises e assessoria com certificado</span></div><span class="lc-arr">→</span></a>
+        <a href="https://pr.prnewswire.com/br/news-releases" class="lcard" target="_blank"><span class="lc-icon">🌐</span><div class="lc-body"><strong>PR Newswire Brasil</strong><span>Como empresas divulgam informações oficiais: exemplo real de comunicação corporativa</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Relações Públicas é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-rp">
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Gosto de cuidar da imagem e da reputação de pessoas ou organizações que respeito.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Tenho facilidade pra me comunicar com públicos muito diferentes: imprensa, governo, comunidade.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Me interessa trabalhar com comunicação de governo, política pública ou causas sociais.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Tenho jogo de cintura pra lidar com situações de crise e pressão sem perder o foco.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Prefiro construir relacionamentos de longo prazo a criar campanhas pontuais de impacto imediato.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Gostaria de trabalhar em escritório e em contextos mais formais e institucionais.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Me identifico com o papel de mediador(a): entender os dois lados e construir pontes entre eles.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Tenho discrição e entendo que o protagonismo nessa profissão é de quem você representa, não seu.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Me interessa influenciar a sociedade pela gestão de imagem e reputação, não diretamente pela lei.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-rp">0 de 9</span></div>
+      <div class="cl-result" id="res-rp"><div class="verdict" id="vd-rp"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ MODA ═══════════════════════════════ -->
+<div class="panel mod" id="p-mod">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Moda?</h2></div>
+    <div class="sc-body">
+      <p>Moda (Design de Moda / Estilismo) é o curso de quem quer criar roupas, acessórios e coleções, entendendo moda como linguagem, cultura e negócio ao mesmo tempo. É um <strong>bacharelado de 4 anos</strong> (também existe tecnólogo de 2 a 3 anos), reconhecido pelo MEC. É um curso prático: desenho, modelagem e costura caminham junto com teoria e mercado.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Desenho de moda, modelagem básica, história da moda, têxteis, teoria da cor.</li>
+        <li><strong>2º–3º ano:</strong> Costura industrial, desenvolvimento de coleção, marketing de moda, comportamento do consumidor, moda e cultura.</li>
+        <li><strong>4º ano:</strong> Coleção final, portfólio profissional, estágio e, cada vez mais, noções de empreendedorismo e marca própria.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> moda não tem conselho fiscalizador obrigatório, é mercado livre. Portfólio e experiência prática valem mais que o diploma na hora de conseguir trabalho.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Estilista / criador(a) de coleção:</strong> criar as peças e a identidade visual de uma marca a cada temporada.</li>
+        <li><strong>Designer de moda em indústria têxtil:</strong> desenvolver produto para grandes marcas e redes de varejo.</li>
+        <li><strong>Modelagem e desenvolvimento de produto:</strong> transformar o desenho em peça de verdade, com caimento e produção viáveis.</li>
+        <li><strong>Consultoria de imagem e styling:</strong> orientar pessoas ou marcas sobre como se vestir e se apresentar visualmente.</li>
+        <li><strong>Compras (buyer):</strong> selecionar e negociar as peças que uma loja ou marca vai vender.</li>
+        <li><strong>Marketing e branding de moda:</strong> construir a identidade e a comunicação de uma marca de roupa.</li>
+        <li><strong>Produção de eventos de moda:</strong> organizar desfiles, semanas de moda e lançamentos de coleção.</li>
+        <li><strong>Moda sustentável / slow fashion:</strong> desenvolver produtos e processos com menos impacto ambiental e social.</li>
+        <li><strong>E-commerce e moda digital:</strong> cuidar da venda online, fotos de produto e experiência digital de compra.</li>
+        <li><strong>Jornalismo e crítica de moda:</strong> escrever e analisar tendências, coleções e o mercado da moda.</li>
+        <li><strong>Moda internacional:</strong> trabalhar fora do Brasil, em marcas ou semanas de moda internacionais, com bastante rede de contatos e portfólio forte.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Moda pede senso estético apurado, mas também paciência técnica: uma coleção só existe se a ideia virar peça de verdade, com prazo, custo e produção.</p>
+      <div class="tags">
+        <span class="tag">Senso estético</span>
+        <span class="tag">Criatividade</span>
+        <span class="tag">Desenho</span>
+        <span class="tag">Interesse por tendências</span>
+        <span class="tag">Sensibilidade cultural</span>
+        <span class="tag">Costura e técnica</span>
+        <span class="tag">Visão de negócio</span>
+        <span class="tag">Atenção a detalhes</span>
+        <span class="tag">Curiosidade por outros países</span>
+        <span class="tag">Persistência</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você viaja ou vê fotos de outros lugares do mundo, você repara em como as pessoas se vestem, o que é moda ali, o que muda de cultura pra cultura? Se moda pra você é também uma forma de entender o mundo, não só de criar roupa, isso é um sinal.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O início é financeiramente difícil.</strong> Salário júnior costuma ser baixo e a concorrência por vaga é grande. Portfólio bom é o que abre a porta.</div>
+      <div class="cbox"><strong>Mercado é volúvel.</strong> Tendências e modismos mudam rápido. Parar de acompanhar significa ficar pra trás com facilidade.</div>
+      <div class="cbox"><strong>Fast fashion pressiona preço e prazo.</strong> Muitas empresas trabalham com ritmo intenso de produção, e isso pesa na rotina de quem cria.</div>
+      <div class="cbox"><strong>"Viajar trabalhando" não é garantido.</strong> Poucas marcas brasileiras têm alcance internacional. Trabalhar fora exige rede de contatos, portfólio forte e, muitas vezes, sorte de oportunidade.</div>
+      <div class="cbox"><strong>Questões éticas e ambientais pesam cada vez mais.</strong> Condições de trabalho na cadeia têxtil e impacto ambiental da produção são cobranças reais que o profissional de moda enfrenta hoje.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">✍️</div><strong>IA generativa de design</strong><p>Ferramentas de IA já criam esboços e variações de estampa e corte em minutos, acelerando o processo criativo.</p></div>
+        <div class="tech-card"><div class="tc-icon">👾</div><strong>Moda digital</strong><p>Roupas virtuais para jogos, redes sociais e avatares já são um mercado novo e crescente.</p></div>
+        <div class="tech-card"><div class="tc-icon">🖨️</div><strong>Impressão 3D</strong><p>Prototipagem rápida de peças e acessórios, reduzindo tempo e custo de desenvolvimento.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌱</div><strong>Tecnologia sustentável</strong><p>Tecidos reciclados e rastreabilidade da cadeia produtiva ganham espaço com a pressão por moda mais responsável.</p></div>
+        <div class="tech-card"><div class="tc-icon">🕶️</div><strong>Provador virtual</strong><p>Realidade aumentada permite experimentar roupas online antes de comprar, mudando o e-commerce de moda.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏭</div><strong>Automação na produção</strong><p>Máquinas de corte e costura automatizadas mudam a forma como a produção em massa acontece.</p></div>
+      </div>
+      <p class="note">⚡ A tecnologia acelera o processo criativo e produtivo, mas não substitui o olhar de quem entende o que uma coleção precisa comunicar, nem a sensibilidade cultural de quem cria pra pessoas reais.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Setor grande:</strong> a moda movimenta mais de R$ 220 bilhões por ano no Brasil e emprega milhares de profissionais.</li>
+        <li><strong>São Paulo é o polo nacional:</strong> concentra a maior parte das vagas de estilo e produção, além de sediar a Semana de Moda (SPFW).</li>
+        <li><strong>Fast fashion emprega em volume:</strong> Renner, C&A, Riachuelo e redes similares contratam bastante, mas com salários iniciais modestos.</li>
+        <li><strong>Moda sustentável e autoral cresce:</strong> um nicho valorizado, embora ainda pequeno comparado ao mercado de massa.</li>
+        <li><strong>Trabalhar fora do Brasil é possível, mas raro:</strong> Paris, Milão e Nova York exigem muito networking e um portfólio internacional consistente. <em>(fonte: querobolsa e educamaisbrasil, 2025)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Escolher uma frente específica ajuda a sair da concorrência genérica do mercado de moda.</p>
+      <div class="tags">
+        <span class="tag">⭐ Design de Coleção</span>
+        <span class="tag">⭐ Moda Sustentável</span>
+        <span class="tag">⭐ Marketing de Moda</span>
+        <span class="tag">⭐ Consultoria de Imagem</span>
+        <span class="tag">Modelagem e Costura Técnica</span>
+        <span class="tag">Moda Digital / 3D</span>
+        <span class="tag">Produção de Eventos de Moda</span>
+        <span class="tag">Compras (Buying)</span>
+        <span class="tag">Jornalismo de Moda</span>
+        <span class="tag">Moda Internacional</span>
+        <span class="tag">Gestão de Marca Própria</span>
+      </div>
+      <p class="note">⭐ Para quem se interessa por viagem e culturas do mundo, moda internacional e produção de eventos são as frentes que mais conectam com esse interesse.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um profissional de Moda?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. Como em outras áreas criativas, quem constrói marca própria ou nome reconhecido ganha bem mais que a média do mercado.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2k–3,5k</div><div class="sal-note">Assistente de estilo ou auxiliar de modelagem. Portfólio conta mais que salário nessa fase.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 3,5k–7k</div><div class="sal-note">Designer de coleção ou coordenador(a) de produto em marca ou indústria.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Topo</div><div class="sal-range">R$ 8k–20k+</div><div class="sal-note">Diretor(a) de estilo ou estilista com marca própria reconhecida no mercado.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> assim como em publicidade, muito estilista de sucesso ganha mais com marca própria ou consultoria do que com salário fixo em empresa. Construir nome faz parte do jogo financeiro da moda.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.spfw.com" class="lcard" target="_blank"><span class="lc-icon">👗</span><div class="lc-body"><strong>SPFW — São Paulo Fashion Week</strong><span>A principal semana de moda do Brasil, referência de mercado e tendência</span></div><span class="lc-arr">→</span></a>
+        <a href="https://ffw.uol.com.br" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>FFW</strong><span>Notícias e conteúdo sobre moda, mercado e tendências no Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.businessoffashion.com" class="lcard" target="_blank"><span class="lc-icon">🌍</span><div class="lc-body"><strong>Business of Fashion</strong><span>Referência internacional sobre o mercado global de moda</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais de estilistas e designers de moda reportados por profissionais</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.abit.org.br" class="lcard" target="_blank"><span class="lc-icon">🏭</span><div class="lc-body"><strong>ABIT — Associação Brasileira da Indústria Têxtil</strong><span>Dados e panorama do setor têxtil e de confecção no Brasil</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Moda é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-mod">
+        <div class="cl-item" onclick="toggle(this,'cl-mod')"><div class="cl-box"></div><div class="cl-text">Tenho senso estético apurado e gosto de criar ou desenhar roupas e acessórios.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mod')"><div class="cl-box"></div><div class="cl-text">Me interesso por como a moda muda de cultura para cultura ao redor do mundo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mod')"><div class="cl-box"></div><div class="cl-text">Aceito que o início de carreira paga pouco e que portfólio conta mais que diploma.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mod')"><div class="cl-box"></div><div class="cl-text">Tenho paciência com detalhes técnicos: modelagem, costura, tecido.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mod')"><div class="cl-box"></div><div class="cl-text">Consigo acompanhar tendências que mudam rápido sem me cansar disso.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mod')"><div class="cl-box"></div><div class="cl-text">Gostaria de viajar (semanas de moda, feiras, fornecedores) como parte do trabalho.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mod')"><div class="cl-box"></div><div class="cl-text">Me preocupo com sustentabilidade e ética na forma como a roupa é produzida.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mod')"><div class="cl-box"></div><div class="cl-text">Tenho visão de negócio: entendo que moda também é produto, preço e venda.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mod')"><div class="cl-box"></div><div class="cl-text">Prefiro um trabalho criativo e variável a uma rotina fixa e previsível.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-mod">0 de 9</span></div>
+      <div class="cl-result" id="res-mod"><div class="verdict" id="vd-mod"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAÇÃO ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔍</span><h2>Os quatro lado a lado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Quatro caminhos bem diferentes de atuar no mundo: negociando entre países, aplicando a lei, cuidando de imagens ou criando moda.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão</th>
+              <th class="h-ri">🌍 Rel. Internacionais</th>
+              <th class="h-dir">⚖️ Direito</th>
+              <th class="h-rp">🤝 Rel. Públicas</th>
+              <th class="h-mod">👗 Moda</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Foco principal</td><td>Entender e negociar relações entre países</td><td>Entender, aplicar e defender a lei</td><td>Cuidar da imagem de organizações</td><td>Criar produtos e coleções de vestuário</td></tr>
+            <tr><td>Duração do curso</td><td>4 anos</td><td>5 anos + OAB</td><td>4 anos</td><td>4 anos (ou tecnólogo, 2–3 anos)</td></tr>
+            <tr><td>Tipo de perfil</td><td>Estratégico, adaptável a culturas</td><td>Argumentativo e analítico</td><td>Diplomático e organizador</td><td>Criativo e visual</td></tr>
+            <tr><td>Relação com viagens e outras culturas</td><td>Direta e central</td><td>Rara (exceto Direito Internacional)</td><td>Ocasional (comunicação internacional)</td><td>Possível (moda internacional, feiras)</td></tr>
+            <tr><td>Relação com política</td><td>Central (política externa)</td><td>Presente (Constitucional, carreiras públicas)</td><td>Central (comunicação de governo)</td><td>Indireta (moda como cultura)</td></tr>
+            <tr><td>Lida com leis</td><td>Presente (Direito Internacional Público)</td><td>É o objeto central do curso</td><td>Pontualmente (ética, LGPD)</td><td>Pouco (direitos autorais, trabalhista)</td></tr>
+            <tr><td>Onde trabalha</td><td>Embaixadas, multinacionais, ONGs, organismos internacionais</td><td>Escritórios, tribunais, concursos</td><td>Empresas, governo, ONGs</td><td>Ateliês, indústria têxtil, marcas, eventos</td></tr>
+            <tr><td>Estabilidade</td><td>Alta na diplomacia (via concurso); variável fora dela</td><td>Alta via concurso; variável na advocacia</td><td>Média a boa (governo paga bem)</td><td>Baixa a média (mercado majoritariamente autônomo)</td></tr>
+            <tr><td>Potencial de remuneração</td><td>R$ 22,5k–33k+ (diplomata) / R$ 3k–15k (mercado privado)</td><td>R$ 15k–35k+ (carreira pública)</td><td>R$ 9k–20k+ (diretoria)</td><td>R$ 8k–20k+ (com marca própria)</td></tr>
+            <tr><td>Pergunta central</td><td>"Como o Brasil se relaciona com o mundo, e como eu negocio isso?"</td><td>"O que a lei diz e como defender o que é justo?"</td><td>"Como esta organização é vista e como deveria ser?"</td><td>"Como transformo uma ideia em algo que as pessoas querem vestir?"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Para te ajudar a decidir</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        🌍 <strong>Relações Internacionais</strong> é o caminho de quem quer trabalhar entre países: diplomacia, comércio exterior, cooperação e organizações internacionais. Viagem e contato com outras culturas fazem parte da rotina.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        ⚖️ <strong>Direito</strong> é o caminho de quem quer trabalhar dentro do sistema jurídico: analisar leis, atuar em processos, defender pessoas e direitos, ou construir carreira pública. O impacto acontece pela aplicação da lei.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🤝 <strong>Relações Públicas</strong> é o caminho de quem quer cuidar da imagem e dos relacionamentos de organizações, empresas, governo, ONGs, líderes. O trabalho acontece nos bastidores, construindo pontes entre a organização e seus públicos.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        👗 <strong>Moda</strong> é o caminho de quem quer criar: peças, coleções, marcas. O impacto acontece pela criação de algo visual e cultural que as pessoas usam de verdade.
+      </div>
+      <p class="note" style="margin-top:16px;">Use os checklists de cada aba, veja onde sua pontuação foi mais alta e leve esse resultado pra conversar com sua orientadora. O que ficou de fora costuma dizer tanto quanto o que você marcou.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais que existem pra cada formação. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no Brasil.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col">
+          <div class="vaga-col-head ri">🌍 Rel. Internacionais</div>
+          <div class="vaga-role"><strong>Analista de Comércio Exterior</strong><span>Cuida de exportação, importação e negociações comerciais entre empresas de diferentes países.</span></div>
+          <div class="vaga-role"><strong>Assistente de Relações Internacionais</strong><span>Apoia projetos e relações institucionais de uma empresa ou organização com outros países.</span></div>
+          <div class="vaga-role"><strong>Consultor(a) de Assuntos Internacionais</strong><span>Analisa cenários políticos e econômicos globais para orientar decisões de empresas ou governos.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn ri" href="https://www.linkedin.com/jobs/search/?keywords=Rela%C3%A7%C3%B5es%20Internacionais&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head dir">⚖️ Direito</div>
+          <div class="vaga-role"><strong>Estagiário(a) Jurídico(a)</strong><span>Pesquisa jurisprudência, auxilia na elaboração de peças e acompanha processos no escritório ou tribunal.</span></div>
+          <div class="vaga-role"><strong>Advogado(a) Trabalhista / Criminal</strong><span>Representa clientes em processos judiciais e cuida da defesa de direitos em juízo.</span></div>
+          <div class="vaga-role"><strong>Analista Jurídico (empresa)</strong><span>Cuida dos contratos, regulatório e questões legais do dia a dia de uma empresa ou organização.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn dir" href="https://www.linkedin.com/jobs/search/?keywords=Direito%20Jur%C3%ADdico&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head rp">🤝 Relações Públicas</div>
+          <div class="vaga-role"><strong>Assessor(a) de Imprensa</strong><span>Cuida do relacionamento de uma organização com jornalistas e controla o que vai para as notícias.</span></div>
+          <div class="vaga-role"><strong>Analista de Comunicação Corporativa</strong><span>Gerencia a imagem de uma empresa junto a seus diferentes públicos: funcionários, governo e sociedade.</span></div>
+          <div class="vaga-role"><strong>Coordenador(a) de Comunicação Institucional</strong><span>Planeja e cuida da imagem de um órgão público ou grande organização junto à mídia e à comunidade.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn rp" href="https://www.linkedin.com/jobs/search/?keywords=Rela%C3%A7%C3%B5es%20P%C3%BAblicas&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head mod">👗 Moda</div>
+          <div class="vaga-role"><strong>Assistente de Estilo</strong><span>Ajuda a desenvolver peças e coleções, do desenho inicial até a ficha técnica de produção.</span></div>
+          <div class="vaga-role"><strong>Designer de Coleção</strong><span>Cria as peças e a identidade visual de uma marca a cada temporada.</span></div>
+          <div class="vaga-role"><strong>Analista de Produto (Moda)</strong><span>Cuida do desenvolvimento e da viabilidade de fabricação das peças de uma marca ou indústria.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn mod" href="https://www.linkedin.com/jobs/search/?keywords=Design%20de%20Moda&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SEUS CRITÉRIOS ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os quatro cursos</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estes são os critérios que você elencou e organizou como os mais importantes durante o processo, do mais importante (1º) ao menos importante (10º). A tabela descreve, de forma objetiva, como cada critério se apresenta em cada curso. Ela não aponta resposta certa nem indica um caminho: é material para você pensar e conversar com sua orientadora.</p>
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Muito presente</span>
+        <span><span class="dot y"></span>Presente em parte</span>
+        <span><span class="dot r"></span>Pouco presente</span>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table crit-table">
+          <thead>
+            <tr>
+              <th>Critério (em ordem de prioridade)</th>
+              <th class="h-ri">🌍 Rel. Internacionais</th>
+              <th class="h-dir">⚖️ Direito</th>
+              <th class="h-rp">🤝 Rel. Públicas</th>
+              <th class="h-mod">👗 Moda</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1º — Ter um trabalho estável</td>
+              <td data-label="🌍 Rel. Internacionais"><span class="dot y"></span>Dividido: a diplomacia, via concurso, é extremamente estável; fora dela, o mercado privado é mais variável.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Concurso público oferece uma das maiores estabilidades entre as carreiras. Mesmo na advocacia, há caminhos mais previsíveis com o tempo.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot y"></span>Governo oferece estabilidade real; empresa privada e agência variam mais conforme o setor.</td>
+              <td data-label="👗 Moda"><span class="dot r"></span>Mercado majoritariamente autônomo e sujeito a tendências; poucas posições fixas de longo prazo.</td>
+            </tr>
+            <tr>
+              <td>2º — Ter alta remuneração</td>
+              <td data-label="🌍 Rel. Internacionais"><span class="dot y"></span>A diplomacia paga muito bem desde o início; o mercado privado começa mais modesto e cresce com especialização.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Maior potencial de remuneração dos quatro, especialmente em carreiras públicas como magistratura e MP.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot y"></span>Bom em cargos de diretoria e governo, mas a maior parte da carreira fica em faixa média.</td>
+              <td data-label="👗 Moda"><span class="dot y"></span>Só o topo, com marca própria ou nome reconhecido, alcança remuneração alta; a maioria fica em faixa modesta.</td>
+            </tr>
+            <tr>
+              <td>3º — Sentir satisfação no que faz</td>
+              <td data-label="🌍 Rel. Internacionais"><span class="dot g"></span>Contato direto com culturas, causas e negociações de impacto global costuma gerar forte senso de propósito.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Defender pessoas, causas e direitos costuma gerar forte senso de propósito, ainda que o processo seja desgastante.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot y"></span>Satisfação ligada ao resultado indireto de bastidor, geralmente menos visível que nas outras áreas.</td>
+              <td data-label="👗 Moda"><span class="dot g"></span>Expressão criativa e autoria de um produto final costumam gerar forte satisfação pessoal.</td>
+            </tr>
+            <tr>
+              <td>4º — Viajar com frequência</td>
+              <td data-label="🌍 Rel. Internacionais"><span class="dot g"></span>Viagens e mudanças de país fazem parte natural da carreira, principalmente na diplomacia.</td>
+              <td data-label="⚖️ Direito"><span class="dot r"></span>Viagem não é parte estrutural da rotina, salvo exceções raras (Direito Internacional, casos específicos).</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot y"></span>Viagens pontuais para eventos e reuniões existem, mas não são rotina central da profissão.</td>
+              <td data-label="👗 Moda"><span class="dot y"></span>Viagens a feiras e semanas de moda existem, mas não são garantidas nem frequentes pra maioria dos profissionais.</td>
+            </tr>
+            <tr>
+              <td>5º — Lidar com relações internacionais e diplomacia</td>
+              <td data-label="🌍 Rel. Internacionais"><span class="dot g"></span>É o núcleo do curso e da profissão.</td>
+              <td data-label="⚖️ Direito"><span class="dot y"></span>Presente no Direito Internacional, mas não é o eixo central do curso.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot y"></span>Presente em comunicação internacional e relações institucionais, mas não é o foco principal.</td>
+              <td data-label="👗 Moda"><span class="dot r"></span>Pouco presente, salvo na moda internacional como nicho específico.</td>
+            </tr>
+            <tr>
+              <td>6º — Assuntos de culturas do mundo, através de viagem</td>
+              <td data-label="🌍 Rel. Internacionais"><span class="dot g"></span>Estudo de política externa e cooperação internacional coloca outras culturas no centro do curso.</td>
+              <td data-label="⚖️ Direito"><span class="dot r"></span>Pouco presente, salvo em Direito Internacional e Direitos Humanos.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot y"></span>Comunicação internacional e diversidade de públicos aparecem, mas não são o eixo do curso.</td>
+              <td data-label="👗 Moda"><span class="dot y"></span>A moda dialoga com estéticas e tendências de diferentes países, mas o dia a dia da profissão costuma ser local.</td>
+            </tr>
+            <tr>
+              <td>7º — Participar de atividades políticas</td>
+              <td data-label="🌍 Rel. Internacionais"><span class="dot g"></span>Política externa é assunto central do curso e da atuação profissional.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Presente em Direito Constitucional, carreiras públicas e assessoria legislativa.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot g"></span>Comunicação de governo e assessoria política são áreas centrais da profissão.</td>
+              <td data-label="👗 Moda"><span class="dot r"></span>Pouca relação direta, salvo quando a moda é usada como discurso cultural ou social.</td>
+            </tr>
+            <tr>
+              <td>8º — Mediar conflitos</td>
+              <td data-label="🌍 Rel. Internacionais"><span class="dot g"></span>Negociação e resolução de conflitos entre países é função central da área.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Mediação e conciliação são funções jurídicas formais e reconhecidas.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot y"></span>Presente na gestão de crises e no diálogo entre partes em situações de tensão.</td>
+              <td data-label="👗 Moda"><span class="dot r"></span>Não é uma função característica da profissão.</td>
+            </tr>
+            <tr>
+              <td>9º — Lidar com leis e legislação</td>
+              <td data-label="🌍 Rel. Internacionais"><span class="dot y"></span>Direito Internacional Público faz parte do curso, mas não é o eixo central.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>É o objeto central do curso: estudar, interpretar e aplicar leis define a profissão.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot r"></span>Aparece pontualmente em ética profissional e LGPD.</td>
+              <td data-label="👗 Moda"><span class="dot r"></span>Aparece pontualmente em direitos autorais e legislação trabalhista.</td>
+            </tr>
+            <tr>
+              <td>10º — Ambiente tranquilo</td>
+              <td data-label="🌍 Rel. Internacionais"><span class="dot r"></span>Rotina de negociações, prazos diplomáticos e mudanças de país geram imprevisibilidade constante.</td>
+              <td data-label="⚖️ Direito"><span class="dot y"></span>O trabalho de escritório tem cadência própria, mas prazos processuais e audiências geram pressão real.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot y"></span>A rotina de escritório pode ser mais calma, mas crises de imagem exigem resposta imediata.</td>
+              <td data-label="👗 Moda"><span class="dot r"></span>Prazos de coleção e ritmo de tendências geram pressão constante sobre a rotina de trabalho.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="margin-top:16px;">Leia coluna por coluna pensando no peso que cada critério tem para você. Os critérios estão na ordem que você definiu como prioridade, então os primeiros têm mais peso na sua decisão. Use esta leitura como ponto de partida da conversa com sua orientadora.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Ranking dos critérios (soma dos pontos)</h2></div>
+    <div class="sc-body">
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Verde = 2 pontos</span>
+        <span><span class="dot y"></span>Amarelo = 1 ponto</span>
+        <span><span class="dot r"></span>Vermelho = 0 ponto</span>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 🌍 Relações Internacionais</span><span class="rank-score">15 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill ri" style="width:75%;">15</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥈 ⚖️ Direito</span><span class="rank-score">14 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill dir" style="width:70%;">14</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥉 🤝 Relações Públicas</span><span class="rank-score">10 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill rp" style="width:50%;">10</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">👗 Moda</span><span class="rank-score">5 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill mod" style="width:25%;">5</div></div>
+        </div>
+      </div>
+      <p class="note" style="margin-top:16px;">O ranking só soma as bolinhas da tabela acima, ele não decide por você. Os critérios do início da lista pesam mais do que os do final, então vale olhar não só o total, mas onde cada curso pontuou nos critérios que estão no topo da sua lista.</p>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com.br</p>
+</footer>
+
+
+<script>
+  const verdicts = [
+    { min: 8, text: "Perfil muito alinhado! ✨", sub: "Você tem as características essenciais para esse caminho. Aprofunde a pesquisa com confiança e converse com profissionais da área." },
+    { min: 6, text: "Boa afinidade! 👍", sub: "Você tem bastante a ver com essa profissão. Vale explorar mais: uma visita à faculdade ou conversa com um profissional pode ajudar muito." },
+    { min: 4, text: "Alguns pontos merecem atenção 🤔", sub: "Você tem afinidade com partes da área, mas alguns inegociáveis podem ser desafiadores. Converse com sua orientadora." },
+    { min: 0, text: "Talvez haja opções mais alinhadas com você 🔍", sub: "Isso não é descarte, é autoconhecimento. O que ficou de fora pode te ajudar a entender o que você realmente busca." }
+  ];
+
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    const v = verdicts.find(x => checked >= x.min);
+    document.getElementById('vd-' + id).textContent = v.text;
+    resEl.querySelector('.sub').textContent = v.sub;
+    resEl.classList.add('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Carreiras — Administração, Publicidade e Cinema | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Montserrat = fonte oficial Rumo. Caveat = substituta cursiva da Balneario (não disponível em web font). -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* ── Paleta oficial Instituto Rumo ── */
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Administração — Verde Profundo */
+      --adm:     #3B503F;
+      --adm-lt:  #EAEFEB;
+      --adm-mid: #C2CFC4;
+
+      /* Publicidade e Propaganda — Laranja Rumo */
+      --pub:     #D9563F;
+      --pub-lt:  #FFF0ED;
+      --pub-mid: #FBC9BE;
+
+      /* Cinema — Bordô Rosado */
+      --cin:     #6B2F3C;
+      --cin-lt:  #F6EAED;
+      --cin-mid: #DCC0C8;
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── Header ─── */
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    /* ─── Nav ─── */
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.adm.active { color: var(--adm); border-bottom-color: var(--adm); }
+    .tab-btn.pub.active { color: var(--pub); border-bottom-color: var(--pub); }
+    .tab-btn.cin.active { color: var(--cin); border-bottom-color: var(--cin); }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    /* ─── Panels ─── */
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    /* ─── Section cards ─── */
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .adm .sc-head { background: var(--adm-lt); border-color: var(--adm-mid); }
+    .adm .sc-head h2 { color: var(--adm); }
+    .pub .sc-head { background: var(--pub-lt); border-color: var(--pub-mid); }
+    .pub .sc-head h2 { color: var(--pub); }
+    .cin .sc-head { background: var(--cin-lt); border-color: var(--cin-mid); }
+    .cin .sc-head h2 { color: var(--cin); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    /* ─── Lists ─── */
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .adm ul.sl li::before { color: var(--adm); }
+    .pub ul.sl li::before { color: var(--pub); }
+    .cin ul.sl li::before { color: var(--cin); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    /* ─── Tags ─── */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .adm .tag { background: var(--adm-lt); color: var(--adm); border-color: var(--adm-mid); }
+    .pub .tag { background: var(--pub-lt); color: var(--pub); border-color: var(--pub-mid); }
+    .cin .tag { background: var(--cin-lt); color: var(--cin); border-color: var(--cin-mid); }
+
+    /* ─── Boxes ─── */
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .adm .hbox { background: var(--adm-lt); border-color: var(--adm); }
+    .pub .hbox { background: var(--pub-lt); border-color: var(--pub); }
+    .cin .hbox { background: var(--cin-lt); border-color: var(--cin); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .adm .accent { color: var(--adm); }
+    .pub .accent { color: var(--pub); }
+    .cin .accent { color: var(--cin); }
+
+    /* ─── Tech grid ─── */
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .adm .tech-card { background: var(--adm-lt); border-color: var(--adm-mid); }
+    .pub .tech-card { background: var(--pub-lt); border-color: var(--pub-mid); }
+    .cin .tech-card { background: var(--cin-lt); border-color: var(--cin-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .adm .tech-card strong { color: var(--adm); }
+    .pub .tech-card strong { color: var(--pub); }
+    .cin .tech-card strong { color: var(--cin); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    /* ─── Salary grid ─── */
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .adm .sal-card { background: var(--adm-lt); border-color: var(--adm-mid); }
+    .pub .sal-card { background: var(--pub-lt); border-color: var(--pub-mid); }
+    .cin .sal-card { background: var(--cin-lt); border-color: var(--cin-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .adm .sal-range { color: var(--adm); }
+    .pub .sal-range { color: var(--pub); }
+    .cin .sal-range { color: var(--cin); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── Comparison table ─── */
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-adm { background: var(--adm); }
+    .comp-table th.h-pub { background: var(--pub); }
+    .comp-table th.h-cin { background: var(--cin); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    /* ─── Link cards ─── */
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .adm .lcard:hover { border-color: var(--adm); }
+    .pub .lcard:hover { border-color: var(--pub); }
+    .cin .lcard:hover { border-color: var(--cin); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    /* ─── Checklist ─── */
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .adm .cl-item:hover, .adm .cl-item.checked { background: var(--adm-lt); border-color: var(--adm); }
+    .pub .cl-item:hover, .pub .cl-item.checked { background: var(--pub-lt); border-color: var(--pub); }
+    .cin .cl-item:hover, .cin .cl-item.checked { background: var(--cin-lt); border-color: var(--cin); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .adm .cl-item.checked .cl-box { background: var(--adm); border-color: var(--adm); }
+    .pub .cl-item.checked .cl-box { background: var(--pub); border-color: var(--pub); }
+    .cin .cl-item.checked .cl-box { background: var(--cin); border-color: var(--cin); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .adm .cl-score span { color: var(--adm); font-weight: 800; }
+    .pub .cl-score span { color: var(--pub); font-weight: 800; }
+    .cin .cl-score span { color: var(--cin); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .adm .cl-result { background: var(--adm-lt); border-color: var(--adm-mid); }
+    .pub .cl-result { background: var(--pub-lt); border-color: var(--pub-mid); }
+    .cin .cl-result { background: var(--cin-lt); border-color: var(--cin-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .verdict { font-size: 18px; font-weight: 800; }
+    .adm .cl-result .verdict { color: var(--adm); }
+    .pub .cl-result .verdict { color: var(--pub); }
+    .cin .cl-result .verdict { color: var(--cin); }
+    .cl-result .sub { font-size: 13px; color: var(--text); margin-top: 8px; line-height: 1.6; }
+
+    /* ─── Bolinhas de presença (aba critérios) ─── */
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; } .dot.y { background: #E0A33E; } .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    /* ─── Ranking dos critérios ─── */
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+    .rank-fill.adm { background: var(--adm); } .rank-fill.pub { background: var(--pub); } .rank-fill.cin { background: var(--cin); }
+
+    /* ─── Vagas reais ─── */
+    .vagas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-col-head.adm { background: var(--adm); } .vaga-col-head.pub { background: var(--pub); } .vaga-col-head.cin { background: var(--cin); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-col.adm .vaga-role strong { color: var(--adm); }
+    .vaga-col.pub .vaga-role strong { color: var(--pub); }
+    .vaga-col.cin .vaga-role strong { color: var(--cin); }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+    .vaga-btn.adm { background: var(--adm); } .vaga-btn.pub { background: var(--pub); } .vaga-btn.cin { background: var(--cin); }
+
+    /* ─── Footer ─── */
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+
+      /* Tabela de critérios vira cartões empilhados no celular */
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>Administração · Publicidade e Propaganda · Cinema
+    <span class="hd-accent">recomeçar não é recuar</span>
+  </h1>
+  <p class="hd-sub">Feito para quem já começou uma graduação, percebeu que o caminho era outro e agora escolhe de novo, com mais informação e menos pressa. Três caminhos que conversam com o universo da comunicação e da mídia, cada um de um jeito bem diferente.</p>
+</header>
+
+<nav>
+  <button class="tab-btn adm active" data-c="adm" onclick="show('adm')">🏢 Administração</button>
+  <button class="tab-btn pub" data-c="pub" onclick="show('pub')">📣 Publicidade e Propaganda</button>
+  <button class="tab-btn cin" data-c="cin" onclick="show('cin')">🎬 Cinema</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">⚖️ Comparar os três</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ ADMINISTRAÇÃO ═══════════════════════════════ -->
+<div class="panel adm active" id="p-adm">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Administração?</h2></div>
+    <div class="sc-body">
+      <p>Administração é o curso que ensina a fazer uma organização funcionar: pessoas, dinheiro, processos, produtos e decisões. É um <strong>bacharelado de 4 anos</strong>, reconhecido pelo MEC, e existe também na versão tecnóloga (Gestão Comercial, Processos Gerenciais, Gestão de RH) com 2 a 2,5 anos. Diferente de Estudos de Mídia, é um curso bem prático e ligado ao mundo dos negócios desde cedo.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Fundamentos de administração, matemática financeira, contabilidade básica, economia, estatística e comportamento organizacional. A base mais "dura" do curso.</li>
+        <li><strong>2º–3º ano:</strong> Marketing, gestão de pessoas, finanças, operações, logística, sistemas de informação e empreendedorismo. Aqui o curso fica mais aplicado.</li>
+        <li><strong>4º ano:</strong> Estratégia, gestão de projetos, jogos de empresa, estágio obrigatório e TCC. Muita gente já está estagiando antes disso.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a Administração tem conselho próprio (CFA e os CRAs regionais). Para assinar como "Administrador" e atuar em algumas funções específicas, é preciso registro no CRA. Na maioria das vagas de empresa, porém, o que pesa é a entrega, não o registro.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Marketing e produto:</strong> planejar campanhas, lançar produtos, cuidar de redes sociais e da relação com o cliente. O ponto onde a ADM mais encosta na sua afinidade com mídia.</li>
+        <li><strong>Finanças:</strong> cuidar do dinheiro da empresa, investimentos, orçamento e análise de resultados.</li>
+        <li><strong>Recursos Humanos / Gente e Gestão:</strong> seleção, desenvolvimento de pessoas, cultura e clima da empresa.</li>
+        <li><strong>Comercial e vendas:</strong> negociar, gerir carteira de clientes e metas, abrir mercados.</li>
+        <li><strong>Logística e operações:</strong> fazer produtos e serviços chegarem na hora certa, do jeito certo, ao menor custo.</li>
+        <li><strong>Gestão de projetos:</strong> organizar prazos, equipes e entregas — função presente em quase todo setor.</li>
+        <li><strong>Consultoria empresarial:</strong> ajudar empresas a resolver problemas e crescer.</li>
+        <li><strong>Empreendedorismo:</strong> abrir e tocar o próprio negócio com base sólida de gestão.</li>
+        <li><strong>Análise de dados de negócio:</strong> transformar números em decisão, área em alta e bem paga.</li>
+        <li><strong>Carreira pública:</strong> concursos para tribunais, prefeituras, bancos públicos e órgãos federais.</li>
+        <li><strong>Startups:</strong> áreas de operações, growth e produto, ambientes jovens e dinâmicos.</li>
+        <li><strong>Gestão cultural e de entretenimento:</strong> administrar produtoras, festivais, eventos e projetos criativos, unindo negócios e mídia.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Administração combina cabeça organizada com facilidade pra lidar com gente e números.</p>
+      <div class="tags">
+        <span class="tag">Organização</span>
+        <span class="tag">Facilidade com números</span>
+        <span class="tag">Visão do todo</span>
+        <span class="tag">Liderança</span>
+        <span class="tag">Comunicação</span>
+        <span class="tag">Negociação</span>
+        <span class="tag">Tomada de decisão</span>
+        <span class="tag">Curiosidade sobre empresas</span>
+        <span class="tag">Trabalho em equipe</span>
+        <span class="tag">Pragmatismo</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando um trabalho em grupo está bagunçado, você é a pessoa que naturalmente organiza quem faz o quê e até quando? Se isso te dá prazer em vez de irritação, a Administração tem muito a ver com você.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>É um curso muito procurado, então tem muita gente formada.</strong> Administração é uma das graduações com mais formandos no Brasil. Pra se destacar, não basta o diploma: estágio bom, idiomas e uma especialização fazem diferença.</div>
+      <div class="cbox"><strong>O começo costuma ser de base, não de comando.</strong> Ninguém sai da faculdade "gerenciando". Os primeiros anos são de aprender por dentro, em funções operacionais, com salário inicial modesto.</div>
+      <div class="cbox"><strong>Tem matemática e finanças no caminho.</strong> Se você foge totalmente de números, vai sofrer nos primeiros semestres. Não precisa amar, mas precisa encarar.</div>
+      <div class="cbox"><strong>É um curso "largo".</strong> A ADM dá uma base de tudo, mas de nada com muita profundidade. Quem não escolhe uma área pra se aprofundar corre o risco de ficar genérico.</div>
+      <div class="cbox"><strong>Pressão por resultado.</strong> Em quase toda função de gestão, você é cobrado por metas e números. Isso pode ser motivador ou estressante, depende muito do seu perfil.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Decisão por dados</strong><p>Planilha está virando painel inteligente. Saber ler dados deixou de ser diferencial e virou requisito básico de gestão.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA no operacional</strong><p>Tarefas repetitivas (relatórios, conciliações, triagens) estão sendo automatizadas. Sobra mais tempo pra estratégia e pessoas.</p></div>
+        <div class="tech-card"><div class="tc-icon">🛒</div><strong>Gestão digital</strong><p>E-commerce, marketplaces e apps mudaram a forma de vender e atender. Administrar hoje é administrar também o digital.</p></div>
+        <div class="tech-card"><div class="tc-icon">💳</div><strong>Fintechs e meios de pagamento</strong><p>Dinheiro circula diferente. Entender pagamentos, crédito e finanças digitais virou parte da rotina de quem gere negócios.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏠</div><strong>Trabalho remoto e híbrido</strong><p>Gerir equipes que não estão na mesma sala exige novas habilidades de liderança, confiança e comunicação clara.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌱</div><strong>ESG e propósito</strong><p>Empresas cobram gestão sustentável e socialmente responsável. Isso abre vagas novas e muda o que se espera de um gestor.</p></div>
+      </div>
+      <p class="note">⚡ O administrador do futuro não compete com a tecnologia: usa a tecnologia pra decidir melhor e mais rápido, e foca no que é só humano — liderar pessoas e definir rumos.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>É o curso mais versátil que existe:</strong> administrador trabalha em empresa de qualquer tamanho, setor e cidade. Pouca profissão abre tantas portas diferentes.</li>
+        <li><strong>Muita vaga, muita concorrência:</strong> o volume de oportunidades é alto, mas o número de formados também. Diferenciação é tudo.</li>
+        <li><strong>Tech, bancos e varejo puxam os melhores salários:</strong> empresas como Nubank, Itaú, Ambev, Mercado Livre e Magalu têm programas de trainee muito disputados.</li>
+        <li><strong>Setor público é caminho de estabilidade:</strong> concursos pagam bem e dão segurança, mas exigem preparação longa.</li>
+        <li><strong>Empreender é uma saída real:</strong> muita gente de ADM acaba abrindo o próprio negócio, sozinho ou com sócios.</li>
+        <li><strong>Programas de trainee são a porta de ouro:</strong> entram em grandes empresas com formação acelerada e salário acima da média. <em>(fonte: pesquisas Cia de Talentos e Catho, 2024–2025)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Escolher uma área pra se aprofundar é o que tira o administrador da faixa "genérico".</p>
+      <div class="tags">
+        <span class="tag">⭐ Marketing e Growth</span>
+        <span class="tag">⭐ Finanças e Investimentos</span>
+        <span class="tag">⭐ Análise de Dados / BI</span>
+        <span class="tag">⭐ Gestão de Projetos</span>
+        <span class="tag">Gestão de Pessoas / RH</span>
+        <span class="tag">Logística e Supply Chain</span>
+        <span class="tag">Empreendedorismo e Inovação</span>
+        <span class="tag">Comércio Exterior</span>
+        <span class="tag">Gestão Pública</span>
+        <span class="tag">Gestão Cultural e de Eventos</span>
+        <span class="tag">Vendas e Comercial</span>
+        <span class="tag">Consultoria Estratégica</span>
+        <span class="tag">MBA em Gestão</span>
+        <span class="tag">Agronegócio</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhores salários no Brasil em 2024–2025. Finanças, dados e marketing/growth concentram as faixas mais altas para quem se especializa cedo.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um administrador?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no mercado corporativo brasileiro. Tech, bancos e consultorias pagam acima disso para cargos sênior.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,5k–3,5k</div><div class="sal-note">Estágio, assistente ou trainee. Fase de aprender por dentro. Programas de trainee pagam mais.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 5k–9k</div><div class="sal-note">Analista pleno ou sênior com área definida e alguns anos de experiência.</div></div>
+        <div class="sal-card"><div class="sal-stage">Liderança / Topo</div><div class="sal-range">R$ 12k–40k+</div><div class="sal-note">Coordenação, gerência e diretoria. Diretor e C-level chegam às faixas mais altas.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em Administração, o salário sobe muito mais por causa da área escolhida e do setor do que pelo tempo de carreira. Um especialista em finanças ou dados numa fintech pode ganhar mais com 5 anos do que um gestor genérico com 15.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://cfa.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CFA — Conselho Federal de Administração</strong><span>O conselho oficial da profissão: o que faz um administrador, registro e áreas de atuação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais reportados por profissionais. Pesquise por cargo e empresa específica</span></div><span class="lc-arr">→</span></a>
+        <a href="https://exame.com/carreira/" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Exame — Carreira</strong><span>Notícias de negócios, gestão e mercado de trabalho no Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.ciadetalentos.com.br" class="lcard" target="_blank"><span class="lc-icon">🚀</span><div class="lc-body"><strong>Cia de Talentos</strong><span>Programas de trainee e estágio das maiores empresas do país</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/learning/" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>LinkedIn Learning</strong><span>Cursos de gestão, finanças, dados e liderança com certificado</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Administração é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-adm">
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Gosto de organizar coisas: tarefas, grupos, eventos. Bagunça me incomoda mais do que organizar cansa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Não tenho pavor de números. Posso não amar matemática, mas consigo lidar com ela quando precisa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade sobre como as empresas funcionam por dentro, como ganham dinheiro e tomam decisões.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Costumo assumir um papel de liderança ou de "quem puxa" nos trabalhos em grupo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Me dou bem conversando e negociando com pessoas diferentes de mim.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Prefiro coisas práticas e aplicadas a teorias abstratas. Quero ver como aquilo serve no mundo real.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Aceito que vou começar de baixo e construir minha carreira aos poucos, sem atalho.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Trabalhar com metas e ser cobrado por resultado me estimula mais do que me paralisa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Gosto da ideia de poder trabalhar em quase qualquer setor, inclusive no mundo criativo e da mídia.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-adm">0 de 9</span></div>
+      <div class="cl-result" id="res-adm"><div class="verdict" id="vd-adm"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ PUBLICIDADE ═══════════════════════════════ -->
+<div class="panel pub" id="p-pub">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Publicidade e Propaganda?</h2></div>
+    <div class="sc-body">
+      <p>Publicidade e Propaganda é o curso de quem quer criar comunicação que convence: campanhas, anúncios, conteúdo de marca, ideias que ficam na cabeça das pessoas. É um <strong>bacharelado de 4 anos</strong> (geralmente dentro de Comunicação Social), reconhecido pelo MEC. Comparado a Estudos de Mídia, é bem mais prático e voltado pra fazer, não só pensar sobre a mídia.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Teorias da comunicação, comportamento do consumidor, redação publicitária, fotografia, design e introdução ao marketing.</li>
+        <li><strong>2º–3º ano:</strong> Criação, direção de arte, planejamento de campanha, mídia, produção gráfica e audiovisual, marketing digital.</li>
+        <li><strong>4º ano:</strong> Gestão de marcas, campanha integrada, estágio e projeto experimental (uma campanha real como trabalho de conclusão).</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a publicidade é regulamentada por lei, mas <strong>não tem um conselho fiscalizador obrigatório</strong> como a OAB ou o CRM. A entrada no mercado é livre, o que aumenta a concorrência e faz do portfólio o seu maior documento, mais até que o diploma.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Redação publicitária (redator):</strong> criar os textos, slogans e ideias das campanhas. Escrever pra vender e emocionar.</li>
+        <li><strong>Direção de arte:</strong> cuidar do visual da campanha, como ela fica e o que comunica pelos olhos.</li>
+        <li><strong>Planejamento:</strong> entender o público e a marca pra definir a estratégia da campanha antes de criar.</li>
+        <li><strong>Mídia:</strong> decidir onde e quando os anúncios aparecem pra dar mais resultado com o orçamento disponível.</li>
+        <li><strong>Social media e conteúdo:</strong> cuidar das redes das marcas, criar posts, vídeos e calendário de conteúdo.</li>
+        <li><strong>Tráfego pago / performance:</strong> gerir anúncios no Google e Instagram com foco em resultado. Área muito requisitada.</li>
+        <li><strong>Branding:</strong> construir a identidade e a personalidade das marcas no longo prazo.</li>
+        <li><strong>Produção audiovisual publicitária:</strong> fazer os filmes e vídeos de campanha, ponto onde a Publi encosta no Cinema.</li>
+        <li><strong>Atendimento / gestão de contas:</strong> ser a ponte entre a agência e o cliente.</li>
+        <li><strong>Marketing de influência:</strong> conectar marcas e criadores de conteúdo, planejar e medir campanhas.</li>
+        <li><strong>UX writing e conteúdo digital:</strong> escrever a comunicação dentro de apps e sites.</li>
+        <li><strong>Criação de conteúdo próprio:</strong> virar criador, roteirista de redes ou empreendedor de mídia.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Publicidade pede criatividade com estratégia: ideia boa que também funciona.</p>
+      <div class="tags">
+        <span class="tag">Criatividade</span>
+        <span class="tag">Boa escrita</span>
+        <span class="tag">Curiosidade sobre pessoas</span>
+        <span class="tag">Repertório cultural</span>
+        <span class="tag">Senso estético</span>
+        <span class="tag">Capacidade de vender ideias</span>
+        <span class="tag">Trabalho em equipe</span>
+        <span class="tag">Lidar com crítica</span>
+        <span class="tag">Atenção a tendências</span>
+        <span class="tag">Adaptabilidade</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você vê uma propaganda ou um post que te marcou, sua cabeça vai pra "que ideia genial" ou pra "eu faria diferente assim"? Se você sente vontade de criar e melhorar o que vê, a Publi te chama. Se o que te interessa é entender o efeito daquilo na sociedade, isso é mais Estudos de Mídia, e talvez seja por isso que o curso atual não fechou.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O começo paga pouco e tem muita gente disputando.</strong> O salário inicial em agência costuma ser baixo (R$ 2.000–3.000) e a concorrência por vaga é grande. Portfólio bom é o que abre a porta.</div>
+      <div class="cbox"><strong>Ritmo intenso e prazos curtos.</strong> Principalmente em agência, o ritmo é puxado, com várias entregas ao mesmo tempo. Burnout é comum em quem não aprende a colocar limite.</div>
+      <div class="cbox"><strong>Sua ideia vai ser recusada o tempo todo.</strong> Você cria, o cliente recusa, refaz. Quem leva crítica pro lado pessoal sofre muito nessa profissão.</div>
+      <div class="cbox"><strong>A área muda numa velocidade absurda.</strong> Plataforma, algoritmo e ferramenta mudam o tempo todo. Parar de estudar significa ficar pra trás em pouco mais de um ano.</div>
+      <div class="cbox"><strong>Pressão por resultado mensurável.</strong> Hoje quase tudo é medido em cliques e vendas. Criatividade pura, sem número que comprove, perde espaço.</div>
+      <div class="cbox"><strong>Alta rotatividade.</strong> Trocar de agência ou de emprego com frequência é normal no setor. Estabilidade vem com reputação, e isso leva tempo.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">✍️</div><strong>IA na criação</strong><p>ChatGPT e similares geram rascunhos de texto em segundos. O publicitário vira mais editor e diretor de ideias do que digitador.</p></div>
+        <div class="tech-card"><div class="tc-icon">🖼️</div><strong>Imagem gerada por IA</strong><p>Midjourney e Firefly criam imagens de campanha em minutos. Saber dirigir essas ferramentas virou competência de criação.</p></div>
+        <div class="tech-card"><div class="tc-icon">🎯</div><strong>Anúncio personalizado</strong><p>As plataformas entregam o anúncio certo pra pessoa certa automaticamente. O foco muda pra estratégia e dados.</p></div>
+        <div class="tech-card"><div class="tc-icon">📱</div><strong>Creators e vídeo curto</strong><p>Reels e TikTok mudaram o que é propaganda. Marca virou conteúdo, e conteúdo virou marca.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Tudo é medido</strong><p>Cada campanha vira dado em tempo real. Saber ler métricas deixou de ser opcional pra quem cria.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔍</div><strong>Busca na era da IA</strong><p>As pessoas perguntam pra IA, não só pro Google. Marcas precisam aparecer também nessas respostas.</p></div>
+      </div>
+      <p class="note">⚡ A IA faz o operacional da criação ficar rápido. O que ela não faz é ter a ideia certa pro público certo: é aí que o publicitário continua insubstituível.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado grande, mas desigual:</strong> tem vaga em agência, em empresa, em startup e como freelancer. A qualidade e o salário variam muito.</li>
+        <li><strong>Digital domina:</strong> a maior parte das vagas hoje é de marketing digital, social, conteúdo e tráfego, não da propaganda tradicional de TV.</li>
+        <li><strong>Agência ensina rápido, paga pouco:</strong> é uma ótima escola no começo, com muitos projetos, mas o salário fica abaixo do mercado e a rotatividade é alta.</li>
+        <li><strong>Empresa (lado cliente) paga melhor:</strong> trabalhar no marketing de uma empresa costuma ter salário e rotina mais estáveis que em agência.</li>
+        <li><strong>Freelancer e creator é caminho real:</strong> com bom portfólio dá pra montar operação própria, atender marcas direto ou viver de conteúdo.</li>
+        <li><strong>Leve retração nas contratações formais:</strong> o emprego formal de publicitário recuou um pouco no último ano, mas o trabalho por projeto e no digital segue aquecido. <em>(fonte: salario.com.br e Glassdoor, 2025–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em publicidade, escolher uma força (criar, dados ou estratégia) acelera muito a carreira.</p>
+      <div class="tags">
+        <span class="tag">⭐ Tráfego Pago / Performance</span>
+        <span class="tag">⭐ Marketing Digital</span>
+        <span class="tag">⭐ Branding</span>
+        <span class="tag">⭐ Direção de Arte / Design</span>
+        <span class="tag">Redação e Conteúdo</span>
+        <span class="tag">Social Media</span>
+        <span class="tag">Produção Audiovisual</span>
+        <span class="tag">Marketing de Influência</span>
+        <span class="tag">UX Writing</span>
+        <span class="tag">Estratégia / Planejamento</span>
+        <span class="tag">Dados e Métricas</span>
+        <span class="tag">Marketing de Marca (cliente)</span>
+        <span class="tag">Comunicação Corporativa</span>
+        <span class="tag">Empreendedorismo Criativo</span>
+      </div>
+      <p class="note">⭐ Áreas com mais vaga e melhor remuneração no Brasil em 2024–2025. Performance, branding e direção de arte concentram os melhores pacotes pra quem se especializa.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um publicitário?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. Lado cliente e especialistas em performance/branding ganham acima da média de agência.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2k–3,2k</div><div class="sal-note">Estágio, assistente de criação ou redator júnior. Portfólio vale mais que o salário nessa fase.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 3,5k–6k</div><div class="sal-note">Já cria e entrega sozinho. Tráfego e branding puxam pra cima dessa faixa.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Liderança</div><div class="sal-range">R$ 8k–14k+</div><div class="sal-note">Direção de arte sênior, direção de criação e gerência. Diretor de contas e de marketing chegam ao topo.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em publicidade o salário fixo nem sempre conta a história toda. Muita gente boa ganha mais como freelancer, creator ou com a própria operação digital do que em carteira assinada de agência.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.meioemensagem.com.br" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Meio & Mensagem</strong><span>O principal portal de notícias de publicidade e marketing do Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.clubedecriacao.com.br" class="lcard" target="_blank"><span class="lc-icon">🎨</span><div class="lc-body"><strong>Clube de Criação</strong><span>As campanhas mais premiadas do país. Ótimo pra entender o que é trabalho bom</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais de cargos de publicidade reportados por profissionais</span></div><span class="lc-arr">→</span></a>
+        <a href="https://br.hubspot.com/blog" class="lcard" target="_blank"><span class="lc-icon">🔧</span><div class="lc-body"><strong>HubSpot Blog</strong><span>Marketing digital, conteúdo e redes na prática, com conteúdo em português</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/learning/" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>LinkedIn Learning</strong><span>Cursos de criação, tráfego, design e marketing digital com certificado</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Publicidade é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-pub">
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Tenho facilidade e gosto de criar: textos, ideias, imagens, posts. Criar me dá energia, não preguiça.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Sou curiosa sobre pessoas: por que compram, por que compartilham, o que as emociona.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Consumo bastante cultura: séries, música, redes, propaganda. Tenho repertório e isso me diverte.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Consigo lidar com minha ideia sendo recusada e refazer sem levar pro lado pessoal.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Trabalho bem em equipe e gosto de construir junto, trocando ideia com outras pessoas.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Tenho senso estético: percebo quando algo está visualmente bom ou estranho.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Aguento ritmo puxado e vários projetos ao mesmo tempo sem travar.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Aceito que o começo paga pouco e que meu portfólio importa mais que meu diploma.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Quero ficar perto do mundo da mídia, mas criando e fazendo, não só analisando.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-pub">0 de 9</span></div>
+      <div class="cl-result" id="res-pub"><div class="verdict" id="vd-pub"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ CINEMA ═══════════════════════════════ -->
+<div class="panel cin" id="p-cin">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Cinema?</h2></div>
+    <div class="sc-body">
+      <p>Cinema (ou Cinema e Audiovisual) é o curso de quem quer contar histórias em imagem e som: filmes, séries, documentários, videoclipes, conteúdo audiovisual. Existe como <strong>bacharelado de 4 anos</strong> e também como <strong>tecnólogo em Produção Audiovisual</strong> (2 a 2,5 anos), os dois reconhecidos pelo MEC. É um curso de mão na massa, muito set, equipamento e produção.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> História e linguagem do cinema, roteiro, fotografia, som, montagem e teoria da imagem.</li>
+        <li><strong>2º–3º ano:</strong> Direção, produção, técnicas de câmera e edição, documentário e ficção. Muita prática em set.</li>
+        <li><strong>4º ano:</strong> Projetos autorais, especialização em uma função, estágio e filme de conclusão.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> não há conselho de classe obrigatório. O setor é regulado pela <strong>Ancine</strong> (a agência do audiovisual), e técnicos costumam ter registro profissional (DRT) pelo Ministério do Trabalho. A maior parte do trabalho acontece por projeto, não em emprego fixo.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Direção:</strong> comandar a parte criativa de um filme, série ou vídeo. A função mais visível e disputada.</li>
+        <li><strong>Roteiro:</strong> escrever as histórias, diálogos e estruturas. Pode trabalhar pra cinema, TV e streaming.</li>
+        <li><strong>Produção:</strong> viabilizar o projeto: orçamento, equipe, locações, cronograma. Une criatividade e gestão.</li>
+        <li><strong>Direção de fotografia:</strong> cuidar da imagem, luz e câmera. Função técnica e artística muito valorizada.</li>
+        <li><strong>Montagem / edição:</strong> dar ritmo e sentido ao material gravado. Demanda alta também fora do cinema.</li>
+        <li><strong>Som e desenho sonoro:</strong> captar e construir a experiência sonora da obra.</li>
+        <li><strong>Conteúdo para streaming e TV:</strong> Netflix, Globoplay, Max e outras produzem cada vez mais no Brasil.</li>
+        <li><strong>Audiovisual para marcas:</strong> filmes publicitários, vídeos institucionais e conteúdo de redes, onde está boa parte das vagas pagas.</li>
+        <li><strong>Videoclipes e shows:</strong> mercado musical e de eventos consome muito audiovisual.</li>
+        <li><strong>Criação de conteúdo digital:</strong> YouTube, plataformas e produção própria como creator.</li>
+        <li><strong>Documentário e jornalismo audiovisual:</strong> contar histórias reais em vídeo.</li>
+        <li><strong>Pós-produção e efeitos:</strong> cor, VFX e finalização, área técnica em alta com o streaming.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Cinema mistura sensibilidade artística com muita resiliência e trabalho em equipe.</p>
+      <div class="tags">
+        <span class="tag">Sensibilidade visual</span>
+        <span class="tag">Gosto por contar histórias</span>
+        <span class="tag">Repertório de cinema</span>
+        <span class="tag">Trabalho em equipe</span>
+        <span class="tag">Resiliência</span>
+        <span class="tag">Organização (produção)</span>
+        <span class="tag">Persistência</span>
+        <span class="tag">Curiosidade técnica</span>
+        <span class="tag">Tolerância à instabilidade</span>
+        <span class="tag">Disciplina criativa</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> você ama o resultado (o filme pronto, os aplausos) ou ama também o processo: as horas de set, o trabalho técnico repetitivo, a espera, a grana incerta? Cinema é uma paixão que cobra caro. Quem só ama o resultado costuma desistir; quem ama o processo aguenta o caminho.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O trabalho é instável e por projeto.</strong> Raramente é emprego fixo. Você trabalha intenso num projeto e depois pode ficar semanas ou meses sem o próximo. A renda é montanha-russa.</div>
+      <div class="cbox"><strong>Depende muito de editais e financiamento público.</strong> Boa parte do cinema brasileiro vive de leis de incentivo e da Ancine. Quando a política muda, o setor inteiro sente.</div>
+      <div class="cbox"><strong>O começo é de carregar equipamento, não de dirigir.</strong> Quase ninguém começa dirigindo. Os primeiros anos são em funções de apoio no set, com cachê baixo e muita hora de trabalho.</div>
+      <div class="cbox"><strong>É preciso construir rede de contatos.</strong> Muito do trabalho vem por indicação. Quem não se conecta com outras pessoas do meio tem mais dificuldade, mesmo com talento.</div>
+      <div class="cbox"><strong>Rotina física puxada.</strong> Sets têm jornadas longas, em pé, de madrugada, em qualquer clima. É uma profissão de corpo, não só de cabeça.</div>
+      <div class="cbox"><strong>Concorrência alta para as funções "dos sonhos".</strong> Todo mundo quer dirigir e roteirizar. As vagas com mais demanda e renda são as técnicas: edição, som, fotografia, pós-produção.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">📺</div><strong>Boom do streaming</strong><p>Netflix, Max e Globoplay produzem muito conteúdo nacional. Isso criou um volume de trabalho que o cinema de sala sozinho nunca teve.</p></div>
+        <div class="tech-card"><div class="tc-icon">🎥</div><strong>Produção mais barata</strong><p>Câmera de qualidade cabe num celular. Dá pra produzir muito com pouco, o que abre espaço pra quem está começando.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA na pós-produção</strong><p>IA já ajuda em edição, legenda, cor e efeitos. Acelera o técnico e muda o que se espera de um editor.</p></div>
+        <div class="tech-card"><div class="tc-icon">✨</div><strong>Efeitos e mundos virtuais</strong><p>VFX e cenários virtuais ficaram acessíveis. Produções pequenas conseguem resultados antes impossíveis.</p></div>
+        <div class="tech-card"><div class="tc-icon">📱</div><strong>Vídeo curto e vertical</strong><p>Reels, TikTok e YouTube criaram um mercado gigante de audiovisual fora do cinema tradicional.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌍</div><strong>Distribuição global</strong><p>Um filme brasileiro pode chegar ao mundo todo pela internet, sem depender só das salas de cinema.</p></div>
+      </div>
+      <p class="note">⚡ A tecnologia barateou produzir e multiplicou onde o audiovisual aparece. O que continua raro, e valioso, é ter algo pra contar e saber contar bem.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Streaming aqueceu o setor:</strong> a produção de séries e filmes nacionais para plataformas criou muitas oportunidades nos últimos anos.</li>
+        <li><strong>A maior parte do trabalho é por projeto:</strong> contratação formal (CLT) é minoria. O normal é PJ, freelance e cachê por produção.</li>
+        <li><strong>Funções técnicas têm mais demanda:</strong> edição, som, fotografia e pós-produção empregam mais e com renda mais estável do que direção e roteiro.</li>
+        <li><strong>Audiovisual de marca é onde está o dinheiro do dia a dia:</strong> vídeo publicitário e institucional sustenta boa parte dos profissionais entre um projeto autoral e outro.</li>
+        <li><strong>Concentração geográfica:</strong> Rio e São Paulo concentram a maior parte da produção, mas o digital permite trabalhar de qualquer lugar.</li>
+        <li><strong>Mercado formal instável, mercado de projeto aquecido:</strong> o emprego formal de cinema oscila bastante, enquanto a demanda por conteúdo em vídeo só cresce. <em>(fonte: Ancine e salario.com.br, 2024–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em cinema, escolher uma função e ficar muito bom nela vale mais do que querer fazer tudo.</p>
+      <div class="tags">
+        <span class="tag">⭐ Montagem / Edição</span>
+        <span class="tag">⭐ Pós-produção e VFX</span>
+        <span class="tag">⭐ Direção de Fotografia</span>
+        <span class="tag">⭐ Som e Desenho Sonoro</span>
+        <span class="tag">Roteiro</span>
+        <span class="tag">Direção</span>
+        <span class="tag">Produção Executiva</span>
+        <span class="tag">Documentário</span>
+        <span class="tag">Animação e Motion</span>
+        <span class="tag">Colorização</span>
+        <span class="tag">Audiovisual para Marcas</span>
+        <span class="tag">Conteúdo Digital / Creator</span>
+        <span class="tag">Direção de Arte (cinema)</span>
+        <span class="tag">Streaming e Distribuição</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e renda mais estável no Brasil em 2024–2025. As funções técnicas e de pós-produção empregam mais que as funções "dos sonhos".</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um profissional de cinema?</h2></div>
+    <div class="sc-body">
+      <p>As faixas abaixo são de cargos formais. Na prática, boa parte da renda vem de cachês por projeto, que variam muito de um mês pro outro.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 1,8k–4k</div><div class="sal-note">Funções de apoio em set, assistências e produção. Muita variação e renda irregular.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 4,5k–7k</div><div class="sal-note">Editor, diretor de fotografia, produtor com experiência. Quem domina técnica ganha mais.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Topo</div><div class="sal-range">R$ 8k–20k+</div><div class="sal-note">Diretores e técnicos consagrados, ou grandes projetos de streaming. O topo é alto, mas para poucos.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Verdade importante:</strong> os números de "salário" do cinema enganam, porque pouca gente tem salário fixo. A renda real depende de quantos projetos você consegue por ano. É a profissão mais instável das três deste guia, e por isso muita gente combina cinema com trabalho em audiovisual de marca pra ter previsibilidade.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.gov.br/ancine/pt-br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>Ancine</strong><span>A agência que regula o audiovisual no Brasil: editais, dados e como o setor funciona</span></div><span class="lc-arr">→</span></a>
+        <a href="https://abcine.org.br" class="lcard" target="_blank"><span class="lc-icon">🎥</span><div class="lc-body"><strong>ABC — Associação Brasileira de Cinematografia</strong><span>Referência sobre as profissões técnicas do cinema, especialmente fotografia</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.salario.com.br/profissao/diretor-de-cinema-cbo-262205/" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Salário.com.br — Cinema</strong><span>Faixas salariais por função do audiovisual, com dados oficiais</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.papodecinema.com.br" class="lcard" target="_blank"><span class="lc-icon">🎬</span><div class="lc-body"><strong>Papo de Cinema</strong><span>Crítica e notícias do cinema brasileiro, bom pra construir repertório</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/learning/" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>LinkedIn Learning</strong><span>Cursos de edição, roteiro, fotografia e produção audiovisual com certificado</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Cinema é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-cin">
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Amo contar histórias em imagem e som, e isso já me move desde antes de pensar em carreira.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Tenho repertório: assisto muito, presto atenção em como os filmes são feitos, não só na história.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Gosto também do processo técnico e repetitivo, não só do resultado final brilhante.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Aguento renda instável e trabalho por projeto, pelo menos no começo da carreira.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Trabalho muito bem em equipe: cinema é sempre feito por muitas mãos juntas.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Tenho resiliência pra ouvir "não" muitas vezes e continuar persistindo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Topo começar de baixo, carregando equipamento e em funções de apoio, pra aprender o set.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Estou disposta a construir rede de contatos, porque muito trabalho vem por indicação.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Aceitaria combinar projetos autorais com audiovisual de marca pra ter mais estabilidade.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-cin">0 de 9</span></div>
+      <div class="cl-result" id="res-cin"><div class="verdict" id="vd-cin"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAÇÃO ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚖️</span><h2>Os três lado a lado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Os três caminhos conversam com o mundo da comunicação e da mídia, mas pedem perfis bem diferentes. Esta tabela ajuda a enxergar onde você se encaixa melhor.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão</th>
+              <th class="h-adm">🏢 Administração</th>
+              <th class="h-pub">📣 Publicidade</th>
+              <th class="h-cin">🎬 Cinema</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Foco principal</td><td>Fazer organizações funcionarem</td><td>Criar comunicação que convence</td><td>Contar histórias em imagem e som</td></tr>
+            <tr><td>Tipo de perfil</td><td>Organizado e estratégico</td><td>Criativo com visão de mercado</td><td>Artístico e persistente</td></tr>
+            <tr><td>Relação com mídia</td><td>Distante (mais negócios)</td><td>Direta (cria conteúdo e marca)</td><td>Total (produz o audiovisual)</td></tr>
+            <tr><td>Onde trabalha</td><td>Empresas de qualquer setor</td><td>Agências, empresas, freelancer</td><td>Produtoras, streaming, projetos</td></tr>
+            <tr><td>Estabilidade</td><td>Alta (muita vaga)</td><td>Média (varia muito)</td><td>Baixa (trabalho por projeto)</td></tr>
+            <tr><td>Salário inicial</td><td>R$ 2,5k–3,5k</td><td>R$ 2k–3,2k</td><td>R$ 1,8k–4k (irregular)</td></tr>
+            <tr><td>Conselho / regulação</td><td>Tem conselho (CFA/CRA)</td><td>Sem conselho obrigatório</td><td>Sem conselho; regulado pela Ancine</td></tr>
+            <tr><td>Lida com números</td><td>Muito</td><td>Cada vez mais (métricas)</td><td>Pouco (mais o produtor)</td></tr>
+            <tr><td>Diferencial único</td><td>Versatilidade total de mercado</td><td>Une criatividade e estratégia</td><td>Realização artística completa</td></tr>
+            <tr><td>Pergunta central</td><td>"Como faço isso funcionar e crescer?"</td><td>"Como faço as pessoas quererem isso?"</td><td>"Que história eu quero contar?"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Para te ajudar a decidir</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        <strong>Você saiu de Estudos de Mídia. Isso é uma pista valiosa.</strong> Estudos de Mídia é um curso de pensar e analisar a mídia, mais teórico. Se o que te incomodou foi justamente a falta de mão na massa, Publicidade e Cinema te mantêm perto do mundo que te atrai, mas fazendo, criando, produzindo. Se o que te incomodou foi o tema em si, e você sente que quer algo mais prático e amplo no mundo do trabalho, a Administração é a virada de chave maior.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🏢 <strong>Vá de Administração se</strong> você quer segurança, leque amplo de opções e gosta de organizar, decidir e lidar com negócios. Pode até trabalhar com mídia e cultura depois, só que pelo lado da gestão.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        📣 <strong>Vá de Publicidade se</strong> você quer criar e comunicar, gosta de ideias e de cultura, e topa um mercado dinâmico onde portfólio vale mais que diploma. É o meio-termo entre criar e ter mercado.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🎬 <strong>Vá de Cinema se</strong> contar histórias em audiovisual é uma paixão de verdade, e você aceita conscientemente a instabilidade e o começo difícil em troca de realização artística.
+      </div>
+      <p class="note" style="margin-top:16px;">Não precisa decidir sozinha. Use os checklists de cada aba, veja onde sua pontuação foi mais alta e leve esse resultado pra conversar com sua orientadora. O que ficou de fora costuma dizer tanto quanto o que você marcou.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais que existem pra cada formação, explicados de um jeito simples. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no Brasil.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col adm">
+          <div class="vaga-col-head adm">🏢 Administração</div>
+          <div class="vaga-role"><strong>Analista Administrativo</strong><span>Organiza rotinas, documentos e processos do dia a dia da empresa.</span></div>
+          <div class="vaga-role"><strong>Analista de Marketing</strong><span>Ajuda a planejar campanhas, cuidar de produto e da relação com o cliente.</span></div>
+          <div class="vaga-role"><strong>Trainee de Gestão</strong><span>Programa que prepara recém-formados para assumir cargos de liderança.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn adm" href="https://www.linkedin.com/jobs/search/?keywords=Administrador&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col pub">
+          <div class="vaga-col-head pub">📣 Publicidade</div>
+          <div class="vaga-role"><strong>Analista de Social Media</strong><span>Cuida das redes das marcas: cria posts, vídeos e o calendário de conteúdo.</span></div>
+          <div class="vaga-role"><strong>Analista de Tráfego Pago</strong><span>Gere os anúncios no Google e no Instagram com foco em dar resultado.</span></div>
+          <div class="vaga-role"><strong>Redator(a) Publicitário</strong><span>Cria os textos, ideias e slogans das campanhas, para vender e emocionar.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn pub" href="https://www.linkedin.com/jobs/search/?keywords=Publicidade&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col cin">
+          <div class="vaga-col-head cin">🎬 Cinema</div>
+          <div class="vaga-role"><strong>Editor(a) de Vídeo</strong><span>Monta e dá ritmo ao material gravado, transformando-o no vídeo final.</span></div>
+          <div class="vaga-role"><strong>Produtor(a) Audiovisual</strong><span>Viabiliza o projeto: orçamento, equipe, locação e cronograma das gravações.</span></div>
+          <div class="vaga-role"><strong>Assistente de Produção</strong><span>Apoia toda a equipe no set e na organização da produção, do começo ao fim.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn cin" href="https://www.linkedin.com/jobs/search/?keywords=Audiovisual&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SEUS CRITÉRIOS ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os três cursos</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estes são os critérios que você elencou e organizou como os mais importantes durante o processo, na ordem em que apareceram. A tabela descreve, de forma objetiva, como cada critério se apresenta em cada curso. Ela não aponta resposta certa nem indica um caminho: é material para você pensar e conversar com sua orientadora.</p>
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Muito presente</span>
+        <span><span class="dot y"></span>Presente em parte</span>
+        <span><span class="dot r"></span>Pouco presente</span>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table crit-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th class="h-adm">🏢 Administração</th>
+              <th class="h-pub">📣 Publicidade</th>
+              <th class="h-cin">🎬 Cinema</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Segurança financeira</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Mercado amplo e constante, com muitas vagas formais (CLT) e renda previsível desde o início.</td>
+              <td data-label="📣 Publicidade"><span class="dot y"></span>Renda média no começo; a previsibilidade varia entre agência, empresa e trabalho freelancer.</td>
+              <td data-label="🎬 Cinema"><span class="dot r"></span>Renda majoritariamente por projeto, irregular, com períodos sem trabalho entre uma produção e outra.</td>
+            </tr>
+            <tr>
+              <td>Equilíbrio vida e trabalho</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Varia por setor; funções corporativas tendem a ter horário definido, e cargos de liderança ampliam a carga.</td>
+              <td data-label="📣 Publicidade"><span class="dot y"></span>Ritmo intenso em agência, com picos de entrega; no lado da empresa a rotina costuma ser mais regular.</td>
+              <td data-label="🎬 Cinema"><span class="dot r"></span>Jornadas longas e imersivas durante as filmagens, com períodos de pausa entre os projetos.</td>
+            </tr>
+            <tr>
+              <td>Horário flexível</td>
+              <td data-label="🏢 Administração"><span class="dot y"></span>Flexibilidade maior em startups e regime híbrido; funções tradicionais seguem horário fixo.</td>
+              <td data-label="📣 Publicidade"><span class="dot g"></span>Flexibilidade comum no digital e no freelancer; os prazos definem o ritmo.</td>
+              <td data-label="🎬 Cinema"><span class="dot r"></span>Horário ditado pelo set durante a produção; flexibilidade existe nos intervalos entre projetos.</td>
+            </tr>
+            <tr>
+              <td>Impacto social e ambiental</td>
+              <td data-label="🏢 Administração"><span class="dot y"></span>Possível em gestão pública, terceiro setor, ESG e negócios de impacto; depende da área escolhida.</td>
+              <td data-label="📣 Publicidade"><span class="dot y"></span>Possível em campanhas de causa e comunicação de organizações sociais; depende do cliente e do foco.</td>
+              <td data-label="🎬 Cinema"><span class="dot y"></span>Possível em documentário, cinema social e temas de causa; depende do tipo de obra produzida.</td>
+            </tr>
+            <tr>
+              <td>Organizar grupos e comunidades</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Eixo central do curso, presente em gestão de pessoas, projetos e operações.</td>
+              <td data-label="📣 Publicidade"><span class="dot y"></span>Presente na gestão de equipes de criação e na construção de comunidade de marca e audiência.</td>
+              <td data-label="🎬 Cinema"><span class="dot y"></span>Presente na produção, que organiza equipe, elenco e logística do set.</td>
+            </tr>
+            <tr>
+              <td>Coordenar e liderar equipes e projetos</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Função central da profissão; gestão de projetos e liderança são o núcleo do curso.</td>
+              <td data-label="📣 Publicidade"><span class="dot g"></span>Presente na direção de criação, no atendimento e na coordenação de campanhas.</td>
+              <td data-label="🎬 Cinema"><span class="dot g"></span>Presente na direção e na produção, que conduzem a equipe durante toda a obra.</td>
+            </tr>
+            <tr>
+              <td>Inclusão social</td>
+              <td data-label="🏢 Administração"><span class="dot y"></span>Aparece em gestão de diversidade, gestão pública e negócios sociais.</td>
+              <td data-label="📣 Publicidade"><span class="dot y"></span>Aparece na representatividade das campanhas e na comunicação de causas.</td>
+              <td data-label="🎬 Cinema"><span class="dot y"></span>Aparece nos temas, na representatividade das narrativas e no acesso à produção.</td>
+            </tr>
+            <tr>
+              <td>Ambiente competitivo</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Competição no mercado de trabalho (muitos formados) e nas metas corporativas.</td>
+              <td data-label="📣 Publicidade"><span class="dot g"></span>Altamente competitivo, por vagas, por contas e por prêmios da área.</td>
+              <td data-label="🎬 Cinema"><span class="dot g"></span>Altamente competitivo pelas funções mais visadas e por editais e financiamento.</td>
+            </tr>
+            <tr>
+              <td>Enfrentar desafios</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Desafios de decisão, metas e resolução de problemas de negócio.</td>
+              <td data-label="📣 Publicidade"><span class="dot g"></span>Desafios criativos, prazos curtos e reinvenção constante.</td>
+              <td data-label="🎬 Cinema"><span class="dot g"></span>Desafios de viabilizar projetos, lidar com instabilidade e construir carreira.</td>
+            </tr>
+            <tr>
+              <td>Administração como assunto presente na rotina</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>É o próprio objeto do curso; está presente o tempo todo.</td>
+              <td data-label="📣 Publicidade"><span class="dot y"></span>Presente na gestão de campanhas, no orçamento de mídia e na gestão de contas.</td>
+              <td data-label="🎬 Cinema"><span class="dot y"></span>Presente na função de produção, que cuida de orçamento, cronograma e equipe.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="margin-top:16px;">Leia coluna por coluna pensando no peso que cada critério tem para você. Os critérios estão na ordem que você definiu como prioridade, então os primeiros têm mais peso na sua decisão. Use esta leitura como ponto de partida da conversa com sua orientadora.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Ranking dos critérios (soma dos pontos)</h2></div>
+    <div class="sc-body">
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Verde = 2 pontos</span>
+        <span><span class="dot y"></span>Amarelo = 1 ponto</span>
+        <span><span class="dot r"></span>Vermelho = 0 ponto</span>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 🏢 Administração</span><span class="rank-score">17 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill adm" style="width:85%;">17</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥈 📣 Publicidade</span><span class="rank-score">14 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill pub" style="width:70%;">14</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥉 🎬 Cinema</span><span class="rank-score">10 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill cin" style="width:50%;">10</div></div>
+        </div>
+      </div>
+      <p class="note" style="margin-top:16px;">Este ranking soma apenas os pontos das bolinhas: mostra com quantos dos seus critérios cada curso mais combina, mas não decide nada por você. Como os primeiros critérios da lista pesam mais na sua escolha, vale reler a tabela acima com isso em mente e levar tudo para a conversa com sua orientadora.</p>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com.br</p>
+</footer>
+
+
+<script>
+  const verdicts = [
+    { min: 8, text: "Perfil muito alinhado! ✨", sub: "Você tem as características essenciais para esse caminho. Aprofunde a pesquisa com confiança e converse com profissionais da área." },
+    { min: 6, text: "Boa afinidade! 👍", sub: "Você tem bastante a ver com essa profissão. Vale explorar mais, uma visita a uma faculdade ou conversa com um profissional pode ajudar muito." },
+    { min: 4, text: "Alguns pontos merecem atenção 🤔", sub: "Você tem afinidade com partes da área, mas alguns inegociáveis podem ser desafiadores. Converse com sua orientadora." },
+    { min: 0, text: "Talvez haja opções mais alinhadas com você 🔍", sub: "Isso não é descarte, é autoconhecimento. O que ficou de fora pode te ajudar a entender o que você realmente busca." }
+  ];
+
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    const v = verdicts.find(x => checked >= x.min);
+    document.getElementById('vd-' + id).textContent = v.text;
+    resEl.querySelector('.sub').textContent = v.sub;
+    resEl.classList.add('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>

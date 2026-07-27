@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Pesquisa de Curso — Relações Internacionais, Geologia e Economia | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Montserrat = fonte oficial Rumo. Caveat = substituta cursiva da Balneario (não disponível em web font). -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* ── Paleta oficial Instituto Rumo ── */
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Relações Internacionais — Bordô Rosado */
+      --ri:     #6B2F3C;
+      --ri-lt:  #F6EAED;
+      --ri-mid: #DCC0C8;
+
+      /* Geologia — Verde Profundo */
+      --geo:     #3B503F;
+      --geo-lt:  #EAEFEB;
+      --geo-mid: #C2CFC4;
+
+      /* Economia — Laranja Rumo */
+      --eco:     #D9563F;
+      --eco-lt:  #FFF0ED;
+      --eco-mid: #FBC9BE;
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── Header ─── */
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    /* ─── Nav ─── */
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.ri.active  { color: var(--ri);  border-bottom-color: var(--ri); }
+    .tab-btn.geo.active { color: var(--geo); border-bottom-color: var(--geo); }
+    .tab-btn.eco.active { color: var(--eco); border-bottom-color: var(--eco); }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    /* ─── Panels ─── */
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    /* ─── Section cards ─── */
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .ri .sc-head { background: var(--ri-lt); border-color: var(--ri-mid); }
+    .ri .sc-head h2 { color: var(--ri); }
+    .geo .sc-head { background: var(--geo-lt); border-color: var(--geo-mid); }
+    .geo .sc-head h2 { color: var(--geo); }
+    .eco .sc-head { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .eco .sc-head h2 { color: var(--eco); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    /* ─── Lists ─── */
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .ri ul.sl li::before  { color: var(--ri); }
+    .geo ul.sl li::before { color: var(--geo); }
+    .eco ul.sl li::before { color: var(--eco); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    /* ─── Tags ─── */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .ri .tag  { background: var(--ri-lt);  color: var(--ri);  border-color: var(--ri-mid); }
+    .geo .tag { background: var(--geo-lt); color: var(--geo); border-color: var(--geo-mid); }
+    .eco .tag { background: var(--eco-lt); color: var(--eco); border-color: var(--eco-mid); }
+
+    /* ─── Boxes ─── */
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .ri .hbox  { background: var(--ri-lt);  border-color: var(--ri); }
+    .geo .hbox { background: var(--geo-lt); border-color: var(--geo); }
+    .eco .hbox { background: var(--eco-lt); border-color: var(--eco); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .ri .accent  { color: var(--ri); }
+    .geo .accent { color: var(--geo); }
+    .eco .accent { color: var(--eco); }
+
+    /* ─── Tech grid ─── */
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .ri .tech-card  { background: var(--ri-lt);  border-color: var(--ri-mid); }
+    .geo .tech-card { background: var(--geo-lt); border-color: var(--geo-mid); }
+    .eco .tech-card { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .ri .tech-card strong  { color: var(--ri); }
+    .geo .tech-card strong { color: var(--geo); }
+    .eco .tech-card strong { color: var(--eco); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    /* ─── Salary grid ─── */
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .ri .sal-card  { background: var(--ri-lt);  border-color: var(--ri-mid); }
+    .geo .sal-card { background: var(--geo-lt); border-color: var(--geo-mid); }
+    .eco .sal-card { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .ri .sal-range  { color: var(--ri); }
+    .geo .sal-range { color: var(--geo); }
+    .eco .sal-range { color: var(--eco); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── Comparison table ─── */
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-ri  { background: var(--ri); }
+    .comp-table th.h-geo { background: var(--geo); }
+    .comp-table th.h-eco { background: var(--eco); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    /* ─── Link cards ─── */
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .ri .lcard:hover  { border-color: var(--ri); }
+    .geo .lcard:hover { border-color: var(--geo); }
+    .eco .lcard:hover { border-color: var(--eco); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    /* ─── Checklist ─── */
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .ri .cl-item:hover,  .ri .cl-item.checked  { background: var(--ri-lt);  border-color: var(--ri); }
+    .geo .cl-item:hover, .geo .cl-item.checked { background: var(--geo-lt); border-color: var(--geo); }
+    .eco .cl-item:hover, .eco .cl-item.checked { background: var(--eco-lt); border-color: var(--eco); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .ri .cl-item.checked .cl-box  { background: var(--ri);  border-color: var(--ri); }
+    .geo .cl-item.checked .cl-box { background: var(--geo); border-color: var(--geo); }
+    .eco .cl-item.checked .cl-box { background: var(--eco); border-color: var(--eco); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .ri .cl-score span  { color: var(--ri);  font-weight: 800; }
+    .geo .cl-score span { color: var(--geo); font-weight: 800; }
+    .eco .cl-score span { color: var(--eco); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .ri .cl-result  { background: var(--ri-lt);  border-color: var(--ri-mid); }
+    .geo .cl-result { background: var(--geo-lt); border-color: var(--geo-mid); }
+    .eco .cl-result { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .verdict { font-size: 18px; font-weight: 800; }
+    .ri .cl-result .verdict  { color: var(--ri); }
+    .geo .cl-result .verdict { color: var(--geo); }
+    .eco .cl-result .verdict { color: var(--eco); }
+    .cl-result .sub { font-size: 13px; color: var(--text); margin-top: 8px; line-height: 1.6; }
+
+    /* ─── Bolinhas de presença (aba critérios) ─── */
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    /* ─── Ranking dos critérios ─── */
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+    .rank-fill.ri  { background: var(--ri); }
+    .rank-fill.geo { background: var(--geo); }
+    .rank-fill.eco { background: var(--eco); }
+
+    /* ─── Vagas reais ─── */
+    .vagas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-col-head.ri  { background: var(--ri); }
+    .vaga-col-head.geo { background: var(--geo); }
+    .vaga-col-head.eco { background: var(--eco); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+    .vaga-btn.ri  { background: var(--ri); }
+    .vaga-btn.geo { background: var(--geo); }
+    .vaga-btn.eco { background: var(--eco); }
+
+    /* ─── Footer ─── */
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+
+      /* Tabela de critérios vira cartões empilhados no celular */
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table tr:nth-child(even) td:first-child { background: var(--cmp); }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Pesquisa de Curso</div>
+  <h1>Relações Internacionais · Geologia · Economia
+    <span class="hd-accent">pesquisar é parte da escolha</span>
+  </h1>
+  <p class="hd-sub">Três caminhos bem diferentes entre si, que se encontram em um ponto: todos lidam com entender o mundo e tomar decisão com base em informação. Este guia é para você pesquisar na sua semana de pesquisa, marcar o que faz sentido e levar suas dúvidas para a próxima sessão.</p>
+</header>
+
+<nav>
+  <button class="tab-btn ri active" data-c="ri" onclick="show('ri')">🌍 Relações Internacionais</button>
+  <button class="tab-btn geo" data-c="geo" onclick="show('geo')">🪨 Geologia</button>
+  <button class="tab-btn eco" data-c="eco" onclick="show('eco')">📈 Economia</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">⚖️ Comparar os três</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ RELAÇÕES INTERNACIONAIS ═══════════════════════════════ -->
+<div class="panel ri active" id="p-ri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Relações Internacionais?</h2></div>
+    <div class="sc-body">
+      <p>Relações Internacionais é o curso de quem quer entender como os países, as empresas e as organizações do mundo inteiro se relacionam: acordos, comércio, conflitos, cooperação, meio ambiente, direitos humanos. É um <strong>bacharelado de 4 anos</strong>, reconhecido pelo MEC. Não é só "estudar países": é aprender a ler um cenário complicado, com muitos interesses em jogo, e saber negociar dentro dele.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> História das relações internacionais, ciência política, teoria das RI, economia e sociologia. A base é bem teórica e de leitura pesada.</li>
+        <li><strong>2º–3º ano:</strong> Direito internacional, economia internacional, política externa brasileira, organizações internacionais e comércio exterior. Aqui começa a ficar aplicado.</li>
+        <li><strong>4º ano:</strong> Negociação internacional, geopolítica, seminários de conjuntura, estágio e TCC. Simulações da ONU costumam aparecer o curso inteiro.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> Relações Internacionais <strong>não é uma profissão regulamentada</strong> no Brasil. Não existe conselho como a OAB ou o CRM, e não há registro obrigatório. Isso significa entrada livre no mercado, e também que ninguém precisa ter feito RI para disputar as mesmas vagas que você. Currículo, idiomas e experiência pesam mais que o diploma.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🌐 <strong>Idioma não é extra, é requisito:</strong> inglês fluente é o mínimo, e um segundo idioma (espanhol ou francês) aparece em quase toda vaga boa. Quem chega no fim do curso sem isso perde as melhores oportunidades para quem tem.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Carreira diplomática:</strong> representar o Brasil no exterior pelo Itamaraty. Entra-se pelo concurso do Instituto Rio Branco, um dos mais difíceis do país.</li>
+        <li><strong>Comércio exterior:</strong> cuidar de importação e exportação em empresas, negociar com fornecedores e clientes de outros países. É onde está a maior parte das vagas.</li>
+        <li><strong>Organizações internacionais:</strong> ONU, Unesco, Unicef, OIT, Banco Mundial. Trabalho com projetos de desenvolvimento, direitos humanos e cooperação.</li>
+        <li><strong>Relações institucionais e governamentais:</strong> ser a ponte entre empresas e governos, acompanhar leis e políticas que afetam o negócio.</li>
+        <li><strong>ONGs e terceiro setor:</strong> projetos sociais e ambientais com financiamento e parceiros internacionais.</li>
+        <li><strong>Consultoria de risco político:</strong> analisar o cenário de um país para empresas que querem investir lá.</li>
+        <li><strong>Área internacional de empresas:</strong> expansão para outros mercados, parcerias e operações fora do Brasil.</li>
+        <li><strong>Inteligência de mercado:</strong> pesquisar cenários, concorrentes e tendências globais para orientar decisões.</li>
+        <li><strong>Concursos públicos:</strong> além do Itamaraty, há vagas em ministérios, Apex, BNDES e agências reguladoras.</li>
+        <li><strong>Assessoria internacional em universidades:</strong> intercâmbios, convênios e mobilidade acadêmica.</li>
+        <li><strong>Jornalismo internacional e análise de conjuntura:</strong> explicar o que acontece no mundo para veículos e institutos.</li>
+        <li><strong>Docência e pesquisa:</strong> caminho acadêmico, com mestrado e doutorado.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>RI combina cabeça analítica com jogo de cintura para lidar com gente e com diferença.</p>
+      <div class="tags">
+        <span class="tag">Leitura pesada</span>
+        <span class="tag">Boa escrita</span>
+        <span class="tag">Idiomas</span>
+        <span class="tag">Negociação</span>
+        <span class="tag">Interesse por atualidades</span>
+        <span class="tag">Visão de contexto</span>
+        <span class="tag">Argumentação</span>
+        <span class="tag">Abertura cultural</span>
+        <span class="tag">Diplomacia no trato</span>
+        <span class="tag">Análise crítica</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando acontece alguma coisa grande no mundo, uma guerra, uma eleição, uma crise, você sente vontade de entender por que aquilo está acontecendo e o que vem depois? Ou você prefere assuntos com resposta mais fechada? RI vive de perguntas que não têm resposta única.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O curso é conhecido, a profissão nem tanto.</strong> Muita empresa não sabe direito o que um internacionalista faz. Você vai precisar explicar seu valor com frequência, e muitas vagas não pedem RI pelo nome.</div>
+      <div class="cbox"><strong>A carreira diplomática é um sonho de poucas vagas.</strong> O concurso do Rio Branco oferece algumas dezenas de vagas por ano para milhares de inscritos, e a preparação costuma levar anos. Vale saber disso antes de escolher o curso só por causa dele.</div>
+      <div class="cbox"><strong>Sem idioma, o leque fecha.</strong> Inglês fluente é o piso, não o diferencial. Quem não investe em idiomas durante a graduação chega no mercado disputando as vagas mais fracas.</div>
+      <div class="cbox"><strong>O começo costuma ser em comércio exterior, não na ONU.</strong> A maior parte das primeiras oportunidades está em importação, exportação e logística internacional. É trabalho bom, só que bem diferente do que a maioria imagina ao entrar.</div>
+      <div class="cbox"><strong>Concentração geográfica.</strong> As vagas se concentram em São Paulo, Brasília, Rio e cidades portuárias. Quem mora fora desses eixos costuma precisar se mudar.</div>
+      <div class="cbox"><strong>Muita gente formada, curso barato de manter.</strong> Como não exige laboratório, muitas faculdades abriram o curso. Isso aumentou o número de formados sem aumentar as vagas na mesma velocidade.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🛰️</div><strong>Dados abertos e monitoramento</strong><p>Satélite, base de dados pública e rastreio de comércio permitem acompanhar países quase em tempo real, sem depender só de relatório oficial.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA na análise de conjuntura</strong><p>A IA lê e resume milhares de notícias e documentos. Sobra para o profissional a parte de interpretar e recomendar o que fazer.</p></div>
+        <div class="tech-card"><div class="tc-icon">💻</div><strong>Diplomacia digital</strong><p>Governos negociam e disputam narrativa também em redes sociais. Comunicação virou parte da política externa.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔐</div><strong>Segurança cibernética</strong><p>Ataques entre países e regulação de dados viraram tema de mesa de negociação, criando uma área nova dentro das RI.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌱</div><strong>Agenda climática</strong><p>Acordos de clima, crédito de carbono e regras ambientais para exportar movimentam vagas em empresas e organizações.</p></div>
+        <div class="tech-card"><div class="tc-icon">📦</div><strong>Comércio digital</strong><p>Plataformas, marketplaces e serviços cruzam fronteira o tempo todo. Isso mudou como se negocia e se regula o comércio.</p></div>
+      </div>
+      <p class="note">⚡ A IA já dá conta de reunir informação sobre o mundo. O que continua sendo humano é sentar na mesa, entender o interesse do outro lado e construir um acordo.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Comércio exterior emprega mais que a diplomacia:</strong> a maior fatia das vagas está em empresas que importam e exportam, em portos, tradings e indústrias.</li>
+        <li><strong>O agronegócio puxa a demanda:</strong> o Brasil exporta muito alimento, e isso sustenta boa parte das vagas de comércio internacional no país.</li>
+        <li><strong>Brasília concentra o setor público e as organizações:</strong> ministérios, embaixadas e escritórios de organismos internacionais ficam lá.</li>
+        <li><strong>São Paulo concentra o setor privado:</strong> multinacionais, consultorias e relações institucionais de grandes empresas.</li>
+        <li><strong>Terceiro setor é porta de entrada real:</strong> ONGs e institutos contratam para projetos, muitas vezes com financiamento internacional.</li>
+        <li><strong>Concursos são caminho de estabilidade:</strong> além do Itamaraty, órgãos como Apex, Receita e agências reguladoras têm vagas com salário alto e concorrência pesada. <em>(fonte: Itamaraty/IRBr e salario.com.br, 2024–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em RI, escolher um tema e virar referência nele vale mais do que saber um pouco de tudo.</p>
+      <div class="tags">
+        <span class="tag">⭐ Comércio Exterior</span>
+        <span class="tag">⭐ Relações Governamentais</span>
+        <span class="tag">⭐ ESG e Agenda Climática</span>
+        <span class="tag">⭐ Negociação Internacional</span>
+        <span class="tag">Direito Internacional</span>
+        <span class="tag">Cooperação e Desenvolvimento</span>
+        <span class="tag">Geopolítica e Segurança</span>
+        <span class="tag">Economia Internacional</span>
+        <span class="tag">Direitos Humanos</span>
+        <span class="tag">Inteligência de Mercado</span>
+        <span class="tag">Gestão de Projetos Internacionais</span>
+        <span class="tag">Logística Internacional</span>
+        <span class="tag">Diplomacia (CACD)</span>
+        <span class="tag">Docência e Pesquisa</span>
+      </div>
+      <p class="note">⭐ Áreas com mais vaga e melhor remuneração no Brasil em 2024–2025. Comércio exterior, relações governamentais e a pauta ambiental concentram a demanda que mais cresce.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um profissional de RI?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas do mercado brasileiro. A variação é grande porque a formação abre portas em setores muito diferentes.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,5k–4k</div><div class="sal-note">Assistente de comércio exterior, analista júnior, projetos em ONG. Idiomas puxam essa faixa pra cima.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 5k–9k</div><div class="sal-note">Analista pleno ou sênior em comex, relações institucionais ou consultoria.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Liderança</div><div class="sal-range">R$ 12k–25k+</div><div class="sal-note">Gerência internacional, relações governamentais e organismos internacionais.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Sobre a carreira diplomática:</strong> um Terceiro-Secretário do Itamaraty, o cargo de entrada, tem remuneração em torno de R$ 20 mil por mês, com adicionais quando serve no exterior. É um salário alto de partida, mas depende de passar num concurso com poucas dezenas de vagas por ano. Nas contas da sua escolha, considere esse caminho como uma possibilidade, não como o cenário provável.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.gov.br/mre/pt-br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>Itamaraty (MRE)</strong><span>O ministério das relações exteriores: o que faz a diplomacia brasileira e como é o concurso do Rio Branco</span></div><span class="lc-arr">→</span></a>
+        <a href="https://brasil.un.org" class="lcard" target="_blank"><span class="lc-icon">🌍</span><div class="lc-body"><strong>ONU Brasil</strong><span>O que as agências da ONU fazem no país, projetos, temas e oportunidades</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.cebri.org" class="lcard" target="_blank"><span class="lc-icon">📊</span><div class="lc-body"><strong>CEBRI</strong><span>Centro brasileiro de relações internacionais: análises de conjuntura em linguagem acessível</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.gov.br/siscomex/pt-br" class="lcard" target="_blank"><span class="lc-icon">📦</span><div class="lc-body"><strong>Siscomex / Comércio Exterior</strong><span>Como funciona na prática a importação e exportação brasileira, onde estão as vagas</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais reportados por profissionais. Pesquise por cargo e empresa</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Relações Internacionais é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-ri">
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Acompanho o que acontece no mundo por vontade própria, não só quando cai na prova.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Gosto de ler bastante e não travo com texto longo e denso.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Escrevo bem e consigo defender uma ideia com argumento, não só com opinião.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Tenho ou estou disposta a construir fluência em inglês e um segundo idioma.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Culturas diferentes da minha me atraem em vez de me incomodarem.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Me sinto bem negociando e buscando acordo quando duas pessoas discordam.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Aguento perguntas sem resposta certa, onde depende do ponto de vista.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Aceitaria começar em comércio exterior ou num projeto de ONG, e não direto na ONU.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Topo morar em outra cidade ou outro país se a oportunidade pedir.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-ri">0 de 9</span></div>
+      <div class="cl-result" id="res-ri"><div class="verdict" id="vd-ri"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ GEOLOGIA ═══════════════════════════════ -->
+<div class="panel geo" id="p-geo">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Geologia?</h2></div>
+    <div class="sc-body">
+      <p>Geologia é o curso de quem quer entender a Terra por dentro: como as rochas se formaram, onde estão os minérios, o petróleo e a água subterrânea, por que um terreno desliza, como o clima do planeta mudou ao longo de milhões de anos. É um <strong>bacharelado de 5 anos</strong> (um a mais que a maioria dos cursos), reconhecido pelo MEC, com muita atividade de campo.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Cálculo, física, química, mineralogia e geologia geral. É a parte mais dura do curso e onde mais gente desiste.</li>
+        <li><strong>2º–4º ano:</strong> Petrologia, estratigrafia, geologia estrutural, sedimentologia, geofísica e mapeamento. Começam as viagens de campo, que são parte obrigatória da formação.</li>
+        <li><strong>5º ano:</strong> Mapeamento geológico final (um trabalho de campo grande, quase um estágio), especializações e TCC.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> Geologia <strong>é uma profissão regulamentada por lei</strong> e o registro no <strong>CREA</strong> é obrigatório para atuar. Só quem é geólogo formado e registrado pode assinar laudos e relatórios técnicos. Isso protege o mercado: ninguém de outra formação ocupa o seu lugar.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🥾 <strong>Campo é parte do curso, não um extra:</strong> você vai passar dias em trilha, acampamento ou alojamento, com martelo, bússola e caderneta. Quem não gosta de estar fora do conforto precisa saber disso antes de entrar.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mineração:</strong> encontrar e avaliar jazidas de minério, acompanhar a lavra. É o maior empregador da área no Brasil.</li>
+        <li><strong>Petróleo e gás:</strong> interpretar dados do subsolo para localizar reservatórios. Área de salários altos, concentrada no Rio.</li>
+        <li><strong>Hidrogeologia:</strong> estudar a água subterrânea, achar aquíferos, cuidar de poços e do abastecimento de cidades.</li>
+        <li><strong>Meio ambiente e licenciamento:</strong> avaliar o impacto de obras e empreendimentos, fazer estudos ambientais exigidos por lei.</li>
+        <li><strong>Geotecnia e geologia de engenharia:</strong> dizer se o terreno aguenta uma barragem, uma estrada, um prédio ou um túnel.</li>
+        <li><strong>Prevenção de desastres:</strong> mapear áreas de risco de deslizamento e enchente, trabalho ligado a defesa civil e prefeituras.</li>
+        <li><strong>Serviço Geológico do Brasil (SGB):</strong> mapear o território nacional e pesquisar recursos minerais e hídricos, via concurso.</li>
+        <li><strong>Consultoria geológica:</strong> prestar serviço técnico para empresas e órgãos públicos, com bastante autonomia.</li>
+        <li><strong>Geoprocessamento e sensoriamento remoto:</strong> trabalhar com mapas, satélites e dados espaciais.</li>
+        <li><strong>Perícia e laudos técnicos:</strong> emitir pareceres com responsabilidade profissional para justiça e seguradoras.</li>
+        <li><strong>Paleontologia e museus:</strong> pesquisa com fósseis e história da Terra, caminho mais acadêmico.</li>
+        <li><strong>Docência e pesquisa:</strong> universidades e centros de pesquisa, com mestrado e doutorado.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Geologia pede cabeça científica junto com disposição física e gosto por estar fora do escritório.</p>
+      <div class="tags">
+        <span class="tag">Raciocínio científico</span>
+        <span class="tag">Base em física e química</span>
+        <span class="tag">Visão espacial em 3D</span>
+        <span class="tag">Observação</span>
+        <span class="tag">Disposição física</span>
+        <span class="tag">Autonomia</span>
+        <span class="tag">Paciência com detalhe</span>
+        <span class="tag">Interpretação de dados</span>
+        <span class="tag">Curiosidade pela natureza</span>
+        <span class="tag">Adaptação a ambientes difíceis</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> passar uma semana longe de casa, num alojamento simples, caminhando em terreno acidentado para coletar amostra, soa como aventura ou como sacrifício? Não existe resposta certa, mas essa resposta muda muito a sua experiência no curso.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O mercado sobe e desce junto com as commodities.</strong> Quando o preço do minério e do petróleo cai, o setor contrata menos e demite. Já quando sobe, faltam profissionais. É uma carreira de ciclos.</div>
+      <div class="cbox"><strong>Ficar longe de casa é rotina, não exceção.</strong> Muita vaga é em cidade pequena de região mineradora, em regime de campo ou embarcado. Isso pesa na vida pessoal.</div>
+      <div class="cbox"><strong>Os primeiros anos do curso são pesados.</strong> Cálculo, física e química reprovam bastante gente. Quem entra achando que geologia é só "gostar de pedra e natureza" costuma se assustar.</div>
+      <div class="cbox"><strong>Poucos cursos e concentrados.</strong> Geologia existe em bem menos universidades que a maioria dos cursos, quase sempre em federais e estaduais. Talvez você precise se mudar para estudar.</div>
+      <div class="cbox"><strong>A imagem do setor é disputada.</strong> Mineração e petróleo carregam questões ambientais sérias. Você vai trabalhar num campo em que precisará se posicionar, e às vezes ouvir crítica pesada.</div>
+      <div class="cbox"><strong>Responsabilidade técnica é real.</strong> Um laudo assinado por você tem peso legal. Errar sobre a estabilidade de um terreno ou de uma barragem tem consequências graves, e a responsabilidade é sua.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🛰️</div><strong>Satélite e sensoriamento</strong><p>Dá pra investigar grandes áreas de longe antes de pisar nelas, o que barateia e direciona o trabalho de campo.</p></div>
+        <div class="tech-card"><div class="tc-icon">🚁</div><strong>Drones e fotogrametria</strong><p>Drones levantam terrenos e minas com detalhe e segurança, em lugares onde antes ninguém entrava.</p></div>
+        <div class="tech-card"><div class="tc-icon">🧠</div><strong>IA na prospecção</strong><p>Modelos aprendem com dados de sondagem e ajudam a apontar onde é mais provável achar minério, poupando perfuração cara.</p></div>
+        <div class="tech-card"><div class="tc-icon">🗺️</div><strong>Modelagem 3D do subsolo</strong><p>O geólogo hoje constrói modelos digitais do que está embaixo da terra, e não só mapas de papel.</p></div>
+        <div class="tech-card"><div class="tc-icon">📡</div><strong>Monitoramento em tempo real</strong><p>Sensores acompanham barragens e encostas o tempo todo, gerando alerta antes do acidente.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔋</div><strong>Minerais da transição energética</strong><p>Lítio, terras raras e cobre viraram estratégicos para baterias e energia limpa, e o Brasil tem reservas disso.</p></div>
+      </div>
+      <p class="note">⚡ A tecnologia mudou como se investiga, não a necessidade de ir ao campo. Interpretar a rocha na mão continua sendo o que separa o geólogo de um software.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>O Brasil é um país minerador:</strong> ferro, ouro, nióbio, bauxita e agora lítio. Isso sustenta uma demanda constante por geólogos.</li>
+        <li><strong>Minas Gerais e Pará concentram a mineração:</strong> boa parte das vagas está nessas regiões, com destaque para o Quadrilátero Ferrífero e Carajás.</li>
+        <li><strong>Rio de Janeiro concentra petróleo:</strong> Petrobras e empresas do setor puxam os salários mais altos, geralmente via concurso ou processo seletivo concorrido.</li>
+        <li><strong>Meio ambiente emprega cada vez mais:</strong> licenciamento, água subterrânea e áreas contaminadas viraram demanda constante por causa da legislação.</li>
+        <li><strong>Após Mariana e Brumadinho, segurança de barragem virou prioridade:</strong> monitoramento e geotecnia ganharam investimento e vagas no setor.</li>
+        <li><strong>Concursos públicos são um caminho forte:</strong> Serviço Geológico do Brasil, Petrobras, IBAMA, ANM e prefeituras com defesa civil. <em>(fonte: SGB, IBRAM e salario.com.br, 2024–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em geologia, a especialização define bastante onde você vai morar e quanto vai ganhar.</p>
+      <div class="tags">
+        <span class="tag">⭐ Geologia Econômica / Mineração</span>
+        <span class="tag">⭐ Geotecnia</span>
+        <span class="tag">⭐ Hidrogeologia</span>
+        <span class="tag">⭐ Geologia do Petróleo</span>
+        <span class="tag">Geoprocessamento e SIG</span>
+        <span class="tag">Geofísica</span>
+        <span class="tag">Geologia Ambiental</span>
+        <span class="tag">Modelagem de Recursos</span>
+        <span class="tag">Riscos Geológicos</span>
+        <span class="tag">Áreas Contaminadas</span>
+        <span class="tag">Paleontologia</span>
+        <span class="tag">Geoquímica</span>
+        <span class="tag">Barragens e Segurança</span>
+        <span class="tag">Minerais Estratégicos</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhores salários no Brasil em 2024–2025. Mineração, geotecnia e água subterrânea concentram as contratações mais estáveis.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um geólogo?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. Mineração e petróleo pagam acima da média, e o piso da categoria é definido por lei para profissionais do sistema CREA.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 4k–7k</div><div class="sal-note">Geólogo júnior em mineradora ou consultoria. Regime de campo costuma vir com adicionais.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 8k–14k</div><div class="sal-note">Com especialização e alguns anos de experiência, principalmente em mineração e geotecnia.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Liderança</div><div class="sal-range">R$ 15k–30k+</div><div class="sal-note">Coordenação técnica, petróleo, consultoria própria e cargos em grandes mineradoras.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> o salário inicial da geologia é um dos mais altos entre os cursos deste guia, e isso costuma chamar atenção. O outro lado da moeda é que essa faixa está ligada a trabalhar longe dos grandes centros, em campo, num setor que oscila com o preço das commodities. É troca, não bônus.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.sgb.gov.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>Serviço Geológico do Brasil (SGB)</strong><span>O órgão oficial de pesquisa geológica do país: mapas, dados e o que a profissão faz na prática</span></div><span class="lc-arr">→</span></a>
+        <a href="https://sbgeo.org.br" class="lcard" target="_blank"><span class="lc-icon">🪨</span><div class="lc-body"><strong>SBG — Sociedade Brasileira de Geologia</strong><span>A associação da área: eventos, áreas de atuação e o que discutem os geólogos</span></div><span class="lc-arr">→</span></a>
+        <a href="https://ibram.org.br" class="lcard" target="_blank"><span class="lc-icon">⛏️</span><div class="lc-body"><strong>IBRAM — Instituto Brasileiro de Mineração</strong><span>Dados do setor que mais emprega geólogos no Brasil, com números atualizados</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.salario.com.br/profissao/geologo-cbo-213105/" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Salário.com.br — Geólogo</strong><span>Faixas salariais com dados oficiais, por região e porte de empresa</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.confea.org.br" class="lcard" target="_blank"><span class="lc-icon">📋</span><div class="lc-body"><strong>Confea / CREA</strong><span>O conselho que registra a profissão: o que exige e quais atribuições são exclusivas do geólogo</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Geologia é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-geo">
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Gosto de ciência de verdade, e não travo com física, química e cálculo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Trabalhar ao ar livre e longe de escritório me atrai mais do que me cansa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Tenho disposição física e não me incomodo com conforto reduzido em viagem de trabalho.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Consigo imaginar coisas em três dimensões, como o que existe embaixo de um terreno.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Gosto de observar detalhe e de investigar por que as coisas ficaram do jeito que estão.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Me sinto bem tomando decisão técnica sozinha e assumindo a responsabilidade por ela.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Aceitaria morar em cidade pequena ou em região de mineração pelo trabalho.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Entendo que o setor tem altos e baixos e topo lidar com essa oscilação.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Me interessa a relação entre recursos naturais, meio ambiente e impacto nas pessoas.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-geo">0 de 9</span></div>
+      <div class="cl-result" id="res-geo"><div class="verdict" id="vd-geo"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ ECONOMIA ═══════════════════════════════ -->
+<div class="panel eco" id="p-eco">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Economia?</h2></div>
+    <div class="sc-body">
+      <p>Economia é o curso de quem quer entender como as escolhas das pessoas, das empresas e dos governos movimentam o dinheiro e a vida de um país: inflação, juros, emprego, desigualdade, crescimento. É um <strong>bacharelado de 4 anos</strong>, reconhecido pelo MEC. Não é curso de "aprender a ganhar dinheiro": é curso de entender por que as coisas custam o que custam e o que acontece quando algo muda.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Cálculo, estatística, contabilidade, microeconomia e macroeconomia. A parte matemática assusta quem não esperava por ela.</li>
+        <li><strong>2º–3º ano:</strong> Econometria, economia brasileira, economia internacional, finanças públicas e história econômica.</li>
+        <li><strong>4º ano:</strong> Eletivas por área (finanças, setor público, desenvolvimento), estágio e monografia.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> Economia <strong>é regulamentada</strong>, com registro obrigatório no <strong>CORECON</strong> (e o COFECON como conselho federal) para atuar como economista, assinar laudos, perícias e pareceres econômicos. É uma proteção de mercado que RI não tem.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🔢 <strong>Sobre a matemática:</strong> economia usa matemática o tempo todo, principalmente estatística. Não precisa ser gênio em número, mas precisa estar disposta a encarar. Esse é o principal motivo de desistência no curso.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado financeiro:</strong> analisar investimentos, empresas e cenários em bancos, corretoras e gestoras. É onde estão os salários mais altos.</li>
+        <li><strong>Análise econômica e conjuntura:</strong> projetar inflação, juros e crescimento para orientar decisões de empresas e clientes.</li>
+        <li><strong>Setor público:</strong> Banco Central, IPEA, IBGE, Tesouro, ministérios e agências reguladoras, quase sempre via concurso.</li>
+        <li><strong>Consultoria econômica:</strong> estudos de viabilidade, precificação e avaliação de políticas para empresas e governos.</li>
+        <li><strong>Análise de dados e ciência de dados:</strong> a base estatística do curso abre portas em tecnologia e em áreas de dados.</li>
+        <li><strong>Planejamento financeiro em empresas:</strong> orçamento, projeções e decisão de investimento dentro de companhias.</li>
+        <li><strong>Organismos internacionais:</strong> Banco Mundial, FMI, BID e Cepal, com projetos de desenvolvimento.</li>
+        <li><strong>Terceiro setor e políticas públicas:</strong> avaliar programas sociais e medir se uma política realmente funcionou.</li>
+        <li><strong>Regulação:</strong> agências como ANEEL, ANP e ANATEL contratam economistas para definir regras e tarifas de setores inteiros.</li>
+        <li><strong>ESG e economia ambiental:</strong> precificar carbono, avaliar risco climático e sustentabilidade de investimentos.</li>
+        <li><strong>Perícia econômica e judicial:</strong> cálculos e pareceres em processos, atividade privativa de economista registrado.</li>
+        <li><strong>Docência e pesquisa:</strong> caminho acadêmico, com mestrado e doutorado.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Economia pede raciocínio lógico junto com curiosidade sobre o comportamento das pessoas e da sociedade.</p>
+      <div class="tags">
+        <span class="tag">Raciocínio lógico</span>
+        <span class="tag">Facilidade com números</span>
+        <span class="tag">Estatística</span>
+        <span class="tag">Análise crítica</span>
+        <span class="tag">Interesse por atualidades</span>
+        <span class="tag">Leitura de dados</span>
+        <span class="tag">Argumentação</span>
+        <span class="tag">Visão de sistema</span>
+        <span class="tag">Curiosidade social</span>
+        <span class="tag">Precisão</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você ouve que o preço de alguma coisa subiu, você aceita o fato ou fica querendo entender o mecanismo por trás? Economia é essencialmente isso: perguntar por quê até chegar na engrenagem.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>A matemática pega mais gente do que se imagina.</strong> Cálculo, estatística e econometria são a espinha do curso. Quem escolhe economia fugindo de número escolhe errado.</div>
+      <div class="cbox"><strong>O começo é bem teórico.</strong> Os primeiros semestres são de modelo e teoria, e a aplicação prática demora a aparecer. Isso frustra quem esperava algo imediato.</div>
+      <div class="cbox"><strong>O mercado financeiro é competitivo e desgastante.</strong> As melhores vagas exigem processos seletivos duríssimos, jornada longa e alta pressão por resultado. Não é para todo mundo, e tudo bem.</div>
+      <div class="cbox"><strong>A rotina costuma ser de escritório e tela.</strong> A maior parte do trabalho é analisar dado, montar planilha, escrever relatório. É pouco movimento e pouca variação de ambiente.</div>
+      <div class="cbox"><strong>Você vai errar previsão em público.</strong> Prever economia é difícil, e faz parte do trabalho errar e recalcular. Quem precisa de certeza sofre nessa área.</div>
+      <div class="cbox"><strong>Concentração em poucos centros:</strong> as melhores oportunidades de mercado estão em São Paulo, e as de setor público em Brasília.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Dados em tempo real</strong><p>Dá pra medir a economia com dados de cartão, celular e satélite, sem esperar meses pela estatística oficial.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA e modelagem</strong><p>Modelos de aprendizado de máquina entraram na previsão econômica e mudaram o ferramental do economista.</p></div>
+        <div class="tech-card"><div class="tc-icon">💳</div><strong>Fintechs e Pix</strong><p>O sistema financeiro brasileiro mudou rápido, e isso criou demanda por quem entende de dados e de regulação.</p></div>
+        <div class="tech-card"><div class="tc-icon">🪙</div><strong>Cripto e moeda digital</strong><p>Ativos digitais e o real digital abriram frentes novas de análise, regulação e risco.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌱</div><strong>Economia do clima</strong><p>Precificar carbono e medir risco climático virou especialidade procurada por bancos e empresas.</p></div>
+        <div class="tech-card"><div class="tc-icon">💻</div><strong>Programação virou ferramenta</strong><p>Python e R são hoje tão básicos quanto planilha para quem trabalha com análise econômica.</p></div>
+      </div>
+      <p class="note">⚡ A conta a máquina já faz. O que segue sendo do economista é escolher a pergunta certa, saber o que o número quer dizer e explicar isso para quem vai decidir.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>São Paulo concentra o mercado financeiro:</strong> bancos, gestoras e corretoras estão lá, e é lá que estão os maiores salários da área.</li>
+        <li><strong>Brasília concentra o setor público:</strong> Banco Central, IPEA, Tesouro e agências reguladoras, com concursos bem pagos e muito disputados.</li>
+        <li><strong>Concursos são um caminho forte:</strong> analista do Banco Central e carreiras de planejamento pagam acima de R$ 20 mil e são objetivo de muita gente da área.</li>
+        <li><strong>Dados abriram uma porta lateral:</strong> muitos economistas vão para tecnologia e ciência de dados, aproveitando a base estatística do curso.</li>
+        <li><strong>Consultorias contratam bem:</strong> casas de análise e consultorias econômicas são uma entrada comum para quem quer aprender rápido.</li>
+        <li><strong>Formação valorizada mesmo fora da área:</strong> o raciocínio econômico é bem visto em empresas de qualquer setor, o que dá mobilidade de carreira. <em>(fonte: COFECON, Banco Central e salario.com.br, 2024–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em economia, o mestrado pesa mais do que na média dos cursos, principalmente para pesquisa e setor público.</p>
+      <div class="tags">
+        <span class="tag">⭐ Finanças e Investimentos</span>
+        <span class="tag">⭐ Ciência de Dados</span>
+        <span class="tag">⭐ Econometria</span>
+        <span class="tag">⭐ Políticas Públicas</span>
+        <span class="tag">Economia do Setor Público</span>
+        <span class="tag">Regulação Econômica</span>
+        <span class="tag">Economia Internacional</span>
+        <span class="tag">Desenvolvimento Econômico</span>
+        <span class="tag">Economia Ambiental e ESG</span>
+        <span class="tag">Risco e Compliance</span>
+        <span class="tag">Perícia Econômica</span>
+        <span class="tag">Economia Comportamental</span>
+        <span class="tag">Agronegócio</span>
+        <span class="tag">Docência e Pesquisa</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhores salários no Brasil em 2024–2025. Finanças, dados e econometria concentram as faixas mais altas para quem se especializa cedo.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um economista?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. O mercado financeiro e os concursos federais ficam acima dessas faixas.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 3k–5k</div><div class="sal-note">Analista júnior em consultoria, empresa ou instituição financeira. Estágio em banco paga bem.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 7k–12k</div><div class="sal-note">Analista pleno ou sênior com especialização, principalmente em finanças e dados.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Liderança</div><div class="sal-range">R$ 15k–40k+</div><div class="sal-note">Gestão de fundos, economista-chefe, sócio de consultoria e cargos públicos de topo.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> a faixa de topo da economia é a mais alta deste guia, mas ela está concentrada no mercado financeiro de São Paulo e em alguns concursos federais. Fora desses dois caminhos, a remuneração é boa e mais parecida com a de outras carreiras de análise. Vale pesquisar a faixa da área específica que te interessa, não a média geral.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.cofecon.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>COFECON</strong><span>O conselho federal da profissão: o que faz um economista, registro e atividades exclusivas</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.bcb.gov.br/cidadaniafinanceira" class="lcard" target="_blank"><span class="lc-icon">🏦</span><div class="lc-body"><strong>Banco Central — Cidadania Financeira</strong><span>Explicações oficiais sobre juros, inflação e sistema financeiro em linguagem acessível</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.ipea.gov.br" class="lcard" target="_blank"><span class="lc-icon">📊</span><div class="lc-body"><strong>IPEA</strong><span>Instituto de pesquisa econômica aplicada: estudos sobre a economia e as políticas do Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.salario.com.br/profissao/economista-cbo-251205/" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Salário.com.br — Economista</strong><span>Faixas salariais com dados oficiais, por região e porte de empresa</span></div><span class="lc-arr">→</span></a>
+        <a href="https://blogdoibre.fgv.br" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Blog do IBRE / FGV</strong><span>Análise econômica brasileira feita por pesquisadores, boa pra entender o dia a dia da área</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Economia é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-eco">
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Não fujo de matemática e estatística, mesmo que elas não sejam minha matéria favorita.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Gosto de entender o mecanismo por trás das coisas, não só o resultado final.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade sobre notícias de inflação, juros, desigualdade e política econômica.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Consigo passar boa parte do dia analisando dados e escrevendo, sem me sentir preso.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Aguento os primeiros semestres bem teóricos até a aplicação prática aparecer.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Sei defender uma conclusão com dado na mão, e mudar de ideia quando o dado muda.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Convivo bem com incerteza: nem toda previsão vai se confirmar, e isso faz parte.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Tenho interesse em aprender programação e ferramentas de análise, como Python ou R.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Me atrai a ideia de trabalhar com decisões que afetam empresas ou o país inteiro.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-eco">0 de 9</span></div>
+      <div class="cl-result" id="res-eco"><div class="verdict" id="vd-eco"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAÇÃO ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚖️</span><h2>Os três lado a lado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Os três cursos lidam com entender sistemas complexos, cada um em um terreno bem diferente. Esta tabela serve para enxergar as diferenças concretas entre eles.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão</th>
+              <th class="h-ri">🌍 Relações Internacionais</th>
+              <th class="h-geo">🪨 Geologia</th>
+              <th class="h-eco">📈 Economia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Foco principal</td><td>Como países e organizações se relacionam</td><td>Como a Terra é formada e o que ela oferece</td><td>Como as escolhas movimentam recursos e dinheiro</td></tr>
+            <tr><td>Duração</td><td>4 anos</td><td>5 anos</td><td>4 anos</td></tr>
+            <tr><td>Tipo de perfil</td><td>Analítico e negociador</td><td>Científico e de campo</td><td>Analítico e quantitativo</td></tr>
+            <tr><td>Peso da matemática</td><td>Baixo a médio</td><td>Alto (física, química, cálculo)</td><td>Alto (cálculo, estatística, econometria)</td></tr>
+            <tr><td>Onde se trabalha</td><td>Empresas, governo, ONGs, organismos internacionais</td><td>Campo, mineradoras, consultorias, órgãos públicos</td><td>Bancos, consultorias, governo, empresas</td></tr>
+            <tr><td>Ambiente do dia a dia</td><td>Escritório, reuniões e viagens</td><td>Alterna campo e escritório</td><td>Escritório e tela</td></tr>
+            <tr><td>Regulamentação</td><td>Não regulamentada, sem conselho</td><td>Regulamentada, registro no CREA</td><td>Regulamentada, registro no CORECON</td></tr>
+            <tr><td>Estabilidade</td><td>Média, muito ligada a idiomas e rede de contatos</td><td>Média, oscila com o preço das commodities</td><td>Média a alta, com forte caminho de concurso</td></tr>
+            <tr><td>Salário inicial</td><td>R$ 2,5k–4k</td><td>R$ 4k–7k</td><td>R$ 3k–5k</td></tr>
+            <tr><td>Onde estão as vagas</td><td>SP, Brasília, RJ e cidades portuárias</td><td>MG, PA, RJ e regiões de mineração</td><td>SP e Brasília</td></tr>
+            <tr><td>Pergunta central</td><td>"Como esses interesses podem chegar a um acordo?"</td><td>"O que existe embaixo daqui e o que isso significa?"</td><td>"Por que isso acontece e o que muda se eu mexer aqui?"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Para te ajudar a pesquisar</h2></div>
+    <div class="sc-body">
+      <p>Os três cursos parecem distantes entre si, e são mesmo. Vale olhar para o que cada um pede de você no dia a dia, porque é aí que a diferença aparece de verdade.</p>
+      <div class="hbox" style="margin-top:14px;">
+        🌍 <strong>Relações Internacionais</strong> é uma formação ampla e sem registro obrigatório, que se apoia em leitura, escrita, idiomas e negociação. A rotina é de escritório e reuniões, com viagens quando a função pede. A entrada mais comum no mercado é comércio exterior, e o caminho da diplomacia existe, só que passa por um concurso com poucas dezenas de vagas por ano.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🪨 <strong>Geologia</strong> é uma formação técnica de 5 anos, com registro obrigatório no CREA e um mercado protegido por isso. A rotina alterna campo e escritório, com períodos longe de casa. Paga mais no início que os outros dois, e em troca pede base forte em ciências exatas e disposição para trabalhar onde os recursos estão, não onde é mais confortável.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        📈 <strong>Economia</strong> é uma formação quantitativa com registro no CORECON, muito centrada em analisar dados e explicar o que eles significam. A rotina é majoritariamente de escritório e tela. Abre portas em mercado financeiro, setor público e dados, e a faixa salarial de topo é alta, ainda que concentrada em São Paulo e em alguns concursos federais.
+      </div>
+      <p class="note" style="margin-top:16px;">Use os checklists de cada aba e anote onde você marcou mais e onde marcou menos. O que você deixou em branco costuma dizer tanto quanto o que você marcou. Leve as duas listas para a conversa com sua orientadora.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais que existem pra cada formação, explicados de um jeito simples. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no Brasil.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col">
+          <div class="vaga-col-head ri">🌍 Relações Internacionais</div>
+          <div class="vaga-role"><strong>Analista de Comércio Exterior</strong><span>Cuida da compra e venda de produtos entre países: documentos, impostos, transporte e prazos.</span></div>
+          <div class="vaga-role"><strong>Analista de Relações Institucionais</strong><span>Faz a ponte entre a empresa e os governos, acompanhando leis e decisões que afetam o negócio.</span></div>
+          <div class="vaga-role"><strong>Assistente de Projetos Internacionais</strong><span>Ajuda a tocar projetos de ONGs e organizações que têm parceiros e dinheiro de fora do país.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn ri" href="https://www.linkedin.com/jobs/search/?keywords=Rela%C3%A7%C3%B5es%20Internacionais&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head geo">🪨 Geologia</div>
+          <div class="vaga-role"><strong>Geólogo(a) Júnior</strong><span>Vai a campo coletar e analisar rochas e dados pra descobrir o que tem no subsolo de uma área.</span></div>
+          <div class="vaga-role"><strong>Analista Ambiental</strong><span>Avalia o impacto de obras e empresas no solo e na água, e cuida das licenças exigidas por lei.</span></div>
+          <div class="vaga-role"><strong>Analista de Geotecnia</strong><span>Estuda se o terreno aguenta uma obra, uma estrada ou uma barragem com segurança.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn geo" href="https://www.linkedin.com/jobs/search/?keywords=Ge%C3%B3logo&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head eco">📈 Economia</div>
+          <div class="vaga-role"><strong>Analista Econômico</strong><span>Estuda dados de inflação, juros e mercado pra explicar o que está acontecendo e o que vem depois.</span></div>
+          <div class="vaga-role"><strong>Analista de Investimentos</strong><span>Analisa empresas e aplicações pra ajudar a decidir onde vale a pena colocar dinheiro.</span></div>
+          <div class="vaga-role"><strong>Analista de Dados / Pesquisa</strong><span>Transforma um monte de números em informação clara pra empresa ou o governo tomar decisão.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn eco" href="https://www.linkedin.com/jobs/search/?keywords=Economista&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SEUS CRITÉRIOS ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os três cursos</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estes são os critérios que você elencou e organizou como os mais importantes durante o processo, na ordem de prioridade que você definiu. A tabela descreve, de forma objetiva, como cada critério se apresenta em cada curso. Ela não aponta resposta certa nem indica um caminho: é material para você pensar e conversar com sua orientadora.</p>
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Muito presente</span>
+        <span><span class="dot y"></span>Presente em parte</span>
+        <span><span class="dot r"></span>Pouco presente</span>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table crit-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th class="h-ri">🌍 Relações Internacionais</th>
+              <th class="h-geo">🪨 Geologia</th>
+              <th class="h-eco">📈 Economia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Sentir satisfação e significado no que faço</td>
+              <td data-label="🌍 Relações Internacionais"><span class="dot g"></span>A área se organiza em torno de temas coletivos como cooperação, direitos humanos e desenvolvimento, o que deixa o propósito visível no dia a dia.</td>
+              <td data-label="🪨 Geologia"><span class="dot g"></span>O resultado do trabalho é concreto e verificável: água para uma cidade, segurança de uma encosta, recursos para energia.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>Varia bastante com o setor: políticas públicas e desenvolvimento têm propósito social explícito, enquanto o mercado financeiro é orientado a resultado.</td>
+            </tr>
+            <tr>
+              <td>2. Ter autonomia para tomar decisões no trabalho</td>
+              <td data-label="🌍 Relações Internacionais"><span class="dot y"></span>Estruturas hierárquicas são comuns, especialmente no serviço público e em organismos internacionais; a autonomia cresce com senioridade.</td>
+              <td data-label="🪨 Geologia"><span class="dot g"></span>O geólogo assina laudos com responsabilidade técnica própria e decide em campo; a consultoria autônoma é um caminho comum na área.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>A análise é de autoria do economista, mas a decisão final costuma ser de quem gere o recurso; a autonomia aumenta em consultoria e no nível sênior.</td>
+            </tr>
+            <tr>
+              <td>3. Negociar</td>
+              <td data-label="🌍 Relações Internacionais"><span class="dot g"></span>Negociação é conteúdo formal do curso e atividade central da profissão, em acordos, contratos internacionais e representação.</td>
+              <td data-label="🪨 Geologia"><span class="dot r"></span>Aparece de forma pontual, em contratos de serviço e no diálogo com comunidades durante licenciamento, sem ser o eixo do trabalho.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>Aparece em consultoria, operações de mercado e discussões de regulação, com peso menor que a análise em si.</td>
+            </tr>
+            <tr>
+              <td>4. Culturas do mundo e viagens</td>
+              <td data-label="🌍 Relações Internacionais"><span class="dot g"></span>Conteúdo do curso e prática da profissão; a convivência com outras culturas e a possibilidade de morar fora fazem parte da carreira.</td>
+              <td data-label="🪨 Geologia"><span class="dot y"></span>Viagens são constantes, porém em regiões de campo e produção; o contato com culturas diferentes acontece dentro do Brasil e em projetos no exterior.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>Presente em economia internacional e em organismos multilaterais; a rotina mais comum, no entanto, é local e de escritório.</td>
+            </tr>
+            <tr>
+              <td>5. Economia (como assunto)</td>
+              <td data-label="🌍 Relações Internacionais"><span class="dot g"></span>Economia internacional e comércio exterior são eixos do currículo e do mercado de trabalho da área.</td>
+              <td data-label="🪨 Geologia"><span class="dot r"></span>Aparece apenas em disciplinas de economia mineral e avaliação de jazidas, com peso pequeno no curso.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>É o próprio objeto do curso, presente em todas as disciplinas e em toda a atuação profissional.</td>
+            </tr>
+            <tr>
+              <td>6. Mudar de ambiente com frequência</td>
+              <td data-label="🌍 Relações Internacionais"><span class="dot g"></span>Missões, remoções e postos no exterior fazem parte de várias trajetórias, com destaque para a carreira diplomática.</td>
+              <td data-label="🪨 Geologia"><span class="dot g"></span>A alternância entre campo e escritório é estrutural na profissão, com mudança de região a cada projeto.</td>
+              <td data-label="📈 Economia"><span class="dot r"></span>A rotina é predominantemente fixa, em escritório, com deslocamentos ocasionais para reuniões e eventos.</td>
+            </tr>
+            <tr>
+              <td>7. Mediar conflitos</td>
+              <td data-label="🌍 Relações Internacionais"><span class="dot g"></span>Mediação e resolução de disputas são conteúdo formal do curso e atuação direta em diplomacia e organismos internacionais.</td>
+              <td data-label="🪨 Geologia"><span class="dot y"></span>Aparece em conflitos socioambientais entre empreendimentos e comunidades, geralmente com o geólogo no papel técnico da discussão.</td>
+              <td data-label="📈 Economia"><span class="dot r"></span>Pouco presente na rotina; surge indiretamente em perícia econômica e em processos de regulação.</td>
+            </tr>
+            <tr>
+              <td>8. Enfrentar desafios</td>
+              <td data-label="🌍 Relações Internacionais"><span class="dot g"></span>Cenários instáveis, concursos concorridos e necessidade de se firmar num mercado sem regulamentação própria.</td>
+              <td data-label="🪨 Geologia"><span class="dot g"></span>Condições de campo adversas, responsabilidade técnica sobre segurança e um setor que oscila com as commodities.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Base matemática exigente, processos seletivos duros no mercado financeiro e trabalho sob incerteza constante.</td>
+            </tr>
+            <tr>
+              <td>9. Relações internacionais e diplomacia</td>
+              <td data-label="🌍 Relações Internacionais"><span class="dot g"></span>É o próprio objeto do curso, do primeiro ao último período.</td>
+              <td data-label="🪨 Geologia"><span class="dot r"></span>Praticamente ausente do currículo; aparece só na atuação de empresas com operação internacional.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>Presente em economia internacional, comércio exterior e na atuação em organismos multilaterais.</td>
+            </tr>
+            <tr>
+              <td>10. Analisar informações</td>
+              <td data-label="🌍 Relações Internacionais"><span class="dot g"></span>Análise de conjuntura, leitura de cenários políticos e produção de relatórios são o núcleo do trabalho.</td>
+              <td data-label="🪨 Geologia"><span class="dot g"></span>Interpretação de dados de campo, mapas, sondagens e imagens de satélite estrutura toda a atividade.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Análise quantitativa de dados é a atividade central da profissão em praticamente todas as áreas.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="margin-top:16px;">Leia coluna por coluna pensando no peso que cada critério tem para você. Os critérios estão na ordem que você definiu como prioridade, então os primeiros pesam mais na sua decisão. Use esta leitura como ponto de partida da conversa com sua orientadora.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Ranking dos critérios (soma dos pontos)</h2></div>
+    <div class="sc-body">
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Verde = 2 pontos</span>
+        <span><span class="dot y"></span>Amarelo = 1 ponto</span>
+        <span><span class="dot r"></span>Vermelho = 0 ponto</span>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 🌍 Relações Internacionais</span><span class="rank-score">19 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill ri" style="width:95%;">19</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥈 🪨 Geologia</span><span class="rank-score">12 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill geo" style="width:60%;">12</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥉 📈 Economia</span><span class="rank-score">11 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill eco" style="width:55%;">11</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com.br</p>
+</footer>
+
+
+<script>
+  const verdicts = [
+    { min: 8, text: "Perfil muito alinhado! ✨", sub: "Você tem as características essenciais para esse caminho. Aprofunde a pesquisa com confiança e converse com profissionais da área." },
+    { min: 6, text: "Boa afinidade! 👍", sub: "Você tem bastante a ver com essa profissão. Vale explorar mais, uma visita a uma faculdade ou conversa com um profissional pode ajudar muito." },
+    { min: 4, text: "Alguns pontos merecem atenção 🤔", sub: "Você tem afinidade com partes da área, mas alguns inegociáveis podem ser desafiadores. Converse com sua orientadora." },
+    { min: 0, text: "Talvez haja opções mais alinhadas com você 🔍", sub: "Isso não é descarte, é autoconhecimento. O que ficou de fora pode te ajudar a entender o que você realmente busca." }
+  ];
+
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    const v = verdicts.find(x => checked >= x.min);
+    document.getElementById('vd-' + id).textContent = v.text;
+    resEl.querySelector('.sub').textContent = v.sub;
+    resEl.classList.add('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>

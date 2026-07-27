@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Carreiras — Publicidade, Relações Públicas e Direito | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Publicidade — Laranja Rumo */
+      --pub:     #D9563F;
+      --pub-lt:  #FFF0ED;
+      --pub-mid: #FBC9BE;
+
+      /* Relações Públicas — Verde Profundo */
+      --rp:      #3B503F;
+      --rp-lt:   #EAEFEB;
+      --rp-mid:  #C2CFC4;
+
+      /* Direito — Bordô Rosado */
+      --dir:     #6B2F3C;
+      --dir-lt:  #F6EAED;
+      --dir-mid: #DCC0C8;
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── Header ─── */
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 28px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 28px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    /* ─── Nav ─── */
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.pub.active { color: var(--pub); border-bottom-color: var(--pub); }
+    .tab-btn.rp.active  { color: var(--rp);  border-bottom-color: var(--rp); }
+    .tab-btn.dir.active { color: var(--dir); border-bottom-color: var(--dir); }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    /* ─── Panels ─── */
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    /* ─── Section cards ─── */
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .pub .sc-head { background: var(--pub-lt); border-color: var(--pub-mid); }
+    .pub .sc-head h2 { color: var(--pub); }
+    .rp  .sc-head { background: var(--rp-lt);  border-color: var(--rp-mid); }
+    .rp  .sc-head h2 { color: var(--rp); }
+    .dir .sc-head { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .dir .sc-head h2 { color: var(--dir); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    /* ─── Lists ─── */
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .pub ul.sl li::before { color: var(--pub); }
+    .rp  ul.sl li::before { color: var(--rp); }
+    .dir ul.sl li::before { color: var(--dir); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    /* ─── Tags ─── */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .pub .tag { background: var(--pub-lt); color: var(--pub); border-color: var(--pub-mid); }
+    .rp  .tag { background: var(--rp-lt);  color: var(--rp);  border-color: var(--rp-mid); }
+    .dir .tag { background: var(--dir-lt); color: var(--dir); border-color: var(--dir-mid); }
+
+    /* ─── Boxes ─── */
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .pub .hbox { background: var(--pub-lt); border-color: var(--pub); }
+    .rp  .hbox { background: var(--rp-lt);  border-color: var(--rp); }
+    .dir .hbox { background: var(--dir-lt); border-color: var(--dir); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .pub .accent { color: var(--pub); }
+    .rp  .accent { color: var(--rp); }
+    .dir .accent { color: var(--dir); }
+
+    /* ─── Tech grid ─── */
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .pub .tech-card { background: var(--pub-lt); border-color: var(--pub-mid); }
+    .rp  .tech-card { background: var(--rp-lt);  border-color: var(--rp-mid); }
+    .dir .tech-card { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .pub .tech-card strong { color: var(--pub); }
+    .rp  .tech-card strong { color: var(--rp); }
+    .dir .tech-card strong { color: var(--dir); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    /* ─── Salary grid ─── */
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .pub .sal-card { background: var(--pub-lt); border-color: var(--pub-mid); }
+    .rp  .sal-card { background: var(--rp-lt);  border-color: var(--rp-mid); }
+    .dir .sal-card { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .pub .sal-range { color: var(--pub); }
+    .rp  .sal-range { color: var(--rp); }
+    .dir .sal-range { color: var(--dir); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── Comparison table ─── */
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-pub { background: var(--pub); }
+    .comp-table th.h-rp  { background: var(--rp); }
+    .comp-table th.h-dir { background: var(--dir); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    /* ─── Link cards ─── */
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .pub .lcard:hover { border-color: var(--pub); }
+    .rp  .lcard:hover { border-color: var(--rp); }
+    .dir .lcard:hover { border-color: var(--dir); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    /* ─── Checklist ─── */
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .pub .cl-item:hover, .pub .cl-item.checked { background: var(--pub-lt); border-color: var(--pub); }
+    .rp  .cl-item:hover, .rp  .cl-item.checked { background: var(--rp-lt);  border-color: var(--rp); }
+    .dir .cl-item:hover, .dir .cl-item.checked { background: var(--dir-lt); border-color: var(--dir); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .pub .cl-item.checked .cl-box { background: var(--pub); border-color: var(--pub); }
+    .rp  .cl-item.checked .cl-box { background: var(--rp);  border-color: var(--rp); }
+    .dir .cl-item.checked .cl-box { background: var(--dir); border-color: var(--dir); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .pub .cl-score span { color: var(--pub); font-weight: 800; }
+    .rp  .cl-score span { color: var(--rp);  font-weight: 800; }
+    .dir .cl-score span { color: var(--dir); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .pub .cl-result { background: var(--pub-lt); border-color: var(--pub-mid); }
+    .rp  .cl-result { background: var(--rp-lt);  border-color: var(--rp-mid); }
+    .dir .cl-result { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .verdict { font-size: 18px; font-weight: 800; }
+    .pub .cl-result .verdict { color: var(--pub); }
+    .rp  .cl-result .verdict { color: var(--rp); }
+    .dir .cl-result .verdict { color: var(--dir); }
+    .cl-result .sub { font-size: 13px; color: var(--text); margin-top: 8px; line-height: 1.6; }
+
+    /* ─── Bolinhas de presença ─── */
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    /* ─── Ranking ─── */
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+    .rank-fill.pub { background: var(--pub); }
+    .rank-fill.rp  { background: var(--rp); }
+    .rank-fill.dir { background: var(--dir); }
+
+    /* ─── Vagas reais ─── */
+    .vagas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-col-head.pub { background: var(--pub); }
+    .vaga-col-head.rp  { background: var(--rp); }
+    .vaga-col-head.dir { background: var(--dir); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+    .vaga-btn.pub { background: var(--pub); }
+    .vaga-btn.rp  { background: var(--rp); }
+    .vaga-btn.dir { background: var(--dir); }
+
+    /* ─── Footer ─── */
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 22px; }
+      .hd-accent { font-size: 22px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>Publicidade · Relações Públicas · Direito
+    <span class="hd-accent">comunicar, influenciar e defender</span>
+  </h1>
+  <p class="hd-sub">Três caminhos para quem quer causar impacto no mundo: pela comunicação criativa, pela gestão de imagem e reputação, ou pela defesa de direitos e da justiça. Cada um de um jeito muito diferente.</p>
+</header>
+
+<nav>
+  <button class="tab-btn pub active" data-c="pub" onclick="show('pub')">📣 Publicidade</button>
+  <button class="tab-btn rp"  data-c="rp"  onclick="show('rp')">🤝 Relações Públicas</button>
+  <button class="tab-btn dir" data-c="dir" onclick="show('dir')">⚖️ Direito</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">🔍 Comparar os três</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ PUBLICIDADE ═══════════════════════════════ -->
+<div class="panel pub active" id="p-pub">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Publicidade e Propaganda?</h2></div>
+    <div class="sc-body">
+      <p>Publicidade e Propaganda é o curso de quem quer criar comunicação que convence e gera impacto: campanhas, anúncios, conteúdo de marca, ideias que ficam na cabeça das pessoas. É um <strong>bacharelado de 4 anos</strong>, geralmente dentro de Comunicação Social, reconhecido pelo MEC. O curso é bem prático e orientado a fazer, não só a analisar a mídia.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Teorias da comunicação, comportamento do consumidor, redação publicitária, fotografia, design e introdução ao marketing.</li>
+        <li><strong>2º–3º ano:</strong> Criação, direção de arte, planejamento de campanha, mídia, produção gráfica e audiovisual, marketing digital e comunicação política.</li>
+        <li><strong>4º ano:</strong> Gestão de marcas, campanha integrada, estágio e projeto experimental — uma campanha real como trabalho de conclusão.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a publicidade não tem conselho fiscalizador obrigatório como a OAB. A entrada no mercado é livre e o portfólio vale mais que o diploma na hora de conseguir emprego.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Marketing político:</strong> criar campanhas eleitorais, comunicação de governo e de candidatos — área com muito crescimento.</li>
+        <li><strong>Comunicação de causas sociais:</strong> trabalhar para ONGs, institutos e movimentos que precisam comunicar sua missão.</li>
+        <li><strong>Redação publicitária:</strong> criar os textos, slogans e ideias das campanhas. Escrever pra convencer e emocionar.</li>
+        <li><strong>Direção de arte:</strong> cuidar do visual da campanha, como ela fica e o que comunica pelos olhos.</li>
+        <li><strong>Planejamento:</strong> entender o público e a marca pra definir a estratégia antes de criar.</li>
+        <li><strong>Social media e conteúdo:</strong> cuidar das redes de marcas e organizações, criar posts e campanhas digitais.</li>
+        <li><strong>Tráfego pago / performance:</strong> gerir anúncios no Google e Instagram com foco em resultado. Área muito requisitada.</li>
+        <li><strong>Branding:</strong> construir a identidade e a personalidade de marcas e organizações no longo prazo.</li>
+        <li><strong>Produção audiovisual publicitária:</strong> fazer os vídeos e filmes de campanhas e conteúdo.</li>
+        <li><strong>Comunicação institucional:</strong> cuidar da imagem pública de empresas, governos e organizações.</li>
+        <li><strong>Criação de conteúdo próprio:</strong> virar criador, roteirista de redes ou empreendedor de mídia.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Publicidade pede criatividade com estratégia: ideia boa que também funciona e que chega em quem precisa receber.</p>
+      <div class="tags">
+        <span class="tag">Criatividade</span>
+        <span class="tag">Boa escrita</span>
+        <span class="tag">Curiosidade sobre pessoas</span>
+        <span class="tag">Repertório cultural</span>
+        <span class="tag">Senso estético</span>
+        <span class="tag">Capacidade de convencer</span>
+        <span class="tag">Trabalho em equipe</span>
+        <span class="tag">Lidar com crítica</span>
+        <span class="tag">Atenção a tendências</span>
+        <span class="tag">Adaptabilidade</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você vê uma campanha política ou um movimento social, sua cabeça vai pra "como eu comunicaria isso melhor"? Se a parte que mais te interessa é moldar a mensagem e fazer ela chegar nas pessoas certas, a Publicidade tem esse espaço — especialmente em marketing político e comunicação de causas.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O começo paga pouco e tem muita gente disputando.</strong> O salário inicial em agência costuma ser baixo (R$ 2.000–3.000) e a concorrência por vaga é grande. Portfólio bom é o que abre a porta.</div>
+      <div class="cbox"><strong>Ritmo intenso e prazos curtos.</strong> Principalmente em agência, o ritmo é puxado, com várias entregas ao mesmo tempo. Burnout é comum em quem não aprende a colocar limite.</div>
+      <div class="cbox"><strong>Sua ideia vai ser recusada o tempo todo.</strong> Você cria, o cliente recusa, refaz. Quem leva crítica pro lado pessoal sofre muito nessa profissão.</div>
+      <div class="cbox"><strong>A área muda numa velocidade absurda.</strong> Plataforma, algoritmo e ferramenta mudam o tempo todo. Parar de estudar significa ficar pra trás em pouco mais de um ano.</div>
+      <div class="cbox"><strong>Conexão com temas de justiça e direitos é indireta.</strong> Para quem tem interesse em política, direitos humanos e legislação, a publicidade trata esses temas de fora: pela comunicação, não pelo conteúdo em si.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">✍️</div><strong>IA na criação</strong><p>ChatGPT e similares geram rascunhos de texto em segundos. O publicitário vira mais editor e diretor de ideias do que digitador.</p></div>
+        <div class="tech-card"><div class="tc-icon">🎯</div><strong>Comunicação política digital</strong><p>Campanhas eleitorais hoje são tocadas com dados, microssegmentação e conteúdo em redes. É uma das áreas mais aquecidas da publicidade.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Tudo é medido</strong><p>Cada campanha vira dado em tempo real. Saber ler métricas deixou de ser opcional pra quem cria.</p></div>
+        <div class="tech-card"><div class="tc-icon">🖼️</div><strong>Imagem gerada por IA</strong><p>Midjourney e Firefly criam imagens de campanha em minutos. Saber dirigir essas ferramentas virou competência de criação.</p></div>
+        <div class="tech-card"><div class="tc-icon">📱</div><strong>Creators e vídeo curto</strong><p>Reels e TikTok mudaram o que é propaganda. Marca virou conteúdo, e conteúdo virou marca.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔍</div><strong>Desinformação como pauta</strong><p>A era da IA levantou questões éticas sobre manipulação, propaganda e fake news que o publicitário precisa entender e enfrentar.</p></div>
+      </div>
+      <p class="note">⚡ A IA acelera o operacional da criação. O que ela não faz é ter a ideia certa pro público certo, nem decidir qual causa vale a pena defender: é aí que o profissional faz a diferença.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado grande e variado:</strong> tem vaga em agência, em empresa, em partido político, em ONG e como freelancer. A qualidade e o salário variam muito.</li>
+        <li><strong>Digital domina:</strong> a maior parte das vagas hoje é de marketing digital, social, conteúdo e tráfego, não da propaganda tradicional de TV.</li>
+        <li><strong>Marketing político é uma área real:</strong> campanhas eleitorais movimentam muito dinheiro e contratam publicitários especializados. O calendário eleitoral cria picos de oportunidade.</li>
+        <li><strong>Agência ensina rápido, paga pouco:</strong> boa escola no começo, com muitos projetos, mas salário abaixo do mercado e rotatividade alta.</li>
+        <li><strong>Empresa (lado cliente) paga melhor:</strong> trabalhar no marketing de uma empresa costuma ter salário e rotina mais estáveis que em agência.</li>
+        <li><strong>Freelancer e creator é caminho real:</strong> com bom portfólio dá pra montar operação própria ou trabalhar com conteúdo e causas. <em>(fonte: salario.com.br e Glassdoor, 2025–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em publicidade, escolher uma força — criar, dados ou estratégia — acelera muito a carreira.</p>
+      <div class="tags">
+        <span class="tag">⭐ Marketing Político</span>
+        <span class="tag">⭐ Comunicação de Causas Sociais</span>
+        <span class="tag">⭐ Tráfego Pago / Performance</span>
+        <span class="tag">⭐ Branding</span>
+        <span class="tag">Redação e Conteúdo</span>
+        <span class="tag">Direção de Arte</span>
+        <span class="tag">Social Media</span>
+        <span class="tag">Planejamento Estratégico</span>
+        <span class="tag">UX Writing</span>
+        <span class="tag">Comunicação Corporativa</span>
+        <span class="tag">Dados e Métricas</span>
+        <span class="tag">Produção Audiovisual</span>
+      </div>
+      <p class="note">⭐ Para quem tem interesse em política e causas sociais, marketing político e comunicação de causas são as frentes mais alinhadas dentro da publicidade.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um publicitário?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. Lado cliente, marketing político e especialistas em performance/branding ganham acima da média de agência.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2k–3,2k</div><div class="sal-note">Estágio, assistente de criação ou redator júnior. Portfólio vale mais que o salário nessa fase.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 3,5k–7k</div><div class="sal-note">Já cria e entrega sozinho. Tráfego, branding e marketing político puxam pra cima dessa faixa.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Liderança</div><div class="sal-range">R$ 8k–18k+</div><div class="sal-note">Direção de criação, gerência de marketing e consultores políticos. Campanhas eleitorais pagam bem.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em publicidade o salário fixo nem sempre conta a história toda. Muita gente boa ganha mais como freelancer ou com a própria operação do que em carteira assinada de agência.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.meioemensagem.com.br" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Meio & Mensagem</strong><span>O principal portal de notícias de publicidade e marketing do Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.clubedecriacao.com.br" class="lcard" target="_blank"><span class="lc-icon">🎨</span><div class="lc-body"><strong>Clube de Criação</strong><span>As campanhas mais premiadas do país. Ótimo pra entender o que é trabalho bom</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais de cargos de publicidade reportados por profissionais</span></div><span class="lc-arr">→</span></a>
+        <a href="https://br.hubspot.com/blog" class="lcard" target="_blank"><span class="lc-icon">🔧</span><div class="lc-body"><strong>HubSpot Blog</strong><span>Marketing digital, conteúdo e redes na prática, com conteúdo em português</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/learning/" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>LinkedIn Learning</strong><span>Cursos de criação, tráfego, design e comunicação digital com certificado</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Publicidade é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-pub">
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Tenho facilidade e gosto de criar: textos, ideias, imagens, posts. Criar me dá energia, não preguiça.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Sou curioso(a) sobre como as pessoas são influenciadas por mensagens, narrativas e comunicação.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Me interessa a comunicação política: campanhas, discursos, como candidatos e partidos se apresentam.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Consigo lidar com minha ideia sendo recusada e refazer sem levar pro lado pessoal.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Trabalho bem em equipe e gosto de construir junto, trocando ideia com outras pessoas.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Aguento ritmo puxado e vários projetos ao mesmo tempo sem travar.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Aceito que o começo paga pouco e que meu portfólio importa mais que meu diploma.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Prefiro influenciar a sociedade pela comunicação do que diretamente pela lei ou pela justiça.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Tenho senso estético: percebo quando algo está visualmente bom, quando uma mensagem é certeira.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-pub">0 de 9</span></div>
+      <div class="cl-result" id="res-pub"><div class="verdict" id="vd-pub"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ RELAÇÕES PÚBLICAS ═══════════════════════════════ -->
+<div class="panel rp" id="p-rp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Relações Públicas?</h2></div>
+    <div class="sc-body">
+      <p>Relações Públicas é o curso de quem quer cuidar da imagem e da reputação de organizações: empresas, governos, ONGs, partidos ou líderes. É um <strong>bacharelado de 4 anos</strong>, também dentro de Comunicação Social, com menos visibilidade que a publicidade, mas com um espaço próprio e bem definido. O foco é construir relacionamentos e gerenciar como uma organização se apresenta para o mundo.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Teorias da comunicação, comunicação institucional, relações com a imprensa, planejamento estratégico, ética e legislação da comunicação.</li>
+        <li><strong>2º–3º ano:</strong> Gestão de imagem, comunicação de governo, gestão de crises, relações com stakeholders, comunicação interna e eventos.</li>
+        <li><strong>4º ano:</strong> Comunicação digital, assessoria de imprensa, projetos de gestão de marca, estágio e trabalho de conclusão.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> Relações Públicas tem conselho próprio (Conselho Federal de Profissionais de Relações Públicas — Conferp). Para assinar como RP e trabalhar em algumas funções específicas, o registro é necessário. É uma das poucas profissões de comunicação com regulamentação legal.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Comunicação de governo:</strong> cuidar da imagem de órgãos públicos, prefeituras, governos estaduais e federais — uma das maiores empregadoras de RPs no Brasil.</li>
+        <li><strong>Assessoria de imprensa:</strong> ser o elo entre a organização e os jornalistas, controlando o que vai para as notícias e como vai.</li>
+        <li><strong>Gestão de crises:</strong> quando algo dá errado (escândalos, acidentes, polêmicas), o RP organiza a resposta e protege a reputação.</li>
+        <li><strong>Comunicação corporativa:</strong> cuidar da imagem de grandes empresas junto a clientes, funcionários, governo e sociedade.</li>
+        <li><strong>Relações com comunidades:</strong> gerenciar o impacto social de organizações em regiões onde atuam.</li>
+        <li><strong>Comunicação de causas e ONGs:</strong> ajudar organizações sociais a se fazerem visíveis e a construírem alianças.</li>
+        <li><strong>Relações institucionais (lobbying):</strong> representar interesses de organizações junto ao governo e a tomadores de decisão.</li>
+        <li><strong>Comunicação interna:</strong> cuidar de como a informação circula dentro de uma organização e como os funcionários se sentem parte dela.</li>
+        <li><strong>Gestão de eventos e cerimônias:</strong> planejar e executar eventos institucionais, cúpulas, lançamentos e encontros estratégicos.</li>
+        <li><strong>Comunicação política:</strong> assessorar líderes políticos na gestão da imagem pública e das relações com a mídia e a sociedade.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Relações Públicas pede diplomacia, organização e uma capacidade fora do comum de se comunicar com pessoas muito diferentes entre si.</p>
+      <div class="tags">
+        <span class="tag">Comunicação clara</span>
+        <span class="tag">Diplomacia</span>
+        <span class="tag">Organização</span>
+        <span class="tag">Raciocínio estratégico</span>
+        <span class="tag">Escrita objetiva</span>
+        <span class="tag">Construção de relacionamentos</span>
+        <span class="tag">Jogo de cintura em crises</span>
+        <span class="tag">Discrição</span>
+        <span class="tag">Interesse em política e poder</span>
+        <span class="tag">Empatia</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando um conflito acontece num grupo, você é a pessoa que tenta entender os dois lados e encontrar uma saída que preserve a relação? Relações Públicas trabalha exatamente com isso — mas na escala de organizações, governos e sociedade.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>A profissão é pouco conhecida.</strong> Muita gente confunde RP com publicidade ou jornalismo. Explicar o que você faz faz parte do trabalho. A identidade da profissão ainda se consolida no Brasil.</div>
+      <div class="cbox"><strong>Mercado menor que publicidade.</strong> O número de vagas formais de RP é menor do que o de publicidade ou marketing digital. Diferenciação e especialização são decisivas.</div>
+      <div class="cbox"><strong>Crises não têm hora.</strong> Quando algo explode na imprensa ou nas redes, o RP precisa responder rápido, inclusive de madrugada. A rotina pode ser imprevisível.</div>
+      <div class="cbox"><strong>Nem sempre a decisão final é sua.</strong> O RP aconselha e planeja, mas quem decide o que falar é o cliente ou o chefe. Saber trabalhar nesse papel de bastidor é essencial.</div>
+      <div class="cbox"><strong>Ética é um campo minado.</strong> A linha entre gerenciar a imagem e distorcer a realidade pode ser tênue. Profissionais sérios precisam definir seus próprios limites com clareza.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">📡</div><strong>Monitoramento em tempo real</strong><p>Ferramentas de escuta social monitoram o que está sendo dito sobre uma organização em todo lugar ao mesmo tempo, na hora que acontece.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA na gestão de crises</strong><p>Algoritmos já identificam potenciais crises antes de estourarem. O RP usa esses dados pra agir preventivamente.</p></div>
+        <div class="tech-card"><div class="tc-icon">📱</div><strong>Influenciadores como mídia</strong><p>Influenciadores digitais viraram canal de comunicação institucional. Gerir essas parcerias é parte do trabalho de RP hoje.</p></div>
+        <div class="tech-card"><div class="tc-icon">🗞️</div><strong>Jornalismo em crise</strong><p>Com menos jornalistas e veículos, o RP precisa produzir cada vez mais o próprio conteúdo para distribuir diretamente.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔒</div><strong>Privacidade e dados</strong><p>LGPD e proteção de dados mudaram como as organizações se comunicam. O RP precisa entender essas regras.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌐</div><strong>Transparência como exigência</strong><p>A sociedade exige mais clareza das organizações. Comunicar com honestidade virou estratégia, não só boa vontade.</p></div>
+      </div>
+      <p class="note">⚡ A tecnologia multiplicou as frentes de imagem que uma organização precisa cuidar. O RP que dominar dados e plataformas junto à habilidade humana de construir relacionamentos tem mercado amplo.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Governo é o maior empregador:</strong> prefeituras, governos estaduais, ministérios e órgãos públicos têm assessorias de comunicação e contratam RPs com frequência, inclusive por concurso.</li>
+        <li><strong>Grandes empresas têm áreas de comunicação corporativa:</strong> bancos, mineradoras, empresas de energia e multinacionais mantêm equipes de RP e relações institucionais.</li>
+        <li><strong>ONGs e terceiro setor:</strong> organizações sociais precisam comunicar sua missão e captar recursos — o RP tem papel importante aqui.</li>
+        <li><strong>Agências especializadas:</strong> existem agências de comunicação corporativa, assessoria de imprensa e gestão de crise que empregam RPs.</li>
+        <li><strong>Mercado menor, mas mais estável:</strong> o RP não compete com a mesma multidão que a publicidade. Quem entra bem posicionado tem carreira mais previsível.</li>
+        <li><strong>Salário cresce com senioridade:</strong> o pico de carreira em grandes empresas e governo é bem remunerado. <em>(fonte: Glassdoor e Conferp, 2025–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Escolher uma vertente estratégica é o que tira o RP da posição genérica e o coloca em posição de referência.</p>
+      <div class="tags">
+        <span class="tag">⭐ Comunicação Governamental</span>
+        <span class="tag">⭐ Gestão de Crises</span>
+        <span class="tag">⭐ Relações Institucionais</span>
+        <span class="tag">⭐ Assessoria de Imprensa</span>
+        <span class="tag">Comunicação Política</span>
+        <span class="tag">Comunicação de Causas</span>
+        <span class="tag">Responsabilidade Social</span>
+        <span class="tag">Comunicação Interna</span>
+        <span class="tag">Gestão de Stakeholders</span>
+        <span class="tag">Marketing de Influência Institucional</span>
+        <span class="tag">Comunicação Internacional</span>
+      </div>
+      <p class="note">⭐ Para quem tem interesse em política, causas sociais e atuação junto ao poder público, comunicação governamental e relações institucionais são as frentes mais relevantes.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um profissional de Relações Públicas?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. Governo, grandes empresas e consultorias estratégicas pagam acima da média de agência.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2k–3,5k</div><div class="sal-note">Assistente de comunicação, assessoria júnior. Experiência em estágio pesa bastante.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 4k–8k</div><div class="sal-note">Assessor sênior, coordenador de comunicação ou RP em grande empresa.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Liderança</div><div class="sal-range">R$ 9k–20k+</div><div class="sal-note">Diretoria de comunicação em empresa ou governo. Consultores sênior chegam ao topo.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em Relações Públicas, o setor onde você trabalha importa muito. O mesmo cargo em governo federal, em mineradora e em ONG tem remunerações completamente diferentes.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.conferp.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>Conferp — Conselho Federal de RP</strong><span>O conselho da profissão: o que faz um RP, registro e regulamentação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.portaldarp.com.br" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Portal DARP</strong><span>Notícias e conteúdo sobre assessoria, comunicação corporativa e RP no Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais de assessores e diretores de comunicação reportados por profissionais</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/learning/" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>LinkedIn Learning</strong><span>Cursos de comunicação corporativa, gestão de crises e assessoria com certificado</span></div><span class="lc-arr">→</span></a>
+        <a href="https://pr.prnewswire.com/br/news-releases" class="lcard" target="_blank"><span class="lc-icon">🌐</span><div class="lc-body"><strong>PR Newswire Brasil</strong><span>Como empresas divulgam informações oficiais: exemplo real de comunicação corporativa</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Relações Públicas é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-rp">
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Gosto de cuidar da imagem e da reputação de pessoas ou organizações que respeito.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Tenho facilidade pra me comunicar com públicos muito diferentes: imprensa, governo, comunidade.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Me interessa trabalhar com comunicação de governo, política pública ou causas sociais.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Tenho jogo de cintura pra lidar com situações de crise e pressão sem perder o foco.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Prefiro construir relacionamentos de longo prazo a criar campanhas pontuais de impacto imediato.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Gostaria de trabalhar em escritório e em contextos mais formais e institucionais.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Me identifico com o papel de mediador(a): entender os dois lados e construir pontes entre eles.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Tenho discrição e entendo que o protagonismo nessa profissão é de quem você representa, não seu.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Me interessa influenciar a sociedade pela gestão de imagem e reputação, não diretamente pela lei.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-rp">0 de 9</span></div>
+      <div class="cl-result" id="res-rp"><div class="verdict" id="vd-rp"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ DIREITO ═══════════════════════════════ -->
+<div class="panel dir" id="p-dir">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Direito?</h2></div>
+    <div class="sc-body">
+      <p>Direito é o curso que forma profissionais para entender, aplicar e defender as leis que organizam a sociedade. É um <strong>bacharelado de 5 anos</strong>, reconhecido pelo MEC, um dos mais tradicionais e valorizados do Brasil. Diferente dos cursos de comunicação, é muito mais leitura, argumentação e escrita — e exige uma etapa extra após a formatura: o <strong>Exame da OAB</strong>, obrigatório para quem quer advogar.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Introdução ao Direito, Filosofia Jurídica, Direito Constitucional, Civil, Penal e Processual. A base teórica e os fundamentos do sistema legal brasileiro.</li>
+        <li><strong>2º–4º ano:</strong> Direito do Trabalho, Administrativo, Tributário, Empresarial, Internacional, Ambiental, Direitos Humanos e aprofundamento nas áreas anteriores. Prática jurídica começa aqui.</li>
+        <li><strong>5º ano:</strong> Estágio obrigatório (frequentemente em escritório ou serviço de assistência jurídica), TCC e preparação para a OAB.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a OAB (Ordem dos Advogados do Brasil) é o conselho da profissão. Sem aprovação no Exame da OAB, o bacharel em Direito não pode advogar, mas pode atuar em carreiras públicas e funções jurídicas corporativas. A OAB é exigente e aprova em torno de 20–25% dos candidatos por exame.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Advocacia criminal:</strong> defender pessoas acusadas ou auxiliar o Ministério Público. Área ligada à criminologia e ao Direito Penal.</li>
+        <li><strong>Defensoria Pública:</strong> defender gratuitamente quem não tem condições de pagar advogado — uma das carreiras mais ligadas a direitos humanos e justiça social.</li>
+        <li><strong>Ministério Público:</strong> fiscalizar o cumprimento das leis e defender interesses da sociedade. Carreira pública por concurso.</li>
+        <li><strong>Magistratura (juiz/juíza):</strong> julgar processos e aplicar a lei. Carreira pública por concurso, com progressão clara e alta remuneração.</li>
+        <li><strong>Advocacia de direitos humanos:</strong> atuar em casos de violação de direitos, trabalhando com organismos nacionais e internacionais.</li>
+        <li><strong>Direito Constitucional e político:</strong> assessorar parlamentares, partidos e governos em questões legais e constitucionais.</li>
+        <li><strong>Direito Internacional:</strong> lidar com tratados, organizações internacionais e conflitos entre países ou empresas de diferentes nações.</li>
+        <li><strong>Mediação e arbitragem:</strong> resolver conflitos fora dos tribunais, como árbitro ou mediador reconhecido.</li>
+        <li><strong>Advocacia empresarial:</strong> prestar assessoria jurídica para empresas, contratos e operações.</li>
+        <li><strong>Carreira pública:</strong> concursos para tribunais, prefeituras, AGU, PGE, Receita Federal e inúmeros órgãos com bons salários e estabilidade.</li>
+        <li><strong>Perito criminal / forense:</strong> com especialização complementar, atuar na interface entre Direito Penal e ciências forenses.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Direito exige muito de leitura, escrita e argumentação — e um tipo específico de raciocínio: preciso, crítico e capaz de encontrar a lógica dentro de um sistema complexo de normas.</p>
+      <div class="tags">
+        <span class="tag">Leitura consistente</span>
+        <span class="tag">Escrita clara e precisa</span>
+        <span class="tag">Argumentação</span>
+        <span class="tag">Raciocínio lógico</span>
+        <span class="tag">Interesse por justiça</span>
+        <span class="tag">Paciência com processos</span>
+        <span class="tag">Capacidade de debate</span>
+        <span class="tag">Ética como valor central</span>
+        <span class="tag">Organização</span>
+        <span class="tag">Resistência à pressão</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você vê uma injustiça — em notícia, em filme, na vida real — você fica pensando em como deveria ter sido decidido, quem estava errado e o que a lei dizia sobre aquilo? Se esse raciocínio vem naturalmente pra você, o Direito te chama de verdade.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>São 5 anos de faculdade mais o desafio da OAB.</strong> O Exame da OAB é difícil e tem taxa de aprovação baixa. Muita gente precisará de mais de uma tentativa. Isso exige planejamento e estudo continuado.</div>
+      <div class="cbox"><strong>A faculdade é densa em leitura.</strong> Direito é um curso de textos longos, doutrinas, jurisprudências e muito estudo. Quem não gosta de ler vai sofrer nos primeiros anos.</div>
+      <div class="cbox"><strong>O início da carreira pode ser difícil.</strong> Advogados iniciantes costumam ganhar pouco até construírem carteira de clientes ou passarem em concurso. A escalada leva tempo.</div>
+      <div class="cbox"><strong>Estresse emocional nas áreas mais humanas.</strong> Trabalhar com casos criminais, de família ou de violação de direitos pode pesar muito emocionalmente. Cuidar da saúde mental é parte da carreira.</div>
+      <div class="cbox"><strong>Mercado saturado em algumas áreas.</strong> Brasil tem muitos advogados. Se diferenciar exige especialização, bom networking e, muitas vezes, aprovação em concurso público.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA jurídica</strong><p>Ferramentas como o Harvey e o Clio usam IA pra pesquisar jurisprudência, redigir peças e analisar contratos em segundos. O advogado vira mais estrategista.</p></div>
+        <div class="tech-card"><div class="tc-icon">📄</div><strong>Peticionamento eletrônico</strong><p>Todo o processo judicial no Brasil já é digital. Saber usar os sistemas do Judiciário é habilidade básica do bacharel.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔬</div><strong>Forense digital</strong><p>Crimes digitais, provas em ambiente virtual e rastreamento de dados são uma nova fronteira do Direito Penal — campo em expansão.</p></div>
+        <div class="tech-card"><div class="tc-icon">⚖️</div><strong>Legaltech</strong><p>Startups de tecnologia jurídica criam ferramentas de mediação online, gestão de contratos e acesso à justiça. Novo espaço para advogados empreendedores.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌍</div><strong>Direito Internacional e IA</strong><p>Regulação de inteligência artificial, proteção de dados e crimes cibernéticos são áreas jurídicas em formação acelerada no mundo todo.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Dados no processo</strong><p>Análise de padrões de decisões judiciais com dados ajuda advogados a prever resultados e construir estratégias mais precisas.</p></div>
+      </div>
+      <p class="note">⚡ A IA vai automatizar o trabalho repetitivo do Direito — pesquisa, redação de peças simples, revisão de contratos. O que ela não faz é defender a pessoa que está na sua frente, ter sensibilidade para o caso e criar estratégia num contexto humano complexo.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Brasil tem o maior número de advogados do mundo em proporção:</strong> a concorrência é grande, mas quem se especializa e vai bem na OAB tem espaço garantido.</li>
+        <li><strong>Concurso público é a rota de estabilidade e alta remuneração:</strong> magistratura, Ministério Público, Defensoria e cargos federais pagam muito bem e têm progressão clara.</li>
+        <li><strong>Áreas em alta:</strong> Direito Digital, Compliance, Direitos Humanos, Criminal e Trabalhista lideram a demanda em 2024–2026.</li>
+        <li><strong>Grandes escritórios pagam muito, mas exigem muito:</strong> bancas de advocacia empresarial em SP e RJ têm salários altos para quem entra, mas a rotina é de alta pressão.</li>
+        <li><strong>Advocacia solo e pequenos escritórios:</strong> a maioria dos advogados no Brasil trabalha por conta própria ou em escritórios pequenos. A renda é variável e depende de carteira de clientes.</li>
+        <li><strong>Organizações internacionais e ONGs:</strong> ACNUR, OAB, institutos de Direitos Humanos e organizações de defesa de causas contratam advogados com perfil social. <em>(fonte: OAB e FGV Direito, 2024–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>No Direito, a especialização é o que separa quem tem muita concorrência de quem tem demanda.</p>
+      <div class="tags">
+        <span class="tag">⭐ Direito Penal e Criminologia</span>
+        <span class="tag">⭐ Direitos Humanos</span>
+        <span class="tag">⭐ Direito Constitucional</span>
+        <span class="tag">⭐ Magistratura (concurso)</span>
+        <span class="tag">⭐ Ministério Público (concurso)</span>
+        <span class="tag">⭐ Defensoria Pública (concurso)</span>
+        <span class="tag">Mediação e Arbitragem</span>
+        <span class="tag">Direito Internacional</span>
+        <span class="tag">Direito Digital</span>
+        <span class="tag">Compliance e Governança</span>
+        <span class="tag">Direito Trabalhista</span>
+        <span class="tag">Direito Ambiental</span>
+        <span class="tag">Direito Tributário</span>
+      </div>
+      <p class="note">⭐ Para quem tem interesse em política, direitos humanos, criminologia e mediação de conflitos, o Direito Penal, Constitucional e a carreira de Defensoria ou MP são os caminhos mais alinhados.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um profissional de Direito?</h2></div>
+    <div class="sc-body">
+      <p>A variação é muito grande dependendo da área, do setor e da trajetória. Carreiras públicas têm progressão muito mais previsível que a advocacia privada.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2k–4k</div><div class="sal-note">Estágio jurídico, advogado associado ou servidor em cargo de apoio. A fase de construção da base.</div></div>
+        <div class="sal-card"><div class="sal-stage">Advogado / Concursado</div><div class="sal-range">R$ 5k–14k</div><div class="sal-note">Advogado com carteira de clientes, cargo em carreira pública inicial ou escritório médio.</div></div>
+        <div class="sal-card"><div class="sal-stage">Carreira pública / Sênior</div><div class="sal-range">R$ 15k–35k+</div><div class="sal-note">Juiz, Promotor, Defensor Público, advogado sênior de grande banca ou sócio de escritório.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Perspectiva importante:</strong> juízes e membros do MP têm os salários mais altos da carreira jurídica, mas chegam até essa posição após anos de estudo e vários concursos. Quem planeja bem a trajetória tem clareza do caminho desde o início da faculdade.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.oab.org.br" class="lcard" target="_blank"><span class="lc-icon">⚖️</span><div class="lc-body"><strong>OAB — Ordem dos Advogados do Brasil</strong><span>O conselho da profissão: o que faz um advogado, exame da OAB e áreas de atuação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.conjur.com.br" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Consultor Jurídico (Conjur)</strong><span>O maior portal de notícias jurídicas do Brasil. Ótimo pra entender o que movimenta o Direito</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.estrategiaconcursos.com.br" class="lcard" target="_blank"><span class="lc-icon">🎯</span><div class="lc-body"><strong>Estratégia Concursos</strong><span>Referência para quem quer seguir carreira pública jurídica: magistratura, MP, Defensoria</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.acnur.org/br" class="lcard" target="_blank"><span class="lc-icon">🌍</span><div class="lc-body"><strong>ACNUR Brasil — Agência da ONU para Refugiados</strong><span>Exemplo de organização internacional que trabalha com Direitos Humanos e contrata juristas</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais de advogados, juízes e cargos jurídicos reportados por profissionais</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Direito é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-dir">
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Tenho interesse real em leis, justiça e como o sistema jurídico organiza a sociedade, não só de curiosidade passageira.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Gosto de ler, argumentar e escrever. O curso exige muito das três habilidades e eu me identifico com isso.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Me identifico com a ideia de defender pessoas, causas ou direitos dentro do sistema de justiça.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Aceito que o curso dura 5 anos e que ainda precisarei passar na OAB para advogar.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Tenho interesse em pelo menos uma área: Direito Penal, Direitos Humanos, Constitucional, Internacional ou outra.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Consigo lidar com muito texto e com a pressão de prazos, audiências e responsabilidades jurídicas.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Me interessa a carreira pública: Magistratura, Ministério Público, Defensoria Pública ou concursos jurídicos.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Acredito que entender e aplicar as leis é uma forma concreta de transformar a realidade e fazer justiça.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Quando vejo uma injustiça, minha cabeça vai naturalmente para "o que a lei diz sobre isso" e "como isso deveria ser resolvido".</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-dir">0 de 9</span></div>
+      <div class="cl-result" id="res-dir"><div class="verdict" id="vd-dir"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAÇÃO ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚖️</span><h2>Os três lado a lado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Três caminhos para quem quer causar impacto no mundo, cada um com uma forma muito diferente de fazer isso.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão</th>
+              <th class="h-pub">📣 Publicidade</th>
+              <th class="h-rp">🤝 Relações Públicas</th>
+              <th class="h-dir">⚖️ Direito</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Foco principal</td><td>Criar comunicação que convence</td><td>Cuidar da imagem de organizações</td><td>Entender, aplicar e defender a lei</td></tr>
+            <tr><td>Duração do curso</td><td>4 anos</td><td>4 anos</td><td>5 anos + OAB</td></tr>
+            <tr><td>Tipo de perfil</td><td>Criativo com visão estratégica</td><td>Diplomático e organizador</td><td>Argumentativo e analítico</td></tr>
+            <tr><td>Relação com política</td><td>Pela comunicação (campanha)</td><td>Pela gestão de imagem e imprensa</td><td>Pelo conteúdo (lei, constituição)</td></tr>
+            <tr><td>Relação com direitos</td><td>Indireta (comunicação de causas)</td><td>Indireta (representação)</td><td>Direta (defesa e aplicação)</td></tr>
+            <tr><td>Lida com leis</td><td>Pouco</td><td>Pontualmente (ética, LGPD)</td><td>É o objeto central do curso</td></tr>
+            <tr><td>Onde trabalha</td><td>Agências, empresas, freelancer</td><td>Empresas, governo, ONGs</td><td>Escritórios, tribunais, concursos</td></tr>
+            <tr><td>Estabilidade</td><td>Média (varia muito)</td><td>Média a boa (governo paga bem)</td><td>Alta via concurso; variável na advocacia</td></tr>
+            <tr><td>Potencial de remuneração</td><td>R$ 8k–18k+ (sênior)</td><td>R$ 9k–20k+ (diretoria)</td><td>R$ 15k–35k+ (carreira pública)</td></tr>
+            <tr><td>Pergunta central</td><td>"Como faço a mensagem certa chegar?"</td><td>"Como esta organização é vista e como deveria ser?"</td><td>"O que a lei diz e como defender o que é justo?"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Para te ajudar a decidir</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        📣 <strong>Publicidade</strong> é o caminho de quem quer trabalhar com a criação da mensagem: campanhas, conteúdo, comunicação política. O impacto acontece pela forma como as ideias chegam às pessoas.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🤝 <strong>Relações Públicas</strong> é o caminho de quem quer cuidar da imagem e dos relacionamentos de organizações — empresas, governo, ONGs, líderes. O trabalho acontece nos bastidores, construindo pontes entre a organização e seus públicos.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        ⚖️ <strong>Direito</strong> é o caminho de quem quer trabalhar dentro do sistema jurídico: analisar leis, atuar em processos, defender pessoas e direitos, ou construir carreira pública. O impacto acontece pela aplicação da lei.
+      </div>
+      <p class="note" style="margin-top:16px;">Use os checklists de cada aba, veja onde sua pontuação foi mais alta e leve esse resultado pra conversar com sua orientadora. O que ficou de fora costuma dizer tanto quanto o que você marcou.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais que existem pra cada formação. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no Brasil.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col">
+          <div class="vaga-col-head pub">📣 Publicidade</div>
+          <div class="vaga-role"><strong>Assistente de Comunicação</strong><span>Ajuda a criar posts, textos e materiais para as redes e canais de comunicação de uma organização.</span></div>
+          <div class="vaga-role"><strong>Analista de Marketing Político</strong><span>Planeja e executa a comunicação digital de campanhas eleitorais ou de entidades de governo.</span></div>
+          <div class="vaga-role"><strong>Redator de Conteúdo</strong><span>Escreve textos, artigos e materiais institucionais para marcas, causas e organizações.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn pub" href="https://www.linkedin.com/jobs/search/?keywords=Publicidade%20Marketing&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head rp">🤝 Relações Públicas</div>
+          <div class="vaga-role"><strong>Assessor(a) de Imprensa</strong><span>Cuida do relacionamento de uma organização com jornalistas e controla o que vai para as notícias.</span></div>
+          <div class="vaga-role"><strong>Analista de Comunicação Corporativa</strong><span>Gerencia a imagem de uma empresa junto a seus diferentes públicos: funcionários, governo e sociedade.</span></div>
+          <div class="vaga-role"><strong>Coordenador(a) de Comunicação Institucional</strong><span>Planeja e cuida da imagem de um órgão público ou grande organização junto à mídia e à comunidade.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn rp" href="https://www.linkedin.com/jobs/search/?keywords=Rela%C3%A7%C3%B5es%20P%C3%BAblicas&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head dir">⚖️ Direito</div>
+          <div class="vaga-role"><strong>Estagiário(a) Jurídico(a)</strong><span>Pesquisa jurisprudência, auxilia na elaboração de peças e acompanha processos no escritório ou tribunal.</span></div>
+          <div class="vaga-role"><strong>Advogado(a) Trabalhista / Criminal</strong><span>Representa clientes em processos judiciais e cuida da defesa de direitos em juízo.</span></div>
+          <div class="vaga-role"><strong>Analista Jurídico (empresa)</strong><span>Cuida dos contratos, regulatório e questões legais do dia a dia de uma empresa ou organização.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn dir" href="https://www.linkedin.com/jobs/search/?keywords=Direito%20Jur%C3%ADdico&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SEUS CRITÉRIOS ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os três cursos</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estes são os critérios que você elencou durante o processo, do mais importante (1º) ao menos importante (10º). A tabela descreve, de forma objetiva, como cada critério se apresenta em cada curso. Ela não aponta resposta certa nem indica um caminho: é material para você pensar e conversar com sua orientadora.</p>
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Muito presente</span>
+        <span><span class="dot y"></span>Presente em parte</span>
+        <span><span class="dot r"></span>Pouco presente</span>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table crit-table">
+          <thead>
+            <tr>
+              <th>Critério (em ordem de prioridade)</th>
+              <th class="h-pub">📣 Publicidade</th>
+              <th class="h-rp">🤝 Rel. Públicas</th>
+              <th class="h-dir">⚖️ Direito</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1º — Política</td>
+              <td data-label="📣 Publicidade"><span class="dot g"></span>Presente no marketing político, comunicação eleitoral e campanhas de governo. É uma das especializações mais aquecidas da área.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot g"></span>Central na comunicação de governo, assessoria de líderes políticos e gestão de imagem de partidos e candidatos.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Presente no Direito Constitucional, na assessoria parlamentar, nas carreiras do Estado e no entendimento das leis que organizam o poder.</td>
+            </tr>
+            <tr>
+              <td>2º — Oportunidades de crescimento</td>
+              <td data-label="📣 Publicidade"><span class="dot y"></span>Crescimento existe, mas depende muito de especialização, portfólio e do segmento onde você atua.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot y"></span>Crescimento presente com senioridade, mas o mercado é menor. Gestão de comunicação em grande empresa ou governo abre cargos bem remunerados.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Progressão clara e definida: advogado júnior, pleno, sênior, sócio — ou carreira pública com concursos de acesso cada vez mais altos.</td>
+            </tr>
+            <tr>
+              <td>3º — Mediar conflitos</td>
+              <td data-label="📣 Publicidade"><span class="dot r"></span>Não é o foco da profissão. O publicitário convence e persuade, mas não media conflitos de forma estruturada.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot y"></span>Presente na gestão de crises, no diálogo entre partes opostas e na construção de consenso em situações tensas.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Mediação e conciliação são funções jurídicas formais e reconhecidas. O mediador judicial é uma carreira específica dentro do Direito.</td>
+            </tr>
+            <tr>
+              <td>4º — Ciências forenses e criminologia</td>
+              <td data-label="📣 Publicidade"><span class="dot r"></span>Sem relação direta. A Publicidade pode comunicar sobre esses temas, mas não trabalha com eles.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot r"></span>Sem relação direta com a formação ou a prática profissional de um RP.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Direito Penal e Criminologia são disciplinas do curso. Com especialização, o advogado pode atuar na interface com perícia forense e investigação criminal.</td>
+            </tr>
+            <tr>
+              <td>5º — Escritórios</td>
+              <td data-label="📣 Publicidade"><span class="dot y"></span>Agências têm ambiente de escritório, mas a rotina pode ser agitada, híbrida e com trabalho externo frequente.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot g"></span>A maior parte do trabalho acontece em escritórios corporativos, órgãos de governo e sedes institucionais.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Escritório de advocacia é o ambiente central da profissão. Judiciário e tribunal complementam, mas o cotidiano é predominantemente em escritório.</td>
+            </tr>
+            <tr>
+              <td>6º — Direitos humanos</td>
+              <td data-label="📣 Publicidade"><span class="dot y"></span>Possível em campanhas de causa, comunicação de ONGs e publicidade de impacto social. Depende do cliente e do foco escolhido.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot y"></span>Presente na comunicação de organizações sociais e na representação de causas junto à imprensa e ao poder público.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Área específica dentro do curso. Advogados de Direitos Humanos atuam em casos de violação, perante tribunais internacionais e em organismos como ONU e ACNUR.</td>
+            </tr>
+            <tr>
+              <td>7º — Ambiente tranquilo</td>
+              <td data-label="📣 Publicidade"><span class="dot r"></span>Ritmo intenso é característico da área, com prazos curtos, vários projetos simultâneos e pressão constante por entregas.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot y"></span>A rotina de escritório pode ser mais calma, mas crises de imagem exigem resposta imediata e podem ser muito estressantes.</td>
+              <td data-label="⚖️ Direito"><span class="dot y"></span>O trabalho de escritório tem sua cadência, mas audiências, prazos processuais e casos complexos geram pressão real. Não é uma profissão sem estresse.</td>
+            </tr>
+            <tr>
+              <td>8º — Leis e legislação</td>
+              <td data-label="📣 Publicidade"><span class="dot r"></span>Aparece pontualmente (código de defesa do consumidor, regulação de publicidade). Não é conteúdo central do curso.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot r"></span>Presente em ética profissional, LGPD e regulações de comunicação. Não é o foco, mas aparece na prática.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>É o objeto central do curso. Estudar, interpretar e aplicar leis é o que define a profissão jurídica.</td>
+            </tr>
+            <tr>
+              <td>9º — Defender direitos</td>
+              <td data-label="📣 Publicidade"><span class="dot r"></span>Possível pela comunicação de causas, mas de forma indireta. O publicitário comunica, não defende juridicamente.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot y"></span>Presente na representação de organizações sociais e na comunicação de causas, mas sem o instrumento legal da defesa formal.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>É uma das funções mais centrais da advocacia: defender os direitos de pessoas físicas, grupos ou organizações dentro do sistema de justiça.</td>
+            </tr>
+            <tr>
+              <td>10º — Alta remuneração</td>
+              <td data-label="📣 Publicidade"><span class="dot y"></span>Remuneração média a boa com especialização. O início é modesto; o topo depende do segmento e da reputação construída.</td>
+              <td data-label="🤝 Rel. Públicas"><span class="dot y"></span>Remuneração média; cargos de diretoria de comunicação em grandes empresas ou governo chegam a valores expressivos.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Maior potencial de remuneração dos três. Carreiras públicas como magistratura e MP pagam muito bem; advocacia empresarial também pode chegar a faixas altas.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="margin-top:16px;">Leia coluna por coluna pensando no peso que cada critério tem para você. Os critérios estão na ordem que você definiu como prioridade, então os primeiros têm mais peso na sua decisão. Use esta leitura como ponto de partida da conversa com sua orientadora.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Ranking dos critérios (soma dos pontos)</h2></div>
+    <div class="sc-body">
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Verde = 2 pontos</span>
+        <span><span class="dot y"></span>Amarelo = 1 ponto</span>
+        <span><span class="dot r"></span>Vermelho = 0 ponto</span>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 ⚖️ Direito</span><span class="rank-score">19 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill dir" style="width:95%;">19</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥈 🤝 Relações Públicas</span><span class="rank-score">10 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill rp" style="width:50%;">10</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥉 📣 Publicidade</span><span class="rank-score">6 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill pub" style="width:30%;">6</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com.br</p>
+</footer>
+
+
+<script>
+  const verdicts = [
+    { min: 8, text: "Perfil muito alinhado! ✨", sub: "Você tem as características essenciais para esse caminho. Aprofunde a pesquisa com confiança e converse com profissionais da área." },
+    { min: 6, text: "Boa afinidade! 👍", sub: "Você tem bastante a ver com essa profissão. Vale explorar mais: uma visita à faculdade ou conversa com um profissional pode ajudar muito." },
+    { min: 4, text: "Alguns pontos merecem atenção 🤔", sub: "Você tem afinidade com partes da área, mas alguns inegociáveis podem ser desafiadores. Converse com sua orientadora." },
+    { min: 0, text: "Talvez haja opções mais alinhadas com você 🔍", sub: "Isso não é descarte, é autoconhecimento. O que ficou de fora pode te ajudar a entender o que você realmente busca." }
+  ];
+
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    const v = verdicts.find(x => checked >= x.min);
+    document.getElementById('vd-' + id).textContent = v.text;
+    resEl.querySelector('.sub').textContent = v.sub;
+    resEl.classList.add('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
