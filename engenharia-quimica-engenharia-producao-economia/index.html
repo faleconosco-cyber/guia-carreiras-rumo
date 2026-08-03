@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Carreiras — Engenharia Química, Engenharia de Produção e Economia | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Engenharia Química · Verde Profundo */
+      --eqm:     #3B503F;
+      --eqm-lt:  #EAEFEB;
+      --eqm-mid: #C2CFC4;
+
+      /* Engenharia de Produção · Laranja Rumo */
+      --epr:     #D9563F;
+      --epr-lt:  #FFF0ED;
+      --epr-mid: #FBC9BE;
+
+      /* Economia · Bordô Rosado */
+      --eco:     #6B2F3C;
+      --eco-lt:  #F6EAED;
+      --eco-mid: #DCC0C8;
+
+      /* Comparação · Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── Header ─── */
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    /* ─── Nav ─── */
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.eqm.active { color: var(--eqm); border-bottom-color: var(--eqm); }
+    .tab-btn.epr.active { color: var(--epr); border-bottom-color: var(--epr); }
+    .tab-btn.eco.active { color: var(--eco); border-bottom-color: var(--eco); }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    /* ─── Panels ─── */
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    /* ─── Section cards ─── */
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .eqm .sc-head { background: var(--eqm-lt); border-color: var(--eqm-mid); }
+    .eqm .sc-head h2 { color: var(--eqm); }
+    .epr .sc-head { background: var(--epr-lt); border-color: var(--epr-mid); }
+    .epr .sc-head h2 { color: var(--epr); }
+    .eco .sc-head { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .eco .sc-head h2 { color: var(--eco); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    /* ─── Lists ─── */
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .eqm ul.sl li::before { color: var(--eqm); }
+    .epr ul.sl li::before { color: var(--epr); }
+    .eco ul.sl li::before { color: var(--eco); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    /* ─── Tags ─── */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .eqm .tag { background: var(--eqm-lt); color: var(--eqm); border-color: var(--eqm-mid); }
+    .epr .tag { background: var(--epr-lt); color: var(--epr); border-color: var(--epr-mid); }
+    .eco .tag { background: var(--eco-lt); color: var(--eco); border-color: var(--eco-mid); }
+
+    /* ─── Boxes ─── */
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .eqm .hbox { background: var(--eqm-lt); border-color: var(--eqm); }
+    .epr .hbox { background: var(--epr-lt); border-color: var(--epr); }
+    .eco .hbox { background: var(--eco-lt); border-color: var(--eco); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .eqm .accent { color: var(--eqm); }
+    .epr .accent { color: var(--epr); }
+    .eco .accent { color: var(--eco); }
+
+    /* ─── Tech grid ─── */
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .eqm .tech-card { background: var(--eqm-lt); border-color: var(--eqm-mid); }
+    .epr .tech-card { background: var(--epr-lt); border-color: var(--epr-mid); }
+    .eco .tech-card { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .eqm .tech-card strong { color: var(--eqm); }
+    .epr .tech-card strong { color: var(--epr); }
+    .eco .tech-card strong { color: var(--eco); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    /* ─── Salary grid ─── */
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .eqm .sal-card { background: var(--eqm-lt); border-color: var(--eqm-mid); }
+    .epr .sal-card { background: var(--epr-lt); border-color: var(--epr-mid); }
+    .eco .sal-card { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .eqm .sal-range { color: var(--eqm); }
+    .epr .sal-range { color: var(--epr); }
+    .eco .sal-range { color: var(--eco); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── Comparison table ─── */
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-eqm { background: var(--eqm); }
+    .comp-table th.h-epr { background: var(--epr); }
+    .comp-table th.h-eco { background: var(--eco); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    /* ─── Link cards ─── */
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .eqm .lcard:hover { border-color: var(--eqm); }
+    .epr .lcard:hover { border-color: var(--epr); }
+    .eco .lcard:hover { border-color: var(--eco); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    /* ─── Checklist ─── */
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .eqm .cl-item:hover, .eqm .cl-item.checked { background: var(--eqm-lt); border-color: var(--eqm); }
+    .epr .cl-item:hover, .epr .cl-item.checked { background: var(--epr-lt); border-color: var(--epr); }
+    .eco .cl-item:hover, .eco .cl-item.checked { background: var(--eco-lt); border-color: var(--eco); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .eqm .cl-item.checked .cl-box { background: var(--eqm); border-color: var(--eqm); }
+    .epr .cl-item.checked .cl-box { background: var(--epr); border-color: var(--epr); }
+    .eco .cl-item.checked .cl-box { background: var(--eco); border-color: var(--eco); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .eqm .cl-score span { color: var(--eqm); font-weight: 800; }
+    .epr .cl-score span { color: var(--epr); font-weight: 800; }
+    .eco .cl-score span { color: var(--eco); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .eqm .cl-result { background: var(--eqm-lt); border-color: var(--eqm-mid); }
+    .epr .cl-result { background: var(--epr-lt); border-color: var(--epr-mid); }
+    .eco .cl-result { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .verdict { font-size: 18px; font-weight: 800; }
+    .eqm .cl-result .verdict { color: var(--eqm); }
+    .epr .cl-result .verdict { color: var(--epr); }
+    .eco .cl-result .verdict { color: var(--eco); }
+    .cl-result .sub { font-size: 13px; color: var(--text); margin-top: 8px; line-height: 1.6; }
+
+    /* ─── Bolinhas de presença ─── */
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    /* ─── Ranking ─── */
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+    .rank-fill.eqm { background: var(--eqm); }
+    .rank-fill.epr { background: var(--epr); }
+    .rank-fill.eco { background: var(--eco); }
+
+    /* ─── Vagas reais ─── */
+    .vagas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-col-head.eqm { background: var(--eqm); }
+    .vaga-col-head.epr { background: var(--epr); }
+    .vaga-col-head.eco { background: var(--eco); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+    .vaga-btn.eqm { background: var(--eqm); }
+    .vaga-btn.epr { background: var(--epr); }
+    .vaga-btn.eco { background: var(--eco); }
+
+    /* ─── Footer ─── */
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table tr:nth-child(even) td:first-child { background: var(--cmp); }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>Engenharia Química · Engenharia de Produção · Economia
+    <span class="hd-accent">escolher pede informação, não palpite</span>
+  </h1>
+  <p class="hd-sub">Três formações que compartilham a base quantitativa e se separam no que fazem com ela. Este guia descreve as profissões como elas existem no mundo, em qualquer país: o que se estuda, o que a pessoa faz depois de formada, que trajetórias existem, o que a tecnologia está mudando e quanto se ganha. Nenhuma instituição, nenhum processo de admissão, nenhum veredito.</p>
+</header>
+
+<nav>
+  <button class="tab-btn eqm active" data-c="eqm" onclick="show('eqm')">⚗️ Engenharia Química</button>
+  <button class="tab-btn epr" data-c="epr" onclick="show('epr')">⚙️ Engenharia de Produção</button>
+  <button class="tab-btn eco" data-c="eco" onclick="show('eco')">📈 Economia</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">⚖️ Comparar as três</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ ENGENHARIA QUÍMICA ═══════════════════════════════ -->
+<div class="panel eqm active" id="p-eqm">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é a formação em Engenharia Química?</h2></div>
+    <div class="sc-body">
+      <p>Engenharia Química é a engenharia da transformação da matéria em escala. Uma reação que funciona num tubo de ensaio é fácil. Fazer a mesma reação acontecer em toneladas por dia, com segurança, custo controlado, energia otimizada e sem desperdício, é engenharia. É um bacharelado longo (em geral de 4 a 5 anos, conforme o país), com carga pesada de matemática, física e química nos primeiros anos.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>Fase inicial:</strong> cálculo, física, química geral e orgânica, álgebra linear, programação e termodinâmica. É a parte mais abstrata e a que mais faz gente desistir.</li>
+        <li><strong>Fase intermediária:</strong> balanços de massa e energia, fenômenos de transporte, operações unitárias, cinética química e reatores. É aqui que o curso vira engenharia de verdade.</li>
+        <li><strong>Fase final:</strong> projeto de processos, controle e automação, segurança de processo, economia de processos, laboratórios e projeto integrado. Estágio em planta industrial é praticamente padrão.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🌍 <strong>Formação internacional por natureza:</strong> destilação, transferência de calor e balanço de massa funcionam igual em qualquer lugar do planeta. Isso torna a formação bem portátil. Em muitos países existe um registro profissional (com nomes diferentes conforme o lugar) exigido para assinar projeto de engenharia. Trabalhar como engenheira dentro de uma empresa normalmente não exige esse registro; assinar responsabilidade técnica exige.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que essa profissional faz depois de formada?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Engenharia de processo:</strong> cuidar de uma unidade produtiva, entender por que ela rende o que rende e mexer nas variáveis para render mais. É a função mais clássica da área.</li>
+        <li><strong>Engenharia de projeto:</strong> desenhar plantas e unidades novas no papel e no software antes de existirem no mundo físico.</li>
+        <li><strong>Pesquisa e desenvolvimento:</strong> criar produtos e formulações novas, de remédio a cosmético, de alimento a material.</li>
+        <li><strong>Produção e operações:</strong> tocar o dia a dia da fábrica, com equipe, meta de produção e problema aparecendo em tempo real.</li>
+        <li><strong>Segurança de processo:</strong> prever o que pode dar errado numa planta e impedir que dê. Área técnica, bem paga e com responsabilidade alta.</li>
+        <li><strong>Qualidade e regulatório:</strong> garantir que o produto atende norma e legislação, especialmente em farma e alimentos.</li>
+        <li><strong>Energia e descarbonização:</strong> hidrogênio, biocombustíveis, captura de carbono, eficiência energética. Frente que mais cresce na área.</li>
+        <li><strong>Meio ambiente e água:</strong> tratamento de efluentes, resíduos e projetos de saneamento industrial.</li>
+        <li><strong>Consultoria técnica:</strong> ser chamada por várias empresas para resolver problema de processo específico.</li>
+        <li><strong>Engenharia comercial:</strong> vender equipamento, tecnologia e serviço técnico para outras indústrias. Aqui a área encosta em negociação.</li>
+        <li><strong>Simulação e dados:</strong> modelar processos em software e usar dados de planta para prever falha e otimizar operação.</li>
+        <li><strong>Gestão industrial:</strong> depois de alguns anos de chão, muita gente migra para gerência de planta ou de operações.</li>
+      </ul>
+      <div class="hbox">
+        🏭 <strong>Setores que absorvem essa formação no mundo:</strong> petróleo, gás e refino, energia e renováveis, farmacêutica e biotecnologia, alimentos e bebidas, cosméticos e higiene, papel e celulose, mineração e metalurgia, semicondutores, água e saneamento, química fina e commodities químicas.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses a área pede?</h2></div>
+    <div class="sc-body">
+      <p>Engenharia Química pede cabeça quantitativa somada a gosto real por ciência dura e a um tipo específico de paciência: a de quem lida com processo que leva tempo para responder.</p>
+      <div class="tags">
+        <span class="tag">Raciocínio quantitativo</span>
+        <span class="tag">Gosto por física e química</span>
+        <span class="tag">Atenção a detalhe</span>
+        <span class="tag">Consciência de segurança</span>
+        <span class="tag">Paciência com processo longo</span>
+        <span class="tag">Leitura de dados</span>
+        <span class="tag">Resolução de problema</span>
+        <span class="tag">Trabalho em equipe técnica</span>
+        <span class="tag">Comunicação com operação</span>
+        <span class="tag">Rigor e método</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você entende como uma coisa funciona por dentro, isso te dá prazer ou te dá tédio? Engenharia Química é feita de olhar para um sistema complexo e não descansar enquanto não entende o que está acontecendo lá dentro.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios reais da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O curso é duro e reprova muita gente.</strong> Os primeiros anos são de matemática e física pesadas, ainda longe do que atrai quem escolheu por causa da química. Muita desistência acontece aí.</div>
+      <div class="cbox"><strong>O trabalho vai aonde a indústria está.</strong> Refinaria, polo petroquímico e planta ficam onde tem matéria-prima e logística, não onde a cidade é bonita. Mobilidade geográfica pesa muito nessa carreira.</div>
+      <div class="cbox"><strong>Turno, plantão e campo.</strong> Boa parte das funções de operação envolve escala, madrugada e disponibilidade. Não é uma rotina de nove às seis.</div>
+      <div class="cbox"><strong>Segurança é responsabilidade concreta.</strong> Erro de processo pode virar vazamento, incêndio ou acidente com gente. É uma pressão diferente da pressão de meta.</div>
+      <div class="cbox"><strong>Ciclos de commodities.</strong> Óleo, gás e petroquímica contratam em onda e cortam em onda. Quem depende só desses setores sente o ciclo na pele.</div>
+      <div class="cbox"><strong>O começo é de observar, não de decidir.</strong> Os primeiros anos são acompanhando processo e aprendendo a planta. Autonomia técnica leva tempo.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia e a IA estão mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🧬</div><strong>Gêmeo digital</strong><p>A planta inteira roda simulada em software. Testar mudança no computador antes de mexer no equipamento virou padrão.</p></div>
+        <div class="tech-card"><div class="tc-icon">📉</div><strong>IA na otimização</strong><p>Algoritmos ajustam variáveis de processo em tempo real para gastar menos energia e produzir mais.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔋</div><strong>Transição energética</strong><p>Hidrogênio, biocombustíveis e captura de carbono abriram uma frente de trabalho que não existia há quinze anos.</p></div>
+        <div class="tech-card"><div class="tc-icon">🦠</div><strong>Bioprocessos</strong><p>Fermentação de precisão e biotecnologia industrial fabricam com micro-organismo o que antes só saía do petróleo.</p></div>
+        <div class="tech-card"><div class="tc-icon">🛰️</div><strong>Operação remota</strong><p>Sensor e automação permitem monitorar unidade de longe. Menos gente na sala de controle, mais análise de dado.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔬</div><strong>Materiais e baterias</strong><p>Eletrificação puxou demanda por quem sabe fazer material, eletrólito e reciclagem de bateria em escala.</p></div>
+      </div>
+      <p class="note">⚡ A IA acelera cálculo e simulação. O que ela não faz é assumir a responsabilidade técnica por uma planta que pode explodir. Julgamento de engenharia continua sendo humano.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🌍</span><h2>Como é a carreira no mundo?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Formação bem reconhecida internacionalmente:</strong> processo químico é o mesmo em qualquer país, então quem entende de operação unitária entende em qualquer língua. A mobilidade é uma das forças da área.</li>
+        <li><strong>As vagas seguem o mapa industrial:</strong> países com refino, petroquímica, farma, mineração e semicondutores concentram as oportunidades. Economias de serviço oferecem menos.</li>
+        <li><strong>Dois trilhos clássicos:</strong> aprofundar como especialista técnica (processo, segurança, simulação) ou migrar para gestão de planta e de operações. Os dois pagam bem, com rotinas bem diferentes.</li>
+        <li><strong>Frentes em expansão:</strong> energia limpa, farmacêutica, semicondutores, água e economia circular puxam contratação no mundo inteiro.</li>
+        <li><strong>Registro profissional varia por país:</strong> onde existe, ele é exigido para assinar projeto e responder tecnicamente, não para trabalhar como engenheira numa empresa.</li>
+        <li><strong>Empregador típico:</strong> indústria de grande porte, empresa de engenharia e projeto, consultoria técnica, centros de pesquisa e órgãos ambientais e regulatórios.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Na engenharia química a especialização define setor, salário e estilo de vida, mais até que o cargo.</p>
+      <div class="tags">
+        <span class="tag">⭐ Engenharia de processos</span>
+        <span class="tag">⭐ Segurança de processo</span>
+        <span class="tag">⭐ Energia, hidrogênio e renováveis</span>
+        <span class="tag">⭐ Bioprocessos e farmacêutica</span>
+        <span class="tag">Petróleo, gás e refino</span>
+        <span class="tag">Semicondutores e eletrônica</span>
+        <span class="tag">Materiais e polímeros</span>
+        <span class="tag">Alimentos e bebidas</span>
+        <span class="tag">Meio ambiente e água</span>
+        <span class="tag">Controle e automação</span>
+        <span class="tag">Simulação e dados de processo</span>
+        <span class="tag">Regulatório e qualidade</span>
+        <span class="tag">Gestão industrial</span>
+        <span class="tag">Mestrado e doutorado</span>
+      </div>
+      <p class="note">⭐ Frentes com maior demanda global e melhores pacotes hoje. Segurança de processo e energia são as que mais têm faltado gente qualificada.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha uma engenheira química?</h2></div>
+    <div class="sc-body">
+      <p>Faixas anuais brutas em dólar, considerando mercados de economias desenvolvidas. Servem para comparar as três formações entre si, não para prever um salário específico.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">US$ 55k–85k</div><div class="sal-note">Engenheira júnior de processo, projeto ou P&amp;D. Já começa acima da média geral de quem se forma.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno e especialista</div><div class="sal-range">US$ 85k–130k</div><div class="sal-note">Cinco a dez anos, com área definida. Segurança de processo e energia puxam para o topo da faixa.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior e liderança</div><div class="sal-range">US$ 130k–200k+</div><div class="sal-note">Especialista técnica sênior, gerência de planta ou de engenharia. Óleo, gás e semicondutores pagam acima disso.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Ressalva importante:</strong> esses números variam muito por país. Estados Unidos, Suíça, Noruega e países do Golfo pagam bem acima; Europa continental, Ásia e América Latina pagam bem abaixo, com custo de vida também diferente. O que se mantém em quase todo lugar é a posição relativa: engenharia química costuma estar entre as engenharias mais bem pagas na entrada.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.aiche.org" class="lcard" target="_blank"><span class="lc-icon">⚗️</span><div class="lc-body"><strong>AIChE</strong><span>Maior associação internacional de engenharia química: carreira, áreas de atuação e conteúdo técnico</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.icheme.org" class="lcard" target="_blank"><span class="lc-icon">🌐</span><div class="lc-body"><strong>IChemE</strong><span>Instituição britânica com alcance global. Boa para entender registro profissional e trilhas de carreira</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.bls.gov/ooh/architecture-and-engineering/chemical-engineers.htm" class="lcard" target="_blank"><span class="lc-icon">📊</span><div class="lc-body"><strong>Occupational Outlook Handbook</strong><span>Descrição oficial da ocupação, tarefas do dia a dia e projeção de demanda</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.onetonline.org/link/summary/17-2041.00" class="lcard" target="_blank"><span class="lc-icon">🧭</span><div class="lc-body"><strong>O*NET</strong><span>Detalhamento de atividades, habilidades e ferramentas que a profissão usa de fato</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.chemengonline.com" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Chemical Engineering</strong><span>Notícias e tendências técnicas do setor químico e de processos no mundo</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Engenharia Química combina com você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-eqm">
+        <div class="cl-item" onclick="toggle(this,'cl-eqm')"><div class="cl-box"></div><div class="cl-text">Gosto de química e de física de verdade, não só da ideia de trabalhar com ciência.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eqm')"><div class="cl-box"></div><div class="cl-text">Encaro dois anos de matemática pesada sem achar que vou largar no meio.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eqm')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade sobre como as coisas são fabricadas em escala industrial.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eqm')"><div class="cl-box"></div><div class="cl-text">Aceito trabalhar dentro de planta, laboratório ou campo, e não só num escritório.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eqm')"><div class="cl-box"></div><div class="cl-text">Tenho paciência com processo longo: nem todo resultado aparece na mesma semana.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eqm')"><div class="cl-box"></div><div class="cl-text">Levo norma e segurança a sério, mesmo quando parece burocracia chata.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eqm')"><div class="cl-box"></div><div class="cl-text">Topo morar onde a indústria está, mesmo que seja longe de uma capital.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eqm')"><div class="cl-box"></div><div class="cl-text">Prefiro me aprofundar em algo técnico a trocar de assunto o tempo todo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eqm')"><div class="cl-box"></div><div class="cl-text">Fico à vontade explicando número técnico para gente da operação e da diretoria.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-eqm">0 de 9</span></div>
+      <div class="cl-result" id="res-eqm"><div class="verdict" id="vd-eqm"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ ENGENHARIA DE PRODUÇÃO ═══════════════════════════════ -->
+<div class="panel epr" id="p-epr">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é a formação em Engenharia de Produção?</h2></div>
+    <div class="sc-body">
+      <p>Engenharia de Produção estuda o sistema, não o produto. Ela olha para pessoas, máquinas, informação, tempo e dinheiro funcionando juntos e pergunta como fazer isso render mais com menos desperdício. É a engenharia mais próxima do mundo dos negócios: metade modelo matemático, metade organização de gente e processo. No mundo aparece com nomes como Industrial Engineering, Industrial and Systems Engineering ou Operations Management, com duração típica de 4 a 5 anos.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>Fase inicial:</strong> cálculo, física, química, programação e estatística. É a base comum a todas as engenharias, e ela existe de verdade nesse curso.</li>
+        <li><strong>Fase intermediária:</strong> pesquisa operacional, probabilidade e estatística aplicada, planejamento e controle da produção, custos, qualidade, logística e ergonomia.</li>
+        <li><strong>Fase final:</strong> gestão de projetos, simulação, engenharia econômica, estratégia de operações, estágio e projeto final. Muita gente já entra em empresa antes de terminar.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🧩 <strong>O que diferencia de administração:</strong> a decisão aqui passa por modelo matemático. Fila, estoque, roteirização e capacidade viram equação e simulação antes de virar reunião. Além disso, a formação carrega a base científica de engenharia, o que abre portas técnicas que a gestão pura não abre.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que essa profissional faz depois de formada?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Planejamento de produção:</strong> decidir o que produzir, quanto e quando, equilibrando demanda, capacidade e estoque.</li>
+        <li><strong>Supply chain e logística:</strong> fazer produto sair de um ponto do mundo e chegar em outro no prazo e no custo certos. Área global por definição.</li>
+        <li><strong>Melhoria contínua (lean e seis sigma):</strong> entrar numa operação bagunçada, medir, cortar desperdício e devolver ela funcionando.</li>
+        <li><strong>Qualidade:</strong> garantir que o que sai atende a especificação, com método estatístico por trás.</li>
+        <li><strong>Gestão de projetos:</strong> conduzir prazo, escopo, orçamento e equipe. Função que existe em todo setor do mundo.</li>
+        <li><strong>Consultoria de gestão e estratégia:</strong> ser contratada para resolver problema de operação, custo ou crescimento de outras empresas.</li>
+        <li><strong>Compras e negociação com fornecedor:</strong> escolher fornecedor, negociar contrato, prazo e preço. Um dos pontos onde a profissão mais negocia.</li>
+        <li><strong>Analytics e otimização:</strong> usar dados e algoritmo para decidir roteiro, preço, alocação e capacidade.</li>
+        <li><strong>Operações em tecnologia:</strong> logística de e-commerce, marketplace, entrega, mobilidade. Setor que absorve muita gente da área.</li>
+        <li><strong>Engenharia de custos e viabilidade:</strong> dizer se um projeto se paga e em quanto tempo.</li>
+        <li><strong>Operações em serviços:</strong> hospital, banco, aeroporto e varejo também são sistemas de produção, e contratam para isso.</li>
+        <li><strong>Empreender:</strong> a formação dá uma caixa de ferramentas prática para tocar negócio próprio.</li>
+      </ul>
+      <div class="hbox">
+        🏗️ <strong>Setores que absorvem essa formação no mundo:</strong> manufatura em geral, automotivo e aeroespacial, logística e transporte, varejo e e-commerce, tecnologia, energia, saúde, serviços financeiros, agroindústria e consultoria.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses a área pede?</h2></div>
+    <div class="sc-body">
+      <p>É a engenharia que mais exige conversa. Você passa o dia traduzindo número para gente e gente para número.</p>
+      <div class="tags">
+        <span class="tag">Raciocínio quantitativo</span>
+        <span class="tag">Visão de sistema</span>
+        <span class="tag">Organização</span>
+        <span class="tag">Comunicação</span>
+        <span class="tag">Negociação</span>
+        <span class="tag">Liderança</span>
+        <span class="tag">Gosto por otimizar</span>
+        <span class="tag">Tolerância a ambiguidade</span>
+        <span class="tag">Trabalho multidisciplinar</span>
+        <span class="tag">Pragmatismo</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você entra numa fila mal organizada ou vê um trabalho em grupo travado, você fica irritada e já pensa em como resolveria? Esse incômodo com desperdício é o combustível da engenharia de produção.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios reais da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>É larga e pode virar rasa.</strong> A formação passa por muita coisa e aprofunda pouco. Quem não escolhe um foco em algum momento corre o risco de virar a pessoa que sabe um pouco de tudo e nada direito.</div>
+      <div class="cbox"><strong>Você disputa vaga com muita gente diferente.</strong> Nas mesmas posições aparecem pessoas de administração, economia, estatística e ciência de dados. A vantagem técnica precisa ser demonstrada, não presumida.</div>
+      <div class="cbox"><strong>Boa parte do trabalho é implantar mudança.</strong> E mudança gera resistência. Você vai propor algo que mexe na rotina de quem está há vinte anos ali, e vai precisar convencer, não mandar.</div>
+      <div class="cbox"><strong>Chão de fábrica e campo fazem parte.</strong> Em muitas funções o começo é na operação, com turno, calor, barulho e conflito. Quem imagina apenas escritório e planilha se decepciona.</div>
+      <div class="cbox"><strong>Cobrança por indicador.</strong> Sua entrega é medida em número: custo, prazo, produtividade, ruptura. Isso motiva umas pessoas e adoece outras.</div>
+      <div class="cbox"><strong>O nome muda pelo mundo.</strong> Fora do Brasil a formação costuma se chamar Industrial Engineering ou Operations. Saber traduzir o que você faz é parte da mobilidade internacional.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia e a IA estão mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🧮</div><strong>Otimização com IA</strong><p>Algoritmo decide roteiro, escala e alocação em minutos. O trabalho vira modelar bem o problema e checar se a resposta faz sentido.</p></div>
+        <div class="tech-card"><div class="tc-icon">🦾</div><strong>Automação e robótica</strong><p>Máquina assume tarefa repetitiva. Sobra para o humano projetar o sistema em que a máquina trabalha.</p></div>
+        <div class="tech-card"><div class="tc-icon">🖥️</div><strong>Gêmeo digital da operação</strong><p>Simular a fábrica ou o centro de distribuição inteiro antes de investir milhões virou prática comum.</p></div>
+        <div class="tech-card"><div class="tc-icon">🚚</div><strong>Cadeia visível em tempo real</strong><p>Rastreamento ponta a ponta mudou a logística global. Decisão que levava semana agora leva hora.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Dados como idioma básico</strong><p>SQL, Python e ferramenta de BI viraram requisito de entrada em boa parte das vagas.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌱</div><strong>Pegada de carbono</strong><p>Empresas precisam medir e reduzir emissão da própria operação, e isso virou frente nova de trabalho.</p></div>
+      </div>
+      <p class="note">⚡ A IA otimiza melhor que qualquer pessoa quando o problema está bem formulado. Formular o problema certo, com as restrições reais de gente e de dinheiro, continua sendo o trabalho de quem é da área.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🌍</span><h2>Como é a carreira no mundo?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>É a engenharia com mais setores possíveis:</strong> onde existe operação existe vaga, do hospital ao aeroporto, da fábrica ao aplicativo de entrega. Quando um setor esfria, a formação migra.</li>
+        <li><strong>Consultoria e tecnologia recrutam bastante:</strong> as grandes consultorias e as empresas de tecnologia buscam esse perfil por causa da combinação de método quantitativo com visão de negócio.</li>
+        <li><strong>É a formação de engenharia que mais migra para gestão:</strong> muita gente termina em cargo de liderança geral, e não em cargo técnico.</li>
+        <li><strong>Supply chain é a porta internacional mais aberta:</strong> cadeia global significa time global, e essa é uma das áreas que mais movimenta profissional entre países.</li>
+        <li><strong>Não costuma exigir registro profissional para as funções de gestão:</strong> o que abre porta é a experiência comprovada em operação e projeto.</li>
+        <li><strong>Certificações pesam:</strong> lean, seis sigma, gestão de projetos e supply chain são reconhecidas internacionalmente e valem muito em processo seletivo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Aqui a especialização é o que impede a carreira de ficar genérica. Escolher cedo acelera muito.</p>
+      <div class="tags">
+        <span class="tag">⭐ Supply chain e logística</span>
+        <span class="tag">⭐ Analytics e otimização</span>
+        <span class="tag">⭐ Lean e Seis Sigma</span>
+        <span class="tag">⭐ Consultoria de operações</span>
+        <span class="tag">Gestão de projetos</span>
+        <span class="tag">Qualidade</span>
+        <span class="tag">Engenharia econômica e finanças</span>
+        <span class="tag">Operações em tecnologia</span>
+        <span class="tag">Manufatura avançada</span>
+        <span class="tag">Sustentabilidade e ESG</span>
+        <span class="tag">Ergonomia e fator humano</span>
+        <span class="tag">Compras e suprimentos</span>
+        <span class="tag">Pesquisa operacional</span>
+        <span class="tag">MBA e mestrado em gestão</span>
+      </div>
+      <p class="note">⭐ Frentes com mais vaga e melhor remuneração global. Supply chain e analytics são as que mais aparecem em processo internacional.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha uma engenheira de produção?</h2></div>
+    <div class="sc-body">
+      <p>Faixas anuais brutas em dólar, considerando mercados de economias desenvolvidas. Servem para comparar as três formações entre si, não para prever um salário específico.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">US$ 50k–80k</div><div class="sal-note">Analista ou engenheira júnior em operação, supply chain ou melhoria contínua.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno e especialista</div><div class="sal-range">US$ 80k–125k</div><div class="sal-note">Com foco definido e projetos entregues. Consultoria e tecnologia pagam acima da manufatura tradicional.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior e liderança</div><div class="sal-range">US$ 125k–200k+</div><div class="sal-note">Gerência de operações, supply chain ou consultoria sênior. Direção de operações vai bem além disso.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Ressalva importante:</strong> nessa formação o setor pesa mais que o tempo de casa. A mesma pessoa, com os mesmos anos de carreira, ganha faixas bem diferentes numa fábrica tradicional, numa consultoria e numa empresa de tecnologia. E, como nas outras, o país muda tudo.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.iise.org" class="lcard" target="_blank"><span class="lc-icon">⚙️</span><div class="lc-body"><strong>IISE</strong><span>Associação internacional de engenharia industrial: o que a profissão faz, áreas e carreira</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.ascm.org" class="lcard" target="_blank"><span class="lc-icon">🚚</span><div class="lc-body"><strong>ASCM (antiga APICS)</strong><span>Referência mundial em supply chain, com as certificações mais reconhecidas do setor</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.bls.gov/ooh/architecture-and-engineering/industrial-engineers.htm" class="lcard" target="_blank"><span class="lc-icon">📊</span><div class="lc-body"><strong>Occupational Outlook Handbook</strong><span>Descrição oficial da ocupação, atividades e projeção de demanda</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.pmi.org" class="lcard" target="_blank"><span class="lc-icon">📋</span><div class="lc-body"><strong>PMI</strong><span>Gestão de projetos no padrão internacional, uma das saídas mais comuns da formação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://asq.org" class="lcard" target="_blank"><span class="lc-icon">✅</span><div class="lc-body"><strong>ASQ</strong><span>Qualidade, lean e seis sigma explicados por quem define os padrões da área</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Engenharia de Produção combina com você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-epr">
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Gosto de organizar sistema e processo, e não só de resolver conta isolada.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Encaro cálculo e estatística sem pavor, mesmo sem ser apaixonada por matemática.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Desperdício, fila e retrabalho me incomodam de verdade quando vejo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Gosto de conversar com gente de áreas diferentes e fazer todo mundo se entender.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Consigo defender uma mudança para quem não quer mudar, sem desistir na primeira negativa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Ser cobrada por meta e indicador me estimula mais do que me trava.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Topo alternar entre escritório, chão de fábrica e campo, sem precisar escolher só um.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Gosto da ideia de poder trabalhar em quase qualquer setor, do hospital ao e-commerce.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Prefiro melhorar o que já existe a inventar tudo do zero.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-epr">0 de 9</span></div>
+      <div class="cl-result" id="res-epr"><div class="verdict" id="vd-epr"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ ECONOMIA ═══════════════════════════════ -->
+<div class="panel eco" id="p-eco">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é a formação em Economia?</h2></div>
+    <div class="sc-body">
+      <p>Economia estuda como pessoas, empresas e países decidem quando os recursos não dão para tudo, e usa matemática e estatística para testar essas decisões contra o que acontece de fato. É ciência social com ferramenta quantitativa pesada: quem entra achando que vai só debater ideia leva um susto na primeira prova de econometria. A duração varia de 3 a 4 anos conforme o país.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>Fase inicial:</strong> microeconomia, macroeconomia, matemática, estatística, contabilidade e história econômica. A base que sustenta tudo o que vem depois.</li>
+        <li><strong>Fase intermediária:</strong> econometria (o coração metodológico do curso), economia monetária, finanças, economia internacional e economia do setor público.</li>
+        <li><strong>Fase final:</strong> eletivas de área (trabalho, ambiental, industrial, comportamental, desenvolvimento), programação e dados, pesquisa e trabalho final. Estágio em instituição financeira, consultoria, órgão público ou centro de pesquisa é o caminho comum.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🧠 <strong>O que a formação realmente treina:</strong> pensar em incentivo, trade-off e consequência não intencional, e provar o que você afirma com dado. Essa cabeça é o produto do curso, e é ela que faz economista ser contratada em lugares tão diferentes quanto um banco, um ministério e uma empresa de tecnologia.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que essa profissional faz depois de formada?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Análise no mercado financeiro:</strong> estudar empresas, setores e países para embasar decisão de investimento. Inclui research, gestão de fundos e mesa de operações.</li>
+        <li><strong>Banco de investimento:</strong> fusões, aquisições, captação e avaliação de empresas. Alta remuneração e jornada pesada.</li>
+        <li><strong>Risco e compliance:</strong> medir e limitar o risco que uma instituição financeira assume. Área grande, técnica e estável.</li>
+        <li><strong>Consultoria econômica e estratégica:</strong> resolver problema de preço, competição, regulação ou crescimento para empresas e governos.</li>
+        <li><strong>Banco central e órgãos reguladores:</strong> política monetária, supervisão bancária, regulação de setores. Trilho de prestígio, estabilidade e concurso ou processo seletivo duro.</li>
+        <li><strong>Organismos internacionais:</strong> instituições multilaterais de desenvolvimento e cooperação empregam economistas para avaliar projeto e desenhar política.</li>
+        <li><strong>Política pública e avaliação de impacto:</strong> medir se um programa social ou uma política funcionou de verdade.</li>
+        <li><strong>Economia dentro de empresas:</strong> pricing, previsão de demanda, análise de concorrência e inteligência de mercado.</li>
+        <li><strong>Tecnologia:</strong> plataformas contratam economistas para desenhar leilão, marketplace, precificação e experimentação. Frente recente e bem paga.</li>
+        <li><strong>Dados e econometria aplicada:</strong> a fronteira entre economista e cientista de dados ficou fina, e quem programa transita nos dois lados.</li>
+        <li><strong>Pesquisa e docência:</strong> universidade e centros de pesquisa, com mestrado e doutorado como requisito.</li>
+        <li><strong>Comunicação econômica:</strong> jornalismo especializado, relatório de conjuntura e conteúdo para investidor.</li>
+      </ul>
+      <div class="hbox">
+        🏛️ <strong>Empregadores típicos no mundo:</strong> bancos e gestoras de recursos, consultorias, empresas de tecnologia, bancos centrais e ministérios, organismos multilaterais, institutos de pesquisa, universidades, seguradoras e grandes empresas de qualquer setor.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses a área pede?</h2></div>
+    <div class="sc-body">
+      <p>Economia pede raciocínio abstrato e escrita clara na mesma pessoa. Quem só calcula não convence, quem só argumenta não comprova.</p>
+      <div class="tags">
+        <span class="tag">Raciocínio abstrato</span>
+        <span class="tag">Facilidade com dados</span>
+        <span class="tag">Curiosidade sobre o mundo</span>
+        <span class="tag">Escrita clara</span>
+        <span class="tag">Capacidade de argumentar</span>
+        <span class="tag">Ceticismo saudável</span>
+        <span class="tag">Programação</span>
+        <span class="tag">Tolerância a incerteza</span>
+        <span class="tag">Negociação</span>
+        <span class="tag">Inglês</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando ouve uma notícia sobre juros, imposto ou preço subindo, sua cabeça vai para "e quem ganha e quem perde com isso?". Se vai, você já está fazendo economia sem saber.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios reais da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O curso é bem mais matemático do que parece de fora.</strong> Muita gente entra pelo interesse em política e atualidade e se surpreende com o volume de cálculo, estatística e modelo formal.</div>
+      <div class="cbox"><strong>A formação não entrega um cargo pronto.</strong> Você se forma economista, não se forma "com uma profissão definida" como em medicina ou engenharia. Isso é liberdade e é ambiguidade ao mesmo tempo, e exige que você construa o próprio caminho desde cedo.</div>
+      <div class="cbox"><strong>Nos trilhos de ponta, pós-graduação virou quase requisito.</strong> Banco central, pesquisa, organismos internacionais e economia em tecnologia costumam pedir mestrado ou doutorado.</div>
+      <div class="cbox"><strong>O mercado financeiro paga bem e cobra caro.</strong> Jornada longa, pressão por resultado e demissão em ciclo fazem parte do pacote de quem escolhe esse trilho.</div>
+      <div class="cbox"><strong>Você vai errar previsão em público.</strong> Economia trabalha com sistema complexo e cenário. Errar faz parte, e aguentar ser cobrada por isso também.</div>
+      <div class="cbox"><strong>Boa parte do dia é planilha, código e texto.</strong> A imagem glamourosa da área esconde muitas horas de limpeza de dado e escrita de relatório.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia e a IA estão mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🔗</div><strong>Econometria e machine learning</strong><p>As duas caixas de ferramenta se misturaram. Saber prever com algoritmo e explicar causa com método virou combinação valiosa.</p></div>
+        <div class="tech-card"><div class="tc-icon">🛰️</div><strong>Dados alternativos</strong><p>Satélite, cartão de crédito e busca online medem a economia em tempo real, antes da estatística oficial sair.</p></div>
+        <div class="tech-card"><div class="tc-icon">✍️</div><strong>IA na produção de relatório</strong><p>Rascunho, resumo e gráfico saem em minutos. O valor migra para a pergunta certa e para o julgamento sobre o resultado.</p></div>
+        <div class="tech-card"><div class="tc-icon">🛒</div><strong>Economia digital</strong><p>Plataformas viraram mercados inteiros, com leilão, matching e preço algorítmico desenhados por economistas.</p></div>
+        <div class="tech-card"><div class="tc-icon">📉</div><strong>Investimento quantitativo</strong><p>Parte da gestão de recursos virou código. Quem une economia e programação entra por essa porta.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌡️</div><strong>Clima na conta</strong><p>Precificar carbono e calcular risco climático virou campo próprio dentro da economia.</p></div>
+      </div>
+      <p class="note">⚡ A IA calcula e escreve rápido. Decidir qual pergunta importa, que dado é confiável e o que a resposta significa para quem vai decidir continua sendo o trabalho da economista.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🌍</span><h2>Como é a carreira no mundo?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>É a mais portátil das três em termos de ambiente:</strong> a linguagem de dados, modelos e mercados é a mesma em qualquer país, e o trabalho é de escritório em praticamente todos os trilhos.</li>
+        <li><strong>Quatro trilhos bem distintos:</strong> mercado financeiro, empresa e consultoria, setor público e organismos internacionais, e academia. Cada um tem ritmo, salário e estabilidade próprios, e mudar de um para o outro fica mais difícil com o tempo.</li>
+        <li><strong>Rede de contatos e estágio pesam muito:</strong> mais do que nas engenharias, a porta de entrada em mercado financeiro e consultoria costuma passar por processo seletivo competitivo e experiência prévia relevante.</li>
+        <li><strong>Não existe conselho profissional em boa parte do mundo:</strong> na maioria dos países ninguém precisa de registro para atuar como economista, o que amplia a concorrência e faz a especialização valer mais.</li>
+        <li><strong>Programação virou diferencial decisivo:</strong> quem sai sabendo Python, R e SQL disputa vagas que quem só sabe teoria não alcança.</li>
+        <li><strong>Mobilidade internacional alta:</strong> instituições financeiras, consultorias e organismos multilaterais movimentam profissionais entre países com frequência, e o inglês é pré-requisito, não diferencial.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em economia a especialização define o trilho, e o trilho define quase tudo: rotina, salário e estabilidade.</p>
+      <div class="tags">
+        <span class="tag">⭐ Finanças e mercado de capitais</span>
+        <span class="tag">⭐ Econometria e ciência de dados</span>
+        <span class="tag">⭐ Economia digital e pricing</span>
+        <span class="tag">⭐ Risco</span>
+        <span class="tag">Política pública e desenvolvimento</span>
+        <span class="tag">Economia internacional</span>
+        <span class="tag">Organização industrial e regulação</span>
+        <span class="tag">Economia comportamental</span>
+        <span class="tag">Economia ambiental e clima</span>
+        <span class="tag">Economia do trabalho</span>
+        <span class="tag">Economia da saúde</span>
+        <span class="tag">Avaliação de impacto</span>
+        <span class="tag">Mestrado e doutorado</span>
+        <span class="tag">Certificações de investimento</span>
+      </div>
+      <p class="note">⭐ Frentes com mais demanda e melhores faixas hoje. A combinação de economia com programação é a que mais abriu portas novas nos últimos anos.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha uma economista?</h2></div>
+    <div class="sc-body">
+      <p>Faixas anuais brutas em dólar, considerando mercados de economias desenvolvidas. Servem para comparar as três formações entre si, não para prever um salário específico.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">US$ 55k–95k</div><div class="sal-note">Analista em banco, consultoria, empresa ou órgão público. A faixa alta já inclui bônus do setor financeiro.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno e especialista</div><div class="sal-range">US$ 90k–150k</div><div class="sal-note">Cinco a dez anos, com trilho definido. Pós-graduação costuma aparecer aqui como divisor.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior e liderança</div><div class="sal-range">US$ 150k–300k+</div><div class="sal-note">Gestão de recursos, banco de investimento, economista-chefe e sócia de consultoria. Com bônus, o topo vai bem além.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Ressalva importante:</strong> economia é a formação das três com maior dispersão salarial. A mesma pessoa pode ganhar três vezes mais no mercado financeiro do que num órgão público, entregando estabilidade e horário no lugar do dinheiro. Aqui a escolha de trilho pesa mais que a escolha do curso.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.aeaweb.org/resources/students" class="lcard" target="_blank"><span class="lc-icon">📚</span><div class="lc-body"><strong>American Economic Association</strong><span>Seção para estudantes: o que economistas fazem, áreas e caminhos de carreira</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.bls.gov/ooh/life-physical-and-social-science/economists.htm" class="lcard" target="_blank"><span class="lc-icon">📊</span><div class="lc-body"><strong>Occupational Outlook Handbook</strong><span>Descrição oficial da ocupação, atividades diárias e projeção de demanda</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.imf.org/en/Publications/fandd" class="lcard" target="_blank"><span class="lc-icon">🌐</span><div class="lc-body"><strong>Finance &amp; Development</strong><span>Revista do FMI, boa para ver economia aplicada a problemas reais do mundo</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.economist.com" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>The Economist</strong><span>Leitura de repertório: como a área pensa e escreve sobre o mundo</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.nber.org/papers" class="lcard" target="_blank"><span class="lc-icon">🔬</span><div class="lc-body"><strong>NBER</strong><span>Pesquisa econômica de ponta. Serve para ver do que trata a economia acadêmica hoje</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Economia combina com você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-eco">
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Gosto de entender por que as coisas acontecem, e não só de aplicar uma fórmula pronta.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Encaro matemática e estatística como ferramenta de trabalho, sem pavor.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade sobre notícia de economia, política e o que acontece no mundo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Escrevo bem e gosto de sustentar uma ideia com argumento e dado.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Aguento ambiguidade: nem toda pergunta tem resposta certa e comprovada.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Me interesso por dinheiro, mercado e decisão sob risco.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Topo trabalhar principalmente em escritório, com computador, dado e reunião.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Aceito que talvez precise de mestrado ou doutorado para chegar onde quero.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Gosto de negociar e de apresentar resultado para quem toma decisão.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-eco">0 de 9</span></div>
+      <div class="cl-result" id="res-eco"><div class="verdict" id="vd-eco"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAÇÃO ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚖️</span><h2>As três lado a lado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">As três partem da mesma base quantitativa e se separam no objeto: matéria, sistema e decisão. Esta tabela mostra as diferenças estruturais, sem apontar caminho.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão</th>
+              <th class="h-eqm">⚗️ Eng. Química</th>
+              <th class="h-epr">⚙️ Eng. de Produção</th>
+              <th class="h-eco">📈 Economia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Pergunta central</td><td>Como faço essa transformação acontecer em escala e com segurança?</td><td>Como faço esse sistema render mais com menos desperdício?</td><td>Por que as pessoas e os mercados decidem assim, e o que muda se mexer?</td></tr>
+            <tr><td>Objeto de trabalho</td><td>Matéria e processo físico</td><td>Operação, fluxo e recurso</td><td>Decisão, dado e mercado</td></tr>
+            <tr><td>Base do curso</td><td>Química, física e cálculo</td><td>Cálculo, estatística e gestão</td><td>Matemática, estatística e teoria social</td></tr>
+            <tr><td>Onde o dia acontece</td><td>Planta, laboratório, campo e escritório técnico</td><td>Escritório, chão de fábrica e centro de distribuição</td><td>Escritório, em praticamente todos os trilhos</td></tr>
+            <tr><td>Contato com dinheiro</td><td>Indireto: custo e eficiência de processo</td><td>Direto: custo, orçamento e viabilidade</td><td>Central: é o próprio objeto</td></tr>
+            <tr><td>Quanto negocia</td><td>Pouco, salvo em compras técnicas e vendas</td><td>Médio: fornecedor, contrato e áreas internas</td><td>Alto: mercado, cliente e contraparte</td></tr>
+            <tr><td>Estabilidade típica</td><td>Alta, com oscilação por ciclo industrial</td><td>Alta, por transitar em muitos setores</td><td>Varia muito conforme o trilho escolhido</td></tr>
+            <tr><td>Faixa salarial</td><td>Alta e previsível</td><td>Alta, muito dependente do setor</td><td>A mais alta e a mais desigual</td></tr>
+            <tr><td>Precisa de pós?</td><td>Não para a maioria das funções</td><td>Não, mas MBA e certificações ajudam</td><td>Frequentemente sim nos trilhos de ponta</td></tr>
+            <tr><td>Presencial ou remoto</td><td>Majoritariamente presencial</td><td>Híbrido, com presença em operação</td><td>O que mais aceita híbrido e remoto</td></tr>
+            <tr><td>Mobilidade internacional</td><td>Alta, com registro exigido em alguns países para assinar projeto</td><td>Alta, principalmente por supply chain</td><td>Alta, com inglês como pré-requisito</td></tr>
+            <tr><td>Caminho para liderança</td><td>Gestão de planta e de engenharia, depois de anos de chão</td><td>Um dos mais curtos para gestão geral</td><td>Rápido no mercado e na consultoria</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔍</span><h2>Confusões comuns entre as três</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        ⚙️ <strong>"Engenharia de produção é administração com cálculo."</strong> A formação passa pela base científica completa de engenharia e decide com modelo matemático: fila, estoque, rota e capacidade viram equação antes de virar reunião. A proximidade com gestão é real, a equivalência não.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        📈 <strong>"Economia é sobre investir e ficar rico."</strong> Finanças é um dos trilhos, e nele o dinheiro é grande. Mas boa parte da economia no mundo é pesquisa, regulação, política pública e análise dentro de empresa. Muita economista formada nunca vai comprar uma ação profissionalmente.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        ⚗️ <strong>"Engenharia química é passar o dia no laboratório."</strong> Laboratório é uma parte, e nem sempre a maior. O trabalho central é escala, projeto, custo, energia e segurança de uma unidade que produz toneladas, não gramas.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🔗 <strong>Onde as três se encontram:</strong> análise quantitativa, custo, otimização e decisão sob restrição. Uma engenheira química que virou gerente de planta, uma engenheira de produção em consultoria e uma economista em pricing podem acabar na mesma reunião, discutindo o mesmo problema com vocabulários diferentes. As três também compartilham a porta de saída para gestão, dados e negócio próprio.
+      </div>
+      <p class="note">Diferença que costuma decidir na prática: a engenharia química te coloca perto da matéria, a engenharia de produção te coloca perto da operação e das pessoas, a economia te coloca perto da decisão e do mercado.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Cargos reais que existem para cada formação, com os nomes em inglês usados internacionalmente e explicados de um jeito simples. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no mundo.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col">
+          <div class="vaga-col-head eqm">⚗️ Eng. Química</div>
+          <div class="vaga-role"><strong>Process Engineer</strong><span>Cuida de uma unidade de produção: entende por que ela rende o que rende e ajusta para render mais.</span></div>
+          <div class="vaga-role"><strong>Process Safety Engineer</strong><span>Prevê o que pode dar errado numa planta industrial e projeta o que impede o acidente de acontecer.</span></div>
+          <div class="vaga-role"><strong>R&amp;D Engineer</strong><span>Desenvolve produtos e formulações novas, de remédio a alimento, e leva do laboratório para a escala industrial.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn eqm" href="https://www.linkedin.com/jobs/search/?keywords=Process%20Engineer&location=Worldwide" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head epr">⚙️ Eng. de Produção</div>
+          <div class="vaga-role"><strong>Supply Chain Analyst</strong><span>Faz produto sair de um ponto do mundo e chegar em outro no prazo e no custo certos.</span></div>
+          <div class="vaga-role"><strong>Continuous Improvement Engineer</strong><span>Entra numa operação bagunçada, mede, corta desperdício e devolve ela funcionando melhor.</span></div>
+          <div class="vaga-role"><strong>Operations Analyst</strong><span>Analisa dados da operação para decidir capacidade, escala de gente e onde investir.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn epr" href="https://www.linkedin.com/jobs/search/?keywords=Industrial%20Engineer&location=Worldwide" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head eco">📈 Economia</div>
+          <div class="vaga-role"><strong>Economic Analyst</strong><span>Estuda setores, países e mercados e transforma isso em relatório para quem vai decidir.</span></div>
+          <div class="vaga-role"><strong>Pricing Analyst</strong><span>Define preço com base em dado de demanda, concorrência e comportamento de quem compra.</span></div>
+          <div class="vaga-role"><strong>Risk Analyst</strong><span>Mede quanto risco uma instituição está correndo e mostra onde ele passa do aceitável.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn eco" href="https://www.linkedin.com/jobs/search/?keywords=Economist&location=Worldwide" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SEUS CRITÉRIOS ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando as três formações</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estes são os critérios que você elencou e organizou como os mais importantes durante o processo, na ordem de prioridade que você definiu. A tabela descreve, de forma objetiva, como cada critério se apresenta em cada formação. Ela não aponta resposta certa nem indica um caminho: é material para você pensar e conversar com sua orientadora.</p>
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Muito presente</span>
+        <span><span class="dot y"></span>Presente em parte</span>
+        <span><span class="dot r"></span>Pouco presente</span>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table crit-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th class="h-eqm">⚗️ Eng. Química</th>
+              <th class="h-epr">⚙️ Eng. de Produção</th>
+              <th class="h-eco">📈 Economia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Ter um trabalho estável</td>
+              <td data-label="⚗️ Eng. Química"><span class="dot g"></span>A indústria contrata em vínculo formal e de longo prazo, e a produção não para. A oscilação vem dos ciclos de commodities, não da falta de demanda pela formação.</td>
+              <td data-label="⚙️ Eng. de Produção"><span class="dot g"></span>Absorvida por indústria, logística, varejo, saúde, tecnologia e serviços. Quando um setor esfria, a formação migra para outro sem recomeçar do zero.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>Bastante estável em banco central, órgão público e organismo internacional. No mercado financeiro e na consultoria, a rotatividade e os cortes por ciclo são frequentes.</td>
+            </tr>
+            <tr>
+              <td>2. Ter alta remuneração</td>
+              <td data-label="⚗️ Eng. Química"><span class="dot y"></span>Começa acima da média geral e tem faixas fortes em óleo, gás, energia e semicondutores. O teto é alto, mas menor que o de finanças.</td>
+              <td data-label="⚙️ Eng. de Produção"><span class="dot y"></span>Entrada parecida com as demais engenharias, com salto quando migra para consultoria, tecnologia ou liderança de operações.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Concentra as faixas mais altas das três, sobretudo em mercado financeiro com bônus. Também é a de maior desigualdade interna: setor público e pesquisa pagam bem menos.</td>
+            </tr>
+            <tr>
+              <td>3. Negociar</td>
+              <td data-label="⚗️ Eng. Química"><span class="dot r"></span>Pouco presente no núcleo técnico. Aparece em engenharia comercial, compras técnicas e contratos de projeto, que são caminhos laterais da profissão.</td>
+              <td data-label="⚙️ Eng. de Produção"><span class="dot y"></span>Presente em compras, contratos com fornecedor e na negociação interna entre áreas que disputam a mesma capacidade e o mesmo orçamento.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Central em mercado financeiro, consultoria, comércio internacional e política pública. Negociar termos e convencer quem decide é parte da entrega.</td>
+            </tr>
+            <tr>
+              <td>4. Assunto economia</td>
+              <td data-label="⚗️ Eng. Química"><span class="dot r"></span>Aparece só como economia de processo: quanto custa produzir, quanto se ganha otimizando energia e matéria-prima.</td>
+              <td data-label="⚙️ Eng. de Produção"><span class="dot y"></span>Presente em engenharia econômica, análise de investimento e viabilidade de projeto, aplicada à operação.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>É o objeto do curso do primeiro ao último período, e continua sendo o objeto do trabalho depois de formada.</td>
+            </tr>
+            <tr>
+              <td>5. Ter oportunidades de crescimento na carreira</td>
+              <td data-label="⚗️ Eng. Química"><span class="dot y"></span>Progressão sólida e previsível, em dois trilhos (especialista técnica ou gestão de planta), em ritmo mais lento que nas outras duas.</td>
+              <td data-label="⚙️ Eng. de Produção"><span class="dot g"></span>É a formação de engenharia com passagem mais direta para liderança geral, em muitos setores diferentes.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Crescimento rápido em mercado e consultoria, muitas vezes condicionado a pós-graduação e a mudança de instituição.</td>
+            </tr>
+            <tr>
+              <td>6. Planejar atividades ou projetos</td>
+              <td data-label="⚗️ Eng. Química"><span class="dot y"></span>Presente em projeto de processo, implantação de unidade e paradas programadas de manutenção.</td>
+              <td data-label="⚙️ Eng. de Produção"><span class="dot g"></span>É o núcleo da formação: planejamento de produção, de capacidade e de projetos é o que a profissão faz todo dia.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>Mais análise e recomendação do que execução. O planejamento aparece em orçamento, cenário e desenho de política.</td>
+            </tr>
+            <tr>
+              <td>7. Assunto dinheiro e finanças</td>
+              <td data-label="⚗️ Eng. Química"><span class="dot r"></span>Entra como custo de processo e investimento em equipamento. Não é assunto do dia a dia técnico.</td>
+              <td data-label="⚙️ Eng. de Produção"><span class="dot y"></span>Presente em custo, orçamento e retorno de projeto, sempre ligado à operação e não ao mercado financeiro.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Assunto diário em qualquer trilho, do mercado financeiro à política monetária e ao pricing dentro de empresa.</td>
+            </tr>
+            <tr>
+              <td>8. Assunto administração</td>
+              <td data-label="⚗️ Eng. Química"><span class="dot r"></span>Quase ausente na formação. Aparece quando a carreira migra para gerência de planta, em geral depois de vários anos de chão.</td>
+              <td data-label="⚙️ Eng. de Produção"><span class="dot g"></span>Gestão está dentro da formação: pessoas, custo, qualidade, projeto e estratégia de operações são conteúdo do curso.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>Aparece pelo lado da decisão e da estratégia. A rotina de administrar equipe e processo não é o foco.</td>
+            </tr>
+            <tr>
+              <td>9. Trabalhar presencialmente</td>
+              <td data-label="⚗️ Eng. Química"><span class="dot g"></span>Planta, laboratório e campo exigem presença física, e boa parte das funções de operação tem turno ou plantão.</td>
+              <td data-label="⚙️ Eng. de Produção"><span class="dot g"></span>Operação, fábrica e centro de distribuição pedem presença, ainda que a parte analítica aceite formato híbrido.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>O trabalho é de escritório e aceita bem o remoto, o que significa que a presença nem sempre está garantida. Mercado financeiro e órgãos públicos costumam exigir presença.</td>
+            </tr>
+            <tr>
+              <td>10. Ambiente de escritório</td>
+              <td data-label="⚗️ Eng. Química"><span class="dot r"></span>O ambiente típico é industrial. Escritório aparece em engenharia de projeto, consultoria e cargos de gestão, não na linha de frente.</td>
+              <td data-label="⚙️ Eng. de Produção"><span class="dot y"></span>Alterna escritório e operação, numa proporção que muda conforme a área: supply chain e analytics puxam para o escritório, produção puxa para o chão.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Escritório é o ambiente padrão em praticamente todos os trilhos, do banco ao órgão público e à universidade.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="margin-top:16px;">Leia coluna por coluna pensando no peso que cada critério tem para você. Os critérios estão na ordem que você definiu como prioridade, então os primeiros têm mais peso na sua decisão. Use esta leitura como ponto de partida da conversa com sua orientadora.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Ranking dos critérios (soma dos pontos)</h2></div>
+    <div class="sc-body">
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Verde = 2 pontos</span>
+        <span><span class="dot y"></span>Amarelo = 1 ponto</span>
+        <span><span class="dot r"></span>Vermelho = 0 ponto</span>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 📈 Economia</span><span class="rank-score">16 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill eco" style="width:80%;">16</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥈 ⚙️ Engenharia de Produção</span><span class="rank-score">15 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill epr" style="width:75%;">15</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥉 ⚗️ Engenharia Química</span><span class="rank-score">7 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill eqm" style="width:35%;">7</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com.br</p>
+</footer>
+
+
+<script>
+  const verdicts = [
+    { min: 8, text: "Perfil muito alinhado! ✨", sub: "Você tem as características essenciais para esse caminho. Aprofunde a pesquisa com confiança e converse com profissionais da área." },
+    { min: 6, text: "Boa afinidade! 👍", sub: "Você tem bastante a ver com essa profissão. Vale explorar mais: uma conversa com quem já trabalha na área ajuda muito." },
+    { min: 4, text: "Alguns pontos merecem atenção 🤔", sub: "Você tem afinidade com partes da área, mas alguns inegociáveis podem ser desafiadores. Converse com sua orientadora." },
+    { min: 0, text: "Talvez haja opções mais alinhadas com você 🔍", sub: "Isso não é descarte, é autoconhecimento. O que ficou de fora pode te ajudar a entender o que você realmente busca." }
+  ];
+
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    const v = verdicts.find(x => checked >= x.min);
+    document.getElementById('vd-' + id).textContent = v.text;
+    resEl.querySelector('.sub').textContent = v.sub;
+    resEl.classList.add('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
