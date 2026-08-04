@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Carreiras — Engenharia de Minas e Geologia | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* ── Paleta oficial Instituto Rumo ── */
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Engenharia de Minas — Bordô */
+      --min:     #6B2F3C;
+      --min-lt:  #F6EAED;
+      --min-mid: #DCC0C8;
+
+      /* Geologia — Verde Profundo */
+      --geo:     #3B503F;
+      --geo-lt:  #EAEFEB;
+      --geo-mid: #C2CFC4;
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── Header ─── */
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    /* ─── Nav ─── */
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.min.active { color: var(--min); border-bottom-color: var(--min); }
+    .tab-btn.geo.active { color: var(--geo); border-bottom-color: var(--geo); }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    /* ─── Panels ─── */
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    /* ─── Section cards ─── */
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .min .sc-head { background: var(--min-lt); border-color: var(--min-mid); }
+    .min .sc-head h2 { color: var(--min); }
+    .geo .sc-head { background: var(--geo-lt); border-color: var(--geo-mid); }
+    .geo .sc-head h2 { color: var(--geo); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    /* ─── Lists ─── */
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .min ul.sl li::before { color: var(--min); }
+    .geo ul.sl li::before { color: var(--geo); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    /* ─── Tags ─── */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .min .tag { background: var(--min-lt); color: var(--min); border-color: var(--min-mid); }
+    .geo .tag { background: var(--geo-lt); color: var(--geo); border-color: var(--geo-mid); }
+
+    /* ─── Boxes ─── */
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .min .hbox { background: var(--min-lt); border-color: var(--min); }
+    .geo .hbox { background: var(--geo-lt); border-color: var(--geo); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .min .accent { color: var(--min); }
+    .geo .accent { color: var(--geo); }
+    .cmp .accent { color: var(--cmp); }
+
+    /* ─── Tech grid ─── */
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .min .tech-card { background: var(--min-lt); border-color: var(--min-mid); }
+    .geo .tech-card { background: var(--geo-lt); border-color: var(--geo-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .min .tech-card strong { color: var(--min); }
+    .geo .tech-card strong { color: var(--geo); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    /* ─── Salary grid ─── */
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .min .sal-card { background: var(--min-lt); border-color: var(--min-mid); }
+    .geo .sal-card { background: var(--geo-lt); border-color: var(--geo-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 19px; font-weight: 900; line-height: 1.15; margin-bottom: 8px; }
+    .min .sal-range { color: var(--min); }
+    .geo .sal-range { color: var(--geo); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── Comparison table ─── */
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-min { background: var(--min); }
+    .comp-table th.h-geo { background: var(--geo); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    /* ─── Colunas de exclusividade ─── */
+    .excl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+    .excl-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .excl-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; }
+    .excl-col-head.min { background: var(--min); }
+    .excl-col-head.geo { background: var(--geo); }
+    .excl-col ul { list-style: none; padding: 6px 16px 12px; }
+    .excl-col li { padding: 10px 0 10px 20px; border-bottom: 1px solid var(--border); position: relative; font-size: 13px; line-height: 1.5; }
+    .excl-col li:last-child { border-bottom: none; }
+    .excl-col li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .excl-col.min li::before { color: var(--min); }
+    .excl-col.geo li::before { color: var(--geo); }
+
+    /* ─── Link cards ─── */
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .min .lcard:hover { border-color: var(--min); }
+    .geo .lcard:hover { border-color: var(--geo); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    /* ─── Checklist ─── */
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .min .cl-item:hover, .min .cl-item.checked { background: var(--min-lt); border-color: var(--min); }
+    .geo .cl-item:hover, .geo .cl-item.checked { background: var(--geo-lt); border-color: var(--geo); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .min .cl-item.checked .cl-box { background: var(--min); border-color: var(--min); }
+    .geo .cl-item.checked .cl-box { background: var(--geo); border-color: var(--geo); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .min .cl-score span { color: var(--min); font-weight: 800; }
+    .geo .cl-score span { color: var(--geo); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .min .cl-result { background: var(--min-lt); border-color: var(--min-mid); }
+    .geo .cl-result { background: var(--geo-lt); border-color: var(--geo-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .verdict { font-size: 18px; font-weight: 800; }
+    .min .cl-result .verdict { color: var(--min); }
+    .geo .cl-result .verdict { color: var(--geo); }
+    .cl-result .sub { font-size: 13px; color: var(--text); margin-top: 8px; line-height: 1.6; }
+
+    /* ─── Vagas reais ─── */
+    .vagas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-col-head.min { background: var(--min); }
+    .vaga-col-head.geo { background: var(--geo); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+    .vaga-btn.min { background: var(--min); }
+    .vaga-btn.geo { background: var(--geo); }
+
+    /* ─── Footer ─── */
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+      .excl-grid { grid-template-columns: 1fr; }
+      .comp-table thead { display: none; }
+      .comp-table, .comp-table tbody, .comp-table tr, .comp-table td { display: block; width: 100%; }
+      .comp-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .comp-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .comp-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .comp-table tr:nth-child(even) td:first-child { background: var(--cmp); }
+      .comp-table td:not(:first-child) { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+      .comp-table td:last-child { border-bottom: none; }
+      .comp-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>Engenharia de Minas · Geologia
+    <span class="hd-accent">achar é uma coisa, tirar é outra</span>
+  </h1>
+  <p class="hd-sub">Dois cursos que dividem o mesmo chão, andam juntos na mesma mina e mesmo assim fazem trabalhos bem diferentes. Este guia mostra o que cada um faz de verdade, onde as duas áreas se encontram, onde se separam e o que só um deles pode assinar.</p>
+</header>
+
+<nav>
+  <button class="tab-btn min active" data-c="min" onclick="show('min')">⛏️ Engenharia de Minas</button>
+  <button class="tab-btn geo" data-c="geo" onclick="show('geo')">🪨 Geologia</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">⚖️ Comparar os dois</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ ENGENHARIA DE MINAS ═══════════════════════════════ -->
+<div class="panel min active" id="p-min">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Engenharia de Minas?</h2></div>
+    <div class="sc-body">
+      <p>Engenharia de Minas é o curso de quem projeta e opera a retirada de minério do chão: ferro, cobre, ouro, lítio, calcário, brita. É um <strong>bacharelado de 5 anos</strong>, reconhecido pelo MEC, e antes de ser um curso sobre pedra ele é um curso de <strong>engenharia</strong>. Cálculo, física e projeto vêm primeiro, a rocha entra depois.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º e 2º ano:</strong> ciclo básico de engenharia. Cálculo, física, química, álgebra linear, mecânica, resistência dos materiais, desenho técnico e programação. É a parte mais pesada e a que mais reprova.</li>
+        <li><strong>3º ano:</strong> a mineração começa. Geologia geral, mineralogia, topografia, mecânica das rochas, pesquisa mineral e introdução à lavra.</li>
+        <li><strong>4º ano:</strong> o núcleo da profissão. Lavra a céu aberto, lavra subterrânea, desmonte com explosivo, tratamento de minérios, ventilação, transporte e economia mineral.</li>
+        <li><strong>5º ano:</strong> planejamento de mina, barragem e disposição de rejeito, legislação mineral, segurança, estágio obrigatório e TCC. Muita gente já está estagiando em mina desde o 3º ano.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> engenheiro de minas se registra no <strong>CREA</strong> e assina projeto por ART. Sem esse registro você não assina plano de lavra nem responde tecnicamente por uma mina. Aqui o diploma vale muito, não é um mercado de portfólio.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🎓 <strong>Onde se estuda:</strong> são poucas escolas no Brasil, e isso é uma característica importante do curso. UFOP (a Escola de Minas de Ouro Preto, de 1876, é a referência histórica), UFMG, UFRGS, USP, UFPE, UFPA, Unifesspa, UFCG e algumas outras. Poucas turmas por ano significa menos gente formada disputando, e também menos cidades onde estudar.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Planejamento de lavra:</strong> decidir a ordem em que a mina será escavada nos próximos meses e anos, pra tirar o melhor minério com o menor custo. É a função mais valorizada da carreira.</li>
+        <li><strong>Operação de mina:</strong> tocar o dia a dia da mina, com equipe, escavadeira, caminhão e meta de produção. Onde quase todo mundo começa.</li>
+        <li><strong>Desmonte de rochas:</strong> projetar o plano de fogo, ou seja, onde furar, quanto explosivo colocar e em que ordem detonar pra rocha quebrar do jeito certo.</li>
+        <li><strong>Mina subterrânea:</strong> projetar galeria, método de lavra, escoramento e ventilação. Área técnica e bem paga, comum em ouro e em metais base.</li>
+        <li><strong>Tratamento de minérios (beneficiamento):</strong> a usina que britam, moem, separam e concentram o minério depois que ele sai do chão.</li>
+        <li><strong>Geotecnia e barragens:</strong> estabilidade de talude, pilha de estéril, barragem e depósito de rejeito. Depois de Mariana e Brumadinho virou uma das áreas mais demandadas do país.</li>
+        <li><strong>Meio ambiente e licenciamento:</strong> recuperação de área degradada, plano de fechamento de mina e relação com as comunidades do entorno.</li>
+        <li><strong>Segurança do trabalho em mineração:</strong> área regida pela NR-22, obrigatória em toda mina.</li>
+        <li><strong>Pedreira e agregados:</strong> brita, areia e calcário. É o setor mais espalhado pelo Brasil, existe perto de qualquer cidade grande, e quase ninguém lembra dele.</li>
+        <li><strong>Petróleo e gás:</strong> algumas escolas formam em Engenharia de Minas e de Petróleo, e a base de perfuração e rocha se aproveita bem.</li>
+        <li><strong>Consultoria e mineradoras júnior:</strong> estudo de viabilidade, avaliação de projeto e auditoria técnica pra investidor.</li>
+        <li><strong>Concurso público:</strong> ANM, IBAMA, órgãos ambientais estaduais e institutos de pesquisa.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Engenharia de Minas pede cabeça de engenheiro, estômago pra campo e sangue frio pra decidir com número na mão.</p>
+      <div class="tags">
+        <span class="tag">Gostar de exatas</span>
+        <span class="tag">Visão espacial 3D</span>
+        <span class="tag">Raciocínio de custo</span>
+        <span class="tag">Liderança de equipe</span>
+        <span class="tag">Foco em segurança</span>
+        <span class="tag">Resolver problema prático</span>
+        <span class="tag">Aguentar campo e poeira</span>
+        <span class="tag">Trabalhar com máquina pesada</span>
+        <span class="tag">Disciplina com processo</span>
+        <span class="tag">Tolerância a rotina de turno</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você vê uma obra enorme, um caminhão gigante ou uma pedreira da estrada, sua cabeça pergunta "como é que fizeram isso funcionar?" ou "de onde essa rocha veio?". A primeira pergunta é de engenheiro de minas. A segunda é de geólogo.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>Você vai morar onde tem mina, não onde você quer.</strong> As vagas estão em Parauapebas e Canaã dos Carajás no Pará, em Itabira, Congonhas, Nova Lima e Conceição do Mato Dentro em Minas, em Niquelândia e Catalão em Goiás, em Jacobina e Caetité na Bahia. Cidade pequena, longe de casa, longe dos amigos. Esse é o custo real que quase ninguém conta antes.</div>
+      <div class="cbox"><strong>Escala, turno e alojamento.</strong> Mina não para. Começar a carreira em turno de revezamento, com escala e alojamento na área, é o padrão, não a exceção.</div>
+      <div class="cbox"><strong>O ciclo de commodity manda em tudo.</strong> Quando o preço do minério sobe, chove vaga e bônus. Quando cai, o setor congela contratação de um mês pro outro. A carreira é boa e é instável ao mesmo tempo.</div>
+      <div class="cbox"><strong>O ciclo básico derruba muita gente.</strong> Dois anos de cálculo e física antes de ver mineração de verdade. Quem entrou achando que ia estudar pedra desde o primeiro dia costuma sofrer.</div>
+      <div class="cbox"><strong>Você responde por vida humana.</strong> Plano de fogo errado, talude mal dimensionado, barragem mal monitorada. A responsabilidade técnica aqui é literal e tem assinatura sua embaixo.</div>
+      <div class="cbox"><strong>A profissão carrega o peso de Mariana e Brumadinho.</strong> Você vai encontrar gente que odeia mineração, e vai ter que sustentar conversa difícil sobre isso com comunidade, imprensa e às vezes com a própria família.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🚛</div><strong>Caminhão autônomo</strong><p>A Vale já opera frota sem motorista em Carajás e Brucutu. Sobra menos vaga de operação e sobra mais vaga pra quem programa e planeja a frota.</p></div>
+        <div class="tech-card"><div class="tc-icon">🎮</div><strong>Centro de operações remoto</strong><p>Mina no Pará controlada de uma sala em Belo Horizonte. Muda o que significa "trabalhar na mina".</p></div>
+        <div class="tech-card"><div class="tc-icon">🧊</div><strong>Modelagem e otimização 3D</strong><p>Vulcan, Datamine, Micromine e Whittle desenham a cava e testam cenários. Quem domina software de planejamento sai na frente.</p></div>
+        <div class="tech-card"><div class="tc-icon">🐍</div><strong>Python e dados</strong><p>Engenheiro de minas que sabe programar e tratar dado de sensor está sendo disputado. É o diferencial mais rápido de construir.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏜️</div><strong>Rejeito filtrado e a seco</strong><p>Empilhamento a seco no lugar da barragem. É a virada técnica mais importante do setor desde 2019 e gera vaga nova.</p></div>
+        <div class="tech-card"><div class="tc-icon">🛰️</div><strong>Drone e monitoramento</strong><p>Levantamento topográfico por drone e radar de talude em tempo real. Menos gente medindo a pé, mais gente lendo dado.</p></div>
+      </div>
+      <p class="note">⚡ A automação está tirando vaga de operação e criando vaga de planejamento, dado e projeto. Quem entra hoje precisa se preparar pro segundo grupo, não pro primeiro.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Poucos formados por ano:</strong> como são poucas escolas, a turma que se forma no Brasil inteiro é pequena perto de outras engenharias. Isso protege bastante quem está bem formado.</li>
+        <li><strong>Mercado concentrado em poucos estados:</strong> Minas Gerais e Pará concentram a maior parte das vagas, seguidos de Goiás e Bahia. Fora deles, o caminho mais comum é pedreira, calcário e cimento.</li>
+        <li><strong>Grandes empregadores:</strong> Vale, CSN Mineração, Anglo American, Kinross, AngloGold, Nexa, CBMM, Votorantim, Gerdau, Sigma Lithium, além de dezenas de empresas médias de agregados.</li>
+        <li><strong>Trainee é a porta principal:</strong> os programas da Vale, Anglo e Nexa entram direto em cargo técnico com salário acima da média das engenharias.</li>
+        <li><strong>Salário inicial alto para o padrão brasileiro:</strong> engenharia de minas é uma das graduações com melhor remuneração de entrada no país, com o adicional de periculosidade e insalubridade somando em muitas funções.</li>
+        <li><strong>Setor cíclico:</strong> a contratação acompanha o preço do minério. Já teve ano de fila de vaga e já teve ano de demissão em massa. Vale entrar sabendo disso.</li>
+      </ul>
+      <div class="hbox" style="margin-top:16px;">
+        💎 <strong>E as terras raras?</strong> Têm a ver, sim, mas o engenheiro de minas entra na segunda etapa dessa história. Enquanto os projetos brasileiros estão sendo procurados e provados, quem trabalha é o geólogo. A engenharia de minas assume quando o projeto vira mina de verdade, e aí o desafio nem é a escavação, que costuma ser simples, e sim o beneficiamento e a separação química. Existe uma aba inteira sobre isso em "Comparar os dois".
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Aqui a especialização costuma vir do trabalho, não da sala de aula. Ainda assim, escolher uma frente cedo acelera muito.</p>
+      <div class="tags">
+        <span class="tag">⭐ Planejamento de Mina</span>
+        <span class="tag">⭐ Geotecnia e Barragens</span>
+        <span class="tag">⭐ Tratamento de Minérios</span>
+        <span class="tag">⭐ Minerais Críticos e Terras Raras</span>
+        <span class="tag">⭐ Lavra Subterrânea</span>
+        <span class="tag">Desmonte e Explosivos</span>
+        <span class="tag">Automação e Dados</span>
+        <span class="tag">Economia Mineral</span>
+        <span class="tag">Meio Ambiente e Fechamento de Mina</span>
+        <span class="tag">Segurança em Mineração</span>
+        <span class="tag">Manutenção e Confiabilidade</span>
+        <span class="tag">Petróleo e Gás</span>
+        <span class="tag">Consultoria e Viabilidade</span>
+      </div>
+      <p class="note">⭐ Frentes com maior demanda e melhores salários no Brasil hoje. Planejamento e geotecnia são as duas que mais abrem porta pra liderança e pra consultoria internacional.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um engenheiro de minas?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. Grande mineradora paga bem acima de pedreira e de empresa pequena de agregados, e adicionais de campo somam ao fixo.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 6 mil a 10 mil</div><div class="sal-note">Júnior ou trainee em grande mineradora. Em pedreira e empresa pequena, a faixa começa perto de R$ 4,5 mil.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 11 mil a 20 mil</div><div class="sal-note">Cinco a dez anos, já em planejamento, geotecnia ou beneficiamento, com bônus por resultado.</div></div>
+        <div class="sal-card"><div class="sal-stage">Liderança / Topo</div><div class="sal-range">R$ 25 mil a 60 mil</div><div class="sal-note">Gerência de mina, gerência de planejamento e consultoria sênior. Projeto no exterior paga em dólar.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> boa parte desse salário é o preço de morar longe. A mesma pessoa, na mesma função, ganha bem menos numa vaga de escritório em capital do que numa vaga de mina no interior do Pará. Antes de olhar o número, olhe onde ele acontece.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://ibram.org.br" class="lcard" target="_blank"><span class="lc-icon">⛏️</span><div class="lc-body"><strong>IBRAM — Instituto Brasileiro de Mineração</strong><span>Dados do setor, produção por estado e panorama de investimento no Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.gov.br/anm" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>ANM — Agência Nacional de Mineração</strong><span>O órgão que regula a mineração no país. Mostra o que precisa ser autorizado e por quem</span></div><span class="lc-arr">→</span></a>
+        <a href="https://ufop.br" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>UFOP — Escola de Minas de Ouro Preto</strong><span>A escola mais tradicional da área. Veja a grade curricular real, matéria por matéria</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais reportados por quem trabalha. Pesquise por cargo e por empresa</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Engenheiro%20de%20Minas&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔍</span><div class="lc-body"><strong>LinkedIn — Vagas de Engenharia de Minas</strong><span>Veja hoje quais empresas contratam, em que cidades e o que pedem no requisito</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Engenharia de Minas é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-min">
+        <div class="cl-item" onclick="toggle(this,'cl-min')"><div class="cl-box"></div><div class="cl-text">Vou bem em matemática e física, e aguentaria dois anos de cálculo antes de ver mineração de verdade.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-min')"><div class="cl-box"></div><div class="cl-text">Gosto mais de resolver como uma coisa funciona do que de entender por que ela existe.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-min')"><div class="cl-box"></div><div class="cl-text">Topo morar em cidade pequena de interior, longe de casa, pelo menos no começo da carreira.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-min')"><div class="cl-box"></div><div class="cl-text">Encaro trabalhar de capacete e bota, com poeira, calor, máquina pesada e turno.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-min')"><div class="cl-box"></div><div class="cl-text">Consigo liderar equipe e dar ordem clara, inclusive pra gente mais velha e mais experiente que eu.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-min')"><div class="cl-box"></div><div class="cl-text">Penso naturalmente em custo e prazo, não só na solução mais bonita tecnicamente.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-min')"><div class="cl-box"></div><div class="cl-text">Tenho boa visão espacial: consigo imaginar um objeto em três dimensões e girar ele na cabeça.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-min')"><div class="cl-box"></div><div class="cl-text">Aceito responder tecnicamente por segurança, sabendo que erro meu pode machucar gente.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-min')"><div class="cl-box"></div><div class="cl-text">Entendo que o setor é cíclico e que vai ter ano bom e ano de contratação congelada.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-min">0 de 9</span></div>
+      <div class="cl-result" id="res-min"><div class="verdict" id="vd-min"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ GEOLOGIA ═══════════════════════════════ -->
+<div class="panel geo" id="p-geo">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Geologia?</h2></div>
+    <div class="sc-body">
+      <p>Geologia é o curso de quem estuda a Terra: do que ela é feita, como se formou, o que aconteceu com ela ao longo de bilhões de anos e o que isso significa hoje, na prática. É um <strong>bacharelado de 4 a 5 anos</strong>, reconhecido pelo MEC, e antes de ser um curso sobre mineração ele é uma <strong>ciência da natureza</strong>. Química, física e biologia se misturam com história do planeta.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º e 2º ano:</strong> base científica. Cálculo, química, física, biologia, mineralogia e cristalografia. Os primeiros campos de reconhecimento já começam aqui.</li>
+        <li><strong>2º e 3º ano:</strong> o coração do curso. Petrologia (como as rochas nascem), geologia estrutural (como elas se dobram e quebram), estratigrafia, sedimentologia, paleontologia e geoquímica.</li>
+        <li><strong>4º ano:</strong> aplicação. Geologia econômica, hidrogeologia, geologia ambiental, geotecnia, geofísica, sensoriamento remoto e geoprocessamento.</li>
+        <li><strong>Final do curso:</strong> o <strong>mapeamento final</strong>, um TCC de campo em que você sai a campo, descreve as rochas de uma área real e desenha o mapa geológico dela do zero. É o rito de passagem da profissão.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a profissão é regulamentada desde 1962 e o geólogo também se registra no <strong>CREA</strong>, assinando trabalho por ART. Laudo de risco, relatório de pesquisa mineral e outorga de água precisam da assinatura dele.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🎓 <strong>Onde se estuda:</strong> tem bem mais escola do que Engenharia de Minas e espalhada por todo o país. UFRJ, USP, Unicamp, UnB, UFRGS, UFMG, UFOP, UFPA, UFBA, UFPE, UNESP de Rio Claro, UFPR, UFC, entre outras. Isso significa mais opção de cidade e também mais gente formada disputando.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Exploração mineral (prospecção):</strong> procurar onde tem minério antes de existir mina. É a função mais clássica e mais cobiçada, mistura campo, mapa e faro técnico.</li>
+        <li><strong>Sondagem e descrição de testemunho:</strong> perfurar centenas de metros de rocha e ler o que aquele cilindro conta sobre o que existe lá embaixo.</li>
+        <li><strong>Modelagem e estimativa de recursos:</strong> transformar furos espalhados em um modelo 3D que diz quanto minério existe e com que teor. Aqui a geologia encosta direto na engenharia.</li>
+        <li><strong>Geologia de mina:</strong> trabalhar dentro da mina em operação, controlando teor e guiando a escavação no dia a dia, lado a lado com o engenheiro de minas.</li>
+        <li><strong>Hidrogeologia:</strong> estudar a água que corre debaixo do chão. Poço, aquífero, abastecimento de cidade, irrigação e outorga de uso da água.</li>
+        <li><strong>Geologia ambiental:</strong> contaminação de solo e de lençol freático, licenciamento e remediação de área degradada. Setor grande e bem espalhado pelo país.</li>
+        <li><strong>Geotecnia e obra civil:</strong> avaliar o terreno de fundação, talude, túnel, barragem e estrada. Toda obra grande precisa de geólogo antes da primeira máquina entrar.</li>
+        <li><strong>Risco geológico e defesa civil:</strong> mapear área de deslizamento, prever movimento de encosta e proteger vida em cidade de morro. Trabalho de utilidade pública direta.</li>
+        <li><strong>Petróleo e gás:</strong> geologia de bacia sedimentar e de reservatório. Petrobras, empresas de exploração, pré-sal e agora a Margem Equatorial.</li>
+        <li><strong>Serviço público e pesquisa:</strong> Serviço Geológico do Brasil, ANM, IBAMA, órgãos estaduais, universidade. Concurso público é um caminho forte e real na geologia.</li>
+        <li><strong>Geologia marinha e geofísica:</strong> estudar o fundo do mar, sísmica e métodos indiretos de investigar o subsolo.</li>
+        <li><strong>Nichos:</strong> geologia forense (perícia criminal), geoparque e geoturismo, gemologia, geocronologia, geologia médica e ensino.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Geologia pede curiosidade científica de verdade, olho treinado e disposição pra andar muito debaixo de sol.</p>
+      <div class="tags">
+        <span class="tag">Curiosidade científica</span>
+        <span class="tag">Observação detalhada</span>
+        <span class="tag">Visão espacial 3D</span>
+        <span class="tag">Raciocínio dedutivo</span>
+        <span class="tag">Preparo físico</span>
+        <span class="tag">Gostar de natureza</span>
+        <span class="tag">Paciência com incerteza</span>
+        <span class="tag">Boa escrita técnica</span>
+        <span class="tag">Autonomia</span>
+        <span class="tag">Interesse por química e biologia</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> você consegue ficar interessado numa resposta que leva meses pra chegar e que talvez seja "não tem nada aqui"? Geologia é investigação. Quem só se anima com resultado rápido e fechado costuma se frustrar.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>Campo é lindo na foto e duro na prática.</strong> Semanas fora de casa, alojamento simples, sol, chuva, carrapato, cobra e muita caminhada com mochila pesada. Quem ama, ama muito. Quem não sabia disso, desiste.</div>
+      <div class="cbox"><strong>O salário inicial varia demais conforme a área.</strong> Um geólogo júnior em consultoria ambiental pequena pode começar em R$ 4 mil, e outro em mineradora grande pode começar em R$ 8 mil. É a mesma formação e é o dobro.</div>
+      <div class="cbox"><strong>Formam mais geólogos do que engenheiros de minas.</strong> São mais escolas e mais vagas de entrada por ano, então a concorrência por posição boa é maior. Estágio cedo e campo no currículo pesam muito.</div>
+      <div class="cbox"><strong>Exploração é a área mais cíclica de todas.</strong> Quando o preço da commodity cai, a primeira coisa que a empresa corta é o orçamento de procurar minério novo. E é justamente aí que estão os geólogos de exploração.</div>
+      <div class="cbox"><strong>Você trabalha com incerteza o tempo todo.</strong> O subsolo não se vê. Você decide com amostra, mapa e probabilidade, e às vezes o furo mostra que sua hipótese estava errada.</div>
+      <div class="cbox"><strong>Boa parte da carreira acadêmica depende de verba de pesquisa.</strong> Quem quer seguir em universidade e pesquisa enfrenta bolsa apertada e financiamento instável.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🛰️</div><strong>Satélite e sensoriamento</strong><p>Dá pra identificar alvo geológico por imagem antes de pisar no lugar. O campo continua existindo, mas chega mais direcionado.</p></div>
+        <div class="tech-card"><div class="tc-icon">🧠</div><strong>IA na exploração</strong><p>Algoritmo cruza milhares de dados históricos pra apontar onde vale furar. A prospecção está virando ciência de dados aplicada.</p></div>
+        <div class="tech-card"><div class="tc-icon">🗺️</div><strong>SIG e geoprocessamento</strong><p>QGIS e ArcGIS são ferramenta básica hoje. Geólogo que não mexe com mapa digital fica de fora de quase toda vaga.</p></div>
+        <div class="tech-card"><div class="tc-icon">🧊</div><strong>Modelagem 3D</strong><p>Leapfrog e Micromine constroem o corpo de minério em três dimensões. É a linguagem comum com o engenheiro de minas.</p></div>
+        <div class="tech-card"><div class="tc-icon">📡</div><strong>Monitoramento em tempo real</strong><p>Sensor em encosta e em barragem manda dado direto pro celular. Risco geológico virou área de monitoramento contínuo.</p></div>
+        <div class="tech-card"><div class="tc-icon">🐍</div><strong>Python e estatística</strong><p>Geoestatística com programação virou requisito em vaga de modelagem e de recursos. É o diferencial mais valorizado hoje.</p></div>
+      </div>
+      <p class="note">⚡ A tecnologia não substitui o campo, ela decide melhor onde ir. O que muda é que hoje o geólogo precisa ser tão bom no computador quanto no martelo.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>É um leque bem mais largo que a mineração:</strong> mineração, petróleo, água, meio ambiente, obra civil, defesa civil, ensino e pesquisa. Se um setor esfria, existe pra onde ir.</li>
+        <li><strong>Vaga em todo o Brasil:</strong> mineração em MG, PA, GO e BA, petróleo no RJ e no ES, água e ambiental em SP e no Sul, risco geológico em qualquer cidade de encosta.</li>
+        <li><strong>Concurso público é caminho forte:</strong> Serviço Geológico do Brasil, ANM, IBAMA, órgãos ambientais estaduais, DNIT, prefeituras e Petrobras. Estabilidade e salário bom, com preparação longa.</li>
+        <li><strong>Consultoria emprega muito:</strong> boa parte dos geólogos trabalha em consultoria ambiental e geotécnica, atendendo várias empresas ao mesmo tempo.</li>
+        <li><strong>Grandes empregadores privados:</strong> Vale, Petrobras, Anglo American, Kinross, AngloGold, Nexa, Sigma Lithium, além de empresas de exploração pequenas e médias, as chamadas juniores.</li>
+        <li><strong>Reserva não falta:</strong> o Brasil é um dos países com maior potencial mineral do planeta e ainda tem território pouco explorado, o que sustenta a demanda por quem sabe procurar.</li>
+      </ul>
+      <div class="hbox" style="margin-top:16px;">
+        💎 <strong>E as terras raras?</strong> Têm tudo a ver, e neste momento a geologia é a linha de frente do assunto no Brasil. O país está na fase de procurar e provar depósito, que é trabalho inteiramente geológico, e é para onde está indo boa parte do dinheiro estrangeiro que entrou em exploração mineral. Existe uma seção inteira sobre isso em "Comparar os dois".
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Geologia é uma das áreas em que o mestrado pesa de verdade no salário e no tipo de vaga, principalmente em exploração e em pesquisa.</p>
+      <div class="tags">
+        <span class="tag">⭐ Geologia Econômica e Exploração</span>
+        <span class="tag">⭐ Minerais Críticos e Terras Raras</span>
+        <span class="tag">⭐ Modelagem e Geoestatística</span>
+        <span class="tag">⭐ Hidrogeologia</span>
+        <span class="tag">⭐ Geotecnia</span>
+        <span class="tag">Geologia Ambiental</span>
+        <span class="tag">Risco Geológico</span>
+        <span class="tag">Geologia do Petróleo</span>
+        <span class="tag">Geofísica</span>
+        <span class="tag">Sensoriamento Remoto e SIG</span>
+        <span class="tag">Geoquímica</span>
+        <span class="tag">Paleontologia</span>
+        <span class="tag">Geologia Marinha</span>
+        <span class="tag">Gemologia</span>
+        <span class="tag">Geologia Forense</span>
+      </div>
+      <p class="note">⭐ Frentes com maior demanda e melhores salários no Brasil hoje. Exploração, modelagem e hidrogeologia são as que mais rápido levam a cargo sênior e a trabalho internacional.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um geólogo?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. A variação por setor é maior aqui do que na engenharia de minas: mineração e petróleo pagam bem acima de consultoria ambiental.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 4,5 mil a 9 mil</div><div class="sal-note">A ponta de baixo é consultoria ambiental. A de cima é mineradora grande e petróleo. Mesmo diploma, mundos diferentes.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 9 mil a 18 mil</div><div class="sal-note">Cinco a dez anos, já com especialidade definida. Mestrado costuma acelerar a chegada nessa faixa.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Topo</div><div class="sal-range">R$ 20 mil a 45 mil</div><div class="sal-note">Geólogo sênior de exploração, gerência técnica e consultoria internacional. Concurso federal fica na parte de baixo dessa faixa, com estabilidade.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em geologia, o que define o salário é a combinação de setor e especialidade, muito mais do que o tempo de formado. Quem escolhe cedo uma frente técnica boa passa na frente de quem ficou generalista por dez anos.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.sgb.gov.br" class="lcard" target="_blank"><span class="lc-icon">🪨</span><div class="lc-body"><strong>SGB — Serviço Geológico do Brasil</strong><span>O órgão federal de geologia. Mapas, dados e o retrato do que um geólogo público faz</span></div><span class="lc-arr">→</span></a>
+        <a href="https://sbgeo.org.br" class="lcard" target="_blank"><span class="lc-icon">🔬</span><div class="lc-body"><strong>SBG — Sociedade Brasileira de Geologia</strong><span>A entidade da categoria. Congressos, áreas de atuação e o que a profissão discute hoje</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.gov.br/anm" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>ANM — Agência Nacional de Mineração</strong><span>Onde se pede autorização de pesquisa mineral e se entrega o relatório final</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais reportados por geólogos. Compare mineração, ambiental e petróleo</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Ge%C3%B3logo&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔍</span><div class="lc-body"><strong>LinkedIn — Vagas de Geologia</strong><span>Veja hoje quais setores contratam mais e o que aparece como requisito</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Geologia é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-geo">
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade científica: quero entender por que as coisas são do jeito que são, não só fazer funcionar.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Gosto de estar ao ar livre e toparia passar semanas em campo, andando muito, longe de casa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Reparo em detalhe: cor, textura, forma. Percebo diferença que a maioria das pessoas passa batido.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Me interesso por química e biologia, não só por matemática e física.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Aguento trabalhar com incerteza e com hipótese que pode se provar errada no fim.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Tenho boa visão espacial e consigo imaginar camadas e estruturas embaixo do chão.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Escrevo bem: relatório técnico e laudo são grande parte do trabalho de um geólogo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Gosto da ideia de poder migrar entre mineração, água, ambiente, obra e pesquisa ao longo da carreira.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-geo')"><div class="cl-box"></div><div class="cl-text">Considero fazer mestrado depois da graduação pra chegar nas vagas técnicas melhores.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-geo">0 de 9</span></div>
+      <div class="cl-result" id="res-geo"><div class="verdict" id="vd-geo"></div><div class="sub"></div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAÇÃO ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎯</span><h2>A diferença em uma frase</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        <strong>O geólogo descobre onde está o minério e quanto tem. O engenheiro de minas decide como tirar, quanto custa e se compensa.</strong>
+        <br><br>
+        O geólogo chega primeiro, quando ainda não existe mina nenhuma, só mato e rocha. Ele investiga, mapeia, fura e conclui: aqui tem cobre, nesta profundidade, com este teor, nesta quantidade. Aí entra o engenheiro de minas e faz outra pergunta: dá pra tirar isso com segurança, dentro do custo, sem derrubar o talude e sem quebrar a empresa? Um responde <em>o que existe</em>. O outro responde <em>o que fazer com o que existe</em>.
+      </div>
+      <p class="note" style="margin-top:16px;">Uma imagem que ajuda: se a mina fosse um paciente, o geólogo faz o diagnóstico e o engenheiro de minas faz a cirurgia. Nenhum dos dois trabalha bem sem o outro, e nenhum dos dois faz o trabalho do outro.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚖️</span><h2>Os dois lado a lado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">As duas profissões convivem no mesmo setor e no mesmo escritório, mas partem de formações e de perguntas diferentes.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão</th>
+              <th class="h-min">⛏️ Engenharia de Minas</th>
+              <th class="h-geo">🪨 Geologia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Pergunta central</td><td data-label="⛏️ Engenharia de Minas">Como tiro isso com segurança e lucro?</td><td data-label="🪨 Geologia">O que tem aqui e por que veio parar aqui?</td></tr>
+            <tr><td>Natureza do curso</td><td data-label="⛏️ Engenharia de Minas">Engenharia: projeto, cálculo e custo</td><td data-label="🪨 Geologia">Ciência da natureza: investigação e interpretação</td></tr>
+            <tr><td>Duração</td><td data-label="⛏️ Engenharia de Minas">5 anos</td><td data-label="🪨 Geologia">4 a 5 anos</td></tr>
+            <tr><td>Base mais forte</td><td data-label="⛏️ Engenharia de Minas">Matemática, física e mecânica</td><td data-label="🪨 Geologia">Química, física e biologia</td></tr>
+            <tr><td>Escala de tempo</td><td data-label="⛏️ Engenharia de Minas">O plano do mês, do ano e da vida útil da mina</td><td data-label="🪨 Geologia">Milhões e bilhões de anos</td></tr>
+            <tr><td>Entra em cena</td><td data-label="⛏️ Engenharia de Minas">Depois que já se sabe que existe minério</td><td data-label="🪨 Geologia">Antes de tudo, quando ainda não há mina</td></tr>
+            <tr><td>Onde trabalha</td><td data-label="⛏️ Engenharia de Minas">Mina, usina de beneficiamento, pedreira, consultoria</td><td data-label="🪨 Geologia">Campo, mina, consultoria, obra, órgão público, universidade</td></tr>
+            <tr><td>Fora da mineração</td><td data-label="⛏️ Engenharia de Minas">Poucas saídas: agregados, cimento, petróleo, indústria</td><td data-label="🪨 Geologia">Muitas saídas: água, ambiente, obra, risco, petróleo, ensino</td></tr>
+            <tr><td>Quantidade de escolas</td><td data-label="⛏️ Engenharia de Minas">Poucas, concentradas em MG, RS, SP, PE e PA</td><td data-label="🪨 Geologia">Muitas, espalhadas pelo país todo</td></tr>
+            <tr><td>Concorrência</td><td data-label="⛏️ Engenharia de Minas">Menor: formam poucos por ano</td><td data-label="🪨 Geologia">Maior: formam bem mais por ano</td></tr>
+            <tr><td>Salário inicial</td><td data-label="⛏️ Engenharia de Minas">R$ 6 mil a 10 mil (menos em pedreira)</td><td data-label="🪨 Geologia">R$ 4,5 mil a 9 mil (varia muito por setor)</td></tr>
+            <tr><td>Concurso público</td><td data-label="⛏️ Engenharia de Minas">Existe, mas é caminho secundário</td><td data-label="🪨 Geologia">Caminho forte e tradicional na carreira</td></tr>
+            <tr><td>Conselho</td><td data-label="⛏️ Engenharia de Minas">CREA, com ART</td><td data-label="🪨 Geologia">CREA, com ART</td></tr>
+            <tr><td>Estabilidade</td><td data-label="⛏️ Engenharia de Minas">Média: depende do ciclo do minério</td><td data-label="🪨 Geologia">Média a alta: mais setores pra onde migrar</td></tr>
+            <tr><td>Mestrado pesa?</td><td data-label="⛏️ Engenharia de Minas">Ajuda, mas a experiência de mina pesa mais</td><td data-label="🪨 Geologia">Pesa bastante, principalmente em exploração e pesquisa</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤝</span><h2>Onde as duas áreas se aproximam</h2></div>
+    <div class="sc-body">
+      <p>Existe um terreno comum grande, e é justamente ele que confunde quem está escolhendo. Nestes pontos os dois sentam na mesma sala e falam a mesma língua:</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>A mina em operação.</strong> Geólogo de mina e engenheiro de mina trabalham no mesmo prédio, no mesmo turno, olhando a mesma cava. Um diz onde está o minério bom hoje, o outro define para onde a escavadeira vai.</li>
+        <li><strong>O modelo 3D do depósito.</strong> Os dois usam Leapfrog, Micromine, Vulcan, Datamine e Surpac. O geólogo constrói o corpo de minério, o engenheiro desenha a cava em cima dele.</li>
+        <li><strong>Recurso e reserva.</strong> O geólogo estima o <em>recurso</em>, que é quanto minério existe. O engenheiro converte em <em>reserva</em>, que é quanto dá pra tirar com lucro. É uma passagem de bastão, não uma disputa.</li>
+        <li><strong>Geotecnia.</strong> Estabilidade de talude, barragem e pilha de rejeito é território dividido entre o geólogo de engenharia e o engenheiro de minas, e cada vez mais eles se sobrepõem.</li>
+        <li><strong>Meio ambiente e licenciamento.</strong> Estudo de impacto, plano de fechamento de mina e relação com comunidade envolvem os dois.</li>
+        <li><strong>Formação básica.</strong> O engenheiro de minas estuda geologia geral, mineralogia e geologia estrutural. O geólogo estuda topografia, lavra e beneficiamento. Cada um aprende o suficiente do mundo do outro pra conversar.</li>
+        <li><strong>Registro e responsabilidade.</strong> Os dois se registram no CREA e assinam trabalho técnico por ART.</li>
+        <li><strong>Rotina de campo.</strong> Os dois viajam, os dois usam bota e capacete, os dois têm grande chance de trabalhar longe de capital.</li>
+        <li><strong>Empregadores.</strong> Vale, Anglo American, Kinross, Nexa, AngloGold e as consultorias contratam os dois, às vezes para o mesmo time.</li>
+        <li><strong>Ferramentas digitais.</strong> QGIS, ArcGIS, Python e geoestatística estão virando exigência nos dois lados.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">↔️</span><h2>Onde as duas áreas se afastam</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>A pergunta que move cada um.</strong> Geologia pergunta "por quê" e "o que aconteceu aqui". Engenharia de Minas pergunta "como" e "quanto custa". Essa é a separação de fundo, e ela aparece em tudo o resto.</li>
+        <li><strong>O tipo de raciocínio.</strong> O geólogo trabalha com interpretação: dado incompleto, hipótese, revisão. O engenheiro trabalha com projeto: parâmetro definido, cálculo, resultado que precisa fechar.</li>
+        <li><strong>A relação com o dinheiro.</strong> O engenheiro de minas vive de custo por tonelada, produtividade e retorno do investimento desde o primeiro dia. O geólogo pode passar anos sem que isso seja o centro do trabalho dele.</li>
+        <li><strong>O tamanho do leque fora da mineração.</strong> Aqui está a maior diferença prática da escolha. O geólogo pode trabalhar com água, contaminação, deslizamento, obra, petróleo, museu, escola e universidade. O engenheiro de minas, fora da mineração e dos agregados, tem bem menos caminhos naturais, ainda que se transfira bem para operação e planejamento industrial.</li>
+        <li><strong>O peso do concurso público.</strong> Geologia tem uma carreira pública sólida e antiga: Serviço Geológico do Brasil, ANM, IBAMA, órgãos estaduais, prefeitura, Petrobras. Na engenharia de minas o setor privado domina.</li>
+        <li><strong>A relação com o campo.</strong> Para o geólogo, o campo é a origem do conhecimento e acompanha a carreira toda. Para o engenheiro de minas, o campo é a operação, e muita gente migra para escritório e planejamento com o tempo.</li>
+        <li><strong>Quantas pessoas você lidera.</strong> O engenheiro de minas costuma assumir equipe grande e operação cedo. O geólogo costuma trabalhar em time pequeno e com mais autonomia técnica individual.</li>
+        <li><strong>O papel do mestrado.</strong> Em geologia, pós-graduação muda o patamar da carreira. Em engenharia de minas, anos de mina costumam valer mais que título.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔒</span><h2>O que é exclusivo de cada um</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estas são as atividades que pertencem de fato a cada formação. Um profissional pode até acompanhar o trabalho do outro, mas quem responde tecnicamente e assina é quem está na coluna:</p>
+      <div class="excl-grid">
+
+        <div class="excl-col min">
+          <div class="excl-col-head min">⛏️ Só o engenheiro de minas faz</div>
+          <ul>
+            <li><strong>Plano de lavra e projeto de mina.</strong> Definir a geometria da cava, as bancadas, as rampas e a ordem de escavação ao longo dos anos.</li>
+            <li><strong>Plano de Aproveitamento Econômico.</strong> O documento técnico exigido pela ANM para transformar uma descoberta em mina autorizada.</li>
+            <li><strong>Desmonte de rocha com explosivo.</strong> Plano de fogo, malha de perfuração, carga por furo e sequência de detonação.</li>
+            <li><strong>Método de lavra subterrânea.</strong> Escolher entre os métodos existentes, dimensionar galeria, pilar e escoramento.</li>
+            <li><strong>Ventilação de mina.</strong> Calcular o ar que entra e sai da mina subterrânea para manter gente viva lá dentro.</li>
+            <li><strong>Beneficiamento mineral.</strong> Projetar e operar a usina que britam, moem, flotam e concentram o minério.</li>
+            <li><strong>Disposição de rejeito e estéril.</strong> Barragem, pilha, filtragem e empilhamento a seco.</li>
+            <li><strong>Dimensionamento de frota e custo por tonelada.</strong> Quantos caminhões, quantas escavadeiras, a que ritmo, por qual preço.</li>
+            <li><strong>Segurança de mina pela NR-22.</strong> A norma específica da mineração, com responsabilidade técnica definida.</li>
+            <li><strong>Fechamento físico da mina.</strong> Como desativar e devolver a área com estabilidade garantida.</li>
+          </ul>
+        </div>
+
+        <div class="excl-col geo">
+          <div class="excl-col-head geo">🪨 Só o geólogo faz</div>
+          <ul>
+            <li><strong>Mapeamento geológico.</strong> Sair a campo e desenhar o mapa das rochas de uma região do zero. É a assinatura da profissão.</li>
+            <li><strong>Prospecção e descoberta.</strong> Encontrar depósito novo onde ninguém sabia que havia alguma coisa.</li>
+            <li><strong>Descrição de testemunho de sondagem.</strong> Ler metro a metro o cilindro de rocha que sai da perfuração e interpretar o que ele conta.</li>
+            <li><strong>Relatório Final de Pesquisa e estimativa de recursos.</strong> O documento que prova para a ANM e para o investidor que o depósito existe e quanto tem.</li>
+            <li><strong>Hidrogeologia.</strong> Estudar aquífero, locar poço e responder pela outorga de uso de água subterrânea.</li>
+            <li><strong>Mapeamento de área de risco.</strong> Identificar encosta com risco de deslizamento e orientar defesa civil e prefeitura. Trabalho que salva vida.</li>
+            <li><strong>Geologia de petróleo.</strong> Interpretar bacia sedimentar e reservatório, no pré-sal e na Margem Equatorial.</li>
+            <li><strong>Laudo geológico para obra e licenciamento.</strong> Caracterizar terreno, contaminação de solo e de lençol freático.</li>
+            <li><strong>Paleontologia, geocronologia e geologia marinha.</strong> Fóssil, idade da rocha e fundo do mar.</li>
+            <li><strong>Geologia forense e perícia.</strong> Usar solo e mineral como prova em investigação criminal.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📈</span><h2>O mercado agora e nos próximos 5 anos (2026 a 2031)</h2></div>
+    <div class="sc-body">
+      <p>Este é o cenário que mais importa pra quem vai entrar na faculdade agora e se formar entre 2031 e 2032. Ele vale para as duas profissões, com pesos diferentes.</p>
+
+      <div class="hbox" style="margin-top:16px;">
+        🔋 <strong>1. A transição energética é o motor principal.</strong> Carro elétrico, bateria, painel solar, turbina eólica e linha de transmissão consomem cobre, níquel, lítio, grafita e terras raras em quantidade que o mundo ainda não produz. O cobre é o gargalo global mais falado da década. Isso puxa <em>as duas profissões ao mesmo tempo</em>: alguém precisa achar esses depósitos (geólogo) e alguém precisa montar a mina (engenheiro de minas).
+      </div>
+
+      <div class="hbox" style="margin-top:12px;">
+        🇧🇷 <strong>2. O Brasil está no centro dessa disputa.</strong> O lítio do Vale do Jequitinhonha em Minas, com Araçuaí e Itinga, virou polo de investimento internacional. As terras raras de Goiás e da Bahia atraíram capital estrangeiro pesado por causa da corrida contra a dependência da China. O nióbio de Araxá é praticamente monopólio brasileiro. Grafita, cobre no Pará e níquel em Goiás completam a lista. Nunca houve tanto dinheiro estrangeiro entrando em exploração mineral no país.
+      </div>
+
+      <div class="hbox" style="margin-top:12px;">
+        ⚠️ <strong>3. O minério de ferro, que é o carro-chefe, tende a ficar mais apertado.</strong> A China desacelerou o consumo de aço e novos projetos gigantes fora do Brasil, como Simandou na Guiné, aumentam a oferta mundial. Isso pressiona o preço para baixo. Traduzindo pra escolha de carreira: ferro continua empregando muita gente em Minas e no Pará, mas o crescimento dos próximos anos deve vir mais dos metais da transição energética do que dele.
+      </div>
+
+      <div class="hbox" style="margin-top:12px;">
+        🛡️ <strong>4. Barragem e geotecnia viraram demanda permanente.</strong> Depois de Mariana em 2015 e Brumadinho em 2019, a lei proibiu barragem a montante e obrigou a descaracterização de todas elas até 2035. Isso significa mais de uma década de trabalho contínuo em monitoramento, estabilidade, remoção de rejeito e novas tecnologias de disposição a seco. É uma das áreas mais seguras do setor hoje, e emprega geólogo de engenharia e engenheiro de minas juntos.
+      </div>
+
+      <div class="hbox" style="margin-top:12px;">
+        🌧️ <strong>5. Clima extremo aumenta a demanda por geólogo fora da mineração.</strong> Deslizamento em encosta, enchente, seca e crise hídrica colocaram o geólogo no centro da defesa civil, do planejamento urbano e da gestão de água. Prefeituras, órgãos estaduais e o Serviço Geológico do Brasil vêm ampliando essa frente. Esse é um crescimento que só existe do lado da geologia.
+      </div>
+
+      <div class="hbox" style="margin-top:12px;">
+        🛢️ <strong>6. Petróleo segue forte no médio prazo.</strong> O pré-sal está em platô e a Margem Equatorial, na costa Norte, abriu uma nova fronteira exploratória. Isso sustenta a demanda por geólogo de exploração pelos próximos anos, com a ressalva honesta de que é um setor com prazo de validade mais discutido do que os outros.
+      </div>
+
+      <div class="hbox" style="margin-top:12px;">
+        🤖 <strong>7. A automação muda o perfil, não elimina a profissão.</strong> Caminhão autônomo, perfuratriz automatizada, centro de operação remoto e IA na exploração estão reduzindo a vaga operacional e aumentando a vaga de quem planeja, modela e analisa dado. Quem se formar em 2031 sabendo Python, geoestatística e modelagem 3D vai entrar num patamar diferente de quem só souber o básico do curso.
+      </div>
+
+      <div class="hbox" style="margin-top:12px;">
+        📉 <strong>8. E o risco que ninguém deve esconder de você.</strong> Os dois mercados são cíclicos e dependem do preço internacional das commodities. Já houve ano de contratação em massa e ano de demissão em massa, com dois ou três anos de diferença. A geologia tem mais setores para onde migrar quando a mineração esfria. A engenharia de minas tem menos rotas de fuga, mas também tem menos gente formada disputando quando o mercado aquece de novo.
+      </div>
+
+      <p class="note" style="margin-top:16px;">Resumo honesto dos próximos cinco anos: os dois mercados devem seguir aquecidos, puxados pelos metais da transição energética e pela agenda de barragens. A geologia cresce em mais frentes diferentes. A engenharia de minas cresce em menos frentes, porém com menos concorrência e salário de entrada mais alto.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💎</span><h2>E as terras raras? Onde cada um entra nessa história</h2></div>
+    <div class="sc-body">
+      <p>Terras raras são 17 elementos químicos com nomes que ninguém decora: neodímio, praseodímio, disprósio, térbio, ítrio e outros. Eles servem pra uma coisa que mudou o mundo: <strong>ímã permanente muito forte e muito pequeno</strong>. Sem eles não existe motor de carro elétrico eficiente, nem turbina eólica moderna, nem fone bluetooth, nem HD, nem boa parte da eletrônica e do equipamento militar.</p>
+
+      <div class="hbox" style="margin-top:16px;">
+        🤔 <strong>Primeiro, o nome engana.</strong> Terras raras não são raras na crosta da Terra. O cério é mais comum que o cobre. O difícil é encontrar um lugar onde elas estejam concentradas o bastante pra valer a pena, e principalmente <strong>separar uma da outra</strong>, porque quimicamente elas são quase gêmeas. A dificuldade está na separação, não na escassez.
+      </div>
+
+      <div class="hbox" style="margin-top:12px;">
+        🇧🇷 <strong>Por que isso virou assunto no Brasil.</strong> O país tem uma das maiores reservas do mundo e produz quase nada até hoje. A China concentra a maior parte da mineração e praticamente toda a separação química mundial, e já usou isso como arma comercial. Estados Unidos, Europa e Japão correm atrás de alternativa, e o Brasil entrou no mapa. Resultado: dinheiro estrangeiro entrando em projeto brasileiro em Goiás, Minas Gerais, Bahia e Amazonas, com Serra Verde em Minaçu como a primeira produção comercial do país, além dos projetos de Poços de Caldas, Araxá e da região de Caetité e Monte Alto na Bahia.
+      </div>
+
+      <p style="margin-top:18px;"><strong>Agora a parte que interessa pra sua escolha:</strong> terras raras têm a ver com as duas profissões, mas não do mesmo jeito nem na mesma hora.</p>
+
+      <div class="excl-grid">
+
+        <div class="excl-col geo">
+          <div class="excl-col-head geo">🪨 O geólogo nas terras raras</div>
+          <ul>
+            <li><strong>É a linha de frente hoje.</strong> O Brasil está na fase de <em>procurar e provar</em> depósito, e essa fase é inteiramente geológica. É onde está a maior parte da contratação em terras raras no país neste momento.</li>
+            <li><strong>Achar o tipo certo de depósito.</strong> Argila iônica, carbonatito, monazita em areia de praia e depósito de alteração. Cada um exige uma leitura geológica diferente.</li>
+            <li><strong>Geoquímica pesada.</strong> Analisar teor de 17 elementos parecidos entre si é um problema técnico chato e sofisticado. Geólogo com faro pra geoquímica está sendo disputado.</li>
+            <li><strong>Modelagem e relatório de recursos.</strong> É o documento que faz investidor estrangeiro colocar dinheiro no projeto ou desistir dele.</li>
+            <li><strong>Licenciamento com radioatividade.</strong> Muitos depósitos de terras raras vêm acompanhados de tório e urânio, o que envolve regras nucleares no licenciamento. Área técnica pouco disputada e valorizada.</li>
+          </ul>
+        </div>
+
+        <div class="excl-col min">
+          <div class="excl-col-head min">⛏️ O engenheiro de minas nas terras raras</div>
+          <ul>
+            <li><strong>Entra depois, quando o projeto vira mina.</strong> Como a maior parte dos projetos brasileiros ainda está em estudo, a onda de contratação da engenharia de minas vem alguns anos atrás da geologia. Justamente por volta de 2029 a 2032.</li>
+            <li><strong>A lavra em si costuma ser simples.</strong> Argila iônica é rasa e mole, muitas vezes sem explosivo. Ou seja, esse não é o desafio técnico da história.</li>
+            <li><strong>O gargalo é o beneficiamento.</strong> Separar as terras raras umas das outras é o problema mais difícil do setor, e resolve quem entende de tratamento de minérios e de hidrometalurgia.</li>
+            <li><strong>Território dividido.</strong> Essa parte química é compartilhada com engenharia química, metalúrgica e de materiais. Terras raras é uma área em que a engenharia de minas não trabalha sozinha.</li>
+            <li><strong>Rejeito e água.</strong> Processo químico intenso gera rejeito complicado. Disposição, tratamento e segurança ambiental são responsabilidade direta da engenharia de minas.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="cbox" style="margin-top:18px;"><strong>A parte honesta que quase ninguém conta.</strong> Terras raras hoje são mais promessa do que mercado consolidado no Brasil. Existem muitos projetos anunciados e pouquíssimas minas operando. O preço é volátil e a China já derrubou o valor de propósito outras vezes pra inviabilizar concorrente. Escolher uma faculdade só por causa das terras raras é apostar numa manchete. Escolher a faculdade por afinidade real e chegar preparado pra essa área, isso sim faz sentido.</div>
+
+      <p class="note" style="margin-top:14px;">Um dado de tempo que vale a conta: quem entra na faculdade em 2027 se forma por volta de 2031 e 2032, que é exatamente a janela em que os projetos brasileiros de terras raras devem sair do papel. Se o setor confirmar o que promete, essa turma pega a fase de implantação, que é a que mais contrata.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔎</span><h2>Perguntas para levar pra sua pesquisa</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estas perguntas não têm resposta certa aqui. Elas são pra você investigar, conversar com profissionais das duas áreas e levar pra sessão com sua orientadora:</p>
+      <ul class="sl" style="margin-top:8px;">
+        <li>Eu me animo mais em <strong>descobrir</strong> alguma coisa ou em <strong>fazer</strong> alguma coisa funcionar?</li>
+        <li>Morar em cidade pequena de mineração por alguns anos é um custo que eu topo pagar, ou é um limite meu?</li>
+        <li>Eu quero uma profissão de leque largo, que possa mudar de setor, ou uma profissão mais concentrada e com salário de entrada maior?</li>
+        <li>Como eu me sinto com dois anos de cálculo e física pesados antes de ver o assunto que me atrai?</li>
+        <li>Trabalhar em campo, longe de casa, por semanas, é aventura ou sacrifício pra mim?</li>
+        <li>Como eu me relaciono com a ideia de trabalhar num setor que a sociedade critica por causa de tragédias ambientais?</li>
+        <li>Eu me imagino fazendo mestrado depois da graduação?</li>
+        <li>Que cidades brasileiras eu aceitaria morar? Marque no mapa e compare com onde estão as vagas de cada profissão.</li>
+      </ul>
+      <p class="note" style="margin-top:14px;">Uma dica prática de pesquisa: procure no YouTube e no LinkedIn por "rotina de geólogo de exploração" e "rotina de engenheiro de minas". Ver um dia real de trabalho vale mais que dez textos de faculdade.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais que existem pra cada formação, explicados de um jeito simples. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no Brasil.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col">
+          <div class="vaga-col-head min">⛏️ Engenharia de Minas</div>
+          <div class="vaga-role"><strong>Engenheiro(a) de Planejamento de Mina</strong><span>Decide a ordem em que a mina vai ser escavada nos próximos meses pra render mais e custar menos.</span></div>
+          <div class="vaga-role"><strong>Engenheiro(a) de Operação de Mina</strong><span>Toca o dia a dia da produção: equipe, caminhão, escavadeira e meta de tonelada por turno.</span></div>
+          <div class="vaga-role"><strong>Engenheiro(a) de Processo / Beneficiamento</strong><span>Cuida da usina que quebra, moe e separa o minério depois que ele sai do chão.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn min" href="https://www.linkedin.com/jobs/search/?keywords=Engenheiro%20de%20Minas&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head geo">🪨 Geologia</div>
+          <div class="vaga-role"><strong>Geólogo(a) de Exploração</strong><span>Vai a campo procurar depósito novo, define onde furar e interpreta o que a rocha mostra.</span></div>
+          <div class="vaga-role"><strong>Geólogo(a) de Mina</strong><span>Trabalha dentro da mina em operação controlando o teor e guiando onde a escavação deve ir.</span></div>
+          <div class="vaga-role"><strong>Geólogo(a) Ambiental / Hidrogeólogo(a)</strong><span>Cuida de água subterrânea, contaminação de solo e licenciamento de obras e empresas.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn geo" href="https://www.linkedin.com/jobs/search/?keywords=Ge%C3%B3logo&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+      <p class="note" style="margin-top:14px;">Repare no que aparece nos requisitos das vagas reais: software pedido, cidade da vaga e se exige experiência de campo. Isso conta mais sobre a profissão do que qualquer descrição oficial.</p>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com.br</p>
+</footer>
+
+
+<script>
+  const verdicts = [
+    { min: 8, text: "Perfil muito alinhado! ✨", sub: "Você tem as características essenciais para esse caminho. Aprofunde a pesquisa com confiança e converse com profissionais da área." },
+    { min: 6, text: "Boa afinidade! 👍", sub: "Você tem bastante a ver com essa profissão. Vale explorar mais, uma visita a uma faculdade ou conversa com um profissional pode ajudar muito." },
+    { min: 4, text: "Alguns pontos merecem atenção 🤔", sub: "Você tem afinidade com partes da área, mas alguns inegociáveis podem ser desafiadores. Converse com sua orientadora." },
+    { min: 0, text: "Talvez haja opções mais alinhadas com você 🔍", sub: "Isso não é descarte, é autoconhecimento. O que ficou de fora pode te ajudar a entender o que você realmente busca." }
+  ];
+
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    const v = verdicts.find(x => checked >= x.min);
+    document.getElementById('vd-' + id).textContent = v.text;
+    resEl.querySelector('.sub').textContent = v.sub;
+    resEl.classList.add('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
