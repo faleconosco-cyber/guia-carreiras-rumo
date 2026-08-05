@@ -476,7 +476,7 @@
         <div class="cl-item" onclick="toggle(this,'cl-ri')"><div class="cl-box"></div><div class="cl-text">Prefiro um trabalho que envolva viagem e contato com outras culturas a uma rotina fixa num único lugar.</div></div>
       </div>
       <div class="cl-score">Marcados: <span id="sc-ri">0 de 9</span></div>
-      <div class="cl-result" id="res-ri"><div class="verdict" id="vd-ri"></div><div class="sub"></div></div>
+      <div class="cl-result" id="res-ri"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
     </div>
   </div>
 
@@ -649,7 +649,7 @@
         <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Quando vejo uma injustiça, minha cabeça vai naturalmente para "o que a lei diz sobre isso" e "como isso deveria ser resolvido".</div></div>
       </div>
       <div class="cl-score">Marcados: <span id="sc-dir">0 de 9</span></div>
-      <div class="cl-result" id="res-dir"><div class="verdict" id="vd-dir"></div><div class="sub"></div></div>
+      <div class="cl-result" id="res-dir"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
     </div>
   </div>
 
@@ -818,7 +818,7 @@
         <div class="cl-item" onclick="toggle(this,'cl-rp')"><div class="cl-box"></div><div class="cl-text">Me interessa influenciar a sociedade pela gestão de imagem e reputação, não diretamente pela lei.</div></div>
       </div>
       <div class="cl-score">Marcados: <span id="sc-rp">0 de 9</span></div>
-      <div class="cl-result" id="res-rp"><div class="verdict" id="vd-rp"></div><div class="sub"></div></div>
+      <div class="cl-result" id="res-rp"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
     </div>
   </div>
 
@@ -988,7 +988,7 @@
         <div class="cl-item" onclick="toggle(this,'cl-mod')"><div class="cl-box"></div><div class="cl-text">Prefiro um trabalho criativo e variável a uma rotina fixa e previsível.</div></div>
       </div>
       <div class="cl-score">Marcados: <span id="sc-mod">0 de 9</span></div>
-      <div class="cl-result" id="res-mod"><div class="verdict" id="vd-mod"></div><div class="sub"></div></div>
+      <div class="cl-result" id="res-mod"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
     </div>
   </div>
 
@@ -1045,7 +1045,7 @@
       <div class="hbox" style="margin-top:12px;">
         👗 <strong>Moda</strong> é o caminho de quem quer criar: peças, coleções, marcas. O impacto acontece pela criação de algo visual e cultural que as pessoas usam de verdade.
       </div>
-      <p class="note" style="margin-top:16px;">Use os checklists de cada aba, veja onde sua pontuação foi mais alta e leve esse resultado pra conversar com sua orientadora. O que ficou de fora costuma dizer tanto quanto o que você marcou.</p>
+      <p class="note" style="margin-top:16px;">Use os checklists de cada aba, leve o resultado dos checklists pra conversar com sua orientadora. O que ficou de fora costuma dizer tanto quanto o que você marcou.</p>
     </div>
   </div>
 
@@ -1240,13 +1240,6 @@
 
 
 <script>
-  const verdicts = [
-    { min: 8, text: "Perfil muito alinhado! ✨", sub: "Você tem as características essenciais para esse caminho. Aprofunde a pesquisa com confiança e converse com profissionais da área." },
-    { min: 6, text: "Boa afinidade! 👍", sub: "Você tem bastante a ver com essa profissão. Vale explorar mais: uma visita à faculdade ou conversa com um profissional pode ajudar muito." },
-    { min: 4, text: "Alguns pontos merecem atenção 🤔", sub: "Você tem afinidade com partes da área, mas alguns inegociáveis podem ser desafiadores. Converse com sua orientadora." },
-    { min: 0, text: "Talvez haja opções mais alinhadas com você 🔍", sub: "Isso não é descarte, é autoconhecimento. O que ficou de fora pode te ajudar a entender o que você realmente busca." }
-  ];
-
   function toggle(el, listId) {
     el.classList.toggle('checked');
     el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
@@ -1260,10 +1253,8 @@
     const id      = listId.replace('cl-', '');
     const resEl   = document.getElementById('res-' + id);
     document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
-    const v = verdicts.find(x => checked >= x.min);
-    document.getElementById('vd-' + id).textContent = v.text;
-    resEl.querySelector('.sub').textContent = v.sub;
-    resEl.classList.add('show');
+    if (checked > 0) resEl.classList.add('show');
+    else resEl.classList.remove('show');
   }
 
   function show(code) {

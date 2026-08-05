@@ -452,7 +452,7 @@
         <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Gosto da ideia de poder trabalhar em quase qualquer setor, inclusive no mundo criativo e da mídia.</div></div>
       </div>
       <div class="cl-score">Marcados: <span id="sc-adm">0 de 9</span></div>
-      <div class="cl-result" id="res-adm"><div class="verdict" id="vd-adm"></div><div class="sub"></div></div>
+      <div class="cl-result" id="res-adm"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
     </div>
   </div>
 
@@ -628,7 +628,7 @@
         <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Quero ficar perto do mundo da mídia, mas criando e fazendo, não só analisando.</div></div>
       </div>
       <div class="cl-score">Marcados: <span id="sc-pub">0 de 9</span></div>
-      <div class="cl-result" id="res-pub"><div class="verdict" id="vd-pub"></div><div class="sub"></div></div>
+      <div class="cl-result" id="res-pub"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
     </div>
   </div>
 
@@ -804,7 +804,7 @@
         <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Aceitaria combinar projetos autorais com audiovisual de marca pra ter mais estabilidade.</div></div>
       </div>
       <div class="cl-score">Marcados: <span id="sc-cin">0 de 9</span></div>
-      <div class="cl-result" id="res-cin"><div class="verdict" id="vd-cin"></div><div class="sub"></div></div>
+      <div class="cl-result" id="res-cin"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
     </div>
   </div>
 
@@ -849,18 +849,18 @@
     <div class="sc-head"><span class="sc-icon">🧭</span><h2>Para te ajudar a decidir</h2></div>
     <div class="sc-body">
       <div class="hbox">
-        <strong>Você saiu de Estudos de Mídia. Isso é uma pista valiosa.</strong> Estudos de Mídia é um curso de pensar e analisar a mídia, mais teórico. Se o que te incomodou foi justamente a falta de mão na massa, Publicidade e Cinema te mantêm perto do mundo que te atrai, mas fazendo, criando, produzindo. Se o que te incomodou foi o tema em si, e você sente que quer algo mais prático e amplo no mundo do trabalho, a Administração é a virada de chave maior.
+        <strong>Você saiu de Estudos de Mídia. Isso é uma pista valiosa.</strong> Estudos de Mídia é um curso de pensar e analisar a mídia, mais teórico. Publicidade e Cinema mantêm você perto desse mundo, só que do lado de quem cria e produz. Administração leva pra um universo mais amplo de negócios, fora do eixo da mídia.
       </div>
       <div class="hbox" style="margin-top:12px;">
-        🏢 <strong>Vá de Administração se</strong> você quer segurança, leque amplo de opções e gosta de organizar, decidir e lidar com negócios. Pode até trabalhar com mídia e cultura depois, só que pelo lado da gestão.
+        🏢 <strong>Administração</strong> atrai quem busca segurança, um leque amplo de opções de mercado, e gosta de organizar, decidir e lidar com negócios. Dá pra seguir perto de mídia e cultura depois, só que pelo lado da gestão.
       </div>
       <div class="hbox" style="margin-top:12px;">
-        📣 <strong>Vá de Publicidade se</strong> você quer criar e comunicar, gosta de ideias e de cultura, e topa um mercado dinâmico onde portfólio vale mais que diploma. É o meio-termo entre criar e ter mercado.
+        📣 <strong>Publicidade</strong> atrai quem quer criar e comunicar, gosta de ideias e de cultura, e topa um mercado dinâmico onde portfólio pesa mais que diploma. É o meio-termo entre criar e ter mercado.
       </div>
       <div class="hbox" style="margin-top:12px;">
-        🎬 <strong>Vá de Cinema se</strong> contar histórias em audiovisual é uma paixão de verdade, e você aceita conscientemente a instabilidade e o começo difícil em troca de realização artística.
+        🎬 <strong>Cinema</strong> atrai quem tem paixão de verdade por contar histórias em audiovisual, e topa conscientemente a instabilidade e o começo difícil em troca de realização artística.
       </div>
-      <p class="note" style="margin-top:16px;">Não precisa decidir sozinha. Use os checklists de cada aba, veja onde sua pontuação foi mais alta e leve esse resultado pra conversar com sua orientadora. O que ficou de fora costuma dizer tanto quanto o que você marcou.</p>
+      <p class="note" style="margin-top:16px;">Não precisa decidir sozinha. Leve os checklists, esta tabela e a ordem de prioridade da aba "Seus critérios" pra conversar com sua orientadora — a decisão se constrói na sessão, não aqui.</p>
     </div>
   </div>
 
@@ -1031,13 +1031,6 @@
 
 
 <script>
-  const verdicts = [
-    { min: 8, text: "Perfil muito alinhado! ✨", sub: "Você tem as características essenciais para esse caminho. Aprofunde a pesquisa com confiança e converse com profissionais da área." },
-    { min: 6, text: "Boa afinidade! 👍", sub: "Você tem bastante a ver com essa profissão. Vale explorar mais, uma visita a uma faculdade ou conversa com um profissional pode ajudar muito." },
-    { min: 4, text: "Alguns pontos merecem atenção 🤔", sub: "Você tem afinidade com partes da área, mas alguns inegociáveis podem ser desafiadores. Converse com sua orientadora." },
-    { min: 0, text: "Talvez haja opções mais alinhadas com você 🔍", sub: "Isso não é descarte, é autoconhecimento. O que ficou de fora pode te ajudar a entender o que você realmente busca." }
-  ];
-
   function toggle(el, listId) {
     el.classList.toggle('checked');
     el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
@@ -1051,10 +1044,8 @@
     const id      = listId.replace('cl-', '');
     const resEl   = document.getElementById('res-' + id);
     document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
-    const v = verdicts.find(x => checked >= x.min);
-    document.getElementById('vd-' + id).textContent = v.text;
-    resEl.querySelector('.sub').textContent = v.sub;
-    resEl.classList.add('show');
+    if (checked > 0) resEl.classList.add('show');
+    else resEl.classList.remove('show');
   }
 
   function show(code) {

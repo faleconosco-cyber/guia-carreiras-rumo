@@ -451,7 +451,7 @@
         <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Gosto da ideia de poder trabalhar em quase qualquer setor, da indústria ao mundo digital.</div></div>
       </div>
       <div class="cl-score">Marcados: <span id="sc-eng">0 de 9</span></div>
-      <div class="cl-result" id="res-eng"><div class="verdict" id="vd-eng"></div><div class="sub"></div></div>
+      <div class="cl-result" id="res-eng"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
     </div>
   </div>
 
@@ -622,7 +622,7 @@
         <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Aceito que o começo paga pouco e que meu portfólio importa muito pra crescer.</div></div>
       </div>
       <div class="cl-score">Marcados: <span id="sc-arq">0 de 9</span></div>
-      <div class="cl-result" id="res-arq"><div class="verdict" id="vd-arq"></div><div class="sub"></div></div>
+      <div class="cl-result" id="res-arq"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
     </div>
   </div>
 
@@ -793,7 +793,7 @@
         <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Me animo com a ideia de trabalhar com dados e tecnologia, uma das áreas mais procuradas hoje.</div></div>
       </div>
       <div class="cl-score">Marcados: <span id="sc-est">0 de 9</span></div>
-      <div class="cl-result" id="res-est"><div class="verdict" id="vd-est"></div><div class="sub"></div></div>
+      <div class="cl-result" id="res-est"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
     </div>
   </div>
 
@@ -848,7 +848,7 @@
       <div class="hbox" style="margin-top:12px;">
         📊 <strong>Estatística</strong> fala mais alto pra quem gosta de matemática de verdade e adora analisar informações pra achar padrões. É a área mais aquecida hoje, ligada a dados e IA, mas é a mais puxada em exatas e a mais "quieta".
       </div>
-      <p class="note" style="margin-top:16px;">Repare que os três conversam com partes do seu perfil: organizar, analisar informações e lidar com pessoas aparecem em todos, de jeitos diferentes. Use os checklists de cada aba, veja onde sua pontuação foi mais alta e leve esse resultado pra conversar com sua orientadora. O que ficou de fora costuma dizer tanto quanto o que você marcou.</p>
+      <p class="note" style="margin-top:16px;">Repare que os três conversam com partes do seu perfil: organizar, analisar informações e lidar com pessoas aparecem em todos, de jeitos diferentes. Use os checklists de cada aba, leve o resultado dos checklists pra conversar com sua orientadora. O que ficou de fora costuma dizer tanto quanto o que você marcou.</p>
     </div>
   </div>
 
@@ -1018,13 +1018,6 @@
 
 
 <script>
-  const verdicts = [
-    { min: 8, text: "Perfil muito alinhado! ✨", sub: "Você tem as características essenciais para esse caminho. Aprofunde a pesquisa com confiança e converse com profissionais da área." },
-    { min: 6, text: "Boa afinidade! 👍", sub: "Você tem bastante a ver com essa profissão. Vale explorar mais, uma visita a uma faculdade ou conversa com um profissional pode ajudar muito." },
-    { min: 4, text: "Alguns pontos merecem atenção 🤔", sub: "Você tem afinidade com partes da área, mas alguns inegociáveis podem ser desafiadores. Converse com sua orientadora." },
-    { min: 0, text: "Talvez haja opções mais alinhadas com você 🔍", sub: "Isso não é descarte, é autoconhecimento. O que ficou de fora pode te ajudar a entender o que você realmente busca." }
-  ];
-
   function toggle(el, listId) {
     el.classList.toggle('checked');
     el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
@@ -1038,10 +1031,8 @@
     const id      = listId.replace('cl-', '');
     const resEl   = document.getElementById('res-' + id);
     document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
-    const v = verdicts.find(x => checked >= x.min);
-    document.getElementById('vd-' + id).textContent = v.text;
-    resEl.querySelector('.sub').textContent = v.sub;
-    resEl.classList.add('show');
+    if (checked > 0) resEl.classList.add('show');
+    else resEl.classList.remove('show');
   }
 
   function show(code) {

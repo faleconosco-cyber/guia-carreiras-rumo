@@ -341,7 +341,7 @@ footer p{font-size:.9rem;color:var(--rumo-cream);max-width:560px;margin:0 auto}
       <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Consigo lidar com conflitos sem me abalar demais.</div></div>
       <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Tenho atenção a detalhes — uma palavra pode mudar tudo.</div></div>
     </div>
-    <div class="cl-result" id="res-dir"><div class="score">Você marcou <b id="sc-dir">0 de 9</b></div><div class="verdict" id="vd-dir"></div><div class="sub"></div></div>
+    <div class="cl-result" id="res-dir"><div class="score">Você marcou <b id="sc-dir">0 de 9</b></div><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
   </div></div>
 
 </section>
@@ -459,7 +459,7 @@ footer p{font-size:.9rem;color:var(--rumo-cream);max-width:560px;margin:0 auto}
       <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Me interesso por como empresas, governos ou ONGs funcionam.</div></div>
       <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Sou bom em comunicação e em convencer as pessoas.</div></div>
     </div>
-    <div class="cl-result" id="res-adm"><div class="score">Você marcou <b id="sc-adm">0 de 9</b></div><div class="verdict" id="vd-adm"></div><div class="sub"></div></div>
+    <div class="cl-result" id="res-adm"><div class="score">Você marcou <b id="sc-adm">0 de 9</b></div><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
   </div></div>
 
 </section>
@@ -576,7 +576,7 @@ footer p{font-size:.9rem;color:var(--rumo-cream);max-width:560px;margin:0 auto}
       <div class="cl-item" onclick="toggle(this,'cl-ep')"><div class="cl-box"></div><div class="cl-text">Gosto de pensar em eficiência: mais resultado com menos recurso.</div></div>
       <div class="cl-item" onclick="toggle(this,'cl-ep')"><div class="cl-box"></div><div class="cl-text">Aceito a possibilidade de trabalhar em outra cidade ou na indústria.</div></div>
     </div>
-    <div class="cl-result" id="res-ep"><div class="score">Você marcou <b id="sc-ep">0 de 9</b></div><div class="verdict" id="vd-ep"></div><div class="sub"></div></div>
+    <div class="cl-result" id="res-ep"><div class="score">Você marcou <b id="sc-ep">0 de 9</b></div><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
   </div></div>
 
 </section>
@@ -745,13 +745,6 @@ footer p{font-size:.9rem;color:var(--rumo-cream);max-width:560px;margin:0 auto}
 </footer>
 
 <script>
-const verdicts = [
-  { min: 8, text: "Perfil muito alinhado! ✨", sub: "Você tem as características essenciais. Aprofunde a pesquisa com confiança e converse com profissionais da área." },
-  { min: 6, text: "Boa afinidade! 👍",         sub: "Você tem bastante a ver com essa profissão. Vale explorar mais — uma visita a uma faculdade ou conversa com um profissional pode ajudar muito." },
-  { min: 4, text: "Alguns pontos merecem atenção 🤔", sub: "Você tem afinidade com partes da área, mas alguns inegociáveis podem ser desafiadores. Converse com sua orientadora." },
-  { min: 0, text: "Talvez haja opções mais alinhadas com você 🔍", sub: "Isso não é descarte — é autoconhecimento. O que ficou de fora pode te ajudar a entender o que você realmente busca." }
-];
-
 function show(code){
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
   document.getElementById('p-'+code).classList.add('active');
@@ -775,10 +768,8 @@ function updateScore(listId) {
   const id      = listId.replace('cl-', '');
   const resEl   = document.getElementById('res-' + id);
   document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
-  const v = verdicts.find(x => checked >= x.min);
-  document.getElementById('vd-' + id).textContent = v.text;
-  resEl.querySelector('.sub').textContent = v.sub;
-  resEl.classList.add('show');
+  if (checked > 0) resEl.classList.add('show');
+  else resEl.classList.remove('show');
 }
 </script>
 </body>

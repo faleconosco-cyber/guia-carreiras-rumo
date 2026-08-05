@@ -432,7 +432,7 @@
         <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Gosto de discutir e argumentar com base em dados, não só em opinião.</div></div>
       </div>
       <div class="cl-score">Marcados: <span id="sc-eco">0 de 9</span></div>
-      <div class="cl-result" id="res-eco"><div class="verdict" id="vd-eco"></div><div class="sub"></div></div>
+      <div class="cl-result" id="res-eco"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
     </div>
   </div>
 
@@ -601,7 +601,7 @@
         <div class="cl-item" onclick="toggle(this,'cl-ep')"><div class="cl-box"></div><div class="cl-text">Tenho interesse por tecnologia aplicada à produção: automação, dados, otimização.</div></div>
       </div>
       <div class="cl-score">Marcados: <span id="sc-ep">0 de 9</span></div>
-      <div class="cl-result" id="res-ep"><div class="verdict" id="vd-ep"></div><div class="sub"></div></div>
+      <div class="cl-result" id="res-ep"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
     </div>
   </div>
 
@@ -774,7 +774,7 @@
         <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Gosto da ideia de poder trabalhar em quase qualquer setor, com um pouco de tudo: gente, dinheiro e processos.</div></div>
       </div>
       <div class="cl-score">Marcados: <span id="sc-adm">0 de 9</span></div>
-      <div class="cl-result" id="res-adm"><div class="verdict" id="vd-adm"></div><div class="sub"></div></div>
+      <div class="cl-result" id="res-adm"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
     </div>
   </div>
 
@@ -1000,13 +1000,6 @@
 
 
 <script>
-  const verdicts = [
-    { min: 8, text: "Perfil muito alinhado! ✨", sub: "Você tem as características essenciais para esse caminho. Aprofunde a pesquisa com confiança e converse com profissionais da área." },
-    { min: 6, text: "Boa afinidade! 👍", sub: "Você tem bastante a ver com essa profissão. Vale explorar mais, uma visita a uma faculdade ou conversa com um profissional pode ajudar muito." },
-    { min: 4, text: "Alguns pontos merecem atenção 🤔", sub: "Você tem afinidade com partes da área, mas alguns inegociáveis podem ser desafiadores. Converse com sua orientadora." },
-    { min: 0, text: "Talvez haja opções mais alinhadas com você 🔍", sub: "Isso não é descarte, é autoconhecimento. O que ficou de fora pode te ajudar a entender o que você realmente busca." }
-  ];
-
   function toggle(el, listId) {
     el.classList.toggle('checked');
     el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
@@ -1020,10 +1013,8 @@
     const id      = listId.replace('cl-', '');
     const resEl   = document.getElementById('res-' + id);
     document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
-    const v = verdicts.find(x => checked >= x.min);
-    document.getElementById('vd-' + id).textContent = v.text;
-    resEl.querySelector('.sub').textContent = v.sub;
-    resEl.classList.add('show');
+    if (checked > 0) resEl.classList.add('show');
+    else resEl.classList.remove('show');
   }
 
   function show(code) {
