@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Carreiras — Administração, Economia e Engenharia de Produção | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Montserrat = fonte oficial Rumo. Caveat = substituta cursiva da Balneario (não disponível em web font). -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* ── Paleta oficial Instituto Rumo ── */
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Administração — Verde Profundo */
+      --adm:     #3B503F;
+      --adm-lt:  #EAEFEB;
+      --adm-mid: #C2CFC4;
+
+      /* Economia — Bordô Rosado */
+      --eco:     #6B2F3C;
+      --eco-lt:  #F6EAED;
+      --eco-mid: #DCC0C8;
+
+      /* Engenharia de Produção — Laranja Rumo */
+      --epr:     #FD745D;
+      --epr-lt:  #FFEDE9;
+      --epr-mid: #FDC7BA;
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── Header ─── */
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    /* ─── Nav ─── */
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.adm.active { color: var(--adm); border-bottom-color: var(--adm); }
+    .tab-btn.eco.active { color: var(--eco); border-bottom-color: var(--eco); }
+    .tab-btn.epr.active { color: var(--epr); border-bottom-color: var(--epr); }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    /* ─── Panels ─── */
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    /* ─── Section cards ─── */
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .adm .sc-head { background: var(--adm-lt); border-color: var(--adm-mid); }
+    .adm .sc-head h2 { color: var(--adm); }
+    .eco .sc-head { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .eco .sc-head h2 { color: var(--eco); }
+    .epr .sc-head { background: var(--epr-lt); border-color: var(--epr-mid); }
+    .epr .sc-head h2 { color: var(--epr); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    /* ─── Lists ─── */
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .adm ul.sl li::before { color: var(--adm); }
+    .eco ul.sl li::before { color: var(--eco); }
+    .epr ul.sl li::before { color: var(--epr); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    /* ─── Tags ─── */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .adm .tag { background: var(--adm-lt); color: var(--adm); border-color: var(--adm-mid); }
+    .eco .tag { background: var(--eco-lt); color: var(--eco); border-color: var(--eco-mid); }
+    .epr .tag { background: var(--epr-lt); color: var(--epr); border-color: var(--epr-mid); }
+
+    /* ─── Boxes ─── */
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .adm .hbox { background: var(--adm-lt); border-color: var(--adm); }
+    .eco .hbox { background: var(--eco-lt); border-color: var(--eco); }
+    .epr .hbox { background: var(--epr-lt); border-color: var(--epr); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .adm .accent { color: var(--adm); }
+    .eco .accent { color: var(--eco); }
+    .epr .accent { color: var(--epr); }
+
+    /* ─── Tech grid ─── */
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .adm .tech-card { background: var(--adm-lt); border-color: var(--adm-mid); }
+    .eco .tech-card { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .epr .tech-card { background: var(--epr-lt); border-color: var(--epr-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .adm .tech-card strong { color: var(--adm); }
+    .eco .tech-card strong { color: var(--eco); }
+    .epr .tech-card strong { color: var(--epr); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    /* ─── Salary grid ─── */
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .adm .sal-card { background: var(--adm-lt); border-color: var(--adm-mid); }
+    .eco .sal-card { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .epr .sal-card { background: var(--epr-lt); border-color: var(--epr-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .adm .sal-range { color: var(--adm); }
+    .eco .sal-range { color: var(--eco); }
+    .epr .sal-range { color: var(--epr); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── Comparison table ─── */
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-adm { background: var(--adm); }
+    .comp-table th.h-eco { background: var(--eco); }
+    .comp-table th.h-epr { background: var(--epr); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    /* ─── Link cards ─── */
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .adm .lcard:hover { border-color: var(--adm); }
+    .eco .lcard:hover { border-color: var(--eco); }
+    .epr .lcard:hover { border-color: var(--epr); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    /* ─── Checklist ─── */
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .adm .cl-item:hover, .adm .cl-item.checked { background: var(--adm-lt); border-color: var(--adm); }
+    .eco .cl-item:hover, .eco .cl-item.checked { background: var(--eco-lt); border-color: var(--eco); }
+    .epr .cl-item:hover, .epr .cl-item.checked { background: var(--epr-lt); border-color: var(--epr); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .adm .cl-item.checked .cl-box { background: var(--adm); border-color: var(--adm); }
+    .eco .cl-item.checked .cl-box { background: var(--eco); border-color: var(--eco); }
+    .epr .cl-item.checked .cl-box { background: var(--epr); border-color: var(--epr); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .adm .cl-score span { color: var(--adm); font-weight: 800; }
+    .eco .cl-score span { color: var(--eco); font-weight: 800; }
+    .epr .cl-score span { color: var(--epr); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .adm .cl-result { background: var(--adm-lt); border-color: var(--adm-mid); }
+    .eco .cl-result { background: var(--eco-lt); border-color: var(--eco-mid); }
+    .epr .cl-result { background: var(--epr-lt); border-color: var(--epr-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .verdict { font-size: 18px; font-weight: 800; }
+    .adm .cl-result .verdict { color: var(--adm); }
+    .eco .cl-result .verdict { color: var(--eco); }
+    .epr .cl-result .verdict { color: var(--epr); }
+    .cl-result .sub { font-size: 13px; color: var(--text); margin-top: 8px; line-height: 1.6; }
+
+    /* ─── Bolinhas de presença (aba critérios) ─── */
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    /* ─── Ranking dos critérios ─── */
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+    .rank-fill.adm { background: var(--adm); }
+    .rank-fill.eco { background: var(--eco); }
+    .rank-fill.epr { background: var(--epr); }
+
+    /* ─── Vagas reais ─── */
+    .vagas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-col-head.adm { background: var(--adm); }
+    .vaga-col-head.eco { background: var(--eco); }
+    .vaga-col-head.epr { background: var(--epr); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+    .vaga-btn.adm { background: var(--adm); }
+    .vaga-btn.eco { background: var(--eco); }
+    .vaga-btn.epr { background: var(--epr); }
+
+    /* ─── Footer ─── */
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+
+      /* Tabela de critérios vira cartões empilhados no celular */
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table tr:nth-child(even) td:first-child { background: var(--cmp); }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>Administração · Economia · Engenharia de Produção
+    <span class="hd-accent">o caminho se faz caminhando</span>
+  </h1>
+  <p class="hd-sub">Três caminhos que giram em torno de números, decisões e processos, cada um de um jeito bem diferente. Este guia é pra você pesquisar com calma na sua semana de pausa e levar suas descobertas pra próxima sessão.</p>
+</header>
+
+<nav>
+  <button class="tab-btn adm active" data-c="adm" onclick="show('adm')">🏢 Administração</button>
+  <button class="tab-btn eco" data-c="eco" onclick="show('eco')">📈 Economia</button>
+  <button class="tab-btn epr" data-c="epr" onclick="show('epr')">⚙️ Engenharia de Produção</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">⚖️ Comparar os três</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ ADMINISTRAÇÃO ═══════════════════════════════ -->
+<div class="panel adm active" id="p-adm">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Administração?</h2></div>
+    <div class="sc-body">
+      <p>Administração é o curso que ensina a fazer uma organização funcionar: pessoas, dinheiro, processos, produtos e decisões. É um <strong>bacharelado de 4 anos</strong>, reconhecido pelo MEC, e existe também na versão tecnóloga (Gestão Comercial, Processos Gerenciais, Gestão de RH) com 2 a 2,5 anos. É um curso bem prático e ligado ao mundo dos negócios desde cedo.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Fundamentos de administração, matemática financeira, contabilidade básica, economia, estatística e comportamento organizacional. A base mais "dura" do curso.</li>
+        <li><strong>2º–3º ano:</strong> Marketing, gestão de pessoas, finanças, operações, logística, sistemas de informação e empreendedorismo. Aqui o curso fica mais aplicado.</li>
+        <li><strong>4º ano:</strong> Estratégia, gestão de projetos, jogos de empresa, estágio obrigatório e TCC. Muita gente já está estagiando antes disso.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a Administração tem conselho próprio (CFA e os CRAs regionais). Para assinar como "Administrador" e atuar em algumas funções específicas, é preciso registro no CRA. Na maioria das vagas de empresa, porém, o que pesa é a entrega, não o registro.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Marketing e produto:</strong> planejar campanhas, lançar produtos, cuidar de redes sociais e da relação com o cliente.</li>
+        <li><strong>Finanças:</strong> cuidar do dinheiro da empresa, investimentos, orçamento e análise de resultados.</li>
+        <li><strong>Recursos Humanos / Gente e Gestão:</strong> seleção, desenvolvimento de pessoas, cultura e clima da empresa.</li>
+        <li><strong>Comercial e vendas:</strong> negociar, gerir carteira de clientes e metas, abrir mercados.</li>
+        <li><strong>Logística e operações:</strong> fazer produtos e serviços chegarem na hora certa, do jeito certo, ao menor custo.</li>
+        <li><strong>Gestão de projetos:</strong> organizar prazos, equipes e entregas — função presente em quase todo setor.</li>
+        <li><strong>Consultoria empresarial:</strong> ajudar empresas a resolver problemas e crescer.</li>
+        <li><strong>Empreendedorismo:</strong> abrir e tocar o próprio negócio com base sólida de gestão.</li>
+        <li><strong>Análise de dados de negócio:</strong> transformar números em decisão, área em alta e bem paga.</li>
+        <li><strong>Carreira pública:</strong> concursos para tribunais, prefeituras, bancos públicos e órgãos federais.</li>
+        <li><strong>Startups:</strong> áreas de operações, growth e produto, ambientes jovens e dinâmicos.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Administração combina cabeça organizada com facilidade pra lidar com gente e números.</p>
+      <div class="tags">
+        <span class="tag">Organização</span>
+        <span class="tag">Facilidade com números</span>
+        <span class="tag">Visão do todo</span>
+        <span class="tag">Liderança</span>
+        <span class="tag">Comunicação</span>
+        <span class="tag">Negociação</span>
+        <span class="tag">Tomada de decisão</span>
+        <span class="tag">Curiosidade sobre empresas</span>
+        <span class="tag">Trabalho em equipe</span>
+        <span class="tag">Pragmatismo</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando um trabalho em grupo está bagunçado, você é a pessoa que naturalmente organiza quem faz o quê e até quando? Se isso te dá prazer em vez de irritação, a Administração tem muito a ver com você.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>É um curso muito procurado, então tem muita gente formada.</strong> Administração é uma das graduações com mais formandos no Brasil. Pra se destacar, não basta o diploma: estágio bom, idiomas e uma especialização fazem diferença.</div>
+      <div class="cbox"><strong>O começo costuma ser de base, não de comando.</strong> Ninguém sai da faculdade "gerenciando". Os primeiros anos são de aprender por dentro, em funções operacionais, com salário inicial modesto.</div>
+      <div class="cbox"><strong>Tem matemática e finanças no caminho.</strong> Se você foge totalmente de números, vai sofrer nos primeiros semestres. Não precisa amar, mas precisa encarar.</div>
+      <div class="cbox"><strong>É um curso "largo".</strong> A ADM dá uma base de tudo, mas de nada com muita profundidade. Quem não escolhe uma área pra se aprofundar corre o risco de ficar genérico.</div>
+      <div class="cbox"><strong>Pressão por resultado.</strong> Em quase toda função de gestão, você é cobrado por metas e números. Isso pode ser motivador ou estressante, depende muito do seu perfil.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Decisão por dados</strong><p>Planilha está virando painel inteligente. Saber ler dados deixou de ser diferencial e virou requisito básico de gestão.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA no operacional</strong><p>Tarefas repetitivas (relatórios, conciliações, triagens) estão sendo automatizadas. Sobra mais tempo pra estratégia e pessoas.</p></div>
+        <div class="tech-card"><div class="tc-icon">🛒</div><strong>Gestão digital</strong><p>E-commerce, marketplaces e apps mudaram a forma de vender e atender. Administrar hoje é administrar também o digital.</p></div>
+        <div class="tech-card"><div class="tc-icon">💳</div><strong>Fintechs e meios de pagamento</strong><p>Dinheiro circula diferente. Entender pagamentos, crédito e finanças digitais virou parte da rotina de quem gere negócios.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏠</div><strong>Trabalho remoto e híbrido</strong><p>Gerir equipes que não estão na mesma sala exige novas habilidades de liderança, confiança e comunicação clara.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌱</div><strong>ESG e propósito</strong><p>Empresas cobram gestão sustentável e socialmente responsável. Isso abre vagas novas e muda o que se espera de um gestor.</p></div>
+      </div>
+      <p class="note">⚡ O administrador do futuro não compete com a tecnologia: usa a tecnologia pra decidir melhor e mais rápido, e foca no que é só humano — liderar pessoas e definir rumos.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>É o curso mais versátil que existe:</strong> administrador trabalha em empresa de qualquer tamanho, setor e cidade. Pouca profissão abre tantas portas diferentes.</li>
+        <li><strong>Muita vaga, muita concorrência:</strong> o volume de oportunidades é alto, mas o número de formados também. Diferenciação é tudo.</li>
+        <li><strong>Tech, bancos e varejo puxam os melhores salários:</strong> empresas como Nubank, Itaú, Ambev, Mercado Livre e Magalu têm programas de trainee muito disputados.</li>
+        <li><strong>Setor público é caminho de estabilidade:</strong> concursos pagam bem e dão segurança, mas exigem preparação longa.</li>
+        <li><strong>Empreender é uma saída real:</strong> muita gente de ADM acaba abrindo o próprio negócio, sozinho ou com sócios.</li>
+        <li><strong>Programas de trainee são a porta de ouro:</strong> entram em grandes empresas com formação acelerada e salário acima da média. <em>(fonte: pesquisas Cia de Talentos e Catho, 2024–2025)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Escolher uma área pra se aprofundar é o que tira o administrador da faixa "genérico".</p>
+      <div class="tags">
+        <span class="tag">⭐ Marketing e Growth</span>
+        <span class="tag">⭐ Finanças e Investimentos</span>
+        <span class="tag">⭐ Análise de Dados / BI</span>
+        <span class="tag">⭐ Gestão de Projetos</span>
+        <span class="tag">Gestão de Pessoas / RH</span>
+        <span class="tag">Logística e Supply Chain</span>
+        <span class="tag">Empreendedorismo e Inovação</span>
+        <span class="tag">Comércio Exterior</span>
+        <span class="tag">Gestão Pública</span>
+        <span class="tag">Vendas e Comercial</span>
+        <span class="tag">Consultoria Estratégica</span>
+        <span class="tag">MBA em Gestão</span>
+        <span class="tag">Agronegócio</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhores salários no Brasil em 2024–2025. Finanças, dados e marketing/growth concentram as faixas mais altas para quem se especializa cedo.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um administrador?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no mercado corporativo brasileiro. Tech, bancos e consultorias pagam acima disso para cargos sênior.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,5k–3,5k</div><div class="sal-note">Estágio, assistente ou trainee. Fase de aprender por dentro. Programas de trainee pagam mais.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 5k–9k</div><div class="sal-note">Analista pleno ou sênior com área definida e alguns anos de experiência.</div></div>
+        <div class="sal-card"><div class="sal-stage">Liderança / Topo</div><div class="sal-range">R$ 12k–40k+</div><div class="sal-note">Coordenação, gerência e diretoria. Diretor e C-level chegam às faixas mais altas.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em Administração, o salário sobe muito mais por causa da área escolhida e do setor do que pelo tempo de carreira. Um especialista em finanças ou dados numa fintech pode ganhar mais com 5 anos do que um gestor genérico com 15.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://cfa.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CFA — Conselho Federal de Administração</strong><span>O conselho oficial da profissão: o que faz um administrador, registro e áreas de atuação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais reportados por profissionais. Pesquise por cargo e empresa específica</span></div><span class="lc-arr">→</span></a>
+        <a href="https://exame.com/carreira/" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Exame — Carreira</strong><span>Notícias de negócios, gestão e mercado de trabalho no Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.ciadetalentos.com.br" class="lcard" target="_blank"><span class="lc-icon">🚀</span><div class="lc-body"><strong>Cia de Talentos</strong><span>Programas de trainee e estágio das maiores empresas do país</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/learning/" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>LinkedIn Learning</strong><span>Cursos de gestão, finanças, dados e liderança com certificado</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Administração é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-adm">
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Gosto de organizar coisas: tarefas, grupos, eventos. Bagunça me incomoda mais do que organizar cansa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Não tenho pavor de números. Posso não amar matemática, mas consigo lidar com ela quando precisa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade sobre como as empresas funcionam por dentro, como ganham dinheiro e tomam decisões.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Costumo assumir um papel de liderança ou de "quem puxa" nos trabalhos em grupo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Me dou bem conversando e negociando com pessoas diferentes de mim.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Prefiro coisas práticas e aplicadas a teorias abstratas. Quero ver como aquilo serve no mundo real.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Aceito que vou começar de baixo e construir minha carreira aos poucos, sem atalho.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Trabalhar com metas e ser cobrado por resultado me estimula mais do que me paralisa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Gosto da ideia de poder atuar em áreas bem diferentes dentro de uma empresa: financeira, comercial, operações, pessoas.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-adm')"><div class="cl-box"></div><div class="cl-text">Tenho interesse em aprender ferramentas de dados e tecnologia que estão cada vez mais presentes na gestão.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-adm">0 de 10</span></div>
+      <div class="cl-result" id="res-adm"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ ECONOMIA ═══════════════════════════════ -->
+<div class="panel eco" id="p-eco">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Economia?</h2></div>
+    <div class="sc-body">
+      <p>Economia é o curso de quem quer entender como a sociedade produz, distribui e consome recursos que são escassos: por que os preços sobem, por que o dólar varia, por que um país cresce e outro não. É um <strong>bacharelado de 4 anos</strong>, reconhecido pelo MEC. É um curso bem matemático e teórico, com forte base em estatística e modelos.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Microeconomia, macroeconomia, cálculo, estatística e contabilidade. A parte mais pesada de exatas do curso.</li>
+        <li><strong>2º–3º ano:</strong> Econometria, economia monetária, finanças públicas, comércio internacional e economia brasileira.</li>
+        <li><strong>4º ano:</strong> Modelos econômicos aplicados, mercado financeiro, estágio e TCC. Muita gente já testa mercado financeiro ou setor público nesse período.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a Economia tem conselho próprio (Corecon). O registro é exigido em alguns contextos formais, mas boa parte do mercado privado (bancos, consultorias, fintechs) contrata pelo currículo e pela entrega, não pelo registro.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado financeiro:</strong> analista econômico em bancos, corretoras e gestoras de fundos, acompanhando juros, câmbio e cenários.</li>
+        <li><strong>Consultoria econômica:</strong> ajudar empresas a entender riscos e oportunidades de mercado.</li>
+        <li><strong>Pesquisa e estatística:</strong> institutos como IBGE e IPEA, produzindo dados que orientam decisões públicas e privadas.</li>
+        <li><strong>Setor público:</strong> Banco Central, Ministério da Fazenda, tribunais de contas — via concurso, com carreiras bem estruturadas.</li>
+        <li><strong>Finanças corporativas:</strong> planejamento financeiro e orçamentário dentro de empresas.</li>
+        <li><strong>Gestão de risco e precificação:</strong> avaliar riscos de crédito, seguros e produtos financeiros.</li>
+        <li><strong>Economia de dados / data science:</strong> aplicar estatística e programação para prever cenários e comportamentos.</li>
+        <li><strong>Organismos internacionais e ONGs:</strong> projetos de desenvolvimento econômico e social.</li>
+        <li><strong>Academia:</strong> pesquisa e docência, geralmente exigindo mestrado ou doutorado.</li>
+        <li><strong>Comércio exterior:</strong> analisar mercados internacionais e negociações comerciais.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Economia pede gosto por números combinado com curiosidade sobre o mundo real.</p>
+      <div class="tags">
+        <span class="tag">Raciocínio lógico-matemático</span>
+        <span class="tag">Gosto por estatística</span>
+        <span class="tag">Leitura crítica de notícias</span>
+        <span class="tag">Paciência com teoria</span>
+        <span class="tag">Comunicação de dados</span>
+        <span class="tag">Curiosidade sobre política</span>
+        <span class="tag">Resiliência com estudo</span>
+        <span class="tag">Pensamento analítico</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você ouve falar de juros, inflação ou dólar no noticiário, você tem vontade de entender o porquê por trás do número, não só o número em si? Isso é o espírito de Economia.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>É um curso muito matemático.</strong> Boa parte da evasão em Economia acontece nos dois primeiros anos, por causa da carga de cálculo e estatística. Não precisa amar matemática, mas precisa aguentar bastante dela.</div>
+      <div class="cbox"><strong>O mercado valoriza pós-graduação.</strong> Em bancos e consultorias grandes, mestrado é quase padrão pra crescer mais rápido. O bacharelado sozinho abre portas, mas nem sempre as mais disputadas.</div>
+      <div class="cbox"><strong>Início de carreira concorrido.</strong> As vagas de trainee em bancos e consultorias de ponta têm poucas vagas para muitos candidatos.</div>
+      <div class="cbox"><strong>Muita teoria antes da prática.</strong> Nos primeiros anos, o curso pode parecer distante da realidade, cheio de modelos e gráficos abstratos.</div>
+      <div class="cbox"><strong>Ciclos econômicos afetam contratação.</strong> Em momentos de crise, o setor financeiro contrata menos, o que pode tornar a entrada mais instável dependendo da época.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🐍</div><strong>Programação virou básico</strong><p>Python e R deixaram de ser diferencial e viraram parte do dia a dia do economista de mercado e de pesquisa.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>Modelos preditivos com IA</strong><p>IA ajuda a prever cenários econômicos com mais dados e mais rápido, mudando como as análises são feitas.</p></div>
+        <div class="tech-card"><div class="tc-icon">💰</div><strong>Fintechs e criptomoedas</strong><p>Novos produtos financeiros criam demanda por economistas que entendem tecnologia e regulação ao mesmo tempo.</p></div>
+        <div class="tech-card"><div class="tc-icon">📡</div><strong>Big data em pesquisa</strong><p>Bases de dados gigantes (redes, transações, satélites) mudam a forma de medir a economia real.</p></div>
+        <div class="tech-card"><div class="tc-icon">📉</div><strong>Dashboards em tempo real</strong><p>Relatórios manuais estão sendo substituídos por painéis que atualizam sozinhos, mudando o ritmo do trabalho.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌐</div><strong>Automação de relatórios</strong><p>Tarefas repetitivas de compilar dados estão sendo automatizadas, deixando mais espaço pra interpretação e estratégia.</p></div>
+      </div>
+      <p class="note">⚡ A IA processa dados mais rápido que qualquer economista. O que continua raro é interpretar esses dados com bom senso e contexto — isso a tecnologia ainda não faz sozinha.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado financeiro concentra as melhores vagas:</strong> bancos, corretoras e gestoras de fundos, principalmente em São Paulo, pagam entre os melhores salários da profissão.</li>
+        <li><strong>Setor público é caminho sólido:</strong> Banco Central, área fiscal e tribunais oferecem carreiras estáveis e bem remuneradas via concurso.</li>
+        <li><strong>Consultorias econômicas crescem:</strong> empresas de todos os portes contratam análise de cenário e risco.</li>
+        <li><strong>Institutos de pesquisa empregam menos, mas de forma estável:</strong> IBGE, IPEA e universidades são portas de entrada pra quem gosta de pesquisa.</li>
+        <li><strong>Área acadêmica exige mais estudo:</strong> seguir pesquisa ou docência normalmente pede mestrado e doutorado.</li>
+        <li><strong>Demanda crescente por economista com dados:</strong> quem une economia e programação tem vantagem competitiva clara. <em>(fonte: salario.com.br e Vagas.com, 2024–2025)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em Economia, a pós-graduação pesa bastante na hora de subir de nível salarial.</p>
+      <div class="tags">
+        <span class="tag">⭐ Mercado Financeiro</span>
+        <span class="tag">⭐ Data Science / Economia de Dados</span>
+        <span class="tag">⭐ Setor Público (concursos)</span>
+        <span class="tag">⭐ Economia Internacional</span>
+        <span class="tag">Finanças Corporativas</span>
+        <span class="tag">Gestão de Risco</span>
+        <span class="tag">Economia Comportamental</span>
+        <span class="tag">Políticas Públicas</span>
+        <span class="tag">Economia Ambiental / ESG</span>
+        <span class="tag">Pesquisa Acadêmica</span>
+        <span class="tag">Precificação / Pricing</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhor remuneração no Brasil em 2024–2025. Mercado financeiro e dados concentram as faixas salariais mais altas.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um economista?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. Mercado financeiro e setor público bem posicionado pagam acima da média.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 3k–5k</div><div class="sal-note">Estágio ou trainee. Bancos e consultorias grandes costumam pagar mais que a média.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 7k–13k</div><div class="sal-note">Analista pleno ou sênior em banco, consultoria ou empresa de médio/grande porte.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Topo</div><div class="sal-range">R$ 15k–35k+</div><div class="sal-note">Economista-chefe, sócio de consultoria ou cargos públicos de carreira consolidada.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em Economia, quem investe em pós-graduação (mestrado, principalmente) costuma dar um salto salarial bem maior do que quem segue só com o bacharelado.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.coreconsp.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>Corecon — Conselho Regional de Economia</strong><span>O conselho oficial da profissão: registro, atuação e áreas da economia</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.ipea.gov.br" class="lcard" target="_blank"><span class="lc-icon">📊</span><div class="lc-body"><strong>IPEA</strong><span>Instituto de pesquisa econômica aplicada, referência em estudos sobre o Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.bcb.gov.br" class="lcard" target="_blank"><span class="lc-icon">🏦</span><div class="lc-body"><strong>Banco Central do Brasil</strong><span>Dados, relatórios e conteúdo de educação financeira e econômica</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais reportados por profissionais da área econômica</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/learning/" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>LinkedIn Learning</strong><span>Cursos de Python, estatística e finanças com certificado</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Economia é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-eco">
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Gosto de números e não fujo de matemática, mesmo que não seja minha paixão.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade sobre por que preços, juros e câmbio sobem e descem.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Consigo estudar teoria abstrata sem ver aplicação prática imediata.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Gosto de ler notícias sobre política e economia e formar opinião com base em dados.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Tenho paciência para estudar bastante e considero fazer pós-graduação depois da faculdade.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Gosto de resolver problemas complexos com lógica e raciocínio estruturado.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Me interesso por estatística e consigo lidar com gráficos e modelos.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Consigo simplificar uma ideia complexa para alguém que não entende do assunto.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Estou disposta a competir por vagas de estágio ou trainee concorridas no início da carreira.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eco')"><div class="cl-box"></div><div class="cl-text">Tenho interesse em aprender ferramentas como Python ou Excel avançado para análise de dados.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-eco">0 de 10</span></div>
+      <div class="cl-result" id="res-eco"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ ENGENHARIA DE PRODUÇÃO ═══════════════════════════════ -->
+<div class="panel epr" id="p-epr">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Engenharia de Produção?</h2></div>
+    <div class="sc-body">
+      <p>Engenharia de Produção une engenharia com gestão: ensina a otimizar processos, produção, logística e operações dentro de uma empresa. É um <strong>bacharelado de 5 anos</strong>, reconhecido pelo MEC, com registro obrigatório no <strong>CREA</strong> para atuar como engenheira. Tem grade pesada de exatas, igual às outras engenharias, mas com foco forte em gestão a partir da metade do curso.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Cálculo, física, química, algoritmos/programação e desenho técnico. A base "dura" de qualquer engenharia.</li>
+        <li><strong>3º–4º ano:</strong> Pesquisa operacional, gestão da qualidade, logística, planejamento e controle de produção, ergonomia e gestão de projetos.</li>
+        <li><strong>5º ano:</strong> Estágio obrigatório, TCC e disciplinas de gestão estratégica aplicada à indústria.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> como toda engenharia, exige registro no <strong>CREA</strong> pra assinar projetos e atuar oficialmente como engenheira de produção. Sem o registro, você não pode assinar como engenheira, mesmo com o diploma.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Planejamento e Controle de Produção (PCP):</strong> organizar o que, quanto e quando produzir numa fábrica.</li>
+        <li><strong>Engenharia de processos:</strong> desenhar e melhorar como as coisas são feitas dentro da empresa.</li>
+        <li><strong>Logística e supply chain:</strong> cuidar do fluxo de materiais, desde o fornecedor até o cliente final.</li>
+        <li><strong>Gestão da qualidade:</strong> garantir que produtos e processos atendam aos padrões exigidos.</li>
+        <li><strong>Melhoria contínua (Lean/Six Sigma):</strong> reduzir desperdício e aumentar eficiência nos processos.</li>
+        <li><strong>Engenharia de métodos e tempos:</strong> estudar e otimizar como o trabalho é executado.</li>
+        <li><strong>Gestão de projetos industriais:</strong> coordenar prazos, custos e equipes em projetos de produção.</li>
+        <li><strong>Consultoria em eficiência operacional:</strong> ajudar empresas a produzir melhor, gastando menos.</li>
+        <li><strong>Compras e suprimentos:</strong> negociar e gerenciar a cadeia de fornecedores.</li>
+        <li><strong>Pesquisa operacional / analytics industrial:</strong> usar dados e modelos matemáticos pra otimizar decisões.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Engenharia de Produção pede base forte em exatas combinada com visão de processo e organização.</p>
+      <div class="tags">
+        <span class="tag">Facilidade com exatas</span>
+        <span class="tag">Pensamento sistêmico</span>
+        <span class="tag">Organização</span>
+        <span class="tag">Gosto por otimizar</span>
+        <span class="tag">Facilidade com números</span>
+        <span class="tag">Liderança de equipes</span>
+        <span class="tag">Interesse por indústria</span>
+        <span class="tag">Interesse por tecnologia</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você vê uma fila ou um processo bagunçado — numa fábrica, num evento, até numa cozinha — você já pensa em como reorganizar aquilo pra ficar mais rápido e eficiente? Esse é o espírito da Engenharia de Produção.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>Grade pesada de exatas.</strong> Cálculo e física pesam nos primeiros anos, igual em qualquer engenharia. A evasão nesse período costuma ser alta.</div>
+      <div class="cbox"><strong>Vagas concentradas em polos industriais.</strong> Boa parte das oportunidades fica no interior de São Paulo, no Sul do país ou em outras regiões industriais, o que pode significar sair de casa.</div>
+      <div class="cbox"><strong>O começo é de chão de fábrica.</strong> Quase ninguém começa na gestão. Os primeiros anos costumam envolver bastante tempo na área operacional, aprendendo o processo de perto.</div>
+      <div class="cbox"><strong>Rotina pode incluir turnos e viagens.</strong> Acompanhar diferentes unidades, fornecedores ou plantas de produção é comum, o que exige disponibilidade pra se deslocar.</div>
+      <div class="cbox"><strong>Concorrência com outras engenharias.</strong> Vagas de PCP, logística e qualidade às vezes são disputadas também por engenheiros mecânicos, industriais ou de outras áreas próximas.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🏭</div><strong>Indústria 4.0</strong><p>Fábricas conectadas, com sensores e automação, mudaram completamente o perfil da profissão nos últimos anos.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>Manutenção preditiva com IA</strong><p>Algoritmos preveem falhas de máquina antes que aconteçam, evitando paradas caras na produção.</p></div>
+        <div class="tech-card"><div class="tc-icon">💻</div><strong>Simulação de processos</strong><p>Softwares testam mudanças na produção virtualmente antes de implementar de verdade, economizando tempo e dinheiro.</p></div>
+        <div class="tech-card"><div class="tc-icon">🦾</div><strong>Robótica colaborativa</strong><p>Robôs trabalhando junto com pessoas em linhas de produção, exigindo novas habilidades de quem coordena o processo.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Dados em tempo real</strong><p>Dashboards de produção substituem a planilha manual, permitindo decisões mais rápidas no chão de fábrica.</p></div>
+        <div class="tech-card"><div class="tc-icon">♻️</div><strong>Produção enxuta e sustentável</strong><p>Economia circular e eficiência energética ganham peso nas decisões de como produzir.</p></div>
+      </div>
+      <p class="note">⚡ A automação substitui tarefas repetitivas, não o raciocínio de quem enxerga o processo inteiro e sabe onde otimizar. Esse olhar sistêmico continua sendo humano.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Forte em polos industriais:</strong> interior de São Paulo, ABC paulista, Sul do país e Manaus concentram boa parte das vagas.</li>
+        <li><strong>Setores que mais empregam:</strong> automotivo, alimentício, bens de consumo e agroindústria têm demanda constante.</li>
+        <li><strong>Logística e e-commerce abriram vagas novas:</strong> o crescimento das entregas rápidas aumentou a procura por profissionais de supply chain.</li>
+        <li><strong>Consultoria em eficiência operacional cresce:</strong> empresas de todos os setores buscam reduzir custo e desperdício.</li>
+        <li><strong>Salários entre os mais altos das engenharias:</strong> por conta da escassez relativa de profissionais bem formados na área.</li>
+        <li><strong>Ciclos da indústria afetam contratação:</strong> em momentos de baixa produção industrial, a abertura de vagas desacelera. <em>(fonte: CREA-SP e salario.com.br, 2024–2025)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em Engenharia de Produção, escolher uma frente pra se especializar acelera bastante a carreira.</p>
+      <div class="tags">
+        <span class="tag">⭐ Lean Manufacturing</span>
+        <span class="tag">⭐ Logística e Supply Chain</span>
+        <span class="tag">⭐ Gestão de Projetos (PMP)</span>
+        <span class="tag">⭐ Pesquisa Operacional / Data Analytics</span>
+        <span class="tag">Qualidade (Six Sigma)</span>
+        <span class="tag">Planejamento e Controle de Produção</span>
+        <span class="tag">Segurança do Trabalho</span>
+        <span class="tag">Automação Industrial</span>
+        <span class="tag">Sustentabilidade Industrial / ESG</span>
+        <span class="tag">Compras e Suprimentos</span>
+        <span class="tag">MBA em Gestão Industrial</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhor remuneração no Brasil em 2024–2025. Lean, logística e gestão de projetos concentram as melhores oportunidades.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um engenheiro de produção?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. Indústria automotiva e consultoria de eficiência costumam pagar acima da média.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 4k–6,5k</div><div class="sal-note">Estágio em indústria costuma pagar bem, entre os melhores de todas as engenharias.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 8k–14k</div><div class="sal-note">Analista sênior de PCP, logística, qualidade ou processos com alguns anos de experiência.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Topo</div><div class="sal-range">R$ 16k–35k+</div><div class="sal-note">Gerência de operações e diretoria industrial nas faixas mais altas.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em Engenharia de Produção, o salário inicial já costuma ser mais alto que em outras áreas de gestão, mas o crescimento depende de estar perto de polos industriais fortes.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.confea.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>Confea / CREA</strong><span>O sistema que regula a engenharia no Brasil: registro, atribuições e áreas de atuação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.abepro.org.br" class="lcard" target="_blank"><span class="lc-icon">⚙️</span><div class="lc-body"><strong>ABEPRO — Associação Brasileira de Engenharia de Produção</strong><span>Referência sobre a profissão, eventos e pesquisa na área</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais de cargos de engenharia de produção reportados por profissionais</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.vagas.com.br" class="lcard" target="_blank"><span class="lc-icon">📋</span><div class="lc-body"><strong>Vagas.com</strong><span>Vagas reais de PCP, logística, qualidade e processos em empresas do Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/learning/" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>LinkedIn Learning</strong><span>Cursos de Lean, gestão de projetos e automação industrial com certificado</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Engenharia de Produção é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-epr">
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Não tenho medo de matemática e física pesadas; sei que os primeiros anos vão exigir isso de mim.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Gosto de entender como um processo funciona do início ao fim, não só uma parte dele.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Tenho prazer em organizar e otimizar: deixar algo mais rápido, mais barato ou mais eficiente me motiva.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Topo morar perto de polos industriais ou viajar com frequência entre unidades de trabalho.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Consigo lidar bem com números, indicadores e planilhas no dia a dia.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Gosto de resolver problemas práticos e concretos, não só teóricos.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Tenho facilidade para liderar ou coordenar pessoas em um time operacional.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Estou disposta a começar em funções de chão de fábrica ou operação antes de subir de cargo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Tenho interesse em tecnologia aplicada à indústria: automação, dados, sistemas de produção.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-epr')"><div class="cl-box"></div><div class="cl-text">Aceito que a rotina pode incluir turnos ou deslocamento constante entre fábricas e escritórios.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-epr">0 de 10</span></div>
+      <div class="cl-result" id="res-epr"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAÇÃO ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚖️</span><h2>Os três lado a lado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Os três caminhos giram em torno de números, decisões e processos, mas pedem perfis bem diferentes. Esta tabela ajuda a enxergar as diferenças entre eles.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão</th>
+              <th class="h-adm">🏢 Administração</th>
+              <th class="h-eco">📈 Economia</th>
+              <th class="h-epr">⚙️ Engenharia de Produção</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Foco principal</td><td>Fazer organizações funcionarem</td><td>Entender e prever como recursos e mercados se movem</td><td>Otimizar processos e produção dentro de uma empresa</td></tr>
+            <tr><td>Tipo de perfil</td><td>Organizado e estratégico</td><td>Analítico e matemático</td><td>Técnico e sistêmico</td></tr>
+            <tr><td>Duração do curso</td><td>4 anos (bacharelado)</td><td>4 anos (bacharelado)</td><td>5 anos (bacharelado, com CREA)</td></tr>
+            <tr><td>Peso de matemática</td><td>Médio</td><td>Alto</td><td>Muito alto (cálculo e física pesados)</td></tr>
+            <tr><td>Onde trabalha</td><td>Empresas de qualquer setor</td><td>Bancos, consultorias, setor público, institutos de pesquisa</td><td>Indústrias, fábricas, polos industriais, logística</td></tr>
+            <tr><td>Estabilidade</td><td>Alta (muita vaga)</td><td>Média-alta (concorrida no início)</td><td>Alta em polos industriais, ligada a ciclos da indústria</td></tr>
+            <tr><td>Salário inicial</td><td>R$ 2,5k–3,5k</td><td>R$ 3k–5k</td><td>R$ 4k–6,5k</td></tr>
+            <tr><td>Conselho / regulação</td><td>Tem conselho (CFA/CRA)</td><td>Tem conselho (Corecon)</td><td>Tem conselho obrigatório (CREA)</td></tr>
+            <tr><td>Diferencial único</td><td>Versatilidade total de mercado</td><td>Entendimento profundo de cenários econômicos</td><td>Une engenharia com gestão de operações</td></tr>
+            <tr><td>Pergunta central</td><td>"Como faço isso funcionar e crescer?"</td><td>"Por que os preços, juros e mercados se movem assim?"</td><td>"Como faço esse processo ser mais eficiente?"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Para pensar antes da sessão</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        🏢 <strong>Administração</strong> atrai quem busca versatilidade, um leque amplo de opções de mercado, e gosta de organizar, decidir e lidar com pessoas e negócios de forma geral.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        📈 <strong>Economia</strong> atrai quem tem gosto forte por números e teoria, quer entender o "porquê" por trás dos cenários, e topa uma formação mais matemática desde o início.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        ⚙️ <strong>Engenharia de Produção</strong> atrai quem gosta de exatas aplicadas ao mundo real, tem prazer em otimizar processos concretos, e topa uma rotina que mistura escritório com operação.
+      </div>
+      <p class="note" style="margin-top:16px;">Não precisa decidir sozinha. Leve os checklists, esta tabela e a ordem de prioridade da aba "Seus critérios" pra conversar com sua orientadora — a decisão se constrói na sessão, não aqui.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais que existem pra cada formação, explicados de um jeito simples. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no Brasil.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col">
+          <div class="vaga-col-head adm">🏢 Administração</div>
+          <div class="vaga-role"><strong>Assistente Administrativo</strong><span>Ajuda a organizar a rotina da empresa: documentos, agendas, compras e o dia a dia dos setores.</span></div>
+          <div class="vaga-role"><strong>Analista de Marketing</strong><span>Planeja e acompanha campanhas e redes sociais pra empresa vender mais e ser conhecida.</span></div>
+          <div class="vaga-role"><strong>Analista Financeiro</strong><span>Cuida das contas da empresa: o que entra, o que sai e como gastar de forma mais inteligente.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn adm" href="https://www.linkedin.com/jobs/search/?keywords=Administra%C3%A7%C3%A3o&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head eco">📈 Economia</div>
+          <div class="vaga-role"><strong>Analista Econômico</strong><span>Acompanha cenários de juros, câmbio e inflação pra ajudar bancos e empresas a tomar decisões.</span></div>
+          <div class="vaga-role"><strong>Trainee de Mercado Financeiro</strong><span>Programa de formação em banco ou corretora, passando por diferentes áreas de investimento.</span></div>
+          <div class="vaga-role"><strong>Analista de Pesquisa Econômica</strong><span>Produz dados e estudos sobre a economia, em institutos ou empresas de consultoria.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn eco" href="https://www.linkedin.com/jobs/search/?keywords=Economista&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head epr">⚙️ Engenharia de Produção</div>
+          <div class="vaga-role"><strong>Analista de PCP</strong><span>Planeja o que, quanto e quando a fábrica vai produzir, evitando falta ou excesso de produto.</span></div>
+          <div class="vaga-role"><strong>Engenheiro(a) de Processos</strong><span>Estuda e melhora como as coisas são feitas dentro da fábrica, tornando o trabalho mais eficiente.</span></div>
+          <div class="vaga-role"><strong>Analista de Logística / Supply Chain</strong><span>Cuida do trajeto dos produtos, desde o fornecedor até chegar ao cliente final.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn epr" href="https://www.linkedin.com/jobs/search/?keywords=Engenharia%20de%20Produ%C3%A7%C3%A3o&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SEUS CRITÉRIOS ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os três cursos</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estes são os critérios que você elencou e organizou como os mais importantes durante o processo, na ordem em que apareceram. A tabela descreve, de forma objetiva, como cada critério se apresenta em cada curso. Ela não aponta resposta certa nem indica um caminho: é material para você pensar e conversar com sua orientadora.</p>
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Muito presente</span>
+        <span><span class="dot y"></span>Presente em parte</span>
+        <span><span class="dot r"></span>Pouco presente</span>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table crit-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th class="h-adm">🏢 Administração</th>
+              <th class="h-eco">📈 Economia</th>
+              <th class="h-epr">⚙️ Engenharia de Produção</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ambiente fechado</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Quase todo o trabalho acontece dentro de escritórios ou espaços corporativos fechados.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Rotina majoritariamente de escritório, em bancos, consultorias e instituições de pesquisa.</td>
+              <td data-label="⚙️ Engenharia de Produção"><span class="dot y"></span>Combina escritório com visitas a chão de fábrica e áreas operacionais, nem sempre fechadas.</td>
+            </tr>
+            <tr>
+              <td>Lidar com finanças</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Finanças é uma das áreas centrais do curso e da atuação profissional.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>É o núcleo da formação: entender dinheiro, mercado e recursos é o objeto do curso inteiro.</td>
+              <td data-label="⚙️ Engenharia de Produção"><span class="dot y"></span>Aparece em orçamento de projetos e custos de produção, mas não é o foco principal.</td>
+            </tr>
+            <tr>
+              <td>Estabilidade financeira</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Mercado amplo e constante, com muitas vagas formais desde o início da carreira.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>Boa em setores como bancos e setor público, mas o início pode ser concorrido.</td>
+              <td data-label="⚙️ Engenharia de Produção"><span class="dot g"></span>Indústria costuma oferecer salários iniciais altos e vagas formais estáveis em polos industriais.</td>
+            </tr>
+            <tr>
+              <td>Resolver problemas</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Resolver problemas de gestão e tomada de decisão é parte constante da rotina.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Interpretar cenários e prever comportamentos é o tipo de problema que o curso treina o tempo todo.</td>
+              <td data-label="⚙️ Engenharia de Produção"><span class="dot g"></span>Otimizar processos e resolver gargalos de produção é a essência da profissão.</td>
+            </tr>
+            <tr>
+              <td>Vendas</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Área comercial e de vendas é um dos caminhos mais tradicionais do curso.</td>
+              <td data-label="📈 Economia"><span class="dot r"></span>Pouco presente; a formação é mais analítica do que comercial.</td>
+              <td data-label="⚙️ Engenharia de Produção"><span class="dot y"></span>Pode aparecer em funções que unem produção e relacionamento com clientes ou fornecedores, mas não é central.</td>
+            </tr>
+            <tr>
+              <td>Trabalhar com pessoas</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>Gestão de pessoas, liderança e negociação estão presentes na maior parte das funções.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>Presente em apresentações e relatórios para times e clientes, mas o trabalho é mais individual e analítico.</td>
+              <td data-label="⚙️ Engenharia de Produção"><span class="dot g"></span>Liderar equipes operacionais e times de produção é parte constante da rotina.</td>
+            </tr>
+            <tr>
+              <td>Viajar a trabalho</td>
+              <td data-label="🏢 Administração"><span class="dot y"></span>Possível em funções comerciais ou de auditoria, mas não é regra.</td>
+              <td data-label="📈 Economia"><span class="dot y"></span>Pode acontecer em consultorias e cargos que acompanham diferentes mercados ou unidades.</td>
+              <td data-label="⚙️ Engenharia de Produção"><span class="dot g"></span>Comum: acompanhar diferentes fábricas, fornecedores e unidades operacionais faz parte da rotina.</td>
+            </tr>
+            <tr>
+              <td>Escritórios</td>
+              <td data-label="🏢 Administração"><span class="dot g"></span>O escritório é o ambiente de trabalho predominante em quase todas as áreas.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Rotina tipicamente de escritório, em bancos, consultorias e instituições.</td>
+              <td data-label="⚙️ Engenharia de Produção"><span class="dot y"></span>Divide o tempo entre escritório (planejamento) e área operacional da fábrica.</td>
+            </tr>
+            <tr>
+              <td>Usar a tecnologia</td>
+              <td data-label="🏢 Administração"><span class="dot y"></span>Ferramentas de gestão, dados e automação estão cada vez mais presentes, mas variam por área.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Softwares estatísticos, programação (Python/R) e modelos de dados são parte forte da rotina atual.</td>
+              <td data-label="⚙️ Engenharia de Produção"><span class="dot g"></span>Automação industrial, sistemas de produção e análise de dados fazem parte do dia a dia da profissão.</td>
+            </tr>
+            <tr>
+              <td>Ter reconhecimento profissional</td>
+              <td data-label="🏢 Administração"><span class="dot y"></span>Reconhecimento cresce com especialização e resultado, mas o mercado é grande e concorrido.</td>
+              <td data-label="📈 Economia"><span class="dot g"></span>Boa reputação social e valorização em bancos, consultorias e setor público.</td>
+              <td data-label="⚙️ Engenharia de Produção"><span class="dot g"></span>Engenharia é uma profissão bem reconhecida no Brasil, com respaldo do CREA e boa reputação no mercado.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="margin-top:16px;">Leia coluna por coluna pensando no peso que cada critério tem para você. Os critérios estão na ordem que você definiu como prioridade, então os primeiros têm mais peso na sua decisão. Use esta leitura como ponto de partida da conversa com sua orientadora.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Ranking dos critérios (soma dos pontos)</h2></div>
+    <div class="sc-body">
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Verde = 2 pontos</span>
+        <span><span class="dot y"></span>Amarelo = 1 ponto</span>
+        <span><span class="dot r"></span>Vermelho = 0 ponto</span>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 🏢 Administração</span><span class="rank-score">17 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill adm" style="width:85%;">17</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥈 ⚙️ Engenharia de Produção</span><span class="rank-score">16 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill epr" style="width:80%;">16</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥉 📈 Economia</span><span class="rank-score">15 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill eco" style="width:75%;">15</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com.br</p>
+</footer>
+
+
+<script>
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    if (checked > 0) resEl.classList.add('show');
+    else resEl.classList.remove('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
