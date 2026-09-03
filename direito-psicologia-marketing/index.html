@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Carreiras — Direito, Psicologia e Marketing | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Direito — Bordô */
+      --dir:     #6B2F3C;
+      --dir-lt:  #F6EAED;
+      --dir-mid: #DCC0C8;
+
+      /* Psicologia — Verde Profundo */
+      --psi:     #3B503F;
+      --psi-lt:  #EAEFEB;
+      --psi-mid: #C2CFC4;
+
+      /* Marketing — Laranja Rumo */
+      --mkt:     #D9563F;
+      --mkt-lt:  #FFF0ED;
+      --mkt-mid: #FBC9BE;
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.dir.active { color: var(--dir); border-bottom-color: var(--dir); }
+    .tab-btn.psi.active { color: var(--psi); border-bottom-color: var(--psi); }
+    .tab-btn.mkt.active { color: var(--mkt); border-bottom-color: var(--mkt); }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .dir .sc-head { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .dir .sc-head h2 { color: var(--dir); }
+    .psi .sc-head { background: var(--psi-lt); border-color: var(--psi-mid); }
+    .psi .sc-head h2 { color: var(--psi); }
+    .mkt .sc-head { background: var(--mkt-lt); border-color: var(--mkt-mid); }
+    .mkt .sc-head h2 { color: var(--mkt); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .dir ul.sl li::before { color: var(--dir); }
+    .psi ul.sl li::before { color: var(--psi); }
+    .mkt ul.sl li::before { color: var(--mkt); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .dir .tag { background: var(--dir-lt); color: var(--dir); border-color: var(--dir-mid); }
+    .psi .tag { background: var(--psi-lt); color: var(--psi); border-color: var(--psi-mid); }
+    .mkt .tag { background: var(--mkt-lt); color: var(--mkt); border-color: var(--mkt-mid); }
+
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .dir .hbox { background: var(--dir-lt); border-color: var(--dir); }
+    .psi .hbox { background: var(--psi-lt); border-color: var(--psi); }
+    .mkt .hbox { background: var(--mkt-lt); border-color: var(--mkt); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .dir .accent { color: var(--dir); }
+    .psi .accent { color: var(--psi); }
+    .mkt .accent { color: var(--mkt); }
+
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .dir .tech-card { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .psi .tech-card { background: var(--psi-lt); border-color: var(--psi-mid); }
+    .mkt .tech-card { background: var(--mkt-lt); border-color: var(--mkt-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .dir .tech-card strong { color: var(--dir); }
+    .psi .tech-card strong { color: var(--psi); }
+    .mkt .tech-card strong { color: var(--mkt); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .dir .sal-card { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .psi .sal-card { background: var(--psi-lt); border-color: var(--psi-mid); }
+    .mkt .sal-card { background: var(--mkt-lt); border-color: var(--mkt-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .dir .sal-range { color: var(--dir); }
+    .psi .sal-range { color: var(--psi); }
+    .mkt .sal-range { color: var(--mkt); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-dir { background: var(--dir); }
+    .comp-table th.h-psi { background: var(--psi); }
+    .comp-table th.h-mkt { background: var(--mkt); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .dir .lcard:hover { border-color: var(--dir); }
+    .psi .lcard:hover { border-color: var(--psi); }
+    .mkt .lcard:hover { border-color: var(--mkt); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .dir .cl-item:hover, .dir .cl-item.checked { background: var(--dir-lt); border-color: var(--dir); }
+    .psi .cl-item:hover, .psi .cl-item.checked { background: var(--psi-lt); border-color: var(--psi); }
+    .mkt .cl-item:hover, .mkt .cl-item.checked { background: var(--mkt-lt); border-color: var(--mkt); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .dir .cl-item.checked .cl-box { background: var(--dir); border-color: var(--dir); }
+    .psi .cl-item.checked .cl-box { background: var(--psi); border-color: var(--psi); }
+    .mkt .cl-item.checked .cl-box { background: var(--mkt); border-color: var(--mkt); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .dir .cl-score span { color: var(--dir); font-weight: 800; }
+    .psi .cl-score span { color: var(--psi); font-weight: 800; }
+    .mkt .cl-score span { color: var(--mkt); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .dir .cl-result { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .psi .cl-result { background: var(--psi-lt); border-color: var(--psi-mid); }
+    .mkt .cl-result { background: var(--mkt-lt); border-color: var(--mkt-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .sub { font-size: 13px; color: var(--text); line-height: 1.6; }
+
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+    .rank-fill.dir { background: var(--dir); }
+    .rank-fill.psi { background: var(--psi); }
+    .rank-fill.mkt { background: var(--mkt); }
+
+    .vagas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-col-head.dir { background: var(--dir); }
+    .vaga-col-head.psi { background: var(--psi); }
+    .vaga-col-head.mkt { background: var(--mkt); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+    .vaga-btn.dir { background: var(--dir); }
+    .vaga-btn.psi { background: var(--psi); }
+    .vaga-btn.mkt { background: var(--mkt); }
+
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table tr:nth-child(even) td:first-child { background: var(--cmp); }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>Direito · Psicologia · Marketing
+    <span class="hd-accent">pesquisar é o começo da escolha</span>
+  </h1>
+  <p class="hd-sub">Este guia é pra você levar pra casa nesta semana de pesquisa. Três cursos que lidam com gente, mas de lugares bem diferentes: um trabalha com a regra, um com o que a pessoa sente, um com o que a pessoa deseja. Leia com calma, marque o que fizer sentido e traga tudo pra próxima sessão.</p>
+</header>
+
+<nav>
+  <button class="tab-btn dir active" data-c="dir" onclick="show('dir')">⚖️ Direito</button>
+  <button class="tab-btn psi" data-c="psi" onclick="show('psi')">🧠 Psicologia</button>
+  <button class="tab-btn mkt" data-c="mkt" onclick="show('mkt')">📈 Marketing</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">🔍 Comparar os três</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ DIREITO ═══════════════════════════════ -->
+<div class="panel dir active" id="p-dir">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Direito?</h2></div>
+    <div class="sc-body">
+      <p>Direito é o curso que ensina as regras do jogo da sociedade: o que a lei permite, o que ela proíbe, como se resolve um conflito e como se defende alguém. É um <strong>bacharelado de 5 anos</strong>, com estágio obrigatório e trabalho de conclusão. Não existe versão tecnóloga: quem quer atuar como advogado faz os 5 anos e ainda passa no Exame de Ordem da OAB.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Introdução ao Direito, Filosofia, Sociologia, Direito Constitucional, Civil e Penal. Muita leitura, muita teoria e um vocabulário novo pra aprender.</li>
+        <li><strong>3º–4º ano:</strong> Processo Civil, Processo Penal, Trabalho, Tributário, Administrativo e Empresarial. O curso fica mais técnico e mais prático.</li>
+        <li><strong>5º ano:</strong> Estágio no Núcleo de Prática Jurídica, TCC e, na maioria das vezes, preparação paralela pra OAB ou pra concurso.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Exame de Ordem:</strong> o diploma sozinho não deixa você advogar. Sem aprovação na OAB você pode trabalhar em área jurídica de empresa, prestar concurso de nível superior e atuar em compliance, mas não pode assinar processo nem se chamar advogado.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Advocacia em escritório:</strong> defender clientes em processos, dar pareceres, negociar acordos. Pode ser escritório grande, banca pequena ou trabalho autônomo.</li>
+        <li><strong>Departamento jurídico de empresa:</strong> cuidar de contratos, riscos e problemas legais por dentro, com carteira assinada e rotina mais previsível.</li>
+        <li><strong>Magistratura:</strong> ser juiz. Concurso muito disputado, que exige anos de estudo e prática jurídica prévia.</li>
+        <li><strong>Ministério Público:</strong> promotor ou procurador, atuando na defesa da sociedade, do consumidor, do meio ambiente e da infância.</li>
+        <li><strong>Defensoria Pública:</strong> defender quem não pode pagar advogado. Trabalho de altíssimo impacto social.</li>
+        <li><strong>Delegado de polícia:</strong> conduzir investigações criminais. Concurso próprio, para bacharéis em Direito.</li>
+        <li><strong>Concursos em geral:</strong> tribunais, receita, procuradorias e agências reguladoras. É a formação com mais portas no serviço público.</li>
+        <li><strong>Compliance e proteção de dados:</strong> garantir que a empresa siga as regras (LGPD, anticorrupção). Área nova, em alta e bem paga.</li>
+        <li><strong>Mediação e arbitragem:</strong> resolver conflito fora do tribunal, com acordo em vez de briga.</li>
+        <li><strong>Direito digital e propriedade intelectual:</strong> contratos de tecnologia, marcas, criadores de conteúdo e startups.</li>
+        <li><strong>Carreira acadêmica:</strong> mestrado, doutorado e docência.</li>
+        <li><strong>Diplomacia:</strong> o Direito é uma das formações mais comuns entre aprovados no Instituto Rio Branco.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Direito é, antes de tudo, um curso de texto: ler muito, entender exatamente o que está escrito e escrever com precisão.</p>
+      <div class="tags">
+        <span class="tag">Gosto por leitura densa</span>
+        <span class="tag">Boa escrita</span>
+        <span class="tag">Argumentação</span>
+        <span class="tag">Memória e organização</span>
+        <span class="tag">Raciocínio lógico</span>
+        <span class="tag">Atenção a detalhe</span>
+        <span class="tag">Oratória</span>
+        <span class="tag">Disciplina de estudo</span>
+        <span class="tag">Interesse por política e sociedade</span>
+        <span class="tag">Ética</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando alguém defende uma opinião que você acha errada, dá vontade de construir um contra-argumento organizado, com fundamento, ou você prefere sair da discussão? Se a primeira opção te atrai, o Direito conversa com você.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>É o curso com mais formados do país.</strong> São mais de mil faculdades de Direito no Brasil e centenas de milhares de advogados inscritos na OAB. Chegar a um bom lugar exige estágio bom, especialização e rede de contatos.</div>
+      <div class="cbox"><strong>O começo costuma ser mal pago.</strong> Estágio de escritório e primeiro emprego pagam pouco perto do tamanho da jornada. A curva de renda melhora depois, não no primeiro ano.</div>
+      <div class="cbox"><strong>Concurso é um projeto de anos.</strong> Magistratura e Ministério Público exigem 3 anos de prática jurídica depois da formatura, mais anos de estudo quase em tempo integral. É caminho longo e de renúncia.</div>
+      <div class="cbox"><strong>Volume de leitura pesado e constante.</strong> A lei muda, a jurisprudência muda, e você precisa acompanhar. Quem não gosta de ler cansa rápido.</div>
+      <div class="cbox"><strong>Prazo processual não perdoa.</strong> A rotina é regida por prazos rígidos. Isso gera pressão real e, em muitos escritórios, jornada longa.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">⚙️</div><strong>IA na petição</strong><p>Ferramentas já redigem minutas e resumem processos. O trabalho braçal de pesquisa encolheu, e a estratégia jurídica virou o diferencial.</p></div>
+        <div class="tech-card"><div class="tc-icon">💻</div><strong>Processo 100% digital</strong><p>Audiência por vídeo e processo eletrônico viraram padrão. Dá pra atuar em outro estado sem sair da sua cidade.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔐</div><strong>LGPD e dados</strong><p>A lei de proteção de dados criou uma área inteira de trabalho que não existia dez anos atrás.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Jurimetria</strong><p>Analisar milhares de decisões pra prever o resultado de um processo. Direito encontrando estatística.</p></div>
+        <div class="tech-card"><div class="tc-icon">🪙</div><strong>Novos negócios</strong><p>Contratos digitais, ativos virtuais e startups pedem advogados que entendam de tecnologia.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤝</div><strong>Acordo online</strong><p>Plataformas resolvem casos simples sem tribunal. Mediar virou habilidade valorizada.</p></div>
+      </div>
+      <p class="note">⚡ O que a máquina não faz: sustentar oralmente, negociar sob pressão, escolher a tese e responder pela decisão. É pra isso que o advogado está sendo formado hoje.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado enorme e muito concorrido:</strong> há vaga em todo lugar, mas a disputa por posição boa é forte desde o estágio.</li>
+        <li><strong>Serviço público é o grande atrativo de renda:</strong> as carreiras jurídicas de Estado estão entre as mais bem pagas do país, com estabilidade.</li>
+        <li><strong>Escritórios grandes concentram os melhores salários privados:</strong> tributário, societário e contencioso estratégico pagam acima da média.</li>
+        <li><strong>Jurídico de empresa cresce:</strong> muita gente prefere o departamento interno pela previsibilidade de horário e de salário.</li>
+        <li><strong>Áreas novas contratam:</strong> compliance, proteção de dados, ESG e direito digital abriram vagas que não existiam.</li>
+        <li><strong>Advocacia autônoma é possível cedo:</strong> dá pra abrir a própria banca logo depois da OAB, com liberdade grande e renda instável no começo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em Direito, a especialização não é opcional. É ela que define quanto você ganha e onde você trabalha.</p>
+      <div class="tags">
+        <span class="tag">⭐ Tributário</span>
+        <span class="tag">⭐ Societário e M&amp;A</span>
+        <span class="tag">⭐ Compliance e LGPD</span>
+        <span class="tag">⭐ Trabalhista empresarial</span>
+        <span class="tag">Penal</span>
+        <span class="tag">Civil e Família</span>
+        <span class="tag">Direito Digital</span>
+        <span class="tag">Propriedade Intelectual</span>
+        <span class="tag">Ambiental e ESG</span>
+        <span class="tag">Direito Médico</span>
+        <span class="tag">Consumidor</span>
+        <span class="tag">Internacional</span>
+        <span class="tag">Preparação para concursos</span>
+        <span class="tag">Mediação e Arbitragem</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhores faixas salariais no Brasil em 2024–2025. Tributário e societário concentram as remunerações mais altas na advocacia privada.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha quem se forma em Direito?</h2></div>
+    <div class="sc-body">
+      <p>A faixa é uma das mais largas de todas as profissões: depende demais da área, do porte do escritório e de ser ou não carreira pública.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,5k–4,5k</div><div class="sal-note">Advogado júnior em escritório ou analista jurídico em empresa. Estágio paga bem menos.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 7k–15k</div><div class="sal-note">Advogado com área definida, alguns anos de experiência e pós na área.</div></div>
+        <div class="sal-card"><div class="sal-stage">Liderança / Topo</div><div class="sal-range">R$ 20k–40k+</div><div class="sal-note">Sócio de escritório, diretor jurídico e carreiras públicas como juiz, promotor e procurador.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> a advocacia autônoma não tem salário, tem faturamento. Pode ser um mês de R$ 2 mil e outro de R$ 20 mil. A carreira pública é o oposto: valor alto, fixo e previsível, com anos de estudo como preço de entrada.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.oab.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>OAB — Ordem dos Advogados do Brasil</strong><span>O conselho da profissão: Exame de Ordem, áreas de atuação e regras do ofício</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.conjur.com.br" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Consultor Jurídico (ConJur)</strong><span>Notícia jurídica diária: dá pra sentir como é o dia a dia do mundo do Direito</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.jota.info" class="lcard" target="_blank"><span class="lc-icon">⚖️</span><div class="lc-body"><strong>JOTA</strong><span>Análise das decisões dos tribunais e do impacto delas nos negócios e na política</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais reportados. Pesquise "advogado", "analista jurídico" e por escritório</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.stf.jus.br" class="lcard" target="_blank"><span class="lc-icon">🇧🇷</span><div class="lc-body"><strong>STF — Supremo Tribunal Federal</strong><span>Assista a uma sessão de julgamento ao vivo e veja a argumentação funcionando na prática</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Direito é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-dir">
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Leio bastante e não me assusto com texto longo e difícil.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Escrevo bem e gosto de organizar uma ideia em argumento, com começo, meio e conclusão.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Tenho interesse por política, notícia e pelo funcionamento das instituições do país.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Detalhe importa pra mim. Percebo quando uma palavra muda o sentido de uma frase.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Falar em público me dá frio na barriga, mas não me paralisa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Consigo estudar sozinho, com disciplina, por períodos longos e sem ninguém cobrando.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Aceito que a construção de carreira aqui é lenta e que o retorno grande vem depois.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Trabalhar sob prazo rígido me organiza mais do que me trava.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Me incomoda ver injustiça e eu gostaria de ter ferramenta concreta pra fazer algo a respeito.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Consigo defender uma posição mesmo quando ela não é a mais popular na roda.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-dir">0 de 10</span></div>
+      <div class="cl-result" id="res-dir"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ PSICOLOGIA ═══════════════════════════════ -->
+<div class="panel psi" id="p-psi">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Psicologia?</h2></div>
+    <div class="sc-body">
+      <p>Psicologia estuda como as pessoas pensam, sentem, se relacionam e adoecem. É um <strong>curso de 5 anos</strong> que forma bacharel e psicólogo, com estágios supervisionados obrigatórios nos dois últimos anos. Ao se formar, o registro no Conselho Regional de Psicologia é direto: não existe um exame de ordem como o do Direito.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Bases da psicologia, biologia, neuroanatomia, estatística, métodos de pesquisa e as grandes teorias (psicanálise, comportamental, humanista, Gestalt, cognitiva).</li>
+        <li><strong>3º ano:</strong> Psicopatologia, avaliação psicológica, psicologia social, do desenvolvimento, organizacional e escolar.</li>
+        <li><strong>4º–5º ano:</strong> Estágios supervisionados na clínica-escola e em campo, além do TCC. É quando você atende de verdade, com supervisão.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a profissão é regulada pelo CFP e pelos CRPs regionais. Há código de ética rígido, sigilo obrigatório e regras claras sobre o que pode e o que não pode ser feito, inclusive na internet.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Clínica:</strong> atender em consultório, presencial ou online. É o caminho mais conhecido e o que dá mais autonomia sobre a própria agenda.</li>
+        <li><strong>Psicologia organizacional:</strong> trabalhar em empresa com seleção, desenvolvimento, cultura e saúde mental dos funcionários.</li>
+        <li><strong>Psicologia escolar:</strong> atuar na escola com aprendizagem, convivência, inclusão e orientação profissional.</li>
+        <li><strong>Psicologia hospitalar:</strong> acompanhar pacientes e famílias em internação, UTI, oncologia e cuidados paliativos.</li>
+        <li><strong>Psicologia jurídica:</strong> perícia, avaliação em varas de família e trabalho no sistema de justiça.</li>
+        <li><strong>Psicologia do esporte:</strong> preparo mental de atletas e equipes.</li>
+        <li><strong>Neuropsicologia:</strong> avaliar memória, atenção e funções cognitivas. Área técnica, em alta e bem remunerada.</li>
+        <li><strong>Saúde pública:</strong> atuar no SUS, em CAPS, UBS e programas de saúde mental comunitária.</li>
+        <li><strong>Orientação profissional:</strong> ajudar adolescentes e adultos a escolherem ou reescolherem caminho, como acontece aqui.</li>
+        <li><strong>Assistência social e terceiro setor:</strong> ONGs, projetos sociais e acolhimento de populações vulneráveis.</li>
+        <li><strong>Pesquisa e docência:</strong> mestrado, doutorado e sala de aula na universidade.</li>
+        <li><strong>Psicologia do consumo e UX:</strong> entender comportamento de usuário e de consumidor. É o ponto onde a Psicologia encosta no Marketing.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Psicologia pede capacidade de escutar sem julgar e de ficar perto do sofrimento de alguém sem se desmontar junto.</p>
+      <div class="tags">
+        <span class="tag">Escuta</span>
+        <span class="tag">Empatia</span>
+        <span class="tag">Paciência</span>
+        <span class="tag">Curiosidade sobre pessoas</span>
+        <span class="tag">Estabilidade emocional</span>
+        <span class="tag">Ética e discrição</span>
+        <span class="tag">Estudo constante</span>
+        <span class="tag">Observação</span>
+        <span class="tag">Tolerância à dúvida</span>
+        <span class="tag">Autoconhecimento</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando um amigo desabafa, você sente vontade de resolver o problema dele rápido ou consegue ficar ali escutando, mesmo sem ter solução? A Psicologia trabalha muito mais com a segunda coisa do que com a primeira.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O consultório demora a encher.</strong> Formar não traz paciente. Construir clientela leva de dois a quatro anos, e nesse meio-tempo a maioria concilia clínica com emprego fixo.</div>
+      <div class="cbox"><strong>Formação continuada custa caro e não acaba.</strong> Pós-graduação, supervisão e a própria terapia pessoal são parte do trabalho e saem do seu bolso, todo mês.</div>
+      <div class="cbox"><strong>Desgaste emocional é real.</strong> Escutar sofrimento o dia inteiro cansa. Sem supervisão e terapia própria, o risco de esgotamento é alto.</div>
+      <div class="cbox"><strong>Salário de vínculo costuma ser baixo.</strong> Emprego CLT em clínica, escola ou instituição paga bem menos do que a clínica própria. Quem depende só de vínculo ganha pouco.</div>
+      <div class="cbox"><strong>Tem estatística e método científico no caminho.</strong> Muita gente entra achando que é só teoria sobre gente e leva um susto com pesquisa e números.</div>
+      <div class="cbox"><strong>Você não vê o resultado rápido.</strong> Processo terapêutico é lento. Quem precisa de retorno imediato pra se sentir competente sofre nessa profissão.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">💻</div><strong>Atendimento online</strong><p>Autorizado pelo CFP e já consolidado. Dá pra atender paciente de qualquer cidade, ou do exterior, de onde você estiver.</p></div>
+        <div class="tech-card"><div class="tc-icon">📱</div><strong>Apps de saúde mental</strong><p>Plataformas de terapia e bem-estar contratam psicólogos e criaram um mercado novo de trabalho.</p></div>
+        <div class="tech-card"><div class="tc-icon">🧪</div><strong>Testes informatizados</strong><p>Avaliação psicológica e neuropsicológica com correção digital, mais rápida e mais precisa.</p></div>
+        <div class="tech-card"><div class="tc-icon">🧠</div><strong>Neurociência</strong><p>Exames de imagem e pesquisa do cérebro dialogam cada vez mais com a clínica.</p></div>
+        <div class="tech-card"><div class="tc-icon">🕶️</div><strong>Realidade virtual</strong><p>Já usada no tratamento de fobias e ansiedade, com exposição controlada.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏢</div><strong>Saúde mental corporativa</strong><p>Empresas passaram a investir em programas de bem-estar, o que abriu vagas fora do consultório.</p></div>
+      </div>
+      <p class="note">⚡ Nenhuma tecnologia substitui o vínculo entre duas pessoas numa sala. O que mudou foi onde essa sala fica e quanta gente você consegue alcançar.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Demanda cresceu muito:</strong> a procura por terapia aumentou de forma consistente nos últimos anos, especialmente entre jovens.</li>
+        <li><strong>Muitos formados também:</strong> o Brasil é um dos países com mais psicólogos do mundo. O nome, sozinho, não garante paciente.</li>
+        <li><strong>A clínica online mudou a geografia:</strong> quem mora em cidade pequena pode atender gente de qualquer lugar.</li>
+        <li><strong>Empresa contrata cada vez mais:</strong> psicologia organizacional e saúde mental corporativa são as frentes que mais crescem em vínculo formal.</li>
+        <li><strong>Neuropsicologia tem fila:</strong> a avaliação neuropsicológica tem alta demanda e poucos profissionais formados.</li>
+        <li><strong>Concurso público existe:</strong> prefeituras, tribunais, forças armadas e o SUS abrem vagas com estabilidade.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em Psicologia, escolher uma abordagem e um campo é o que transforma o diploma em profissão.</p>
+      <div class="tags">
+        <span class="tag">⭐ Neuropsicologia</span>
+        <span class="tag">⭐ Terapia Cognitivo-Comportamental</span>
+        <span class="tag">⭐ Psicologia Organizacional</span>
+        <span class="tag">⭐ Psicologia Infantil</span>
+        <span class="tag">Gestalt-terapia</span>
+        <span class="tag">Psicanálise</span>
+        <span class="tag">Casal e Família</span>
+        <span class="tag">Psicologia Hospitalar</span>
+        <span class="tag">Psicologia Jurídica</span>
+        <span class="tag">Psicologia do Esporte</span>
+        <span class="tag">Orientação Profissional</span>
+        <span class="tag">Psicologia Escolar</span>
+        <span class="tag">Análise do Comportamento</span>
+        <span class="tag">Consumo e UX</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhores faixas no Brasil em 2024–2025. Neuropsicologia e psicologia organizacional concentram as remunerações mais altas fora da clínica particular já consolidada.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um psicólogo?</h2></div>
+    <div class="sc-body">
+      <p>Aqui a diferença entre trabalhar por vínculo e trabalhar por conta própria é enorme, e é ela que explica quase toda a variação.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,5k–4k</div><div class="sal-note">Vínculo CLT em clínica, escola ou empresa. Consultório próprio no começo rende menos e de forma irregular.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 5k–12k</div><div class="sal-note">Consultório em funcionamento, com agenda parcialmente cheia, ou cargo pleno em organizacional e hospitalar.</div></div>
+        <div class="sal-card"><div class="sal-stage">Consolidado / Topo</div><div class="sal-range">R$ 15k–30k+</div><div class="sal-note">Agenda cheia com sessão bem posicionada, neuropsicologia, supervisão e formação de outros profissionais.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> o psicólogo de consultório não recebe salário, recebe por sessão. Quem tem 25 sessões por semana ganha muito mais do que quem tem 8, e chegar às 25 é um trabalho de construção que leva anos.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://site.cfp.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CFP — Conselho Federal de Psicologia</strong><span>O que o psicólogo pode e não pode fazer, resoluções e áreas reconhecidas</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.scielo.br" class="lcard" target="_blank"><span class="lc-icon">📚</span><div class="lc-body"><strong>SciELO</strong><span>Artigos científicos brasileiros de psicologia, de graça. Dá pra ver como é a pesquisa da área</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Pesquise "psicólogo organizacional", "psicólogo clínico" e "neuropsicólogo"</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.gov.br/saude/pt-br" class="lcard" target="_blank"><span class="lc-icon">🏥</span><div class="lc-body"><strong>Ministério da Saúde</strong><span>Como funciona a rede pública de saúde mental e onde o psicólogo entra nela</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Psic%C3%B3logo&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔎</span><div class="lc-body"><strong>Vagas de psicólogo hoje</strong><span>Veja quais empresas e instituições estão contratando neste momento</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Psicologia é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-psi">
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Consigo escutar alguém por muito tempo sem sentir necessidade de dar conselho.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Fico genuinamente curioso sobre por que as pessoas fazem o que fazem.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Aguento conviver com dúvida. Nem tudo precisa ter resposta fechada pra mim.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Guardo segredo. As pessoas confiam coisas em mim e eu não repasso.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Consigo ficar perto do sofrimento de alguém sem levar aquilo pra casa todos os dias.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Topo estudar pelo resto da vida, porque nessa profissão a formação nunca termina.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Me atrai a ideia de montar minha própria agenda e responder por ela.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Aceito que o resultado do meu trabalho aparece devagar, ao longo de meses.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Não fujo de estatística e de método científico, que fazem parte do curso.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Estou disposto a fazer terapia e supervisão como parte do meu próprio trabalho.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-psi">0 de 10</span></div>
+      <div class="cl-result" id="res-psi"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ MARKETING ═══════════════════════════════ -->
+<div class="panel mkt" id="p-mkt">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Marketing?</h2></div>
+    <div class="sc-body">
+      <p>Marketing estuda como uma marca conquista e mantém clientes: entender o desejo das pessoas, posicionar um produto, comunicar e medir resultado. No Brasil existe em <strong>dois formatos</strong>: o tecnólogo em Marketing, de 2 a 2,5 anos, bem prático e direto ao ponto, e o bacharelado (em Marketing ou em Publicidade e Propaganda), de 4 anos, com base teórica mais ampla. Os dois são reconhecidos pelo MEC e os dois entram no mercado.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>Início:</strong> Fundamentos de marketing, comportamento do consumidor, comunicação, economia e estatística básica.</li>
+        <li><strong>Meio:</strong> Marketing digital, branding, mídias sociais, tráfego pago, pesquisa de mercado, redação publicitária e análise de dados.</li>
+        <li><strong>Final:</strong> Planejamento estratégico, gestão de produto, métricas, projeto integrador ou TCC e estágio. Boa parte da turma já está trabalhando antes de terminar.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Sem conselho obrigatório:</strong> não existe ordem nem registro profissional pra atuar em marketing. Isso deixa a entrada mais fácil e, ao mesmo tempo, faz o portfólio pesar mais do que o diploma na hora da contratação.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Marketing digital:</strong> cuidar de redes sociais, conteúdo, e-mail e presença online de uma marca.</li>
+        <li><strong>Tráfego pago:</strong> gerenciar anúncios no Google, no Instagram e no TikTok, com verba real e meta de retorno.</li>
+        <li><strong>Branding:</strong> construir identidade, posicionamento e a personalidade de uma marca.</li>
+        <li><strong>Gestão de produto:</strong> decidir o que a empresa lança, para quem e por qual preço.</li>
+        <li><strong>Pesquisa de mercado:</strong> descobrir o que o consumidor pensa, quer e compra. Ponto de contato direto com a Psicologia.</li>
+        <li><strong>Growth e CRM:</strong> fazer a base de clientes crescer e voltar a comprar, com muito teste e muito número.</li>
+        <li><strong>Analytics de marketing:</strong> medir o que deu certo e o que não deu. Área técnica e valorizada.</li>
+        <li><strong>Agência:</strong> atender várias marcas ao mesmo tempo, no atendimento, na criação ou no planejamento.</li>
+        <li><strong>Marketing de influência:</strong> gerir criadores de conteúdo e parcerias com marcas.</li>
+        <li><strong>E-commerce:</strong> cuidar de loja online, marketplace e da jornada de compra.</li>
+        <li><strong>Trade marketing:</strong> como o produto aparece e vende dentro do ponto de venda.</li>
+        <li><strong>Freelancer e negócio próprio:</strong> prestar serviço pra várias empresas ou montar a própria agência, caminho comum e possível cedo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Marketing pede uma mistura que parece contraditória: criatividade pra ter a ideia e frieza com números pra provar que ela funcionou.</p>
+      <div class="tags">
+        <span class="tag">Criatividade</span>
+        <span class="tag">Curiosidade cultural</span>
+        <span class="tag">Boa escrita</span>
+        <span class="tag">Leitura de dados</span>
+        <span class="tag">Comunicação</span>
+        <span class="tag">Adaptação rápida</span>
+        <span class="tag">Senso estético</span>
+        <span class="tag">Interesse por comportamento</span>
+        <span class="tag">Autonomia pra testar</span>
+        <span class="tag">Tolerância a erro</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você vê uma propaganda ou um vídeo que viralizou, você só consome ou fica tentando entender por que aquilo funcionou? Essa segunda cabeça é a cabeça de quem trabalha com marketing.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>Tudo muda muito rápido.</strong> Plataforma, algoritmo e formato mudam de um ano pro outro. O que você aprendeu na faculdade envelhece antes da formatura, e estudar por fora é obrigação.</div>
+      <div class="cbox"><strong>Você é cobrado por número.</strong> Campanha bonita que não vende é campanha ruim. A pressão por resultado mensurável é constante.</div>
+      <div class="cbox"><strong>Entrada fácil, concorrência grande.</strong> Como não exige registro, entra gente de todas as formações. O portfólio é o que separa você da multidão.</div>
+      <div class="cbox"><strong>Agência costuma ter ritmo pesado.</strong> Muitos clientes ao mesmo tempo, prazo curto e picos de trabalho. O lado da empresa costuma ser mais calmo.</div>
+      <div class="cbox"><strong>Começo mal pago.</strong> As primeiras vagas pagam pouco. A renda sobe rápido depois, pra quem se especializa em algo que dá resultado visível.</div>
+      <div class="cbox"><strong>Tem matemática, sim.</strong> Muita gente entra achando que é só criatividade e encontra planilha, métrica e cálculo de retorno todo dia.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA generativa</strong><p>Texto, imagem e vídeo saem em minutos. O valor migrou de produzir peça para ter a ideia e julgar o que presta.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Tudo virou mensurável</strong><p>Dá pra saber exatamente quanto cada real de anúncio trouxe de volta. Isso mudou o nível de cobrança da área.</p></div>
+        <div class="tech-card"><div class="tc-icon">🎯</div><strong>Anúncio automatizado</strong><p>As plataformas decidem sozinhas quem vê o quê. O trabalho virou estratégia, criativo e leitura de resultado.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔒</div><strong>Privacidade e LGPD</strong><p>O rastreamento encolheu. Marcas precisam de dados próprios e de relação direta com o cliente.</p></div>
+        <div class="tech-card"><div class="tc-icon">🎥</div><strong>Vídeo curto</strong><p>Reels, TikTok e Shorts dominam a atenção. Saber roteirizar vídeo curto virou habilidade básica.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌍</div><strong>Trabalho remoto</strong><p>É uma das áreas que mais contrata pra trabalho remoto, inclusive pra empresas de fora do Brasil.</p></div>
+      </div>
+      <p class="note">⚡ A IA derrubou o valor de quem só executa e aumentou o valor de quem entende gente, define estratégia e sabe dizer se a ideia é boa.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Contrata em quase todo setor:</strong> toda empresa que vende algo precisa de marketing, do pequeno negócio à multinacional.</li>
+        <li><strong>Uma das áreas com mais vaga remota:</strong> dá pra morar numa cidade e trabalhar pra empresa de outra, ou de outro país.</li>
+        <li><strong>Especialista em performance é disputado:</strong> quem sabe rodar anúncio e provar retorno tem procura constante.</li>
+        <li><strong>Freelancer é caminho real e cedo:</strong> muita gente atende clientes próprios já no segundo ano de faculdade.</li>
+        <li><strong>Tech e e-commerce pagam mais:</strong> startups, marketplaces e empresas de tecnologia lideram as faixas salariais.</li>
+        <li><strong>Portfólio vale mais que diploma:</strong> resultado que você pode mostrar pesa mais do que o nome da faculdade.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Marketing é largo demais pra ficar genérico. Escolher uma frente é o que faz o salário andar.</p>
+      <div class="tags">
+        <span class="tag">⭐ Performance e Tráfego Pago</span>
+        <span class="tag">⭐ Growth</span>
+        <span class="tag">⭐ Analytics e Dados</span>
+        <span class="tag">⭐ Gestão de Produto</span>
+        <span class="tag">Branding</span>
+        <span class="tag">Conteúdo e SEO</span>
+        <span class="tag">E-commerce</span>
+        <span class="tag">CRM e Automação</span>
+        <span class="tag">Marketing de Influência</span>
+        <span class="tag">Pesquisa e Insights</span>
+        <span class="tag">Trade Marketing</span>
+        <span class="tag">Marketing B2B</span>
+        <span class="tag">UX e Comportamento do Consumidor</span>
+        <span class="tag">MBA em Marketing</span>
+      </div>
+      <p class="note">⭐ Frentes com maior demanda e melhores salários no Brasil em 2024–2025. Performance, growth e dados concentram as faixas mais altas pra quem se especializa cedo.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha quem trabalha com marketing?</h2></div>
+    <div class="sc-body">
+      <p>Começo modesto e curva de crescimento rápida pra quem entrega resultado que aparece em número.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2k–3,5k</div><div class="sal-note">Assistente ou analista júnior em agência ou empresa. Agência costuma pagar menos que empresa.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 5k–12k</div><div class="sal-note">Analista pleno ou sênior de performance, growth, produto ou dados, com resultado comprovado.</div></div>
+        <div class="sal-card"><div class="sal-stage">Liderança / Topo</div><div class="sal-range">R$ 15k–35k+</div><div class="sal-note">Coordenação, gerência, head de marketing e CMO. Tech e e-commerce puxam o topo da faixa.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> nesta área o tempo de carreira importa menos do que o resultado que você consegue provar. Um especialista de 3 anos que mostra números pode ganhar mais do que um generalista de 10.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://skillshop.exceedlms.com/student/catalog" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>Google Skillshop</strong><span>Cursos gratuitos e certificados de Google Ads e Analytics. Dá pra testar a área antes de decidir</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.meioemensagem.com.br" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Meio &amp; Mensagem</strong><span>O jornal do mercado de comunicação e marketing no Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://rockcontent.com/br/blog/" class="lcard" target="_blank"><span class="lc-icon">✍️</span><div class="lc-body"><strong>Blog da Rock Content</strong><span>Conteúdo introdutório de marketing digital, em português e de graça</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Pesquise "analista de marketing", "analista de performance" e "growth"</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/learning/" class="lcard" target="_blank"><span class="lc-icon">📚</span><div class="lc-body"><strong>LinkedIn Learning</strong><span>Cursos de marketing digital, dados e branding com certificado</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Marketing é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-mkt">
+        <div class="cl-item" onclick="toggle(this,'cl-mkt')"><div class="cl-box"></div><div class="cl-text">Presto atenção em propaganda, embalagem e conteúdo e fico tentando entender por que aquilo funciona.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mkt')"><div class="cl-box"></div><div class="cl-text">Gosto de ter ideia nova e não travo quando é preciso mudar tudo no meio do caminho.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mkt')"><div class="cl-box"></div><div class="cl-text">Não fujo de número. Consigo olhar um resultado e admitir que minha ideia não deu certo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mkt')"><div class="cl-box"></div><div class="cl-text">Escrevo bem e consigo explicar uma coisa complicada de um jeito simples.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mkt')"><div class="cl-box"></div><div class="cl-text">Acompanho tendência, cultura pop e internet com interesse genuíno.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mkt')"><div class="cl-box"></div><div class="cl-text">Aguento trabalhar com prazo curto e várias coisas ao mesmo tempo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mkt')"><div class="cl-box"></div><div class="cl-text">Topo estudar por fora pra sempre, porque a área muda todo ano.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mkt')"><div class="cl-box"></div><div class="cl-text">Me atrai a ideia de montar um portfólio e ser avaliado pelo que eu fiz, não pelo meu diploma.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mkt')"><div class="cl-box"></div><div class="cl-text">Ser cobrado por meta me estimula mais do que me paralisa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-mkt')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade sobre o que faz as pessoas escolherem uma coisa e não outra.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-mkt">0 de 10</span></div>
+      <div class="cl-result" id="res-mkt"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAÇÃO ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔍</span><h2>Os três lado a lado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Os três lidam com pessoas, mas de lugares muito diferentes. Esta tabela ajuda a enxergar onde estão as diferenças que importam pra você.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão</th>
+              <th class="h-dir">⚖️ Direito</th>
+              <th class="h-psi">🧠 Psicologia</th>
+              <th class="h-mkt">📈 Marketing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Foco principal</td><td>Aplicar a regra e defender posições</td><td>Entender e cuidar do que a pessoa vive</td><td>Fazer marcas conquistarem clientes</td></tr>
+            <tr><td>Duração</td><td>5 anos (bacharelado)</td><td>5 anos (bacharelado)</td><td>2 a 2,5 anos (tecnólogo) ou 4 anos</td></tr>
+            <tr><td>Registro obrigatório</td><td>OAB para advogar</td><td>CRP, direto ao se formar</td><td>Nenhum</td></tr>
+            <tr><td>Tipo de perfil</td><td>Analítico e argumentativo</td><td>Escuta, paciência e estudo</td><td>Criativo com cabeça de número</td></tr>
+            <tr><td>Onde trabalha</td><td>Escritório, empresa, setor público</td><td>Consultório, clínica, escola, empresa, SUS</td><td>Agência, empresa, remoto, conta própria</td></tr>
+            <tr><td>Autonomia de agenda</td><td>Alta na advocacia autônoma, baixa em escritório</td><td>Alta no consultório próprio</td><td>Média, sobe muito no freelancer</td></tr>
+            <tr><td>Ritmo de mudança</td><td>Lento e acumulativo</td><td>Gradual, com formação contínua</td><td>Muito rápido, muda todo ano</td></tr>
+            <tr><td>Salário inicial</td><td>R$ 2,5k–4,5k</td><td>R$ 2,5k–4k</td><td>R$ 2k–3,5k</td></tr>
+            <tr><td>Estabilidade</td><td>Alta na carreira pública, média na privada</td><td>Média, cresce conforme a agenda enche</td><td>Média, com muita vaga disponível</td></tr>
+            <tr><td>Trabalho remoto</td><td>Parcial, com o processo digital</td><td>Sim, atendimento online autorizado</td><td>Muito comum, inclusive fora do Brasil</td></tr>
+            <tr><td>Pergunta central</td><td>"O que é justo e como eu sustento isso?"</td><td>"O que está acontecendo com essa pessoa?"</td><td>"Por que as pessoas escolhem isso?"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Para pensar antes da sessão</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        ⚖️ <strong>Direito</strong> é o caminho de quem gosta de texto, argumento e regra, e topa uma construção longa em troca de portas muito variadas depois, do escritório ao concurso público.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🧠 <strong>Psicologia</strong> é o caminho de quem quer entender o que se passa dentro das pessoas e aceita construir agenda e clientela aos poucos, com muita formação pelo caminho.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        📈 <strong>Marketing</strong> é o caminho de quem quer entrar rápido no mercado, gosta de novidade e não se incomoda de reaprender a profissão a cada poucos anos.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🔎 <strong>Um detalhe que costuma passar batido:</strong> esses três se cruzam mais do que parece. Comportamento do consumidor é psicologia aplicada ao marketing. Direito digital lida com publicidade e com dados. Psicologia organizacional trabalha dentro da mesma empresa que o time de marketing. Vale pesquisar essas pontes nesta semana.
+      </div>
+      <p class="note" style="margin-top:16px;">Não precisa decidir sozinho. Leve os checklists, esta tabela e a ordem de prioridade da aba "Seus critérios" pra conversar com sua orientadora. A decisão se constrói na sessão, não aqui.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais que existem pra cada formação, explicados de um jeito simples. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no Brasil.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col">
+          <div class="vaga-col-head dir">⚖️ Direito</div>
+          <div class="vaga-role"><strong>Advogado(a) Júnior</strong><span>Cuida de processos e contratos de clientes, escreve peças e acompanha prazos no escritório.</span></div>
+          <div class="vaga-role"><strong>Analista Jurídico</strong><span>Trabalha dentro da empresa revisando contratos e evitando que ela tenha problemas legais.</span></div>
+          <div class="vaga-role"><strong>Analista de Compliance</strong><span>Garante que a empresa siga as leis e as regras internas, inclusive de proteção de dados.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn dir" href="https://www.linkedin.com/jobs/search/?keywords=Advogado&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head psi">🧠 Psicologia</div>
+          <div class="vaga-role"><strong>Psicólogo(a) Clínico</strong><span>Atende pessoas em terapia, presencial ou online, em consultório ou clínica.</span></div>
+          <div class="vaga-role"><strong>Psicólogo(a) Organizacional</strong><span>Cuida de seleção, desenvolvimento e saúde mental dos funcionários de uma empresa.</span></div>
+          <div class="vaga-role"><strong>Neuropsicólogo(a)</strong><span>Aplica testes pra avaliar memória, atenção e aprendizagem, e escreve os laudos.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn psi" href="https://www.linkedin.com/jobs/search/?keywords=Psic%C3%B3logo&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head mkt">📈 Marketing</div>
+          <div class="vaga-role"><strong>Analista de Marketing</strong><span>Planeja e acompanha campanhas e conteúdo pra marca vender mais e ficar conhecida.</span></div>
+          <div class="vaga-role"><strong>Analista de Performance</strong><span>Cuida dos anúncios no Google e nas redes e mede quanto cada real investido trouxe de volta.</span></div>
+          <div class="vaga-role"><strong>Social Media</strong><span>Cuida das redes sociais da marca: cria posts, responde seguidores e pensa o conteúdo.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn mkt" href="https://www.linkedin.com/jobs/search/?keywords=Analista%20de%20Marketing&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SEUS CRITÉRIOS ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os três cursos</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estes são os critérios que você elencou como os mais importantes, na ordem em que você mesmo os organizou. A tabela descreve, de forma objetiva, como cada um se apresenta em cada curso. Ela não aponta resposta certa nem indica um caminho: é material pra você pensar e conversar com sua orientadora.</p>
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Muito presente</span>
+        <span><span class="dot y"></span>Presente em parte</span>
+        <span><span class="dot r"></span>Pouco presente</span>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table crit-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th class="h-dir">⚖️ Direito</th>
+              <th class="h-psi">🧠 Psicologia</th>
+              <th class="h-mkt">📈 Marketing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Autonomia</td>
+              <td data-label="⚖️ Direito"><span class="dot y"></span>Alta na advocacia autônoma, depois da OAB. Baixa em escritório grande e em carreira pública, onde a estrutura define o trabalho.</td>
+              <td data-label="🧠 Psicologia"><span class="dot g"></span>No consultório próprio, você define agenda, preço e jeito de trabalhar, dentro das regras do conselho.</td>
+              <td data-label="📈 Marketing"><span class="dot y"></span>Média em empresa e agência, onde a meta vem de cima. Alta no freelancer e em negócio próprio.</td>
+            </tr>
+            <tr>
+              <td>Novidades</td>
+              <td data-label="⚖️ Direito"><span class="dot y"></span>A lei e a jurisprudência mudam, mas a estrutura da profissão é estável e o ritmo de mudança é lento.</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>Cada paciente é um caso novo e há pesquisa nova sempre. As bases teóricas, porém, mudam devagar.</td>
+              <td data-label="📈 Marketing"><span class="dot g"></span>Plataforma, formato e ferramenta mudam todo ano. É a área das três em que menos coisa se repete.</td>
+            </tr>
+            <tr>
+              <td>Aprendizado frequente</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Estudo constante faz parte do ofício: legislação nova, decisões novas e, pra muitos, anos de preparação pra concurso.</td>
+              <td data-label="🧠 Psicologia"><span class="dot g"></span>Formação continuada, supervisão e leitura são parte da prática, não extra. A formação não termina.</td>
+              <td data-label="📈 Marketing"><span class="dot g"></span>Aprender por fora é obrigação, porque o que funcionava no ano passado pode não funcionar hoje.</td>
+            </tr>
+            <tr>
+              <td>Horário flexível</td>
+              <td data-label="⚖️ Direito"><span class="dot y"></span>Prazo processual e audiência mandam na agenda. A flexibilidade existe na banca própria, dentro desses limites.</td>
+              <td data-label="🧠 Psicologia"><span class="dot g"></span>No consultório, você define os horários que abre e quantas sessões faz por dia. Vínculo institucional tem horário fixo.</td>
+              <td data-label="📈 Marketing"><span class="dot g"></span>Área com muito trabalho remoto e híbrido. O prazo de entrega organiza o dia mais do que o relógio.</td>
+            </tr>
+            <tr>
+              <td>Rotina variada</td>
+              <td data-label="⚖️ Direito"><span class="dot y"></span>Varia por caso e por cliente, mas as tarefas se repetem: ler, pesquisar, escrever peça, cumprir prazo.</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>Cada sessão é diferente, mas o formato é constante: mesma sala, mesmo horário, mesma duração.</td>
+              <td data-label="📈 Marketing"><span class="dot g"></span>Campanhas, clientes, formatos e canais diferentes o tempo todo, com projetos que começam e terminam.</td>
+            </tr>
+            <tr>
+              <td>Possibilidade de viajar</td>
+              <td data-label="⚖️ Direito"><span class="dot r"></span>Pouca. O processo digital reduziu deslocamento. Viagem aparece em audiência fora e em contencioso nacional.</td>
+              <td data-label="🧠 Psicologia"><span class="dot r"></span>Pouca. A clínica pede presença regular e vínculo constante. Viagem aparece em congresso e formação.</td>
+              <td data-label="📈 Marketing"><span class="dot y"></span>Aparece em eventos, gravações, feiras e visitas a cliente, e em empresas com times em outras cidades.</td>
+            </tr>
+            <tr>
+              <td>Possibilidade de mudar de ambiente</td>
+              <td data-label="⚖️ Direito"><span class="dot y"></span>Dá pra migrar entre escritório, empresa e setor público, mas cada mudança costuma pedir nova especialização ou novo concurso.</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>Dá pra transitar entre clínica, escola, empresa e hospital, sempre com formação específica pra cada campo.</td>
+              <td data-label="📈 Marketing"><span class="dot g"></span>Trocar de empresa, de setor e de tipo de trabalho é comum e rápido, inclusive entre presencial e remoto.</td>
+            </tr>
+            <tr>
+              <td>Boa remuneração</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Teto alto nas carreiras públicas e nos escritórios grandes, com começo modesto e caminho longo até lá.</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>Renda média por vínculo. A faixa alta existe na clínica consolidada e na neuropsicologia, depois de anos de construção.</td>
+              <td data-label="📈 Marketing"><span class="dot y"></span>Começo baixo e subida rápida pra quem se especializa em performance, growth ou dados. Teto menor que o topo do Direito.</td>
+            </tr>
+            <tr>
+              <td>Equilíbrio entre trabalho e vida</td>
+              <td data-label="⚖️ Direito"><span class="dot r"></span>Prazos rígidos e jornadas longas são comuns em escritório e também na preparação para concurso.</td>
+              <td data-label="🧠 Psicologia"><span class="dot g"></span>Você escolhe quantas sessões faz por semana. O desgaste aqui é mais emocional do que de carga horária.</td>
+              <td data-label="📈 Marketing"><span class="dot y"></span>Depende muito do lugar: agência tem picos pesados, empresa costuma ter rotina mais regular.</td>
+            </tr>
+            <tr>
+              <td>Satisfação com o que faço</td>
+              <td data-label="⚖️ Direito"><span class="dot y"></span>Vem de resolver conflito, defender alguém e ver a tese vencer. Convive com burocracia e com processos que se arrastam.</td>
+              <td data-label="🧠 Psicologia"><span class="dot g"></span>Vem de acompanhar a mudança de uma pessoa ao longo do tempo, ainda que o resultado apareça devagar.</td>
+              <td data-label="📈 Marketing"><span class="dot y"></span>Vem de ver a ideia no ar e o número responder. Convive com campanha que não emplaca e com cobrança por meta.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Cada célula descreve como o critério aparece na prática, não se ele é bom ou ruim. Você é quem sabe o peso de cada um na sua vida.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Como os três se posicionam nos seus critérios</h2></div>
+    <div class="sc-body">
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Verde = 2 pontos</span>
+        <span><span class="dot y"></span>Amarelo = 1 ponto</span>
+        <span><span class="dot r"></span>Vermelho = 0 ponto</span>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 📈 Marketing</span><span class="rank-score">15 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill mkt" style="width:75%;">15</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥈 🧠 Psicologia</span><span class="rank-score">14 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill psi" style="width:70%;">14</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥉 ⚖️ Direito</span><span class="rank-score">10 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill dir" style="width:50%;">10</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com</p>
+</footer>
+
+
+<script>
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    if (checked > 0) resEl.classList.add('show');
+    else resEl.classList.remove('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
