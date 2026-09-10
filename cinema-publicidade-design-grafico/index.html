@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Carreiras — Cinema, Publicidade e Design Gráfico | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Montserrat = fonte oficial Rumo. Caveat = substituta cursiva da Balneario (não disponível em web font). -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* ── Paleta oficial Instituto Rumo ── */
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Cinema — Bordô Rosado */
+      --cin:     #6B2F3C;
+      --cin-lt:  #F6EAED;
+      --cin-mid: #DCC0C8;
+
+      /* Publicidade e Propaganda — Laranja Rumo */
+      --pub:     #D9563F;
+      --pub-lt:  #FFF0ED;
+      --pub-mid: #FBC9BE;
+
+      /* Design Gráfico — Verde Profundo */
+      --dsg:     #3B503F;
+      --dsg-lt:  #EAEFEB;
+      --dsg-mid: #C2CFC4;
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── Header ─── */
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    /* ─── Nav ─── */
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.cin.active { color: var(--cin); border-bottom-color: var(--cin); }
+    .tab-btn.pub.active { color: var(--pub); border-bottom-color: var(--pub); }
+    .tab-btn.dsg.active { color: var(--dsg); border-bottom-color: var(--dsg); }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    /* ─── Panels ─── */
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    /* ─── Section cards ─── */
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .cin .sc-head { background: var(--cin-lt); border-color: var(--cin-mid); }
+    .cin .sc-head h2 { color: var(--cin); }
+    .pub .sc-head { background: var(--pub-lt); border-color: var(--pub-mid); }
+    .pub .sc-head h2 { color: var(--pub); }
+    .dsg .sc-head { background: var(--dsg-lt); border-color: var(--dsg-mid); }
+    .dsg .sc-head h2 { color: var(--dsg); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    /* ─── Lists ─── */
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .cin ul.sl li::before { color: var(--cin); }
+    .pub ul.sl li::before { color: var(--pub); }
+    .dsg ul.sl li::before { color: var(--dsg); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    /* ─── Tags ─── */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .cin .tag { background: var(--cin-lt); color: var(--cin); border-color: var(--cin-mid); }
+    .pub .tag { background: var(--pub-lt); color: var(--pub); border-color: var(--pub-mid); }
+    .dsg .tag { background: var(--dsg-lt); color: var(--dsg); border-color: var(--dsg-mid); }
+
+    /* ─── Boxes ─── */
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .cin .hbox { background: var(--cin-lt); border-color: var(--cin); }
+    .pub .hbox { background: var(--pub-lt); border-color: var(--pub); }
+    .dsg .hbox { background: var(--dsg-lt); border-color: var(--dsg); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .cin .accent { color: var(--cin); }
+    .pub .accent { color: var(--pub); }
+    .dsg .accent { color: var(--dsg); }
+
+    /* ─── Tech grid ─── */
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .cin .tech-card { background: var(--cin-lt); border-color: var(--cin-mid); }
+    .pub .tech-card { background: var(--pub-lt); border-color: var(--pub-mid); }
+    .dsg .tech-card { background: var(--dsg-lt); border-color: var(--dsg-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .cin .tech-card strong { color: var(--cin); }
+    .pub .tech-card strong { color: var(--pub); }
+    .dsg .tech-card strong { color: var(--dsg); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    /* ─── Salary grid ─── */
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .cin .sal-card { background: var(--cin-lt); border-color: var(--cin-mid); }
+    .pub .sal-card { background: var(--pub-lt); border-color: var(--pub-mid); }
+    .dsg .sal-card { background: var(--dsg-lt); border-color: var(--dsg-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .cin .sal-range { color: var(--cin); }
+    .pub .sal-range { color: var(--pub); }
+    .dsg .sal-range { color: var(--dsg); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── Comparison table ─── */
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-cin { background: var(--cin); }
+    .comp-table th.h-pub { background: var(--pub); }
+    .comp-table th.h-dsg { background: var(--dsg); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    /* ─── Link cards ─── */
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .cin .lcard:hover { border-color: var(--cin); }
+    .pub .lcard:hover { border-color: var(--pub); }
+    .dsg .lcard:hover { border-color: var(--dsg); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    /* ─── Checklist ─── */
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .cin .cl-item:hover, .cin .cl-item.checked { background: var(--cin-lt); border-color: var(--cin); }
+    .pub .cl-item:hover, .pub .cl-item.checked { background: var(--pub-lt); border-color: var(--pub); }
+    .dsg .cl-item:hover, .dsg .cl-item.checked { background: var(--dsg-lt); border-color: var(--dsg); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .cin .cl-item.checked .cl-box { background: var(--cin); border-color: var(--cin); }
+    .pub .cl-item.checked .cl-box { background: var(--pub); border-color: var(--pub); }
+    .dsg .cl-item.checked .cl-box { background: var(--dsg); border-color: var(--dsg); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .cin .cl-score span { color: var(--cin); font-weight: 800; }
+    .pub .cl-score span { color: var(--pub); font-weight: 800; }
+    .dsg .cl-score span { color: var(--dsg); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .cin .cl-result { background: var(--cin-lt); border-color: var(--cin-mid); }
+    .pub .cl-result { background: var(--pub-lt); border-color: var(--pub-mid); }
+    .dsg .cl-result { background: var(--dsg-lt); border-color: var(--dsg-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .sub { font-size: 13px; color: var(--text); line-height: 1.6; }
+
+    /* ─── Bolinhas de presença (aba critérios) ─── */
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    /* ─── Ranking dos critérios ─── */
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+    .rank-fill.cin { background: var(--cin); }
+    .rank-fill.pub { background: var(--pub); }
+    .rank-fill.dsg { background: var(--dsg); }
+
+    /* ─── Vagas reais ─── */
+    .vagas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-col-head.cin { background: var(--cin); }
+    .vaga-col-head.pub { background: var(--pub); }
+    .vaga-col-head.dsg { background: var(--dsg); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+    .vaga-btn.cin { background: var(--cin); }
+    .vaga-btn.pub { background: var(--pub); }
+    .vaga-btn.dsg { background: var(--dsg); }
+
+    /* ─── Footer ─── */
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table tr:nth-child(even) td:first-child { background: var(--cmp); }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>Cinema · Publicidade e Propaganda · Design Gráfico
+    <span class="hd-accent">pesquisar antes de decidir</span>
+  </h1>
+  <p class="hd-sub">Três cursos que vivem do mesmo material: imagem, ideia e história. O que muda é o lugar de onde você cria e para quem. Este guia é pra você pesquisar na semana de pausa e voltar com perguntas melhores pra sessão.</p>
+</header>
+
+<nav>
+  <button class="tab-btn cin active" data-c="cin" onclick="show('cin')">🎬 Cinema</button>
+  <button class="tab-btn pub" data-c="pub" onclick="show('pub')">📣 Publicidade e Propaganda</button>
+  <button class="tab-btn dsg" data-c="dsg" onclick="show('dsg')">🎨 Design Gráfico</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">⚖️ Comparar os três</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ CINEMA ═══════════════════════════════ -->
+<div class="panel cin active" id="p-cin">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Cinema?</h2></div>
+    <div class="sc-body">
+      <p>Cinema (ou Cinema e Audiovisual) é o curso que ensina a contar histórias em imagem e som, do roteiro à montagem final. É um <strong>bacharelado de 4 anos</strong>, geralmente dentro de faculdades de comunicação ou de artes. Aparece também com nomes vizinhos: Produção Audiovisual, Rádio, TV e Internet, Cinema de Animação. Na prática, o curso é uma oficina: você faz filme desde o primeiro ano, em equipe, com equipamento da faculdade.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> História do cinema, teoria da imagem, roteiro, fotografia, som, direção e os primeiros curtas em grupo. Muita leitura e muita filmagem ao mesmo tempo.</li>
+        <li><strong>2º–3º ano:</strong> Direção, produção, montagem, direção de arte, documentário, animação. Aqui você começa a descobrir em qual função do set você se encaixa.</li>
+        <li><strong>4º ano:</strong> Projeto de conclusão, que costuma ser um filme de verdade: você escreve, capta recurso, produz, dirige ou monta. Estágio em produtora acontece em paralelo.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🎥 <strong>Cinema não é um trabalho só.</strong> Dentro do audiovisual existem dezenas de profissões diferentes: quem escreve, quem dirige, quem produz, quem filma, quem monta, quem cuida do som, quem faz a arte. Muita gente entra querendo dirigir e descobre que ama montar ou produzir. Pesquisar as funções separadas vale mais do que pesquisar "cinema".
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Direção:</strong> conduzir a história e a equipe, decidir como cada cena vai existir na tela.</li>
+        <li><strong>Roteiro:</strong> escrever filme, série, documentário, publicidade e conteúdo de plataforma.</li>
+        <li><strong>Produção:</strong> viabilizar o filme, que é resolver dinheiro, equipe, locação, cronograma e autorização. É a função que mais viaja e mais decide.</li>
+        <li><strong>Direção de fotografia:</strong> desenhar a luz e o enquadramento, definir a cara visual da obra.</li>
+        <li><strong>Montagem e edição:</strong> escolher o que fica e em que ordem. É onde o filme realmente nasce.</li>
+        <li><strong>Direção de arte:</strong> cenário, figurino, objetos, cor. Constrói o mundo em que a história acontece.</li>
+        <li><strong>Som e trilha:</strong> captação, desenho de som e mixagem, metade da emoção de qualquer cena.</li>
+        <li><strong>Motion e pós-produção:</strong> animação, efeitos, cor. Área com muita vaga e boa remuneração.</li>
+        <li><strong>Audiovisual de marca:</strong> produzir vídeo para empresas, campanhas e redes. É onde está a maior parte do mercado pago.</li>
+        <li><strong>Streaming e TV:</strong> desenvolvimento de projetos, assistência de direção, produção de séries e reality.</li>
+        <li><strong>Documentário e jornalismo em vídeo:</strong> reportagem longa, séries documentais, conteúdo de causa.</li>
+        <li><strong>Festivais, curadoria e distribuição:</strong> programar, selecionar e fazer os filmes chegarem ao público.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Cinema é trabalho coletivo, longo e cheio de imprevisto. Talento visual sozinho não sustenta.</p>
+      <div class="tags">
+        <span class="tag">Repertório de histórias</span>
+        <span class="tag">Olhar visual</span>
+        <span class="tag">Trabalho em equipe</span>
+        <span class="tag">Aguentar refazer</span>
+        <span class="tag">Organização</span>
+        <span class="tag">Resistência física</span>
+        <span class="tag">Escuta</span>
+        <span class="tag">Curiosidade sobre gente</span>
+        <span class="tag">Jogo de cintura</span>
+        <span class="tag">Paciência com processo longo</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você assiste a algo de que gosta, você repara em como aquilo foi feito, no corte, na luz, na trilha? Ou você só se entrega à história? As duas respostas são legítimas, mas a primeira é o sinal de quem tem prazer no ofício, não só no resultado.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>Trabalho por projeto, renda irregular.</strong> A maior parte do audiovisual é freelancer ou PJ, contratada por obra. Você pode ter dois meses cheios e um mês vazio. Aprender a lidar com essa gangorra faz parte da carreira.</div>
+      <div class="cbox"><strong>Set é presencial e puxado.</strong> Durante uma filmagem, a jornada é longa, em pé, com horário definido pela produção, muitas vezes de madrugada ou fora da cidade. Não existe versão híbrida de gravação.</div>
+      <div class="cbox"><strong>Você começa carregando cabo.</strong> Quase ninguém sai da faculdade dirigindo. O caminho normal é assistente, e a subida depende de rede de contatos e de gente que confia em você.</div>
+      <div class="cbox"><strong>Depende de dinheiro público e de edital.</strong> Boa parte do cinema brasileiro é financiada por editais e leis de incentivo. Isso oscila com política e com governo, e é um risco real da área.</div>
+      <div class="cbox"><strong>O que dá dinheiro nem sempre é o que dá orgulho.</strong> Muita gente paga as contas com vídeo institucional e publicidade e faz o filme autoral no intervalo. Saber disso antes evita frustração depois.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">📱</div><strong>Vertical e formato curto</strong><p>Reels, TikTok e YouTube criaram um mercado inteiro de audiovisual curto, com contratação constante e menos glamour.</p></div>
+        <div class="tech-card"><div class="tc-icon">🎞️</div><strong>Streaming</strong><p>Netflix, Globoplay, Prime e Max encomendam séries e documentários no Brasil, o que aumentou a demanda por equipe formada.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA na pós-produção</strong><p>Corte automático, legenda, dublagem, correção de cor e limpeza de som ficaram mais rápidos. Sobra tempo para a decisão criativa.</p></div>
+        <div class="tech-card"><div class="tc-icon">🖥️</div><strong>Produção virtual</strong><p>Cenários em LED e 3D substituem parte das locações. Aproxima cinema de games e de animação.</p></div>
+        <div class="tech-card"><div class="tc-icon">📸</div><strong>Equipamento acessível</strong><p>Dá pra fazer filme bom com câmera pequena e celular. A barreira de entrada caiu, e a concorrência subiu junto.</p></div>
+        <div class="tech-card"><div class="tc-icon">⚖️</div><strong>Direito de imagem e IA</strong><p>Uso de voz, rosto e roteiro gerados por IA virou pauta de contrato e de sindicato. É discussão viva na profissão.</p></div>
+      </div>
+      <p class="note">⚡ A tecnologia barateou a execução, mas não substituiu a pergunta que abre qualquer filme: o que vale a pena ser contado, e por quê.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Rio e São Paulo concentram o mercado:</strong> produtoras, emissoras e streaming estão nesses dois polos. Fora deles, o caminho costuma ser vídeo institucional e conteúdo para marca.</li>
+        <li><strong>A maior parte das vagas não é "cinema de sala":</strong> é audiovisual corporativo, publicidade, conteúdo para redes e educação. O filme de festival é uma fatia pequena.</li>
+        <li><strong>Pós-produção emprega muito:</strong> editor, motion designer e finalizador têm demanda constante e é a porta de entrada mais rápida.</li>
+        <li><strong>Rede de contato pesa mais que currículo:</strong> quase toda contratação de set vem de indicação de quem já trabalhou com você.</li>
+        <li><strong>Editais movimentam a produção independente:</strong> Ancine, secretarias estaduais e leis de incentivo bancam boa parte dos projetos autorais.</li>
+        <li><strong>Portfólio é a moeda:</strong> ninguém pergunta sua nota. Perguntam o que você já fez e pedem pra ver.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especializações possíveis</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Roteiro:</strong> cursos livres e laboratórios de série e longa, área que dá pra fazer de qualquer cidade.</li>
+        <li><strong>Montagem e finalização:</strong> Premiere, DaVinci, After Effects. Especialização técnica com mercado imediato.</li>
+        <li><strong>Motion design e VFX:</strong> a ponte entre cinema e design, uma das áreas mais bem pagas do audiovisual.</li>
+        <li><strong>Produção executiva:</strong> gestão de orçamento, captação e edital. Quem faz isso decide muito e viaja bastante.</li>
+        <li><strong>Documentário:</strong> pesquisa, entrevista e apuração, perto do jornalismo.</li>
+        <li><strong>Animação:</strong> 2D, 3D e stop motion, com mercado em publicidade, games e conteúdo infantil.</li>
+        <li><strong>Som:</strong> captação e desenho de som, área com pouca gente boa e demanda constante.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha no Brasil?</h2></div>
+    <div class="sc-body">
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Começo</div><div class="sal-range">R$ 1,8k–3,5k</div><div class="sal-note">Assistente de produção, assistente de edição, estágio em produtora. Muitas vezes por diária.</div></div>
+        <div class="sal-card"><div class="sal-stage">Intermediário</div><div class="sal-range">R$ 4k–8k</div><div class="sal-note">Editor, produtor, operador de câmera, motion designer com portfólio consolidado.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior</div><div class="sal-range">R$ 9k–25k+</div><div class="sal-note">Diretor, diretor de fotografia, produtor executivo, VFX sênior. Varia muito com o projeto.</div></div>
+      </div>
+      <p class="note">Números de faixas praticadas em 2025 no Brasil, reunidos de Glassdoor, Vagas.com e tabelas de sindicatos do audiovisual. No set, boa parte do pagamento é por diária: uma diária de assistente fica em torno de R$ 250 a R$ 600, e a conta do mês depende de quantas você emenda.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.gov.br/ancine/pt-br" class="lcard" target="_blank"><span class="lc-icon">🎬</span><div class="lc-body"><strong>Ancine</strong><span>A agência que regula e financia o audiovisual brasileiro: dados, editais e como o setor funciona</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Pesquise por "editor de vídeo", "produtor audiovisual" e veja o que profissionais relatam</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.youtube.com/@estudiosquid" class="lcard" target="_blank"><span class="lc-icon">📺</span><div class="lc-body"><strong>Canais de bastidor</strong><span>Vídeos que mostram como um set funciona de verdade, função por função</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Produ%C3%A7%C3%A3o%20Audiovisual&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔍</span><div class="lc-body"><strong>LinkedIn — Vagas de audiovisual</strong><span>Veja o que as vagas reais pedem hoje: ferramenta, experiência e cidade</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.escoladecinemadarcyribeiro.rj.gov.br" class="lcard" target="_blank"><span class="lc-icon">🏫</span><div class="lc-body"><strong>Escolas técnicas de cinema</strong><span>Cursos livres e técnicos para testar a área antes ou junto da graduação</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Cinema é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-cin">
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Eu reparo em como as coisas foram feitas: corte, luz, trilha, enquadramento. Não consigo só assistir.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Gosto de trabalhar em equipe grande, mesmo quando isso significa que a ideia final não é só minha.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Aguento processo longo. Um projeto que leva meses até ficar pronto me anima em vez de me cansar.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Tenho história pra contar e presto atenção nas histórias das pessoas em volta.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Não me assusta um trabalho que exige estar presente, em pé, em horário estranho, fora de casa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Topo começar como assistente e subir devagar, aprendendo dentro do set.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Consigo lidar com renda que varia de mês pra mês, pelo menos no começo da carreira.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Já filmo, edito ou escrevo alguma coisa por conta própria, mesmo sem ninguém pedir.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Aceito receber crítica no meu trabalho e refazer, várias vezes, sem levar pro pessoal.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cin')"><div class="cl-box"></div><div class="cl-text">Me interessa o mundo inteiro do audiovisual, não só dirigir: montar, produzir, fotografar, escrever.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-cin">0 de 10</span></div>
+      <div class="cl-result" id="res-cin"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ PUBLICIDADE ═══════════════════════════════ -->
+<div class="panel pub" id="p-pub">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Publicidade e Propaganda?</h2></div>
+    <div class="sc-body">
+      <p>Publicidade e Propaganda é o curso que ensina a fazer uma marca ser conhecida, desejada e escolhida. É um <strong>bacharelado de 4 anos</strong> dentro da área de Comunicação Social, e mistura três coisas o tempo todo: entender gente, criar ideia e medir resultado. Em muitas faculdades ele divide as primeiras disciplinas com Jornalismo e Relações Públicas.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Teoria da comunicação, comportamento do consumidor, redação publicitária, fotografia, design básico e pesquisa. Base larga.</li>
+        <li><strong>2º–3º ano:</strong> Criação, planejamento, mídia, branding, marketing digital, produção gráfica e audiovisual. Começam os trabalhos com cliente real.</li>
+        <li><strong>4º ano:</strong> Campanha integrada de conclusão, estágio em agência ou empresa e montagem de portfólio. O portfólio importa mais que a nota.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        📣 <strong>Dentro do curso existem quatro mundos bem diferentes:</strong> criação (quem tem a ideia), planejamento (quem entende o público e desenha a estratégia), mídia (quem decide onde e quanto investir) e atendimento (quem conversa com o cliente e conduz o projeto). Vale pesquisar os quatro separadamente, porque a rotina de cada um não se parece.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Criação (redação e direção de arte):</strong> ter e desenhar a ideia da campanha, do filme ao post.</li>
+        <li><strong>Planejamento:</strong> pesquisar o público e definir o que a marca vai dizer e por quê.</li>
+        <li><strong>Mídia e tráfego pago:</strong> decidir onde o dinheiro do anúncio é investido e acompanhar o retorno.</li>
+        <li><strong>Social media e conteúdo:</strong> cuidar da presença da marca nas redes, do calendário à conversa com o público.</li>
+        <li><strong>Branding:</strong> construir a identidade e o discurso da marca, o que ela é antes de qualquer anúncio.</li>
+        <li><strong>Comunicação corporativa e relações públicas:</strong> cuidar da imagem da empresa com imprensa, público interno e comunidade.</li>
+        <li><strong>Marketing dentro da empresa:</strong> trabalhar do lado do cliente, com rotina mais estável que a de agência.</li>
+        <li><strong>Produção publicitária:</strong> viabilizar filme, foto e evento da campanha, função que viaja e negocia muito.</li>
+        <li><strong>Influência e creator economy:</strong> gerir criadores, parcerias e campanhas com influenciadores.</li>
+        <li><strong>Análise de dados de marketing:</strong> ler métrica e transformar em decisão de campanha.</li>
+        <li><strong>Estúdio próprio ou freelancer:</strong> montar um negócio de conteúdo e comunicação com poucos sócios.</li>
+        <li><strong>Comunicação de causa e terceiro setor:</strong> campanha para ONG, cultura e projeto social.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Publicidade pede criatividade com prazo. Ideia solta não vira campanha.</p>
+      <div class="tags">
+        <span class="tag">Repertório cultural</span>
+        <span class="tag">Escrita afiada</span>
+        <span class="tag">Curiosidade sobre gente</span>
+        <span class="tag">Trabalho sob prazo</span>
+        <span class="tag">Apresentar ideia</span>
+        <span class="tag">Leitura de dados</span>
+        <span class="tag">Olhar visual</span>
+        <span class="tag">Abertura a crítica</span>
+        <span class="tag">Adaptação rápida</span>
+        <span class="tag">Trabalho em dupla</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> você consegue defender uma ideia sua em voz alta, ouvir que ela não serve e voltar no dia seguinte com outra? Publicidade é isso quase todo dia. Quem se apega demais à primeira ideia sofre.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>Agência tem ritmo pesado.</strong> Prazo curto, cliente mudando de ideia, entrega em cima da hora. É estimulante pra muita gente e desgastante pra outra tanta. Do lado da empresa, a rotina costuma ser mais previsível.</div>
+      <div class="cbox"><strong>Salário inicial baixo pra concorrência que tem.</strong> As vagas de entrada em agência pagam pouco e disputam com muita gente formada. A subida existe, mas depende de portfólio e de troca de emprego.</div>
+      <div class="cbox"><strong>Sua ideia nem sempre vai ao ar.</strong> Cliente aprova, muda, corta. Boa parte do que você cria morre no caminho, e isso não é sinal de fracasso seu.</div>
+      <div class="cbox"><strong>A área muda o tempo todo.</strong> Ferramenta, plataforma e formato mudam a cada dois anos. Quem para de estudar fica desatualizado rápido.</div>
+      <div class="cbox"><strong>Métrica virou parte do trabalho criativo.</strong> Hoje se cobra resultado de campanha em número. Quem tem alergia total a planilha vai encontrar planilha mesmo assim.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA generativa</strong><p>Texto, imagem e vídeo de rascunho saem em minutos. O valor migrou da execução para a ideia e para o julgamento do que presta.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Campanha medida em tempo real</strong><p>Dá pra ver o que funciona no mesmo dia e corrigir. Ler dado virou requisito, não diferencial.</p></div>
+        <div class="tech-card"><div class="tc-icon">📱</div><strong>Creator economy</strong><p>Marca investe em criador de conteúdo, e surgiram cargos inteiros pra cuidar dessa relação.</p></div>
+        <div class="tech-card"><div class="tc-icon">🛍️</div><strong>Social commerce</strong><p>A venda acontece dentro da rede social. Conteúdo e loja viraram a mesma tela.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏠</div><strong>Agência remota e híbrida</strong><p>Times distribuídos viraram normais, e abriu vaga em agência de outra cidade sem mudar de casa.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔒</div><strong>Privacidade e LGPD</strong><p>Regras sobre dado pessoal mudaram a segmentação de anúncio e criaram uma nova especialidade.</p></div>
+      </div>
+      <p class="note">⚡ A IA faz a peça. Ela não decide o que a marca deveria dizer, para quem, e o que seria constrangedor dizer. Essa parte continua sendo trabalho de gente.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado grande e espalhado:</strong> agência, empresa, veículo, startup, ONG e negócio próprio. Toda organização precisa se comunicar.</li>
+        <li><strong>Digital concentra as vagas:</strong> social media, tráfego pago, conteúdo e performance são a maior parte das oportunidades hoje.</li>
+        <li><strong>São Paulo é o polo, mas não é obrigatório:</strong> muita vaga digital é remota ou híbrida, e o Rio tem mercado forte.</li>
+        <li><strong>Do lado do cliente paga melhor:</strong> marketing dentro de empresa costuma ter salário e rotina melhores que agência, com menos glamour.</li>
+        <li><strong>Portfólio abre porta:</strong> trabalho de faculdade, projeto pessoal e freela contam desde o primeiro ano.</li>
+        <li><strong>Freelance é comum e cedo:</strong> muita gente já atende cliente pequeno durante a graduação, o que acelera a entrada.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especializações possíveis</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Direção de criação:</strong> caminho de quem vem da redação ou da arte e passa a conduzir o time criativo.</li>
+        <li><strong>Branding e estratégia de marca:</strong> pós e cursos livres, área que decide muito e apresenta muito.</li>
+        <li><strong>Performance e tráfego pago:</strong> Google e Meta Ads, especialização técnica com contratação rápida.</li>
+        <li><strong>Marketing de conteúdo e SEO:</strong> une escrita e dado, muito compatível com trabalho remoto.</li>
+        <li><strong>Comunicação corporativa e relações públicas:</strong> imprensa, reputação e comunicação interna.</li>
+        <li><strong>UX writing e conteúdo digital:</strong> escrever dentro de produto e aplicativo, área bem paga em tech.</li>
+        <li><strong>Produção publicitária:</strong> quem viabiliza filme e ensaio, com muita viagem e negociação.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha no Brasil?</h2></div>
+    <div class="sc-body">
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Começo</div><div class="sal-range">R$ 2k–3,5k</div><div class="sal-note">Assistente de criação, social media júnior, assistente de mídia. Estágio fica em torno de R$ 1,2k a R$ 2k.</div></div>
+        <div class="sal-card"><div class="sal-stage">Intermediário</div><div class="sal-range">R$ 4,5k–9k</div><div class="sal-note">Redator, diretor de arte, analista de performance, coordenador de conteúdo.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior</div><div class="sal-range">R$ 12k–30k+</div><div class="sal-note">Direção de criação, gerência de marketing, head de mídia. Empresa grande e tech pagam mais.</div></div>
+      </div>
+      <p class="note">Faixas praticadas em 2025 no Brasil, com base em Glassdoor, Catho e pesquisas salariais de mercado de comunicação. Trabalho freelancer pode superar essas faixas em meses bons e ficar abaixo em meses fracos.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.meioemensagem.com.br" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Meio &amp; Mensagem</strong><span>O principal veículo do mercado de comunicação: campanhas, agências e movimentações</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Pesquise "redator publicitário", "social media", "analista de mídia" e compare empresas</span></div><span class="lc-arr">→</span></a>
+        <a href="https://skillshop.exceedlms.com/student/catalog" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>Google Skillshop</strong><span>Cursos e certificações gratuitas de anúncio e análise, dá pra fazer ainda no ensino médio</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.behance.net" class="lcard" target="_blank"><span class="lc-icon">🎨</span><div class="lc-body"><strong>Behance</strong><span>Portfólios reais de publicitários e criativos: veja o que se espera de quem entra na área</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Publicidade&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔍</span><div class="lc-body"><strong>LinkedIn — Vagas de publicidade</strong><span>Leia cinco anúncios de vaga inteiros e anote o que se repete nos requisitos</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Publicidade é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-pub">
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Presto atenção em propaganda, em campanha e no jeito que as marcas falam nas redes.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Tenho facilidade pra escrever e pra explicar uma ideia de um jeito que gruda.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Consigo criar com prazo apertado, mesmo quando não estou inspirada.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Gosto de entender por que as pessoas escolhem uma coisa e não outra.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Não travo na hora de apresentar e defender um trabalho na frente dos outros.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Aceito que a decisão final é do cliente, mesmo quando eu discordo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Não tenho pavor de número: olhar métrica de post e de anúncio não me dá sono.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Gosto de acompanhar cultura, música, internet e o que está acontecendo agora.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Trabalhar em dupla, dividindo a autoria da ideia, me parece bom em vez de incômodo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-pub')"><div class="cl-box"></div><div class="cl-text">Me interessa comunicação como um todo: marca, imprensa, relação com público, não só anúncio.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-pub">0 de 10</span></div>
+      <div class="cl-result" id="res-pub"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ DESIGN GRÁFICO ═══════════════════════════════ -->
+<div class="panel dsg" id="p-dsg">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Design Gráfico?</h2></div>
+    <div class="sc-body">
+      <p>Design Gráfico é o curso que ensina a resolver problema de comunicação com forma, cor, tipo e imagem. Não é "fazer bonito": é fazer alguém entender, escolher ou usar alguma coisa. Existe como <strong>bacharelado de 4 anos</strong> (Design ou Design Gráfico, muitas vezes com habilitação escolhida no meio do curso) e como <strong>tecnólogo de 2 a 3 anos</strong>, mais rápido e bem aceito no mercado.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Desenho, teoria da cor, tipografia, história do design, composição e software. Muita entrega prática desde o começo.</li>
+        <li><strong>2º–3º ano:</strong> Identidade visual, editorial, embalagem, design digital, interface, ilustração e produção gráfica.</li>
+        <li><strong>4º ano:</strong> Projeto de conclusão, geralmente um sistema visual completo, mais estágio e portfólio. O portfólio é o que abre porta.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🎨 <strong>Duas famílias dentro da mesma área:</strong> o design de marca e impresso (identidade, embalagem, editorial) e o design digital de produto (interface de app e site, o famoso UI/UX). O segundo é hoje o que mais contrata e o que melhor paga, e o curso te dá base para os dois.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Identidade visual e branding:</strong> criar logo, paleta, tipografia e o sistema visual inteiro de uma marca.</li>
+        <li><strong>Design de produto digital (UI/UX):</strong> desenhar telas de app e site pensando em quem vai usar. Área com mais vaga e melhor salário.</li>
+        <li><strong>Design digital e social:</strong> peças para redes, campanha e conteúdo de marca.</li>
+        <li><strong>Motion design:</strong> colocar o design em movimento, vinheta, animação e vídeo curto. Ponte direta com cinema.</li>
+        <li><strong>Editorial:</strong> livro, revista, relatório, material didático. Projeto gráfico de página.</li>
+        <li><strong>Embalagem:</strong> desenhar o que está na prateleira, com regra técnica e de impressão.</li>
+        <li><strong>Ilustração:</strong> desenho autoral para marca, editora, jogo e conteúdo.</li>
+        <li><strong>Design de serviço e pesquisa:</strong> entrevistar usuário, mapear jornada e desenhar solução antes da tela.</li>
+        <li><strong>Design 3D e ambientes:</strong> cenário, produto e visualização, com mercado em games e publicidade.</li>
+        <li><strong>Direção de arte:</strong> comandar o visual de uma campanha, de um projeto ou de uma marca inteira.</li>
+        <li><strong>Estúdio próprio ou freelancer:</strong> caminho comum e cedo, com clientes de várias cidades e países.</li>
+        <li><strong>Design em tecnologia:</strong> trabalhar dentro de empresa de software, com equipe de produto e desenvolvedor.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Design é criatividade dentro de restrição: prazo, marca, público e regra técnica.</p>
+      <div class="tags">
+        <span class="tag">Olhar visual apurado</span>
+        <span class="tag">Atenção a detalhe</span>
+        <span class="tag">Organização de arquivo</span>
+        <span class="tag">Escuta do cliente</span>
+        <span class="tag">Resolver problema</span>
+        <span class="tag">Repertório visual</span>
+        <span class="tag">Autonomia</span>
+        <span class="tag">Explicar a própria escolha</span>
+        <span class="tag">Aprender ferramenta nova</span>
+        <span class="tag">Foco por longos períodos</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> você consegue explicar por que escolheu aquela cor e aquela fonte, com argumento, e não só "achei bonito"? Essa é exatamente a diferença entre quem faz arte e quem trabalha com design.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>Muita gente acha que design é rápido e barato.</strong> Você vai passar parte da carreira explicando o valor do seu trabalho e negociando preço, principalmente com cliente pequeno.</div>
+      <div class="cbox"><strong>Refação faz parte.</strong> Cliente pede "só um ajustinho" e vem a quinta versão. Quem se irrita muito com isso sofre.</div>
+      <div class="cbox"><strong>É trabalho solitário boa parte do tempo.</strong> Longas horas na frente da tela, sozinha, com fone. Pra quem gosta de silêncio isso é ótimo, pra quem precisa de gente em volta pesa.</div>
+      <div class="cbox"><strong>Ferramenta muda toda hora.</strong> Figma, Adobe, IA generativa. Estudar por fora é parte do trabalho, não extra.</div>
+      <div class="cbox"><strong>Concorrência global no freelance.</strong> Trabalhar remoto abre o mundo pra você, e também abre você pro mundo: dá pra competir com designer de qualquer lugar, nos dois sentidos.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA de imagem</strong><p>Rascunho, variação e imagem base saem em segundos. O designer virou quem edita, decide e dá coerência ao conjunto.</p></div>
+        <div class="tech-card"><div class="tc-icon">🧩</div><strong>Design system</strong><p>Marca virou sistema de componentes reutilizáveis, não peça solta. Pensar em sistema é o novo básico.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌐</div><strong>Trabalho remoto global</strong><p>Designer brasileiro atende cliente de fora e recebe em dólar. A área é uma das mais remotizáveis que existem.</p></div>
+        <div class="tech-card"><div class="tc-icon">📲</div><strong>Produto digital</strong><p>Todo app e site precisa de designer de interface. É a fatia do mercado que mais cresce e mais paga.</p></div>
+        <div class="tech-card"><div class="tc-icon">♿</div><strong>Acessibilidade</strong><p>Contraste, legibilidade e navegação por leitor de tela viraram requisito, não enfeite.</p></div>
+        <div class="tech-card"><div class="tc-icon">🎞️</div><strong>Movimento em tudo</strong><p>Peça parada perde espaço. Saber animar o próprio design virou diferencial forte.</p></div>
+      </div>
+      <p class="note">⚡ A IA gera imagem, mas não sabe o que a marca precisa comunicar, nem por que uma solução funciona e a outra confunde. É aí que o designer segue insubstituível.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Vaga em quase todo setor:</strong> tech, agência, varejo, banco, editora, indústria, saúde, governo. Toda empresa precisa comunicar visualmente.</li>
+        <li><strong>UI/UX puxa os melhores salários:</strong> designer de produto em empresa de tecnologia é hoje o topo da faixa da área.</li>
+        <li><strong>Remoto é comum de verdade:</strong> boa parte das vagas de design digital é remota ou híbrida, inclusive para empresa de outro estado.</li>
+        <li><strong>Freelance sustenta muita gente:</strong> dá pra montar carteira de clientes durante a faculdade e virar estúdio próprio depois.</li>
+        <li><strong>Portfólio vale mais que diploma:</strong> a seleção começa olhando seu Behance ou seu site, quase nunca seu histórico escolar.</li>
+        <li><strong>Cliente internacional é rota real:</strong> plataformas de freela e contratação remota colocam designer brasileiro em projeto de fora, com pagamento em moeda forte.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especializações possíveis</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>UI/UX e design de produto:</strong> caminho mais direto para tech, com muita formação disponível.</li>
+        <li><strong>Branding:</strong> construção de marca do zero, área de estúdio e de projeto autoral.</li>
+        <li><strong>Motion design:</strong> une design e audiovisual, muito procurado por agência e produtora.</li>
+        <li><strong>Ilustração e tipografia:</strong> caminhos autorais, com mercado em editora, marca e produto.</li>
+        <li><strong>Design 3D:</strong> games, publicidade e visualização de produto.</li>
+        <li><strong>Design de embalagem:</strong> especialização técnica com indústria por trás.</li>
+        <li><strong>Pesquisa em design e design de serviço:</strong> quem entrevista usuário e desenha a solução antes da tela.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha no Brasil?</h2></div>
+    <div class="sc-body">
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Começo</div><div class="sal-range">R$ 2,2k–4k</div><div class="sal-note">Designer júnior em agência ou empresa. Estágio entre R$ 1,2k e R$ 2,2k.</div></div>
+        <div class="sal-card"><div class="sal-stage">Intermediário</div><div class="sal-range">R$ 5k–10k</div><div class="sal-note">Designer pleno, motion designer, designer de produto com portfólio consistente.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior</div><div class="sal-range">R$ 12k–28k+</div><div class="sal-note">Designer sênior e líder de design em tech. Cliente internacional em dólar passa dessa faixa.</div></div>
+      </div>
+      <p class="note">Faixas praticadas em 2025 no Brasil, com base em Glassdoor, Vagas.com e pesquisas salariais de design e tecnologia. Design de produto em empresa de tecnologia paga bem acima de design gráfico em agência, para o mesmo tempo de carreira.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.behance.net" class="lcard" target="_blank"><span class="lc-icon">🎨</span><div class="lc-body"><strong>Behance</strong><span>Portfólio de designers do mundo inteiro: veja projetos completos, do briefing à entrega</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.figma.com" class="lcard" target="_blank"><span class="lc-icon">🖥️</span><div class="lc-body"><strong>Figma</strong><span>A ferramenta padrão do design digital hoje. É gratuita para estudante, dá pra testar agora</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Pesquise "designer gráfico", "product designer" e compare as faixas entre agência e tech</span></div><span class="lc-arr">→</span></a>
+        <a href="https://abedesign.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>Abedesign</strong><span>Associação brasileira de empresas de design: como o setor se organiza no país</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Designer%20Gr%C3%A1fico&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔍</span><div class="lc-body"><strong>LinkedIn — Vagas de design</strong><span>Compare as vagas de designer gráfico com as de product designer e veja o que muda</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Design Gráfico é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-dsg">
+        <div class="cl-item" onclick="toggle(this,'cl-dsg')"><div class="cl-box"></div><div class="cl-text">Eu reparo em fonte, cor, embalagem e layout, e me incomodo quando algo está mal feito.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dsg')"><div class="cl-box"></div><div class="cl-text">Consigo passar horas focada num detalhe até ele ficar do jeito certo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dsg')"><div class="cl-box"></div><div class="cl-text">Trabalhar boa parte do tempo sozinha, na frente da tela, me parece confortável.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dsg')"><div class="cl-box"></div><div class="cl-text">Gosto de criar dentro de regra: prazo, marca, formato, público definido.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dsg')"><div class="cl-box"></div><div class="cl-text">Consigo explicar minhas escolhas visuais com argumento, não só com "achei bonito".</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dsg')"><div class="cl-box"></div><div class="cl-text">Aprendo ferramenta nova por conta própria, no vídeo e no tutorial, sem esperar aula.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dsg')"><div class="cl-box"></div><div class="cl-text">Aceito refazer o mesmo trabalho várias vezes até o cliente aprovar.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dsg')"><div class="cl-box"></div><div class="cl-text">Me atrai a ideia de decidir sozinha como e onde trabalho, inclusive como freelancer.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dsg')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade sobre como as pessoas usam app e site, não só sobre como eles parecem.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dsg')"><div class="cl-box"></div><div class="cl-text">Já crio coisa visual por conta própria: post, capa, desenho, edição, mesmo sem ninguém pedir.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-dsg">0 de 10</span></div>
+      <div class="cl-result" id="res-dsg"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAR ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚖️</span><h2>Os três lado a lado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Os três vivem de imagem e de ideia, mas a rotina, o dinheiro e o tipo de equipe mudam bastante. Esta tabela ajuda a enxergar onde estão as diferenças reais.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão</th>
+              <th class="h-cin">🎬 Cinema</th>
+              <th class="h-pub">📣 Publicidade</th>
+              <th class="h-dsg">🎨 Design Gráfico</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Foco principal</td><td>Contar história em imagem e som</td><td>Fazer a marca ser escolhida</td><td>Resolver comunicação com forma</td></tr>
+            <tr><td>Tipo de perfil</td><td>Artístico e persistente</td><td>Criativo com visão de mercado</td><td>Visual, detalhista e autônomo</td></tr>
+            <tr><td>Tamanho da equipe</td><td>Grande, set com dezenas de pessoas</td><td>Média, times e duplas de criação</td><td>Pequena, muitas vezes sozinha</td></tr>
+            <tr><td>Onde trabalha</td><td>Produtora, streaming, projeto</td><td>Agência, empresa, freelancer</td><td>Estúdio, tech, agência, freelancer</td></tr>
+            <tr><td>Presença física</td><td>Alta, set é presencial</td><td>Média, muito híbrido no digital</td><td>Baixa, remoto é comum</td></tr>
+            <tr><td>Estabilidade de renda</td><td>Baixa, trabalho por projeto</td><td>Média, depende de agência ou empresa</td><td>Média-alta, muita vaga fixa</td></tr>
+            <tr><td>Salário inicial</td><td>R$ 1,8k–3,5k (irregular)</td><td>R$ 2k–3,5k</td><td>R$ 2,2k–4k</td></tr>
+            <tr><td>Duração do curso</td><td>4 anos (bacharelado)</td><td>4 anos (bacharelado)</td><td>4 anos ou tecnólogo de 2 a 3</td></tr>
+            <tr><td>O que abre porta</td><td>Portfólio e rede de contato</td><td>Portfólio e estágio em agência</td><td>Portfólio, Behance e freela</td></tr>
+            <tr><td>Pergunta central</td><td>"Que história eu quero contar?"</td><td>"Como faço as pessoas quererem isso?"</td><td>"Como faço isso ficar claro e desejável?"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Para pensar antes da sessão</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        🎬 <strong>Cinema</strong> é o caminho de quem quer contar história em obra longa, com equipe grande e presença física no set, e topa conscientemente a renda por projeto no início.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        📣 <strong>Publicidade</strong> é o caminho de quem quer criar comunicação para marca, gosta de gente, de cultura e de apresentar ideia, e aceita que o cliente dá a palavra final.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🎨 <strong>Design Gráfico</strong> é o caminho de quem quer criar visual dentro de regra, gosta de foco longo e de detalhe, e valoriza autonomia sobre o próprio jeito de trabalhar.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🔀 <strong>Os três se cruzam mais do que parece.</strong> Motion design fica no meio de cinema e design. Direção de arte existe nos três. Produção audiovisual de marca é cinema dentro da publicidade. Vale investigar essas pontes, e não só os três blocos separados.
+      </div>
+      <p class="note" style="margin-top:16px;">Não precisa decidir sozinha. Leve os checklists, esta tabela e a ordem de prioridade da aba "Seus critérios" pra conversar com sua orientadora, porque a decisão se constrói na sessão, não aqui.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais que existem pra cada formação, explicados de um jeito simples. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no Brasil.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col">
+          <div class="vaga-col-head cin">🎬 Cinema</div>
+          <div class="vaga-role"><strong>Assistente de Produção Audiovisual</strong><span>Organiza as gravações: equipe, equipamento, locação, autorização e cronograma do dia.</span></div>
+          <div class="vaga-role"><strong>Editor(a) de Vídeo</strong><span>Monta o material gravado e escolhe o que fica, até virar o vídeo ou o filme final.</span></div>
+          <div class="vaga-role"><strong>Roteirista de Conteúdo Audiovisual</strong><span>Escreve a história e o texto do que vai ser gravado, de série a vídeo de marca.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn cin" href="https://www.linkedin.com/jobs/search/?keywords=Produ%C3%A7%C3%A3o%20Audiovisual&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head pub">📣 Publicidade</div>
+          <div class="vaga-role"><strong>Social Media</strong><span>Cuida das redes de uma marca: planeja o conteúdo, publica e conversa com o público.</span></div>
+          <div class="vaga-role"><strong>Redator(a) Publicitário(a)</strong><span>Cria os textos e as ideias das campanhas, do roteiro de filme à legenda do post.</span></div>
+          <div class="vaga-role"><strong>Analista de Comunicação</strong><span>Cuida da imagem da empresa: imprensa, comunicação interna, eventos e relação com o público.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn pub" href="https://www.linkedin.com/jobs/search/?keywords=Publicidade&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head dsg">🎨 Design Gráfico</div>
+          <div class="vaga-role"><strong>Designer Gráfico</strong><span>Cria as peças visuais da marca: identidade, material impresso, post e apresentação.</span></div>
+          <div class="vaga-role"><strong>Product Designer (UI/UX)</strong><span>Desenha as telas de aplicativo e site pensando em quem vai usar, dentro de time de tecnologia.</span></div>
+          <div class="vaga-role"><strong>Motion Designer</strong><span>Coloca o design em movimento: vinheta, animação e vídeo curto para marca e campanha.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn dsg" href="https://www.linkedin.com/jobs/search/?keywords=Designer%20Gr%C3%A1fico&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SEUS CRITÉRIOS ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os três cursos</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estes são os critérios que você elencou e organizou como os mais importantes durante o processo, na ordem em que apareceram. A tabela descreve, de forma objetiva, como cada critério se apresenta em cada curso. Ela não aponta resposta certa nem indica um caminho: é material para você pensar e conversar com sua orientadora.</p>
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Muito presente</span>
+        <span><span class="dot y"></span>Presente em parte</span>
+        <span><span class="dot r"></span>Pouco presente</span>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table crit-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th class="h-cin">🎬 Cinema</th>
+              <th class="h-pub">📣 Publicidade</th>
+              <th class="h-dsg">🎨 Design Gráfico</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Viajar com frequência</td>
+              <td data-label="🎬 Cinema"><span class="dot g"></span>Filmagem em locação, festival e projeto em outra cidade ou país fazem parte da rotina, principalmente na produção e na direção de fotografia.</td>
+              <td data-label="📣 Publicidade"><span class="dot y"></span>Viagem acontece em produção de campanha, evento e cliente de fora, mas a base do trabalho continua sendo escritório ou agência.</td>
+              <td data-label="🎨 Design Gráfico"><span class="dot y"></span>Pouca viagem a trabalho, porém o formato remoto permite trabalhar de qualquer lugar, o que muita gente usa para viajar enquanto entrega.</td>
+            </tr>
+            <tr>
+              <td>Comunicação digital</td>
+              <td data-label="🎬 Cinema"><span class="dot y"></span>Presente no audiovisual feito para plataforma e rede, formato que hoje emprega bastante, mas não é o eixo do curso.</td>
+              <td data-label="📣 Publicidade"><span class="dot g"></span>É o centro do curso hoje: conteúdo, campanha digital, anúncio em plataforma e métrica.</td>
+              <td data-label="🎨 Design Gráfico"><span class="dot g"></span>É o principal campo de atuação: peça digital, interface, marca em ambiente online.</td>
+            </tr>
+            <tr>
+              <td>Ter autonomia para tomar decisões</td>
+              <td data-label="🎬 Cinema"><span class="dot y"></span>A autonomia é alta na direção e na produção, e baixa nas funções de assistência, onde a carreira normalmente começa.</td>
+              <td data-label="📣 Publicidade"><span class="dot y"></span>A ideia é sua, mas a palavra final é do cliente. A autonomia cresce com senioridade e no trabalho por conta própria.</td>
+              <td data-label="🎨 Design Gráfico"><span class="dot g"></span>Decisão visual concentrada em quem projeta, com caminho cedo para freelancer e estúdio próprio.</td>
+            </tr>
+            <tr>
+              <td>Atuar com comunicação e relações públicas</td>
+              <td data-label="🎬 Cinema"><span class="dot r"></span>Aparece pontualmente na divulgação de filme e em assessoria de projeto, fora do núcleo da formação.</td>
+              <td data-label="📣 Publicidade"><span class="dot g"></span>Faz parte do próprio campo: comunicação corporativa, imprensa, reputação e relação com público.</td>
+              <td data-label="🎨 Design Gráfico"><span class="dot y"></span>Entra pelo lado visual da comunicação institucional, sem envolver a relação direta com imprensa e público.</td>
+            </tr>
+            <tr>
+              <td>Trabalhar de forma híbrida</td>
+              <td data-label="🎬 Cinema"><span class="dot r"></span>Gravação é presencial e imersiva. Só roteiro, montagem e pós-produção admitem trabalho remoto.</td>
+              <td data-label="📣 Publicidade"><span class="dot g"></span>Modelo híbrido virou padrão em agência e em time de marketing, com presença em dias de reunião e apresentação.</td>
+              <td data-label="🎨 Design Gráfico"><span class="dot g"></span>Uma das áreas mais remotas do mercado, com muitas vagas híbridas e totalmente remotas.</td>
+            </tr>
+            <tr>
+              <td>Estúdios criativos</td>
+              <td data-label="🎬 Cinema"><span class="dot g"></span>Produtora e estúdio de pós-produção são o ambiente natural da profissão.</td>
+              <td data-label="📣 Publicidade"><span class="dot g"></span>Agência e estúdio de conteúdo são o ambiente típico, com times de criação.</td>
+              <td data-label="🎨 Design Gráfico"><span class="dot g"></span>Estúdio de design e time de produto em tecnologia, além do estúdio próprio.</td>
+            </tr>
+            <tr>
+              <td>Criar coisas novas</td>
+              <td data-label="🎬 Cinema"><span class="dot g"></span>Cada obra é um projeto novo, com história, equipe e desafio diferentes.</td>
+              <td data-label="📣 Publicidade"><span class="dot g"></span>Campanha nova a cada cliente e a cada período, com reinvenção constante.</td>
+              <td data-label="🎨 Design Gráfico"><span class="dot g"></span>Cada marca e cada produto pede uma solução visual própria, criada do zero.</td>
+            </tr>
+            <tr>
+              <td>Redes sociais</td>
+              <td data-label="🎬 Cinema"><span class="dot y"></span>Entram como destino do conteúdo produzido e como vitrine do portfólio, não como objeto de estudo.</td>
+              <td data-label="📣 Publicidade"><span class="dot g"></span>São campo de trabalho direto: conteúdo, anúncio, comunidade e influência.</td>
+              <td data-label="🎨 Design Gráfico"><span class="dot g"></span>São campo de trabalho constante em peça digital, identidade e conteúdo de marca.</td>
+            </tr>
+            <tr>
+              <td>Criar histórias ou narrativas</td>
+              <td data-label="🎬 Cinema"><span class="dot g"></span>É o eixo central do curso, do roteiro à montagem.</td>
+              <td data-label="📣 Publicidade"><span class="dot g"></span>Narrativa de marca e roteiro de campanha estão no coração da criação publicitária.</td>
+              <td data-label="🎨 Design Gráfico"><span class="dot y"></span>A narrativa é visual e implícita, construída por imagem e sistema, não por texto e enredo.</td>
+            </tr>
+            <tr>
+              <td>Ambiente tranquilo</td>
+              <td data-label="🎬 Cinema"><span class="dot r"></span>Set é barulhento, coletivo e corrido, com jornada longa e pressão de cronograma.</td>
+              <td data-label="📣 Publicidade"><span class="dot r"></span>Agência tem ritmo acelerado, prazo curto e mudança frequente de rota.</td>
+              <td data-label="🎨 Design Gráfico"><span class="dot y"></span>Boa parte do trabalho é individual e silenciosa, ainda que com prazos e refações pressionando.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="margin-top:16px;">Leia coluna por coluna pensando no peso que cada critério tem para você. Os critérios estão na ordem que você definiu como prioridade, então os primeiros têm mais peso na sua decisão. Use esta leitura como ponto de partida da conversa com sua orientadora.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Ranking dos critérios (soma dos pontos)</h2></div>
+    <div class="sc-body">
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Verde = 2 pontos</span>
+        <span><span class="dot y"></span>Amarelo = 1 ponto</span>
+        <span><span class="dot r"></span>Vermelho = 0 ponto</span>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 📣 Publicidade e Propaganda</span><span class="rank-score">16 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill pub" style="width:80%;">16</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 🎨 Design Gráfico</span><span class="rank-score">16 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill dsg" style="width:80%;">16</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥉 🎬 Cinema</span><span class="rank-score">11 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill cin" style="width:55%;">11</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com.br</p>
+</footer>
+
+
+<script>
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    if (checked > 0) resEl.classList.add('show');
+    else resEl.classList.remove('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
