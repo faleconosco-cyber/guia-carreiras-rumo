@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Carreiras: Psicologia, Enfermagem e Serviço Social | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Serviço Social — Bordô */
+      --ss:     #6B2F3C;
+      --ss-lt:  #F6EAED;
+      --ss-mid: #DCC0C8;
+
+      /* Psicologia — Verde Profundo */
+      --psi:     #3B503F;
+      --psi-lt:  #EAEFEB;
+      --psi-mid: #C2CFC4;
+
+      /* Enfermagem — Laranja Rumo */
+      --enf:     #D9563F;
+      --enf-lt:  #FFF0ED;
+      --enf-mid: #FBC9BE;
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.ss.active { color: var(--ss); border-bottom-color: var(--ss); }
+    .tab-btn.psi.active { color: var(--psi); border-bottom-color: var(--psi); }
+    .tab-btn.enf.active { color: var(--enf); border-bottom-color: var(--enf); }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .ss .sc-head { background: var(--ss-lt); border-color: var(--ss-mid); }
+    .ss .sc-head h2 { color: var(--ss); }
+    .psi .sc-head { background: var(--psi-lt); border-color: var(--psi-mid); }
+    .psi .sc-head h2 { color: var(--psi); }
+    .enf .sc-head { background: var(--enf-lt); border-color: var(--enf-mid); }
+    .enf .sc-head h2 { color: var(--enf); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .ss ul.sl li::before { color: var(--ss); }
+    .psi ul.sl li::before { color: var(--psi); }
+    .enf ul.sl li::before { color: var(--enf); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .ss .tag { background: var(--ss-lt); color: var(--ss); border-color: var(--ss-mid); }
+    .psi .tag { background: var(--psi-lt); color: var(--psi); border-color: var(--psi-mid); }
+    .enf .tag { background: var(--enf-lt); color: var(--enf); border-color: var(--enf-mid); }
+
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .ss .hbox { background: var(--ss-lt); border-color: var(--ss); }
+    .psi .hbox { background: var(--psi-lt); border-color: var(--psi); }
+    .enf .hbox { background: var(--enf-lt); border-color: var(--enf); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .ss .accent { color: var(--ss); }
+    .psi .accent { color: var(--psi); }
+    .enf .accent { color: var(--enf); }
+
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .ss .tech-card { background: var(--ss-lt); border-color: var(--ss-mid); }
+    .psi .tech-card { background: var(--psi-lt); border-color: var(--psi-mid); }
+    .enf .tech-card { background: var(--enf-lt); border-color: var(--enf-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .ss .tech-card strong { color: var(--ss); }
+    .psi .tech-card strong { color: var(--psi); }
+    .enf .tech-card strong { color: var(--enf); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .ss .sal-card { background: var(--ss-lt); border-color: var(--ss-mid); }
+    .psi .sal-card { background: var(--psi-lt); border-color: var(--psi-mid); }
+    .enf .sal-card { background: var(--enf-lt); border-color: var(--enf-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .ss .sal-range { color: var(--ss); }
+    .psi .sal-range { color: var(--psi); }
+    .enf .sal-range { color: var(--enf); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-ss { background: var(--ss); }
+    .comp-table th.h-psi { background: var(--psi); }
+    .comp-table th.h-enf { background: var(--enf); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .ss .lcard:hover { border-color: var(--ss); }
+    .psi .lcard:hover { border-color: var(--psi); }
+    .enf .lcard:hover { border-color: var(--enf); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .ss .cl-item:hover, .ss .cl-item.checked { background: var(--ss-lt); border-color: var(--ss); }
+    .psi .cl-item:hover, .psi .cl-item.checked { background: var(--psi-lt); border-color: var(--psi); }
+    .enf .cl-item:hover, .enf .cl-item.checked { background: var(--enf-lt); border-color: var(--enf); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .ss .cl-item.checked .cl-box { background: var(--ss); border-color: var(--ss); }
+    .psi .cl-item.checked .cl-box { background: var(--psi); border-color: var(--psi); }
+    .enf .cl-item.checked .cl-box { background: var(--enf); border-color: var(--enf); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .ss .cl-score span { color: var(--ss); font-weight: 800; }
+    .psi .cl-score span { color: var(--psi); font-weight: 800; }
+    .enf .cl-score span { color: var(--enf); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .ss .cl-result { background: var(--ss-lt); border-color: var(--ss-mid); }
+    .psi .cl-result { background: var(--psi-lt); border-color: var(--psi-mid); }
+    .enf .cl-result { background: var(--enf-lt); border-color: var(--enf-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .sub { font-size: 13px; color: var(--text); line-height: 1.6; }
+
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+    .rank-fill.ss { background: var(--ss); }
+    .rank-fill.psi { background: var(--psi); }
+    .rank-fill.enf { background: var(--enf); }
+
+    .vagas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-col-head.ss { background: var(--ss); }
+    .vaga-col-head.psi { background: var(--psi); }
+    .vaga-col-head.enf { background: var(--enf); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+    .vaga-btn.ss { background: var(--ss); }
+    .vaga-btn.psi { background: var(--psi); }
+    .vaga-btn.enf { background: var(--enf); }
+
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table tr:nth-child(even) td:first-child { background: var(--cmp); }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+
+    .area { border: 1px solid var(--psi-mid); border-radius: 14px; overflow: hidden; margin-top: 18px; }
+    .area:first-of-type { margin-top: 6px; }
+    .area-head { background: var(--psi); color: white; padding: 14px 20px; display: flex; align-items: center; gap: 10px; }
+    .area-head strong { font-size: 15px; font-weight: 800; }
+    .area-head span.area-tag { margin-left: auto; font-family: 'Caveat', cursive; font-size: 20px; color: var(--rumo-yellow); }
+    .area-body { padding: 18px 20px; }
+    .area-body p { font-size: 14px; line-height: 1.7; }
+    .area-body h3 { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--psi); margin: 16px 0 6px; }
+    .area-body h3:first-child { margin-top: 0; }
+    .area-day { background: var(--psi-lt); border-radius: 10px; padding: 14px 16px; font-size: 13px; line-height: 1.65; }
+    .area-foot { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+    .area-foot div { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; font-size: 12px; line-height: 1.55; }
+    .area-foot div b { display: block; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 4px; }
+    @media (max-width: 680px) { .area-foot { grid-template-columns: 1fr; } .area-head { flex-wrap: wrap; } .area-head span.area-tag { margin-left: 0; width: 100%; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>Psicologia · Enfermagem · Serviço Social
+    <span class="hd-accent">pesquisar é o começo da escolha</span>
+  </h1>
+  <p class="hd-sub">Este guia é pra você levar pra casa nesta semana de pesquisa. Três cursos que cuidam de gente, cada um por uma porta: um cuida do que a pessoa sente, um cuida do corpo, um cuida dos direitos dela. Na aba de Psicologia tem um mergulho em três áreas: jurídica, hospitalar e social. Leia com calma, marque o que fizer sentido e traga tudo pra próxima sessão.</p>
+</header>
+
+<nav>
+  <button class="tab-btn psi active" data-c="psi" onclick="show('psi')">🧠 Psicologia</button>
+  <button class="tab-btn enf" data-c="enf" onclick="show('enf')">🩺 Enfermagem</button>
+  <button class="tab-btn ss" data-c="ss" onclick="show('ss')">🤝 Serviço Social</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">🔍 Comparar os três</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ PSICOLOGIA ═══════════════════════════════ -->
+<div class="panel psi active" id="p-psi">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Psicologia?</h2></div>
+    <div class="sc-body">
+      <p>Psicologia estuda como as pessoas pensam, sentem, se relacionam e adoecem, sozinhas e em grupo. É um <strong>curso de 5 anos</strong> que forma bacharel e psicólogo, com estágios supervisionados obrigatórios nos dois últimos anos. Ao se formar, o registro no Conselho Regional de Psicologia (CRP) é direto: não existe prova de ordem como a da OAB.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Bases da psicologia, biologia, neuroanatomia, estatística, métodos de pesquisa e as grandes teorias (psicanálise, comportamental, humanista, Gestalt, cognitiva).</li>
+        <li><strong>3º ano:</strong> Psicopatologia, avaliação psicológica, psicologia social, do desenvolvimento, da saúde, organizacional e escolar. É aqui que você conhece as áreas de atuação.</li>
+        <li><strong>4º–5º ano:</strong> Estágios supervisionados na clínica-escola e em campo: hospital, CRAS, vara de família, escola, empresa. É quando você atende de verdade, com supervisão, e dá pra testar a área antes de escolher.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a profissão é regulada pelo CFP e pelos CRPs. Há código de ética rígido, sigilo obrigatório e regras claras sobre o que pode e o que não pode ser feito. O código de ética da psicologia se apoia explicitamente na Declaração Universal dos Direitos Humanos.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔦</span><h2>Três áreas pra olhar de perto: jurídica, hospitalar e social</h2></div>
+    <div class="sc-body">
+      <p>A maioria das pessoas pensa em psicólogo e imagina um consultório. Essas três áreas são bem diferentes disso: ninguém deita no divã, o trabalho é feito em equipe com outros profissionais e o psicólogo sai da sala.</p>
+
+      <div class="area">
+        <div class="area-head"><span>⚖️</span><strong>Psicologia Jurídica</strong><span class="area-tag">onde a psicologia encontra a lei</span></div>
+        <div class="area-body">
+          <h3>O que faz</h3>
+          <p>Ajuda a Justiça a entender as pessoas envolvidas num processo. Avalia famílias em disputa de guarda, acompanha adoções e crianças em abrigo, ouve criança vítima de violência de um jeito que não a machuque de novo (o chamado depoimento especial), trabalha com adolescentes em medida socioeducativa e com pessoas presas. Escreve laudos e pareceres que o juiz usa pra decidir.</p>
+          <h3>Onde trabalha</h3>
+          <p>Tribunal de Justiça (varas de família, da infância e criminais), Defensoria, Ministério Público, sistema prisional, unidades socioeducativas e como perito, contratado caso a caso.</p>
+          <h3>Um dia de trabalho</h3>
+          <div class="area-day">De manhã, entrevista com a mãe e depois com o pai numa disputa de guarda. À tarde, visita à casa de uma das famílias junto com a assistente social do fórum. No fim do dia, escreve o estudo psicossocial que vai pro processo.</div>
+          <div class="area-foot">
+            <div><b>Como se chega lá</b>Concurso de tribunal (cargo de analista judiciário, especialidade psicologia), pós em psicologia jurídica e cadastro como perito.</div>
+            <div><b>O lado difícil</b>Casos pesados de violência e abuso. Não é terapia: você avalia, e o que você escreve muda a vida de uma família.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="area">
+        <div class="area-head"><span>🏥</span><strong>Psicologia Hospitalar</strong><span class="area-tag">a escuta à beira do leito</span></div>
+        <div class="area-body">
+          <h3>O que faz</h3>
+          <p>Cuida do lado emocional de quem está doente, internado ou passando por cirurgia, e da família dessa pessoa. Ajuda a receber um diagnóstico difícil, a atravessar um tratamento longo, a lidar com a UTI e, muitas vezes, com o fim da vida. Também dá apoio à própria equipe de saúde.</p>
+          <h3>Onde trabalha</h3>
+          <p>Hospitais públicos e privados, UTI, oncologia, pediatria, maternidade, cuidados paliativos, centros de transplante e hemodiálise.</p>
+          <h3>Um dia de trabalho</h3>
+          <div class="area-day">Passa nos leitos da enfermaria, conversa com uma paciente que vai operar amanhã, participa da reunião da equipe com médico, enfermeiro e assistente social, atende uma família na sala da UTI e registra tudo no prontuário. Atendimento curto, de pé, com interrupção, sem sala fechada.</div>
+          <div class="area-foot">
+            <div><b>Como se chega lá</b>Residência multiprofissional em saúde (2 anos, com bolsa mensal), pós em psicologia hospitalar e concurso de hospital público.</div>
+            <div><b>O lado difícil</b>Conviver com morte e perda com frequência, num ambiente barulhento e imprevisível.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="area">
+        <div class="area-head"><span>🌍</span><strong>Psicologia Social</strong><span class="area-tag">a pessoa dentro da comunidade</span></div>
+        <div class="area-body">
+          <h3>O que faz</h3>
+          <p>Olha pra pessoa como parte de um grupo, de um bairro e de uma sociedade. Trabalha com famílias em situação de vulnerabilidade, pessoas em situação de rua, migrantes, população LGBTQIA+, questões raciais e comunidades. Faz grupo, visita domiciliar, projeto comunitário e ajuda a construir política pública.</p>
+          <h3>Onde trabalha</h3>
+          <p>CRAS e CREAS (a rede de assistência social das prefeituras), abrigos, Centros POP, ONGs, movimentos sociais, secretarias de governo e pesquisa em universidade.</p>
+          <h3>Um dia de trabalho</h3>
+          <div class="area-day">Coordena um grupo de mães no CRAS de manhã, faz visita domiciliar com a assistente social à tarde, participa de uma reunião com a escola e o posto de saúde do bairro pra pensar juntos o caso de uma família.</div>
+          <div class="area-foot">
+            <div><b>Como se chega lá</b>Concurso de prefeitura, trabalho em ONG, residência e pós em psicologia social ou políticas públicas.</div>
+            <div><b>O lado difícil</b>Salário municipal costuma ser baixo, a rede de serviços é precária e muita coisa não se resolve só com o seu trabalho.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hbox" style="margin-top:18px;">
+        🔎 <strong>Repare numa coisa:</strong> nas três áreas, o psicólogo trabalha lado a lado com a assistente social, e no hospital também com a enfermagem. Os três cursos deste guia se encontram na mesma equipe.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que mais esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Clínica:</strong> atender em consultório, presencial ou online. É o caminho mais conhecido e o que dá mais autonomia sobre a própria agenda.</li>
+        <li><strong>Saúde pública:</strong> atuar no SUS, em CAPS e UBS, com saúde mental comunitária.</li>
+        <li><strong>Psicologia organizacional:</strong> trabalhar em empresa com seleção, desenvolvimento e saúde mental dos funcionários.</li>
+        <li><strong>Psicologia escolar:</strong> atuar na escola com aprendizagem, convivência e inclusão.</li>
+        <li><strong>Neuropsicologia:</strong> avaliar memória, atenção e funções cognitivas. Área técnica e com fila de espera.</li>
+        <li><strong>Psicologia do trânsito e do esporte:</strong> avaliação de motoristas e preparo mental de atletas.</li>
+        <li><strong>Orientação profissional:</strong> ajudar adolescentes e adultos a escolherem caminho, como acontece aqui.</li>
+        <li><strong>Pesquisa e docência:</strong> mestrado, doutorado e sala de aula na universidade.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Psicologia pede capacidade de escutar sem julgar e de ficar perto do sofrimento de alguém sem se desmontar junto.</p>
+      <div class="tags">
+        <span class="tag">Escuta</span>
+        <span class="tag">Empatia</span>
+        <span class="tag">Paciência</span>
+        <span class="tag">Curiosidade sobre pessoas</span>
+        <span class="tag">Estabilidade emocional</span>
+        <span class="tag">Ética e sigilo</span>
+        <span class="tag">Escrita clara</span>
+        <span class="tag">Trabalho em equipe</span>
+        <span class="tag">Tolerância à dúvida</span>
+        <span class="tag">Respeito à diferença</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando um amigo desabafa, você sente vontade de resolver o problema dele rápido ou consegue ficar ali escutando, mesmo sem ter solução? A Psicologia trabalha muito mais com a segunda coisa do que com a primeira.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O consultório demora a encher.</strong> Formar não traz paciente. Construir clientela leva de dois a quatro anos, e nesse meio-tempo a maioria concilia clínica com emprego fixo.</div>
+      <div class="cbox"><strong>Salário de vínculo costuma ser baixo.</strong> Emprego em clínica, CRAS ou hospital privado paga bem menos que concurso de tribunal ou consultório cheio.</div>
+      <div class="cbox"><strong>Formação continuada custa caro e não acaba.</strong> Pós-graduação, supervisão e a própria terapia pessoal são parte do trabalho e saem do seu bolso.</div>
+      <div class="cbox"><strong>Desgaste emocional é real.</strong> Hospital, vara de família e CRAS lidam com morte, violência e miséria. Sem supervisão e terapia própria, o risco de esgotamento é alto.</div>
+      <div class="cbox"><strong>Tem estatística e método científico no caminho.</strong> Muita gente entra achando que é só teoria sobre gente e leva um susto com pesquisa e números.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">💻</div><strong>Atendimento online</strong><p>Autorizado pelo CFP e consolidado. Dá pra atender paciente de qualquer cidade, ou do exterior.</p></div>
+        <div class="tech-card"><div class="tc-icon">📋</div><strong>Prontuário eletrônico</strong><p>No hospital, o registro do psicólogo fica no mesmo sistema da equipe toda, com regras de sigilo próprias.</p></div>
+        <div class="tech-card"><div class="tc-icon">🎥</div><strong>Depoimento por vídeo</strong><p>Na Justiça, a escuta de criança acontece numa sala separada e é gravada, pra ela não ter que repetir a história várias vezes.</p></div>
+        <div class="tech-card"><div class="tc-icon">🧪</div><strong>Testes informatizados</strong><p>Avaliação psicológica com correção digital, mais rápida e mais precisa.</p></div>
+        <div class="tech-card"><div class="tc-icon">📱</div><strong>Apps de saúde mental</strong><p>Plataformas de terapia contratam psicólogos e criaram um mercado novo de trabalho.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA e chatbots</strong><p>Muita gente já desabafa com IA. O debate ético sobre isso está aberto, e o CFP acompanha de perto.</p></div>
+      </div>
+      <p class="note">⚡ Nenhuma tecnologia substitui o vínculo entre duas pessoas. O que mudou foi onde esse encontro acontece e quanta gente dá pra alcançar.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Demanda cresceu muito:</strong> a procura por atendimento psicológico aumentou de forma consistente, especialmente entre jovens.</li>
+        <li><strong>Muitos formados também:</strong> o Brasil tem uma das maiores quantidades de psicólogos do mundo. O diploma, sozinho, não garante trabalho bom.</li>
+        <li><strong>A assistência social é grande empregadora:</strong> todo CRAS e CREAS do país tem vaga de psicólogo na equipe. É concurso de prefeitura, com salário variando muito de cidade pra cidade.</li>
+        <li><strong>Tribunais pagam bem:</strong> o concurso de psicólogo em Tribunal de Justiça está entre os de melhor salário da profissão, com poucas vagas e muita disputa.</li>
+        <li><strong>Hospital pede formação específica:</strong> a residência multiprofissional virou quase porta de entrada pra hospital grande.</li>
+        <li><strong>Clínica online mudou a geografia:</strong> quem mora em cidade pequena pode atender gente de qualquer lugar.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em Psicologia, escolher um campo e uma abordagem é o que transforma o diploma em profissão. O CFP concede título de especialista em várias áreas, inclusive nas três deste guia.</p>
+      <div class="tags">
+        <span class="tag">⭐ Psicologia Jurídica</span>
+        <span class="tag">⭐ Psicologia Hospitalar</span>
+        <span class="tag">⭐ Psicologia Social</span>
+        <span class="tag">⭐ Residência Multiprofissional</span>
+        <span class="tag">Neuropsicologia</span>
+        <span class="tag">Cuidados Paliativos</span>
+        <span class="tag">Saúde Mental e Atenção Psicossocial</span>
+        <span class="tag">Avaliação Psicológica e Perícia</span>
+        <span class="tag">Políticas Públicas</span>
+        <span class="tag">Psicologia Clínica</span>
+        <span class="tag">Casal e Família</span>
+        <span class="tag">Gestalt-terapia</span>
+        <span class="tag">Psicanálise</span>
+        <span class="tag">TCC</span>
+      </div>
+      <p class="note">⭐ As três áreas que você quis olhar de perto, mais a residência, que é o caminho mais comum pra entrar em hospital.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um psicólogo?</h2></div>
+    <div class="sc-body">
+      <p>A diferença entre vínculo, concurso e consultório próprio explica quase toda a variação.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,5k–4k</div><div class="sal-note">CRAS de prefeitura, clínica ou hospital privado. A bolsa de residência multiprofissional fica na casa de R$ 4 mil.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 5k–10k</div><div class="sal-note">Psicólogo hospitalar em hospital grande, concurso estadual ou consultório com agenda razoável.</div></div>
+        <div class="sal-card"><div class="sal-stage">Consolidado / Topo</div><div class="sal-range">R$ 12k–25k+</div><div class="sal-note">Analista de Tribunal de Justiça, perito com volume de laudos, consultório cheio e supervisão.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Por área:</strong> a psicologia social paga, em geral, o salário de prefeitura. A hospitalar fica no meio. A jurídica tem o teto mais alto das três quando é concurso de tribunal, e o perito particular recebe por laudo, não por mês.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://site.cfp.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CFP: Conselho Federal de Psicologia</strong><span>O que o psicólogo pode e não pode fazer, e as especialidades reconhecidas</span></div><span class="lc-arr">→</span></a>
+        <a href="https://crepop.cfp.org.br" class="lcard" target="_blank"><span class="lc-icon">📘</span><div class="lc-body"><strong>CREPOP: Psicologia e Políticas Públicas</strong><span>Guias oficiais de como o psicólogo atua no CRAS, no hospital, na vara de família e no sistema prisional</span></div><span class="lc-arr">→</span></a>
+        <a href="https://sbph.org.br" class="lcard" target="_blank"><span class="lc-icon">🏥</span><div class="lc-body"><strong>SBPH: Sociedade Brasileira de Psicologia Hospitalar</strong><span>Eventos, formação e o que acontece na área hospitalar</span></div><span class="lc-arr">→</span></a>
+        <a href="https://site.abrapso.org.br" class="lcard" target="_blank"><span class="lc-icon">🌍</span><div class="lc-body"><strong>ABRAPSO: Associação Brasileira de Psicologia Social</strong><span>Os temas que a psicologia social pesquisa e discute no Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Psic%C3%B3logo%20Hospitalar&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔎</span><div class="lc-body"><strong>Vagas de psicólogo hospitalar hoje</strong><span>Quais hospitais estão contratando neste momento</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Psic%C3%B3logo%20CRAS&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔎</span><div class="lc-body"><strong>Vagas de psicólogo em CRAS e CREAS</strong><span>Vagas na assistência social, onde a psicologia social acontece</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.google.com/search?q=concurso+analista+judici%C3%A1rio+psicologia" class="lcard" target="_blank"><span class="lc-icon">⚖️</span><div class="lc-body"><strong>Concursos de psicólogo em tribunal</strong><span>A psicologia jurídica contrata quase só por concurso. Veja editais, salários e o que cai na prova</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Psicologia costuma ser um caminho para quem…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-psi">
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Consigo escutar alguém por muito tempo sem sentir necessidade de dar conselho.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Fico genuinamente curioso sobre por que as pessoas fazem o que fazem.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Consigo ficar perto do sofrimento de alguém sem levar aquilo pra casa todos os dias.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Guardo segredo. As pessoas confiam coisas em mim e eu não repasso.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Me interesso por como a família, o bairro e a sociedade moldam uma pessoa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Trabalhar em equipe com gente de outras profissões me anima mais do que trabalhar sozinho.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Escrever um relatório cuidadoso, sabendo que ele tem consequência, não me assusta.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Aceito que o resultado do meu trabalho aparece devagar, ao longo de meses.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Não fujo de estatística e de método científico, que fazem parte do curso.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Topo estudar pelo resto da vida, porque nessa profissão a formação nunca termina.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-psi">0 de 10</span></div>
+      <div class="cl-result" id="res-psi"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ ENFERMAGEM ═══════════════════════════════ -->
+<div class="panel enf" id="p-enf">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Enfermagem?</h2></div>
+    <div class="sc-body">
+      <p>Enfermagem forma o profissional que cuida do paciente de perto, todos os dias, e que coordena a equipe de cuidado. É um <strong>bacharelado de 5 anos</strong>, com muita aula prática em laboratório e estágio em hospital e posto de saúde. Formado, você se registra no Conselho Regional de Enfermagem (COREN), sem prova de ordem.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Anatomia, fisiologia, bioquímica, microbiologia, farmacologia e as primeiras técnicas de cuidado em laboratório (curativo, sinais vitais, medicação).</li>
+        <li><strong>3º–4º ano:</strong> Saúde do adulto, da criança, da mulher e do idoso, saúde mental, saúde coletiva, centro cirúrgico e urgência, já com prática em campo.</li>
+        <li><strong>5º ano:</strong> Estágio supervisionado longo em hospital e na atenção básica, mais TCC. Você passa a maior parte do tempo dentro do serviço de saúde.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Não confunda:</strong> técnico de enfermagem é um curso de nível médio, de cerca de 2 anos. O enfermeiro, com graduação, é quem planeja o cuidado, supervisiona os técnicos, faz consulta de enfermagem e responde pela equipe.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Enfermeiro assistencial em hospital:</strong> cuidar dos pacientes internados em enfermaria, pronto-socorro ou centro cirúrgico.</li>
+        <li><strong>UTI:</strong> cuidar de pacientes graves, com muita tecnologia e decisão rápida.</li>
+        <li><strong>Atenção básica e Saúde da Família:</strong> atender no posto de saúde, fazer consulta de enfermagem, pré-natal, vacinação e visita às casas do bairro.</li>
+        <li><strong>Saúde mental:</strong> trabalhar em CAPS e em enfermaria psiquiátrica, acompanhando pessoas em sofrimento psíquico.</li>
+        <li><strong>Obstetrícia:</strong> acompanhar gestação e parto. A enfermeira obstétrica pode fazer parto normal.</li>
+        <li><strong>Urgência e SAMU:</strong> atendimento pré-hospitalar, na rua e na ambulância.</li>
+        <li><strong>Home care:</strong> cuidar de pacientes em casa.</li>
+        <li><strong>Cuidados paliativos:</strong> cuidar de quem tem doença sem cura, com foco no conforto e na dignidade.</li>
+        <li><strong>Gestão e auditoria:</strong> coordenar setor, qualidade e segurança do paciente, ou analisar contas hospitalares para planos de saúde.</li>
+        <li><strong>Enfermagem do trabalho:</strong> cuidar da saúde dos funcionários dentro de uma empresa.</li>
+        <li><strong>Docência e pesquisa:</strong> ensinar em curso técnico e universidade.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Enfermagem junta cuidado com técnica: acolher alguém com medo e, no minuto seguinte, calcular a dose certa de um remédio.</p>
+      <div class="tags">
+        <span class="tag">Gosto por biologia</span>
+        <span class="tag">Cuidado com o outro</span>
+        <span class="tag">Atenção a detalhe</span>
+        <span class="tag">Calma sob pressão</span>
+        <span class="tag">Resistência física</span>
+        <span class="tag">Liderança</span>
+        <span class="tag">Trabalho em equipe</span>
+        <span class="tag">Organização</span>
+        <span class="tag">Não ter aflição com sangue</span>
+        <span class="tag">Comunicação com paciente e família</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando alguém se machuca perto de você, você trava, sai de perto ou chega junto pra ajudar? E o que você sente olhando pra um machucado de verdade? Na Enfermagem, esse momento acontece todo dia.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>Plantão, noite, feriado e fim de semana.</strong> Hospital não fecha. A escala mais comum é 12 horas trabalhadas por 36 de folga, e isso inclui Natal e Réveillon.</div>
+      <div class="cbox"><strong>Muita gente tem dois empregos.</strong> Pra compor renda, é comum juntar dois vínculos, o que pesa na saúde e na vida pessoal.</div>
+      <div class="cbox"><strong>Trabalho físico.</strong> Muitas horas em pé, mobilizar paciente acamado e correr no pronto-socorro cansam o corpo.</div>
+      <div class="cbox"><strong>Contato com sofrimento e morte.</strong> Você está ao lado do paciente nos piores momentos, muitas vezes mais do que qualquer outro profissional.</div>
+      <div class="cbox"><strong>O piso salarial ainda é uma briga.</strong> Existe piso nacional em lei, mas no setor privado a aplicação depende de negociação e nem sempre é cumprida.</div>
+      <div class="cbox"><strong>O curso é pesado em biologia.</strong> Anatomia, fisiologia e farmacologia são a base de tudo. Quem não gosta de biologia sofre nos primeiros anos.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">📋</div><strong>Prontuário eletrônico</strong><p>Prescrição, checagem de medicação e evolução do paciente no computador, com menos erro.</p></div>
+        <div class="tech-card"><div class="tc-icon">📡</div><strong>Monitorização</strong><p>Sensores acompanham sinais vitais o tempo todo e avisam a equipe quando algo sai do normal.</p></div>
+        <div class="tech-card"><div class="tc-icon">⚠️</div><strong>Alerta de piora</strong><p>Sistemas com IA cruzam dados e avisam cedo que um paciente está piorando.</p></div>
+        <div class="tech-card"><div class="tc-icon">💻</div><strong>Telenfermagem</strong><p>Consulta e acompanhamento a distância, regulamentados pelo COFEN.</p></div>
+        <div class="tech-card"><div class="tc-icon">🧪</div><strong>Simulação realística</strong><p>Na faculdade, bonecos que respiram e sangram ajudam a treinar antes de chegar no paciente real.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏠</div><strong>Cuidado em casa</strong><p>Tecnologia permite tratar em casa quem antes ficava internado, e o home care cresce.</p></div>
+      </div>
+      <p class="note">⚡ A máquina mede, mas não segura a mão de ninguém, não percebe o medo no olhar nem decide o que fazer quando o alarme toca.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>É a maior força de trabalho da saúde:</strong> a enfermagem, somando enfermeiros, técnicos e auxiliares, reúne quase 3 milhões de profissionais no país.</li>
+        <li><strong>Emprego tem:</strong> hospital, posto de saúde, clínica, home care e SAMU estão em todo lugar. É uma das formações com mais vagas abertas no Brasil.</li>
+        <li><strong>Concurso é frequente:</strong> prefeituras, estados, hospitais universitários federais e forças armadas abrem vagas com regularidade.</li>
+        <li><strong>Existe piso salarial nacional:</strong> uma lei de 2022 criou um piso pro enfermeiro. É um dos poucos cursos da área com esse tipo de proteção.</li>
+        <li><strong>Especialista é mais valorizado:</strong> UTI, centro cirúrgico, obstetrícia e oncologia pagam mais e têm mais procura.</li>
+        <li><strong>Mercado lá fora:</strong> vários países têm falta de enfermeiros e recrutam brasileiros, com revalidação do diploma e prova de idioma.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>A residência em enfermagem, de 2 anos e com bolsa, é um caminho muito usado pra se especializar trabalhando.</p>
+      <div class="tags">
+        <span class="tag">⭐ Terapia Intensiva (UTI)</span>
+        <span class="tag">⭐ Centro Cirúrgico</span>
+        <span class="tag">⭐ Obstetrícia</span>
+        <span class="tag">⭐ Oncologia</span>
+        <span class="tag">Urgência e Emergência</span>
+        <span class="tag">Saúde da Família</span>
+        <span class="tag">Saúde Mental e Psiquiatria</span>
+        <span class="tag">Pediatria e Neonatologia</span>
+        <span class="tag">Cuidados Paliativos</span>
+        <span class="tag">Estomaterapia</span>
+        <span class="tag">Enfermagem do Trabalho</span>
+        <span class="tag">Auditoria e Gestão</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhores faixas no Brasil. Saúde mental e cuidados paliativos são as especializações da Enfermagem que mais conversam com a Psicologia.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um enfermeiro?</h2></div>
+    <div class="sc-body">
+      <p>O piso ajuda no começo, e o que faz a renda subir é especialização, plantão extra e concurso.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 4k–5,5k</div><div class="sal-note">Enfermeiro assistencial recém-formado. O piso nacional do enfermeiro é de R$ 4.750 para 44 horas semanais.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 6k–10k</div><div class="sal-note">UTI, centro cirúrgico, obstetrícia, coordenação de setor ou concurso estadual.</div></div>
+        <div class="sal-card"><div class="sal-stage">Liderança / Topo</div><div class="sal-range">R$ 12k–20k</div><div class="sal-note">Gerência de enfermagem em hospital grande, auditoria e concursos federais.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> muita gente passa das faixas acima somando dois vínculos ou plantões extras. A renda sobe, mas o custo aparece no sono, no corpo e no tempo livre.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.cofen.gov.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>COFEN: Conselho Federal de Enfermagem</strong><span>O que o enfermeiro pode fazer, especialidades e notícias sobre o piso salarial</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.abennacional.org.br" class="lcard" target="_blank"><span class="lc-icon">📚</span><div class="lc-body"><strong>ABEn: Associação Brasileira de Enfermagem</strong><span>Formação, eventos e o debate sobre a profissão</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.gov.br/saude/pt-br" class="lcard" target="_blank"><span class="lc-icon">🏥</span><div class="lc-body"><strong>Ministério da Saúde</strong><span>Como funciona o SUS e onde o enfermeiro entra em cada parte dele</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor: Salários</strong><span>Pesquise "enfermeiro", "enfermeiro de UTI" e o nome de hospitais da sua cidade</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Enfermeiro&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔎</span><div class="lc-body"><strong>Vagas de enfermeiro hoje</strong><span>Veja quais hospitais e clínicas estão contratando neste momento</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Enfermagem costuma ser um caminho para quem…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-enf">
+        <div class="cl-item" onclick="toggle(this,'cl-enf')"><div class="cl-box"></div><div class="cl-text">Gosto de biologia e de entender como o corpo funciona.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-enf')"><div class="cl-box"></div><div class="cl-text">Sangue, ferida e secreção não me fazem passar mal.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-enf')"><div class="cl-box"></div><div class="cl-text">Me sinto bem cuidando de alguém com as mãos, não só conversando.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-enf')"><div class="cl-box"></div><div class="cl-text">Em situação de emergência, eu costumo ficar calmo e agir.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-enf')"><div class="cl-box"></div><div class="cl-text">Trabalhar à noite, no fim de semana ou no feriado não é um problema grande pra mim.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-enf')"><div class="cl-box"></div><div class="cl-text">Aguento ficar muitas horas em pé e em movimento.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-enf')"><div class="cl-box"></div><div class="cl-text">Sou cuidadoso com detalhe: dose, horário, nome certo, sem pular etapa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-enf')"><div class="cl-box"></div><div class="cl-text">Me imagino liderando uma equipe e respondendo por ela.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-enf')"><div class="cl-box"></div><div class="cl-text">Consigo lidar com a morte de um paciente e voltar pro plantão.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-enf')"><div class="cl-box"></div><div class="cl-text">Ambiente agitado, com muita coisa acontecendo ao mesmo tempo, me deixa ligado, não travado.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-enf">0 de 10</span></div>
+      <div class="cl-result" id="res-enf"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SERVIÇO SOCIAL ═══════════════════════════════ -->
+<div class="panel ss" id="p-ss">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Serviço Social?</h2></div>
+    <div class="sc-body">
+      <p>Serviço Social forma o assistente social, profissional que trabalha pra que as pessoas consigam acessar os direitos que já têm: saúde, benefício, moradia, proteção contra violência, documentação. É um <strong>bacharelado de 4 anos</strong>, com estágio supervisionado obrigatório. Formado, você se registra no Conselho Regional de Serviço Social (CRESS).</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Sociologia, filosofia, economia política, história do Brasil, psicologia social e fundamentos do Serviço Social. Muita leitura e muito debate.</li>
+        <li><strong>3º ano:</strong> Políticas sociais (saúde, assistência, previdência, educação), direitos humanos, legislação social, pesquisa e o jeito de atender: entrevista, visita domiciliar, estudo social.</li>
+        <li><strong>4º ano:</strong> Estágio supervisionado em CRAS, hospital, fórum, escola ou empresa, mais o TCC.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Não é caridade:</strong> Serviço Social não é assistencialismo nem trabalho voluntário. É profissão regulamentada por lei, com código de ética próprio, e a lei garante jornada de 30 horas semanais para o assistente social.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Assistência social (CRAS e CREAS):</strong> atender famílias em situação de vulnerabilidade e casos de violação de direitos, como violência doméstica e trabalho infantil.</li>
+        <li><strong>Hospital:</strong> garantir que o paciente e a família tenham acesso a transporte, benefício, medicamento e rede de apoio, inclusive na hora da alta.</li>
+        <li><strong>Justiça:</strong> no fórum, faz estudo social em casos de guarda, adoção e violência, junto com o psicólogo.</li>
+        <li><strong>Previdência (INSS):</strong> orientar sobre aposentadoria, benefício por deficiência e auxílios.</li>
+        <li><strong>Saúde mental:</strong> atuar em CAPS, ajudando pessoas em sofrimento psíquico a manter vínculos, renda e moradia.</li>
+        <li><strong>Educação:</strong> em escola e universidade, trabalhar com evasão, assistência estudantil e situações de violência.</li>
+        <li><strong>Empresa:</strong> em RH e em projetos de responsabilidade social.</li>
+        <li><strong>ONGs e movimentos sociais:</strong> projetos com populações específicas, como pessoas em situação de rua, migrantes e comunidades.</li>
+        <li><strong>Sistema prisional e socioeducativo:</strong> trabalhar com pessoas presas, adolescentes em medida e as famílias deles.</li>
+        <li><strong>Gestão de políticas públicas:</strong> planejar e avaliar programas sociais em secretarias de governo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Serviço Social pede olhar pra pessoa e, ao mesmo tempo, pro contexto que produz a situação dela.</p>
+      <div class="tags">
+        <span class="tag">Senso de justiça</span>
+        <span class="tag">Interesse por política e sociedade</span>
+        <span class="tag">Escuta</span>
+        <span class="tag">Respeito à diferença</span>
+        <span class="tag">Leitura e escrita</span>
+        <span class="tag">Firmeza</span>
+        <span class="tag">Articulação com outros serviços</span>
+        <span class="tag">Conhecer leis e direitos</span>
+        <span class="tag">Trabalho em equipe</span>
+        <span class="tag">Estabilidade emocional</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você vê alguém sendo tratado de um jeito injusto, o que acontece com você: fica indignado e depois passa, ou fica pensando em como aquilo poderia ser diferente, e em quem teria que agir? O Serviço Social trabalha nesse segundo lugar.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O salário em muitas prefeituras é baixo.</strong> O principal empregador é o poder público municipal, e o valor varia muito de cidade pra cidade.</div>
+      <div class="cbox"><strong>Contrato precário é comum.</strong> Muita vaga é terceirizada ou temporária, sem concurso, o que tira a estabilidade.</div>
+      <div class="cbox"><strong>Os casos são pesados.</strong> Violência doméstica, abuso, fome, abandono. Você convive com a parte mais dura da realidade do país.</div>
+      <div class="cbox"><strong>A rede nem sempre dá conta.</strong> Você identifica o problema, mas falta vaga, falta serviço, falta verba. Lidar com essa frustração faz parte.</div>
+      <div class="cbox"><strong>Tem bastante burocracia.</strong> Relatório, parecer, cadastro e registro ocupam uma parte grande do dia.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🗂️</div><strong>Cadastro Único digital</strong><p>A base que dá acesso a vários programas sociais é toda digital, e o assistente social trabalha com ela.</p></div>
+        <div class="tech-card"><div class="tc-icon">📱</div><strong>Serviço público no app</strong><p>Benefício, agendamento e documento migraram pro celular. Quem não sabe usar fica de fora, e o assistente social vira ponte.</p></div>
+        <div class="tech-card"><div class="tc-icon">⚙️</div><strong>Análise automática</strong><p>O INSS já concede parte dos benefícios de forma automática. Os casos que sobram pra análise humana são os mais complexos.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Mapa da vulnerabilidade</strong><p>Dados cruzados mostram onde estão as famílias que mais precisam, e ajudam a planejar o serviço.</p></div>
+        <div class="tech-card"><div class="tc-icon">📋</div><strong>Prontuário eletrônico</strong><p>O histórico do atendimento das famílias fica registrado e pode ser acompanhado pela rede.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔐</div><strong>Proteção de dados</strong><p>Informação de família vulnerável é sensível. Cuidar do sigilo digital virou parte do trabalho.</p></div>
+      </div>
+      <p class="note">⚡ Um sistema cruza dados, mas não entra na casa de ninguém, não percebe o que a família não conta e não negocia com a rede pra conseguir uma vaga.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>O poder público é o grande empregador:</strong> todo município tem CRAS, e a lei exige assistente social na equipe. Saúde, previdência e Justiça também contratam.</li>
+        <li><strong>Concurso aparece com frequência:</strong> prefeituras abrem vagas o tempo todo. Tribunais, INSS e universidades federais pagam melhor e são mais disputados.</li>
+        <li><strong>Jornada de 30 horas por lei:</strong> diferente da maioria das profissões, a carga semanal é protegida.</li>
+        <li><strong>Terceiro setor emprega bastante:</strong> ONGs e fundações contratam para projetos sociais, geralmente com contrato por projeto.</li>
+        <li><strong>Empresa é um nicho menor:</strong> existe espaço em RH e responsabilidade social, mas é pequeno perto do setor público.</li>
+        <li><strong>Concorrência moderada:</strong> há menos formados do que em Psicologia, e boa parte da formação acontece em cursos a distância, o que torna o diploma de universidade presencial um diferencial.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Assim como na Psicologia e na Enfermagem, a residência multiprofissional em saúde também recebe assistentes sociais, com bolsa.</p>
+      <div class="tags">
+        <span class="tag">⭐ Serviço Social na Saúde</span>
+        <span class="tag">⭐ Sociojurídico</span>
+        <span class="tag">⭐ Residência Multiprofissional</span>
+        <span class="tag">⭐ Gestão de Políticas Públicas</span>
+        <span class="tag">Direitos Humanos</span>
+        <span class="tag">Infância e Juventude</span>
+        <span class="tag">Violência de Gênero</span>
+        <span class="tag">Saúde Mental</span>
+        <span class="tag">Gerontologia</span>
+        <span class="tag">Assistência Social (SUAS)</span>
+        <span class="tag">Terceiro Setor</span>
+      </div>
+      <p class="note">⭐ Áreas com mais vagas e melhores salários. O sociojurídico, no Tribunal de Justiça, é onde o Serviço Social trabalha mais perto da psicologia jurídica.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um assistente social?</h2></div>
+    <div class="sc-body">
+      <p>O valor depende quase inteiro de onde você está: qual prefeitura, qual órgão, qual esfera de governo.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,8k–4k</div><div class="sal-note">CRAS de prefeitura, ONG ou hospital privado, em geral por 30 horas semanais.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 4,5k–8k</div><div class="sal-note">Concurso estadual, hospital público grande, coordenação de CRAS ou CREAS.</div></div>
+        <div class="sal-card"><div class="sal-stage">Carreira pública / Topo</div><div class="sal-range">R$ 9k–15k</div><div class="sal-note">Analista de Tribunal de Justiça, Ministério Público, INSS e universidades federais.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> as faixas altas existem, mas praticamente só por concurso. Fora do setor público, a renda costuma ficar na faixa inicial por bastante tempo.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.cfess.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CFESS: Conselho Federal de Serviço Social</strong><span>O que o assistente social faz, o código de ética e as campanhas da profissão</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.abepss.org.br" class="lcard" target="_blank"><span class="lc-icon">📚</span><div class="lc-body"><strong>ABEPSS: Associação Brasileira de Ensino e Pesquisa em Serviço Social</strong><span>Como é a formação e o que se pesquisa na área</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.gov.br/mds/pt-br" class="lcard" target="_blank"><span class="lc-icon">🇧🇷</span><div class="lc-body"><strong>Ministério do Desenvolvimento e Assistência Social</strong><span>Como funcionam o SUAS, o CRAS, o CREAS e os programas sociais</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor: Salários</strong><span>Pesquise "assistente social" e compare hospital, empresa e ONG</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Assistente%20Social&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔎</span><div class="lc-body"><strong>Vagas de assistente social hoje</strong><span>Veja quem está contratando neste momento</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Serviço Social costuma ser um caminho para quem…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-ss">
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Injustiça me incomoda de verdade, e eu gostaria de ter ferramenta concreta pra agir.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Me interesso por política, desigualdade e por como o país funciona.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Consigo conversar com gente de realidades muito diferentes da minha sem julgar.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Gosto de ler e debater texto de sociologia, história e política.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Entrar na casa de uma família, num bairro que não conheço, não me assusta.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Consigo ser firme e dizer "não" quando é preciso, mesmo com quem está sofrendo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Gosto de resolver as coisas conectando pessoas e serviços, fazendo a ponte.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Aceito que vou ajudar muita gente sem conseguir resolver tudo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Me vejo estudando pra concurso pra ter estabilidade e salário melhor.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Consigo ouvir histórias duras de violência e abandono e seguir trabalhando.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-ss">0 de 10</span></div>
+      <div class="cl-result" id="res-ss"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAÇÃO ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔍</span><h2>Os três lado a lado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Os três cuidam de pessoas, cada um por uma porta diferente. Esta tabela ajuda a enxergar onde estão as diferenças que importam pra você.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão</th>
+              <th class="h-psi">🧠 Psicologia</th>
+              <th class="h-enf">🩺 Enfermagem</th>
+              <th class="h-ss">🤝 Serviço Social</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Foco principal</td><td>O que a pessoa sente e vive</td><td>O corpo e a recuperação do paciente</td><td>O acesso da pessoa aos direitos</td></tr>
+            <tr><td>Duração</td><td>5 anos</td><td>5 anos</td><td>4 anos</td></tr>
+            <tr><td>Registro obrigatório</td><td>CRP, direto ao se formar</td><td>COREN, direto ao se formar</td><td>CRESS, direto ao se formar</td></tr>
+            <tr><td>Base do curso</td><td>Teorias da mente, pesquisa, estatística</td><td>Biologia, anatomia, farmacologia</td><td>Sociologia, política, legislação</td></tr>
+            <tr><td>Onde trabalha</td><td>Consultório, hospital, tribunal, CRAS</td><td>Hospital, posto de saúde, UTI, SAMU</td><td>CRAS, hospital, fórum, INSS, ONG</td></tr>
+            <tr><td>Jornada típica</td><td>Livre no consultório, 30 a 40h no vínculo</td><td>Plantão 12x36, inclusive noite e feriado</td><td>30 horas semanais garantidas por lei</td></tr>
+            <tr><td>Contato físico com paciente</td><td>Nenhum</td><td>O tempo todo</td><td>Quase nenhum</td></tr>
+            <tr><td>Salário inicial</td><td>R$ 2,5k–4k</td><td>R$ 4k–5,5k</td><td>R$ 2,8k–4k</td></tr>
+            <tr><td>Estabilidade</td><td>Média, cresce com agenda ou concurso</td><td>Alta empregabilidade e piso em lei</td><td>Alta no concurso, baixa no contrato</td></tr>
+            <tr><td>Trabalho remoto</td><td>Sim, atendimento online autorizado</td><td>Raro</td><td>Raro</td></tr>
+            <tr><td>Pergunta central</td><td>"O que está acontecendo com essa pessoa?"</td><td>"Do que esse corpo precisa agora?"</td><td>"Que direito essa pessoa não está conseguindo acessar?"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Para pensar antes da sessão</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        🧠 <strong>Psicologia</strong> costuma atrair quem quer entender o que se passa dentro das pessoas e trabalhar pela palavra e pela escuta, no consultório, no hospital, no tribunal ou na comunidade.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🩺 <strong>Enfermagem</strong> costuma atrair quem quer cuidar com as mãos, gosta de biologia e de ação, e encara plantão e ambiente agitado como parte do trabalho.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🤝 <strong>Serviço Social</strong> costuma atrair quem se move por justiça social, gosta de política e de sociedade, e quer trabalhar pra que o direito saia do papel.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🔎 <strong>Um detalhe que costuma passar batido:</strong> os três trabalham juntos. No CRAS, a equipe é psicólogo e assistente social. No hospital, psicólogo, enfermeiro e assistente social discutem o mesmo paciente. No fórum, o estudo psicossocial é feito pela dupla psicólogo e assistente social. Vale pesquisar como cada um enxerga o mesmo caso.
+      </div>
+      <p class="note" style="margin-top:16px;">Não precisa decidir sozinho. Leve os checklists, esta tabela e a aba "Seus critérios" pra conversar com sua orientadora. A decisão se constrói na sessão, não aqui.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais que existem pra cada formação, explicados de um jeito simples. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no Brasil.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col">
+          <div class="vaga-col-head psi">🧠 Psicologia</div>
+          <div class="vaga-role"><strong>Psicólogo(a) Hospitalar</strong><span>Atende pacientes internados e as famílias deles, e participa das reuniões da equipe de saúde.</span></div>
+          <div class="vaga-role"><strong>Psicólogo(a) de CRAS / CREAS</strong><span>Atende famílias da comunidade, coordena grupos e acompanha casos de violação de direitos.</span></div>
+          <div class="vaga-role"><strong>Psicólogo(a) Perito(a)</strong><span>Avalia pessoas envolvidas em processos na Justiça e escreve o laudo que o juiz usa pra decidir.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn psi" href="https://www.linkedin.com/jobs/search/?keywords=Psic%C3%B3logo&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head enf">🩺 Enfermagem</div>
+          <div class="vaga-role"><strong>Enfermeiro(a) Assistencial</strong><span>Cuida dos pacientes internados, organiza a medicação e coordena os técnicos de enfermagem no plantão.</span></div>
+          <div class="vaga-role"><strong>Enfermeiro(a) de UTI</strong><span>Cuida de pacientes graves, acompanha aparelhos e age rápido quando o quadro muda.</span></div>
+          <div class="vaga-role"><strong>Enfermeiro(a) da Saúde da Família</strong><span>Atende no posto do bairro, faz pré-natal, vacina e visita as famílias em casa.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn enf" href="https://www.linkedin.com/jobs/search/?keywords=Enfermeiro&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head ss">🤝 Serviço Social</div>
+          <div class="vaga-role"><strong>Assistente Social de CRAS</strong><span>Atende famílias, faz cadastro em programas sociais e visita as casas do território.</span></div>
+          <div class="vaga-role"><strong>Assistente Social Hospitalar</strong><span>Ajuda paciente e família a conseguir transporte, benefício e apoio, e organiza a alta com a rede.</span></div>
+          <div class="vaga-role"><strong>Analista de Responsabilidade Social</strong><span>Cuida dos projetos sociais de uma empresa e da relação dela com a comunidade.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn ss" href="https://www.linkedin.com/jobs/search/?keywords=Assistente%20Social&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SEUS CRITÉRIOS ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os três cursos</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estes são os critérios que você elencou como os mais importantes, na ordem em que você mesmo os organizou. A tabela descreve, de forma objetiva, como cada um se apresenta em cada curso. Ela não aponta resposta certa nem indica um caminho: é material pra você pensar e conversar com sua orientadora.</p>
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Muito presente</span>
+        <span><span class="dot y"></span>Presente em parte</span>
+        <span><span class="dot r"></span>Pouco presente</span>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table crit-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th class="h-psi">🧠 Psicologia</th>
+              <th class="h-enf">🩺 Enfermagem</th>
+              <th class="h-ss">🤝 Serviço Social</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Assuntos: psicologia</td>
+              <td data-label="🧠 Psicologia"><span class="dot g"></span>É o assunto do curso inteiro, do primeiro ao último dia.</td>
+              <td data-label="🩺 Enfermagem"><span class="dot r"></span>Aparece em poucas disciplinas. Vira central só pra quem se especializa em saúde mental.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot y"></span>Psicologia social faz parte da formação, mas o foco é o contexto social. O assistente social não faz atendimento psicológico.</td>
+            </tr>
+            <tr>
+              <td>2. Assuntos: cuidados com pacientes</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>Cuida do lado emocional do paciente. Na psicologia hospitalar, isso acontece à beira do leito. O corpo não é com ela.</td>
+              <td data-label="🩺 Enfermagem"><span class="dot g"></span>É o centro da profissão: cuidado direto, contínuo e físico, 24 horas por dia.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot y"></span>No hospital, atende paciente e família, mas o cuidado é com as condições de vida e o acesso a direitos, não com a saúde em si.</td>
+            </tr>
+            <tr>
+              <td>3. Assuntos: diversidade</td>
+              <td data-label="🧠 Psicologia"><span class="dot g"></span>A psicologia social estuda raça, gênero, sexualidade e preconceito, e o código de ética proíbe qualquer discriminação no atendimento.</td>
+              <td data-label="🩺 Enfermagem"><span class="dot y"></span>Atende todo tipo de pessoa, e há conteúdos sobre saúde da população negra, indígena e LGBTQIA+. Não é o eixo do curso.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot g"></span>Desigualdade, raça, gênero e populações vulneráveis estão no centro da formação e do trabalho.</td>
+            </tr>
+            <tr>
+              <td>4. Atividades: apoiar pessoas emocionalmente</td>
+              <td data-label="🧠 Psicologia"><span class="dot g"></span>É o trabalho em si, seja na clínica, no hospital, no fórum ou no CRAS.</td>
+              <td data-label="🩺 Enfermagem"><span class="dot y"></span>Acolher paciente e família com medo acontece todo dia, mas dividido com o cuidado técnico e a rotina do plantão.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot y"></span>A escuta acolhedora faz parte do atendimento, mas o objetivo é garantir direito e encaminhar, não tratar o sofrimento.</td>
+            </tr>
+            <tr>
+              <td>5. Retornos: ter segurança financeira básica</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>Começo irregular no consultório e salário modesto no vínculo. A segurança vem com concurso ou com agenda consolidada.</td>
+              <td data-label="🩺 Enfermagem"><span class="dot g"></span>Muita vaga, piso salarial em lei e concursos frequentes. É dos três o que mais rápido garante uma renda básica.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot y"></span>Concurso de prefeitura é frequente, mas paga pouco em muitas cidades. Contrato temporário é comum.</td>
+            </tr>
+            <tr>
+              <td>6. Retornos: ter equilíbrio entre trabalho e vida pessoal</td>
+              <td data-label="🧠 Psicologia"><span class="dot g"></span>No consultório, você define quantas horas trabalha. No hospital e no CRAS, a jornada é fixa e costuma ser diurna.</td>
+              <td data-label="🩺 Enfermagem"><span class="dot r"></span>Plantão noturno, fim de semana, feriado e dois vínculos são comuns. A folga do 12x36 existe, mas o calendário não é o da maioria.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot g"></span>A lei garante 30 horas semanais, em horário comercial na maior parte dos serviços. O peso aqui é mais emocional do que de horas.</td>
+            </tr>
+            <tr>
+              <td>7. Rotina: ter uma rotina variada</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>O consultório repete o formato: sala, horário, sessão. Hospitalar, jurídica e social variam muito mais, com visita, reunião e caso novo.</td>
+              <td data-label="🩺 Enfermagem"><span class="dot g"></span>Nenhum plantão é igual ao outro. Paciente novo, intercorrência e urgência mudam o dia a toda hora.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot g"></span>Atendimento, visita domiciliar, grupo, reunião com a rede e audiência se alternam na mesma semana.</td>
+            </tr>
+            <tr>
+              <td>8. Assuntos: direitos humanos</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>Muito presente na psicologia social e na jurídica, e na base do código de ética. Na clínica, fica mais no fundo.</td>
+              <td data-label="🩺 Enfermagem"><span class="dot y"></span>Aparece na ética, na bioética e na saúde como direito de todos pelo SUS. Não é o tema central do dia a dia.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot g"></span>É a matéria-prima da profissão. O curso inteiro é construído em torno dos direitos e de como garanti-los.</td>
+            </tr>
+            <tr>
+              <td>9. Atividades: defender direitos</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>Na jurídica, protege criança em processo. Na social, atua com populações vulneráveis. Na clínica, quase não aparece.</td>
+              <td data-label="🩺 Enfermagem"><span class="dot r"></span>Defende o paciente dentro do hospital, com segurança e dignidade no cuidado. Fora disso, não é parte do trabalho.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot g"></span>É a atividade principal: orientar, encaminhar, cobrar da rede e acionar a Justiça quando um direito é violado.</td>
+            </tr>
+            <tr>
+              <td>10. Ambientes: ambiente tranquilo</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>O consultório é silencioso e reservado. Hospital, fórum e CRAS são movimentados e com interrupção.</td>
+              <td data-label="🩺 Enfermagem"><span class="dot r"></span>Hospital e pronto-socorro são agitados, com alarme, urgência e barulho. Posto de saúde é um pouco mais calmo.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot r"></span>CRAS, hospital e fórum costumam ter fila, demanda alta e situações tensas. Sala tranquila é exceção.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Cada célula descreve como o critério aparece na prática, não se ele é bom ou ruim. Você é quem sabe o peso de cada um na sua vida.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Como os três se posicionam nos seus critérios</h2></div>
+    <div class="sc-body">
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Verde = 2 pontos</span>
+        <span><span class="dot y"></span>Amarelo = 1 ponto</span>
+        <span><span class="dot r"></span>Vermelho = 0 ponto</span>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 🧠 Psicologia</span><span class="rank-score">14 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill psi" style="width:70%;">14</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 🤝 Serviço Social</span><span class="rank-score">14 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill ss" style="width:70%;">14</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥉 🩺 Enfermagem</span><span class="rank-score">9 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill enf" style="width:45%;">9</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com</p>
+</footer>
+
+
+<script>
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    if (checked > 0) resEl.classList.add('show');
+    else resEl.classList.remove('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
