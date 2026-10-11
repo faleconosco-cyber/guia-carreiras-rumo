@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Carreiras: Engenharia Civil, Direito, Serviço Social e Arquitetura | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Engenharia Civil: Laranja Rumo */
+      --eng:     #D9563F;
+      --eng-lt:  #FFF0ED;
+      --eng-mid: #FBC9BE;
+
+      /* Direito: Bordô */
+      --dir:     #6B2F3C;
+      --dir-lt:  #F6EAED;
+      --dir-mid: #DCC0C8;
+
+      /* Serviço Social: Verde Profundo */
+      --ss:     #3B503F;
+      --ss-lt:  #EAEFEB;
+      --ss-mid: #C2CFC4;
+
+      /* Arquitetura: Amarelo Rumo (tom escuro) */
+      --arq:     #C08A2E;
+      --arq-lt:  #FAF3E8;
+      --arq-mid: #EDD9B8;
+
+      /* Comparação: Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 640px; line-height: 1.6; }
+
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.eng.active { color: var(--eng); border-bottom-color: var(--eng); }
+    .tab-btn.dir.active { color: var(--dir); border-bottom-color: var(--dir); }
+    .tab-btn.ss.active { color: var(--ss); border-bottom-color: var(--ss); }
+    .tab-btn.arq.active { color: var(--arq); border-bottom-color: var(--arq); }
+    .tab-btn.cmp.active, .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .eng .sc-head { background: var(--eng-lt); border-color: var(--eng-mid); } .eng .sc-head h2 { color: var(--eng); }
+    .dir .sc-head { background: var(--dir-lt); border-color: var(--dir-mid); } .dir .sc-head h2 { color: var(--dir); }
+    .ss .sc-head { background: var(--ss-lt); border-color: var(--ss-mid); } .ss .sc-head h2 { color: var(--ss); }
+    .arq .sc-head { background: var(--arq-lt); border-color: var(--arq-mid); } .arq .sc-head h2 { color: var(--arq); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); } .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .eng ul.sl li::before { color: var(--eng); }
+    .dir ul.sl li::before { color: var(--dir); }
+    .ss ul.sl li::before { color: var(--ss); }
+    .arq ul.sl li::before { color: var(--arq); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .eng .tag { background: var(--eng-lt); color: var(--eng); border-color: var(--eng-mid); }
+    .dir .tag { background: var(--dir-lt); color: var(--dir); border-color: var(--dir-mid); }
+    .ss .tag { background: var(--ss-lt); color: var(--ss); border-color: var(--ss-mid); }
+    .arq .tag { background: var(--arq-lt); color: #8A6118; border-color: var(--arq-mid); }
+
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .eng .hbox { background: var(--eng-lt); border-color: var(--eng); }
+    .dir .hbox { background: var(--dir-lt); border-color: var(--dir); }
+    .ss .hbox { background: var(--ss-lt); border-color: var(--ss); }
+    .arq .hbox { background: var(--arq-lt); border-color: var(--arq); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .eng .accent { color: var(--eng); }
+    .dir .accent { color: var(--dir); }
+    .ss .accent { color: var(--ss); }
+    .arq .accent { color: var(--arq); }
+
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .eng .tech-card { background: var(--eng-lt); border-color: var(--eng-mid); }
+    .dir .tech-card { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .ss .tech-card { background: var(--ss-lt); border-color: var(--ss-mid); }
+    .arq .tech-card { background: var(--arq-lt); border-color: var(--arq-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .eng .tech-card strong { color: var(--eng); }
+    .dir .tech-card strong { color: var(--dir); }
+    .ss .tech-card strong { color: var(--ss); }
+    .arq .tech-card strong { color: #8A6118; }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .eng .sal-card { background: var(--eng-lt); border-color: var(--eng-mid); }
+    .dir .sal-card { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .ss .sal-card { background: var(--ss-lt); border-color: var(--ss-mid); }
+    .arq .sal-card { background: var(--arq-lt); border-color: var(--arq-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .eng .sal-range { color: var(--eng); }
+    .dir .sal-range { color: var(--dir); }
+    .ss .sal-range { color: var(--ss); }
+    .arq .sal-range { color: #8A6118; }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-eng { background: var(--eng); }
+    .comp-table th.h-dir { background: var(--dir); }
+    .comp-table th.h-ss { background: var(--ss); }
+    .comp-table th.h-arq { background: var(--arq); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .eng .lcard:hover { border-color: var(--eng); }
+    .dir .lcard:hover { border-color: var(--dir); }
+    .ss .lcard:hover { border-color: var(--ss); }
+    .arq .lcard:hover { border-color: var(--arq); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .eng .cl-item:hover, .eng .cl-item.checked { background: var(--eng-lt); border-color: var(--eng); }
+    .dir .cl-item:hover, .dir .cl-item.checked { background: var(--dir-lt); border-color: var(--dir); }
+    .ss .cl-item:hover, .ss .cl-item.checked { background: var(--ss-lt); border-color: var(--ss); }
+    .arq .cl-item:hover, .arq .cl-item.checked { background: var(--arq-lt); border-color: var(--arq); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .eng .cl-item.checked .cl-box { background: var(--eng); border-color: var(--eng); }
+    .dir .cl-item.checked .cl-box { background: var(--dir); border-color: var(--dir); }
+    .ss .cl-item.checked .cl-box { background: var(--ss); border-color: var(--ss); }
+    .arq .cl-item.checked .cl-box { background: var(--arq); border-color: var(--arq); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .eng .cl-score span { color: var(--eng); font-weight: 800; }
+    .dir .cl-score span { color: var(--dir); font-weight: 800; }
+    .ss .cl-score span { color: var(--ss); font-weight: 800; }
+    .arq .cl-score span { color: var(--arq); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .eng .cl-result { background: var(--eng-lt); border-color: var(--eng-mid); }
+    .dir .cl-result { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .ss .cl-result { background: var(--ss-lt); border-color: var(--ss-mid); }
+    .arq .cl-result { background: var(--arq-lt); border-color: var(--arq-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .sub { font-size: 13px; color: var(--text); line-height: 1.6; }
+
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+    .rank-fill.eng { background: var(--eng); }
+    .rank-fill.dir { background: var(--dir); }
+    .rank-fill.ss { background: var(--ss); }
+    .rank-fill.arq { background: var(--arq); }
+
+    .vagas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-col-head.eng, .vaga-btn.eng { background: var(--eng); }
+    .vaga-col-head.dir, .vaga-btn.dir { background: var(--dir); }
+    .vaga-col-head.ss, .vaga-btn.ss { background: var(--ss); }
+    .vaga-col-head.arq, .vaga-btn.arq { background: var(--arq); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table tr:nth-child(even) td:first-child { background: var(--cmp); }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>Engenharia Civil · Direito · Serviço Social · Arquitetura e Urbanismo
+    <span class="hd-accent">pesquisar é o começo da escolha</span>
+  </h1>
+  <p class="hd-sub">Este guia é pra você levar pra casa nesta semana de pesquisa. São quatro cursos: dois constroem a cidade (Engenharia Civil e Arquitetura) e dois trabalham com a lei e os direitos das pessoas (Direito e Serviço Social). Como segurança pública, investigação e perícia apareceram entre os seus critérios, cada aba tem uma seção mostrando onde esses temas aparecem naquele curso. Leia com calma, marque o que fizer sentido e traga tudo pra próxima sessão.</p>
+</header>
+
+<nav>
+  <button class="tab-btn eng active" data-c="eng" onclick="show('eng')">🏗️ Engenharia Civil</button>
+  <button class="tab-btn dir" data-c="dir" onclick="show('dir')">⚖️ Direito</button>
+  <button class="tab-btn ss" data-c="ss" onclick="show('ss')">🤝 Serviço Social</button>
+  <button class="tab-btn arq" data-c="arq" onclick="show('arq')">📐 Arquitetura</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">🔍 Comparar os quatro</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ ENGENHARIA CIVIL ═══════════════════════════════ -->
+<div class="panel eng active" id="p-eng">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Engenharia Civil?</h2></div>
+    <div class="sc-body">
+      <p>Engenharia Civil forma quem calcula, planeja e coloca de pé tudo o que é construído: prédios, pontes, estradas, túneis, barragens, redes de água e esgoto. É um <strong>bacharelado de 5 anos</strong>, com muita matemática e física no começo e muita obra e projeto no final. Formado, você se registra no CREA e passa a poder assinar projetos e obras.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Cálculo, física, química, álgebra, desenho técnico e programação. É o ciclo básico das engenharias, e é onde mais gente reprova ou desiste.</li>
+        <li><strong>3º–4º ano:</strong> Resistência dos materiais, estruturas de concreto e aço, solos e fundações, hidráulica, saneamento, transportes e materiais de construção. O curso vira engenharia civil de verdade.</li>
+        <li><strong>5º ano:</strong> Gestão e orçamento de obras, estágio obrigatório e TCC. Muita gente já passa o ano dentro de uma construtora.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a engenharia é regulada pelo sistema CONFEA/CREA. Toda obra e todo projeto têm um engenheiro que assina a responsabilidade técnica (a chamada ART). Se algo der errado, é o nome dele que responde, inclusive na Justiça.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Engenheiro de obra:</strong> comandar o canteiro, organizar as equipes, controlar prazo, qualidade e custo. É o caminho mais comum de quem começa.</li>
+        <li><strong>Projeto estrutural:</strong> calcular vigas, pilares e lajes pra que o prédio fique de pé com segurança. Trabalho de escritório, muito técnico.</li>
+        <li><strong>Geotecnia e fundações:</strong> estudar o solo, conter encostas e evitar deslizamentos.</li>
+        <li><strong>Infraestrutura:</strong> estradas, pontes, metrô, portos e aeroportos.</li>
+        <li><strong>Saneamento e recursos hídricos:</strong> redes de água, esgoto, drenagem e controle de enchentes.</li>
+        <li><strong>Orçamento e planejamento:</strong> calcular quanto a obra vai custar e montar o cronograma.</li>
+        <li><strong>Patologia e perícia:</strong> descobrir por que uma construção rachou, infiltrou ou caiu, e escrever o laudo.</li>
+        <li><strong>Fiscalização pública:</strong> conferir obras e projetos dentro de prefeituras, tribunais de contas e órgãos de governo.</li>
+        <li><strong>Defesa Civil:</strong> avaliar áreas de risco, interditar imóveis e agir em desastres.</li>
+        <li><strong>Mercado imobiliário:</strong> incorporação, avaliação de imóveis e gestão de empreendimentos.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🚔</span><h2>Segurança pública, investigação e perícia na Engenharia Civil</h2></div>
+    <div class="sc-body">
+      <p>Pouca gente sabe, mas a engenharia tem uma porta própria pro mundo da investigação.</p>
+      <ul class="sl" style="margin-top:10px;">
+        <li><strong>Perito criminal:</strong> Polícia Federal e polícias civis abrem concurso de perito com vagas específicas pra engenheiro civil. O trabalho é investigar desabamento, incêndio, obra pública superfaturada e crime ambiental, e transformar isso em prova técnica.</li>
+        <li><strong>Engenharia forense e perícia judicial:</strong> o juiz nomeia um engenheiro pra explicar tecnicamente o que aconteceu numa construção. É uma investigação com método, medição e laudo.</li>
+        <li><strong>Forças Armadas:</strong> o Exército forma engenheiros no IME (Instituto Militar de Engenharia), e Exército, Marinha e Aeronáutica abrem concursos pra engenheiros formados entrarem como oficiais. Eles constroem quartéis, pistas, pontes e obras de defesa.</li>
+        <li><strong>Defesa Civil:</strong> no Rio, onde chuva forte vira deslizamento, o engenheiro da Defesa Civil é quem diz se uma casa pode ou não continuar habitada.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🔎 <strong>Para pesquisar:</strong> procure "concurso perito criminal engenharia civil" e veja o que o edital pede e o que o perito faz no dia a dia.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Engenharia Civil junta conta com chão de obra: resolver um cálculo de manhã e explicar pro mestre de obras à tarde como aquilo vai ser feito.</p>
+      <div class="tags">
+        <span class="tag">Gosto por matemática e física</span>
+        <span class="tag">Raciocínio lógico</span>
+        <span class="tag">Visão espacial</span>
+        <span class="tag">Organização</span>
+        <span class="tag">Liderança</span>
+        <span class="tag">Comunicação direta</span>
+        <span class="tag">Responsabilidade</span>
+        <span class="tag">Resolver problema na hora</span>
+        <span class="tag">Atenção a detalhe</span>
+        <span class="tag">Disposição pra campo</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você passa por uma obra, por um viaduto ou por um prédio alto, já se pegou pensando em como aquilo fica de pé? E como você se sente diante de uma lista de exercícios de física: travado ou desafiado?
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>Os dois primeiros anos são de cálculo e física pesados.</strong> É onde a reprovação é mais alta. Quem não gosta de exatas sofre bastante antes de chegar na parte de construção.</div>
+      <div class="cbox"><strong>Obra é campo, não escritório.</strong> Sol, poeira, começo cedo e, às vezes, obra em outra cidade. Quem fica em obra passa boa parte do dia em pé.</div>
+      <div class="cbox"><strong>O mercado sobe e desce com a economia.</strong> Quando o país para de construir, sobra engenheiro. Já houve fases de muita demissão no setor.</div>
+      <div class="cbox"><strong>A responsabilidade é sua, com seu nome.</strong> Erro de cálculo ou de execução pode custar vidas, e o engenheiro responde por isso.</div>
+      <div class="cbox"><strong>O piso salarial existe, mas nem sempre é cumprido.</strong> Há piso em lei federal, mas muita empresa contrata engenheiro como "analista" ou "assistente" pra pagar menos.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🏗️</div><strong>BIM</strong><p>O prédio inteiro vira um modelo 3D com estrutura, instalações e custo. Já é exigido em obra pública federal.</p></div>
+        <div class="tech-card"><div class="tc-icon">🚁</div><strong>Drones</strong><p>Medem terreno, acompanham o avanço da obra e inspecionam pontes e fachadas sem andaime.</p></div>
+        <div class="tech-card"><div class="tc-icon">📡</div><strong>Sensores na estrutura</strong><p>Pontes e barragens monitoradas o tempo todo, avisando antes que algo dê errado.</p></div>
+        <div class="tech-card"><div class="tc-icon">⚙️</div><strong>IA no planejamento</strong><p>Programas montam orçamento e cronograma mais rápido e apontam riscos de atraso.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏭</div><strong>Construção industrializada</strong><p>Partes da obra feitas em fábrica e montadas no local, com menos desperdício.</p></div>
+        <div class="tech-card"><div class="tc-icon">🖨️</div><strong>Impressão 3D</strong><p>Já existem casas impressas em concreto. Ainda é começo, mas está avançando.</p></div>
+      </div>
+      <p class="note">⚡ O software calcula. Quem decide se a solução é segura, quem assina e quem resolve o problema que aparece no meio da obra continua sendo o engenheiro.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Saneamento e infraestrutura puxam vagas:</strong> o Marco Legal do Saneamento obriga o país a levar água e esgoto pra quase todo mundo até 2033. Isso significa muita obra pela frente.</li>
+        <li><strong>Habitação voltou a crescer:</strong> programas de moradia popular reaqueceram as construtoras.</li>
+        <li><strong>Concurso tem bastante:</strong> prefeituras, Petrobras, Caixa, DNIT, tribunais de contas, polícias (perito) e Forças Armadas contratam engenheiros civis.</li>
+        <li><strong>Oscila com a economia:</strong> em crise, a construção é dos primeiros setores a parar. Em crescimento, é dos primeiros a contratar.</li>
+        <li><strong>Muitos formados:</strong> a engenharia civil abriu muitas vagas em faculdades na última década. Estágio bom e especialização fazem diferença.</li>
+        <li><strong>Campo e escritório:</strong> dá pra escolher entre a vida de obra e a vida de projeto, que são rotinas bem diferentes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>A especialização define se você vai ficar na obra, no escritório de cálculo, no laudo ou na gestão.</p>
+      <div class="tags">
+        <span class="tag">⭐ Engenharia Diagnóstica e Perícias</span>
+        <span class="tag">⭐ Engenharia de Segurança do Trabalho</span>
+        <span class="tag">⭐ Estruturas</span>
+        <span class="tag">⭐ Gestão de Obras e Projetos</span>
+        <span class="tag">Geotecnia</span>
+        <span class="tag">Saneamento</span>
+        <span class="tag">Transportes e Rodovias</span>
+        <span class="tag">BIM</span>
+        <span class="tag">Avaliação de Imóveis</span>
+        <span class="tag">Recursos Hídricos</span>
+      </div>
+      <p class="note">⭐ Perícias é a área que leva a engenharia pra investigação. Segurança do Trabalho é uma pós que dá um título profissional novo e é muito procurada.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um engenheiro civil?</h2></div>
+    <div class="sc-body">
+      <p>O salário depende muito de obra x escritório, do porte da empresa e de ser ou não concurso.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 5k–8k</div><div class="sal-note">Engenheiro júnior em construtora ou escritório de projeto. Estágio paga bem menos.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 9k–15k</div><div class="sal-note">Engenheiro responsável por obra, projetista experiente ou concursado em prefeitura e estatal.</div></div>
+        <div class="sal-card"><div class="sal-stage">Gestão / Topo</div><div class="sal-range">R$ 16k–30k+</div><div class="sal-note">Gerente de obra, diretor de construtora, perito criminal federal e carreiras em estatais.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> a lei fixa um piso de 8,5 salários mínimos pra engenheiro em jornada de 8 horas. Na prática, muita empresa paga abaixo disso usando outro nome de cargo. Vale perguntar isso a um engenheiro que você conheça.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.confea.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CONFEA: Conselho Federal de Engenharia e Agronomia</strong><span>O que o engenheiro pode fazer, registro e responsabilidade técnica</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.crea-rj.org.br" class="lcard" target="_blank"><span class="lc-icon">📋</span><div class="lc-body"><strong>CREA-RJ</strong><span>O conselho no Rio: notícias, fiscalização e eventos pra estudantes</span></div><span class="lc-arr">→</span></a>
+        <a href="https://ibape-nacional.com.br" class="lcard" target="_blank"><span class="lc-icon">🔍</span><div class="lc-body"><strong>IBAPE: Instituto Brasileiro de Avaliações e Perícias de Engenharia</strong><span>Como funciona a perícia de engenharia, na Justiça e fora dela</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.google.com/search?q=concurso+perito+criminal+engenharia+civil" class="lcard" target="_blank"><span class="lc-icon">🚔</span><div class="lc-body"><strong>Concursos de perito criminal em engenharia</strong><span>Editais, salários e o que cai na prova</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Engenheiro%20Civil&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔎</span><div class="lc-body"><strong>Vagas de engenheiro civil hoje</strong><span>Quem está contratando neste momento</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Engenharia Civil costuma ser um caminho para quem…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-eng">
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Matemática e física não me assustam. Às vezes até gosto do desafio de resolver um problema difícil.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Fico curioso pra saber como as coisas são construídas e por que ficam de pé.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Ver algo concreto saindo do papel me motiva mais do que trabalhar só com ideias.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Me vejo coordenando um grupo grande de pessoas pra entregar algo no prazo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Trabalhar ao ar livre, em canteiro de obra, não me incomoda.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Consigo tomar decisão rápida quando aparece um problema inesperado.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Investigar a causa de um problema técnico, com medição e método, me parece interessante.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Aguento responsabilidade grande sem perder o sono toda noite.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Topo enfrentar dois anos de cálculo pesado antes de chegar na parte que mais me atrai.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eng')"><div class="cl-box"></div><div class="cl-text">Converso bem tanto com quem tem diploma quanto com quem aprendeu o ofício na prática.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-eng">0 de 10</span></div>
+      <div class="cl-result" id="res-eng"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ DIREITO ═══════════════════════════════ -->
+<div class="panel dir" id="p-dir">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Direito?</h2></div>
+    <div class="sc-body">
+      <p>Direito é o curso que ensina as regras do jogo da sociedade: o que a lei permite, o que ela proíbe, como se resolve um conflito e como se defende alguém. É um <strong>bacharelado de 5 anos</strong>, com estágio obrigatório e trabalho de conclusão. Quem quer atuar como advogado faz os 5 anos e ainda passa no Exame de Ordem da OAB.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Introdução ao Direito, Filosofia, Sociologia, Direito Constitucional, Civil e Penal. Muita leitura, muita teoria e um vocabulário novo pra aprender.</li>
+        <li><strong>3º–4º ano:</strong> Processo Civil, Processo Penal, Trabalho, Tributário, Administrativo e Empresarial. Muitas faculdades oferecem Criminologia e Medicina Legal como disciplinas.</li>
+        <li><strong>5º ano:</strong> Estágio no Núcleo de Prática Jurídica, TCC e, na maioria das vezes, preparação paralela pra OAB ou pra concurso.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Exame de Ordem:</strong> o diploma sozinho não deixa você advogar. Sem aprovação na OAB você pode trabalhar em área jurídica de empresa e prestar concurso de nível superior, mas não pode assinar processo nem se chamar advogado.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Advocacia em escritório:</strong> defender clientes em processos, dar pareceres, negociar acordos. Pode ser escritório grande, banca pequena ou trabalho autônomo.</li>
+        <li><strong>Departamento jurídico de empresa:</strong> cuidar de contratos e riscos legais por dentro, com carteira assinada e rotina mais previsível.</li>
+        <li><strong>Magistratura:</strong> ser juiz. Concurso muito disputado, que exige anos de estudo e prática jurídica prévia.</li>
+        <li><strong>Ministério Público:</strong> promotor ou procurador, atuando na defesa da sociedade, do consumidor, do meio ambiente e da infância.</li>
+        <li><strong>Defensoria Pública:</strong> defender quem não pode pagar advogado.</li>
+        <li><strong>Concursos em geral:</strong> tribunais, Receita, procuradorias e agências reguladoras. É a formação com mais portas no serviço público.</li>
+        <li><strong>Compliance e proteção de dados:</strong> garantir que a empresa siga as regras. Área nova, em alta e bem paga.</li>
+        <li><strong>Mediação e arbitragem:</strong> resolver conflito fora do tribunal, com acordo em vez de briga.</li>
+        <li><strong>Carreira acadêmica:</strong> mestrado, doutorado e docência.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🚔</span><h2>Segurança pública, investigação e perícia no Direito</h2></div>
+    <div class="sc-body">
+      <p>De todos os cursos deste guia, o Direito é o que tem mais carreiras ligadas diretamente à segurança pública.</p>
+      <ul class="sl" style="margin-top:10px;">
+        <li><strong>Delegado de polícia:</strong> comanda a delegacia e conduz a investigação criminal, na Polícia Civil ou na Polícia Federal. O concurso exige bacharelado em Direito.</li>
+        <li><strong>Promotor de Justiça criminal:</strong> no Ministério Público, acusa quem cometeu crime, acompanha investigações e controla a atividade da polícia.</li>
+        <li><strong>Advogado criminalista e defensor público:</strong> defende quem é acusado. Investiga provas, testemunhas e falhas do processo.</li>
+        <li><strong>Juiz criminal e Justiça Militar:</strong> existe uma Justiça própria pros crimes militares, com juízes e promotores especializados.</li>
+        <li><strong>Forças Armadas:</strong> Exército, Marinha e Aeronáutica têm oficiais formados em Direito, que fazem a assessoria jurídica dos quartéis.</li>
+        <li><strong>Agente e escrivão de polícia:</strong> esses concursos aceitam qualquer diploma de nível superior, e o Direito ajuda muito na prova.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🔬 <strong>Um detalhe sobre perícia:</strong> o perito criminal, aquele que trabalha no laboratório e na cena do crime, costuma ser formado em áreas técnicas, como engenharia, química, biologia e contabilidade. No Direito, a ciência forense aparece como disciplina e como ferramenta, não como profissão.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Direito é, antes de tudo, um curso de texto: ler muito, entender exatamente o que está escrito e escrever com precisão.</p>
+      <div class="tags">
+        <span class="tag">Gosto por leitura densa</span>
+        <span class="tag">Boa escrita</span>
+        <span class="tag">Argumentação</span>
+        <span class="tag">Memória e organização</span>
+        <span class="tag">Raciocínio lógico</span>
+        <span class="tag">Atenção a detalhe</span>
+        <span class="tag">Oratória</span>
+        <span class="tag">Disciplina de estudo</span>
+        <span class="tag">Interesse por política e sociedade</span>
+        <span class="tag">Ética</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando alguém defende uma opinião que você acha errada, dá vontade de construir um contra-argumento organizado, com fundamento, ou você prefere sair da discussão? E ler um texto longo, cheio de detalhe, te cansa ou te prende?
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>É o curso com mais formados do país.</strong> São mais de mil faculdades de Direito no Brasil e centenas de milhares de advogados inscritos na OAB. Chegar a um bom lugar exige estágio bom, especialização e rede de contatos.</div>
+      <div class="cbox"><strong>O começo costuma ser mal pago.</strong> Estágio de escritório e primeiro emprego pagam pouco perto do tamanho da jornada.</div>
+      <div class="cbox"><strong>Concurso é um projeto de anos.</strong> Delegado, juiz e promotor exigem tempo de prática jurídica depois da formatura e anos de estudo quase em tempo integral.</div>
+      <div class="cbox"><strong>Volume de leitura pesado e constante.</strong> A lei muda, as decisões dos tribunais mudam, e você precisa acompanhar.</div>
+      <div class="cbox"><strong>Prazo processual não perdoa.</strong> A rotina de escritório é regida por prazos rígidos, o que gera pressão real e, muitas vezes, jornada longa.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">⚙️</div><strong>IA na petição</strong><p>Ferramentas já redigem minutas e resumem processos. A pesquisa braçal encolheu, e a estratégia virou o diferencial.</p></div>
+        <div class="tech-card"><div class="tc-icon">💻</div><strong>Processo 100% digital</strong><p>Audiência por vídeo e processo eletrônico viraram padrão.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔐</div><strong>LGPD e dados</strong><p>A lei de proteção de dados criou uma área inteira de trabalho que não existia dez anos atrás.</p></div>
+        <div class="tech-card"><div class="tc-icon">🕵️</div><strong>Crime digital</strong><p>Golpe por aplicativo, invasão e fraude online criaram delegacias e promotorias especializadas.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Jurimetria</strong><p>Analisar milhares de decisões pra prever o resultado de um processo.</p></div>
+        <div class="tech-card"><div class="tc-icon">🧬</div><strong>Prova técnica</strong><p>DNA, câmeras e dados de celular mudaram a investigação, e o jurista precisa saber questionar essa prova.</p></div>
+      </div>
+      <p class="note">⚡ O que a máquina não faz: sustentar oralmente, negociar sob pressão, escolher a tese e responder pela decisão.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado enorme e muito concorrido:</strong> há vaga em todo lugar, mas a disputa por posição boa é forte desde o estágio.</li>
+        <li><strong>Serviço público é o grande atrativo:</strong> as carreiras jurídicas de Estado estão entre as mais bem pagas do país, com estabilidade.</li>
+        <li><strong>Escritórios grandes concentram os melhores salários privados:</strong> tributário e societário pagam acima da média.</li>
+        <li><strong>Jurídico de empresa cresce:</strong> muita gente prefere o departamento interno pela previsibilidade de horário e de salário.</li>
+        <li><strong>Áreas novas contratam:</strong> compliance, proteção de dados e direito digital abriram vagas que não existiam.</li>
+        <li><strong>Advocacia autônoma é possível cedo:</strong> dá pra abrir a própria banca logo depois da OAB, com liberdade grande e renda instável no começo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em Direito, a especialização não é opcional. É ela que define quanto você ganha e onde você trabalha.</p>
+      <div class="tags">
+        <span class="tag">⭐ Direito Penal e Processo Penal</span>
+        <span class="tag">⭐ Ciências Criminais e Criminologia</span>
+        <span class="tag">⭐ Segurança Pública</span>
+        <span class="tag">⭐ Preparação para carreiras policiais</span>
+        <span class="tag">Tributário</span>
+        <span class="tag">Compliance e LGPD</span>
+        <span class="tag">Trabalhista</span>
+        <span class="tag">Civil e Família</span>
+        <span class="tag">Direito Digital</span>
+        <span class="tag">Direito Militar</span>
+        <span class="tag">Ambiental</span>
+        <span class="tag">Mediação e Arbitragem</span>
+      </div>
+      <p class="note">⭐ As áreas que encostam em investigação, criminologia e segurança pública.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha quem se forma em Direito?</h2></div>
+    <div class="sc-body">
+      <p>A faixa é uma das mais largas de todas as profissões: depende demais da área, do porte do escritório e de ser ou não carreira pública.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,5k–4,5k</div><div class="sal-note">Advogado júnior em escritório ou analista jurídico em empresa. Estágio paga bem menos.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 7k–15k</div><div class="sal-note">Advogado com área definida e alguns anos de experiência, ou concursado em tribunal.</div></div>
+        <div class="sal-card"><div class="sal-stage">Carreira pública / Topo</div><div class="sal-range">R$ 20k–40k+</div><div class="sal-note">Delegado, juiz, promotor, defensor, sócio de escritório e diretor jurídico.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> a advocacia autônoma não tem salário, tem faturamento. Pode ser um mês de R$ 2 mil e outro de R$ 20 mil. A carreira pública é o oposto: valor alto, fixo e previsível, com anos de estudo como preço de entrada.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.oab.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>OAB: Ordem dos Advogados do Brasil</strong><span>Exame de Ordem, áreas de atuação e regras da profissão</span></div><span class="lc-arr">→</span></a>
+        <a href="https://forumseguranca.org.br" class="lcard" target="_blank"><span class="lc-icon">🚔</span><div class="lc-body"><strong>Fórum Brasileiro de Segurança Pública</strong><span>Dados e pesquisas sobre violência, polícia e sistema de justiça no Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.conjur.com.br" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Consultor Jurídico (ConJur)</strong><span>Notícia jurídica diária: dá pra sentir como é o dia a dia do mundo do Direito</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.google.com/search?q=concurso+delegado+de+pol%C3%ADcia+requisitos+sal%C3%A1rio" class="lcard" target="_blank"><span class="lc-icon">⚖️</span><div class="lc-body"><strong>Concurso de delegado de polícia</strong><span>Requisitos, salários e como é a preparação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Advogado&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔎</span><div class="lc-body"><strong>Vagas de advogado hoje</strong><span>Quem está contratando neste momento</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Direito costuma ser um caminho para quem…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-dir">
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Leio bastante e não me assusto com texto longo e difícil.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Escrevo bem e gosto de organizar uma ideia em argumento, com começo, meio e conclusão.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Tenho interesse por política, notícia e pelo funcionamento das instituições do país.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Detalhe importa pra mim. Percebo quando uma palavra muda o sentido de uma frase.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Falar em público me dá frio na barriga, mas não me paralisa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Consigo estudar sozinho, com disciplina, por períodos longos e sem ninguém cobrando.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Acompanho casos criminais e fico pensando em como a investigação foi feita.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Trabalhar sob prazo rígido me organiza mais do que me trava.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Me vejo estudando anos pra um concurso em troca de estabilidade.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Consigo defender uma posição mesmo quando ela não é a mais popular na roda.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-dir">0 de 10</span></div>
+      <div class="cl-result" id="res-dir"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SERVIÇO SOCIAL ═══════════════════════════════ -->
+<div class="panel ss" id="p-ss">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Serviço Social?</h2></div>
+    <div class="sc-body">
+      <p>Serviço Social forma o assistente social, profissional que trabalha pra que as pessoas consigam acessar os direitos que já têm: saúde, benefício, moradia, proteção contra violência, documentação. É um <strong>bacharelado de 4 anos</strong>, com estágio supervisionado obrigatório. Formado, você se registra no Conselho Regional de Serviço Social (CRESS).</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Sociologia, filosofia, economia política, história do Brasil, psicologia social e fundamentos do Serviço Social. Muita leitura e muito debate.</li>
+        <li><strong>3º ano:</strong> Políticas sociais (saúde, assistência, previdência, educação), direitos humanos, legislação social, pesquisa e o jeito de atender: entrevista, visita domiciliar, estudo social.</li>
+        <li><strong>4º ano:</strong> Estágio supervisionado em CRAS, hospital, fórum, escola ou empresa, mais o TCC.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Não é caridade:</strong> Serviço Social não é assistencialismo nem trabalho voluntário. É profissão regulamentada por lei, com código de ética próprio, e a lei garante jornada de 30 horas semanais para o assistente social.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Assistência social (CRAS e CREAS):</strong> atender famílias em situação de vulnerabilidade e casos de violação de direitos, como violência doméstica e trabalho infantil.</li>
+        <li><strong>Hospital:</strong> garantir que o paciente e a família tenham acesso a transporte, benefício, medicamento e rede de apoio.</li>
+        <li><strong>Justiça:</strong> no fórum, faz estudo social em casos de guarda, adoção e violência, junto com o psicólogo.</li>
+        <li><strong>Previdência (INSS):</strong> orientar sobre aposentadoria, benefício por deficiência e auxílios.</li>
+        <li><strong>Saúde mental:</strong> atuar em CAPS, ajudando pessoas em sofrimento psíquico a manter vínculos, renda e moradia.</li>
+        <li><strong>Educação:</strong> em escola e universidade, trabalhar com evasão, assistência estudantil e situações de violência.</li>
+        <li><strong>Empresa:</strong> em RH e em projetos de responsabilidade social.</li>
+        <li><strong>ONGs e movimentos sociais:</strong> projetos com pessoas em situação de rua, migrantes e comunidades.</li>
+        <li><strong>Gestão de políticas públicas:</strong> planejar e avaliar programas sociais em secretarias de governo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🚔</span><h2>Segurança pública, investigação e perícia no Serviço Social</h2></div>
+    <div class="sc-body">
+      <p>O assistente social não investiga crime, mas trabalha dentro de várias instituições da segurança pública e da Justiça.</p>
+      <ul class="sl" style="margin-top:10px;">
+        <li><strong>Sistema prisional:</strong> atende pessoas presas e as famílias delas, cuida de documentação, visita, benefício e da preparação pra saída.</li>
+        <li><strong>Sistema socioeducativo:</strong> acompanha adolescentes que cumprem medida (no Rio, nas unidades do DEGASE) e trabalha com a família e a escola.</li>
+        <li><strong>Forças Armadas:</strong> Exército, Marinha e Aeronáutica têm assistentes sociais como oficiais, cuidando dos militares e das famílias deles. A entrada costuma ser por seleção de oficial técnico temporário ou por concurso.</li>
+        <li><strong>Polícias e rede de proteção:</strong> algumas polícias e as delegacias especializadas no atendimento à mulher trabalham junto com equipes de assistentes sociais.</li>
+        <li><strong>Perícia social:</strong> na Justiça, o assistente social faz o estudo social, uma apuração com entrevista, visita e documentos, que vira laudo pro juiz. É investigação de contexto de vida, não de crime.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🔎 <strong>Para pesquisar:</strong> a criminologia crítica, que estuda por que o sistema penal pune mais certos grupos, aparece em vários cursos de Serviço Social. Vale olhar a grade das faculdades que você está considerando.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Serviço Social pede olhar pra pessoa e, ao mesmo tempo, pro contexto que produz a situação dela.</p>
+      <div class="tags">
+        <span class="tag">Senso de justiça</span>
+        <span class="tag">Interesse por política e sociedade</span>
+        <span class="tag">Escuta</span>
+        <span class="tag">Respeito à diferença</span>
+        <span class="tag">Leitura e escrita</span>
+        <span class="tag">Firmeza</span>
+        <span class="tag">Articulação com outros serviços</span>
+        <span class="tag">Conhecer leis e direitos</span>
+        <span class="tag">Trabalho em equipe</span>
+        <span class="tag">Estabilidade emocional</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você vê alguém sendo tratado de um jeito injusto, o que acontece com você: fica indignado e depois passa, ou fica pensando em como aquilo poderia ser diferente, e em quem teria que agir?
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O salário em muitas prefeituras é baixo.</strong> O principal empregador é o poder público municipal, e o valor varia muito de cidade pra cidade.</div>
+      <div class="cbox"><strong>Contrato precário é comum.</strong> Muita vaga é terceirizada ou temporária, sem concurso, o que tira a estabilidade.</div>
+      <div class="cbox"><strong>Os casos são pesados.</strong> Violência doméstica, abuso, fome, abandono, prisão. Você convive com a parte mais dura da realidade do país.</div>
+      <div class="cbox"><strong>A rede nem sempre dá conta.</strong> Você identifica o problema, mas falta vaga, falta serviço, falta verba. Lidar com essa frustração faz parte.</div>
+      <div class="cbox"><strong>Tem bastante burocracia.</strong> Relatório, parecer, cadastro e registro ocupam uma parte grande do dia.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🗂️</div><strong>Cadastro Único digital</strong><p>A base que dá acesso a vários programas sociais é toda digital, e o assistente social trabalha com ela.</p></div>
+        <div class="tech-card"><div class="tc-icon">📱</div><strong>Serviço público no app</strong><p>Benefício, agendamento e documento migraram pro celular. Quem não sabe usar fica de fora, e o assistente social vira ponte.</p></div>
+        <div class="tech-card"><div class="tc-icon">⚙️</div><strong>Análise automática</strong><p>O INSS já concede parte dos benefícios de forma automática. Os casos que sobram pra análise humana são os mais complexos.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Mapa da vulnerabilidade</strong><p>Dados cruzados mostram onde estão as famílias que mais precisam e ajudam a planejar o serviço.</p></div>
+        <div class="tech-card"><div class="tc-icon">📋</div><strong>Prontuário eletrônico</strong><p>O histórico do atendimento das famílias fica registrado e pode ser acompanhado pela rede.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔐</div><strong>Proteção de dados</strong><p>Informação de família vulnerável é sensível. Cuidar do sigilo digital virou parte do trabalho.</p></div>
+      </div>
+      <p class="note">⚡ Um sistema cruza dados, mas não entra na casa de ninguém, não percebe o que a família não conta e não negocia com a rede pra conseguir uma vaga.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>O poder público é o grande empregador:</strong> todo município tem CRAS, e a lei exige assistente social na equipe. Saúde, previdência, Justiça e sistema prisional também contratam.</li>
+        <li><strong>Concurso aparece com frequência:</strong> prefeituras abrem vagas o tempo todo. Tribunais, INSS e universidades federais pagam melhor e são mais disputados.</li>
+        <li><strong>Jornada de 30 horas por lei:</strong> diferente da maioria das profissões, a carga semanal é protegida.</li>
+        <li><strong>Terceiro setor emprega bastante:</strong> ONGs e fundações contratam para projetos sociais, geralmente com contrato por projeto.</li>
+        <li><strong>Empresa é um nicho menor:</strong> existe espaço em RH e responsabilidade social, mas é pequeno perto do setor público.</li>
+        <li><strong>Diploma presencial pesa:</strong> boa parte da formação acontece em cursos a distância, o que torna o diploma de universidade presencial um diferencial.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>A residência multiprofissional em saúde também recebe assistentes sociais, com bolsa.</p>
+      <div class="tags">
+        <span class="tag">⭐ Sociojurídico</span>
+        <span class="tag">⭐ Sistema Prisional e Socioeducativo</span>
+        <span class="tag">⭐ Gestão de Políticas Públicas</span>
+        <span class="tag">⭐ Serviço Social na Saúde</span>
+        <span class="tag">Residência Multiprofissional</span>
+        <span class="tag">Direitos Humanos</span>
+        <span class="tag">Infância e Juventude</span>
+        <span class="tag">Violência de Gênero</span>
+        <span class="tag">Saúde Mental</span>
+        <span class="tag">Assistência Social (SUAS)</span>
+      </div>
+      <p class="note">⭐ O sociojurídico (tribunal, Ministério Público, Defensoria) e o sistema prisional são onde o Serviço Social fica mais perto da Justiça e da segurança pública.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um assistente social?</h2></div>
+    <div class="sc-body">
+      <p>O valor depende quase inteiro de onde você está: qual prefeitura, qual órgão, qual esfera de governo.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,8k–4k</div><div class="sal-note">CRAS de prefeitura, ONG ou hospital privado, em geral por 30 horas semanais.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 4,5k–8k</div><div class="sal-note">Concurso estadual, sistema prisional, hospital público grande, coordenação de CRAS ou CREAS.</div></div>
+        <div class="sal-card"><div class="sal-stage">Carreira pública / Topo</div><div class="sal-range">R$ 9k–15k</div><div class="sal-note">Analista de Tribunal de Justiça, Ministério Público, INSS e universidades federais.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> as faixas altas existem, mas praticamente só por concurso. Fora do setor público, a renda costuma ficar na faixa inicial por bastante tempo.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.cfess.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CFESS: Conselho Federal de Serviço Social</strong><span>O que o assistente social faz, o código de ética e as campanhas da profissão</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.abepss.org.br" class="lcard" target="_blank"><span class="lc-icon">📚</span><div class="lc-body"><strong>ABEPSS: Associação Brasileira de Ensino e Pesquisa em Serviço Social</strong><span>Como é a formação e o que se pesquisa na área</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.gov.br/mds/pt-br" class="lcard" target="_blank"><span class="lc-icon">🇧🇷</span><div class="lc-body"><strong>Ministério do Desenvolvimento e Assistência Social</strong><span>Como funcionam o SUAS, o CRAS, o CREAS e os programas sociais</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.google.com/search?q=concurso+assistente+social+sistema+prisional" class="lcard" target="_blank"><span class="lc-icon">🚔</span><div class="lc-body"><strong>Concursos de assistente social no sistema prisional</strong><span>Editais, salários e o que esse profissional faz lá dentro</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Assistente%20Social&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔎</span><div class="lc-body"><strong>Vagas de assistente social hoje</strong><span>Quem está contratando neste momento</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Serviço Social costuma ser um caminho para quem…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-ss">
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Injustiça me incomoda de verdade, e eu gostaria de ter ferramenta concreta pra agir.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Me interesso por política, desigualdade e por como o país funciona.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Consigo conversar com gente de realidades muito diferentes da minha sem julgar.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Gosto de ler e debater texto de sociologia, história e política.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Entrar numa unidade prisional ou na casa de uma família que não conheço não me assusta.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Consigo ser firme e dizer "não" quando é preciso, mesmo com quem está sofrendo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Gosto de resolver as coisas conectando pessoas e serviços, fazendo a ponte.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Aceito que vou ajudar muita gente sem conseguir resolver tudo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Me vejo estudando pra concurso pra ter estabilidade e salário melhor.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ss')"><div class="cl-box"></div><div class="cl-text">Consigo ouvir histórias duras de violência e abandono e seguir trabalhando.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-ss">0 de 10</span></div>
+      <div class="cl-result" id="res-ss"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ ARQUITETURA ═══════════════════════════════ -->
+<div class="panel arq" id="p-arq">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Arquitetura e Urbanismo?</h2></div>
+    <div class="sc-body">
+      <p>Arquitetura e Urbanismo é o curso de quem pensa e desenha os espaços onde as pessoas vivem: casas, prédios, interiores, praças, bairros, cidades. É um misto de arte, técnica e cuidado com as pessoas. É um <strong>bacharelado de 5 anos</strong>, que combina criatividade e desenho com matemática, estrutura e muita prática de projeto.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Desenho, maquete, história da arquitetura, geometria, representação gráfica e os primeiros projetos.</li>
+        <li><strong>3º ano:</strong> Estruturas, conforto (luz, som, temperatura), instalações, paisagismo e projetos mais complexos.</li>
+        <li><strong>4º–5º ano:</strong> Urbanismo, projeto de edifícios maiores, legislação, estágio obrigatório e TFG (o trabalho final, um projeto completo).</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a arquitetura tem conselho próprio, o CAU (Conselho de Arquitetura e Urbanismo). Pra assinar projetos como arquiteto, o registro no CAU é obrigatório.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Projeto de edificações:</strong> desenhar casas, prédios e construções, do conceito à planta executável.</li>
+        <li><strong>Arquitetura de interiores:</strong> projetar ambientes internos, unindo estética, função e conforto.</li>
+        <li><strong>Urbanismo:</strong> planejar bairros, praças, ruas e o crescimento das cidades.</li>
+        <li><strong>Paisagismo:</strong> projetar jardins, parques e áreas verdes.</li>
+        <li><strong>Acompanhamento de obra:</strong> garantir que o projeto saia do papel do jeito certo.</li>
+        <li><strong>Restauro e patrimônio:</strong> recuperar prédios históricos preservando sua memória.</li>
+        <li><strong>Maquete eletrônica e 3D:</strong> criar imagens e modelos realistas dos projetos.</li>
+        <li><strong>Aprovação de projetos:</strong> ajudar com legislação, prefeitura e viabilidade.</li>
+        <li><strong>Carreira pública:</strong> concursos em prefeituras, órgãos de planejamento urbano e patrimônio.</li>
+        <li><strong>Escritório próprio:</strong> muitos arquitetos abrem o próprio escritório e atendem clientes direto.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🚔</span><h2>Segurança pública, investigação e perícia na Arquitetura</h2></div>
+    <div class="sc-body">
+      <p>Aqui a ligação com segurança pública existe, mas é mais estreita do que nos outros três cursos.</p>
+      <ul class="sl" style="margin-top:10px;">
+        <li><strong>Perícia judicial de imóveis:</strong> o juiz pode nomear um arquiteto pra avaliar um imóvel ou explicar um defeito de construção num processo.</li>
+        <li><strong>Perito criminal:</strong> alguns concursos estaduais de perito já aceitaram arquitetura entre as formações. Não é regra: depende do edital de cada estado.</li>
+        <li><strong>Forças Armadas:</strong> Exército, Marinha e Aeronáutica abrem vagas pra arquitetos como oficiais técnicos, em geral temporários.</li>
+        <li><strong>Espaço urbano e segurança:</strong> existe uma linha de estudo sobre como iluminação, calçada e uso da praça ajudam a deixar a rua mais segura. É urbanismo pensando em segurança, não investigação.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Arquitetura pede criatividade com técnica: imaginar o espaço e saber construí-lo de verdade.</p>
+      <div class="tags">
+        <span class="tag">Criatividade</span>
+        <span class="tag">Gosto por desenho</span>
+        <span class="tag">Visão espacial</span>
+        <span class="tag">Senso estético</span>
+        <span class="tag">Atenção ao detalhe</span>
+        <span class="tag">Sensibilidade para ambientes</span>
+        <span class="tag">Lidar com números e medidas</span>
+        <span class="tag">Organização</span>
+        <span class="tag">Escuta do cliente</span>
+        <span class="tag">Persistência</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você entra num lugar, repara em como ele é organizado, na luz, nas cores, no que mudaria pra ficar mais bonito ou mais funcional? E desenhar, pra você, é diversão ou obrigação?
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O começo paga pouco e tem muita gente formada.</strong> O salário inicial costuma ser modesto e a concorrência é grande. Portfólio bom faz diferença.</div>
+      <div class="cbox"><strong>Tem mais matemática e técnica do que muita gente imagina.</strong> Não é só desenhar bonito: tem estrutura, cálculo, instalações e legislação.</div>
+      <div class="cbox"><strong>O mercado oscila com a construção civil.</strong> Quando a economia desacelera e se constrói menos, sobra menos trabalho.</div>
+      <div class="cbox"><strong>O curso é puxado e caro de materiais.</strong> Maquetes, impressões e software custam. E a carga de projetos é alta, com muitas noites viradas perto das entregas.</div>
+      <div class="cbox"><strong>Seu projeto vai ser mudado.</strong> Cliente, orçamento e obra mexem na sua ideia o tempo todo. Lidar com o "não" faz parte.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🏗️</div><strong>BIM</strong><p>O projeto virou um modelo 3D inteligente que junta desenho, estrutura e custo. Dominar BIM virou requisito.</p></div>
+        <div class="tech-card"><div class="tc-icon">🖼️</div><strong>Render e IA</strong><p>Imagens realistas e geração de ideias por IA aceleram a criação. O arquiteto vira mais diretor da ideia do que desenhista braçal.</p></div>
+        <div class="tech-card"><div class="tc-icon">🥽</div><strong>Realidade virtual</strong><p>Dá pra "andar dentro" do projeto antes de construir.</p></div>
+        <div class="tech-card"><div class="tc-icon">🌱</div><strong>Arquitetura sustentável</strong><p>Projetar gastando menos energia e água virou exigência.</p></div>
+        <div class="tech-card"><div class="tc-icon">🖥️</div><strong>Projeto colaborativo</strong><p>Arquiteto, engenheiro e cliente trabalham no mesmo modelo digital, ao mesmo tempo.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏠</div><strong>Construção industrializada</strong><p>Partes da obra são feitas em fábrica e montadas no local. Isso muda a forma de projetar.</p></div>
+      </div>
+      <p class="note">⚡ A tecnologia faz o desenho e o render ficarem rápidos. O que ela não faz é entender a pessoa que vai usar o espaço e criar a ideia certa pra ela.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado grande, mas sensível à economia:</strong> quando a construção aquece, sobra trabalho; quando esfria, aperta.</li>
+        <li><strong>Interiores está em alta:</strong> a procura por arquitetura de interiores e reformas cresceu muito.</li>
+        <li><strong>Escritório próprio é caminho comum:</strong> muitos arquitetos trabalham por conta, sozinhos ou em pequenos escritórios.</li>
+        <li><strong>Construtoras e incorporadoras contratam:</strong> oferecem vagas mais estáveis que o escritório próprio.</li>
+        <li><strong>Setor público dá estabilidade:</strong> concursos em prefeituras, IPHAN, Caixa e órgãos de planejamento pagam bem, mas abrem poucas vagas.</li>
+        <li><strong>O portfólio é o seu maior documento:</strong> o que você já criou conta mais que o diploma na hora de conseguir clientes e vagas.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em arquitetura, escolher uma força acelera muito a carreira.</p>
+      <div class="tags">
+        <span class="tag">⭐ Urbanismo e Planejamento</span>
+        <span class="tag">⭐ Perícia e Avaliação de Imóveis</span>
+        <span class="tag">⭐ BIM e Tecnologia</span>
+        <span class="tag">⭐ Arquitetura de Interiores</span>
+        <span class="tag">Paisagismo</span>
+        <span class="tag">Restauro e Patrimônio</span>
+        <span class="tag">Iluminação</span>
+        <span class="tag">Sustentabilidade</span>
+        <span class="tag">Gestão de Obras</span>
+        <span class="tag">Projeto Comercial</span>
+      </div>
+      <p class="note">⭐ Urbanismo e perícia são as áreas da arquitetura que mais encostam em poder público e em investigação técnica.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um arquiteto?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil. Escritório próprio bem posicionado e especialistas podem ganhar acima da média.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,5k–4k</div><div class="sal-note">Estágio ou arquiteto júnior em escritório. Fase de aprender na prática e montar portfólio.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 4,5k–8k</div><div class="sal-note">Já assume projetos próprios. Interiores e BIM puxam pra cima dessa faixa.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Escritório próprio</div><div class="sal-range">R$ 9k–25k+</div><div class="sal-note">Arquiteto experiente, sócio ou dono de escritório bem posicionado, ou concursado.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> muita gente ganha mais com escritório próprio e clientes diretos do que em carteira assinada, mas isso vem com a instabilidade de quem trabalha por conta.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.caubr.gov.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CAU/BR: Conselho de Arquitetura e Urbanismo</strong><span>O que faz o arquiteto, registro e atuação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.archdaily.com.br" class="lcard" target="_blank"><span class="lc-icon">🏠</span><div class="lc-body"><strong>ArchDaily Brasil</strong><span>O maior portal de arquitetura do mundo. Ótimo pra ver o que é bom projeto</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.gov.br/iphan/pt-br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>IPHAN: Instituto do Patrimônio Histórico</strong><span>Onde o arquiteto trabalha no serviço público federal com patrimônio</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor: Salários</strong><span>Salários reais de cargos de arquitetura reportados por profissionais</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Arquiteto&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔎</span><div class="lc-body"><strong>Vagas de arquiteto hoje</strong><span>Quem está contratando neste momento</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Arquitetura costuma ser um caminho para quem…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-arq">
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Adoro desenhar, criar e imaginar coisas visualmente. Isso me dá energia, não preguiça.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Reparo em ambientes: como são organizados, a luz, as cores, o que mudaria pra ficar melhor.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Me interesso por como a cidade funciona: ruas, praças, transporte, onde as pessoas moram.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Tenho boa visão espacial: consigo imaginar como as coisas ficam no espaço de cabeça.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Não tenho pavor de matemática e medidas. Sei que arquitetura também tem cálculo e estrutura.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Tenho atenção ao detalhe e capricho com o que faço.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Consigo lidar com meu projeto sendo mudado por cliente e orçamento, sem levar pro lado pessoal.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Gosto de ouvir o que a pessoa precisa e traduzir isso num espaço pensado pra ela.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Aguento virar noite perto de uma entrega sem desanimar do curso.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-arq')"><div class="cl-box"></div><div class="cl-text">Aceito que o começo paga pouco e que meu portfólio importa muito pra crescer.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-arq">0 de 10</span></div>
+      <div class="cl-result" id="res-arq"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAÇÃO ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔍</span><h2>Os quatro lado a lado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Esta tabela ajuda a enxergar onde estão as diferenças que importam pra você.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão</th>
+              <th class="h-eng">🏗️ Engenharia Civil</th>
+              <th class="h-dir">⚖️ Direito</th>
+              <th class="h-ss">🤝 Serviço Social</th>
+              <th class="h-arq">📐 Arquitetura</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Foco principal</td><td>Fazer a construção ficar de pé e funcionar</td><td>A lei e a resolução de conflitos</td><td>O acesso da pessoa aos direitos</td><td>O espaço e como as pessoas vivem nele</td></tr>
+            <tr><td>Duração</td><td>5 anos</td><td>5 anos</td><td>4 anos</td><td>5 anos</td></tr>
+            <tr><td>Registro</td><td>CREA, direto ao se formar</td><td>OAB, só com aprovação no Exame de Ordem</td><td>CRESS, direto ao se formar</td><td>CAU, direto ao se formar</td></tr>
+            <tr><td>Base do curso</td><td>Cálculo, física, estruturas</td><td>Leitura, leis, argumentação</td><td>Sociologia, política, legislação social</td><td>Desenho, projeto, história</td></tr>
+            <tr><td>Onde trabalha</td><td>Obra, escritório de projeto, órgão público</td><td>Escritório, empresa, tribunal, delegacia</td><td>CRAS, hospital, fórum, presídio, ONG</td><td>Escritório, construtora, prefeitura</td></tr>
+            <tr><td>Jornada típica</td><td>Horário comercial, começando cedo na obra</td><td>Longa em escritório, fixa no concurso</td><td>30 horas semanais garantidas por lei</td><td>Variável, com picos perto das entregas</td></tr>
+            <tr><td>Salário inicial</td><td>R$ 5k–8k</td><td>R$ 2,5k–4,5k</td><td>R$ 2,8k–4k</td><td>R$ 2,5k–4k</td></tr>
+            <tr><td>Estabilidade</td><td>Oscila com a economia; alta no concurso</td><td>Muito concurso; privado concorrido</td><td>Alta no concurso, baixa no contrato</td><td>Baixa no autônomo; poucos concursos</td></tr>
+            <tr><td>Segurança pública</td><td>Perito criminal, Defesa Civil, engenheiro militar</td><td>Delegado, promotor, defensor, Justiça Militar</td><td>Presídio, socioeducativo, Forças Armadas</td><td>Perícia de imóveis, oficial técnico</td></tr>
+            <tr><td>Pergunta central</td><td>"Como isso fica de pé com segurança?"</td><td>"O que a lei diz e como eu provo?"</td><td>"Que direito essa pessoa não está conseguindo acessar?"</td><td>"Como esse espaço deve ser pra quem vai usar?"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Para pensar antes da sessão</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        🏗️ <strong>Engenharia Civil</strong> costuma atrair quem gosta de exatas, quer ver algo concreto saindo do papel e se vê comandando gente no campo.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        ⚖️ <strong>Direito</strong> costuma atrair quem gosta de ler, argumentar e entender as regras, e muita gente entra de olho nas carreiras públicas.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🤝 <strong>Serviço Social</strong> costuma atrair quem se move por justiça social e quer trabalhar pra que o direito saia do papel, perto de gente.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        📐 <strong>Arquitetura</strong> costuma atrair quem gosta de desenhar, de criar e de pensar como o espaço muda a vida das pessoas.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🔎 <strong>Um detalhe que costuma passar batido:</strong> esses cursos se cruzam em duplas. Engenheiro e arquiteto trabalham no mesmo projeto. Advogado e assistente social se encontram no fórum, no presídio e na Defensoria. Vale perguntar a alguém de cada área como é dividir o trabalho com a outra.
+      </div>
+      <p class="note" style="margin-top:16px;">Não precisa decidir sozinho. Leve os checklists, esta tabela e a aba "Seus critérios" pra conversar com sua orientadora. A decisão se constrói na sessão, não aqui.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais que existem pra cada formação, explicados de um jeito simples. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no Brasil.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col">
+          <div class="vaga-col-head eng">🏗️ Engenharia Civil</div>
+          <div class="vaga-role"><strong>Engenheiro(a) de Obras</strong><span>Fica no canteiro, organiza as equipes e garante que a obra saia no prazo e do jeito do projeto.</span></div>
+          <div class="vaga-role"><strong>Engenheiro(a) de Planejamento</strong><span>Monta o cronograma e o orçamento da obra e acompanha se está tudo andando como previsto.</span></div>
+          <div class="vaga-role"><strong>Engenheiro(a) Civil Júnior</strong><span>Primeiro emprego depois de formado: ajuda em projeto, medição e acompanhamento de obra.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn eng" href="https://www.linkedin.com/jobs/search/?keywords=Engenheiro%20Civil&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head dir">⚖️ Direito</div>
+          <div class="vaga-role"><strong>Advogado(a) Júnior</strong><span>Escreve petições, acompanha processos e vai a audiências junto com advogados mais experientes.</span></div>
+          <div class="vaga-role"><strong>Analista Jurídico</strong><span>Trabalha dentro de uma empresa revisando contratos e cuidando pra que ela siga a lei.</span></div>
+          <div class="vaga-role"><strong>Advogado(a) Criminalista</strong><span>Defende pessoas acusadas de crime, analisa provas e acompanha inquérito e julgamento.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn dir" href="https://www.linkedin.com/jobs/search/?keywords=Advogado&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head ss">🤝 Serviço Social</div>
+          <div class="vaga-role"><strong>Assistente Social de CRAS</strong><span>Atende famílias, faz cadastro em programas sociais e visita as casas do território.</span></div>
+          <div class="vaga-role"><strong>Assistente Social Hospitalar</strong><span>Ajuda paciente e família a conseguir transporte, benefício e apoio, e organiza a alta com a rede.</span></div>
+          <div class="vaga-role"><strong>Assistente Social do Sistema Prisional</strong><span>Atende pessoas presas e suas famílias, cuida de documentos, visitas e da preparação pra saída.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn ss" href="https://www.linkedin.com/jobs/search/?keywords=Assistente%20Social&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head arq">📐 Arquitetura</div>
+          <div class="vaga-role"><strong>Arquiteto(a) Júnior</strong><span>Desenha plantas e detalhes, faz modelos 3D e ajuda a tocar os projetos do escritório.</span></div>
+          <div class="vaga-role"><strong>Arquiteto(a) de Interiores</strong><span>Projeta os ambientes de dentro de casas, lojas e escritórios, do layout ao acabamento.</span></div>
+          <div class="vaga-role"><strong>Coordenador(a) de Projetos</strong><span>Faz arquitetos, engenheiros e fornecedores conversarem pra que o projeto fique pronto e sem conflito.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn arq" href="https://www.linkedin.com/jobs/search/?keywords=Arquiteto&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SEUS CRITÉRIOS ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os quatro cursos</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estes são os critérios que você elencou como os mais importantes, na ordem em que você mesmo os organizou. A tabela descreve, de forma objetiva, como cada um se apresenta em cada curso. Ela não aponta resposta certa nem indica um caminho: é material pra você pensar e conversar com sua orientadora.</p>
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Muito presente</span>
+        <span><span class="dot y"></span>Presente em parte</span>
+        <span><span class="dot r"></span>Pouco presente</span>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table crit-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th class="h-eng">🏗️ Engenharia Civil</th>
+              <th class="h-dir">⚖️ Direito</th>
+              <th class="h-ss">🤝 Serviço Social</th>
+              <th class="h-arq">📐 Arquitetura</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Retornos: ter um trabalho estável</td>
+              <td data-label="🏗️ Engenharia Civil"><span class="dot y"></span>Muitos concursos (prefeituras, estatais, polícia, Forças Armadas). No setor privado, o emprego sobe e desce com a economia.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>É a formação com mais concursos públicos estáveis no país. No privado, o começo é concorrido e instável.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot y"></span>Concurso de prefeitura é frequente, mas muita vaga é contrato temporário ou terceirizado.</td>
+              <td data-label="📐 Arquitetura"><span class="dot r"></span>Muita gente trabalha por conta ou em escritório pequeno, com renda que varia. Concurso existe, mas com poucas vagas.</td>
+            </tr>
+            <tr>
+              <td>2. Rotina: ter uma rotina previsível</td>
+              <td data-label="🏗️ Engenharia Civil"><span class="dot y"></span>No escritório e no órgão público, a rotina é estável. Na obra, imprevisto é diário: chuva, atraso de material, problema técnico.</td>
+              <td data-label="⚖️ Direito"><span class="dot y"></span>No concurso e no jurídico de empresa, é bem previsível. No escritório, prazo e urgência mudam o dia o tempo todo.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot g"></span>Jornada de 30 horas, em geral em horário comercial. Os casos variam, mas o horário e o formato do trabalho são estáveis.</td>
+              <td data-label="📐 Arquitetura"><span class="dot y"></span>O dia de escritório é organizado, mas as entregas trazem picos de trabalho e o cliente muda o plano com frequência.</td>
+            </tr>
+            <tr>
+              <td>3. Assuntos: segurança pública e forças armadas</td>
+              <td data-label="🏗️ Engenharia Civil"><span class="dot y"></span>Existe por caminhos específicos: perito criminal na área de engenharia, Defesa Civil e engenheiro militar (IME e quadros de oficiais).</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>É onde o tema mais aparece: delegado, promotor criminal, defensor, Justiça Militar e oficial com formação jurídica.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot y"></span>Trabalha no sistema prisional, no socioeducativo e nas Forças Armadas, cuidando das pessoas, não da segurança em si.</td>
+              <td data-label="📐 Arquitetura"><span class="dot r"></span>Aparece pouco: oficial técnico temporário, perícia de imóveis e algum concurso de perito que aceita a formação.</td>
+            </tr>
+            <tr>
+              <td>4. Atividades: investigar</td>
+              <td data-label="🏗️ Engenharia Civil"><span class="dot y"></span>Na perícia e na patologia das construções, o trabalho é descobrir por que algo rachou ou caiu. Fora dessas áreas, é mais executar que investigar.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Delegado conduz investigação, promotor acompanha, advogado procura provas e falhas. Investigar é parte central de várias carreiras.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot y"></span>O estudo social é uma apuração com entrevista, visita e documento. Investiga o contexto de vida, não o crime.</td>
+              <td data-label="📐 Arquitetura"><span class="dot r"></span>A pesquisa aparece no restauro (a história de um prédio) e na perícia de imóveis. Não é o centro da profissão.</td>
+            </tr>
+            <tr>
+              <td>5. Assuntos: ciências forenses e criminologia</td>
+              <td data-label="🏗️ Engenharia Civil"><span class="dot y"></span>A engenharia forense é uma área real: perícia de desabamento, incêndio e obra fraudada. Criminologia não faz parte.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Criminologia, Direito Penal e, em muitas faculdades, Medicina Legal estão no curso. A perícia de laboratório em si é de outras formações.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot y"></span>A criminologia crítica aparece na formação e no trabalho com o sistema penal. Ciência forense de laboratório, não.</td>
+              <td data-label="📐 Arquitetura"><span class="dot r"></span>Quase não aparece. A ligação mais próxima é a perícia de imóveis em processos.</td>
+            </tr>
+            <tr>
+              <td>6. Ambientes: ambiente colaborativo</td>
+              <td data-label="🏗️ Engenharia Civil"><span class="dot g"></span>Obra é trabalho de equipe grande: engenheiros, arquitetos, mestre de obras, operários e fornecedores.</td>
+              <td data-label="⚖️ Direito"><span class="dot y"></span>Há equipe no escritório e no tribunal, mas muito do trabalho é leitura e escrita individual, e o ambiente pode ser competitivo.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot g"></span>Trabalha sempre em equipe multiprofissional e em rede com escola, posto de saúde, Justiça e Conselho Tutelar.</td>
+              <td data-label="📐 Arquitetura"><span class="dot g"></span>Projeto é feito em conjunto com engenheiros, cliente e outros arquitetos, muitas vezes no mesmo modelo digital.</td>
+            </tr>
+            <tr>
+              <td>7. Atividades: coordenar e liderar equipes ou projetos</td>
+              <td data-label="🏗️ Engenharia Civil"><span class="dot g"></span>O engenheiro de obra comanda dezenas de pessoas desde cedo na carreira. Liderar faz parte do dia a dia.</td>
+              <td data-label="⚖️ Direito"><span class="dot y"></span>Aparece mais tarde: sócio de escritório, coordenação jurídica, delegado à frente da delegacia.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot y"></span>Coordenação de CRAS, CREAS e projetos sociais é um caminho comum depois de alguns anos.</td>
+              <td data-label="📐 Arquitetura"><span class="dot y"></span>Coordena projeto e às vezes obra, mas em escritórios pequenos a equipe costuma ser reduzida.</td>
+            </tr>
+            <tr>
+              <td>8. Assuntos: leis e legislação</td>
+              <td data-label="🏗️ Engenharia Civil"><span class="dot y"></span>Normas técnicas, código de obras e licenciamento fazem parte, mas como regra a seguir, não como objeto de estudo.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>É o assunto do curso inteiro, do primeiro ao último dia.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot g"></span>Legislação social (ECA, Lei Maria da Penha, LOAS, Estatuto do Idoso) é ferramenta diária de trabalho.</td>
+              <td data-label="📐 Arquitetura"><span class="dot y"></span>Plano diretor, zoneamento e código de obras aparecem em todo projeto, como regra a cumprir.</td>
+            </tr>
+            <tr>
+              <td>9. Rotina: trabalhar em empresa pública</td>
+              <td data-label="🏗️ Engenharia Civil"><span class="dot g"></span>Prefeituras, Petrobras, Caixa, DNIT, companhias de saneamento e tribunais de contas contratam muitos engenheiros civis.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Tribunais, Ministério Público, Defensoria, polícias e procuradorias: o leque público é o maior entre os quatro.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot g"></span>O setor público é o principal empregador da profissão.</td>
+              <td data-label="📐 Arquitetura"><span class="dot y"></span>Existe em prefeituras, IPHAN e Caixa, mas a maioria dos arquitetos trabalha no setor privado.</td>
+            </tr>
+            <tr>
+              <td>10. Atividades: enfrentar desafios</td>
+              <td data-label="🏗️ Engenharia Civil"><span class="dot g"></span>Cálculo pesado no curso e problema técnico novo na obra todo dia, com responsabilidade sobre a segurança das pessoas.</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Casos complexos, adversário do outro lado e concursos entre os mais difíceis do país.</td>
+              <td data-label="🤝 Serviço Social"><span class="dot g"></span>Casos pesados e rede sem recurso: o desafio é fazer o direito acontecer com pouco.</td>
+              <td data-label="📐 Arquitetura"><span class="dot g"></span>Resolver o espaço dentro do orçamento, da lei e do desejo do cliente, tudo ao mesmo tempo.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Cada célula descreve como o critério aparece na prática, não se ele é bom ou ruim. Você é quem sabe o peso de cada um na sua vida.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Como os quatro se posicionam nos seus critérios</h2></div>
+    <div class="sc-body">
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Verde = 2 pontos</span>
+        <span><span class="dot y"></span>Amarelo = 1 ponto</span>
+        <span><span class="dot r"></span>Vermelho = 0 ponto</span>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 ⚖️ Direito</span><span class="rank-score">17 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill dir" style="width:85%;">17</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥈 🤝 Serviço Social</span><span class="rank-score">15 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill ss" style="width:75%;">15</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥉 🏗️ Engenharia Civil</span><span class="rank-score">14 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill eng" style="width:70%;">14</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">4º 📐 Arquitetura</span><span class="rank-score">8 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill arq" style="width:40%;">8</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com</p>
+</footer>
+
+
+<script>
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    if (checked > 0) resEl.classList.add('show');
+    else resEl.classList.remove('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
