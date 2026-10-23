@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Carreiras — ADS, Ciência da Computação, Controle e Automação e Estatística | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Montserrat = fonte oficial Rumo. Caveat = substituta cursiva da Balneario (não disponível em web font). -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* ── Paleta oficial Instituto Rumo ── */
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Análise e Desenvolvimento de Sistemas — Laranja Rumo */
+      --ads:     #D9563F;
+      --ads-lt:  #FFF0ED;
+      --ads-mid: #FBC9BE;
+
+      /* Ciência da Computação — Verde Profundo */
+      --cc:      #3B503F;
+      --cc-lt:   #EAEFEB;
+      --cc-mid:  #C2CFC4;
+
+      /* Engenharia de Controle e Automação — Bordô */
+      --eca:     #6B2F3C;
+      --eca-lt:  #F6EAED;
+      --eca-mid: #DCC0C8;
+
+      /* Estatística — Amarelo Rumo (tom escurecido para leitura) */
+      --est:     #B5701C;
+      --est-lt:  #FFF5E8;
+      --est-mid: #F7D6AA;
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    /* Cada curso define a sua cor; os componentes leem --c, --lt e --mid */
+    .ads { --c: var(--ads); --lt: var(--ads-lt); --mid: var(--ads-mid); }
+    .cc  { --c: var(--cc);  --lt: var(--cc-lt);  --mid: var(--cc-mid); }
+    .eca { --c: var(--eca); --lt: var(--eca-lt); --mid: var(--eca-mid); }
+    .est { --c: var(--est); --lt: var(--est-lt); --mid: var(--est-mid); }
+    .cmp, .cri { --c: var(--cmp); --lt: var(--cmp-lt); --mid: var(--cmp-mid); }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── Header ─── */
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    /* ─── Nav ─── */
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.active { color: var(--c); border-bottom-color: var(--c); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    /* ─── Panels ─── */
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    /* ─── Section cards ─── */
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid var(--mid); background: var(--lt); }
+    .sc-head h2 { font-size: 15px; font-weight: 800; color: var(--c); }
+    .sc-icon { font-size: 20px; }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    /* ─── Lists ─── */
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; color: var(--c); }
+
+    /* ─── Tags ─── */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid var(--mid); background: var(--lt); color: var(--c); }
+
+    /* ─── Boxes ─── */
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid var(--c); background: var(--lt); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; color: var(--c); }
+
+    /* ─── Tech grid ─── */
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid var(--mid); background: var(--lt); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; color: var(--c); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    /* ─── Salary grid ─── */
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid var(--mid); background: var(--lt); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; color: var(--c); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── Comparison table ─── */
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-ads { background: var(--ads); }
+    .comp-table th.h-cc  { background: var(--cc); }
+    .comp-table th.h-eca { background: var(--eca); }
+    .comp-table th.h-est { background: var(--est); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ─── Link cards ─── */
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .lcard:hover { border-color: var(--c); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    /* ─── Checklist ─── */
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .cl-item:hover, .cl-item.checked { background: var(--lt); border-color: var(--c); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .cl-item.checked .cl-box { background: var(--c); border-color: var(--c); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .cl-score span { color: var(--c); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid var(--mid); background: var(--lt); }
+    .cl-result.show { display: block; }
+    .cl-result .sub { font-size: 13px; color: var(--text); line-height: 1.6; }
+
+    /* ─── Bolinhas de presença (aba critérios) ─── */
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+    .crit-table td:first-child { white-space: normal; min-width: 150px; }
+
+    /* ─── Ranking dos critérios ─── */
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; background: var(--c); }
+
+    /* ─── Vagas reais ─── */
+    .vagas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; background: var(--c); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; background: var(--c); }
+    .vaga-btn:hover { opacity: 0.88; }
+
+    /* ─── Footer ─── */
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+
+      /* Tabela de critérios vira cartões empilhados no celular */
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table tr:nth-child(even) td:first-child { background: var(--cmp); }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>ADS · Ciência da Computação · Controle e Automação · Estatística
+    <span class="hd-accent">pesquisar também é escolher</span>
+  </h1>
+  <p class="hd-sub">Quatro caminhos que passam por tecnologia, lógica e resolução de problemas, cada um de um jeito bem diferente: um mais prático e rápido, um mais profundo e teórico, um que junta computação com máquinas e eletrônica, e um que vive de dados. Leia com calma, assista aos vídeos e marque os checklists. A conversa sobre o que você descobriu acontece na próxima sessão.</p>
+</header>
+
+<nav>
+  <button class="tab-btn ads active" data-c="ads" onclick="show('ads')">💻 Análise e Desenv. de Sistemas</button>
+  <button class="tab-btn cc" data-c="cc" onclick="show('cc')">🧮 Ciência da Computação</button>
+  <button class="tab-btn eca" data-c="eca" onclick="show('eca')">🤖 Eng. de Controle e Automação</button>
+  <button class="tab-btn est" data-c="est" onclick="show('est')">📊 Estatística</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">⚖️ Comparar os quatro</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ ANÁLISE E DESENVOLVIMENTO DE SISTEMAS ═══════════════════════════════ -->
+<div class="panel ads active" id="p-ads">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Análise e Desenvolvimento de Sistemas?</h2></div>
+    <div class="sc-body">
+      <p>ADS é um curso <strong>tecnólogo</strong> (graduação de nível superior, reconhecida pelo MEC) de <strong>2,5 a 3 anos</strong>, feito pra formar quem cria e mantém sistemas: sites, aplicativos, programas de empresa. Ele vai direto ao ponto: desde o primeiro semestre você programa. Tem menos matemática pesada e menos teoria que Ciência da Computação, e é por isso que é mais curto. Existe em muitas faculdades presenciais e também em EAD.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º ano:</strong> Lógica de programação, algoritmos, primeira linguagem (geralmente Python, Java ou C#), banco de dados, fundamentos de redes e matemática básica pra computação.</li>
+        <li><strong>2º ano:</strong> Desenvolvimento web (front-end e back-end), programação para celular, engenharia de software, análise de requisitos (entender o que o cliente precisa) e testes.</li>
+        <li><strong>Último semestre:</strong> Projeto integrador (um sistema de verdade, em grupo), segurança da informação, computação em nuvem, gestão de projetos e, em algumas faculdades, estágio.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a área de TI <strong>não tem conselho obrigatório</strong>. Qualquer pessoa pode trabalhar com programação, com ou sem diploma. Isso significa que o que mais pesa na contratação é o que você sabe fazer: projetos no GitHub, portfólio e entrevistas técnicas. O diploma ajuda em concursos públicos e em algumas empresas grandes.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Desenvolvimento web:</strong> criar sites e sistemas que rodam no navegador. Front-end é a parte que a pessoa vê; back-end é a parte que funciona por trás.</li>
+        <li><strong>Desenvolvimento de aplicativos:</strong> criar apps pra Android e iPhone, de banco, delivery, saúde, jogos casuais.</li>
+        <li><strong>Desenvolvimento de jogos:</strong> programar a lógica de jogos em motores como Unity e Godot. Existe, mas é um nicho pequeno no Brasil, com muita gente querendo entrar.</li>
+        <li><strong>Análise de sistemas:</strong> conversar com quem vai usar o sistema, entender o problema e desenhar a solução antes de programar.</li>
+        <li><strong>Qualidade e testes (QA):</strong> testar sistemas pra achar falhas antes que o usuário ache.</li>
+        <li><strong>Suporte e infraestrutura:</strong> manter sistemas e servidores funcionando, resolver problemas técnicos do dia a dia.</li>
+        <li><strong>Banco de dados:</strong> organizar e cuidar de onde as informações de um sistema ficam guardadas.</li>
+        <li><strong>Automação de processos:</strong> criar programas e robôs de software que fazem tarefas repetitivas no lugar das pessoas.</li>
+        <li><strong>Startups:</strong> trabalhar em empresas novas de tecnologia, onde a mesma pessoa faz um pouco de tudo.</li>
+        <li><strong>Freelancer:</strong> fazer sites e sistemas por projeto, pra clientes no Brasil ou no exterior.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>ADS pede mais prática do que teoria: gostar de fazer funcionar, errar, testar e ajustar.</p>
+      <div class="tags">
+        <span class="tag">Raciocínio lógico</span>
+        <span class="tag">Paciência pra achar erros</span>
+        <span class="tag">Curiosidade por tecnologia</span>
+        <span class="tag">Aprender sozinho</span>
+        <span class="tag">Inglês pra ler (no mínimo)</span>
+        <span class="tag">Organização</span>
+        <span class="tag">Trabalho em equipe</span>
+        <span class="tag">Entender o que o outro precisa</span>
+        <span class="tag">Foco por longos períodos</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando um jogo ou aplicativo trava, você já se pegou pensando "como será que isso foi feito?" ou "eu faria assim"? Se a vontade é de abrir e construir, vale testar isso essa semana: o Curso em Vídeo (link abaixo) tem aulas gratuitas de programação do zero. Uma ou duas horas já mostram se o processo de programar te prende ou te cansa.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>A primeira vaga está mais difícil do que já foi.</strong> Entre 2023 e 2026 as empresas de tecnologia demitiram bastante e passaram a contratar menos júniores. Hoje há muita gente disputando a vaga de entrada. Quem consegue costuma ter projetos próprios pra mostrar e estágio no currículo.</div>
+      <div class="cbox"><strong>Você vai estudar a vida inteira.</strong> Linguagens e ferramentas mudam a cada poucos anos. Quem para de aprender fica pra trás rápido. Isso pode ser divertido ou cansativo, depende de você.</div>
+      <div class="cbox"><strong>Prazo e "bug em produção".</strong> Boa parte do tempo a rotina é tranquila, mas quando um sistema cai, todo mundo corre. Algumas empresas têm plantão (alguém fica de sobreaviso à noite ou no fim de semana).</div>
+      <div class="cbox"><strong>Muita tela, muito tempo sentado.</strong> É um trabalho quase todo no computador. Postura, vista e sedentarismo viram assunto sério com os anos.</div>
+      <div class="cbox"><strong>O curso curto não ensina tudo.</strong> ADS foca no prático. Algumas vagas (inteligência artificial, pesquisa, algumas grandes empresas) pedem uma base de matemática e teoria que o curso não aprofunda. Dá pra correr atrás depois, mas exige esforço extra.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia e a IA estão mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA que escreve código</strong><p>Ferramentas como Copilot e Claude já escrevem parte do código. O programador passa a revisar, decidir e juntar as peças.</p></div>
+        <div class="tech-card"><div class="tc-icon">🪜</div><strong>Menos tarefa "de iniciante"</strong><p>As tarefas simples que júniores faziam pra aprender estão sendo automatizadas. Por isso o começo de carreira ficou mais exigente.</p></div>
+        <div class="tech-card"><div class="tc-icon">☁️</div><strong>Tudo na nuvem</strong><p>Sistemas rodam em servidores da Amazon, Google e Microsoft. Saber nuvem virou parte do básico.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔐</div><strong>Segurança em alta</strong><p>Com mais ataques hackers, quem entende de segurança de sistemas tem procura crescente.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏠</div><strong>Trabalho remoto</strong><p>TI é das áreas com mais vagas remotas e híbridas, inclusive pra empresas de fora do Brasil.</p></div>
+        <div class="tech-card"><div class="tc-icon">🧩</div><strong>Low-code</strong><p>Ferramentas que montam sistemas "arrastando blocos" resolvem coisas simples. O programador fica com o que é mais complexo.</p></div>
+      </div>
+      <p class="note">⚡ A IA não acabou com a profissão, mas mudou o que se espera de quem entra: menos "digitar código" e mais entender o problema, revisar com cuidado e saber explicar as próprias escolhas.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Falta gente experiente, sobra gente iniciante:</strong> o setor ainda reclama de falta de profissionais, mas a falta é de pleno e sênior. Na entrada, a concorrência é alta.</li>
+        <li><strong>Vaga em todo tipo de empresa:</strong> bancos, varejo, hospitais, indústria, governo, startups. Quase toda empresa precisa de sistema.</li>
+        <li><strong>Remoto e híbrido são comuns:</strong> muitas vagas permitem trabalhar de casa parte da semana ou o tempo todo.</li>
+        <li><strong>Trabalhar pro exterior é possível:</strong> com inglês bom e experiência, dá pra trabalhar de casa pra empresas de fora, ganhando em dólar ou euro.</li>
+        <li><strong>Concursos públicos existem:</strong> bancos públicos, tribunais e prefeituras abrem vagas de analista e técnico de TI, que dão estabilidade.</li>
+        <li><strong>O mercado oscila:</strong> tecnologia contrata muito em fase boa e demite em fase ruim. É uma área de alta procura, mas não imune a crise. <em>(fontes: Brasscom, Glassdoor e Stack Overflow Survey, 2024–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em TI, especialização é mais "escolher uma trilha" do que fazer pós-graduação. Cursos livres e certificações contam muito.</p>
+      <div class="tags">
+        <span class="tag">⭐ Back-end</span>
+        <span class="tag">⭐ Desenvolvimento mobile</span>
+        <span class="tag">⭐ Nuvem e DevOps</span>
+        <span class="tag">⭐ Segurança da informação</span>
+        <span class="tag">Front-end</span>
+        <span class="tag">Dados e BI</span>
+        <span class="tag">Qualidade e testes (QA)</span>
+        <span class="tag">Desenvolvimento de jogos</span>
+        <span class="tag">Automação de processos (RPA)</span>
+        <span class="tag">Gestão de projetos ágeis</span>
+        <span class="tag">Pós em Engenharia de Software</span>
+      </div>
+      <p class="note">⭐ Trilhas com mais vagas e melhores salários no Brasil em 2025–2026.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha quem se forma em ADS?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas de desenvolvedor no Brasil (CLT, 2025–2026). Variam bastante por cidade, empresa e trilha.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Estágio / Júnior</div><div class="sal-range">R$ 1,8k–5k</div><div class="sal-note">Estágio fica entre R$ 1,8k e 2,5k. Júnior, de R$ 3k a 5k. Chegar aqui é a parte mais difícil.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 6k–10k</div><div class="sal-note">Com 2 a 5 anos de experiência, já trabalha com autonomia.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Liderança</div><div class="sal-range">R$ 11k–20k+</div><div class="sal-note">Sênior, especialista ou líder técnico. Quem trabalha pro exterior pode passar bem disso.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> em TI o salário cresce pela experiência e pelo que você sabe fazer, quase nada pelo tipo de diploma. Um tecnólogo de ADS e um bacharel em Ciência da Computação com a mesma experiência costumam ganhar parecido na maioria das vagas de desenvolvimento.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎧</span><h2>Pra ouvir e assistir</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.youtube.com/watch?v=njCFf4pObAk" class="lcard" target="_blank"><span class="lc-icon">🎙️</span><div class="lc-body"><strong>Podcast Segunda a Sexta: EP 27 · Tudo sobre o curso de Análise de Sistemas</strong><span>31 min · 2024. Conversa com quem é da área sobre como é o curso e o trabalho</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.youtube.com/watch?v=we4XQUpJ8fQ" class="lcard" target="_blank"><span class="lc-icon">📺</span><div class="lc-body"><strong>Rotina de um programador júnior: muito diferente do que parece</strong><span>Gabriel Barros · 10 min · 2025. Como é o dia de quem acabou de entrar na área</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.youtube.com/watch?v=fEZvuiHlx3A" class="lcard" target="_blank"><span class="lc-icon">📺</span><div class="lc-body"><strong>Análise e Desenvolvimento de Sistemas vale a pena? (atualizado 2026)</strong><span>Alexandre Leutz · 9 min · 2025. Visão sincera sobre o curso e o mercado atual</span></div><span class="lc-arr">→</span></a>
+        <a href="https://guiadoestudante.abril.com.br/profissoes/analise-e-desenvolvimento-de-sistemas/" class="lcard" target="_blank"><span class="lc-icon">📘</span><div class="lc-body"><strong>Guia de Profissões do Guia do Estudante: ADS</strong><span>O que se estuda, onde trabalha e o que esperar do curso</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.cursoemvideo.com" class="lcard" target="_blank"><span class="lc-icon">🧑‍💻</span><div class="lc-body"><strong>Curso em Vídeo</strong><span>Aulas gratuitas de programação do zero, em português. Ótimo pra experimentar antes de escolher</span></div><span class="lc-arr">→</span></a>
+        <a href="https://emec.mec.gov.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>e-MEC</strong><span>Consulte se a faculdade e o curso de ADS são reconhecidos pelo MEC e veja a nota do curso</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais reportados por profissionais. Pesquise "desenvolvedor júnior" na sua cidade</span></div><span class="lc-arr">→</span></a>
+        <a href="https://survey.stackoverflow.co/" class="lcard" target="_blank"><span class="lc-icon">📈</span><div class="lc-body"><strong>Pesquisa Stack Overflow</strong><span>Pesquisa anual com milhares de programadores: linguagens, rotina, trabalho remoto (em inglês)</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>ADS é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-ads">
+        <div class="cl-item" onclick="toggle(this,'cl-ads')"><div class="cl-box"></div><div class="cl-text">Prefiro aprender fazendo do que estudando teoria por muito tempo antes de ver resultado.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ads')"><div class="cl-box"></div><div class="cl-text">Quando algo não funciona, tenho paciência pra testar de novo e de novo até descobrir o erro.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ads')"><div class="cl-box"></div><div class="cl-text">Tenho vontade de criar coisas que as pessoas usam: um app, um site, um jogo, uma ferramenta.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ads')"><div class="cl-box"></div><div class="cl-text">Consigo ficar várias horas concentrado no computador numa mesma tarefa sem me sentir mal.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ads')"><div class="cl-box"></div><div class="cl-text">Gosto de aprender sozinho, procurando vídeos, tutoriais e respostas na internet.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ads')"><div class="cl-box"></div><div class="cl-text">Me animo com a ideia de entrar no mercado mais cedo, com um curso mais curto.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ads')"><div class="cl-box"></div><div class="cl-text">Aceito que vou precisar montar projetos por conta própria pra conseguir o primeiro emprego.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ads')"><div class="cl-box"></div><div class="cl-text">Não me incomoda que a área mude o tempo todo e que eu precise estudar coisas novas sempre.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ads')"><div class="cl-box"></div><div class="cl-text">Consigo ler textos simples em inglês, ou topo melhorar meu inglês.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-ads')"><div class="cl-box"></div><div class="cl-text">A ideia de trabalhar de casa, com um time que conversa mais por mensagem do que pessoalmente, me agrada.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-ads">0 de 10</span></div>
+      <div class="cl-result" id="res-ads"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ CIÊNCIA DA COMPUTAÇÃO ═══════════════════════════════ -->
+<div class="panel cc" id="p-cc">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Ciência da Computação?</h2></div>
+    <div class="sc-body">
+      <p>Ciência da Computação é um <strong>bacharelado de 4 anos</strong> que estuda a computação por dentro: não só como programar, mas <strong>por que</strong> as coisas funcionam, como fazer programas mais rápidos e como resolver problemas que ainda não têm solução pronta. Tem bastante matemática e teoria. É o curso "raiz" da área, e é a base de quem vai pra inteligência artificial, pesquisa e para as vagas técnicas mais exigentes.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Cálculo, matemática discreta, álgebra linear, lógica, algoritmos, estruturas de dados, programação e sistemas digitais (como o computador funciona eletronicamente por dentro). É a fase em que mais gente desiste.</li>
+        <li><strong>2º–3º ano:</strong> Arquitetura de computadores, sistemas operacionais, redes, banco de dados, engenharia de software, teoria da computação, compiladores e computação gráfica.</li>
+        <li><strong>4º ano:</strong> Inteligência artificial, aprendizado de máquina, matérias optativas (jogos, segurança, robótica), estágio e TCC. Muita gente já está estagiando a partir do 3º ano.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> assim como em ADS, a computação <strong>não tem conselho obrigatório</strong>. A SBC (Sociedade Brasileira de Computação) é a principal associação da área, mas não é preciso registro pra trabalhar.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Engenharia de software:</strong> projetar e construir sistemas grandes, que aguentam milhões de usuários (bancos digitais, apps de transporte, redes sociais).</li>
+        <li><strong>Inteligência artificial e aprendizado de máquina:</strong> criar sistemas que aprendem com dados, como recomendação, reconhecimento de imagem e assistentes.</li>
+        <li><strong>Ciência de dados:</strong> usar programação e estatística pra tirar respostas de grandes volumes de dados.</li>
+        <li><strong>Desenvolvimento de jogos:</strong> programar motores de jogo, física, gráficos e inteligência dos personagens. A base de computação gráfica do curso ajuda muito aqui.</li>
+        <li><strong>Desenvolvimento de aplicativos:</strong> criar apps e sistemas, assim como quem faz ADS.</li>
+        <li><strong>Sistemas embarcados:</strong> programar o "cérebro" de aparelhos eletrônicos (carros, eletrodomésticos, equipamentos médicos). É onde a computação encontra a eletrônica.</li>
+        <li><strong>Segurança da informação:</strong> proteger sistemas contra ataques e investigar invasões.</li>
+        <li><strong>Pesquisa e universidade:</strong> mestrado, doutorado e carreira de professor e pesquisador.</li>
+        <li><strong>Startups:</strong> criar ou trabalhar em empresas de tecnologia nascentes.</li>
+        <li><strong>Concursos públicos:</strong> cargos de TI em bancos públicos, tribunais, Receita Federal e órgãos de pesquisa.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Ciência da Computação pede gosto por entender a fundo, inclusive a parte abstrata e matemática.</p>
+      <div class="tags">
+        <span class="tag">Afinidade com matemática</span>
+        <span class="tag">Raciocínio abstrato</span>
+        <span class="tag">Paciência com problemas difíceis</span>
+        <span class="tag">Curiosidade sobre "como funciona"</span>
+        <span class="tag">Disciplina de estudo</span>
+        <span class="tag">Inglês pra ler</span>
+        <span class="tag">Lidar com frustração</span>
+        <span class="tag">Trabalho em equipe</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você joga um jogo, a curiosidade vai mais pra "como eu faria uma fase dessas" ou pra "como o computador consegue calcular tudo isso tão rápido"? As duas perguntas cabem na computação, mas a segunda é bem a cara desse curso. Outra pista: como é sua relação com a matemática da escola? Aqui ela aparece bastante nos dois primeiros anos.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O começo do curso é pesado em matemática.</strong> Cálculo, álgebra e matemática discreta derrubam muita gente nos primeiros semestres. A evasão (gente que desiste) em computação é das mais altas do país.</div>
+      <div class="cbox"><strong>Quatro anos de curso antes de ganhar "de verdade".</strong> Comparado com ADS, você demora mais pra se formar. Por outro lado, dá pra estagiar durante o curso.</div>
+      <div class="cbox"><strong>A primeira vaga está disputada.</strong> O mesmo aperto que atinge ADS vale aqui: menos vagas júnior e mais candidatos. A base teórica ajuda em processos seletivos mais difíceis, mas não garante vaga.</div>
+      <div class="cbox"><strong>Nem tudo da teoria aparece no trabalho.</strong> Muita gente estranha que boa parte do que estudou não é usada todo dia numa vaga comum de desenvolvimento. A teoria pesa mais em IA, pesquisa e empresas de ponta.</div>
+      <div class="cbox"><strong>Prazos, entregas e às vezes plantão.</strong> Em empresas de tecnologia o ritmo é por entregas curtas. Algumas exigem plantão quando o sistema cai.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia e a IA estão mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🧠</div><strong>IA é o assunto do momento</strong><p>Quem entende a matemática e o funcionamento por trás da IA tem as vagas mais procuradas e mais bem pagas da área.</p></div>
+        <div class="tech-card"><div class="tc-icon">⌨️</div><strong>Código gerado por IA</strong><p>Escrever código ficou mais rápido. O valor está em projetar bem, revisar e resolver o que a IA erra.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔌</div><strong>Computação em tudo</strong><p>Carro, geladeira, máquina de fábrica: tudo tem software. Sistemas embarcados e internet das coisas crescem.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔐</div><strong>Cibersegurança</strong><p>Ataques cada vez mais sofisticados abrem espaço pra quem entende segurança a fundo.</p></div>
+        <div class="tech-card"><div class="tc-icon">🎮</div><strong>Jogos e gráficos</strong><p>Motores de jogo e computação gráfica são usados também em simulação, arquitetura e medicina.</p></div>
+        <div class="tech-card"><div class="tc-icon">⚛️</div><strong>Fronteiras novas</strong><p>Computação quântica e novos chips ainda são pesquisa, mas começam a abrir vagas no mundo todo.</p></div>
+      </div>
+      <p class="note">⚡ Quanto mais a IA faz o trabalho de rotina, mais vale quem entende a base. É aí que a formação teórica da Ciência da Computação faz diferença.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado de TI grande e com falta de gente experiente:</strong> o setor segue contratando, principalmente profissionais com alguns anos de prática.</li>
+        <li><strong>Entrada disputada:</strong> estágio e vaga júnior têm muitos candidatos. Ter projetos e estágio durante o curso faz diferença.</li>
+        <li><strong>As vagas mais técnicas pedem bacharelado:</strong> IA, pesquisa, algumas big techs e programas de mestrado costumam preferir quem fez Ciência ou Engenharia da Computação.</li>
+        <li><strong>Remoto e exterior:</strong> como em ADS, há muitas vagas remotas e a possibilidade de trabalhar pra fora com bom inglês.</li>
+        <li><strong>Universidade e pesquisa:</strong> com mestrado e doutorado (com bolsa), dá pra seguir carreira acadêmica, que tem rotina mais autônoma e estável quando se passa em concurso de professor. <em>(fontes: Brasscom, SBC e Glassdoor, 2024–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>A formação ampla permite escolher entre caminhos bem diferentes, do mais prático ao mais acadêmico.</p>
+      <div class="tags">
+        <span class="tag">⭐ Inteligência Artificial</span>
+        <span class="tag">⭐ Engenharia de Software</span>
+        <span class="tag">⭐ Ciência de Dados</span>
+        <span class="tag">⭐ Segurança da Informação</span>
+        <span class="tag">Computação Gráfica e Jogos</span>
+        <span class="tag">Sistemas Embarcados</span>
+        <span class="tag">Nuvem e Sistemas Distribuídos</span>
+        <span class="tag">Robótica</span>
+        <span class="tag">Mestrado e Doutorado</span>
+      </div>
+      <p class="note">⭐ Áreas com mais demanda e melhores salários no Brasil em 2025–2026.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um cientista da computação?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil (CLT, 2025–2026). Big techs, bancos e vagas de IA pagam acima disso.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Estágio / Júnior</div><div class="sal-range">R$ 2k–6k</div><div class="sal-note">Estágio de R$ 2k a 3k. Júnior de R$ 3,5k a 6k, dependendo da empresa.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 7k–12k</div><div class="sal-note">2 a 5 anos de experiência. IA e dados costumam ficar no topo dessa faixa.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Especialista</div><div class="sal-range">R$ 12k–25k+</div><div class="sal-note">Especialistas, líderes técnicos e quem trabalha pro exterior chegam mais longe.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> numa vaga comum de desenvolvimento, o salário de quem fez Ciência da Computação e de quem fez ADS fica parecido. A diferença aparece nas vagas que exigem base teórica forte (IA, pesquisa, algumas empresas grandes), que costumam pagar mais.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎧</span><h2>Pra ouvir e assistir</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.youtube.com/watch?v=VVv22dAWb78" class="lcard" target="_blank"><span class="lc-icon">🎙️</span><div class="lc-body"><strong>Podcast Segunda a Sexta: EP 05 · Tudo sobre o curso de Ciência da Computação</strong><span>48 min · 2024. Como é o curso, as matérias e o mercado, contado por quem é da área</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.youtube.com/watch?v=ynFUoy5XG0I" class="lcard" target="_blank"><span class="lc-icon">📺</span><div class="lc-body"><strong>Ciência da Computação: tudo que ninguém te conta sobre o curso</strong><span>pamdev · 22 min · 2026. Matérias, dificuldade, mercado e diferença pro EAD</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.youtube.com/watch?v=fhJFSlqN2ZA" class="lcard" target="_blank"><span class="lc-icon">📺</span><div class="lc-body"><strong>Um dia de trabalho em home office: cientista da computação</strong><span>Raianny Proença · 8 min · 2023. A rotina real de quem trabalha de casa na área</span></div><span class="lc-arr">→</span></a>
+        <a href="https://guiadoestudante.abril.com.br/profissoes/ciencia-da-computacao/" class="lcard" target="_blank"><span class="lc-icon">📘</span><div class="lc-body"><strong>Guia de Profissões do Guia do Estudante: Ciência da Computação</strong><span>O que se estuda, onde trabalha e o que esperar do curso</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.sbc.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>SBC — Sociedade Brasileira de Computação</strong><span>A principal associação da área no Brasil: eventos, olimpíadas e informações sobre a profissão</span></div><span class="lc-arr">→</span></a>
+        <a href="https://cs50.harvard.edu/x/" class="lcard" target="_blank"><span class="lc-icon">🎓</span><div class="lc-body"><strong>CS50 — Harvard</strong><span>O curso introdutório de Ciência da Computação de Harvard, gratuito (em inglês, com legendas). Dá uma boa ideia do jeito de pensar do curso</span></div><span class="lc-arr">→</span></a>
+        <a href="https://olimpiada.ic.unicamp.br" class="lcard" target="_blank"><span class="lc-icon">🏅</span><div class="lc-body"><strong>OBI — Olimpíada Brasileira de Informática</strong><span>Problemas de lógica e programação pra estudantes do ensino médio. Tem provas antigas pra treinar</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais de engenheiro de software, cientista de dados e outros cargos</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Ciência da Computação é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-cc">
+        <div class="cl-item" onclick="toggle(this,'cl-cc')"><div class="cl-box"></div><div class="cl-text">Me dou bem com matemática, ou pelo menos não fujo dela quando o assunto me interessa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cc')"><div class="cl-box"></div><div class="cl-text">Gosto de entender por que as coisas funcionam, não só de saber usar.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cc')"><div class="cl-box"></div><div class="cl-text">Um problema difícil me dá vontade de continuar tentando, mais do que de desistir.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cc')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade sobre inteligência artificial, jogos ou como o computador funciona por dentro.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cc')"><div class="cl-box"></div><div class="cl-text">Topo um curso de 4 anos, com uma parte teórica forte, antes de trabalhar na área.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cc')"><div class="cl-box"></div><div class="cl-text">Consigo estudar sozinho com disciplina, mesmo quando a matéria não é a mais divertida.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cc')"><div class="cl-box"></div><div class="cl-text">Gosto de jogos de lógica, quebra-cabeças ou jogos de estratégia.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cc')"><div class="cl-box"></div><div class="cl-text">A ideia de passar o dia no computador, de casa ou num escritório tranquilo, me agrada.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cc')"><div class="cl-box"></div><div class="cl-text">Me imagino continuando a estudar depois de formado (cursos, pós, mestrado).</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-cc')"><div class="cl-box"></div><div class="cl-text">Consigo lidar com errar várias vezes antes de acertar sem levar isso pro lado pessoal.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-cc">0 de 10</span></div>
+      <div class="cl-result" id="res-cc"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ ENGENHARIA DE CONTROLE E AUTOMAÇÃO ═══════════════════════════════ -->
+<div class="panel eca" id="p-eca">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Engenharia de Controle e Automação?</h2></div>
+    <div class="sc-body">
+      <p>Engenharia de Controle e Automação é um <strong>bacharelado de 5 anos</strong> que forma quem faz máquinas e processos funcionarem sozinhos: linhas de produção, robôs industriais, sistemas que controlam temperatura, pressão, velocidade. Ela junta três mundos: <strong>eletrônica</strong>, <strong>computação</strong> (programação) e <strong>mecânica</strong>. Em algumas faculdades aparece com o nome de Engenharia Mecatrônica, que é bem parecida.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> O ciclo básico de toda engenharia: cálculo, física, química, álgebra, desenho técnico e programação. É a fase mais pesada em matemática e física.</li>
+        <li><strong>3º–4º ano:</strong> Circuitos elétricos, eletrônica, sistemas digitais, microcontroladores (como Arduino), teoria de controle, instrumentação (sensores), CLP (o "computador" que comanda máquinas de fábrica), mecânica e robótica.</li>
+        <li><strong>5º ano:</strong> Automação industrial, redes industriais, sistemas supervisórios, projeto final, estágio obrigatório e TCC.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> é uma engenharia, então tem conselho (<strong>CONFEA</strong> e os <strong>CREAs</strong> estaduais). Pra assinar projetos e trabalhar oficialmente como engenheiro, é preciso registro no CREA. A profissão também tem um <strong>piso salarial definido em lei</strong> (Lei 4.950-A/66).
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Automação industrial:</strong> programar as máquinas de uma fábrica pra funcionarem juntas e sozinhas (indústria de alimentos, carros, remédios, bebidas).</li>
+        <li><strong>Programação de CLP e robôs:</strong> escrever os programas que comandam braços robóticos, esteiras e equipamentos.</li>
+        <li><strong>Projeto de sistemas de controle:</strong> fazer um processo se manter estável, como a temperatura de um forno ou a velocidade de um motor.</li>
+        <li><strong>Instrumentação:</strong> escolher, instalar e ajustar sensores que medem tudo o que acontece num processo.</li>
+        <li><strong>Sistemas embarcados e eletrônica:</strong> projetar placas e programar microcontroladores de aparelhos eletrônicos.</li>
+        <li><strong>Melhoria de processos:</strong> analisar dados da produção pra deixar o processo mais rápido, barato e seguro.</li>
+        <li><strong>Energia, petróleo e mineração:</strong> automação de usinas, plataformas, subestações e minas.</li>
+        <li><strong>Automação predial e residencial:</strong> casas e prédios inteligentes (iluminação, segurança, climatização).</li>
+        <li><strong>Agro e veículos:</strong> máquinas agrícolas automatizadas, drones e veículos com controle eletrônico.</li>
+        <li><strong>Startups e indústria 4.0:</strong> empresas que conectam máquinas à internet e analisam os dados delas.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Controle e Automação pede gosto por matemática e física, e vontade de ver o que você programou mexer no mundo real.</p>
+      <div class="tags">
+        <span class="tag">Afinidade com matemática e física</span>
+        <span class="tag">Interesse por eletrônica</span>
+        <span class="tag">Raciocínio lógico</span>
+        <span class="tag">Gosto por programar</span>
+        <span class="tag">Atenção a detalhes e segurança</span>
+        <span class="tag">Curiosidade sobre máquinas</span>
+        <span class="tag">Resolver problemas na prática</span>
+        <span class="tag">Trabalho em equipe</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> você gosta mais de ver o resultado numa tela ou numa coisa física que se mexe, acende, mede? Uma forma de testar essa semana é o Tinkercad Circuits (link abaixo): ele simula um Arduino de graça no navegador, e você monta um circuito e programa pra fazer uma luz piscar ou um motor girar.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>Curso longo e difícil.</strong> São 5 anos, com muito cálculo e física no começo. É comum levar mais tempo que isso pra se formar por causa de reprovações.</div>
+      <div class="cbox"><strong>Parte do trabalho é no chão de fábrica.</strong> Muitas vagas exigem estar na indústria: barulho, calor, uniforme e equipamento de proteção. Nem tudo é escritório, e quase nada é 100% remoto.</div>
+      <div class="cbox"><strong>Máquina parada é dinheiro perdido.</strong> Quando uma linha de produção para, a pressão pra resolver é grande e imediata. Algumas funções têm plantão, turno ou trabalho em fim de semana durante paradas programadas.</div>
+      <div class="cbox"><strong>Pode ter viagem.</strong> Integradoras e empresas de projeto mandam engenheiros pra instalar e testar sistemas em fábricas de outras cidades, às vezes por semanas.</div>
+      <div class="cbox"><strong>As vagas ficam onde está a indústria.</strong> Há mais oportunidade em polos industriais (interior de SP, Sul, Minas, Manaus) do que em qualquer cidade. Às vezes é preciso se mudar.</div>
+      <div class="cbox"><strong>Responsabilidade com segurança.</strong> Um erro num sistema de controle pode machucar alguém ou causar acidente. É uma responsabilidade séria, que pede atenção constante.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia e a IA estão mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🏭</div><strong>Indústria 4.0</strong><p>Máquinas conectadas à internet trocam dados o tempo todo. Quem entende de automação e de dados ao mesmo tempo é muito procurado.</p></div>
+        <div class="tech-card"><div class="tc-icon">🦾</div><strong>Robôs colaborativos</strong><p>Robôs menores trabalham lado a lado com pessoas. Programar e integrar esses robôs é uma área em crescimento.</p></div>
+        <div class="tech-card"><div class="tc-icon">🧠</div><strong>IA na manutenção</strong><p>Sistemas preveem quando uma máquina vai quebrar antes que aconteça. Isso diminui as emergências.</p></div>
+        <div class="tech-card"><div class="tc-icon">🖥️</div><strong>Gêmeo digital</strong><p>Cria-se uma cópia virtual da fábrica pra testar mudanças no computador antes de mexer no mundo real.</p></div>
+        <div class="tech-card"><div class="tc-icon">🛰️</div><strong>Acesso remoto</strong><p>Parte do monitoramento e da programação já pode ser feita à distância, o que reduz um pouco as viagens.</p></div>
+        <div class="tech-card"><div class="tc-icon">⚡</div><strong>Energia limpa</strong><p>Usinas solares e eólicas e carros elétricos dependem de controle e automação pra funcionar.</p></div>
+      </div>
+      <p class="note">⚡ A automação é justamente a área que coloca a tecnologia pra trabalhar na indústria. A IA aqui mais amplia o trabalho do engenheiro do que o substitui.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Menos gente formada, procura constante:</strong> é uma engenharia com menos formandos do que Civil ou Produção, e a indústria segue precisando de quem entende de automação.</li>
+        <li><strong>Vagas em indústrias e integradoras:</strong> fábricas contratam engenheiros pra manter e melhorar a automação; integradoras fazem projetos pra várias fábricas (e é aí que costuma haver mais viagem).</li>
+        <li><strong>Empregos formais e estáveis:</strong> a maior parte das vagas é CLT, em empresas grandes e médias, com benefícios.</li>
+        <li><strong>Formação versátil:</strong> por saber programar, muitos formados em automação também conseguem vagas de TI e de dados, se quiserem mudar de rumo.</li>
+        <li><strong>Depende da economia industrial:</strong> quando a indústria desacelera, as contratações diminuem. Setores como energia, alimentos e agro costumam ser mais estáveis. <em>(fontes: CONFEA, SBA e Glassdoor, 2024–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Dá pra puxar mais pro lado da eletrônica, da programação ou da gestão de processos.</p>
+      <div class="tags">
+        <span class="tag">⭐ Automação Industrial e CLP</span>
+        <span class="tag">⭐ Robótica</span>
+        <span class="tag">⭐ Indústria 4.0 e IoT</span>
+        <span class="tag">⭐ Sistemas Embarcados</span>
+        <span class="tag">Instrumentação</span>
+        <span class="tag">Energia e Sistemas Elétricos</span>
+        <span class="tag">Ciência de Dados industriais</span>
+        <span class="tag">Engenharia de Manutenção</span>
+        <span class="tag">Segurança de Máquinas</span>
+        <span class="tag">Mestrado em Controle</span>
+      </div>
+      <p class="note">⭐ Áreas com mais demanda no Brasil em 2025–2026.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um engenheiro de controle e automação?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil (CLT, 2025–2026). Petróleo, mineração e multinacionais pagam acima disso.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Estágio / Júnior</div><div class="sal-range">R$ 2k–9k</div><div class="sal-note">Estágio de R$ 2k a 2,8k. Engenheiro júnior de R$ 6k a 9k, a depender da empresa e da região.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 9k–14k</div><div class="sal-note">Alguns anos de experiência, conduzindo projetos com autonomia.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Coordenação</div><div class="sal-range">R$ 14k–25k+</div><div class="sal-note">Especialistas, coordenadores e gerentes de engenharia.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> a lei garante ao engenheiro registrado um piso de 8,5 salários mínimos pra jornada de 8 horas (mais de R$ 12 mil). Na prática, muitas empresas contratam recém-formados com outro nome de cargo, como "analista" ou "técnico", e pagam menos que o piso. Vale prestar atenção nisso quando chegar a hora.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎧</span><h2>Pra ouvir e assistir</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.youtube.com/watch?v=c1Gku2Y6e9M" class="lcard" target="_blank"><span class="lc-icon">📺</span><div class="lc-body"><strong>Quadro Profissões: Engenharia de Controle e Automação</strong><span>TV Cultura (Jornal da Cultura) · 2 min · 2025. Um resumo rápido da profissão</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.youtube.com/watch?v=c6b5nNEgJHU" class="lcard" target="_blank"><span class="lc-icon">📺</span><div class="lc-body"><strong>Áreas de atuação dos engenheiros de controle e automação</strong><span>Canal Sob Controle · 16 min · 2021. Onde esses engenheiros trabalham e o que fazem em cada área</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.youtube.com/watch?v=8ggNys-f6c4" class="lcard" target="_blank"><span class="lc-icon">📺</span><div class="lc-body"><strong>Como é trabalhar no mercado de automação industrial?</strong><span>Treinar Serviços · 9 min · 2021. A realidade do trabalho em automação contada por quem atua</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.youtube.com/watch?v=TZtUboCKT3Y" class="lcard" target="_blank"><span class="lc-icon">📺</span><div class="lc-body"><strong>Rotina de engenheira de controle e automação (aluna)</strong><span>Veronica Bantim · 11 min · 2020. Como é o dia a dia de quem está cursando</span></div><span class="lc-arr">→</span></a>
+        <a href="https://guiadoestudante.abril.com.br/profissoes/engenharia-de-controle-e-automacao/" class="lcard" target="_blank"><span class="lc-icon">📘</span><div class="lc-body"><strong>Guia de Profissões do Guia do Estudante: Engenharia de Controle e Automação</strong><span>O que se estuda, onde trabalha e o que esperar do curso</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.tinkercad.com/circuits" class="lcard" target="_blank"><span class="lc-icon">🔌</span><div class="lc-body"><strong>Tinkercad Circuits</strong><span>Simulador gratuito de eletrônica e Arduino no navegador. Dá pra montar e programar circuitos sem comprar nada</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.sba.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>SBA — Sociedade Brasileira de Automática</strong><span>A associação científica da área de controle e automação no Brasil</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.confea.org.br" class="lcard" target="_blank"><span class="lc-icon">📜</span><div class="lc-body"><strong>CONFEA</strong><span>O conselho federal das engenharias: registro, atribuições e regras da profissão</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Pesquise "engenheiro de automação" pra ver salários reais por empresa e cidade</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Controle e Automação é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-eca">
+        <div class="cl-item" onclick="toggle(this,'cl-eca')"><div class="cl-box"></div><div class="cl-text">Eletrônica me interessa: circuitos, placas, sensores, como os aparelhos funcionam por dentro.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eca')"><div class="cl-box"></div><div class="cl-text">Me dou bem com matemática e física, ou topo encarar bastante delas nos primeiros anos.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eca')"><div class="cl-box"></div><div class="cl-text">Gosto de ver o que eu programo funcionando numa coisa física, não só numa tela.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eca')"><div class="cl-box"></div><div class="cl-text">Robôs, máquinas e linhas de produção me despertam curiosidade.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eca')"><div class="cl-box"></div><div class="cl-text">Topo um curso de 5 anos, com muito cálculo, pra ter uma formação de engenheiro.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eca')"><div class="cl-box"></div><div class="cl-text">Não me incomoda trabalhar parte do tempo numa fábrica, com barulho e equipamento de proteção.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eca')"><div class="cl-box"></div><div class="cl-text">Gosto de pensar em como deixar um processo mais rápido, mais eficiente ou mais seguro.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eca')"><div class="cl-box"></div><div class="cl-text">Consigo manter a calma quando algo quebra e todo mundo está esperando eu resolver.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eca')"><div class="cl-box"></div><div class="cl-text">Estou aberto a me mudar pra uma cidade com mais indústria, se for preciso.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-eca')"><div class="cl-box"></div><div class="cl-text">A ideia de assinar projetos e ter a responsabilidade de um engenheiro me atrai.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-eca">0 de 10</span></div>
+      <div class="cl-result" id="res-eca"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ ESTATÍSTICA ═══════════════════════════════ -->
+<div class="panel est" id="p-est">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Estatística?</h2></div>
+    <div class="sc-body">
+      <p>Estatística é um <strong>bacharelado de 4 anos</strong> que ensina a tirar conclusões confiáveis a partir de dados: descobrir padrões, prever o que vai acontecer e medir o quanto dá pra confiar numa resposta. Pesquisa eleitoral, teste de remédio novo, cálculo de risco de um empréstimo, previsão de vendas: tudo isso passa por estatística. Hoje o curso tem muita programação (principalmente nas linguagens R e Python) e é uma das portas de entrada pra área de ciência de dados.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Cálculo, álgebra linear, probabilidade, estatística descritiva e introdução à programação. Bastante matemática.</li>
+        <li><strong>2º–3º ano:</strong> Inferência estatística, regressão (modelos que relacionam uma coisa com outra), amostragem, planejamento de experimentos, séries temporais e computação estatística.</li>
+        <li><strong>4º ano:</strong> Análise multivariada, aprendizado de máquina, estatística aplicada a áreas como saúde e finanças, estágio e TCC.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a profissão de estatístico é <strong>regulamentada por lei</strong> (Lei 4.739/65) e tem conselho (<strong>CONFE</strong> e os <strong>CONREs</strong> regionais). Pra atuar com o cargo de estatístico e assinar certos trabalhos, como pesquisas eleitorais registradas, é preciso registro no CONRE.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Ciência de dados:</strong> criar modelos que preveem comportamentos, como quem vai cancelar um serviço ou o que um cliente vai comprar.</li>
+        <li><strong>Análise de dados:</strong> organizar números e transformá-los em gráficos e respostas pra empresa decidir melhor.</li>
+        <li><strong>Mercado financeiro e bancos:</strong> calcular risco de crédito (quem tem chance de não pagar) e detectar fraudes.</li>
+        <li><strong>Seguros e previdência:</strong> calcular a chance de eventos acontecerem pra definir preços de seguros.</li>
+        <li><strong>Saúde e indústria farmacêutica:</strong> planejar e analisar estudos que testam remédios e tratamentos.</li>
+        <li><strong>Pesquisa de opinião e mercado:</strong> pesquisas eleitorais, de satisfação, de consumo.</li>
+        <li><strong>Controle de qualidade na indústria:</strong> usar dados pra reduzir defeitos e melhorar processos de produção.</li>
+        <li><strong>Setor público:</strong> institutos como o IBGE, o Banco Central e órgãos de saúde e educação contratam estatísticos por concurso.</li>
+        <li><strong>Esportes e jogos:</strong> análise de desempenho de atletas e times, e balanceamento de jogos eletrônicos.</li>
+        <li><strong>Pesquisa e universidade:</strong> mestrado, doutorado e carreira acadêmica.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Estatística pede gosto por números e uma desconfiança saudável: "será que esse dado prova mesmo isso?"</p>
+      <div class="tags">
+        <span class="tag">Afinidade com matemática</span>
+        <span class="tag">Pensamento crítico</span>
+        <span class="tag">Atenção a detalhes</span>
+        <span class="tag">Curiosidade sobre "por quê"</span>
+        <span class="tag">Gosto por programar</span>
+        <span class="tag">Organização</span>
+        <span class="tag">Explicar números de forma simples</span>
+        <span class="tag">Paciência</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando você vê uma notícia do tipo "pesquisa mostra que 60% das pessoas…", você aceita ou se pergunta "quem eles perguntaram? quantas pessoas?". Esse tipo de dúvida é exatamente o trabalho do estatístico. Nos jogos também: você já se pegou calculando a chance de ganhar uma partida ou de cair um item raro?
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O curso é puxado em matemática do começo ao fim.</strong> Não é só nos primeiros anos: probabilidade e inferência são matemáticas até o final. A evasão do curso é alta.</div>
+      <div class="cbox"><strong>Pouca gente sabe o que um estatístico faz.</strong> A profissão é menos conhecida. Muitas vagas não aparecem com o nome "estatístico", e sim como "analista de dados", "cientista de dados" ou "analista de risco".</div>
+      <div class="cbox"><strong>Concorrência com outras formações.</strong> Nas vagas de dados, quem fez Estatística disputa com pessoas de Computação, Engenharia e Economia. A vantagem está na base matemática; a programação precisa ser bem treinada também.</div>
+      <div class="cbox"><strong>Explicar números pra quem não é da área.</strong> Boa parte do trabalho é traduzir resultados pra gestores e clientes. Saber calcular não basta: é preciso comunicar.</div>
+      <div class="cbox"><strong>Dados bagunçados.</strong> Na vida real, a maior parte do tempo vai em limpar e organizar dados cheios de erros antes de analisar. Pode ser repetitivo.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia e a IA estão mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">🧠</div><strong>A base da IA</strong><p>Inteligência artificial é, em boa parte, estatística em grande escala. Quem entende os fundamentos sai na frente.</p></div>
+        <div class="tech-card"><div class="tc-icon">🐍</div><strong>Programação é obrigatória</strong><p>R e Python viraram ferramentas do dia a dia. O estatístico de hoje programa bastante.</p></div>
+        <div class="tech-card"><div class="tc-icon">📈</div><strong>Mais dados que nunca</strong><p>Apps, sensores e redes geram dados o tempo todo. Falta gente pra analisar com rigor.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤖</div><strong>IA faz a conta</strong><p>Ferramentas já rodam análises sozinhas. O valor do estatístico está em saber se a análise faz sentido e não engana.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏠</div><strong>Trabalho remoto</strong><p>Análise de dados é feita no computador, e muitas vagas são híbridas ou remotas.</p></div>
+        <div class="tech-card"><div class="tc-icon">⚖️</div><strong>Ética nos dados</strong><p>Algoritmos podem ser injustos. Avaliar se um modelo trata pessoas de forma justa virou uma nova frente de trabalho.</p></div>
+      </div>
+      <p class="note">⚡ A IA automatizou parte das contas, mas aumentou a necessidade de quem sabe dizer se um resultado é confiável ou só parece ser.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Poucos formados por ano:</strong> o Brasil forma relativamente poucos estatísticos, e a demanda por gente que entende de dados cresce.</li>
+        <li><strong>Bancos, seguradoras e fintechs são grandes empregadores:</strong> risco, crédito e fraude são áreas que contratam muito e pagam bem.</li>
+        <li><strong>Saúde e pesquisa:</strong> indústria farmacêutica, hospitais e institutos de pesquisa contratam estatísticos pra estudos clínicos.</li>
+        <li><strong>Concursos estáveis:</strong> IBGE, Banco Central, Fiocruz, tribunais e secretarias abrem vagas específicas pra estatístico, um caminho de estabilidade.</li>
+        <li><strong>O nome do cargo engana:</strong> pra achar vagas, procure também por "analista de dados", "cientista de dados" e "analista de risco". <em>(fontes: CONFE, IBGE e Glassdoor, 2024–2026)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>A estatística se encaixa em quase qualquer área que tenha dados.</p>
+      <div class="tags">
+        <span class="tag">⭐ Ciência de Dados</span>
+        <span class="tag">⭐ Risco de Crédito e Finanças</span>
+        <span class="tag">⭐ Bioestatística (saúde)</span>
+        <span class="tag">⭐ Aprendizado de Máquina</span>
+        <span class="tag">Atuária e Seguros</span>
+        <span class="tag">Pesquisa de Mercado e Opinião</span>
+        <span class="tag">Controle de Qualidade / Seis Sigma</span>
+        <span class="tag">Estatística Esportiva</span>
+        <span class="tag">Estatística Pública (IBGE)</span>
+        <span class="tag">Mestrado e Doutorado</span>
+      </div>
+      <p class="note">⭐ Áreas com mais demanda e melhores salários no Brasil em 2025–2026.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um estatístico?</h2></div>
+    <div class="sc-body">
+      <p>Faixas típicas no Brasil (CLT, 2025–2026). Bancos, fintechs e vagas de ciência de dados pagam acima disso.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Estágio / Júnior</div><div class="sal-range">R$ 1,8k–6k</div><div class="sal-note">Estágio de R$ 1,8k a 2,8k. Júnior de R$ 3,5k a 6k.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno</div><div class="sal-range">R$ 7k–11k</div><div class="sal-note">Analista ou cientista de dados com alguns anos de experiência.</div></div>
+        <div class="sal-card"><div class="sal-stage">Sênior / Especialista</div><div class="sal-range">R$ 12k–22k+</div><div class="sal-note">Cientista de dados sênior, especialista em risco, coordenação.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> no setor público os salários costumam ser altos e estáveis. Cargos de estatístico em órgãos federais começam, em geral, acima de R$ 9 mil, mas dependem de passar em concurso, o que pede meses ou anos de estudo.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎧</span><h2>Pra ouvir e assistir</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.youtube.com/watch?v=-EWWm2euEPo" class="lcard" target="_blank"><span class="lc-icon">🎙️</span><div class="lc-body"><strong>Podcast Segunda a Sexta: EP 67 · Tudo sobre o curso de Estatística</strong><span>30 min · 2024. Como é o curso e o trabalho, contado por quem é da área</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.youtube.com/watch?v=oS5H0Emo28M" class="lcard" target="_blank"><span class="lc-icon">📺</span><div class="lc-body"><strong>Vale a pena cursar Estatística?</strong><span>Vida com Dados · 18 min · 2024. Prós, contras e mercado, na visão de quem trabalha com dados</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.youtube.com/watch?v=Jyo5Z6NrW7U" class="lcard" target="_blank"><span class="lc-icon">📺</span><div class="lc-body"><strong>Analista de dados: setup e rotina no home office</strong><span>Evandro Rubert · 10 min · 2026. Como é o dia de quem trabalha com dados de casa</span></div><span class="lc-arr">→</span></a>
+        <a href="https://guiadoestudante.abril.com.br/profissoes/estatistica/" class="lcard" target="_blank"><span class="lc-icon">📘</span><div class="lc-body"><strong>Guia de Profissões do Guia do Estudante: Estatística</strong><span>O que se estuda, onde trabalha e o que esperar do curso</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.confe.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CONFE — Conselho Federal de Estatística</strong><span>O conselho oficial da profissão: registro, legislação e áreas de atuação</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.ibge.gov.br" class="lcard" target="_blank"><span class="lc-icon">🇧🇷</span><div class="lc-body"><strong>IBGE</strong><span>O maior produtor de estatísticas do país. Explore os dados do Censo e veja estatística na prática</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.kaggle.com/learn" class="lcard" target="_blank"><span class="lc-icon">🐍</span><div class="lc-body"><strong>Kaggle Learn</strong><span>Mini-cursos gratuitos de Python e análise de dados, com exercícios práticos (em inglês)</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais de estatístico, analista e cientista de dados</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Estatística é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-est">
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Matemática é uma das matérias que eu mais gosto, ou que menos me pesa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Gosto de analisar informações e descobrir padrões que não estão óbvios.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Desconfio de números e manchetes e gosto de checar se fazem sentido.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Me imagino passando boa parte do dia no computador, programando e analisando dados.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Probabilidade e chances me intrigam: em jogos, esportes, sorteios.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Prefiro um trabalho de análise e concentração a um trabalho de correria e muita gente em volta.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Consigo explicar uma coisa difícil de um jeito simples pra outra pessoa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Me interessa poder trabalhar em áreas bem diferentes: saúde, bancos, esportes, governo.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">Topo um curso com bastante teoria matemática do começo ao fim.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-est')"><div class="cl-box"></div><div class="cl-text">A ideia de um concurso público com estabilidade me atrai, mesmo exigindo estudo pra passar.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-est">0 de 10</span></div>
+      <div class="cl-result" id="res-est"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAÇÃO ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚖️</span><h2>Os quatro lado a lado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Os quatro cursos passam por lógica, tecnologia e resolução de problemas, mas com formatos, durações e rotinas bem diferentes. A tabela ajuda a enxergar essas diferenças.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão</th>
+              <th class="h-ads">💻 ADS</th>
+              <th class="h-cc">🧮 Ciência da Comp.</th>
+              <th class="h-eca">🤖 Controle e Automação</th>
+              <th class="h-est">📊 Estatística</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Tipo e duração</td><td>Tecnólogo, 2,5 a 3 anos</td><td>Bacharelado, 4 anos</td><td>Bacharelado, 5 anos</td><td>Bacharelado, 4 anos</td></tr>
+            <tr><td>Foco principal</td><td>Construir sistemas e apps</td><td>Entender e criar computação a fundo</td><td>Fazer máquinas e processos funcionarem sozinhos</td><td>Tirar conclusões confiáveis de dados</td></tr>
+            <tr><td>Peso da matemática</td><td>Baixo a médio</td><td>Alto</td><td>Muito alto (com física)</td><td>Muito alto</td></tr>
+            <tr><td>Eletrônica</td><td>Quase nada</td><td>Um pouco (como o computador funciona)</td><td>Muita, é parte central</td><td>Nada</td></tr>
+            <tr><td>Onde trabalha</td><td>Escritório ou casa</td><td>Escritório, casa ou laboratório</td><td>Indústria (escritório e chão de fábrica)</td><td>Escritório ou casa</td></tr>
+            <tr><td>Trabalho remoto</td><td>Muito comum</td><td>Muito comum</td><td>Pouco comum</td><td>Comum</td></tr>
+            <tr><td>Conselho</td><td>Não tem</td><td>Não tem</td><td>CREA (com piso salarial em lei)</td><td>CONRE</td></tr>
+            <tr><td>Salário júnior</td><td>R$ 3k–5k</td><td>R$ 3,5k–6k</td><td>R$ 6k–9k</td><td>R$ 3,5k–6k</td></tr>
+            <tr><td>Entrada no mercado</td><td>Muito disputada</td><td>Disputada</td><td>Menos disputada, mas concentrada em polos industriais</td><td>Menos disputada, com nomes de cargo variados</td></tr>
+            <tr><td>Pergunta central</td><td>"Como eu construo isso?"</td><td>"Por que isso funciona e como faço melhor?"</td><td>"Como faço essa máquina trabalhar sozinha?"</td><td>"O que esses dados realmente dizem?"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧩</span><h2>Outros pontos da sua lista</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Além dos seus 10 critérios principais, você marcou outras coisas que importam pra você. Veja como cada uma aparece em cada curso.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Ponto</th>
+              <th class="h-ads">💻 ADS</th>
+              <th class="h-cc">🧮 Ciência da Comp.</th>
+              <th class="h-eca">🤖 Controle e Automação</th>
+              <th class="h-est">📊 Estatística</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Criar jogos</td><td>Possível como trilha (Unity, Godot), nicho pequeno no Brasil</td><td>Possível, com base forte em gráficos e lógica de jogos</td><td>Distante do foco do curso</td><td>Aparece no balanceamento e na análise de dados de jogos</td></tr>
+            <tr><td>Desenvolver aplicativos</td><td>Núcleo do curso</td><td>Presente, com mais teoria por trás</td><td>Aparece em apps que controlam máquinas e sistemas</td><td>Pouco presente</td></tr>
+            <tr><td>Startups</td><td>Muitas vagas em startups</td><td>Muitas vagas em startups</td><td>Startups de indústria 4.0, agro e robótica</td><td>Fintechs e startups de dados</td></tr>
+            <tr><td>Home office</td><td>Muito comum</td><td>Muito comum</td><td>Raro: a maior parte do trabalho exige estar na planta</td><td>Comum</td></tr>
+            <tr><td>Não precisar viajar</td><td>Quase nunca viaja</td><td>Quase nunca viaja</td><td>Viagens comuns em integradoras; menos em indústria fixa</td><td>Quase nunca viaja</td></tr>
+            <tr><td>Trabalhar por projetos</td><td>Rotina organizada em projetos e entregas curtas</td><td>Rotina organizada em projetos e entregas curtas</td><td>Muito trabalho por projeto (instalar, testar, entregar)</td><td>Projetos de análise, estudos e relatórios</td></tr>
+            <tr><td>Ambiente informal e colaborativo</td><td>Comum em empresas de tecnologia</td><td>Comum em empresas de tecnologia</td><td>Indústria tende a ser mais formal e hierárquica</td><td>Varia: informal em startups, formal em bancos e governo</td></tr>
+            <tr><td>Alta remuneração</td><td>Possível com experiência ou trabalhando pro exterior</td><td>Possível, principalmente em IA e empresas grandes</td><td>Salário inicial alto entre os quatro; cresce em petróleo, mineração e gestão</td><td>Possível em bancos, ciência de dados e concursos</td></tr>
+            <tr><td>Reconhecimento</td><td>Vem do que você entrega e mostra no portfólio</td><td>Vem do que entrega e, na pesquisa, das publicações</td><td>Título de engenheiro tem prestígio social e legal</td><td>Profissão pouco conhecida pelo público, valorizada por quem contrata</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Para pensar antes da sessão</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        <strong>Uma diferença que costuma confundir: ADS e Ciência da Computação.</strong> Os dois levam a vagas de programação, e no dia a dia de um desenvolvedor a diferença entre eles é pequena. O que muda é o caminho: ADS é mais curto e prático; Ciência da Computação é mais longo e teórico, e abre mais portas em IA, pesquisa e vagas muito técnicas.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        <strong>Controle e Automação é o único dos quatro que tem eletrônica de verdade.</strong> Ela aparece um pouco em Ciência da Computação (como o computador funciona por dentro), mas é na Automação que circuitos, sensores e máquinas viram o centro do trabalho. Em compensação, é também o curso mais longo e o que mais leva pra fora do escritório.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        <strong>Estatística e Ciência da Computação se encontram na ciência de dados e na IA.</strong> A Estatística chega por ali pela matemática; a Computação, pela programação. Muita gente que trabalha com dados veio de um dos dois.
+      </div>
+      <p class="note" style="margin-top:16px;">Não precisa decidir sozinho. Leve os checklists, estas tabelas e a aba "Seus critérios" pra conversar com sua orientadora. A decisão se constrói na sessão, não aqui.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais que existem pra cada formação, explicados de um jeito simples. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no Brasil.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col ads">
+          <div class="vaga-col-head">💻 ADS</div>
+          <div class="vaga-role"><strong>Desenvolvedor(a) Júnior</strong><span>Programa partes de sites, apps e sistemas, junto com um time que revisa e orienta o trabalho.</span></div>
+          <div class="vaga-role"><strong>Analista de Testes (QA)</strong><span>Testa os sistemas antes de irem pro ar, procurando erros e garantindo que tudo funciona.</span></div>
+          <div class="vaga-role"><strong>Analista de Suporte de Sistemas</strong><span>Ajuda quem usa o sistema quando algo dá errado e encaminha os problemas pra serem corrigidos.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn" href="https://www.linkedin.com/jobs/search/?keywords=Desenvolvedor%20J%C3%BAnior&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col cc">
+          <div class="vaga-col-head">🧮 Ciência da Computação</div>
+          <div class="vaga-role"><strong>Engenheiro(a) de Software</strong><span>Projeta e constrói sistemas grandes, pensando em como eles vão aguentar muitos usuários ao mesmo tempo.</span></div>
+          <div class="vaga-role"><strong>Engenheiro(a) de Machine Learning</strong><span>Coloca modelos de inteligência artificial pra funcionar dentro de produtos reais.</span></div>
+          <div class="vaga-role"><strong>Desenvolvedor(a) de Jogos</strong><span>Programa a lógica, a física e os sistemas de um jogo dentro de um estúdio.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn" href="https://www.linkedin.com/jobs/search/?keywords=Engenheiro%20de%20Software&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col eca">
+          <div class="vaga-col-head">🤖 Controle e Automação</div>
+          <div class="vaga-role"><strong>Engenheiro(a) de Automação</strong><span>Projeta e melhora a automação de uma fábrica, dos sensores aos programas que comandam as máquinas.</span></div>
+          <div class="vaga-role"><strong>Programador(a) de CLP</strong><span>Escreve os programas que controlam esteiras, robôs e equipamentos de produção.</span></div>
+          <div class="vaga-role"><strong>Engenheiro(a) de Sistemas Embarcados</strong><span>Programa o "cérebro" eletrônico de aparelhos e equipamentos.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn" href="https://www.linkedin.com/jobs/search/?keywords=Engenheiro%20de%20Automa%C3%A7%C3%A3o&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col est">
+          <div class="vaga-col-head">📊 Estatística</div>
+          <div class="vaga-role"><strong>Estatístico(a)</strong><span>Planeja pesquisas e estudos e analisa os resultados com rigor, em empresas, hospitais ou órgãos públicos.</span></div>
+          <div class="vaga-role"><strong>Analista de Dados</strong><span>Organiza os números da empresa e transforma em gráficos e respostas pra quem precisa decidir.</span></div>
+          <div class="vaga-role"><strong>Analista de Risco de Crédito</strong><span>Calcula a chance de um cliente não pagar um empréstimo, ajudando bancos a decidir pra quem emprestar.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn" href="https://www.linkedin.com/jobs/search/?keywords=Estat%C3%ADstico&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SEUS CRITÉRIOS ═══════════════════════════════ -->
+<div class="panel cri" id="p-cri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os quatro cursos</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estes são os 10 critérios que você elencou e organizou como os mais importantes durante o processo, na ordem de prioridade que você definiu. A tabela descreve, de forma objetiva, como cada critério se apresenta em cada curso. Ela não aponta resposta certa nem indica um caminho: é material para você pensar e conversar com sua orientadora.</p>
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Muito presente</span>
+        <span><span class="dot y"></span>Presente em parte</span>
+        <span><span class="dot r"></span>Pouco presente</span>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table crit-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th class="h-ads">💻 ADS</th>
+              <th class="h-cc">🧮 Ciência da Comp.</th>
+              <th class="h-eca">🤖 Controle e Automação</th>
+              <th class="h-est">📊 Estatística</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Ter um trabalho estável</td>
+              <td data-label="💻 ADS"><span class="dot y"></span>Muita demanda por profissionais experientes, mas entrada disputada e um setor que alterna fases de contratação e de demissão.</td>
+              <td data-label="🧮 Ciência da Comp."><span class="dot y"></span>Mesmo cenário de TI: boa empregabilidade com experiência, entrada disputada e oscilação do setor.</td>
+              <td data-label="🤖 Controle e Automação"><span class="dot g"></span>Vagas majoritariamente CLT na indústria, profissão regulamentada e menos formados disputando.</td>
+              <td data-label="📊 Estatística"><span class="dot g"></span>Poucos formados por ano, demanda em bancos, saúde e dados, e concursos públicos específicos para estatístico.</td>
+            </tr>
+            <tr>
+              <td>2. Ter segurança financeira básica</td>
+              <td data-label="💻 ADS"><span class="dot g"></span>Salário de júnior já acima da média nacional, com crescimento rápido nos primeiros anos.</td>
+              <td data-label="🧮 Ciência da Comp."><span class="dot g"></span>Salário inicial acima da média nacional, com crescimento rápido nos primeiros anos.</td>
+              <td data-label="🤖 Controle e Automação"><span class="dot g"></span>Maior salário inicial entre os quatro, com piso salarial definido em lei para engenheiros.</td>
+              <td data-label="📊 Estatística"><span class="dot g"></span>Salário inicial acima da média nacional, e concursos com remuneração alta e estável.</td>
+            </tr>
+            <tr>
+              <td>3. Trabalhar com pouca pressão</td>
+              <td data-label="💻 ADS"><span class="dot y"></span>Rotina geralmente regular, com picos de pressão em prazos de entrega e quando um sistema cai; algumas empresas têm plantão.</td>
+              <td data-label="🧮 Ciência da Comp."><span class="dot y"></span>Rotina geralmente regular, com picos em entregas e incidentes; pesquisa e universidade têm outro tipo de cobrança, por resultados e publicações.</td>
+              <td data-label="🤖 Controle e Automação"><span class="dot y"></span>Funções de projeto têm ritmo mais planejado; manutenção e partida de máquinas têm pressão alta e imediata quando a produção para.</td>
+              <td data-label="📊 Estatística"><span class="dot g"></span>Trabalho de análise com prazos, mas raramente com emergências; ritmo mais concentrado do que corrido.</td>
+            </tr>
+            <tr>
+              <td>4. Ambiente tranquilo</td>
+              <td data-label="💻 ADS"><span class="dot g"></span>Escritório ou casa, trabalho concentrado no computador.</td>
+              <td data-label="🧮 Ciência da Comp."><span class="dot g"></span>Escritório, casa ou laboratório, trabalho concentrado no computador.</td>
+              <td data-label="🤖 Controle e Automação"><span class="dot y"></span>Parte no escritório, parte no chão de fábrica, com barulho, movimento e equipamento de proteção.</td>
+              <td data-label="📊 Estatística"><span class="dot g"></span>Escritório ou casa, trabalho concentrado no computador.</td>
+            </tr>
+            <tr>
+              <td>5. Ter equilíbrio entre trabalho e vida pessoal</td>
+              <td data-label="💻 ADS"><span class="dot g"></span>Horário em geral flexível e home office comum, o que reduz tempo de deslocamento; plantões existem em algumas empresas.</td>
+              <td data-label="🧮 Ciência da Comp."><span class="dot g"></span>Horário em geral flexível e home office comum; plantões existem em algumas empresas.</td>
+              <td data-label="🤖 Controle e Automação"><span class="dot y"></span>Jornada presencial, com possibilidade de turnos, viagens e trabalho em fins de semana durante paradas programadas.</td>
+              <td data-label="📊 Estatística"><span class="dot g"></span>Horário em geral regular, com home office ou regime híbrido comuns.</td>
+            </tr>
+            <tr>
+              <td>6. Eletrônica</td>
+              <td data-label="💻 ADS"><span class="dot r"></span>Praticamente ausente do curso e do trabalho.</td>
+              <td data-label="🧮 Ciência da Comp."><span class="dot y"></span>Aparece em sistemas digitais e arquitetura de computadores, e em sistemas embarcados como especialização.</td>
+              <td data-label="🤖 Controle e Automação"><span class="dot g"></span>Eixo central do curso e do trabalho: circuitos, sensores, microcontroladores e CLP.</td>
+              <td data-label="📊 Estatística"><span class="dot r"></span>Ausente do curso e do trabalho.</td>
+            </tr>
+            <tr>
+              <td>7. Tecnologia e computação</td>
+              <td data-label="💻 ADS"><span class="dot g"></span>É o próprio objeto do curso, presente o tempo todo.</td>
+              <td data-label="🧮 Ciência da Comp."><span class="dot g"></span>É o próprio objeto do curso, estudado a fundo.</td>
+              <td data-label="🤖 Controle e Automação"><span class="dot g"></span>Programação, controladores, robôs e redes industriais fazem parte do dia a dia.</td>
+              <td data-label="📊 Estatística"><span class="dot y"></span>Programação em R e Python é ferramenta diária, mas o foco do curso é a matemática dos dados.</td>
+            </tr>
+            <tr>
+              <td>8. Analisar informações</td>
+              <td data-label="💻 ADS"><span class="dot y"></span>Presente na análise de requisitos e na investigação de erros; análise de dados é uma trilha possível.</td>
+              <td data-label="🧮 Ciência da Comp."><span class="dot g"></span>Análise de algoritmos, dados e problemas complexos atravessa o curso; ciência de dados e IA são caminhos fortes.</td>
+              <td data-label="🤖 Controle e Automação"><span class="dot y"></span>Presente na leitura de sinais de sensores e de dados de produção para ajustar processos.</td>
+              <td data-label="📊 Estatística"><span class="dot g"></span>É a atividade central da profissão.</td>
+            </tr>
+            <tr>
+              <td>9. Melhorar ou inovar processos</td>
+              <td data-label="💻 ADS"><span class="dot g"></span>Sistemas existem para automatizar e melhorar processos de empresas; é parte direta do trabalho.</td>
+              <td data-label="🧮 Ciência da Comp."><span class="dot y"></span>Presente ao criar sistemas e soluções novas; o foco do curso é mais técnico do que de processos de negócio.</td>
+              <td data-label="🤖 Controle e Automação"><span class="dot g"></span>Automatizar e otimizar processos é a definição da profissão.</td>
+              <td data-label="📊 Estatística"><span class="dot y"></span>Presente em controle de qualidade e em análises que embasam mudanças; quem implementa a mudança costuma ser outra equipe.</td>
+            </tr>
+            <tr>
+              <td>10. Resolver problemas</td>
+              <td data-label="💻 ADS"><span class="dot g"></span>O dia a dia é resolver problemas: entender o que o usuário precisa e corrigir o que não funciona.</td>
+              <td data-label="🧮 Ciência da Comp."><span class="dot g"></span>Resolver problemas difíceis, inclusive sem solução pronta, é o centro do curso.</td>
+              <td data-label="🤖 Controle e Automação"><span class="dot g"></span>Resolver problemas de máquinas e processos, muitas vezes na hora e no local.</td>
+              <td data-label="📊 Estatística"><span class="dot g"></span>Responder perguntas difíceis a partir de dados é o núcleo da profissão.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="margin-top:16px;">Leia coluna por coluna pensando no peso que cada critério tem para você. Os critérios estão na ordem que você definiu como prioridade, então os primeiros têm mais peso na sua decisão. Use esta leitura como ponto de partida da conversa com sua orientadora.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Ranking dos critérios (soma dos pontos)</h2></div>
+    <div class="sc-body">
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Verde = 2 pontos</span>
+        <span><span class="dot y"></span>Amarelo = 1 ponto</span>
+        <span><span class="dot r"></span>Vermelho = 0 ponto</span>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 📊 Estatística</span><span class="rank-score">16 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill est" style="width:80%;">16</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 🤖 Eng. de Controle e Automação</span><span class="rank-score">16 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill eca" style="width:80%;">16</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 🧮 Ciência da Computação</span><span class="rank-score">16 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill cc" style="width:80%;">16</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥈 💻 Análise e Desenv. de Sistemas</span><span class="rank-score">15 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill ads" style="width:75%;">15</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com.br</p>
+</footer>
+
+
+<script>
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    if (checked > 0) resEl.classList.add('show');
+    else resEl.classList.remove('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
