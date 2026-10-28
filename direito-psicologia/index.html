@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Carreiras — Direito e Psicologia | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Direito — Bordô */
+      --dir:     #6B2F3C;
+      --dir-lt:  #F6EAED;
+      --dir-mid: #DCC0C8;
+
+      /* Psicologia — Verde Profundo */
+      --psi:     #3B503F;
+      --psi-lt:  #EAEFEB;
+      --psi-mid: #C2CFC4;
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.dir.active { color: var(--dir); border-bottom-color: var(--dir); }
+    .tab-btn.psi.active { color: var(--psi); border-bottom-color: var(--psi); }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .dir .sc-head { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .dir .sc-head h2 { color: var(--dir); }
+    .psi .sc-head { background: var(--psi-lt); border-color: var(--psi-mid); }
+    .psi .sc-head h2 { color: var(--psi); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .dir ul.sl li::before { color: var(--dir); }
+    .psi ul.sl li::before { color: var(--psi); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .dir .tag { background: var(--dir-lt); color: var(--dir); border-color: var(--dir-mid); }
+    .psi .tag { background: var(--psi-lt); color: var(--psi); border-color: var(--psi-mid); }
+
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .dir .hbox { background: var(--dir-lt); border-color: var(--dir); }
+    .psi .hbox { background: var(--psi-lt); border-color: var(--psi); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .dir .accent { color: var(--dir); }
+    .psi .accent { color: var(--psi); }
+
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .dir .tech-card { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .psi .tech-card { background: var(--psi-lt); border-color: var(--psi-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .dir .tech-card strong { color: var(--dir); }
+    .psi .tech-card strong { color: var(--psi); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .dir .sal-card { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .psi .sal-card { background: var(--psi-lt); border-color: var(--psi-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .dir .sal-range { color: var(--dir); }
+    .psi .sal-range { color: var(--psi); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-dir { background: var(--dir); }
+    .comp-table th.h-psi { background: var(--psi); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .dir .lcard:hover { border-color: var(--dir); }
+    .psi .lcard:hover { border-color: var(--psi); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .dir .cl-item:hover, .dir .cl-item.checked { background: var(--dir-lt); border-color: var(--dir); }
+    .psi .cl-item:hover, .psi .cl-item.checked { background: var(--psi-lt); border-color: var(--psi); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .dir .cl-item.checked .cl-box { background: var(--dir); border-color: var(--dir); }
+    .psi .cl-item.checked .cl-box { background: var(--psi); border-color: var(--psi); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .dir .cl-score span { color: var(--dir); font-weight: 800; }
+    .psi .cl-score span { color: var(--psi); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .dir .cl-result { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .psi .cl-result { background: var(--psi-lt); border-color: var(--psi-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .sub { font-size: 13px; color: var(--text); line-height: 1.6; }
+
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+    .rank-fill.dir { background: var(--dir); }
+    .rank-fill.psi { background: var(--psi); }
+
+    .vagas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-col-head.dir { background: var(--dir); }
+    .vaga-col-head.psi { background: var(--psi); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+    .vaga-btn.dir { background: var(--dir); }
+    .vaga-btn.psi { background: var(--psi); }
+
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table tr:nth-child(even) td:first-child { background: var(--cmp); }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>Direito · Psicologia
+    <span class="hd-accent">pesquisar é o começo da escolha</span>
+  </h1>
+  <p class="hd-sub">Este guia é pra você levar pra casa nesta semana de pesquisa. Dois cursos que lidam com pessoas e com o que acontece na vida delas, mas de lugares bem diferentes: um trabalha com a lei e a defesa de direitos, o outro com a escuta e o cuidado. Leia com calma, marque o que fizer sentido e traga tudo pra próxima sessão.</p>
+</header>
+
+<nav>
+  <button class="tab-btn dir active" data-c="dir" onclick="show('dir')">⚖️ Direito</button>
+  <button class="tab-btn psi" data-c="psi" onclick="show('psi')">🧠 Psicologia</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">🔍 Comparar os dois</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+
+<!-- ═══════════════════════════════ DIREITO ═══════════════════════════════ -->
+<div class="panel dir active" id="p-dir">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Direito?</h2></div>
+    <div class="sc-body">
+      <p>Direito é o curso que ensina as regras do jogo da sociedade: o que a lei permite, o que ela proíbe, como se resolve um conflito e como se defende alguém. É um <strong>bacharelado de 5 anos</strong>, com estágio obrigatório e trabalho de conclusão. Não existe versão tecnóloga: quem quer atuar como advogado faz os 5 anos e ainda passa no Exame de Ordem da OAB.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Introdução ao Direito, Filosofia, Sociologia, Direito Constitucional, Civil e Penal. Muita leitura, muita teoria e um vocabulário novo pra aprender.</li>
+        <li><strong>3º–4º ano:</strong> Processo Civil, Processo Penal, Trabalho, Tributário, Administrativo e Empresarial. O curso fica mais técnico e mais prático.</li>
+        <li><strong>5º ano:</strong> Estágio no Núcleo de Prática Jurídica, TCC e, na maioria das vezes, preparação paralela pra OAB ou pra concurso.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Exame de Ordem:</strong> o diploma sozinho não deixa você advogar. Sem aprovação na OAB você pode trabalhar em área jurídica de empresa, prestar concurso de nível superior e atuar em compliance, mas não pode assinar processo nem se chamar advogado.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Advocacia em escritório:</strong> defender clientes em processos, dar pareceres, negociar acordos. Pode ser escritório grande, banca pequena ou trabalho autônomo.</li>
+        <li><strong>Departamento jurídico de empresa:</strong> cuidar de contratos, riscos e problemas legais por dentro, com carteira assinada e rotina mais previsível.</li>
+        <li><strong>Magistratura:</strong> ser juiz. Concurso muito disputado, que exige anos de estudo e prática jurídica prévia.</li>
+        <li><strong>Ministério Público:</strong> promotor ou procurador, atuando na defesa da sociedade, do consumidor, do meio ambiente e da infância.</li>
+        <li><strong>Defensoria Pública:</strong> defender quem não pode pagar advogado. Trabalho de altíssimo impacto social.</li>
+        <li><strong>Delegado de polícia:</strong> conduzir investigações criminais. Concurso próprio, para bacharéis em Direito.</li>
+        <li><strong>Concursos em geral:</strong> tribunais, receita, procuradorias e agências reguladoras. É a formação com mais portas no serviço público.</li>
+        <li><strong>Compliance e proteção de dados:</strong> garantir que a empresa siga as regras (LGPD, anticorrupção). Área nova, em alta e bem paga.</li>
+        <li><strong>Mediação e arbitragem:</strong> resolver conflito fora do tribunal, com acordo em vez de briga.</li>
+        <li><strong>Direito digital e propriedade intelectual:</strong> contratos de tecnologia, marcas, criadores de conteúdo e startups.</li>
+        <li><strong>Carreira acadêmica:</strong> mestrado, doutorado e docência.</li>
+        <li><strong>Diplomacia:</strong> o Direito é uma das formações mais comuns entre aprovados no Instituto Rio Branco.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Direito é, antes de tudo, um curso de texto: ler muito, entender exatamente o que está escrito e escrever com precisão.</p>
+      <div class="tags">
+        <span class="tag">Gosto por leitura densa</span>
+        <span class="tag">Boa escrita</span>
+        <span class="tag">Argumentação</span>
+        <span class="tag">Memória e organização</span>
+        <span class="tag">Raciocínio lógico</span>
+        <span class="tag">Atenção a detalhe</span>
+        <span class="tag">Oratória</span>
+        <span class="tag">Disciplina de estudo</span>
+        <span class="tag">Interesse por política e sociedade</span>
+        <span class="tag">Ética</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando alguém defende uma opinião que você acha errada, dá vontade de construir um contra-argumento organizado, com fundamento, ou você prefere sair da discussão? Se a primeira opção te atrai, o Direito conversa com você.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>É o curso com mais formados do país.</strong> São mais de mil faculdades de Direito no Brasil e centenas de milhares de advogados inscritos na OAB. Chegar a um bom lugar exige estágio bom, especialização e rede de contatos.</div>
+      <div class="cbox"><strong>O começo costuma ser mal pago.</strong> Estágio de escritório e primeiro emprego pagam pouco perto do tamanho da jornada. A curva de renda melhora depois, não no primeiro ano.</div>
+      <div class="cbox"><strong>Concurso é um projeto de anos.</strong> Magistratura e Ministério Público exigem 3 anos de prática jurídica depois da formatura, mais anos de estudo quase em tempo integral. É caminho longo e de renúncia.</div>
+      <div class="cbox"><strong>Volume de leitura pesado e constante.</strong> A lei muda, a jurisprudência muda, e você precisa acompanhar. Quem não gosta de ler cansa rápido.</div>
+      <div class="cbox"><strong>Prazo processual não perdoa.</strong> A rotina é regida por prazos rígidos. Isso gera pressão real e, em muitos escritórios, jornada longa.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">⚙️</div><strong>IA na petição</strong><p>Ferramentas já redigem minutas e resumem processos. O trabalho braçal de pesquisa encolheu, e a estratégia jurídica virou o diferencial.</p></div>
+        <div class="tech-card"><div class="tc-icon">💻</div><strong>Processo 100% digital</strong><p>Audiência por vídeo e processo eletrônico viraram padrão. Dá pra atuar em outro estado sem sair da sua cidade.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔐</div><strong>LGPD e dados</strong><p>A lei de proteção de dados criou uma área inteira de trabalho que não existia dez anos atrás.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Jurimetria</strong><p>Analisar milhares de decisões pra prever o resultado de um processo. Direito encontrando estatística.</p></div>
+        <div class="tech-card"><div class="tc-icon">🪙</div><strong>Novos negócios</strong><p>Contratos digitais, ativos virtuais e startups pedem advogados que entendam de tecnologia.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤝</div><strong>Acordo online</strong><p>Plataformas resolvem casos simples sem tribunal. Mediar virou habilidade valorizada.</p></div>
+      </div>
+      <p class="note">⚡ O que a máquina não faz: sustentar oralmente, negociar sob pressão, escolher a tese e responder pela decisão. É pra isso que o advogado está sendo formado hoje.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado enorme e muito concorrido:</strong> há vaga em todo lugar, mas a disputa por posição boa é forte desde o estágio.</li>
+        <li><strong>Serviço público é o grande atrativo de renda:</strong> as carreiras jurídicas de Estado estão entre as mais bem pagas do país, com estabilidade.</li>
+        <li><strong>Escritórios grandes concentram os melhores salários privados:</strong> tributário, societário e contencioso estratégico pagam acima da média.</li>
+        <li><strong>Jurídico de empresa cresce:</strong> muita gente prefere o departamento interno pela previsibilidade de horário e de salário.</li>
+        <li><strong>Áreas novas contratam:</strong> compliance, proteção de dados, ESG e direito digital abriram vagas que não existiam.</li>
+        <li><strong>Advocacia autônoma é possível cedo:</strong> dá pra abrir a própria banca logo depois da OAB, com liberdade grande e renda instável no começo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em Direito, a especialização não é opcional. É ela que define quanto você ganha e onde você trabalha.</p>
+      <div class="tags">
+        <span class="tag">⭐ Tributário</span>
+        <span class="tag">⭐ Societário e M&amp;A</span>
+        <span class="tag">⭐ Compliance e LGPD</span>
+        <span class="tag">⭐ Trabalhista empresarial</span>
+        <span class="tag">Penal</span>
+        <span class="tag">Civil e Família</span>
+        <span class="tag">Direito Digital</span>
+        <span class="tag">Propriedade Intelectual</span>
+        <span class="tag">Ambiental e ESG</span>
+        <span class="tag">Direito Médico</span>
+        <span class="tag">Consumidor</span>
+        <span class="tag">Internacional</span>
+        <span class="tag">Preparação para concursos</span>
+        <span class="tag">Mediação e Arbitragem</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhores faixas salariais no Brasil em 2024–2025. Tributário e societário concentram as remunerações mais altas na advocacia privada.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha quem se forma em Direito?</h2></div>
+    <div class="sc-body">
+      <p>A faixa é uma das mais largas de todas as profissões: depende demais da área, do porte do escritório e de ser ou não carreira pública.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,5k–4,5k</div><div class="sal-note">Advogado júnior em escritório ou analista jurídico em empresa. Estágio paga bem menos.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 7k–15k</div><div class="sal-note">Advogado com área definida, alguns anos de experiência e pós na área.</div></div>
+        <div class="sal-card"><div class="sal-stage">Liderança / Topo</div><div class="sal-range">R$ 20k–40k+</div><div class="sal-note">Sócio de escritório, diretor jurídico e carreiras públicas como juiz, promotor e procurador.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> a advocacia autônoma não tem salário, tem faturamento. Pode ser um mês de R$ 2 mil e outro de R$ 20 mil. A carreira pública é o oposto: valor alto, fixo e previsível, com anos de estudo como preço de entrada.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎧</span><h2>Pra ouvir e assistir</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.youtube.com/watch?v=HmJKvPsS36s" class="lcard" target="_blank"><span class="lc-icon">🎙️</span><div class="lc-body"><strong>Podcast Segunda a Sexta: EP 04 · Tudo sobre o curso de Direito</strong><span>Episódio completo sobre o curso, 45 min</span></div><span class="lc-arr">→</span></a>
+        <a href="https://guiadoestudante.abril.com.br/profissoes/direito/" class="lcard" target="_blank"><span class="lc-icon">📘</span><div class="lc-body"><strong>Guia de Profissões do Guia do Estudante: Direito</strong><span>Página do curso com o que se estuda, onde se atua e o mercado</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.oab.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>OAB — Ordem dos Advogados do Brasil</strong><span>O conselho da profissão: Exame de Ordem, áreas de atuação e regras do ofício</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.conjur.com.br" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Consultor Jurídico (ConJur)</strong><span>Notícia jurídica diária: dá pra sentir como é o dia a dia do mundo do Direito</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.jota.info" class="lcard" target="_blank"><span class="lc-icon">⚖️</span><div class="lc-body"><strong>JOTA</strong><span>Análise das decisões dos tribunais e do impacto delas nos negócios e na política</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Salários reais reportados. Pesquise "advogado", "analista jurídico" e por escritório</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.stf.jus.br" class="lcard" target="_blank"><span class="lc-icon">🇧🇷</span><div class="lc-body"><strong>STF — Supremo Tribunal Federal</strong><span>Assista a uma sessão de julgamento ao vivo e veja a argumentação funcionando na prática</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Direito é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-dir">
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Leio bastante e não me assusto com texto longo e difícil.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Escrevo bem e gosto de organizar uma ideia em argumento, com começo, meio e conclusão.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Tenho interesse por política, notícia e pelo funcionamento das instituições do país.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Detalhe importa pra mim. Percebo quando uma palavra muda o sentido de uma frase.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Falar em público me dá frio na barriga, mas não me paralisa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Consigo estudar sozinha, com disciplina, por períodos longos e sem ninguém cobrando.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Aceito que a construção de carreira aqui é lenta e que o retorno grande vem depois.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Trabalhar sob prazo rígido me organiza mais do que me trava.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Me incomoda ver injustiça e eu gostaria de ter ferramenta concreta pra fazer algo a respeito.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Consigo defender uma posição mesmo quando ela não é a mais popular na roda.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-dir">0 de 10</span></div>
+      <div class="cl-result" id="res-dir"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ PSICOLOGIA ═══════════════════════════════ -->
+<div class="panel psi" id="p-psi">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Psicologia?</h2></div>
+    <div class="sc-body">
+      <p>Psicologia estuda como as pessoas pensam, sentem, se relacionam e adoecem. É um <strong>curso de 5 anos</strong> que forma bacharel e psicólogo, com estágios supervisionados obrigatórios nos dois últimos anos. Ao se formar, o registro no Conselho Regional de Psicologia é direto: não existe um exame de ordem como o do Direito.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º–2º ano:</strong> Bases da psicologia, biologia, neuroanatomia, estatística, métodos de pesquisa e as grandes teorias (psicanálise, comportamental, humanista, Gestalt, cognitiva).</li>
+        <li><strong>3º ano:</strong> Psicopatologia, avaliação psicológica, psicologia social, do desenvolvimento, organizacional e escolar.</li>
+        <li><strong>4º–5º ano:</strong> Estágios supervisionados na clínica-escola e em campo, além do TCC. É quando você atende de verdade, com supervisão.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Conselho profissional:</strong> a profissão é regulada pelo CFP e pelos CRPs regionais. Há código de ética rígido, sigilo obrigatório e regras claras sobre o que pode e o que não pode ser feito, inclusive na internet.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Clínica:</strong> atender em consultório, presencial ou online. É o caminho mais conhecido e o que dá mais autonomia sobre a própria agenda.</li>
+        <li><strong>Psicologia organizacional:</strong> trabalhar em empresa com seleção, desenvolvimento, cultura e saúde mental dos funcionários.</li>
+        <li><strong>Psicologia escolar:</strong> atuar na escola com aprendizagem, convivência, inclusão e orientação profissional.</li>
+        <li><strong>Psicologia hospitalar:</strong> acompanhar pacientes e famílias em internação, UTI, oncologia e cuidados paliativos.</li>
+        <li><strong>Psicologia jurídica:</strong> perícia, avaliação em varas de família e trabalho no sistema de justiça.</li>
+        <li><strong>Psicologia do esporte:</strong> preparo mental de atletas e equipes.</li>
+        <li><strong>Neuropsicologia:</strong> avaliar memória, atenção e funções cognitivas. Área técnica, em alta e bem remunerada.</li>
+        <li><strong>Saúde pública:</strong> atuar no SUS, em CAPS, UBS e programas de saúde mental comunitária.</li>
+        <li><strong>Orientação profissional:</strong> ajudar adolescentes e adultos a escolherem ou reescolherem caminho, como acontece aqui.</li>
+        <li><strong>Assistência social e terceiro setor:</strong> ONGs, projetos sociais e acolhimento de populações vulneráveis.</li>
+        <li><strong>Pesquisa e docência:</strong> mestrado, doutorado e sala de aula na universidade.</li>
+        <li><strong>Psicologia do consumo e UX:</strong> entender comportamento de usuário e de consumidor. É o ponto onde a Psicologia encosta no mundo dos negócios e do consumo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Psicologia pede capacidade de escutar sem julgar e de ficar perto do sofrimento de alguém sem se desmontar junto.</p>
+      <div class="tags">
+        <span class="tag">Escuta</span>
+        <span class="tag">Empatia</span>
+        <span class="tag">Paciência</span>
+        <span class="tag">Curiosidade sobre pessoas</span>
+        <span class="tag">Estabilidade emocional</span>
+        <span class="tag">Ética e discrição</span>
+        <span class="tag">Estudo constante</span>
+        <span class="tag">Observação</span>
+        <span class="tag">Tolerância à dúvida</span>
+        <span class="tag">Autoconhecimento</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando um amigo desabafa, você sente vontade de resolver o problema dele rápido ou consegue ficar ali escutando, mesmo sem ter solução? A Psicologia trabalha muito mais com a segunda coisa do que com a primeira.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>O consultório demora a encher.</strong> Formar não traz paciente. Construir clientela leva de dois a quatro anos, e nesse meio-tempo a maioria concilia clínica com emprego fixo.</div>
+      <div class="cbox"><strong>Formação continuada custa caro e não acaba.</strong> Pós-graduação, supervisão e a própria terapia pessoal são parte do trabalho e saem do seu bolso, todo mês.</div>
+      <div class="cbox"><strong>Desgaste emocional é real.</strong> Escutar sofrimento o dia inteiro cansa. Sem supervisão e terapia própria, o risco de esgotamento é alto.</div>
+      <div class="cbox"><strong>Salário de vínculo costuma ser baixo.</strong> Emprego CLT em clínica, escola ou instituição paga bem menos do que a clínica própria. Quem depende só de vínculo ganha pouco.</div>
+      <div class="cbox"><strong>Tem estatística e método científico no caminho.</strong> Muita gente entra achando que é só teoria sobre gente e leva um susto com pesquisa e números.</div>
+      <div class="cbox"><strong>Você não vê o resultado rápido.</strong> Processo terapêutico é lento. Quem precisa de retorno imediato pra se sentir competente sofre nessa profissão.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">💻</div><strong>Atendimento online</strong><p>Autorizado pelo CFP e já consolidado. Dá pra atender paciente de qualquer cidade, ou do exterior, de onde você estiver.</p></div>
+        <div class="tech-card"><div class="tc-icon">📱</div><strong>Apps de saúde mental</strong><p>Plataformas de terapia e bem-estar contratam psicólogos e criaram um mercado novo de trabalho.</p></div>
+        <div class="tech-card"><div class="tc-icon">🧪</div><strong>Testes informatizados</strong><p>Avaliação psicológica e neuropsicológica com correção digital, mais rápida e mais precisa.</p></div>
+        <div class="tech-card"><div class="tc-icon">🧠</div><strong>Neurociência</strong><p>Exames de imagem e pesquisa do cérebro dialogam cada vez mais com a clínica.</p></div>
+        <div class="tech-card"><div class="tc-icon">🕶️</div><strong>Realidade virtual</strong><p>Já usada no tratamento de fobias e ansiedade, com exposição controlada.</p></div>
+        <div class="tech-card"><div class="tc-icon">🏢</div><strong>Saúde mental corporativa</strong><p>Empresas passaram a investir em programas de bem-estar, o que abriu vagas fora do consultório.</p></div>
+      </div>
+      <p class="note">⚡ Nenhuma tecnologia substitui o vínculo entre duas pessoas numa sala. O que mudou foi onde essa sala fica e quanta gente você consegue alcançar.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Demanda cresceu muito:</strong> a procura por terapia aumentou de forma consistente nos últimos anos, especialmente entre jovens.</li>
+        <li><strong>Muitos formados também:</strong> o Brasil é um dos países com mais psicólogos do mundo. O nome, sozinho, não garante paciente.</li>
+        <li><strong>A clínica online mudou a geografia:</strong> quem mora em cidade pequena pode atender gente de qualquer lugar.</li>
+        <li><strong>Empresa contrata cada vez mais:</strong> psicologia organizacional e saúde mental corporativa são as frentes que mais crescem em vínculo formal.</li>
+        <li><strong>Neuropsicologia tem fila:</strong> a avaliação neuropsicológica tem alta demanda e poucos profissionais formados.</li>
+        <li><strong>Concurso público existe:</strong> prefeituras, tribunais, forças armadas e o SUS abrem vagas com estabilidade.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em Psicologia, escolher uma abordagem e um campo é o que transforma o diploma em profissão.</p>
+      <div class="tags">
+        <span class="tag">⭐ Neuropsicologia</span>
+        <span class="tag">⭐ Terapia Cognitivo-Comportamental</span>
+        <span class="tag">⭐ Psicologia Organizacional</span>
+        <span class="tag">⭐ Psicologia Infantil</span>
+        <span class="tag">Gestalt-terapia</span>
+        <span class="tag">Psicanálise</span>
+        <span class="tag">Casal e Família</span>
+        <span class="tag">Psicologia Hospitalar</span>
+        <span class="tag">Psicologia Jurídica</span>
+        <span class="tag">Psicologia do Esporte</span>
+        <span class="tag">Orientação Profissional</span>
+        <span class="tag">Psicologia Escolar</span>
+        <span class="tag">Análise do Comportamento</span>
+        <span class="tag">Consumo e UX</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhores faixas no Brasil em 2024–2025. Neuropsicologia e psicologia organizacional concentram as remunerações mais altas fora da clínica particular já consolidada.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um psicólogo?</h2></div>
+    <div class="sc-body">
+      <p>Aqui a diferença entre trabalhar por vínculo e trabalhar por conta própria é enorme, e é ela que explica quase toda a variação.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,5k–4k</div><div class="sal-note">Vínculo CLT em clínica, escola ou empresa. Consultório próprio no começo rende menos e de forma irregular.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 5k–12k</div><div class="sal-note">Consultório em funcionamento, com agenda parcialmente cheia, ou cargo pleno em organizacional e hospitalar.</div></div>
+        <div class="sal-card"><div class="sal-stage">Consolidado / Topo</div><div class="sal-range">R$ 15k–30k+</div><div class="sal-note">Agenda cheia com sessão bem posicionada, neuropsicologia, supervisão e formação de outros profissionais.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> o psicólogo de consultório não recebe salário, recebe por sessão. Quem tem 25 sessões por semana ganha muito mais do que quem tem 8, e chegar às 25 é um trabalho de construção que leva anos.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎧</span><h2>Pra ouvir e assistir</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.youtube.com/watch?v=dwtR-p4TFaM" class="lcard" target="_blank"><span class="lc-icon">🎙️</span><div class="lc-body"><strong>Podcast Segunda a Sexta: EP 11 · Tudo sobre o curso de Psicologia</strong><span>Episódio completo sobre o curso, 52 min</span></div><span class="lc-arr">→</span></a>
+        <a href="https://guiadoestudante.abril.com.br/profissoes/psicologia/" class="lcard" target="_blank"><span class="lc-icon">📘</span><div class="lc-body"><strong>Guia de Profissões do Guia do Estudante: Psicologia</strong><span>Página do curso com o que se estuda, onde se atua e o mercado</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://site.cfp.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CFP — Conselho Federal de Psicologia</strong><span>O que o psicólogo pode e não pode fazer, resoluções e áreas reconhecidas</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.scielo.br" class="lcard" target="_blank"><span class="lc-icon">📚</span><div class="lc-body"><strong>SciELO</strong><span>Artigos científicos brasileiros de psicologia, de graça. Dá pra ver como é a pesquisa da área</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor — Salários</strong><span>Pesquise "psicólogo organizacional", "psicólogo clínico" e "neuropsicólogo"</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.gov.br/saude/pt-br" class="lcard" target="_blank"><span class="lc-icon">🏥</span><div class="lc-body"><strong>Ministério da Saúde</strong><span>Como funciona a rede pública de saúde mental e onde o psicólogo entra nela</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.linkedin.com/jobs/search/?keywords=Psic%C3%B3logo&location=Brasil" class="lcard" target="_blank"><span class="lc-icon">🔎</span><div class="lc-body"><strong>Vagas de psicólogo hoje</strong><span>Veja quais empresas e instituições estão contratando neste momento</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Psicologia é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-psi">
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Consigo escutar alguém por muito tempo sem sentir necessidade de dar conselho.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Fico genuinamente curiosa sobre por que as pessoas fazem o que fazem.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Aguento conviver com dúvida. Nem tudo precisa ter resposta fechada pra mim.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Guardo segredo. As pessoas confiam coisas em mim e eu não repasso.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Consigo ficar perto do sofrimento de alguém sem levar aquilo pra casa todos os dias.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Topo estudar pelo resto da vida, porque nessa profissão a formação nunca termina.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Me atrai a ideia de montar minha própria agenda e responder por ela.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Aceito que o resultado do meu trabalho aparece devagar, ao longo de meses.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Não fujo de estatística e de método científico, que fazem parte do curso.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-psi')"><div class="cl-box"></div><div class="cl-text">Estou disposta a fazer terapia e supervisão como parte do meu próprio trabalho.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-psi">0 de 10</span></div>
+      <div class="cl-result" id="res-psi"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ COMPARAÇÃO ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cmp">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔍</span><h2>Os dois lado a lado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Direito e Psicologia aparecem juntos porque os dois lidam com pessoas, conflitos e sofrimento, mas o fazem de formas muito diferentes. Esta tabela mostra as diferenças práticas.</p>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão</th>
+              <th class="h-dir">⚖️ Direito</th>
+              <th class="h-psi">🧠 Psicologia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Foco principal</td><td>Aplicar e defender as regras da sociedade</td><td>Entender e acompanhar o que as pessoas pensam e sentem</td></tr>
+            <tr><td>Duração</td><td>5 anos, bacharelado</td><td>5 anos, formação de psicólogo</td></tr>
+            <tr><td>Para exercer</td><td>Exame da OAB para advogar (concurso para as carreiras públicas)</td><td>Registro direto no CRP, sem exame de ordem</td></tr>
+            <tr><td>Principal ferramenta</td><td>Leitura, escrita e argumentação</td><td>Escuta, observação e vínculo</td></tr>
+            <tr><td>Onde trabalha</td><td>Escritórios, empresas, tribunais, órgãos públicos</td><td>Consultório, empresas, escolas, hospitais, saúde pública</td></tr>
+            <tr><td>Estabilidade</td><td>Alta no serviço público; variável na advocacia privada</td><td>Média: clínica própria leva anos para encher; vínculos pagam menos</td></tr>
+            <tr><td>Salário inicial</td><td>R$ 2,5k–4,5k</td><td>R$ 2,5k–4k</td></tr>
+            <tr><td>Teto de renda</td><td>R$ 20k–40k+ (sócio, carreiras públicas)</td><td>R$ 15k–30k+ (agenda cheia, neuropsicologia)</td></tr>
+            <tr><td>Conselho / regulação</td><td>OAB</td><td>CFP e CRPs</td></tr>
+            <tr><td>Rotina</td><td>Regida por prazos processuais e audiências</td><td>Regida pela agenda de sessões</td></tr>
+            <tr><td>Desgaste típico</td><td>Pressão de prazo e volume de leitura</td><td>Desgaste emocional de escutar sofrimento</td></tr>
+            <tr><td>Pergunta central</td><td>"O que a lei diz e como eu defendo isso?"</td><td>"O que está acontecendo com essa pessoa?"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Para pensar antes da sessão</h2></div>
+    <div class="sc-body">
+      <div class="hbox">
+        ⚖️ <strong>Direito</strong> é o caminho de quem trabalha com regras, argumentos e defesa de posições. Dá para atuar defendendo direitos de pessoas e grupos, em escritório, empresa ou serviço público, e a carreira tem uma faixa de renda muito larga, que depende da área e do tempo de construção.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🧠 <strong>Psicologia</strong> é o caminho de quem trabalha com a escuta e o cuidado da saúde mental. Dá para atuar em consultório, empresa, escola, hospital e saúde pública, com bastante autonomia sobre a própria agenda, e a renda depende de quantos atendimentos você consegue construir.
+      </div>
+      <div class="hbox" style="margin-top:12px;">
+        🤝 <strong>Onde os dois se encontram:</strong> psicologia jurídica, mediação de conflitos, direito de família, defesa de crianças e adolescentes, direitos humanos. Existem profissionais que combinam as duas áreas.
+      </div>
+      <p class="note" style="margin-top:16px;">Não precisa decidir sozinha. Leve os checklists, esta tabela e a ordem de prioridade da aba "Seus critérios" para conversar com sua orientadora. A decisão se constrói na sessão, não aqui.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais que existem para cada formação, explicados de um jeito simples. As vagas mudam todo dia, então o botão abre o LinkedIn já filtrado e mostra o que estiver aberto hoje no Brasil.</p>
+      <div class="vagas-grid">
+
+        <div class="vaga-col">
+          <div class="vaga-col-head dir">⚖️ Direito</div>
+          <div class="vaga-role"><strong>Assistente Jurídico</strong><span>Organiza processos, prazos e documentos, e apoia os advogados no dia a dia de um escritório ou de uma empresa.</span></div>
+          <div class="vaga-role"><strong>Advogado(a) Júnior</strong><span>Acompanha processos, escreve petições e atende clientes, sempre com a supervisão de advogados mais experientes.</span></div>
+          <div class="vaga-role"><strong>Analista de Compliance</strong><span>Cuida para que a empresa siga as leis e as regras, como a proteção de dados dos clientes.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn dir" href="https://www.linkedin.com/jobs/search/?keywords=Advogado&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+        <div class="vaga-col">
+          <div class="vaga-col-head psi">🧠 Psicologia</div>
+          <div class="vaga-role"><strong>Psicólogo(a) Clínico(a)</strong><span>Atende pessoas em sessões de terapia, em clínica ou online, acompanhando o que elas estão vivendo.</span></div>
+          <div class="vaga-role"><strong>Psicólogo(a) Organizacional</strong><span>Cuida da seleção, do desenvolvimento e do bem-estar das pessoas que trabalham numa empresa.</span></div>
+          <div class="vaga-role"><strong>Psicólogo(a) Hospitalar</strong><span>Acompanha pacientes e familiares durante uma internação, ajudando a lidar com o momento.</span></div>
+          <div class="vaga-spacer"></div>
+          <a class="vaga-btn psi" href="https://www.linkedin.com/jobs/search/?keywords=Psic%C3%B3logo&location=Brasil" target="_blank">🔗 Ver vagas no LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════ SEUS CRITÉRIOS ═══════════════════════════════ -->
+<div class="panel cmp" id="p-cri">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os dois cursos</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Estes são os critérios que você elencou e organizou como os mais importantes durante o processo, na ordem de prioridade que você definiu. A tabela descreve, de forma objetiva, como cada critério se apresenta em cada curso. Ela não aponta resposta certa nem indica um caminho: é material para você pensar e conversar com sua orientadora.</p>
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Muito presente</span>
+        <span><span class="dot y"></span>Presente em parte</span>
+        <span><span class="dot r"></span>Pouco presente</span>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table crit-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th class="h-dir">⚖️ Direito</th>
+              <th class="h-psi">🧠 Psicologia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Retornos: ter equilíbrio entre trabalho e vida pessoal</td>
+              <td data-label="⚖️ Direito"><span class="dot y"></span>Varia muito. Escritórios grandes e prazos processuais pedem jornadas longas; jurídico de empresa e carreiras públicas costumam ter horário mais definido.</td>
+              <td data-label="🧠 Psicologia"><span class="dot g"></span>Quem atende em consultório monta a própria agenda e decide quantas sessões fazer. Nos primeiros anos, muita gente concilia a clínica com outro trabalho.</td>
+            </tr>
+            <tr>
+              <td>Rotina: ter uma rotina previsível</td>
+              <td data-label="⚖️ Direito"><span class="dot y"></span>Prazos e audiências organizam a semana, mas imprevistos de processo mudam a agenda. Concursos públicos e jurídico de empresa são mais previsíveis; a advocacia autônoma, menos.</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>A agenda de sessões semanais é recorrente, mas depende de pacientes que podem faltar ou parar. Vínculos fixos (empresa, escola, saúde pública) têm rotina mais estável.</td>
+            </tr>
+            <tr>
+              <td>Retornos: ter alta remuneração</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Tem um dos tetos mais altos: sócios de escritório e carreiras públicas (juiz, promotor, procurador) chegam a R$ 20k–40k+. O caminho até lá é longo.</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>Depende de construir uma agenda cheia, o que leva anos. Neuropsicologia e área organizacional têm faixas mais altas; vínculos em clínica e escola pagam menos.</td>
+            </tr>
+            <tr>
+              <td>Atividades: defender direitos</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>É o centro da profissão: advocacia, Defensoria Pública e Ministério Público atuam diretamente na defesa de direitos de pessoas e grupos.</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>Aparece na psicologia social, jurídica e comunitária, no SUS e na assistência social. Não é a atividade central, que é o acompanhamento psicológico.</td>
+            </tr>
+            <tr>
+              <td>Assuntos: saúde mental</td>
+              <td data-label="⚖️ Direito"><span class="dot r"></span>Aparece em áreas específicas, como direito médico e da saúde e perícias que envolvem capacidade das pessoas. Não é um tema do dia a dia.</td>
+              <td data-label="🧠 Psicologia"><span class="dot g"></span>É o objeto central do curso e da profissão: transtornos, sofrimento psíquico, prevenção e cuidado.</td>
+            </tr>
+            <tr>
+              <td>Assuntos: direitos humanos</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Tem disciplina própria e campo de atuação: Defensoria, Ministério Público, ONGs, direito internacional e causas coletivas.</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>É tema da psicologia social e comunitária e orienta a atuação do Conselho Federal de Psicologia. Aparece conforme o campo escolhido.</td>
+            </tr>
+            <tr>
+              <td>Atividades: cuidar da saúde das pessoas</td>
+              <td data-label="⚖️ Direito"><span class="dot r"></span>Não faz parte da profissão. O Direito lida com conflitos e regras, e o contato com saúde é indireto.</td>
+              <td data-label="🧠 Psicologia"><span class="dot g"></span>É o núcleo da atividade: acompanhar, escutar e tratar o sofrimento psíquico, individualmente ou em grupo.</td>
+            </tr>
+            <tr>
+              <td>Assuntos: leis e legislação</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>É o objeto central do curso: ler, interpretar e aplicar a lei todos os dias.</td>
+              <td data-label="🧠 Psicologia"><span class="dot r"></span>Aparece no código de ética, nas resoluções do conselho e, em áreas como a psicologia jurídica, nas leis que envolvem família e infância. Não é o foco.</td>
+            </tr>
+            <tr>
+              <td>Ambientes: escritórios</td>
+              <td data-label="⚖️ Direito"><span class="dot g"></span>Escritórios de advocacia e departamentos jurídicos de empresas são os ambientes mais comuns.</td>
+              <td data-label="🧠 Psicologia"><span class="dot y"></span>Aparece na psicologia organizacional, em empresas e RH. A clínica acontece em outro tipo de espaço.</td>
+            </tr>
+            <tr>
+              <td>Ambientes: consultórios</td>
+              <td data-label="⚖️ Direito"><span class="dot r"></span>Não é o ambiente típico. O advogado atende clientes em escritório, e o trabalho também acontece em fóruns e tribunais.</td>
+              <td data-label="🧠 Psicologia"><span class="dot g"></span>É o ambiente mais conhecido da profissão: consultório próprio, presencial ou online.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="margin-top:16px;">Leia coluna por coluna pensando no peso que cada critério tem para você. Os critérios estão na ordem que você definiu como prioridade, então os primeiros têm mais peso na sua decisão. Use esta leitura como ponto de partida da conversa com sua orientadora.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Ranking dos critérios (soma dos pontos)</h2></div>
+    <div class="sc-body">
+      <div class="crit-legend">
+        <span><span class="dot g"></span>Verde = 2 pontos</span>
+        <span><span class="dot y"></span>Amarelo = 1 ponto</span>
+        <span><span class="dot r"></span>Vermelho = 0 ponto</span>
+      </div>
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥇 🧠 Psicologia</span><span class="rank-score">13 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill psi" style="width:65%;">13</div></div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-top"><span class="rank-name">🥈 ⚖️ Direito</span><span class="rank-score">12 de 20</span></div>
+          <div class="rank-bar"><div class="rank-fill dir" style="width:60%;">12</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com</p>
+</footer>
+
+
+<script>
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    if (checked > 0) resEl.classList.add('show');
+    else resEl.classList.remove('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
