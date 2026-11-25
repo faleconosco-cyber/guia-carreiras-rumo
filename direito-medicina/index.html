@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Guia de Carreiras: Direito e Medicina | Instituto Rumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* ── Paleta oficial Instituto Rumo ── */
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Medicina — Verde Profundo */
+      --med:     #3B503F;
+      --med-lt:  #EAEFEB;
+      --med-mid: #C2CFC4;
+
+      /* Relações Internacionais — Laranja Rumo */
+      --ri:     #D9563F;
+      --ri-lt:  #FFF0ED;
+      --ri-mid: #FBC9BE;
+
+      /* Direito — Bordô */
+      --dir:     #6B2F3C;
+      --dir-lt:  #F6EAED;
+      --dir-mid: #DCC0C8;
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── Header ─── */
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    /* ─── Nav ─── */
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.med.active { color: var(--med); border-bottom-color: var(--med); }
+    .tab-btn.ri.active { color: var(--ri); border-bottom-color: var(--ri); }
+    .tab-btn.dir.active { color: var(--dir); border-bottom-color: var(--dir); }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    /* ─── Panels ─── */
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    /* ─── Section cards ─── */
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .med .sc-head { background: var(--med-lt); border-color: var(--med-mid); }
+    .med .sc-head h2 { color: var(--med); }
+    .ri .sc-head { background: var(--ri-lt); border-color: var(--ri-mid); }
+    .ri .sc-head h2 { color: var(--ri); }
+    .dir .sc-head { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .dir .sc-head h2 { color: var(--dir); }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    /* ─── Lists ─── */
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .med ul.sl li::before { color: var(--med); }
+    .ri ul.sl li::before { color: var(--ri); }
+    .dir ul.sl li::before { color: var(--dir); }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    /* ─── Tags ─── */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+    .med .tag { background: var(--med-lt); color: var(--med); border-color: var(--med-mid); }
+    .ri .tag { background: var(--ri-lt); color: var(--ri); border-color: var(--ri-mid); }
+    .dir .tag { background: var(--dir-lt); color: var(--dir); border-color: var(--dir-mid); }
+
+    /* ─── Boxes ─── */
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .med .hbox { background: var(--med-lt); border-color: var(--med); }
+    .ri .hbox { background: var(--ri-lt); border-color: var(--ri); }
+    .dir .hbox { background: var(--dir-lt); border-color: var(--dir); }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+    .med .accent { color: var(--med); }
+    .ri .accent { color: var(--ri); }
+    .dir .accent { color: var(--dir); }
+
+    /* ─── Tech grid ─── */
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .med .tech-card { background: var(--med-lt); border-color: var(--med-mid); }
+    .ri .tech-card { background: var(--ri-lt); border-color: var(--ri-mid); }
+    .dir .tech-card { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .med .tech-card strong { color: var(--med); }
+    .ri .tech-card strong { color: var(--ri); }
+    .dir .tech-card strong { color: var(--dir); }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    /* ─── Salary grid ─── */
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .med .sal-card { background: var(--med-lt); border-color: var(--med-mid); }
+    .ri .sal-card { background: var(--ri-lt); border-color: var(--ri-mid); }
+    .dir .sal-card { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .med .sal-range { color: var(--med); }
+    .ri .sal-range { color: var(--ri); }
+    .dir .sal-range { color: var(--dir); }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── Comparison table ─── */
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th.h-med { background: var(--med); }
+    .comp-table th.h-ri { background: var(--ri); }
+    .comp-table th.h-dir { background: var(--dir); }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    /* ─── Link cards ─── */
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .med .lcard:hover { border-color: var(--med); }
+    .ri .lcard:hover { border-color: var(--ri); }
+    .dir .lcard:hover { border-color: var(--dir); }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    /* ─── Checklist ─── */
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .med .cl-item:hover, .med .cl-item.checked { background: var(--med-lt); border-color: var(--med); }
+    .ri .cl-item:hover, .ri .cl-item.checked { background: var(--ri-lt); border-color: var(--ri); }
+    .dir .cl-item:hover, .dir .cl-item.checked { background: var(--dir-lt); border-color: var(--dir); }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .med .cl-item.checked .cl-box { background: var(--med); border-color: var(--med); }
+    .ri .cl-item.checked .cl-box { background: var(--ri); border-color: var(--ri); }
+    .dir .cl-item.checked .cl-box { background: var(--dir); border-color: var(--dir); }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .med .cl-score span { color: var(--med); font-weight: 800; }
+    .ri .cl-score span { color: var(--ri); font-weight: 800; }
+    .dir .cl-score span { color: var(--dir); font-weight: 800; }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .med .cl-result { background: var(--med-lt); border-color: var(--med-mid); }
+    .ri .cl-result { background: var(--ri-lt); border-color: var(--ri-mid); }
+    .dir .cl-result { background: var(--dir-lt); border-color: var(--dir-mid); }
+    .cl-result.show { display: block; }
+    .cl-result .verdict { font-size: 18px; font-weight: 800; }
+    .med .cl-result .verdict { color: var(--med); }
+    .ri .cl-result .verdict { color: var(--ri); }
+    .dir .cl-result .verdict { color: var(--dir); }
+    .cl-result .sub { font-size: 13px; color: var(--text); margin-top: 8px; line-height: 1.6; }
+
+    /* ─── Bolinhas de presença (aba critérios) ─── */
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    /* ─── Ranking dos critérios ─── */
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+    /* uma classe .rank-fill por curso, usando a cor do curso (ex.: .med, .ri, .dir) */
+    .rank-fill.med { background: var(--med); }
+    .rank-fill.ri { background: var(--ri); }
+    .rank-fill.dir { background: var(--dir); }
+
+    /* ─── Vagas reais ─── */
+    .vagas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    /* uma classe por curso, com a cor do curso (ex.: .med, .ri, .dir) */
+    .vaga-col-head.med { background: var(--med); }
+    .vaga-col-head.ri { background: var(--ri); }
+    .vaga-col-head.dir { background: var(--dir); }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+    .vaga-btn.med { background: var(--med); }
+    .vaga-btn.ri { background: var(--ri); }
+    .vaga-btn.dir { background: var(--dir); }
+
+    /* ─── Footer ─── */
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+
+      /* Tabela de critérios vira cartões empilhados no celular */
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table tr:nth-child(even) td:first-child { background: var(--cmp); }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  
+    /* ─── Abas expansíveis ─── */
+    details.ac { border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; background: var(--surface); overflow: hidden; }
+    details.ac summary { cursor: pointer; padding: 15px 18px; font-size: 14px; font-weight: 800; list-style: none; display: flex; gap: 12px; align-items: center; }
+    details.ac summary::-webkit-details-marker { display: none; }
+    details.ac summary::after { content: "+"; margin-left: auto; font-size: 20px; font-weight: 700; }
+    details.ac[open] summary::after { content: "\2212"; }
+    .dir details.ac summary { color: var(--dir); background: var(--dir-lt); }
+    .med details.ac summary { color: var(--med); background: var(--med-lt); }
+    details.ac summary small { display: block; font-size: 12px; font-weight: 500; color: var(--text); margin-top: 2px; }
+    .ac-body { padding: 16px 18px 18px; font-size: 14px; line-height: 1.65; }
+    .ac-body p { margin-bottom: 10px; font-size: 14px; }
+    .ac-body h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin: 14px 0 4px; }
+    .num { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--med); color: white; font-size: 13px; }
+    .btn-full { display: block; text-align: center; padding: 13px 16px; border-radius: 10px; background: var(--dir); color: white; font-weight: 800; font-size: 13px; text-decoration: none; margin-top: 16px; }
+    .steps { list-style: none; counter-reset: s; margin-top: 8px; }
+    .steps li { counter-increment: s; position: relative; padding: 10px 0 10px 44px; font-size: 14px; border-bottom: 1px solid var(--border); }
+    .steps li:last-child { border-bottom: none; }
+    .steps li::before { content: counter(s); position: absolute; left: 0; top: 9px; width: 28px; height: 28px; border-radius: 50%; color: white; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center; background: var(--cmp); }
+    .dir .steps li::before { background: var(--dir); }
+    .med .steps li::before { background: var(--med); }
+    nav { white-space: normal; display: flex; flex-wrap: wrap; justify-content: center; }
+    @media (max-width: 680px) { nav { position: static; display: grid; grid-template-columns: 1fr 1fr; } .tab-btn { padding: 12px 6px; } }
+    @media (max-width: 680px) { .tech-grid { grid-template-columns: 1fr; } }
+    @media print { details.ac .ac-body { display: block; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hd-logo">
+    <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg>
+  </div>
+  <div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+  <h1>Direito · Medicina
+    <span class="hd-accent">pesquisar também é escolher</span>
+  </h1>
+  <p class="hd-sub">Material pra você explorar com calma até a próxima sessão. Além dos dois cursos, tem uma aba sobre os concursos jurídicos e outra sobre a residência médica, pra você enxergar o que vem depois do diploma. Leia, assista, marque os checklists e anote o que te chamou atenção.</p>
+</header>
+
+<nav>
+  <button class="tab-btn dir active" data-c="dir" onclick="show('dir')">⚖️ Direito</button>
+  <button class="tab-btn dir" data-c="con" onclick="show('con')">🏛️ Concursos jurídicos</button>
+  <button class="tab-btn med" data-c="med" onclick="show('med')">🩺 Medicina</button>
+  <button class="tab-btn med" data-c="res" onclick="show('res')">🏥 Residência médica</button>
+  <button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">🔎 Comparar</button>
+  <button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button>
+</nav>
+
+<div class="panel dir active" id="p-dir">
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Direito?</h2></div>
+    <div class="sc-body">
+      <p>Direito é o curso que ensina as regras do jogo da sociedade: o que a lei permite, o que ela proíbe, como se resolve um conflito e como se defende alguém. É um <strong>bacharelado de 5 anos</strong>, com estágio obrigatório e trabalho de conclusão. Não existe versão tecnóloga: quem quer atuar como advogado faz os 5 anos e ainda passa no Exame de Ordem da OAB.</p>
+      <ul class="sl" style="margin-top:14px;">
+        <li><strong>1º e 2º ano:</strong> Introdução ao Direito, Filosofia, Sociologia, Direito Constitucional, Civil e Penal. Muita leitura, muita teoria e um vocabulário novo pra aprender.</li>
+        <li><strong>3º e 4º ano:</strong> Processo Civil, Processo Penal, Trabalho, Tributário, Administrativo e Empresarial. O curso fica mais técnico e mais prático.</li>
+        <li><strong>5º ano:</strong> Estágio no Núcleo de Prática Jurídica, TCC e, na maioria das vezes, preparação paralela pra OAB ou pra concurso.</li>
+      </ul>
+      <div class="hbox" style="margin-top:14px;">
+        🏛️ <strong>Exame de Ordem:</strong> o diploma sozinho não deixa você advogar. Sem aprovação na OAB você pode trabalhar em área jurídica de empresa, prestar concurso de nível superior e atuar em compliance, mas não pode assinar processo nem se chamar advogado.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Advocacia em escritório:</strong> defender clientes em processos, dar pareceres, negociar acordos. Pode ser escritório grande, banca pequena ou trabalho autônomo.</li>
+        <li><strong>Departamento jurídico de empresa:</strong> cuidar de contratos, riscos e problemas legais por dentro, com carteira assinada e rotina mais previsível.</li>
+        <li><strong>Magistratura:</strong> ser juiz. Concurso muito disputado, que exige anos de estudo e prática jurídica prévia.</li>
+        <li><strong>Ministério Público:</strong> promotor ou procurador, atuando na defesa da sociedade, do consumidor, do meio ambiente e da infância.</li>
+        <li><strong>Defensoria Pública:</strong> defender quem não pode pagar advogado. Trabalho de altíssimo impacto social.</li>
+        <li><strong>Delegado de polícia:</strong> conduzir investigações criminais. Concurso próprio, para bacharéis em Direito.</li>
+        <li><strong>Concursos em geral:</strong> tribunais, receita, procuradorias e agências reguladoras. É a formação com mais portas no serviço público.</li>
+        <li><strong>Compliance e proteção de dados:</strong> garantir que a empresa siga as regras (LGPD, anticorrupção). Área nova, em alta e bem paga.</li>
+        <li><strong>Mediação e arbitragem:</strong> resolver conflito fora do tribunal, com acordo em vez de briga.</li>
+        <li><strong>Direito digital e propriedade intelectual:</strong> contratos de tecnologia, marcas, criadores de conteúdo e startups.</li>
+        <li><strong>Carreira acadêmica:</strong> mestrado, doutorado e docência.</li>
+        <li><strong>Diplomacia:</strong> o Direito é uma das formações mais comuns entre aprovados no Instituto Rio Branco.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+      <p>Direito é, antes de tudo, um curso de texto: ler muito, entender exatamente o que está escrito e escrever com precisão.</p>
+      <div class="tags">
+        <span class="tag">Gosto por leitura densa</span>
+        <span class="tag">Boa escrita</span>
+        <span class="tag">Argumentação</span>
+        <span class="tag">Memória e organização</span>
+        <span class="tag">Raciocínio lógico</span>
+        <span class="tag">Atenção a detalhe</span>
+        <span class="tag">Oratória</span>
+        <span class="tag">Disciplina de estudo</span>
+        <span class="tag">Interesse por política e sociedade</span>
+        <span class="tag">Ética</span>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <span class="accent">Pergunta pra você:</span> quando alguém defende uma opinião que você acha errada, dá vontade de construir um contra-argumento organizado, com fundamento, ou você prefere sair da discussão? Se a primeira opção te atrai, o Direito conversa com você.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+      <div class="cbox"><strong>É o curso com mais formados do país.</strong> São mais de mil faculdades de Direito no Brasil e centenas de milhares de advogados inscritos na OAB. Chegar a um bom lugar exige estágio bom, especialização e rede de contatos.</div>
+      <div class="cbox"><strong>O começo costuma ser mal pago.</strong> Estágio de escritório e primeiro emprego pagam pouco perto do tamanho da jornada. A curva de renda melhora depois, não no primeiro ano.</div>
+      <div class="cbox"><strong>Concurso é um projeto de anos.</strong> Magistratura e Ministério Público exigem 3 anos de prática jurídica depois da formatura, mais anos de estudo quase em tempo integral. É caminho longo e de renúncia.</div>
+      <div class="cbox"><strong>Volume de leitura pesado e constante.</strong> A lei muda, a jurisprudência muda, e você precisa acompanhar. Quem não gosta de ler cansa rápido.</div>
+      <div class="cbox"><strong>Prazo processual não perdoa.</strong> A rotina é regida por prazos rígidos. Isso gera pressão real e, em muitos escritórios, jornada longa.</div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-icon">⚙️</div><strong>IA na petição</strong><p>Ferramentas já redigem minutas e resumem processos. O trabalho braçal de pesquisa encolheu, e a estratégia jurídica virou o diferencial.</p></div>
+        <div class="tech-card"><div class="tc-icon">💻</div><strong>Processo 100% digital</strong><p>Audiência por vídeo e processo eletrônico viraram padrão. Dá pra atuar em outro estado sem sair da sua cidade.</p></div>
+        <div class="tech-card"><div class="tc-icon">🔐</div><strong>LGPD e dados</strong><p>A lei de proteção de dados criou uma área inteira de trabalho que não existia dez anos atrás.</p></div>
+        <div class="tech-card"><div class="tc-icon">📊</div><strong>Jurimetria</strong><p>Analisar milhares de decisões pra prever o resultado de um processo. Direito encontrando estatística.</p></div>
+        <div class="tech-card"><div class="tc-icon">🪙</div><strong>Novos negócios</strong><p>Contratos digitais, ativos virtuais e startups pedem advogados que entendam de tecnologia.</p></div>
+        <div class="tech-card"><div class="tc-icon">🤝</div><strong>Acordo online</strong><p>Plataformas resolvem casos simples sem tribunal. Mediar virou habilidade valorizada.</p></div>
+      </div>
+      <p class="note">⚡ O que a máquina não faz: sustentar oralmente, negociar sob pressão, escolher a tese e responder pela decisão. É pra isso que o advogado está sendo formado hoje.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+      <ul class="sl">
+        <li><strong>Mercado enorme e muito concorrido:</strong> há vaga em todo lugar, mas a disputa por posição boa é forte desde o estágio.</li>
+        <li><strong>Serviço público é o grande atrativo de renda:</strong> as carreiras jurídicas de Estado estão entre as mais bem pagas do país, com estabilidade.</li>
+        <li><strong>Escritórios grandes concentram os melhores salários privados:</strong> tributário, societário e contencioso estratégico pagam acima da média.</li>
+        <li><strong>Jurídico de empresa cresce:</strong> muita gente prefere o departamento interno pela previsibilidade de horário e de salário.</li>
+        <li><strong>Áreas novas contratam:</strong> compliance, proteção de dados, ESG e direito digital abriram vagas que não existiam.</li>
+        <li><strong>Advocacia autônoma é possível cedo:</strong> dá pra abrir a própria banca logo depois da OAB, com liberdade grande e renda instável no começo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+      <p>Em Direito, a especialização não é opcional. É ela que define quanto você ganha e onde você trabalha.</p>
+      <div class="tags">
+        <span class="tag">⭐ Tributário</span>
+        <span class="tag">⭐ Societário e M&amp;A</span>
+        <span class="tag">⭐ Compliance e LGPD</span>
+        <span class="tag">⭐ Trabalhista empresarial</span>
+        <span class="tag">Penal</span>
+        <span class="tag">Civil e Família</span>
+        <span class="tag">Direito Digital</span>
+        <span class="tag">Propriedade Intelectual</span>
+        <span class="tag">Ambiental e ESG</span>
+        <span class="tag">Direito Médico</span>
+        <span class="tag">Consumidor</span>
+        <span class="tag">Internacional</span>
+        <span class="tag">Preparação para concursos</span>
+        <span class="tag">Mediação e Arbitragem</span>
+      </div>
+      <p class="note">⭐ Áreas com maior demanda e melhores faixas salariais no Brasil em 2024 e 2025. Tributário e societário concentram as remunerações mais altas na advocacia privada.</p>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha quem se forma em Direito?</h2></div>
+    <div class="sc-body">
+      <p>A faixa é uma das mais largas de todas as profissões: depende demais da área, do porte do escritório e de ser ou não carreira pública.</p>
+      <div class="sal-grid">
+        <div class="sal-card"><div class="sal-stage">Início de carreira</div><div class="sal-range">R$ 2,5k a 4,5k</div><div class="sal-note">Advogado júnior em escritório ou analista jurídico em empresa. Estágio paga bem menos.</div></div>
+        <div class="sal-card"><div class="sal-stage">Pleno / Especialista</div><div class="sal-range">R$ 7k a 15k</div><div class="sal-note">Advogado com área definida, alguns anos de experiência e pós na área.</div></div>
+        <div class="sal-card"><div class="sal-stage">Liderança / Topo</div><div class="sal-range">R$ 20k a 40k+</div><div class="sal-note">Sócio de escritório, diretor jurídico e carreiras públicas como juiz, promotor e procurador.</div></div>
+      </div>
+      <div class="hbox" style="margin-top:18px;">
+        <strong>Nuance importante:</strong> a advocacia autônoma não tem salário, tem faturamento. Pode ser um mês de R$ 2 mil e outro de R$ 20 mil. A carreira pública é o oposto: valor alto, fixo e previsível, com anos de estudo como preço de entrada.
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎧</span><h2>Pra ouvir e assistir</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.youtube.com/watch?v=HmJKvPsS36s" class="lcard" target="_blank"><span class="lc-icon">🎙️</span><div class="lc-body"><strong>Podcast Segunda a Sexta: EP 04 · Tudo sobre o curso de Direito</strong><span>Episódio completo sobre o curso, 45 min</span></div><span class="lc-arr">→</span></a>
+        <a href="https://guiadoestudante.abril.com.br/profissoes/direito/" class="lcard" target="_blank"><span class="lc-icon">📘</span><div class="lc-body"><strong>Guia de Profissões do Guia do Estudante: Direito</strong><span>Página do curso com o que se estuda, onde se atua e o mercado</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+      <div class="links-grid">
+        <a href="https://www.oab.org.br" class="lcard" target="_blank"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>OAB: Ordem dos Advogados do Brasil</strong><span>O conselho da profissão: Exame de Ordem, áreas de atuação e regras do ofício</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.conjur.com.br" class="lcard" target="_blank"><span class="lc-icon">📰</span><div class="lc-body"><strong>Consultor Jurídico (ConJur)</strong><span>Notícia jurídica diária: dá pra sentir como é o dia a dia do mundo do Direito</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.jota.info" class="lcard" target="_blank"><span class="lc-icon">⚖️</span><div class="lc-body"><strong>JOTA</strong><span>Análise das decisões dos tribunais e do impacto delas nos negócios e na política</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.glassdoor.com.br" class="lcard" target="_blank"><span class="lc-icon">💼</span><div class="lc-body"><strong>Glassdoor: Salários</strong><span>Salários reais reportados. Pesquise "advogado", "analista jurídico" e por escritório</span></div><span class="lc-arr">→</span></a>
+        <a href="https://www.stf.jus.br" class="lcard" target="_blank"><span class="lc-icon">🇧🇷</span><div class="lc-body"><strong>STF: Supremo Tribunal Federal</strong><span>Assista a uma sessão de julgamento ao vivo e veja a argumentação funcionando na prática</span></div><span class="lc-arr">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Direito é para você se…</h2></div>
+    <div class="sc-body">
+      <p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p>
+      <div class="checklist-wrap" id="cl-dir">
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Leio bastante e não me assusto com texto longo e difícil.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Escrevo bem e gosto de organizar uma ideia em argumento, com começo, meio e conclusão.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Tenho interesse por política, notícia e pelo funcionamento das instituições do país.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Detalhe importa pra mim. Percebo quando uma palavra muda o sentido de uma frase.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Falar em público me dá frio na barriga, mas não me paralisa.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Consigo estudar sozinha, com disciplina, por períodos longos e sem ninguém cobrando.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Aceito que a construção de carreira aqui é lenta e que o retorno grande vem depois.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Trabalhar sob prazo rígido me organiza mais do que me trava.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Me incomoda ver injustiça e eu gostaria de ter ferramenta concreta pra fazer algo a respeito.</div></div>
+        <div class="cl-item" onclick="toggle(this,'cl-dir')"><div class="cl-box"></div><div class="cl-text">Consigo defender uma posição mesmo quando ela não é a mais popular na roda.</div></div>
+      </div>
+      <div class="cl-score">Marcados: <span id="sc-dir">0 de 10</span></div>
+      <div class="cl-result" id="res-dir"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="panel dir" id="p-con">
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧭</span><h2>Direito não leva só à advocacia</h2></div>
+    <div class="sc-body">
+<p>Quem faz Direito pode seguir carreiras públicas muito diferentes: julgar conflitos, defender pessoas vulneráveis, investigar crimes, representar o Estado, fiscalizar o cumprimento da lei ou trabalhar nos bastidores dos tribunais. Todas entram por <strong>concurso público</strong>.</p>
+<div class="hbox">Agora não é hora de escolher concurso. Este é um <strong>mapa de possibilidades</strong>, pra você saber o que existe depois da faculdade.</div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧩</span><h2>O que cada interesse encontra por aqui</h2></div>
+    <div class="sc-body">
+<div class="comp-wrap"><table class="comp-table"><thead><tr><th>Se você se interessa por…</th><th class="h-dir">Carreira que trabalha com isso</th></tr></thead><tbody><tr><td>Decidir, analisar conflitos e assumir responsabilidade</td><td>Magistratura</td></tr><tr><td>Justiça social e atuar por quem não pode pagar advogado</td><td>Defensoria Pública</td></tr><tr><td>Investigação, área criminal e operações</td><td>Delegado(a) de Polícia</td></tr><tr><td>Interesses coletivos: infância, meio ambiente, sociedade</td><td>Ministério Público</td></tr><tr><td>Pareceres, normas e políticas públicas</td><td>Advocacia Pública (Procuradorias e AGU)</td></tr><tr><td>Estabilidade e rotina jurídica nos bastidores</td><td>Analista Judiciário e Analista Processual</td></tr><tr><td>Entrar mais cedo no serviço público e crescer depois</td><td>Técnico Judiciário</td></tr><tr><td>Documentos, registros e fé pública</td><td>Cartórios (Tabelião e Registrador)</td></tr></tbody></table></div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">👩‍⚖️</span><h2>As 5 carreiras de autoridade (toque pra abrir)</h2></div>
+    <div class="sc-body">
+<details class="ac"><summary><span>🔍</span><span>Delegado(a) de Polícia<small>Investiga o crime</small></span></summary><div class="ac-body">
+<p>É o cargo de topo da carreira policial. Preside o inquérito, ou seja, conduz oficialmente a investigação. Existe na Polícia Civil (estadual) e na Polícia Federal, com concursos e salários diferentes.</p>
+<h3>No dia a dia</h3><ul class="sl"><li>Decide o que investigar e pede perícias, buscas, quebras de sigilo e prisões.</li><li>Avalia flagrantes e toma decisões urgentes.</li><li>Ouve vítimas, testemunhas e suspeitos.</li><li>Coordena a delegacia e pode ser chamado a qualquer hora.</li></ul>
+<h3>Requisitos</h3><ul class="sl"><li>Bacharelado em Direito.</li><li>Em vários estados, 2 a 3 anos de atividade jurídica ou policial (varia por edital).</li><li>CNH categoria B ou superior.</li><li>Teste físico, avaliação psicológica, investigação social e exames médicos.</li></ul>
+<h3>Como é o concurso</h3><p>Prova objetiva, discursiva, títulos, avaliação psicológica, teste físico, investigação social e curso de formação policial.</p>
+<h3>Quanto ganha (bruto, referência 2026)</h3><p>Polícia Civil: R$ 15 mil a 30 mil no início, conforme o estado. Polícia Federal: R$ 27,8 mil a 41,3 mil, do início ao topo.</p>
+</div></details><details class="ac"><summary><span>⚖️</span><span>Juiz(a) de Direito<small>Julga o processo</small></span></summary><div class="ac-body">
+<p>Julga processos, dá sentenças e conduz audiências. É imparcial: ouve os dois lados e decide com base na lei e nas provas. Existe magistratura estadual, federal, trabalhista e militar.</p>
+<h3>No dia a dia</h3><ul class="sl"><li>Julga processos da vara em que atua (família, criminal, cível, infância e outras).</li><li>Conduz audiências e tenta conciliação.</li><li>Decide pedidos urgentes (liminares).</li><li>Passa boa parte do tempo lendo processos e escrevendo decisões.</li></ul>
+<h3>Requisitos</h3><ul class="sl"><li>Bacharelado em Direito e 3 anos de atividade jurídica depois da formatura.</li><li>Aprovação no <strong>Enam</strong> (Exame Nacional da Magistratura), etapa de habilitação para se inscrever nos concursos de juiz.</li><li>Reputação ilibada.</li></ul>
+<h3>Como é o concurso</h3><p>Um dos mais longos e difíceis do país: prova objetiva, provas escritas e de sentença, avaliação psicológica, investigação de vida pregressa, prova oral, títulos e formação na Escola da Magistratura.</p>
+<h3>Quanto ganha (bruto, referência 2026)</h3><p>Juiz substituto estadual: R$ 30 mil a 36 mil. Juiz federal substituto: cerca de R$ 37,8 mil. Teto constitucional: R$ 46,3 mil.</p>
+</div></details><details class="ac"><summary><span>🤝</span><span>Defensor(a) Público(a)<small>Defende quem não pode pagar advogado</small></span></summary><div class="ac-body">
+<p>É a advocacia de quem não tem como pagar. A Defensoria torna real o direito de acesso à Justiça previsto na Constituição. Existe a Defensoria do Estado e a da União.</p>
+<h3>No dia a dia</h3><ul class="sl"><li>Defende pessoas em processos criminais.</li><li>Atua em pensão, guarda, divórcio, moradia e consumo.</li><li>Atende o público diretamente, muitas vezes em situação de grande vulnerabilidade.</li><li>Faz mediação e ações coletivas por comunidades e grupos vulneráveis.</li></ul>
+<h3>Requisitos</h3><ul class="sl"><li>Bacharelado em Direito.</li><li>2 a 3 anos de prática jurídica, conforme o edital.</li><li>A OAB costuma ser exigida.</li><li>Reputação ilibada.</li></ul>
+<h3>Como é o concurso</h3><p>Prova objetiva, discursivas com peças processuais, prova oral e títulos. Pede preparo forte em direitos humanos.</p>
+<h3>Quanto ganha (bruto, referência 2026)</h3><p>Início entre R$ 20 mil e 35,9 mil, conforme o estado. A Defensoria da União tem tabela própria.</p>
+</div></details><details class="ac"><summary><span>📜</span><span>Promotor(a) de Justiça<small>Fiscaliza a lei e acusa</small></span></summary><div class="ac-body">
+<p>Integra o Ministério Público, que defende a sociedade e os direitos coletivos. Tem independência funcional: não obedece a governo nem a partido e pode processar o próprio poder público.</p>
+<h3>No dia a dia</h3><ul class="sl"><li>Oferece a denúncia que dá início à ação penal.</li><li>Acompanha investigações.</li><li>Defende meio ambiente, consumidor, patrimônio público, crianças e idosos.</li><li>Atua em audiências representando o interesse público.</li></ul>
+<h3>Requisitos</h3><ul class="sl"><li>Bacharelado em Direito e no mínimo 3 anos de atividade jurídica.</li><li>Boa conduta. Quem é do Ministério Público não pode advogar.</li></ul>
+<h3>Como é o concurso</h3><p>Prova objetiva, discursivas e peça prática, avaliação psicológica, investigação de vida pregressa, prova oral e curso de formação.</p>
+<h3>Quanto ganha (bruto, referência 2026)</h3><p>Início entre R$ 34 mil e 37,8 mil em exemplos recentes (SP, MS e RJ). O Ministério Público Federal tem concurso e tabela próprios.</p>
+</div></details><details class="ac"><summary><span>🏛️</span><span>Procurador(a) do Estado<small>Defende o Estado</small></span></summary><div class="ac-body">
+<p>É a advocacia do poder público. Representa o Estado, o município ou a União na Justiça e dá pareceres sobre políticas públicas. Olhando de frente com o promotor: um fiscaliza o poder público, o outro o defende.</p>
+<h3>No dia a dia</h3><ul class="sl"><li>Defende o Estado em processos.</li><li>Escreve pareceres sobre leis, contratos e políticas de governo.</li><li>Cobra a dívida ativa (impostos e multas em atraso).</li><li>Trabalho mais de gabinete, com pouco atendimento ao público.</li></ul>
+<h3>Requisitos</h3><ul class="sl"><li>Bacharelado em Direito, aprovação na OAB e, em geral, 3 anos de atividade jurídica.</li></ul>
+<h3>Como é o concurso</h3><p>Prova objetiva, discursivas (peças e pareceres), prova oral e títulos. Poucas vagas por edital.</p>
+<h3>Quanto ganha (bruto, referência 2026)</h3><p>Procurador do Estado: R$ 23 mil a 35,9 mil. Na AGU (federal), até cerca de R$ 37,7 mil, conforme o cargo e a classe.</p>
+</div></details>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🗺️</span><h2>Outras portas do Direito</h2></div>
+    <div class="sc-body">
+<ul class="sl"><li><strong>Advocacia Pública Federal:</strong> Advogado da União, Procurador Federal, Procurador da Fazenda Nacional e do Banco Central. Exige OAB e prática forense. Início por volta de R$ 21 mil no edital recente de Advogado da União.</li><li><strong>Analista Judiciário (área judiciária):</strong> analisa processos, prepara minutas de decisão e apoia juízes. Início em torno de R$ 14,8 mil (tabela TRF2).</li><li><strong>Oficial de Justiça:</strong> cumpre mandados, intima, faz penhoras e avaliações. É o cargo com mais rotina de rua. A partir de R$ 14,8 mil (tabela TRF2).</li><li><strong>Analista Processual ou Jurídico:</strong> pesquisa e escreve para Defensoria, MP, tribunais e procuradorias. Exemplo: de R$ 7,4 mil a 17,3 mil na carreira (DPE-RJ).</li><li><strong>Técnico Judiciário:</strong> apoio nos tribunais. Alguns editais não exigem faculdade de Direito. Cerca de R$ 9 mil no início (tabela TRF2).</li><li><strong>Cartórios (Tabelião e Registrador):</strong> concurso de provas e títulos. A renda não é salário fixo: varia muito conforme o movimento do cartório.</li></ul>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔎</span><h2>Quadro comparativo</h2></div>
+    <div class="sc-body">
+<div class="comp-wrap"><table class="comp-table"><thead><tr><th></th><th class="h-dir">Delegado</th><th class="h-dir">Juiz</th><th class="h-dir">Defensor</th><th class="h-dir">Promotor</th><th class="h-dir">Procurador</th></tr></thead><tbody><tr><td>Papel</td><td>Investiga</td><td>Julga</td><td>Defende quem não pode pagar</td><td>Fiscaliza a lei e acusa</td><td>Defende o Estado</td></tr><tr><td>Onde atua</td><td>Delegacia</td><td>Vara do Tribunal</td><td>Núcleo da Defensoria</td><td>Promotoria</td><td>Procuradoria ou AGU</td></tr><tr><td>Atividade jurídica</td><td>Varia (até 3 anos)</td><td>3 anos</td><td>2 a 3 anos</td><td>3 anos</td><td>Em geral 3 anos</td></tr><tr><td>OAB</td><td>Em geral não exige</td><td>Não pode advogar</td><td>Costuma exigir</td><td>Não pode advogar</td><td>Exige</td></tr><tr><td>Concorrência</td><td>Muito alta</td><td>Altíssima</td><td>Alta</td><td>Altíssima</td><td>Alta, poucas vagas</td></tr></tbody></table></div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🛤️</span><h2>O caminho até lá</h2></div>
+    <div class="sc-body">
+<ol class="steps"><li>Faculdade de Direito (5 anos)</li><li>Exame da OAB (obrigatório para advogar e exigido por parte dessas carreiras)</li><li>Atividade jurídica comprovada, quando o edital pede. Em geral o estágio da faculdade não conta.</li><li>Preparação para o concurso, muitas vezes de 2 a 5 anos de estudo</li><li>Aprovação, curso de formação e posse</li></ol>
+<p class="note">Os valores são brutos e aproximados. Mudam por edital, estado, gratificações e descontos. Quem manda é sempre o edital oficial em vigor.</p>
+<a class="btn-full" href="https://faleconosco-cyber.github.io/guia-carreiras-rumo/concursos-juridicos/" target="_blank" rel="noopener">📖 Abrir o Guia de Concursos Jurídicos completo, com checklist de cada carreira</a>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde conferir</h2></div>
+    <div class="sc-body">
+<div class="links-grid"><a href="https://www.cnj.jus.br/poder-judiciario/concursos-de-tribunais/" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CNJ: concursos de tribunais</strong><span>Painel oficial de concursos do Judiciário</span></div><span class="lc-arr">→</span></a><a href="https://www.cnj.jus.br/transparencia-cnj/remuneracao-dos-magistrados/" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">💰</span><div class="lc-body"><strong>CNJ: remuneração dos magistrados</strong><span>Dados oficiais por tribunal</span></div><span class="lc-arr">→</span></a><a href="https://www.enfam.jus.br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">⚖️</span><div class="lc-body"><strong>Enfam</strong><span>Escola que organiza o Exame Nacional da Magistratura</span></div><span class="lc-arr">→</span></a><a href="https://www.anadep.org.br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🤝</span><div class="lc-body"><strong>ANADEP</strong><span>Associação das Defensoras e Defensores Públicos</span></div><span class="lc-arr">→</span></a></div>
+    </div>
+  </div>
+</div>
+<div class="panel med" id="p-med">
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Medicina?</h2></div>
+    <div class="sc-body">
+<p>Medicina forma quem cuida da saúde das pessoas: previne, investiga, diagnostica e trata. É um <strong>bacharelado de 6 anos em período integral</strong>, um dos cursos mais longos e intensos do país.</p>
+<ul class="sl" style="margin-top:14px;"><li><strong>1º e 2º ano:</strong> o corpo saudável. Anatomia, fisiologia, bioquímica, histologia, genética e os primeiros contatos com o SUS e com pacientes.</li><li><strong>3º e 4º ano:</strong> as doenças. Patologia, farmacologia, semiologia (aprender a examinar) e as grandes áreas clínicas, com mais hospital.</li><li><strong>5º e 6º ano:</strong> o internato, um estágio obrigatório e prático dentro de hospitais e postos, com plantões, sempre sob supervisão.</li></ul><div class="hbox">🆕 <strong>Mudança que pega você:</strong> a Lei 15.527, sancionada em novembro de 2026, tornou o <strong>Enamed</strong> obrigatório para obter o registro de médico. Vale para quem entrou no curso a partir de 19/06/2026. São três provas, ao fim do 4º, do 8º e do 12º semestre. Quem não atinge o nível mínimo pode refazer, mas só consegue o registro quando alcança. A nota de quem é considerado proficiente também pode ser usada para entrar na residência.</div>
+ <div class="hbox">🏛️ <strong>Conselho profissional:</strong> para exercer, é preciso registro no CRM do estado. O Conselho Federal de Medicina (CFM) regula a profissão.</div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>O que esse profissional pode fazer?</h2></div>
+    <div class="sc-body">
+<ul class="sl"><li><strong>Clínica e consultório:</strong> acompanhar pacientes, pedir exames, diagnosticar e tratar.</li><li><strong>Hospital e emergência:</strong> plantões em pronto-socorro, UTI e enfermarias.</li><li><strong>Cirurgia:</strong> operar, o que exige residência.</li><li><strong>Atenção primária:</strong> acompanhar famílias num posto de saúde, perto da comunidade.</li><li><strong>Especialidades:</strong> pediatria, psiquiatria, ginecologia, cardiologia e dezenas de outras.</li><li><strong>Diagnóstico:</strong> radiologia, patologia e medicina laboratorial.</li><li><strong>Serviço público:</strong> concursos para SUS, universidades, Forças Armadas, perícia e Instituto Médico Legal.</li><li><strong>Saúde coletiva e gestão:</strong> vigilância epidemiológica, vacinação, secretarias de saúde e hospitais.</li><li><strong>Pesquisa e ensino:</strong> mestrado, doutorado, ensaios clínicos e docência.</li><li><strong>Saúde global e ação humanitária:</strong> organizações como Médicos Sem Fronteiras, OMS e OPAS têm profissionais de saúde. São caminhos que costumam pedir experiência, especialização e outros idiomas.</li></ul>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses você precisa ter?</h2></div>
+    <div class="sc-body">
+<p>Medicina junta muita ciência com muita gente, em momentos delicados.</p><div class="tags"><span class="tag">Gosto por biologia e química</span><span class="tag">Estudo constante</span><span class="tag">Escuta</span><span class="tag">Empatia com limite</span><span class="tag">Calma sob pressão</span><span class="tag">Tomada de decisão</span><span class="tag">Atenção a detalhe</span><span class="tag">Trabalho em equipe</span><span class="tag">Resistência a rotina pesada</span><span class="tag">Comunicação clara</span><span class="tag">Ética</span></div><div class="hbox" style="margin-top:18px;"><span class="accent">Pergunta pra você:</span> quando alguém perto de você passa mal, o que acontece com você? E o que você sente diante de sangue, dor, cheiro de hospital e notícia ruim? Anote a resposta, sem tentar acertar.</div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚠️</span><h2>Quais são os desafios da profissão?</h2></div>
+    <div class="sc-body">
+<div class="cbox"><strong>Entrar é muito difícil.</strong> Nas universidades públicas, a nota de corte costuma estar entre as mais altas do país. Muita gente faz mais de um ano de cursinho.</div><div class="cbox"><strong>Nas privadas, custa caro.</strong> A mensalidade média era de R$ 10.214 em 2025, variando de R$ 5.185 a R$ 15.777 (Demografia Médica 2025). Existem Prouni e Fies, com regras e vagas limitadas.</div><div class="cbox"><strong>A formação é longa.</strong> São 6 anos de faculdade e, para ser especialista, mais 2 a 5 anos ou mais de residência.</div><div class="cbox"><strong>A rotina pesa na saúde mental.</strong> Carga alta, plantão, cobrança e contato com sofrimento e morte. Cansaço e esgotamento são assunto sério entre estudantes e residentes, e buscar apoio faz parte.</div><div class="cbox"><strong>Nem sempre é carteira assinada.</strong> Só um terço dos médicos tinha vínculo formal (CLT ou servidor) em 2023, segundo a RAIS. É comum trabalhar como pessoa jurídica (PJ), por cooperativa ou por plantão, com vários vínculos ao mesmo tempo.</div><div class="cbox"><strong>O mercado está enchendo.</strong> O número de cursos e de médicos cresce rápido, com projeção de passar de 1 milhão de médicos até 2035. A concorrência muda bastante entre capitais e interior.</div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia está mudando a área?</h2></div>
+    <div class="sc-body">
+<div class="tech-grid"><div class="tech-card"><div class="tc-icon">🧠</div><strong>IA no diagnóstico</strong><p>Sistemas ajudam a analisar exames de imagem e a levantar hipóteses. A decisão e a responsabilidade continuam com o médico.</p></div><div class="tech-card"><div class="tc-icon">💻</div><strong>Telemedicina</strong><p>Consulta a distância é regulamentada e ampliou o acesso em lugares sem especialista.</p></div><div class="tech-card"><div class="tc-icon">🦾</div><strong>Cirurgia robótica</strong><p>Robôs comandados pelo cirurgião dão mais precisão em alguns procedimentos.</p></div><div class="tech-card"><div class="tc-icon">🧬</div><strong>Medicina de precisão</strong><p>Genética ajuda a escolher tratamentos mais ajustados a cada pessoa.</p></div><div class="tech-card"><div class="tc-icon">⌚</div><strong>Monitoramento contínuo</strong><p>Relógios e sensores geram dados de saúde fora do consultório.</p></div><div class="tech-card"><div class="tc-icon">📁</div><strong>Prontuário eletrônico</strong><p>Informação organizada em sistema. Cuidar do sigilo e dos dados faz parte do trabalho.</p></div></div><p class="note">⚡ A tecnologia lê dado muito rápido. Escutar, examinar, explicar e decidir junto com o paciente continua sendo trabalho de gente.</p>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Como é o mercado de trabalho no Brasil?</h2></div>
+    <div class="sc-body">
+<ul class="sl"><li><strong>Perto de 600 mil médicos:</strong> em dezembro de 2024, eram 353 mil especialistas (59,1%) e 244 mil sem título de especialista (40,9%).</li><li><strong>Distribuição desigual:</strong> capitais e regiões mais ricas concentram médicos. Interior e periferias ainda têm falta.</li><li><strong>SUS e setor privado:</strong> muitos médicos combinam os dois.</li><li><strong>Vínculos variados:</strong> concurso, CLT, PJ, cooperativa e plantão avulso. Cada um com direitos bem diferentes.</li><li><strong>Começo mais rápido:</strong> com o registro, já é possível trabalhar como médico generalista. A residência é o caminho para se especializar.</li></ul><p class="note">Fonte: Demografia Médica no Brasil 2025 (FMUSP, AMB e Ministério da Saúde).</p>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎓</span><h2>Especialização: para onde ir depois?</h2></div>
+    <div class="sc-body">
+<p>Existem <strong>55 especialidades</strong> médicas reconhecidas e 62 áreas de atuação. A principal porta é a residência médica, que tem uma aba só dela aqui no guia. 👆</p><div class="tags"><span class="tag">Clínica Médica</span><span class="tag">Pediatria</span><span class="tag">Cirurgia Geral</span><span class="tag">Ginecologia e Obstetrícia</span><span class="tag">Psiquiatria</span><span class="tag">Medicina de Família</span><span class="tag">Dermatologia</span><span class="tag">Cardiologia</span><span class="tag">Anestesiologia</span><span class="tag">Neurologia</span><span class="tag">Medicina Intensiva</span><span class="tag">Infectologia</span><span class="tag">Medicina Preventiva</span></div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha um médico?</h2></div>
+    <div class="sc-body">
+<p>O ganho muda muito com a carga horária, a quantidade de plantões, a região e o tipo de vínculo.</p><div class="sal-grid"><div class="sal-card"><div class="sal-stage">Recém-formado, sem residência</div><div class="sal-range">R$ 7k a 14k</div><div class="sal-note">Referência de vínculo formal, quase sempre com jornada parcial. Estimativas de mercado: não há dado oficial só de recém-formados.</div></div><div class="sal-card"><div class="sal-stage">Durante a residência</div><div class="sal-range">R$ 4.106</div><div class="sal-note">Bolsa federal mensal, o mesmo valor desde 2022, para até 60 horas semanais.</div></div><div class="sal-card"><div class="sal-stage">Especialista</div><div class="sal-range">cerca de R$ 27k</div><div class="sal-note">Média de renda líquida somando todos os trabalhos, em pesquisa da Afya. Generalistas ficaram perto de R$ 19k.</div></div></div><div class="hbox" style="margin-top:18px;"><strong>Atenção na comparação:</strong> renda alta de médico costuma vir de vários vínculos e muitas horas. Ao ver um número, pergunte sempre: quantas horas por semana? Com quais direitos?</div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🎧</span><h2>Pra ouvir e assistir</h2></div>
+    <div class="sc-body">
+<div class="links-grid"><a href="https://www.youtube.com/watch?v=9dvqEeW7r0c" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🎙️</span><div class="lc-body"><strong>Podcast Segunda a Sexta: EP 01 · Tudo sobre o curso de Medicina</strong><span>Episódio completo sobre o curso, 46 min</span></div><span class="lc-arr">→</span></a><a href="https://guiadoestudante.abril.com.br/profissoes/medicina/" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">📘</span><div class="lc-body"><strong>Guia de Profissões do Guia do Estudante: Medicina</strong><span>Página do curso com o que se estuda, onde se atua e o mercado</span></div><span class="lc-arr">→</span></a></div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar mais?</h2></div>
+    <div class="sc-body">
+<div class="links-grid"><a href="https://portal.cfm.org.br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>CFM: Conselho Federal de Medicina</strong><span>Regras da profissão, registro e especialidades</span></div><span class="lc-arr">→</span></a><a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enamed" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">📝</span><div class="lc-body"><strong>Inep: Enamed</strong><span>A prova de avaliação da formação médica</span></div><span class="lc-arr">→</span></a><a href="https://amb.org.br/wp-content/uploads/2025/04/DEMOGRAFIA-MEDICA-DO-BRASIL-2025_versao-online.pdf" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">📊</span><div class="lc-body"><strong>Demografia Médica no Brasil 2025</strong><span>O maior retrato da profissão: quem são, onde estão e o que fazem</span></div><span class="lc-arr">→</span></a><a href="https://www.msf.org.br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🌍</span><div class="lc-body"><strong>Médicos Sem Fronteiras Brasil</strong><span>Como é o trabalho de saúde em crises humanitárias</span></div><span class="lc-arr">→</span></a></div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">✅</span><h2>Medicina é para você se…</h2></div>
+    <div class="sc-body">
+<p style="color:var(--muted); margin-bottom:6px;">Marque os itens com os quais você se identifica de verdade, não os que você gostaria que fossem verdade:</p><div class="checklist-wrap" id="cl-med"><div class="cl-item" onclick="toggle(this,'cl-med')"><div class="cl-box"></div><div class="cl-text">Biologia é uma matéria que me puxa, e eu tenho curiosidade sobre como o corpo funciona.</div></div><div class="cl-item" onclick="toggle(this,'cl-med')"><div class="cl-box"></div><div class="cl-text">Gosto de química o suficiente pra encarar bioquímica e farmacologia.</div></div><div class="cl-item" onclick="toggle(this,'cl-med')"><div class="cl-box"></div><div class="cl-text">Tenho disposição pra estudar muito, por muitos anos, mesmo depois de formada.</div></div><div class="cl-item" onclick="toggle(this,'cl-med')"><div class="cl-box"></div><div class="cl-text">Gosto de escutar pessoas, inclusive quando elas estão assustadas, irritadas ou com dor.</div></div><div class="cl-item" onclick="toggle(this,'cl-med')"><div class="cl-box"></div><div class="cl-text">Consigo manter a calma e agir quando alguém precisa de ajuda urgente.</div></div><div class="cl-item" onclick="toggle(this,'cl-med')"><div class="cl-box"></div><div class="cl-text">Sangue, ferida e procedimentos não me afastam da ideia.</div></div><div class="cl-item" onclick="toggle(this,'cl-med')"><div class="cl-box"></div><div class="cl-text">Aceito plantões, noites e fins de semana como parte da rotina, principalmente no começo.</div></div><div class="cl-item" onclick="toggle(this,'cl-med')"><div class="cl-box"></div><div class="cl-text">Presto atenção em detalhe e sei que um erro aqui tem peso.</div></div><div class="cl-item" onclick="toggle(this,'cl-med')"><div class="cl-box"></div><div class="cl-text">Topo trabalhar em equipe com enfermagem, fisioterapia, psicologia e outras áreas.</div></div><div class="cl-item" onclick="toggle(this,'cl-med')"><div class="cl-box"></div><div class="cl-text">Consigo cuidar de mim e pedir apoio quando a pressão aperta.</div></div></div><div class="cl-score">Marcados: <span id="sc-med">0 de 10</span></div><div class="cl-result" id="res-med"><div class="sub">Guarde esse número. Ele não diz se esse é o curso certo pra você, é só mais um dado pra levar na próxima sessão com sua orientadora.</div></div>
+    </div>
+  </div>
+</div>
+<div class="panel med" id="p-res">
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🩺</span><h2>O que é residência médica?</h2></div>
+    <div class="sc-body">
+<p>É uma <strong>pós-graduação feita trabalhando</strong>, só para quem já é médico. A pessoa atende de verdade, dentro de hospitais e unidades de saúde, supervisionada por médicos experientes. Ao concluir, recebe o <strong>título de especialista</strong>.</p>
+<div class="hbox">Ela <strong>não é obrigatória</strong> para trabalhar como médico. Com o diploma e o registro no CRM, dá pra atuar como generalista. Para se anunciar como especialista, é preciso o título e o registro dele no CRM (o RQE).</div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🛤️</span><h2>Onde ela entra no caminho</h2></div>
+    <div class="sc-body">
+<ol class="steps"><li>Ensino médio, Enem ou vestibular</li><li>6 anos de Medicina, com os dois últimos em internato</li><li>Registro no CRM (com o Enamed obrigatório para quem entrou a partir de junho de 2026)</li><li>Processo seletivo de residência</li><li>R1, R2, R3… cada "R" é um ano de residência. De 2 a 5 anos na maioria dos caminhos.</li><li>Título de especialista. Depois, se quiser, uma segunda etapa de subespecialização.</li></ol>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📝</span><h2>Como ingressar</h2></div>
+    <div class="sc-body">
+<ul class="sl"><li><strong>Só vale programa credenciado</strong> pela Comissão Nacional de Residência Médica (CNRM). Por lei, apenas eles podem se chamar residência médica.</li><li><strong>A entrada é por processo seletivo,</strong> com prova. Alguns têm também outras etapas, como análise de currículo ou prova prática.</li><li><strong>ENARE (Exame Nacional de Residência):</strong> seleção unificada, organizada pela HU Brasil (a antiga Ebserh), que reúne vagas de várias instituições. Nas vagas de acesso direto, a nota vem do Enamed.</li><li><strong>Seleções próprias:</strong> várias instituições, como a USP, fazem o próprio processo.</li><li><strong>Escolha de vaga por nota:</strong> a classificação pesa em qual especialidade e em qual cidade a pessoa consegue entrar. Muita gente tenta mais de uma vez.</li></ul><p class="note">Datas, taxas e regras mudam a cada edição. Sempre confira o edital do ano.</p>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🧩</span><h2>Modalidades: as portas de entrada</h2></div>
+    <div class="sc-body">
+<div class="comp-wrap"><table class="comp-table"><thead><tr><th>Modalidade</th><th class="h-med">Como funciona</th><th class="h-med">Exemplo</th></tr></thead><tbody><tr><td>Acesso direto</td><td>Dá pra entrar logo depois da faculdade. São 31 especialidades nesse grupo.</td><td>Pediatria, Psiquiatria, Anestesiologia</td></tr><tr><td>Com pré-requisito</td><td>Antes é preciso ter feito outra residência.</td><td>Cardiologia vem depois de Clínica Médica</td></tr><tr><td>Área de atuação</td><td>Um foco mais específico dentro de uma especialidade. São 62 reconhecidas.</td><td>Neonatologia, depois da Pediatria</td></tr><tr><td>Ano adicional</td><td>Um ano extra de aprofundamento dentro da própria especialidade.</td><td>Varia por programa</td></tr></tbody></table></div><div class="hbox"><strong>Não confunda:</strong> curso de pós-graduação em Medicina (lato sensu) <strong>não é residência</strong> e, sozinho, não dá título de especialista. Outro caminho para o título é a prova de uma sociedade médica ligada à Associação Médica Brasileira (AMB), com requisitos próprios.</div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🏥</span><h2>Como é a vida de residente</h2></div>
+    <div class="sc-body">
+<ul class="sl"><li><strong>Bolsa:</strong> R$ 4.106,09 por mês, valor em vigor desde 2022. Há projetos no Senado para aumentar, ainda sem aprovação até novembro de 2026.</li><li><strong>Carga:</strong> até 60 horas semanais, incluindo no máximo 24 horas de plantão.</li><li><strong>Descanso:</strong> um dia de folga por semana e 30 dias de repouso por ano. Uma lei de 2026 permite pedir a divisão em períodos de pelo menos 10 dias, conforme a regulamentação.</li><li><strong>Proteção:</strong> contribuição ao INSS como contribuinte individual, licença-maternidade de 120 dias (prorrogável por mais 60, conforme a instituição) e licença-paternidade prevista em lei.</li><li><strong>Na instituição:</strong> a lei prevê alimentação, local de descanso nos plantões e moradia conforme regulamento.</li><li><strong>Sem carteira assinada:</strong> residente é bolsista. Não é um emprego CLT, então não entram FGTS nem 13º.</li></ul><p class="note">Base: Lei 6.932/1981 e suas atualizações.</p>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔟</span><h2>Top 10: as especialidades com mais médicos no Brasil</h2></div>
+    <div class="sc-body">
+<p style="margin-bottom:14px;">O critério aqui é <strong>número de especialistas titulados em 2024</strong>. Não é ranking de melhor, de mais bem paga nem de mais concorrida. Toque em cada uma.</p><details class="ac"><summary><span class="num">1</span><span>Clínica Médica<small>59.038 especialistas · Acesso direto · 2 anos</small></span></summary><div class="ac-body"><p><strong>O que faz:</strong> Cuida da saúde do adulto como um todo e investiga o que o paciente tem. É a base de várias outras especialidades.</p><p style="margin-bottom:0"><strong>Onde passa o dia:</strong> Enfermaria, ambulatório, emergência e consultório.</p></div></details><details class="ac"><summary><span class="num">2</span><span>Pediatria<small>47.787 especialistas · Acesso direto · 3 anos</small></span></summary><div class="ac-body"><p><strong>O que faz:</strong> Cuida de bebês, crianças e adolescentes, do crescimento às doenças. A família faz parte da consulta.</p><p style="margin-bottom:0"><strong>Onde passa o dia:</strong> Consultório, hospital, emergência infantil e maternidade.</p></div></details><details class="ac"><summary><span class="num">3</span><span>Cirurgia Geral<small>37.208 especialistas · Acesso direto · 3 anos</small></span></summary><div class="ac-body"><p><strong>O que faz:</strong> Opera problemas frequentes, como apendicite, hérnia e vesícula. É caminho para outras cirurgias.</p><p style="margin-bottom:0"><strong>Onde passa o dia:</strong> Centro cirúrgico, enfermaria e urgência.</p></div></details><details class="ac"><summary><span class="num">4</span><span>Ginecologia e Obstetrícia<small>35.528 especialistas · Acesso direto · 3 anos</small></span></summary><div class="ac-body"><p><strong>O que faz:</strong> Cuida da saúde ginecológica e reprodutiva, do pré-natal e do parto.</p><p style="margin-bottom:0"><strong>Onde passa o dia:</strong> Consultório, maternidade e cirurgia. Parto não tem hora marcada.</p></div></details><details class="ac"><summary><span class="num">5</span><span>Anestesiologia<small>22.367 especialistas · Acesso direto · 3 anos</small></span></summary><div class="ac-body"><p><strong>O que faz:</strong> Cuida da anestesia, da dor e dos sinais vitais antes, durante e depois de cirurgias e exames.</p><p style="margin-bottom:0"><strong>Onde passa o dia:</strong> Centro cirúrgico, com muito equipamento e decisão rápida.</p></div></details><details class="ac"><summary><span class="num">6</span><span>Cardiologia<small>20.414 especialistas · Pré-requisito: Clínica Médica · 2 anos, depois de 2 de Clínica</small></span></summary><div class="ac-body"><p><strong>O que faz:</strong> Previne, diagnostica e trata doenças do coração e da circulação.</p><p style="margin-bottom:0"><strong>Onde passa o dia:</strong> Consultório, emergência, UTI cardíaca e exames.</p></div></details><details class="ac"><summary><span class="num">7</span><span>Ortopedia e Traumatologia<small>18.998 especialistas · Acesso direto · 3 anos</small></span></summary><div class="ac-body"><p><strong>O que faz:</strong> Trata ossos, articulações, músculos e lesões por trauma.</p><p style="margin-bottom:0"><strong>Onde passa o dia:</strong> Pronto-socorro, cirurgia e ambulatório.</p></div></details><details class="ac"><summary><span class="num">8</span><span>Medicina do Trabalho<small>17.714 especialistas · Acesso direto · 2 anos</small></span></summary><div class="ac-body"><p><strong>O que faz:</strong> Cuida da saúde de quem trabalha: previne doenças e acidentes ligados à atividade.</p><p style="margin-bottom:0"><strong>Onde passa o dia:</strong> Empresas, serviços de saúde ocupacional, perícia e órgãos públicos.</p></div></details><details class="ac"><summary><span class="num">9</span><span>Oftalmologia<small>16.784 especialistas · Acesso direto · 3 anos</small></span></summary><div class="ac-body"><p><strong>O que faz:</strong> Cuida dos olhos e da visão, com consulta, exame e cirurgia.</p><p style="margin-bottom:0"><strong>Onde passa o dia:</strong> Consultório e centro cirúrgico, com muita tecnologia.</p></div></details><details class="ac"><summary><span class="num">10</span><span>Medicina de Família e Comunidade<small>15.542 especialistas · Acesso direto · 2 anos</small></span></summary><div class="ac-body"><p><strong>O que faz:</strong> Acompanha pessoas e famílias ao longo da vida, olhando também para onde e como elas vivem.</p><p style="margin-bottom:0"><strong>Onde passa o dia:</strong> Postos e clínicas da família, visitas em casa e trabalho com a comunidade.</p></div></details><p class="note">Fonte: Demografia Médica no Brasil 2025, Tabela 3. Quem tem mais de um título é contado em cada especialidade. As durações são o tempo regular da residência e devem ser confirmadas no edital.</p>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔥</span><h2>Mais médicos não é o mesmo que mais concorrida</h2></div>
+    <div class="sc-body">
+<p>A disputa por vaga é outra conta e muda a cada edição. Em levantamentos preliminares do ENARE 2026/2027, <strong>Otorrinolaringologia</strong> aparecia com cerca de 39 candidatos por vaga e <strong>Dermatologia</strong> com mais de 32. Nenhuma das duas está no top 10 acima. Já em Medicina de Família e Comunidade, parte das vagas fica sem ocupação por baixa procura.</p>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💭</span><h2>Perguntas pra levar na sua pesquisa</h2></div>
+    <div class="sc-body">
+<ul class="sl"><li>Quando você imagina um médico, em que lugar ele está: consultório, centro cirúrgico, pronto-socorro, posto de saúde ou laboratório?</li><li>Qual especialidade do top 10 você abriu primeiro? Por quê?</li><li>Alguma você nem sabia que existia?</li><li>Como é, pra você, a ideia de estudar de 8 a 11 anos até se tornar especialista?</li><li>Que pergunta você faria a uma médica residente?</li></ul>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde conferir</h2></div>
+    <div class="sc-body">
+<div class="links-grid"><a href="https://www.gov.br/mec/pt-br/residencia-medica" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>MEC: Residência Médica</strong><span>Página oficial da residência e da CNRM</span></div><span class="lc-arr">→</span></a><a href="https://enare2026.conhecimento.fgv.br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">📝</span><div class="lc-body"><strong>ENARE 2026/2027</strong><span>Editais e informações da edição atual</span></div><span class="lc-arr">→</span></a><a href="https://www.gov.br/hubrasil/pt-br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🏥</span><div class="lc-body"><strong>HU Brasil</strong><span>Rede de hospitais universitários que organiza o ENARE</span></div><span class="lc-arr">→</span></a><a href="https://www.planalto.gov.br/ccivil_03/leis/l6932.htm" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">⚖️</span><div class="lc-body"><strong>Lei 6.932/1981</strong><span>A lei com os direitos e deveres do residente</span></div><span class="lc-arr">→</span></a></div>
+    </div>
+  </div>
+</div>
+<div class="panel cmp" id="p-cmp">
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">⚖️</span><h2>Os dois lado a lado</h2></div>
+    <div class="sc-body">
+<div class="comp-wrap"><table class="comp-table"><thead><tr><th>Dimensão</th><th class="h-dir">⚖️ Direito</th><th class="h-med">🩺 Medicina</th></tr></thead><tbody><tr><td>Foco principal</td><td>Leis, direitos e solução de conflitos</td><td>Saúde, doença e cuidado</td></tr><tr><td>Duração</td><td>5 anos</td><td>6 anos em período integral</td></tr><tr><td>Matéria-prima do dia</td><td>Texto, argumento e casos</td><td>Corpo, ciência e pacientes</td></tr><tr><td>Para exercer</td><td>OAB para advogar. Concursos têm regras próprias.</td><td>Registro no CRM. Enamed obrigatório para quem entrou a partir de 19/06/2026.</td></tr><tr><td>Depois da faculdade</td><td>Advocacia, empresas ou concursos</td><td>Trabalho como generalista ou residência</td></tr><tr><td>Aprofundamento</td><td>Especialização e preparação para concurso</td><td>Residência de 2 a 5 anos na maioria dos caminhos</td></tr><tr><td>Contato com pessoas</td><td>Varia muito: intenso na Defensoria, menor em gabinete</td><td>Intenso na maior parte das áreas</td></tr><tr><td>Vínculo de trabalho</td><td>Servidor, CLT em empresas, autônomo ou associado</td><td>Servidor, CLT, PJ, cooperativa e plantões</td></tr><tr><td>Pergunta central</td><td>"O que é justo e o que a lei permite?"</td><td>"O que essa pessoa tem e como cuidar dela?"</td></tr></tbody></table></div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🤝</span><h2>Onde os dois se encontram</h2></div>
+    <div class="sc-body">
+<ul class="sl"><li><strong>Direito à saúde:</strong> a Constituição diz que saúde é direito de todos. Juízes, defensores e promotores lidam com pedidos de remédio, cirurgia e leito.</li><li><strong>Direito Médico:</strong> advocacia dedicada a pacientes, profissionais e instituições de saúde.</li><li><strong>Medicina Legal e Perícia:</strong> especialidade médica que produz provas técnicas usadas pela Justiça.</li><li><strong>Política de saúde:</strong> médicos e juristas participam de conselhos de saúde, gestão pública e organismos internacionais.</li></ul>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🌐</span><h2>Sobre diplomacia</h2></div>
+    <div class="sc-body">
+<p>A carreira de diplomata no Brasil começa no concurso do Instituto Rio Branco (CACD), aberto a quem tem diploma de graduação reconhecido, de qualquer área. O Direito é uma formação frequente entre os aprovados. Quem vem de Medicina também pode prestar, e existe ainda a área de saúde global em organismos internacionais.</p>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div>
+    <div class="sc-body">
+<p style="color:var(--muted); margin-bottom:6px;">Alguns cargos reais de cada formação, explicados de um jeito simples. O botão abre o LinkedIn já filtrado, com o que estiver aberto hoje no Brasil.</p><div class="vagas-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));"><div class="vaga-col"><div class="vaga-col-head dir">⚖️ Direito</div><div class="vaga-role"><strong>Advogado Júnior</strong><span>Acompanha processos, escreve petições e atende clientes junto com advogados mais experientes.</span></div><div class="vaga-role"><strong>Analista Jurídico</strong><span>Revisa contratos e responde dúvidas legais de uma empresa.</span></div><div class="vaga-role"><strong>Analista de Compliance</strong><span>Ajuda a empresa a cumprir leis e regras internas.</span></div><div class="vaga-spacer"></div><a class="vaga-btn dir" href="https://www.linkedin.com/jobs/search/?keywords=Advogado%20J%C3%BAnior&location=Brasil" target="_blank" rel="noopener">🔗 Ver vagas no LinkedIn</a></div><div class="vaga-col"><div class="vaga-col-head med">🩺 Medicina</div><div class="vaga-role"><strong>Médico Clínico Geral</strong><span>Atende adultos em consultas e plantões, avalia queixas e encaminha quando precisa.</span></div><div class="vaga-role"><strong>Médico de Família e Comunidade</strong><span>Acompanha as mesmas famílias num posto ou numa clínica.</span></div><div class="vaga-role"><strong>Médico do Trabalho</strong><span>Cuida da saúde dos funcionários e dos exames ocupacionais. Alguns anúncios pedem especialização.</span></div><div class="vaga-spacer"></div><a class="vaga-btn med" href="https://www.linkedin.com/jobs/search/?keywords=M%C3%A9dico%20Cl%C3%ADnico%20Geral&location=Brasil" target="_blank" rel="noopener">🔗 Ver vagas no LinkedIn</a></div></div>
+    </div>
+  </div>
+</div>
+<div class="panel cmp" id="p-cri">
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os dois cursos</h2></div>
+    <div class="sc-body">
+<p style="color:var(--muted); margin-bottom:6px;">Estes são os critérios que você elencou, na ordem de prioridade que você definiu. A tabela descreve como cada um aparece em cada curso. Ela não aponta resposta certa: é material pra pensar e conversar com sua orientadora.</p>
+<div class="crit-legend"><span><span class="dot g"></span>Muito presente</span><span><span class="dot y"></span>Presente em parte</span><span><span class="dot r"></span>Pouco presente</span></div>
+<div class="comp-wrap"><table class="comp-table crit-table"><thead><tr><th>Critério</th><th class="h-dir">⚖️ Direito</th><th class="h-med">🩺 Medicina</th></tr></thead><tbody><tr><td>1. Trabalhar ajudando pessoas diretamente</td><td data-label="⚖️ Direito"><span class="dot y"></span>Depende do caminho. É forte na Defensoria, em família e no atendimento de clientes. É menor em gabinete, pareceres e jurídico de empresa.</td><td data-label="🩺 Medicina"><span class="dot g"></span>O atendimento direto é o centro da maioria das áreas. Em algumas, como patologia e parte da radiologia, o contato é bem menor.</td></tr><tr><td>2. Direitos garantidos, como carteira assinada e férias</td><td data-label="⚖️ Direito"><span class="dot y"></span>Em concurso há estabilidade (após o estágio probatório), férias e direitos de servidor. Em empresas é comum a CLT. Na advocacia autônoma ou como associado de escritório, em geral não há carteira.</td><td data-label="🩺 Medicina"><span class="dot y"></span>Concurso e CLT garantem direitos, mas só um terço dos médicos tinha vínculo formal em 2023. PJ e plantão são comuns. Na residência há 30 dias de repouso, sem carteira assinada.</td></tr><tr><td>3. Cuidar da saúde das pessoas</td><td data-label="⚖️ Direito"><span class="dot r"></span>Não faz parte do trabalho. A aproximação é por ações ligadas ao direito à saúde e pelo Direito Médico.</td><td data-label="🩺 Medicina"><span class="dot g"></span>É o objeto do curso e da profissão.</td></tr><tr><td>4. Direitos humanos</td><td data-label="⚖️ Direito"><span class="dot g"></span>Tema da formação, com ligação direta ao Direito Constitucional. É central na Defensoria, no Ministério Público e em organizações da sociedade civil.</td><td data-label="🩺 Medicina"><span class="dot y"></span>Aparece na ética médica, no SUS, na saúde como direito e no atendimento a populações vulneráveis. Não é o eixo das disciplinas.</td></tr><tr><td>5. Relações internacionais e diplomacia</td><td data-label="⚖️ Direito"><span class="dot y"></span>Há Direito Internacional na formação e áreas de atuação internacional. O Direito é formação frequente entre diplomatas, mas o concurso é separado.</td><td data-label="🩺 Medicina"><span class="dot r"></span>Aparece em saúde global, pesquisa internacional e ação humanitária. Não faz parte da rotina da maioria dos médicos.</td></tr><tr><td>6. Cuidados com pacientes</td><td data-label="⚖️ Direito"><span class="dot r"></span>Não há cuidado com pacientes. O tema aparece em processos e consultoria sobre saúde.</td><td data-label="🩺 Medicina"><span class="dot g"></span>Presente desde o curso e intenso no internato, na residência e na maior parte das especialidades.</td></tr><tr><td>7. Participar de atividades políticas</td><td data-label="⚖️ Direito"><span class="dot g"></span>O curso estuda Estado e leis, e há caminhos em assessoria legislativa, advocacy e entidades de classe. Atenção: juízes e promotores têm vedação à atividade político-partidária.</td><td data-label="🩺 Medicina"><span class="dot y"></span>Há espaço em conselhos de saúde, entidades médicas, sindicatos e gestão pública. Costuma ser uma escolha paralela à rotina de atendimento.</td></tr><tr><td>8. Equipamentos e procedimentos de saúde</td><td data-label="⚖️ Direito"><span class="dot r"></span>Não faz parte da rotina.</td><td data-label="🩺 Medicina"><span class="dot g"></span>Exames, aparelhos e procedimentos fazem parte do curso e da prática, com intensidade maior em cirurgia, anestesia, UTI e diagnóstico.</td></tr><tr><td>9. Biologia</td><td data-label="⚖️ Direito"><span class="dot r"></span>Não faz parte do curso. Pode aparecer em temas como bioética e perícia.</td><td data-label="🩺 Medicina"><span class="dot g"></span>É a base dos primeiros anos e sustenta todo o raciocínio clínico.</td></tr><tr><td>10. Política</td><td data-label="⚖️ Direito"><span class="dot g"></span>Presente o curso inteiro: Constituição, teoria do Estado, ciência política e instituições.</td><td data-label="🩺 Medicina"><span class="dot y"></span>Aparece em saúde coletiva, políticas públicas de saúde e organização do SUS.</td></tr></tbody></table></div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sc-head"><span class="sc-icon">📊</span><h2>Ranking dos critérios (soma dos pontos)</h2></div>
+    <div class="sc-body">
+<div class="crit-legend"><span><span class="dot g"></span>Verde = 2 pontos</span><span><span class="dot y"></span>Amarelo = 1 ponto</span><span><span class="dot r"></span>Vermelho = 0 ponto</span></div><div class="rank"><div class="rank-row"><div class="rank-top"><span class="rank-name">🥇 🩺 Medicina</span><span class="rank-score">14 de 20</span></div><div class="rank-bar"><div class="rank-fill med" style="width:70%;">14</div></div></div><div class="rank-row"><div class="rank-top"><span class="rank-name">🥈 ⚖️ Direito</span><span class="rank-score">9 de 20</span></div><div class="rank-bar"><div class="rank-fill dir" style="width:45%;">9</div></div></div></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="ft-accent">o caminho se faz caminhando</span>
+  <strong>Instituto Rumo</strong>
+  <p>Orientação profissional com base em informação real · institutorumo.com.br</p>
+</footer>
+
+<script>
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    if (checked > 0) resEl.classList.add('show');
+    else resEl.classList.remove('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
