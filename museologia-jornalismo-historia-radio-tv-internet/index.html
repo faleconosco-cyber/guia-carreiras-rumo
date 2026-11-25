@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Guia de Carreiras: Museologia, Jornalismo, História e Rádio, TV e Internet | Instituto Rumo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+--mus:#6B2F3C; --mus-lt:#F6EAED; --mus-mid:#DCC0C8;
+--jor:#C2452E; --jor-lt:#FFF0ED; --jor-mid:#FBC9BE;
+--his:#3B503F; --his-lt:#EAEFEB; --his-mid:#C2CFC4;
+--rtv:#99601A; --rtv-lt:#FFF4E5; --rtv-mid:#FDDBAE;
+
+      /* ── Paleta oficial Instituto Rumo ── */
+      --rumo-blue:   #3E658E;
+      --rumo-orange: #FD745D;
+      --rumo-cream:  #FDDED5;
+      --rumo-yellow: #FDBB71;
+      --rumo-water:  #91B096;
+      --rumo-bordo:  #6B2F3C;
+      --rumo-green:  #3B503F;
+
+      --bg:      #FDFAF8;
+      --surface: #FFFFFF;
+      --border:  #EDE8E3;
+      --text:    #282828;
+      --muted:   #7A8B99;
+
+      /* Medicina — Verde Profundo */
+
+      /* Relações Internacionais — Laranja Rumo */
+
+      /* Direito — Bordô */
+
+      /* Comparação — Azul Rumo */
+      --cmp:     #3E658E;
+      --cmp-lt:  #EEF4FA;
+      --cmp-mid: #C0D4E8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── Header ─── */
+    header { background: var(--rumo-blue); color: white; padding: 32px 44px 36px; }
+    .hd-logo { margin-bottom: 18px; }
+    .hd-logo svg { height: 54px; width: auto; display: block; }
+    .hd-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 10px; }
+    header h1 { font-size: 30px; font-weight: 900; line-height: 1.2; }
+    .hd-accent { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 700; color: var(--rumo-yellow); display: block; margin-top: 6px; line-height: 1; }
+    header .hd-sub { font-size: 13px; opacity: 0.72; margin-top: 12px; max-width: 620px; line-height: 1.6; }
+
+    /* ─── Nav ─── */
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 32px; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+    .tab-btn { display: inline-block; padding: 15px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; letter-spacing: 0.3px; transition: all 0.2s; }
+    .tab-btn.cmp.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn.cri.active { color: var(--cmp); border-bottom-color: var(--cmp); }
+    .tab-btn:hover { opacity: 0.85; }
+
+    /* ─── Panels ─── */
+    .panel { display: none; max-width: 880px; margin: 36px auto; padding: 0 20px 72px; }
+    .panel.active { display: block; }
+
+    /* ─── Section cards ─── */
+    .sc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 22px; overflow: hidden; }
+    .sc-head { padding: 17px 24px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid; }
+    .sc-head h2 { font-size: 15px; font-weight: 800; }
+    .sc-icon { font-size: 20px; }
+    .cmp .sc-head { background: var(--cmp-lt); border-color: var(--cmp-mid); }
+    .cmp .sc-head h2 { color: var(--cmp); }
+    .sc-body { padding: 24px; }
+    .sc-body p { font-size: 14px; line-height: 1.7; }
+
+    /* ─── Lists ─── */
+    ul.sl { list-style: none; padding: 0; }
+    ul.sl li { padding: 9px 0 9px 22px; border-bottom: 1px solid var(--border); position: relative; font-size: 14px; line-height: 1.55; }
+    ul.sl li:last-child { border-bottom: none; }
+    ul.sl li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+    .cmp ul.sl li::before { color: var(--cmp); }
+
+    /* ─── Tags ─── */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { border-radius: 20px; padding: 6px 13px; font-size: 12px; font-weight: 700; border: 1px solid; }
+
+    /* ─── Boxes ─── */
+    .hbox { border-radius: 8px; padding: 16px 20px; margin: 16px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; border-left: 4px solid; }
+    .cmp .hbox { background: var(--cmp-lt); border-color: var(--cmp); }
+    .cbox { background: #FFFBEB; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 14px; line-height: 1.55; }
+    .cbox strong { color: #92400E; display: block; margin-bottom: 4px; }
+    .note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.6; }
+    .accent { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 600; }
+
+    /* ─── Tech grid ─── */
+    .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .tech-card { border-radius: 12px; padding: 18px 16px; border: 1px solid; }
+    .tech-card .tc-icon { font-size: 24px; margin-bottom: 8px; }
+    .tech-card strong { font-size: 12px; display: block; margin-bottom: 6px; font-weight: 800; }
+    .tech-card p { font-size: 12px; color: var(--text); line-height: 1.55; }
+
+    /* ─── Salary grid ─── */
+    .sal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .sal-card { border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid; }
+    .sal-stage { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 10px; }
+    .sal-range { font-size: 20px; font-weight: 900; line-height: 1.1; margin-bottom: 8px; }
+    .sal-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── Comparison table ─── */
+    .comp-wrap { overflow-x: auto; margin-top: 14px; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .comp-table th { color: white; padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; }
+    .comp-table th:first-child { background: var(--text); }
+    .comp-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .comp-table tr:nth-child(even) td { background: var(--cmp-lt); }
+    .comp-table td:first-child { font-weight: 700; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+
+    /* ─── Link cards ─── */
+    .links-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .lcard { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+    .lcard .lc-icon { font-size: 20px; flex-shrink: 0; }
+    .lcard .lc-body strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .lcard .lc-body span { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .lcard .lc-arr { margin-left: auto; color: var(--muted); font-size: 18px; padding-left: 12px; }
+
+    /* ─── Checklist ─── */
+    .checklist-wrap { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 16px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.18s; user-select: none; }
+    .cl-box { width: 22px; height: 22px; border: 2px solid var(--muted); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; flex-shrink: 0; font-size: 13px; margin-top: 1px; transition: all 0.18s; }
+    .cl-text { font-size: 13px; line-height: 1.55; }
+    .cl-score { text-align: center; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .cl-result { border-radius: 12px; padding: 20px; margin-top: 12px; display: none; border: 2px solid; }
+    .cl-result.show { display: block; }
+    .cl-result .verdict { font-size: 18px; font-weight: 800; }
+    .cl-result .sub { font-size: 13px; color: var(--text); margin-top: 8px; line-height: 1.6; }
+
+    /* ─── Bolinhas de presença (aba critérios) ─── */
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex-shrink: 0; }
+    .dot.g { background: #5A8A5E; }
+    .dot.y { background: #E0A33E; }
+    .dot.r { background: #C0563F; }
+    .crit-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 4px; padding: 12px 18px; background: var(--cmp-lt); border: 1px solid var(--cmp-mid); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--text); }
+    .crit-legend span { display: flex; align-items: center; }
+
+    /* ─── Ranking dos critérios ─── */
+    .rank { display: flex; flex-direction: column; gap: 18px; margin-top: 16px; }
+    .rank-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+    .rank-name { font-size: 14px; font-weight: 800; }
+    .rank-score { font-size: 13px; font-weight: 800; color: var(--muted); }
+    .rank-bar { height: 28px; background: var(--border); border-radius: 8px; overflow: hidden; }
+    .rank-fill { height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 11px; color: white; font-size: 12px; font-weight: 800; min-width: 38px; }
+
+    /* ─── Vagas reais ─── */
+    .vagas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .vaga-col { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .vaga-col-head { padding: 13px 15px; font-size: 13px; font-weight: 800; color: white; display: flex; align-items: center; gap: 8px; }
+    .vaga-role { padding: 13px 15px; border-bottom: 1px solid var(--border); }
+    .vaga-role strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .vaga-role span { font-size: 12px; color: var(--text); line-height: 1.5; }
+    .vaga-spacer { flex: 1; }
+    .vaga-btn { margin: 13px 15px 15px; text-align: center; padding: 11px 10px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; color: white; display: block; transition: opacity 0.2s; }
+    .vaga-btn:hover { opacity: 0.88; }
+
+    /* ─── Footer ─── */
+    footer { background: var(--rumo-blue); color: white; text-align: center; padding: 36px; margin-top: 10px; }
+    footer strong { display: block; font-size: 15px; margin-bottom: 6px; }
+    footer .ft-accent { font-family: 'Caveat', cursive; font-size: 24px; color: var(--rumo-yellow); display: block; margin-bottom: 8px; }
+    footer p { font-size: 12px; opacity: 0.7; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 680px) {
+      header { padding: 24px 20px; }
+      header h1 { font-size: 23px; }
+      .hd-accent { font-size: 24px; }
+      nav { padding: 0 12px; }
+      .panel { padding: 0 12px 60px; }
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+      .sal-grid { grid-template-columns: 1fr; }
+      .vagas-grid { grid-template-columns: 1fr; }
+
+      /* Tabela de critérios vira cartões empilhados no celular */
+      .crit-table thead { display: none; }
+      .crit-table, .crit-table tbody, .crit-table tr, .crit-table td { display: block; width: 100%; }
+      .crit-table tr { border: 1px solid var(--cmp-mid); border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+      .crit-table tr:nth-child(even) td:not(:first-child) { background: transparent; }
+      .crit-table td:first-child { background: var(--cmp); color: white; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0; white-space: normal; padding: 12px 16px; }
+      .crit-table tr:nth-child(even) td:first-child { background: var(--cmp); }
+      .crit-table td:not(:first-child) { padding: 12px 16px 12px; border-bottom: 1px solid var(--border); }
+      .crit-table td:last-child { border-bottom: none; }
+      .crit-table td[data-label]::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+    }
+    @media print {
+      nav { display: none; }
+      .panel { display: block !important; }
+      .sc { break-inside: avoid; }
+    }
+  
+    /* ─── Abas expansíveis ─── */
+    details.ac { border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; background: var(--surface); overflow: hidden; }
+    details.ac summary { cursor: pointer; padding: 15px 18px; font-size: 14px; font-weight: 800; list-style: none; display: flex; gap: 12px; align-items: center; }
+    details.ac summary::-webkit-details-marker { display: none; }
+    details.ac summary::after { content: "+"; margin-left: auto; font-size: 20px; font-weight: 700; }
+    details.ac[open] summary::after { content: "\2212"; }
+    details.ac summary small { display: block; font-size: 12px; font-weight: 500; color: var(--text); margin-top: 2px; }
+    .ac-body { padding: 16px 18px 18px; font-size: 14px; line-height: 1.65; }
+    .ac-body p { margin-bottom: 10px; font-size: 14px; }
+    .ac-body h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin: 14px 0 4px; }
+    .num { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--med); color: white; font-size: 13px; }
+    .btn-full { display: block; text-align: center; padding: 13px 16px; border-radius: 10px; background: var(--dir); color: white; font-weight: 800; font-size: 13px; text-decoration: none; margin-top: 16px; }
+    .steps { list-style: none; counter-reset: s; margin-top: 8px; }
+    .steps li { counter-increment: s; position: relative; padding: 10px 0 10px 44px; font-size: 14px; border-bottom: 1px solid var(--border); }
+    .steps li:last-child { border-bottom: none; }
+    .steps li::before { content: counter(s); position: absolute; left: 0; top: 9px; width: 28px; height: 28px; border-radius: 50%; color: white; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center; background: var(--cmp); }
+    nav { white-space: normal; display: flex; flex-wrap: wrap; justify-content: center; }
+    @media (max-width: 680px) { nav { position: static; display: grid; grid-template-columns: 1fr 1fr; } .tab-btn { padding: 12px 6px; } }
+    @media (max-width: 680px) { .tech-grid { grid-template-columns: 1fr; } }
+    @media print { details.ac .ac-body { display: block; } }
+
+    .tab-btn.mus.active { color: var(--mus); border-bottom-color: var(--mus); }
+    .mus .sc-head { background: var(--mus-lt); border-color: var(--mus-mid); }
+    .mus .sc-head h2 { color: var(--mus); }
+    .mus ul.sl li::before { color: var(--mus); }
+    .mus .tag { background: var(--mus-lt); color: var(--mus); border-color: var(--mus-mid); }
+    .mus .hbox { background: var(--mus-lt); border-color: var(--mus); }
+    .mus .accent { color: var(--mus); }
+    .mus .tech-card { background: var(--mus-lt); border-color: var(--mus-mid); }
+    .mus .tech-card strong { color: var(--mus); }
+    .mus .sal-card { background: var(--mus-lt); border-color: var(--mus-mid); }
+    .mus .sal-range { color: var(--mus); }
+    .comp-table th.h-mus { background: var(--mus); }
+    .mus .lcard:hover { border-color: var(--mus); }
+    .mus .cl-item:hover, .mus .cl-item.checked { background: var(--mus-lt); border-color: var(--mus); }
+    .mus .cl-item.checked .cl-box { background: var(--mus); border-color: var(--mus); }
+    .mus .cl-score span { color: var(--mus); font-weight: 800; }
+    .mus .cl-result { background: var(--mus-lt); border-color: var(--mus-mid); }
+    .mus .cl-result .verdict { color: var(--mus); }
+    /* uma classe .rank-fill por curso, usando a cor do curso (ex.: .mus, .ri, .dir) */
+    .rank-fill.mus { background: var(--mus); }
+    /* uma classe por curso, com a cor do curso (ex.: .mus, .ri, .dir) */
+    .vaga-col-head.mus { background: var(--mus); }
+    .vaga-btn.mus { background: var(--mus); }
+    .tab-btn.jor.active { color: var(--jor); border-bottom-color: var(--jor); }
+    .jor .sc-head { background: var(--jor-lt); border-color: var(--jor-mid); }
+    .jor .sc-head h2 { color: var(--jor); }
+    .jor ul.sl li::before { color: var(--jor); }
+    .jor .tag { background: var(--jor-lt); color: var(--jor); border-color: var(--jor-mid); }
+    .jor .hbox { background: var(--jor-lt); border-color: var(--jor); }
+    .jor .accent { color: var(--jor); }
+    .jor .tech-card { background: var(--jor-lt); border-color: var(--jor-mid); }
+    .jor .tech-card strong { color: var(--jor); }
+    .jor .sal-card { background: var(--jor-lt); border-color: var(--jor-mid); }
+    .jor .sal-range { color: var(--jor); }
+    .comp-table th.h-jor { background: var(--jor); }
+    .jor .lcard:hover { border-color: var(--jor); }
+    .jor .cl-item:hover, .jor .cl-item.checked { background: var(--jor-lt); border-color: var(--jor); }
+    .jor .cl-item.checked .cl-box { background: var(--jor); border-color: var(--jor); }
+    .jor .cl-score span { color: var(--jor); font-weight: 800; }
+    .jor .cl-result { background: var(--jor-lt); border-color: var(--jor-mid); }
+    .jor .cl-result .verdict { color: var(--jor); }
+    /* uma classe .rank-fill por curso, usando a cor do curso (ex.: .jor, .ri, .dir) */
+    .rank-fill.jor { background: var(--jor); }
+    /* uma classe por curso, com a cor do curso (ex.: .jor, .ri, .dir) */
+    .vaga-col-head.jor { background: var(--jor); }
+    .vaga-btn.jor { background: var(--jor); }
+    .tab-btn.his.active { color: var(--his); border-bottom-color: var(--his); }
+    .his .sc-head { background: var(--his-lt); border-color: var(--his-mid); }
+    .his .sc-head h2 { color: var(--his); }
+    .his ul.sl li::before { color: var(--his); }
+    .his .tag { background: var(--his-lt); color: var(--his); border-color: var(--his-mid); }
+    .his .hbox { background: var(--his-lt); border-color: var(--his); }
+    .his .accent { color: var(--his); }
+    .his .tech-card { background: var(--his-lt); border-color: var(--his-mid); }
+    .his .tech-card strong { color: var(--his); }
+    .his .sal-card { background: var(--his-lt); border-color: var(--his-mid); }
+    .his .sal-range { color: var(--his); }
+    .comp-table th.h-his { background: var(--his); }
+    .his .lcard:hover { border-color: var(--his); }
+    .his .cl-item:hover, .his .cl-item.checked { background: var(--his-lt); border-color: var(--his); }
+    .his .cl-item.checked .cl-box { background: var(--his); border-color: var(--his); }
+    .his .cl-score span { color: var(--his); font-weight: 800; }
+    .his .cl-result { background: var(--his-lt); border-color: var(--his-mid); }
+    .his .cl-result .verdict { color: var(--his); }
+    /* uma classe .rank-fill por curso, usando a cor do curso (ex.: .his, .ri, .dir) */
+    .rank-fill.his { background: var(--his); }
+    /* uma classe por curso, com a cor do curso (ex.: .his, .ri, .dir) */
+    .vaga-col-head.his { background: var(--his); }
+    .vaga-btn.his { background: var(--his); }
+    .tab-btn.rtv.active { color: var(--rtv); border-bottom-color: var(--rtv); }
+    .rtv .sc-head { background: var(--rtv-lt); border-color: var(--rtv-mid); }
+    .rtv .sc-head h2 { color: var(--rtv); }
+    .rtv ul.sl li::before { color: var(--rtv); }
+    .rtv .tag { background: var(--rtv-lt); color: var(--rtv); border-color: var(--rtv-mid); }
+    .rtv .hbox { background: var(--rtv-lt); border-color: var(--rtv); }
+    .rtv .accent { color: var(--rtv); }
+    .rtv .tech-card { background: var(--rtv-lt); border-color: var(--rtv-mid); }
+    .rtv .tech-card strong { color: var(--rtv); }
+    .rtv .sal-card { background: var(--rtv-lt); border-color: var(--rtv-mid); }
+    .rtv .sal-range { color: var(--rtv); }
+    .comp-table th.h-rtv { background: var(--rtv); }
+    .rtv .lcard:hover { border-color: var(--rtv); }
+    .rtv .cl-item:hover, .rtv .cl-item.checked { background: var(--rtv-lt); border-color: var(--rtv); }
+    .rtv .cl-item.checked .cl-box { background: var(--rtv); border-color: var(--rtv); }
+    .rtv .cl-score span { color: var(--rtv); font-weight: 800; }
+    .rtv .cl-result { background: var(--rtv-lt); border-color: var(--rtv-mid); }
+    .rtv .cl-result .verdict { color: var(--rtv); }
+    /* uma classe .rank-fill por curso, usando a cor do curso (ex.: .rtv, .ri, .dir) */
+    .rank-fill.rtv { background: var(--rtv); }
+    /* uma classe por curso, com a cor do curso (ex.: .rtv, .ri, .dir) */
+    .vaga-col-head.rtv { background: var(--rtv); }
+    .vaga-btn.rtv { background: var(--rtv); }
+    .vagas-grid { grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 681px) { .comp-table.crit-table { table-layout: fixed; font-size: 12px; } .comp-table.crit-table th:first-child { width: 20%; } .comp-table.crit-table td, .comp-table.crit-table th { padding: 10px 9px; overflow-wrap: break-word; } .comp-table.crit-table td:first-child { white-space: normal; font-size: 10px; letter-spacing: 0; } }
+    @media (max-width: 680px) { .vagas-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+<div class="hd-logo"><svg viewBox="-12 0 284 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instituto Rumo">
+      <text x="130" y="62" font-family="'Montserrat', Arial, sans-serif" font-size="58" font-weight="800" font-style="italic" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">Rumo</text>
+      <text x="130" y="85" font-family="'Montserrat', Arial, sans-serif" font-size="13" font-weight="600" fill="#FDDED5" text-anchor="middle" letter-spacing="3">ORIENTAÇÃO PROFISSIONAL</text>
+    </svg></div>
+<div class="hd-eyebrow">Instituto Rumo · Guia de Carreira</div>
+<h1>Museologia · Jornalismo · História · Rádio, TV e Internet<span class="hd-accent">pesquisar também é escolher</span></h1>
+<p class="hd-sub">Material pra você explorar com calma até a próxima sessão. Leia, assista, marque os checklists e anote o que chamou sua atenção.</p>
+</header>
+<nav><button class="tab-btn mus active" data-c="mus" onclick="show('mus')">🏺 Museologia</button><button class="tab-btn jor" data-c="jor" onclick="show('jor')">📰 Jornalismo</button><button class="tab-btn his" data-c="his" onclick="show('his')">📜 História</button><button class="tab-btn rtv" data-c="rtv" onclick="show('rtv')">🎥 Rádio, TV e Internet</button><button class="tab-btn cmp" data-c="cmp" onclick="show('cmp')">🔎 Comparar</button><button class="tab-btn cri" data-c="cri" onclick="show('cri')">🪞 Seus critérios</button></nav>
+<div class="panel mus active" id="p-mus">
+<div class="sc"><div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Museologia?</h2></div><div class="sc-body">
+<p>Museologia estuda os museus e o patrimônio: o que uma sociedade decide guardar, como cuida disso e como apresenta ao público. É uma graduação de <strong>cerca de 4 anos</strong>. Poucas universidades oferecem o curso no Brasil, então vale checar onde há vaga. No Rio, a <strong>UNIRIO</strong> tem Museologia nos turnos integral e noturno.</p><ul class="sl" style="margin-top:14px;"><li><strong>Base:</strong> Teoria museológica, História, Arte, Antropologia, patrimônio e cultura.</li><li><strong>Meio do curso:</strong> Documentação de acervos, conservação preventiva, pesquisa, expografia (o projeto de uma exposição) e educação em museus.</li><li><strong>Final:</strong> Gestão de museus, projetos, estágio e trabalho de conclusão. A grade muda de uma universidade para outra.</li></ul><div class="hbox">🏛️ <strong>Profissão regulamentada:</strong> a Lei 7.287/1984 regulamenta a profissão de museólogo. Para exercer, é preciso registro no Conselho Regional de Museologia (COREM).</div><p class="note">Nomes e ordem das disciplinas variam. Confira a grade de cada universidade.</p>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">💼</span><h2>O que dá pra fazer com essa formação?</h2></div><div class="sc-body">
+<ul class="sl"><li><strong>Documentar acervos:</strong> registrar cada peça, sua origem, história e estado de conservação.</li><li><strong>Pesquisar coleções:</strong> descobrir de onde veio um objeto, quem usou e o que ele conta.</li><li><strong>Montar exposições:</strong> definir o tema, escolher peças e organizar o percurso do visitante.</li><li><strong>Conservar:</strong> cuidar de luz, umidade, armazenamento e transporte para a peça durar.</li><li><strong>Educar em museus:</strong> criar visitas e atividades para diferentes públicos.</li><li><strong>Gerir museus e galerias:</strong> planejar, captar recursos e coordenar projetos.</li><li><strong>Trabalhar com patrimônio:</strong> inventários, memória de instituições, centros culturais e órgãos de preservação.</li></ul>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses aparecem na rotina?</h2></div><div class="sc-body">
+<div class="tags"><span class="tag">Curiosidade por objetos e suas histórias</span><span class="tag">Atenção a detalhes</span><span class="tag">Paciência</span><span class="tag">Organização</span><span class="tag">Leitura e escrita</span><span class="tag">Pesquisa</span><span class="tag">Senso visual</span><span class="tag">Trabalho em equipe</span></div><div class="hbox" style="margin-top:18px;"><span class="accent">Pergunta pra você:</span> quando você visita um museu, repara só nas peças ou também em como a sala foi montada, no texto da parede e no motivo de aquilo estar ali?</div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">⚠️</span><h2>Desafios reais</h2></div><div class="sc-body">
+<div class="cbox"><strong>Mercado pequeno.</strong> Há bem menos vagas do que em áreas como comunicação. Muitas se concentram nas capitais e em instituições públicas ou culturais.</div><div class="cbox"><strong>Verba da cultura oscila.</strong> Museus dependem de orçamento público, patrocínio e editais, e isso afeta contratações e projetos.</div><div class="cbox"><strong>Concurso demora.</strong> É um caminho para a estabilidade, mas as vagas não abrem todo ano.</div><div class="cbox"><strong>Parte do trabalho é por projeto.</strong> Exposições e inventários podem gerar contratos com começo e fim.</div><div class="cbox"><strong>Muito trabalho de bastidor.</strong> Catalogar, medir, registrar e revisar ocupa boa parte da rotina.</div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia e a IA mudam a área?</h2></div><div class="sc-body">
+<div class="tech-grid"><div class="tech-card"><div class="tc-icon">🗂️</div><strong>Acervo digital</strong><p>Coleções são catalogadas em bancos de dados e colocadas na internet.</p></div><div class="tech-card"><div class="tc-icon">🔬</div><strong>Imagem e 3D</strong><p>Digitalização ajuda a estudar, preservar e mostrar peças frágeis.</p></div><div class="tech-card"><div class="tc-icon">🤖</div><strong>IA na documentação</strong><p>Ferramentas ajudam a transcrever e classificar. A conferência da informação continua sendo humana.</p></div></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Mercado no Brasil</h2></div><div class="sc-body">
+<ul class="sl"><li><strong>Onde há trabalho:</strong> museus, centros culturais, galerias, institutos, universidades, arquivos de memória e órgãos de patrimônio.</li><li><strong>Setor público:</strong> concursos municipais, estaduais e federais. Um exemplo de 2026: a Prefeitura de Olímpia (SP) abriu vaga de museólogo com salário de R$ 6.506,88 por 40 horas.</li><li><strong>Setor privado:</strong> institutos culturais, memória de empresas e produtoras de exposições.</li><li><strong>Termômetro:</strong> a pesquisa do Portal Salário teve 341 profissionais com carteira assinada em 12 meses, com mais admissões do que desligamentos.</li></ul>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🎓</span><h2>Especializações: pra onde dá pra ir?</h2></div><div class="sc-body">
+<div class="tags"><span class="tag">Documentação museológica</span><span class="tag">Conservação preventiva</span><span class="tag">Curadoria</span><span class="tag">Expografia</span><span class="tag">Educação em museus</span><span class="tag">Patrimônio cultural</span><span class="tag">Gestão cultural</span><span class="tag">Memória institucional</span><span class="tag">Mestrado e doutorado</span></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha?</h2></div><div class="sc-body">
+<div class="sal-grid"><div class="sal-card"><div class="sal-stage">Piso salarial</div><div class="sal-range">R$ 2.822</div><div class="sal-note">Valor médio previsto em convenções e acordos.</div></div><div class="sal-card"><div class="sal-stage">Média</div><div class="sal-range">R$ 3.874</div><div class="sal-note">Média do salário base com carteira assinada.</div></div><div class="sal-card"><div class="sal-stage">Teto salarial</div><div class="sal-range">R$ 5.848</div><div class="sal-note">Faixa alta registrada na pesquisa.</div></div></div><div class="hbox" style="margin-top:18px;">Jornada média de 40 horas semanais. Metade das pessoas pesquisadas ganha até R$ 3.161.</div><p class="note">Fonte: <a href="https://www.salario.com.br/profissao/museologo-cbo-261310/" target="_blank" rel="noopener">Portal Salário, com dados do CAGED</a>, atualização de 05/11/2026. Média nacional de salário base CLT. Concursos, trabalho como pessoa jurídica, bolsas e freelas ficam de fora dessa conta.</p>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🎧</span><h2>Pra ouvir e assistir</h2></div><div class="sc-body">
+<div class="links-grid"><a href="https://guiadoestudante.abril.com.br/profissoes/museologia/" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">📘</span><div class="lc-body"><strong>Guia de Profissões: Museologia</strong><span>Página do Guia do Estudante sobre o curso</span></div><span class="lc-arr">→</span></a></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar?</h2></div><div class="sc-body">
+<div class="links-grid"><a href="https://cofem.org.br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🏛️</span><div class="lc-body"><strong>COFEM, Conselho Federal de Museologia</strong><span>Profissão, legislação e registro</span></div><span class="lc-arr">→</span></a><a href="https://www.gov.br/museus/pt-br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🖼️</span><div class="lc-body"><strong>Ibram, Instituto Brasileiro de Museus</strong><span>Museus brasileiros, políticas e editais</span></div><span class="lc-arr">→</span></a><a href="https://www.icom.org.br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🌍</span><div class="lc-body"><strong>ICOM Brasil</strong><span>Conselho Internacional de Museus no Brasil</span></div><span class="lc-arr">→</span></a><a href="https://www.gov.br/iphan/pt-br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🏺</span><div class="lc-body"><strong>Iphan</strong><span>Patrimônio histórico e cultural brasileiro</span></div><span class="lc-arr">→</span></a></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">✅</span><h2>Checklist: Museologia</h2></div><div class="sc-body">
+<p style="color:var(--muted);margin-bottom:6px;">Marque o que combina com você de verdade, e não o que você gostaria que combinasse.</p><div class="checklist-wrap" id="cl-mus"><div class="cl-item" onclick="toggle(this,'cl-mus')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade sobre a história por trás de um objeto.</div></div><div class="cl-item" onclick="toggle(this,'cl-mus')"><div class="cl-box"></div><div class="cl-text">Gosto de museus, galerias e exposições, e reparo em como são organizados.</div></div><div class="cl-item" onclick="toggle(this,'cl-mus')"><div class="cl-box"></div><div class="cl-text">Tenho paciência para registrar informações com cuidado.</div></div><div class="cl-item" onclick="toggle(this,'cl-mus')"><div class="cl-box"></div><div class="cl-text">Gosto de pesquisar a origem das coisas.</div></div><div class="cl-item" onclick="toggle(this,'cl-mus')"><div class="cl-box"></div><div class="cl-text">Acho interessante lidar com documentos, fotos e peças antigas.</div></div><div class="cl-item" onclick="toggle(this,'cl-mus')"><div class="cl-box"></div><div class="cl-text">Gostaria de explicar um tema para o público usando objetos, imagens e espaço.</div></div><div class="cl-item" onclick="toggle(this,'cl-mus')"><div class="cl-box"></div><div class="cl-text">Cuido de detalhes mesmo quando ninguém vai ver.</div></div><div class="cl-item" onclick="toggle(this,'cl-mus')"><div class="cl-box"></div><div class="cl-text">Topo trabalhar com gente de áreas como história, arte, design e conservação.</div></div><div class="cl-item" onclick="toggle(this,'cl-mus')"><div class="cl-box"></div><div class="cl-text">Aceito um mercado pequeno, em que concurso e edital têm peso.</div></div><div class="cl-item" onclick="toggle(this,'cl-mus')"><div class="cl-box"></div><div class="cl-text">Vejo valor em preservar a memória para quem vem depois.</div></div></div><div class="cl-score">Marcados: <span id="sc-mus">0 de 10</span></div><div class="cl-result" id="res-mus"><div class="sub">Guarde esse número. Ele não diz qual curso escolher, é só mais um dado pra levar pra próxima sessão.</div></div>
+</div></div>
+</div>
+<div class="panel jor" id="p-jor">
+<div class="sc"><div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Jornalismo?</h2></div><div class="sc-body">
+<p>Jornalismo ensina a apurar, checar e contar o que acontece, em texto, áudio, vídeo e redes. É um <strong>bacharelado de 4 anos</strong>, com diretrizes curriculares próprias, estágio e trabalho de conclusão.</p><ul class="sl" style="margin-top:14px;"><li><strong>Base:</strong> Teorias da comunicação, língua portuguesa, ética, história, sociologia, política e primeiras técnicas de reportagem.</li><li><strong>Meio do curso:</strong> Redação, entrevista, rádio, TV, fotografia, jornalismo digital e checagem.</li><li><strong>Final:</strong> Jornal laboratório, grande reportagem, assessoria de imprensa, estágio e trabalho de conclusão.</li></ul><div class="hbox">🏛️ <strong>Diploma e registro:</strong> desde 2009, por decisão do STF, o diploma não é obrigatório para exercer o jornalismo. A categoria não tem conselho profissional. Vagas e concursos podem exigir a formação.</div><p class="note">Nomes e ordem das disciplinas variam. Confira a grade de cada universidade.</p>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">💼</span><h2>O que dá pra fazer com essa formação?</h2></div><div class="sc-body">
+<ul class="sl"><li><strong>Repórter:</strong> levanta informações, entrevista, checa e conta a história.</li><li><strong>Jornalismo investigativo:</strong> passa semanas ou meses em documentos, dados e fontes para revelar o que estava escondido.</li><li><strong>Edição:</strong> decide pauta, corta, revisa e responde pelo que vai ao ar.</li><li><strong>Checagem de fatos:</strong> verifica declarações, imagens e boatos.</li><li><strong>Jornalismo de dados:</strong> encontra a notícia em planilhas e bases públicas.</li><li><strong>Rádio, TV, podcast e vídeo:</strong> produz, apresenta e roteiriza.</li><li><strong>Assessoria de imprensa:</strong> faz a ponte entre uma organização e os veículos, inclusive museus e instituições culturais.</li><li><strong>Jornalismo especializado:</strong> cultura, política, ciência, esporte, economia e outros.</li></ul>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses aparecem na rotina?</h2></div><div class="sc-body">
+<div class="tags"><span class="tag">Curiosidade</span><span class="tag">Escrita clara</span><span class="tag">Escuta</span><span class="tag">Coragem para perguntar</span><span class="tag">Checagem</span><span class="tag">Agilidade</span><span class="tag">Pensamento crítico</span><span class="tag">Ética</span></div><div class="hbox" style="margin-top:18px;"><span class="accent">Pergunta pra você:</span> quando uma notícia chega no seu celular, você compartilha, ignora ou vai atrás de saber quem disse, quando e com base em quê?</div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">⚠️</span><h2>Desafios reais</h2></div><div class="sc-body">
+<div class="cbox"><strong>Prazo curto.</strong> Em redação, muita coisa precisa sair no mesmo dia.</div><div class="cbox"><strong>Mercado instável.</strong> Redações tradicionais encolheram, e há muito contrato como pessoa jurídica e freela.</div><div class="cbox"><strong>Plantões.</strong> Notícia não respeita fim de semana nem feriado.</div><div class="cbox"><strong>Pressão e ataques.</strong> Quem publica pode sofrer críticas agressivas, processos e ameaças.</div><div class="cbox"><strong>Investigar é uma fatia do mercado.</strong> Reportagem de fôlego existe, mas muitas vagas são de conteúdo diário e assessoria.</div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia e a IA mudam a área?</h2></div><div class="sc-body">
+<div class="tech-grid"><div class="tech-card"><div class="tc-icon">🤖</div><strong>IA na redação</strong><p>Transcreve, resume e rascunha. Apurar, checar e responder pela informação segue com jornalistas.</p></div><div class="tech-card"><div class="tc-icon">🕵️</div><strong>Checagem</strong><p>Imagens, áudios e vídeos falsos tornaram a verificação ainda mais necessária.</p></div><div class="tech-card"><div class="tc-icon">📊</div><strong>Dados e plataformas</strong><p>Bases públicas viram pauta, e a distribuição passa por redes, busca, vídeo e newsletter.</p></div></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Mercado no Brasil</h2></div><div class="sc-body">
+<ul class="sl"><li><strong>Onde há trabalho:</strong> veículos de notícia, assessorias, agências, empresas, órgãos públicos, terceiro setor e projetos independentes.</li><li><strong>Vagas variadas:</strong> boa parte está em assessoria, conteúdo e comunicação de organizações, além das redações.</li><li><strong>Vínculos:</strong> convivem carteira assinada, pessoa jurídica, freela e concurso.</li><li><strong>Termômetro:</strong> o Portal Salário registrou, entre pessoas com carteira assinada, um pouco mais de desligamentos do que de admissões em 12 meses.</li></ul>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🎓</span><h2>Especializações: pra onde dá pra ir?</h2></div><div class="sc-body">
+<div class="tags"><span class="tag">Jornalismo investigativo</span><span class="tag">Jornalismo de dados</span><span class="tag">Checagem de fatos</span><span class="tag">Jornalismo cultural</span><span class="tag">Jornalismo político</span><span class="tag">Jornalismo científico</span><span class="tag">Áudio e podcast</span><span class="tag">Documentário</span><span class="tag">Assessoria de imprensa</span></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha?</h2></div><div class="sc-body">
+<div class="sal-grid"><div class="sal-card"><div class="sal-stage">Piso salarial</div><div class="sal-range">R$ 3.290</div><div class="sal-note">Valor médio previsto em convenções e acordos.</div></div><div class="sal-card"><div class="sal-stage">Média</div><div class="sal-range">R$ 5.041</div><div class="sal-note">Média do salário base com carteira assinada.</div></div><div class="sal-card"><div class="sal-stage">Teto salarial</div><div class="sal-range">R$ 9.000</div><div class="sal-note">Faixa alta registrada na pesquisa.</div></div></div><div class="hbox" style="margin-top:18px;">Jornada média de 37 horas semanais. Metade das pessoas pesquisadas ganha até R$ 4.025. Pisos mudam conforme o estado.</div><p class="note">Fonte: <a href="https://www.salario.com.br/profissao/jornalista-cbo-261125/" target="_blank" rel="noopener">Portal Salário, com dados do CAGED</a>, atualização de 05/11/2026. Média nacional de salário base CLT. Concursos, trabalho como pessoa jurídica, bolsas e freelas ficam de fora dessa conta.</p>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🎧</span><h2>Pra ouvir e assistir</h2></div><div class="sc-body">
+<div class="links-grid"><a href="https://www.youtube.com/watch?v=OaF7dndsmnQ" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🎙️</span><div class="lc-body"><strong>Podcast Segunda a Sexta: EP 03 · Tudo sobre o curso de Jornalismo</strong><span>Episódio de 46 minutos, publicado em 2024</span></div><span class="lc-arr">→</span></a><a href="https://guiadoestudante.abril.com.br/profissoes/jornalismo/" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">📘</span><div class="lc-body"><strong>Guia de Profissões: Jornalismo</strong><span>Página do Guia do Estudante sobre o curso</span></div><span class="lc-arr">→</span></a></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar?</h2></div><div class="sc-body">
+<div class="links-grid"><a href="https://fenaj.org.br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">📰</span><div class="lc-body"><strong>FENAJ</strong><span>Federação Nacional dos Jornalistas: pisos, ética e profissão</span></div><span class="lc-arr">→</span></a><a href="https://www.abraji.org.br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🕵️</span><div class="lc-body"><strong>Abraji</strong><span>Associação Brasileira de Jornalismo Investigativo</span></div><span class="lc-arr">→</span></a><a href="https://www.portaldosjornalistas.com.br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">👥</span><div class="lc-body"><strong>Portal dos Jornalistas</strong><span>Notícias sobre o mercado e trajetórias</span></div><span class="lc-arr">→</span></a></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">✅</span><h2>Checklist: Jornalismo</h2></div><div class="sc-body">
+<p style="color:var(--muted);margin-bottom:6px;">Marque o que combina com você de verdade, e não o que você gostaria que combinasse.</p><div class="checklist-wrap" id="cl-jor"><div class="cl-item" onclick="toggle(this,'cl-jor')"><div class="cl-box"></div><div class="cl-text">Quando algo me chama atenção, quero saber a história inteira.</div></div><div class="cl-item" onclick="toggle(this,'cl-jor')"><div class="cl-box"></div><div class="cl-text">Desconfio de informação sem fonte e gosto de conferir.</div></div><div class="cl-item" onclick="toggle(this,'cl-jor')"><div class="cl-box"></div><div class="cl-text">Gosto de escrever de um jeito que qualquer pessoa entenda.</div></div><div class="cl-item" onclick="toggle(this,'cl-jor')"><div class="cl-box"></div><div class="cl-text">Consigo abordar alguém que não conheço para fazer perguntas.</div></div><div class="cl-item" onclick="toggle(this,'cl-jor')"><div class="cl-box"></div><div class="cl-text">Acompanho notícias por vontade própria.</div></div><div class="cl-item" onclick="toggle(this,'cl-jor')"><div class="cl-box"></div><div class="cl-text">Gosto de juntar pistas e informações soltas até fazer sentido.</div></div><div class="cl-item" onclick="toggle(this,'cl-jor')"><div class="cl-box"></div><div class="cl-text">Consigo entregar com prazo apertado.</div></div><div class="cl-item" onclick="toggle(this,'cl-jor')"><div class="cl-box"></div><div class="cl-text">Escuto opiniões diferentes da minha antes de concluir.</div></div><div class="cl-item" onclick="toggle(this,'cl-jor')"><div class="cl-box"></div><div class="cl-text">Aceito ter plantões e uma rotina que pode mudar de repente.</div></div><div class="cl-item" onclick="toggle(this,'cl-jor')"><div class="cl-box"></div><div class="cl-text">Aceito construir carreira num mercado instável.</div></div></div><div class="cl-score">Marcados: <span id="sc-jor">0 de 10</span></div><div class="cl-result" id="res-jor"><div class="sub">Guarde esse número. Ele não diz qual curso escolher, é só mais um dado pra levar pra próxima sessão.</div></div>
+</div></div>
+</div>
+<div class="panel his" id="p-his">
+<div class="sc"><div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de História?</h2></div><div class="sc-body">
+<p>História estuda as sociedades no tempo a partir de vestígios: documentos, jornais, imagens, objetos, relatos. Decorar datas é a menor parte. O centro do curso é <strong>interpretar fontes</strong>. Dura cerca de <strong>4 anos</strong> e existe como <strong>licenciatura</strong> (para dar aula na educação básica) e <strong>bacharelado</strong> (mais voltado à pesquisa).</p><ul class="sl" style="margin-top:14px;"><li><strong>Base:</strong> Introdução aos estudos históricos, teoria, e os períodos Antigo e Medieval. Muita leitura.</li><li><strong>Meio do curso:</strong> História do Brasil, das Américas, da África, Moderna e Contemporânea, métodos de pesquisa e trabalho com fontes.</li><li><strong>Final:</strong> Monografia ou trabalho de conclusão. Na licenciatura, entram as disciplinas pedagógicas e o estágio em escola.</li></ul><div class="hbox">🏛️ <strong>Profissão regulamentada:</strong> a Lei 14.038/2020 regulamenta a profissão de historiador. Para dar aula na educação básica, o caminho é a licenciatura.</div><p class="note">Nomes e ordem das disciplinas variam. Confira a grade de cada universidade.</p>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">💼</span><h2>O que dá pra fazer com essa formação?</h2></div><div class="sc-body">
+<ul class="sl"><li><strong>Dar aula:</strong> no ensino fundamental, no médio, em cursos preparatórios e, com mestrado e doutorado, na universidade.</li><li><strong>Pesquisar:</strong> investigar um tema em arquivos, bibliotecas e entrevistas.</li><li><strong>Trabalhar com arquivos e memória:</strong> organizar e analisar documentos de instituições, famílias e empresas.</li><li><strong>Patrimônio:</strong> participar de inventários e estudos para preservação.</li><li><strong>Museus e centros culturais:</strong> pesquisa para exposições e ações educativas.</li><li><strong>Consultoria histórica:</strong> para filmes, séries, livros, jogos e reportagens.</li><li><strong>Mercado editorial e divulgação:</strong> livros, materiais didáticos, podcasts e canais sobre história.</li></ul>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses aparecem na rotina?</h2></div><div class="sc-body">
+<div class="tags"><span class="tag">Gosto por leitura</span><span class="tag">Escrita</span><span class="tag">Interpretação</span><span class="tag">Pensamento crítico</span><span class="tag">Pesquisa</span><span class="tag">Paciência</span><span class="tag">Argumentação</span><span class="tag">Curiosidade pelo passado</span></div><div class="hbox" style="margin-top:18px;"><span class="accent">Pergunta pra você:</span> diante de duas versões sobre o mesmo acontecimento, você quer escolher uma logo ou descobrir quem contou cada uma e por quê?</div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">⚠️</span><h2>Desafios reais</h2></div><div class="sc-body">
+<div class="cbox"><strong>Muita leitura e escrita.</strong> Textos longos e densos fazem parte do curso inteiro.</div><div class="cbox"><strong>A sala de aula é o caminho mais comum.</strong> Quem não quer ensinar precisa construir o percurso em pesquisa, patrimônio, memória ou cultura.</div><div class="cbox"><strong>Pesquisa depende de pós e de bolsa.</strong> A carreira acadêmica costuma pedir mestrado e doutorado, e bolsa tem prazo.</div><div class="cbox"><strong>Salário varia muito.</strong> Muda conforme a rede, a escola, a carga horária e a titulação.</div><div class="cbox"><strong>Temas em disputa.</strong> Ensinar e divulgar história envolve debates acalorados.</div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia e a IA mudam a área?</h2></div><div class="sc-body">
+<div class="tech-grid"><div class="tech-card"><div class="tc-icon">🗄️</div><strong>Arquivos digitalizados</strong><p>Cada vez mais documentos podem ser consultados pela internet.</p></div><div class="tech-card"><div class="tc-icon">🤖</div><strong>IA e transcrição</strong><p>Ajuda a ler grandes volumes de texto. Criticar a fonte e interpretar continua sendo o ofício.</p></div><div class="tech-card"><div class="tc-icon">🎧</div><strong>Divulgação digital</strong><p>Podcasts, vídeos e jogos abriram novos espaços para falar de história.</p></div></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Mercado no Brasil</h2></div><div class="sc-body">
+<ul class="sl"><li><strong>Onde há trabalho:</strong> escolas, universidades, arquivos, museus, centros de memória, órgãos de patrimônio, editoras e produtoras.</li><li><strong>Concursos:</strong> redes públicas de ensino são a porta mais frequente. O piso nacional do magistério na rede pública em 2026 é de R$ 5.130,63 para 40 horas, e vale como referência mínima para a carreira docente.</li><li><strong>Concurso de historiador:</strong> existe, com menos vagas. Em 2026, a Prefeitura de Olímpia (SP) ofereceu R$ 3.633,50 por 40 horas.</li><li><strong>Pesquisa:</strong> passa muito por universidades, institutos, bolsas e projetos.</li></ul>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🎓</span><h2>Especializações: pra onde dá pra ir?</h2></div><div class="sc-body">
+<div class="tags"><span class="tag">Ensino de História</span><span class="tag">História pública</span><span class="tag">Patrimônio e memória</span><span class="tag">Arquivos e documentação</span><span class="tag">História do Brasil</span><span class="tag">História da África</span><span class="tag">História da ciência</span><span class="tag">Consultoria para audiovisual</span><span class="tag">Mestrado e doutorado</span></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha?</h2></div><div class="sc-body">
+<div class="sal-grid"><div class="sal-card"><div class="sal-stage">Piso salarial</div><div class="sal-range">R$ 3.020</div><div class="sal-note">Valor médio previsto em convenções e acordos.</div></div><div class="sal-card"><div class="sal-stage">Média</div><div class="sal-range">R$ 4.271</div><div class="sal-note">Média do salário base com carteira assinada.</div></div><div class="sal-card"><div class="sal-stage">Teto salarial</div><div class="sal-range">R$ 6.934</div><div class="sal-note">Faixa alta registrada na pesquisa.</div></div></div><div class="hbox" style="margin-top:18px;"><strong>Atenção ao recorte:</strong> os valores acima são do cargo "Pesquisador em História" (87 profissionais, 41 horas semanais). Para <a href="https://www.salario.com.br/profissao/professor-de-historia-no-ensino-medio-cbo-232140/" target="_blank" rel="noopener">professor de História no ensino médio</a>, a média é de R$ 4.884 por 24 horas semanais, indo de R$ 2.600 a R$ 9.952.</div><p class="note">Fonte: <a href="https://www.salario.com.br/profissao/pesquisador-em-historia-cbo-203520" target="_blank" rel="noopener">Portal Salário, com dados do CAGED</a>, atualização de 05/11/2026. Média nacional de salário base CLT. Concursos, trabalho como pessoa jurídica, bolsas e freelas ficam de fora dessa conta.</p>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🎧</span><h2>Pra ouvir e assistir</h2></div><div class="sc-body">
+<div class="links-grid"><a href="https://www.youtube.com/watch?v=48lKcazKjak" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🎙️</span><div class="lc-body"><strong>Podcast Segunda a Sexta: EP 28 · Tudo sobre o curso de História</strong><span>Episódio de 23 minutos, publicado em 2024</span></div><span class="lc-arr">→</span></a><a href="https://guiadoestudante.abril.com.br/profissoes/historia/" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">📘</span><div class="lc-body"><strong>Guia de Profissões: História</strong><span>Página do Guia do Estudante sobre o curso</span></div><span class="lc-arr">→</span></a></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar?</h2></div><div class="sc-body">
+<div class="links-grid"><a href="https://anpuh.org.br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">📜</span><div class="lc-body"><strong>ANPUH Brasil</strong><span>Associação Nacional de História: profissão, eventos e pesquisa</span></div><span class="lc-arr">→</span></a><a href="https://www.gov.br/arquivonacional/pt-br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🗄️</span><div class="lc-body"><strong>Arquivo Nacional</strong><span>Acervos e documentos para conhecer o trabalho com fontes</span></div><span class="lc-arr">→</span></a><a href="https://cpdoc.fgv.br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🔎</span><div class="lc-body"><strong>FGV CPDOC</strong><span>Centro de pesquisa e documentação em história do Brasil</span></div><span class="lc-arr">→</span></a><a href="https://www.gov.br/casaruibarbosa/pt-br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">📚</span><div class="lc-body"><strong>Fundação Casa de Rui Barbosa</strong><span>Instituição de pesquisa, arquivo e museu no Rio</span></div><span class="lc-arr">→</span></a></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">✅</span><h2>Checklist: História</h2></div><div class="sc-body">
+<p style="color:var(--muted);margin-bottom:6px;">Marque o que combina com você de verdade, e não o que você gostaria que combinasse.</p><div class="checklist-wrap" id="cl-his"><div class="cl-item" onclick="toggle(this,'cl-his')"><div class="cl-box"></div><div class="cl-text">Quero entender por que as coisas chegaram a ser como são.</div></div><div class="cl-item" onclick="toggle(this,'cl-his')"><div class="cl-box"></div><div class="cl-text">Gosto de ler, inclusive textos longos.</div></div><div class="cl-item" onclick="toggle(this,'cl-his')"><div class="cl-box"></div><div class="cl-text">Gosto de pesquisar um assunto a fundo.</div></div><div class="cl-item" onclick="toggle(this,'cl-his')"><div class="cl-box"></div><div class="cl-text">Tenho curiosidade por documentos, cartas, fotos e jornais antigos.</div></div><div class="cl-item" onclick="toggle(this,'cl-his')"><div class="cl-box"></div><div class="cl-text">Gosto de comparar versões diferentes sobre o mesmo fato.</div></div><div class="cl-item" onclick="toggle(this,'cl-his')"><div class="cl-box"></div><div class="cl-text">Consigo defender uma ideia com argumentos.</div></div><div class="cl-item" onclick="toggle(this,'cl-his')"><div class="cl-box"></div><div class="cl-text">Gosto de escrever textos explicando o que descobri.</div></div><div class="cl-item" onclick="toggle(this,'cl-his')"><div class="cl-box"></div><div class="cl-text">Consigo me imaginar dando aula, pelo menos em parte da carreira.</div></div><div class="cl-item" onclick="toggle(this,'cl-his')"><div class="cl-box"></div><div class="cl-text">Tenho paciência para pesquisas que demoram a dar resposta.</div></div><div class="cl-item" onclick="toggle(this,'cl-his')"><div class="cl-box"></div><div class="cl-text">Topo continuar estudando depois da graduação.</div></div></div><div class="cl-score">Marcados: <span id="sc-his">0 de 10</span></div><div class="cl-result" id="res-his"><div class="sub">Guarde esse número. Ele não diz qual curso escolher, é só mais um dado pra levar pra próxima sessão.</div></div>
+</div></div>
+</div>
+<div class="panel rtv" id="p-rtv">
+<div class="sc"><div class="sc-head"><span class="sc-icon">📖</span><h2>O que é o curso de Rádio, TV e Internet?</h2></div><div class="sc-body">
+<p>É o curso de quem produz conteúdo em áudio e vídeo: programas, séries, podcasts, transmissões ao vivo e formatos digitais. É uma graduação de <strong>cerca de 4 anos</strong>. O nome muda de uma faculdade para outra: Rádio, TV e Internet, Radialismo ou Audiovisual. Na <strong>UFRJ</strong>, por exemplo, aparece como Comunicação Social: Radialismo. Compare as grades.</p><ul class="sl" style="margin-top:14px;"><li><strong>Base:</strong> Teorias da comunicação, linguagem audiovisual, roteiro, história dos meios, som e imagem.</li><li><strong>Meio do curso:</strong> Produção e direção para rádio e TV, câmera, áudio, edição, programação e formatos digitais.</li><li><strong>Final:</strong> Projetos práticos, gestão de produção, estágio e trabalho de conclusão.</li></ul><div class="hbox">🏛️ <strong>Registro de radialista:</strong> a profissão é regulamentada pela Lei 6.615/1978, que prevê registro profissional para funções de radialista. A categoria não tem conselho profissional.</div><p class="note">Nomes e ordem das disciplinas variam. Confira a grade de cada universidade.</p>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">💼</span><h2>O que dá pra fazer com essa formação?</h2></div><div class="sc-body">
+<ul class="sl"><li><strong>Produção:</strong> organiza pauta, equipe, convidados, locações, cronograma e orçamento.</li><li><strong>Roteiro:</strong> escreve programas, episódios, quadros e vídeos.</li><li><strong>Direção:</strong> conduz a gravação ou a transmissão.</li><li><strong>Edição e finalização:</strong> monta imagem e som até virar o produto final.</li><li><strong>Áudio e podcast:</strong> capta, edita, cria a identidade sonora e produz séries.</li><li><strong>Programação:</strong> decide o que vai ao ar, quando e para quem.</li><li><strong>Conteúdo para streaming e redes:</strong> cria formatos e lives para plataformas e marcas.</li><li><strong>Pesquisa e acervo audiovisual:</strong> busca imagens, áudios e informações para programas e documentários.</li></ul>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🧠</span><h2>Que habilidades e interesses aparecem na rotina?</h2></div><div class="sc-body">
+<div class="tags"><span class="tag">Criatividade</span><span class="tag">Organização</span><span class="tag">Agilidade</span><span class="tag">Trabalho em equipe</span><span class="tag">Senso de imagem e som</span><span class="tag">Comunicação</span><span class="tag">Facilidade com tecnologia</span><span class="tag">Resolver imprevistos</span></div><div class="hbox" style="margin-top:18px;"><span class="accent">Pergunta pra você:</span> quando você assiste a um vídeo ou ouve um podcast, repara no corte, no som e na ordem das cenas ou fica só no assunto?</div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">⚠️</span><h2>Desafios reais</h2></div><div class="sc-body">
+<div class="cbox"><strong>Muito trabalho por projeto.</strong> Produções começam e terminam, e a equipe pode mudar a cada uma.</div><div class="cbox"><strong>Horários irregulares.</strong> Gravações, eventos e transmissões ao vivo avançam por noites e fins de semana.</div><div class="cbox"><strong>Concorrência com quem aprende fora da faculdade.</strong> Portfólio e prática pesam muito.</div><div class="cbox"><strong>Tecnologia muda rápido.</strong> Equipamento, programa e plataforma pedem atualização constante.</div><div class="cbox"><strong>Começo em funções de apoio.</strong> A entrada costuma ser como assistente.</div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🤖</span><h2>Como a tecnologia e a IA mudam a área?</h2></div><div class="sc-body">
+<div class="tech-grid"><div class="tech-card"><div class="tc-icon">🤖</div><strong>IA na pós-produção</strong><p>Legenda, limpeza de áudio e cortes iniciais ficaram mais rápidos.</p></div><div class="tech-card"><div class="tc-icon">📱</div><strong>Plataformas</strong><p>Streaming, vídeo curto, lives e podcasts ampliaram os formatos.</p></div><div class="tech-card"><div class="tc-icon">📈</div><strong>Dados de audiência</strong><p>Retenção e alcance entram nas decisões sobre o conteúdo.</p></div></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🇧🇷</span><h2>Mercado no Brasil</h2></div><div class="sc-body">
+<ul class="sl"><li><strong>Onde há trabalho:</strong> emissoras de rádio e TV, produtoras, plataformas, agências, empresas, instituições culturais e produção própria.</li><li><strong>Concentração:</strong> grandes produções se concentram principalmente em Rio e São Paulo.</li><li><strong>Vínculos:</strong> carteira assinada em emissoras e empresas, além de pessoa jurídica, freela e cachê.</li><li><strong>Digital:</strong> a produção de vídeo e áudio para internet amplia o campo para além das emissoras.</li></ul>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🎓</span><h2>Especializações: pra onde dá pra ir?</h2></div><div class="sc-body">
+<div class="tags"><span class="tag">Roteiro</span><span class="tag">Produção executiva</span><span class="tag">Direção</span><span class="tag">Edição e montagem</span><span class="tag">Desenho de som</span><span class="tag">Podcast</span><span class="tag">Documentário</span><span class="tag">Transmissão ao vivo</span><span class="tag">Conteúdo para streaming</span></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">💰</span><h2>Quanto ganha?</h2></div><div class="sc-body">
+<div class="sal-grid"><div class="sal-card"><div class="sal-stage">Piso salarial</div><div class="sal-range">R$ 2.170</div><div class="sal-note">Valor médio previsto em convenções e acordos.</div></div><div class="sal-card"><div class="sal-stage">Média</div><div class="sal-range">R$ 3.131</div><div class="sal-note">Média do salário base com carteira assinada.</div></div><div class="sal-card"><div class="sal-stage">Teto salarial</div><div class="sal-range">R$ 5.229</div><div class="sal-note">Faixa alta registrada na pesquisa.</div></div></div><div class="hbox" style="margin-top:18px;"><strong>O salário muda conforme a função.</strong> Os valores acima são de editor de TV e vídeo (42 horas semanais). Para <a href="https://www.salario.com.br/profissao/produtor-de-radio-cbo-262115/" target="_blank" rel="noopener">produtor de rádio</a>, a média é de R$ 3.418 por 38 horas, indo de R$ 2.219 a R$ 5.506. Nem todo cargo pesquisado exige graduação.</div><p class="note">Fonte: <a href="https://www.salario.com.br/profissao/editor-de-tv-e-video-cbo-374405/" target="_blank" rel="noopener">Portal Salário, com dados do CAGED</a>, atualização de 05/11/2026. Média nacional de salário base CLT. Concursos, trabalho como pessoa jurídica, bolsas e freelas ficam de fora dessa conta.</p>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🎧</span><h2>Pra ouvir e assistir</h2></div><div class="sc-body">
+<div class="links-grid"><a href="https://www.youtube.com/watch?v=S8bwAMIaZn0" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🎙️</span><div class="lc-body"><strong>Podcast Segunda a Sexta: EP 08 · Tudo sobre o curso de Rádio e TV</strong><span>Episódio de 42 minutos, publicado em 2024</span></div><span class="lc-arr">→</span></a><a href="https://guiadoestudante.abril.com.br/profissoes/radio-tv-e-internet/" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">📘</span><div class="lc-body"><strong>Guia de Profissões: Rádio, TV e Internet</strong><span>Página do Guia do Estudante sobre o curso</span></div><span class="lc-arr">→</span></a></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">🔗</span><h2>Onde pesquisar?</h2></div><div class="sc-body">
+<div class="links-grid"><a href="https://www.abert.org.br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">📻</span><div class="lc-body"><strong>ABERT</strong><span>Associação Brasileira de Emissoras de Rádio e Televisão</span></div><span class="lc-arr">→</span></a><a href="https://telaviva.com.br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">📺</span><div class="lc-body"><strong>Tela Viva</strong><span>Notícias do mercado de audiovisual</span></div><span class="lc-arr">→</span></a><a href="https://www.gov.br/ancine/pt-br" class="lcard" target="_blank" rel="noopener"><span class="lc-icon">🎬</span><div class="lc-body"><strong>Ancine</strong><span>Agência Nacional do Cinema: dados e editais do audiovisual</span></div><span class="lc-arr">→</span></a></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">✅</span><h2>Checklist: Rádio, TV e Internet</h2></div><div class="sc-body">
+<p style="color:var(--muted);margin-bottom:6px;">Marque o que combina com você de verdade, e não o que você gostaria que combinasse.</p><div class="checklist-wrap" id="cl-rtv"><div class="cl-item" onclick="toggle(this,'cl-rtv')"><div class="cl-box"></div><div class="cl-text">Gosto de criar vídeos, áudios ou programas.</div></div><div class="cl-item" onclick="toggle(this,'cl-rtv')"><div class="cl-box"></div><div class="cl-text">Reparo em edição, trilha, som e enquadramento.</div></div><div class="cl-item" onclick="toggle(this,'cl-rtv')"><div class="cl-box"></div><div class="cl-text">Gosto de tirar uma ideia do papel com outras pessoas.</div></div><div class="cl-item" onclick="toggle(this,'cl-rtv')"><div class="cl-box"></div><div class="cl-text">Tenho facilidade para aprender programas e equipamentos.</div></div><div class="cl-item" onclick="toggle(this,'cl-rtv')"><div class="cl-box"></div><div class="cl-text">Consigo resolver imprevistos sem travar.</div></div><div class="cl-item" onclick="toggle(this,'cl-rtv')"><div class="cl-box"></div><div class="cl-text">Gosto de pensar em roteiro e na ordem de uma história.</div></div><div class="cl-item" onclick="toggle(this,'cl-rtv')"><div class="cl-box"></div><div class="cl-text">Tenho interesse nos bastidores de uma produção.</div></div><div class="cl-item" onclick="toggle(this,'cl-rtv')"><div class="cl-box"></div><div class="cl-text">Aceito gravações em horários variados.</div></div><div class="cl-item" onclick="toggle(this,'cl-rtv')"><div class="cl-box"></div><div class="cl-text">Aceito alternar períodos de projetos e contratos diferentes.</div></div><div class="cl-item" onclick="toggle(this,'cl-rtv')"><div class="cl-box"></div><div class="cl-text">Topo montar um portfólio durante a faculdade.</div></div></div><div class="cl-score">Marcados: <span id="sc-rtv">0 de 10</span></div><div class="cl-result" id="res-rtv"><div class="sub">Guarde esse número. Ele não diz qual curso escolher, é só mais um dado pra levar pra próxima sessão.</div></div>
+</div></div>
+</div>
+<div class="panel cmp" id="p-cmp">
+<div class="sc"><div class="sc-head"><span class="sc-icon">⚖️</span><h2>Os quatro lado a lado</h2></div><div class="sc-body">
+<div class="comp-wrap"><table class="comp-table crit-table"><thead><tr><th>Dimensão</th><th class="h-mus">🏺 Museologia</th><th class="h-jor">📰 Jornalismo</th><th class="h-his">📜 História</th><th class="h-rtv">🎥 Rádio, TV e Internet</th></tr></thead><tbody><tr><td>Foco principal</td><td data-label="🏺 Museologia">Museus, acervos e patrimônio</td><td data-label="📰 Jornalismo">Apurar e informar</td><td data-label="📜 História">Interpretar o passado por meio de fontes</td><td data-label="🎥 Rádio, TV e Internet">Produzir conteúdo em áudio e vídeo</td></tr><tr><td>Duração aproximada</td><td data-label="🏺 Museologia">4 anos</td><td data-label="📰 Jornalismo">4 anos</td><td data-label="📜 História">4 anos</td><td data-label="🎥 Rádio, TV e Internet">4 anos</td></tr><tr><td>Matéria-prima do dia</td><td data-label="🏺 Museologia">Objetos, coleções e documentos</td><td data-label="📰 Jornalismo">Fatos, fontes e dados</td><td data-label="📜 História">Documentos, livros e relatos</td><td data-label="🎥 Rádio, TV e Internet">Roteiro, imagem e som</td></tr><tr><td>Produto do trabalho</td><td data-label="🏺 Museologia">Exposições, catálogos e acervos organizados</td><td data-label="📰 Jornalismo">Reportagens e conteúdo informativo</td><td data-label="📜 História">Aulas, pesquisas e textos</td><td data-label="🎥 Rádio, TV e Internet">Programas, vídeos, podcasts e transmissões</td></tr><tr><td>Regulação</td><td data-label="🏺 Museologia">Lei 7.287/1984, com registro no COREM</td><td data-label="📰 Jornalismo">Diploma não obrigatório desde 2009, sem conselho</td><td data-label="📜 História">Lei 14.038/2020, sem conselho</td><td data-label="🎥 Rádio, TV e Internet">Lei 6.615/1978, registro de radialista</td></tr><tr><td>Ritmo comum</td><td data-label="🏺 Museologia">Projetos de médio e longo prazo</td><td data-label="📰 Jornalismo">Prazos curtos e plantões</td><td data-label="📜 História">Aulas no calendário escolar, pesquisa com prazos longos</td><td data-label="🎥 Rádio, TV e Internet">Picos nas gravações e transmissões</td></tr></tbody></table></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">💼</span><h2>Vagas disponíveis hoje no mercado</h2></div><div class="sc-body">
+<p style="color:var(--muted);">Cargos reais ligados a cada área. Alguns pedem outros requisitos além da graduação. O botão abre a busca do LinkedIn com o que estiver aberto hoje.</p><div class="vagas-grid"><div class="vaga-col"><div class="vaga-col-head mus">🏺 Museologia</div><div class="vaga-role"><strong>Museólogo</strong><span>Documenta, pesquisa e cuida de um acervo, e ajuda a montar exposições.</span></div><div class="vaga-role"><strong>Educador de Museu</strong><span>Conduz visitas e cria atividades para o público.</span></div><div class="vaga-role"><strong>Assistente de Documentação de Acervo</strong><span>Registra e organiza informações sobre peças e documentos.</span></div><div class="vaga-spacer"></div><a class="vaga-btn mus" href="https://www.linkedin.com/jobs/search/?keywords=Museologia&location=Brasil" target="_blank" rel="noopener">🔗 Ver vagas no LinkedIn</a></div><div class="vaga-col"><div class="vaga-col-head jor">📰 Jornalismo</div><div class="vaga-role"><strong>Repórter</strong><span>Apura, entrevista, checa e produz notícias.</span></div><div class="vaga-role"><strong>Assessor de Imprensa</strong><span>Prepara informações de uma organização e atende jornalistas.</span></div><div class="vaga-role"><strong>Produtor de Conteúdo Jornalístico</strong><span>Pesquisa pautas e prepara textos, vídeos ou áudios.</span></div><div class="vaga-spacer"></div><a class="vaga-btn jor" href="https://www.linkedin.com/jobs/search/?keywords=Jornalismo&location=Brasil" target="_blank" rel="noopener">🔗 Ver vagas no LinkedIn</a></div><div class="vaga-col"><div class="vaga-col-head his">📜 História</div><div class="vaga-role"><strong>Professor de História</strong><span>Planeja e dá aulas, avalia e acompanha turmas.</span></div><div class="vaga-role"><strong>Pesquisador Histórico</strong><span>Busca e analisa fontes para livros, projetos e instituições.</span></div><div class="vaga-role"><strong>Analista de Memória Institucional</strong><span>Reúne documentos e relatos para contar a trajetória de uma organização.</span></div><div class="vaga-spacer"></div><a class="vaga-btn his" href="https://www.linkedin.com/jobs/search/?keywords=Historiador&location=Brasil" target="_blank" rel="noopener">🔗 Ver vagas no LinkedIn</a></div><div class="vaga-col"><div class="vaga-col-head rtv">🎥 Rádio, TV e Internet</div><div class="vaga-role"><strong>Assistente de Produção Audiovisual</strong><span>Ajuda a organizar gravações, equipe, equipamento e horários.</span></div><div class="vaga-role"><strong>Editor de Vídeo</strong><span>Monta imagem e som até o vídeo ficar pronto.</span></div><div class="vaga-role"><strong>Roteirista</strong><span>Escreve a estrutura e as falas de programas e vídeos.</span></div><div class="vaga-spacer"></div><a class="vaga-btn rtv" href="https://www.linkedin.com/jobs/search/?keywords=Produ%C3%A7%C3%A3o%20Audiovisual&location=Brasil" target="_blank" rel="noopener">🔗 Ver vagas no LinkedIn</a></div></div>
+</div></div>
+</div>
+<div class="panel cmp" id="p-cri">
+<div class="sc"><div class="sc-head"><span class="sc-icon">🪞</span><h2>Seus critérios atravessando os quatro cursos</h2></div><div class="sc-body">
+<p style="color:var(--muted);">Seus critérios, na ordem em que você elencou. A tabela mostra como cada um aparece em cada curso.</p><div class="crit-legend"><span><span class="dot g"></span>Muito presente</span><span><span class="dot y"></span>Presente em parte</span><span><span class="dot r"></span>Pouco presente</span></div><div class="comp-wrap"><table class="comp-table crit-table"><thead><tr><th>Critério</th><th class="h-mus">🏺 Museologia</th><th class="h-jor">📰 Jornalismo</th><th class="h-his">📜 História</th><th class="h-rtv">🎥 Rádio, TV e Internet</th></tr></thead><tbody><tr><td>1. Ambientes: museus e galerias de arte</td><td data-label="🏺 Museologia"><span class="dot g"></span>É o ambiente central do curso.</td><td data-label="📰 Jornalismo"><span class="dot r"></span>Aparece em pautas culturais e na assessoria de imprensa dessas instituições.</td><td data-label="📜 História"><span class="dot y"></span>Há trabalho com pesquisa para exposições e ações educativas.</td><td data-label="🎥 Rádio, TV e Internet"><span class="dot r"></span>Aparece em projetos audiovisuais para exposições.</td></tr><tr><td>2. Ambientes: centros de pesquisa e institutos</td><td data-label="🏺 Museologia"><span class="dot y"></span>Presente em institutos com acervos, coleções e museus.</td><td data-label="📰 Jornalismo"><span class="dot r"></span>Pouco comum como local de trabalho. Pode aparecer na comunicação desses institutos.</td><td data-label="📜 História"><span class="dot g"></span>Ambiente muito ligado à pesquisa histórica, ao lado das universidades.</td><td data-label="🎥 Rádio, TV e Internet"><span class="dot r"></span>Pouco comum como local de trabalho.</td></tr><tr><td>3. Assuntos: história</td><td data-label="🏺 Museologia"><span class="dot g"></span>Atravessa o curso: acervos, patrimônio e memória.</td><td data-label="📰 Jornalismo"><span class="dot y"></span>Dá contexto às reportagens e aparece em algumas disciplinas.</td><td data-label="📜 História"><span class="dot g"></span>É o próprio objeto do curso.</td><td data-label="🎥 Rádio, TV e Internet"><span class="dot r"></span>Aparece na história dos meios e em produções com tema histórico.</td></tr><tr><td>4. Atividades: pesquisar</td><td data-label="🏺 Museologia"><span class="dot g"></span>Pesquisa de coleções, objetos e procedência.</td><td data-label="📰 Jornalismo"><span class="dot g"></span>A apuração exige pesquisa antes de publicar.</td><td data-label="📜 História"><span class="dot g"></span>É o método central do curso.</td><td data-label="🎥 Rádio, TV e Internet"><span class="dot y"></span>Presente no preparo de roteiros, programas e documentários.</td></tr><tr><td>5. Assuntos: jornalismo</td><td data-label="🏺 Museologia"><span class="dot r"></span>Aparece pouco, como na divulgação de exposições.</td><td data-label="📰 Jornalismo"><span class="dot g"></span>É o próprio objeto do curso.</td><td data-label="📜 História"><span class="dot r"></span>Aparece principalmente quando jornais são usados como fonte.</td><td data-label="🎥 Rádio, TV e Internet"><span class="dot y"></span>Divide a base de comunicação e aparece em programas jornalísticos.</td></tr><tr><td>6. Atividades: investigar</td><td data-label="🏺 Museologia"><span class="dot y"></span>Presente ao rastrear a origem e o percurso de peças.</td><td data-label="📰 Jornalismo"><span class="dot g"></span>Central na reportagem, com destaque no jornalismo investigativo.</td><td data-label="📜 História"><span class="dot g"></span>Investiga acontecimentos por meio de pistas deixadas nas fontes.</td><td data-label="🎥 Rádio, TV e Internet"><span class="dot y"></span>Presente em documentários e na produção de conteúdo.</td></tr><tr><td>7. Assuntos: documentos e registros</td><td data-label="🏺 Museologia"><span class="dot g"></span>Documentar acervos é parte central do trabalho.</td><td data-label="📰 Jornalismo"><span class="dot y"></span>Documentos e bases de dados são usados na apuração, junto com entrevistas.</td><td data-label="📜 História"><span class="dot g"></span>Documentos e registros são a base da pesquisa.</td><td data-label="🎥 Rádio, TV e Internet"><span class="dot y"></span>Aparece em acervos de imagem e som, roteiros e documentários.</td></tr><tr><td>8. Retornos: sentir satisfação e significado no que faço</td><td data-label="🏺 Museologia"><span class="dot y"></span>Pode vir de preservar a memória e aproximar o público da cultura. Depende do que tem valor pra você.</td><td data-label="📰 Jornalismo"><span class="dot y"></span>Pode vir de informar e revelar o que importa. Depende do que tem valor pra você.</td><td data-label="📜 História"><span class="dot y"></span>Pode vir de ensinar e compreender a sociedade. Depende do que tem valor pra você.</td><td data-label="🎥 Rádio, TV e Internet"><span class="dot y"></span>Pode vir de criar obras que chegam ao público. Depende do que tem valor pra você.</td></tr><tr><td>9. Retornos: ter um trabalho estável</td><td data-label="🏺 Museologia"><span class="dot y"></span>Concurso e instituições permitem estabilidade, mas as vagas são poucas.</td><td data-label="📰 Jornalismo"><span class="dot r"></span>Mercado instável, com bastante freela e contrato como pessoa jurídica.</td><td data-label="📜 História"><span class="dot y"></span>Concursos para o magistério são um caminho. Pesquisa com bolsa tem prazo.</td><td data-label="🎥 Rádio, TV e Internet"><span class="dot r"></span>Muitos contratos por projeto. Há vagas fixas em emissoras e empresas.</td></tr><tr><td>10. Rotina: ter trabalho contínuo (fixo)</td><td data-label="🏺 Museologia"><span class="dot y"></span>Contínuo em cargos de instituições. Exposições e inventários podem ser temporários.</td><td data-label="📰 Jornalismo"><span class="dot y"></span>Há cargos fixos em redações e assessorias. Freelas e plantões também são comuns.</td><td data-label="📜 História"><span class="dot y"></span>A docência tem calendário contínuo. Pesquisa costuma ser por projeto.</td><td data-label="🎥 Rádio, TV e Internet"><span class="dot y"></span>Há cargos fixos em emissoras e empresas. Produtoras trabalham muito por projeto.</td></tr></tbody></table></div>
+</div></div>
+<div class="sc"><div class="sc-head"><span class="sc-icon">📊</span><h2>Ranking dos critérios (soma dos pontos)</h2></div><div class="sc-body">
+<div class="crit-legend"><span><span class="dot g"></span>Verde = 2 pontos</span><span><span class="dot y"></span>Amarelo = 1 ponto</span><span><span class="dot r"></span>Vermelho = 0 ponto</span></div><div class="rank"><div class="rank-row"><div class="rank-top"><span class="rank-name">🥇 📜 História</span><span class="rank-score">14 de 20</span></div><div class="rank-bar"><div class="rank-fill his" style="width:70%;">14</div></div></div><div class="rank-row"><div class="rank-top"><span class="rank-name">🥈 🏺 Museologia</span><span class="rank-score">13 de 20</span></div><div class="rank-bar"><div class="rank-fill mus" style="width:65%;">13</div></div></div><div class="rank-row"><div class="rank-top"><span class="rank-name">🥉 📰 Jornalismo</span><span class="rank-score">10 de 20</span></div><div class="rank-bar"><div class="rank-fill jor" style="width:50%;">10</div></div></div><div class="rank-row"><div class="rank-top"><span class="rank-name">🎥 Rádio, TV e Internet</span><span class="rank-score">6 de 20</span></div><div class="rank-bar"><div class="rank-fill rtv" style="width:30%;">6</div></div></div></div>
+</div></div>
+</div>
+
+<footer><span class="ft-accent">o caminho se faz caminhando</span><strong>Instituto Rumo</strong><p>Orientação profissional com base em informação real · institutorumo.com.br</p></footer>
+<script>
+  function toggle(el, listId) {
+    el.classList.toggle('checked');
+    el.querySelector('.cl-box').textContent = el.classList.contains('checked') ? '✓' : '';
+    updateScore(listId);
+  }
+
+  function updateScore(listId) {
+    const list    = document.getElementById(listId);
+    const total   = list.querySelectorAll('.cl-item').length;
+    const checked = list.querySelectorAll('.cl-item.checked').length;
+    const id      = listId.replace('cl-', '');
+    const resEl   = document.getElementById('res-' + id);
+    document.getElementById('sc-' + id).textContent = checked + ' de ' + total;
+    if (checked > 0) resEl.classList.add('show');
+    else resEl.classList.remove('show');
+  }
+
+  function show(code) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('p-' + code).classList.add('active');
+    document.querySelector('.tab-btn[data-c="' + code + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
